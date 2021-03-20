@@ -1,0 +1,36 @@
+{
+    "name": "Fantasy Realms (Beta)",
+    "id": "fantasy_realms",
+    "factions": {
+        "vampire_lords": {"name": "Vampire Lords", "id": "vampire_lords", "url": "vampire_lords.json", "color": "#9a1115", "alliance": "vampire_lords", "version": "0.1"}
+    },
+    "categories": {
+        "command": {"name": "Command"},
+        "core": {"name": "Core"}
+    },
+    "organizations": {
+        "skirmish": {
+            "name": "Battle (Core)",
+            "cost": 0,
+            "description": "A well-rounded force for taking on any mission.",
+            "categories": {"command": {"min": 1, "max": 2}, "core": {"min": 2, "max": 4}}
+        }
+    },
+    "relics": [
+        {"rule": "legend_wounds", "description": "Upgrade one Infantry model with Resilient.", "flavor": "This model has seen some of the toughest fighting imaginable and lived to tell the tale."},
+        {"rule": "legend_courage", "description": "Upgrade one Leader model with Inspired.", "flavor": "This model inspires the best in those who serve them."}
+    ],
+    "powers": {
+        "blast": {
+            "name": "Shock Wave",
+            "description": "Target enemy unit within 12\" takes 3 hits with AP 1. This power may be cast unlimited times.",
+            "flavor": "This enemy is hit by a single blast of shock.",
+            "charge": 8
+        }
+    },
+    "weapons": {},
+    "rules": {
+        "legend_wounds": {"name": "Resilient", "description": "This model gains Wounds(+1).", "points": 10},
+        "legend_courage": {"name": "Inspired", "description": "This model gains +1 Courage.", "points": 10}
+    }
+}
