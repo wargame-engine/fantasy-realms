@@ -28,7 +28,10 @@
             "charge": 8
         }
     },
-    "weapons": {},
+    "weapons": {
+        "ccw": {"name": "Hand Weapon (Light)", "attacks": 1, "short": "Melee"},
+        "ccw_heavy": {"name": "Hand Weapon (Heavy)", "attacks": 1, "ap": 1, "short": "Melee"}
+    },
     "rules": {
         "legend_wounds": {"name": "Resilient", "description": "This model gains Wounds(+1).", "points": 10},
         "legend_courage": {"name": "Inspired", "description": "This model gains +1 Courage.", "points": 10}
