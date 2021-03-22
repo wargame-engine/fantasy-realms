@@ -129,11 +129,11 @@
             "leader",
             {
               "id" : "wounds",
-              "x" : 3
+              "x" : 2
             },
             {
-              "id" : "psychic",
-              "x" : 1
+              "id" : "magic",
+              "x" : 3
             }
           ],
           "min" : 1,
