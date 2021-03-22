@@ -40,7 +40,7 @@
         "halberd_heavy": {"name": "Halberd (Heavy)", "attacks": 1, "ap": 2, "short": "Melee"}
         "short_bow": {"name": "Shortbow", "attacks": 1, "short": 6, "medium": 12},
         "long_bow": {"name": "Longbow", "attacks": 1, "short": 12, "medium": 24},
-        "spear": {"name": "Spear", "attacks": 1, "rules": [{"id": "reach", "x": 2}], "short": "Melee"}
+        "spear": {"name": "Spear", "attacks": 1, "rules": [{"id": "reach", "x": 2}], "short": "Melee"},
         "lance": {"name": "Lance", "attacks": 1, "rules": [{"id": "impact", "x": 1}], "short": "Melee"}
    
     },
