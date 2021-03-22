@@ -3,9 +3,12 @@
     "id": "fantasy_realms",
     "factions": {
         "vampire_lords": {"name": "Vampire Lords", "id": "vampire_lords", "url": "vampire_lords.json", "color": "#9a1115", "alliance": "vampire_lords", "version": "0.1"}
+        "traitor_legions": {"name": "Traitor Legions", "id": "traitor_legions", "url": "traitor_legions.json", "color": "#9a1115", "version": "0.1"}
     },
     "categories": {
-        "command": {"name": "Command"},
+        "hero": {"name": "Hero"},
+        "rare": {"name": "Rare"},
+        "elite": {"name": "Elite"},
         "core": {"name": "Core"}
     },
     "organizations": {
@@ -13,7 +16,7 @@
             "name": "Battle (Core)",
             "cost": 0,
             "description": "A well-rounded force for taking on any mission.",
-            "categories": {"command": {"min": 1, "max": 2}, "core": {"min": 2, "max": 4}}
+            "categories": {"hero": {"min": 1, "max": 2}, "core": {"min": 2, "max": 4}}
         }
     },
     "relics": [
@@ -29,8 +32,15 @@
         }
     },
     "weapons": {
-        "ccw": {"name": "Hand Weapon (Light)", "attacks": 1, "short": "Melee"},
-        "ccw_heavy": {"name": "Hand Weapon (Heavy)", "attacks": 1, "ap": 1, "short": "Melee"}
+        "hand_weapon": {"name": "Hand weapon", "attacks": 1, "short": "Melee"},
+        "hand_weapon_heavy": {"name": "Hand weapon (Heavy)", "attacks": 1, "ap": 1, "short": "Melee"},
+        "great_weapon": {"name": "Great weapon", "attacks": 1, "ap": 2, "short": "Melee"},
+        "great_weapon_heavy": {"name": "Great weapon (Heavy)", "attacks": 1, "ap": 3, "short": "Melee"},
+        "halberd": {"name": "Halberd", "attacks": 1, "ap": 1, "short": "Melee"},
+        "halberd_heavy": {"name": "Halberd (Heavy)", "attacks": 1, "ap": 2, "short": "Melee"}
+        "short_bow": {"name": "Shortbow", "attacks": 1, "short": 6, "medium": 12},
+        "long_bow": {"name": "Longbow", "attacks": 1, "short": 12, "medium": 24},
+        "spear": {"name": "Spear", "attacks": 1, "short": "Melee"},
     },
     "rules": {
         "legend_wounds": {"name": "Resilient", "description": "This model gains Wounds(+1).", "points": 10},
