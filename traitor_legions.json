@@ -1,234 +1,415 @@
 {
-    "name": "Traitor Legions",
-    "id": "traitor_legions",
-    "color": "#231f20",
-    "version": "0.1",
-    "author": "Xekon#8266",
-    "subfactions": {
-        "rage_legions": {"name": "Rage", "id": "rage_legions", "color": "#ff0000", "restricted": true, "background": "Warriors of unbridled fury."},
-        "change_legions": {"name": "Change", "id": "change_legions", "color": "#18abcc", "restricted": true, "background": "Mighty Sorcerers that bring down a storm of spells."},
-        "plague_legions": {"name": "Plague", "id": "plague_legions", "color": "#90ee90", "restricted": true, "background": "Resilient spreaders of decay."},
-        "lust_legions": {"name": "Lust", "id": "lust_legions", "color": "#800080", "restricted": true, "background": "Sadistic and twisted Warriors."}
+  "name" : "Traitor Legions",
+  "id" : "traitor_legions",
+  "color" : "#231f20",
+  "version" : "0.1",
+  "author" : "Xekon#8266",
+  "subfactions" : {
+    "rage_legions" : {
+      "name" : "Rage",
+      "id" : "rage_legions",
+      "color" : "#ff0000",
+      "restricted" : true,
+      "background" : "Warriors of unbridled fury."
     },
-    "units": {
-        "exalted_lord": {
-            "name": "Exalted Lord",
-            "description": "A exalted lord of the dark gods.",
-            "min": 1,
-            "max": 1,
-            "category": "hero",
-            "models": [
+    "change_legions" : {
+      "name" : "Change",
+      "id" : "change_legions",
+      "color" : "#18abcc",
+      "restricted" : true,
+      "background" : "Mighty Sorcerers that bring down a storm of spells."
+    },
+    "plague_legions" : {
+      "name" : "Plague",
+      "id" : "plague_legions",
+      "color" : "#90ee90",
+      "restricted" : true,
+      "background" : "Resilient spreaders of decay."
+    },
+    "lust_legions" : {
+      "name" : "Lust",
+      "id" : "lust_legions",
+      "color" : "#800080",
+      "restricted" : true,
+      "background" : "Sadistic and twisted Warriors."
+    }
+  },
+  "units" : {
+    "exalted_lord" : {
+      "name" : "Exalted Lord",
+      "description" : "A exalted lord of the dark gods.",
+      "min" : 1,
+      "max" : 1,
+      "category" : "hero",
+      "models" : [
+        {
+          "name" : "Exalted Lord",
+          "movement" : 6,
+          "courage" : 5,
+          "shoot" : 5,
+          "fight" : 5,
+          "defense" : 5,
+          "reflexes" : 5,
+          "weapons" : [
+            {
+              "id" : "hand_weapon_heavy",
+              "count" : 3
+            }
+          ],
+          "options" : [
+            {
+              "replaceWeapon" : [
                 {
-                    "name": "Exalted Lord",
-                    "movement": 1,
-                    "courage": 1,
-                    "shoot": 1,
-                    "fight": 1,
-                    "defense": 1,
-                    "reflexes": 1,
-                    "weapons": ["hand_weapon_warrior"],
-                    "options": [
-                        {"replaceWeapon": ["hand_weapon_warrior"], "withWeapon": [{"id": "hand_weapon_warrior", "count": 2, "ArrayItem": "halberd_warrior"}, "great_weapon_warrior", "magic_weapon"]},
-                        {"addRule": ["jetpack", "destroyer_armor"], "limit": 1}
-                    ],
-                    "rules": ["leader", "relentless", {"id": "tough", "x": 1}, {"id": "wounds", "x": 3}],
-                    "min": 1,
-                    "max": 1
+                  "id" : "hand_weapon_heavy",
+                  "count" : 3
                 }
-            ]
-        },
-        "exalted_sorcerer": {
-            "name": "Exalted Sorcerer",
-            "description": "A exalted sorcerer of change.",
-            "min": 1,
-            "max": 1,
-            "category": "hero",
-            "models": [
+              ],
+              "withWeapon" : [
                 {
-                    "name": "Exalted Sorcerer",
-                    "movement": 1,
-                    "courage": 1,
-                    "shoot": 1,
-                    "fight": 1,
-                    "defense": 1,
-                    "reflexes": 1,
-                    "weapons": ["hand_weapon"],
-                    "options": [{"addRule": ["disk_of_change"]}],
-                    "rules": ["leader", "relentless", {"id": "wounds", "x": 3}, {"id": "wizard", "x": 1}],
-                    "min": 1,
-                    "max": 1
-                }
-            ],
-            "subfactions": ["change_legions"]
-        },
-        "havoc_warriors": {
-            "name": "Havoc Warriors",
-            "description": "Warriors of the dark gods.",
-            "min": 1,
-            "max": 1,
-            "category": "core",
-            "models": [
-                {
-                    "name": "Havoc Champion",
-                    "movement": 1,
-                    "courage": 1,
-                    "shoot": 1,
-                    "fight": 1,
-                    "defense": 1,
-                    "reflexes": 1,
-                    "weapons": ["hand_weapon_warrior"],
-                    "options": [
-                        {"replaceWeapon": ["hand_weapon_warrior"], "withWeapon": [{"id": "hand_weapon_warrior", "count": 2}, "great_weapon_warrior", "halberd_warrior", "magic_weapon"]},
-                        {"addRule": ["war_chant", "traitor_tactics"], "limit": 1}
-                    ],
-                    "rules": ["leader", "relentless", {"id": "tough", "x": 1}, {"id": "wounds", "x": 3}],
-                    "min": 1,
-                    "max": 1
+                  "id" : "hand_weapon_heavy",
+                  "count" : 6
                 },
                 {
-                    "name": "Havoc Warrior",
-                    "movement": 1,
-                    "courage": 1,
-                    "shoot": 1,
-                    "fight": 1,
-                    "defense": 1,
-                    "reflexes": 1,
-                    "weapons": ["hand_weapon_warrior"],
-                    "options": [
-                        {"replaceWeapon": ["hand_weapon_warrior"], "withWeapon": [{"id": "hand_weapon_warrior", "count": 2}, "great_weapon_warrior", "halberd_warrior"]},
-                        {"addRule": ["war_chant", "traitor_tactics"], "limit": 1}
-                    ],
-                    "rules": ["leader", "relentless", {"id": "tough", "x": 1}, {"id": "wounds", "x": 3}],
-                    "min": 10,
-                    "max": 30
-                }
-            ]
-        },
-        "havoc_barbarians": {
-            "name": "Havoc Barbarians",
-            "description": "Frenzied Warriors serving their dark gods.",
-            "min": 1,
-            "max": 1,
-            "category": "core",
-            "models": [
-                {
-                    "name": "Aspiring Champion",
-                    "movement": 1,
-                    "courage": 1,
-                    "shoot": 1,
-                    "fight": 1,
-                    "defense": 1,
-                    "reflexes": 1,
-                    "weapons": ["hand_weapon"],
-                    "options": [
-                        {"replaceWeapon": ["hand_weapon"], "withWeapon": [{"id": "hand_weapon", "count": 2}, "great_weapon", "magic_weapon"]},
-                        {"addRule": ["war_chant", "traitor_tactics"], "limit": 1}
-                    ],
-                    "rules": ["leader", "relentless", {"id": "tough", "x": 1}, {"id": "wounds", "x": 3}],
-                    "min": 1,
-                    "max": 1
+                  "id" : "halberd_heavy",
+                  "count" : 3
                 },
                 {
-                    "name": "Havoc Barbarian",
-                    "movement": 1,
-                    "courage": 1,
-                    "shoot": 1,
-                    "fight": 1,
-                    "defense": 1,
-                    "reflexes": 1,
-                    "weapons": ["hand_weapon"],
-                    "options": [
-                        {"replaceWeapon": ["hand_weapon"], "withWeapon": [{"id": "hand_weapon", "count": 2}, "great_weapon"]},
-                        {"addRule": ["jetpack", "destroyer_armor"], "limit": 1},
-                        {"addRule": ["war_chant", "traitor_tactics"], "limit": 1}
-                    ],
-                    "rules": [{"id": "tough", "x": 1}, {"id": "wounds", "x": 3}],
-                    "min": 10,
-                    "max": 30
+                  "id" : "great_weapon_heavy",
+                  "count" : 3
                 }
-            ]
-        },
-        "havoc_lord": {
-            "name": "Havoc Lord",
-            "description": "A lord of the dark gods.",
-            "min": 1,
-            "max": 1,
-            "category": "hero",
-            "models": [
+              ]
+            }
+          ],
+          "rules" : [
+            "leader",
+            {
+              "id" : "tough",
+              "x" : 2
+            },
+            {
+              "id" : "wounds",
+              "x" : 4
+            }
+          ],
+          "min" : 1,
+          "max" : 1
+        }
+      ],
+      "subfactions" : [
+        "none",
+        "change_legions",
+        "rage_legions",
+        "lust_legions",
+        "plague_legions"
+      ]
+    },
+    "exalted_sorcerer" : {
+      "name" : "Exalted Sorcerer",
+      "description" : "A exalted sorcerer of change.",
+      "min" : 1,
+      "max" : 1,
+      "category" : "hero",
+      "models" : [
+        {
+          "name" : "Exalted Sorcerer",
+          "movement" : 6,
+          "courage" : 5,
+          "shoot" : 5,
+          "fight" : 5,
+          "defense" : 5,
+          "reflexes" : 5,
+          "weapons" : [
+            {
+              "id" : "hand_weapon_heavy",
+              "count" : 2
+            }
+          ],
+          "options" : [],
+          "rules" : [
+            "leader",
+            {
+              "id" : "wounds",
+              "x" : 2
+            },
+            {
+              "id" : "magic",
+              "x" : 3
+            }
+          ],
+          "min" : 1,
+          "max" : 1
+        }
+      ],
+      "subfactions" : [
+        "change_legions"
+      ]
+    },
+    "traitor_warriors" : {
+      "name" : "Traitor Warriors",
+      "description" : "Warriors of the dark gods.",
+      "min" : 1,
+      "max" : 1,
+      "category" : "core",
+      "models" : [
+        {
+          "name" : "Traitor Champion",
+          "movement" : 6,
+          "courage" : 5,
+          "shoot" : 5,
+          "fight" : 5,
+          "defense" : 5,
+          "reflexes" : 5,
+          "weapons" : [
+            {
+              "id" : "hand_weapon_heavy",
+              "count" : 2
+            }
+          ],
+          "options" : [
+            {
+              "replaceWeapon" : [
                 {
-                    "name": "Havoc Lord",
-                    "movement": 1,
-                    "courage": 1,
-                    "shoot": 1,
-                    "fight": 1,
-                    "defense": 1,
-                    "reflexes": 1,
-                    "weapons": ["hand_weapon_warrior"],
-                    "options": [
-                        {"replaceWeapon": ["hand_weapon_warrior"], "withWeapon": [{"id": "hand_weapon_warrior", "count": 2}, "great_weapon_warrior", "halberd_warrior", "magic_weapon"]},
-                        {"addRule": ["war_chant"]}
-                    ],
-                    "rules": ["leader", "relentless", {"id": "tough", "x": 1}, {"id": "wounds", "x": 3}],
-                    "min": 1,
-                    "max": 1
+                  "id" : "hand_weapon_heavy",
+                  "count" : 2
                 }
-            ]
+              ],
+              "withWeapon" : [
+                {
+                  "id" : "hand_weapon_heavy",
+                  "count" : 4
+                },
+                {
+                  "id" : "halberd_heavy",
+                  "count" : 2
+                },
+                {
+                  "id" : "great_weapon_heavy",
+                  "count" : 2
+                }
+              ]
+            }
+          ],
+          "rules" : [
+            {
+              "id" : "tough",
+              "x" : 1
+            },
+            {
+              "id" : "wounds",
+              "x" : 3
+            }
+          ],
+          "min" : 1,
+          "max" : 1
+        },
+        {
+          "name" : "Traitor Warrior",
+          "movement" : 6,
+          "courage" : 5,
+          "shoot" : 5,
+          "fight" : 5,
+          "defense" : 5,
+          "reflexes" : 5,
+          "weapons" : [
+            {
+              "id" : "hand_weapon_heavy",
+              "count" : 2
+            }
+          ],
+          "options" : [
+            {
+              "replaceWeapon" : [
+                {
+                  "id" : "hand_weapon_heavy",
+                  "count" : 2
+                }
+              ],
+              "withWeapon" : [
+                {
+                  "id" : "hand_weapon_heavy",
+                  "count" : 4
+                },
+                {
+                  "id" : "halberd_heavy",
+                  "count" : 2
+                },
+                {
+                  "id" : "great_weapon_heavy",
+                  "count" : 2
+                }
+              ]
+            }
+          ],
+          "rules" : [
+            {
+              "id" : "wounds",
+              "x" : 2
+            }
+          ],
+          "min" : 9,
+          "max" : 29
         }
+      ],
+      "subfactions" : [
+        "none",
+        "change_legions",
+        "rage_legions",
+        "lust_legions",
+        "plague_legions"
+      ]
     },
-    "weapons": {
-        "hand_weapon": {"name": "Hand weapon", "attacks": 1, "short": "Melee"},
-        "great_weapon": {"name": "Great weapon", "attacks": 1, "short": "Melee", "ap": 2},
-        "great_weapon_warrior": {"name": "Great weapon", "attacks": 2, "short": "Melee", "ap": 3},
-        "halberd": {"name": "Halberd", "attacks": 1, "short": "Melee", "ap": 1},
-        "hand_weapon_warrior": {"name": "Hand weapon", "attacks": 2, "short": "Melee", "ap": 1},
-        "halberd_warrior": {"name": "Halberd", "attacks": 2, "short": "Melee", "ap": 2},
-        "magic_weapon": {"name": "Magic weapon", "attacks": 4, "short": "Melee", "ap": 1}
-    },
-    "rules": {
-        "blessing_of_change": {"name": "Blessing of Change", "description": "Enemy units have -1 to hit when shooting at this unit."},
-        "disk_of_change": {
-            "name": "Disk of Change",
-            "description": "Gives the unit strider and impact(1). Also increases the units movement to 8 inches.",
-            "effects": [{"type": "grantRule", "rule": "strider"}, {"type": "grantRule", "rule": {"id": "impact", "x": 1}}]
-        },
-        "enchanted_amulet": {
-            "name": "Enchanted Amulet",
-            "description": "The bearer gets +1 to all Psychic tests.",
-            "effects": [{"type": "grantRule", "rule": {"id": "psychic", "x": 1}, "frequency": 5}]
-        },
-        "war_chant": {
-            "name": "War Chant",
-            "description": "This model and friendly Infantry units within 3\" gain the Furious keyword.",
-            "effects": [{"type": "grantRule", "rule": "furious", "frequency": 100, "target": "friendly"}]
-        },
-        "wings": {"name": "Daemon Wings", "hidden": true, "description": "Increases movement to 8 inches. Gives the model fly and ambush.", "description_short": "Fly, Ambush, 8\" Move", "points": 10}
-    },
-    "strategies": [
+    "traitor_barbarians" : {
+      "name" : "Traitor Barbarians",
+      "description" : "Frenzied Warriors serving their dark gods.",
+      "min" : 1,
+      "max" : 1,
+      "category" : "core",
+      "models" : [
         {
-            "phase": "activation",
-            "subfactions": ["none", "change_traitors"],
-            "name": "Hate",
-            "flavor": "Full with fury, traitor marines can launch devastating close combat assaults.",
-            "description": "Use before an Infantry unit fights. All hits have +1 AP.",
-            "cost": 1
-        },
-        {
-            "phase": "activation",
-            "subfactions": ["none", "change_traitors"],
-            "name": "Daemonforge",
-            "flavor": "Imbued with demonic energy, traitor vehicles can call upon the powers of the dark gods.",
-            "description": "Use before a Vehicle unit shoots. It may re-roll failed hit rolls of 9+.",
-            "cost": 1
+          "name" : "Aspiring Champion",
+          "movement" : 6,
+          "courage" : 5,
+          "shoot" : 5,
+          "fight" : 5,
+          "defense" : 5,
+          "reflexes" : 5,
+          "weapons" : [
+            "hand_weapon"
+          ],
+          "options" : [
+            {
+              "replaceWeapon" : [
+                "hand_weapon"
+              ],
+              "withWeapon" : [
+                {
+                  "id" : "hand_weapon",
+                  "count" : 2
+                },
+                "great_weapon"
+              ]
+            }
+          ],
+          "rules" : [
+            {
+              "id" : "wounds",
+              "x" : 2
+            }
+          ],
+          "min" : 1,
+          "max" : 1
         },
         {
-            "phase": "activation",
-            "subfactions": ["none", "change_traitors"],
-            "name": "Dark Blessing",
-            "flavor": "With a simple sacrifice, comes a gift of life.",
-            "description": "Use when an Infantry unit is activated. Roll 3D10 and on any rolls of 5 or less, models in that unit with Wounds(x) regain that many wounds. If all models are at full Wounds, models may be restored one by one until they each have full Wounds.",
-            "cost": 2
+          "name" : "Traitor Barbarian",
+          "movement" : 6,
+          "courage" : 5,
+          "shoot" : 5,
+          "fight" : 5,
+          "defense" : 5,
+          "reflexes" : 5,
+          "weapons" : [
+            "hand_weapon"
+          ],
+          "options" : [
+            {
+              "replaceWeapon" : [
+                "hand_weapon"
+              ],
+              "withWeapon" : [
+                {
+                  "id" : "hand_weapon",
+                  "count" : 2
+                },
+                "great_weapon",
+                "spear"
+              ]
+            }
+          ],
+          "rules" : [],
+          "min" : 9,
+          "max" : 29
         }
-    ],
-    "relics": [],
-    "powers": {}
+      ],
+      "subfactions" : [
+        "none",
+        "change_legions",
+        "rage_legions",
+        "lust_legions",
+        "plague_legions"
+      ]
+    },
+    "traitor_lord" : {
+      "name" : "Traitor Lord",
+      "description" : "A lord of the dark gods.",
+      "min" : 1,
+      "max" : 1,
+      "category" : "hero",
+      "models" : [
+        {
+          "name" : "Havoc Lord",
+          "movement" : 6,
+          "courage" : 5,
+          "shoot" : 5,
+          "fight" : 5,
+          "defense" : 5,
+          "reflexes" : 5,
+          "weapons" : [
+            {
+              "id" : "hand_weapon_heavy",
+              "count" : 2
+            }
+          ],
+          "options" : [
+            {
+              "replaceWeapon" : [
+                {
+                  "id" : "hand_weapon_heavy",
+                  "count" : 2
+                }
+              ],
+              "withWeapon" : [
+                {
+                  "id" : "hand_weapon_heavy",
+                  "count" : 4
+                },
+                {
+                  "id" : "halberd_heavy",
+                  "count" : 2
+                },
+                {
+                  "id" : "great_weapon_heavy",
+                  "count" : 2
+                }
+              ]
+            }
+          ],
+          "rules" : [
+            "leader",
+            {
+              "id" : "tough",
+              "x" : 1
+            },
+            {
+              "id" : "wounds",
+              "x" : 3
+            }
+          ],
+          "min" : 1,
+          "max" : 1
+        }
+      ],
+      "subfactions" : [
+        "none",
+        "change_legions",
+        "rage_legions",
+        "lust_legions",
+        "plague_legions"
+      ]
+    }
+  },
+  "weapons" : {},
+  "rules" : {},
+  "strategies" : [],
+  "relics" : [],
+  "powers" : {}
 }
