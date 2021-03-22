@@ -37,7 +37,7 @@
         "great_weapon": {"name": "Great weapon", "attacks": 1, "ap": 2, "short": "Melee"},
         "great_weapon_heavy": {"name": "Great weapon (Heavy)", "attacks": 1, "ap": 3, "short": "Melee"},
         "halberd": {"name": "Halberd", "attacks": 1, "ap": 1, "short": "Melee"},
-        "halberd_heavy": {"name": "Halberd (Heavy)", "attacks": 1, "ap": 2, "short": "Melee"}
+        "halberd_heavy": {"name": "Halberd (Heavy)", "attacks": 1, "ap": 2, "short": "Melee"},
         "short_bow": {"name": "Shortbow", "attacks": 1, "short": 6, "medium": 12},
         "long_bow": {"name": "Longbow", "attacks": 1, "short": 12, "medium": 24},
         "spear": {"name": "Spear", "attacks": 1, "rules": [{"id": "reach", "x": 2}], "short": "Melee"},
