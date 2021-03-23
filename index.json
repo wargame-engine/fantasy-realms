@@ -7,9 +7,9 @@
     },
     "categories": {
         "hero": {"name": "Hero"},
-        "rare": {"name": "Rare"},
+        "core": {"name": "Core"},
         "elite": {"name": "Elite"},
-        "core": {"name": "Core"}
+        "rare": {"name": "Rare"}
     },
     "organizations": {
         "skirmish": {
