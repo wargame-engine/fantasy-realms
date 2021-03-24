@@ -2,14 +2,14 @@
     "name": "Fantasy Realms (Beta)",
     "id": "fantasy_realms",
     "factions": {
-        "vampire_lords": {"name": "Vampire Lords", "id": "vampire_lords", "url": "vampire_lords.json", "color": "#9a1115", "alliance": "vampire_lords", "version": "0.1"},
+        "vampire_lords": {"name": "Vampire Lords", "id": "vampire_lords", "url": "vampire_lords.json", "color": "#9a1115", "version": "0.1"},
         "traitor_legions": {"name": "Traitor Legions", "id": "traitor_legions", "url": "traitor_legions.json", "color": "#231f20", "version": "0.1"}
     },
     "categories": {
         "hero": {"name": "Hero"},
-        "rare": {"name": "Rare"},
+        "core": {"name": "Core"},
         "elite": {"name": "Elite"},
-        "core": {"name": "Core"}
+        "rare": {"name": "Rare"}
     },
     "organizations": {
         "skirmish": {
