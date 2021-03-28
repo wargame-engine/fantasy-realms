@@ -19,10 +19,22 @@
             "categories": {"hero": {"min": 1, "max": 2}, "core": {"min": 2, "max": 4}}
         }
     },
-    "relics": [
-        {"rule": "legend_wounds", "description": "Upgrade one Infantry model with Resilient.", "flavor": "This model has seen some of the toughest fighting imaginable and lived to tell the tale."},
-        {"rule": "legend_courage", "description": "Upgrade one Leader model with Inspired.", "flavor": "This model inspires the best in those who serve them."}
-    ],
+    "relics": {
+        "resilient": {
+            "name": "Resilient",
+            "rule": "legend_wounds",
+            "description": "Upgrade one Infantry model with Resilient.",
+            "flavor": "This model has seen some of the toughest fighting imaginable and lived to tell the tale.",
+            "points": 10
+        },
+        "inspired": {
+            "name": "Inspired",
+            "rule": "legend_courage",
+            "description": "Upgrade one Leader model with Inspired.",
+            "flavor": "This model inspires the best in those who serve them.",
+            "points": 10
+        }
+    },
     "powers": {
         "blast": {
             "name": "Shock Wave",
