@@ -1,958 +1,461 @@
 {
-  "name" : "Vampire Lords",
-  "id" : "vampire_lords",
-  "version" : "0.1",
-  "color" : "#9a1115",
-  "units" : {
-    "zombies" : {
-      "name" : "Zombies",
-      "description" : "The risen undead, unending masses in service of a Vampire Lord.",
-      "min" : 1,
-      "max" : 6,
-      "category" : "core",
-      "models" : [
-        {
-          "name" : "Zombie",
-          "movement" : 4,
-          "courage" : 6,
-          "shoot" : 3,
-          "fight" : 4,
-          "defense" : 4,
-          "reflexes" : 4,
-          "weapons" : [
-            "hand_weapon"
-          ],
-          "options" : [],
-          "rules" : [
-            "fear"
-          ],
-          "min" : 10,
-          "max" : 30
-        }
-      ],
-      "keywords" : [
-        "Infantry",
-        "Undead"
-      ]
-    },
-    "skeleton_warriors" : {
-      "name" : "Skeleton Warriors",
-      "description" : "The risen undead, unending masses in service of a Vampire Lord.",
-      "min" : 1,
-      "max" : 6,
-      "category" : "core",
-      "models" : [
-        {
-          "name" : "Skeletal Champion",
-          "movement" : 4,
-          "courage" : 6,
-          "shoot" : 4,
-          "fight" : 4,
-          "defense" : 5,
-          "reflexes" : 5,
-          "weapons" : [
-            {
-              "id" : "hand_weapon",
-              "count" : 2
-            }
-          ],
-          "options" : [
-            {
-              "replaceWeapon" : [
-                {
-                  "id" : "hand_weapon",
-                  "count" : 2
-                }
-              ],
-              "withWeapon" : [
-                {
-                  "id" : "spear",
-                  "count" : 2
-                }
-              ]
-            }
-          ],
-          "rules" : [
-            "fear",
-            "shield"
-          ],
-          "min" : 1,
-          "max" : 1
+    "name": "Vampire Lords",
+    "id": "vampire_lords",
+    "version": "0.1",
+    "color": "#9a1115",
+    "units": {
+        "zombies": {
+            "name": "Zombies",
+            "description": "The risen undead, unending masses in service of a Vampire Lord.",
+            "min": 1,
+            "max": 6,
+            "category": "core",
+            "models": [
+                {"name": "Zombie", "movement": 4, "courage": 6, "shoot": 3, "fight": 4, "defense": 4, "reflexes": 4, "weapons": ["hand_weapon"], "options": [], "rules": ["fear"], "min": 10, "max": 30}
+            ],
+            "keywords": ["Infantry", "Undead"]
         },
-        {
-          "name" : "Skeleton Warrior",
-          "movement" : 4,
-          "courage" : 6,
-          "shoot" : 4,
-          "fight" : 4,
-          "defense" : 5,
-          "reflexes" : 5,
-          "weapons" : [
-            "hand_weapon"
-          ],
-          "options" : [
-            {
-              "replaceWeapon" : [
-                "hand_weapon"
-              ],
-              "withWeapon" : [
-                "spear"
-              ]
-            }
-          ],
-          "rules" : [
-            "fear",
-            "shield"
-          ],
-          "min" : 9,
-          "max" : 29
-        }
-      ],
-      "keywords" : [
-        "Infantry",
-        "Undead"
-      ]
-    },
-    "vampire" : {
-      "name" : "Vampire",
-      "description" : "A lesser vampire lord of the Great Houses.",
-      "min" : 1,
-      "max" : 1,
-      "category" : "hero",
-      "models" : [
-        {
-          "name" : "Vampire",
-          "movement" : 6,
-          "courage" : 7,
-          "shoot" : 4,
-          "fight" : 7,
-          "defense" : 5,
-          "reflexes" : 6,
-          "weapons" : [
-            {
-              "id" : "vampire_weapon",
-              "count" : 4
-            }
-          ],
-          "options" : [
-            {
-              "replaceWeapon" : [
+        "skeleton_warriors": {
+            "name": "Skeleton Warriors",
+            "description": "The risen undead, unending masses in service of a Vampire Lord.",
+            "min": 1,
+            "max": 6,
+            "category": "core",
+            "models": [
                 {
-                  "id" : "vampire_weapon",
-                  "count" : 4
-                }
-              ],
-              "withWeapon" : [
-                {
-                  "id" : "vampire_weapon",
-                  "count" : 5
+                    "name": "Skeletal Champion",
+                    "movement": 4,
+                    "courage": 6,
+                    "shoot": 4,
+                    "fight": 4,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "weapons": [{"id": "hand_weapon", "count": 2}],
+                    "options": [{"replaceWeapon": [{"id": "hand_weapon", "count": 2}], "withWeapon": [{"id": "spear", "count": 2}]}],
+                    "rules": ["fear", "shield"],
+                    "min": 1,
+                    "max": 1
                 },
                 {
-                  "id" : "vampire_g_weapon",
-                  "count" : 4
+                    "name": "Skeleton Warrior",
+                    "movement": 4,
+                    "courage": 6,
+                    "shoot": 4,
+                    "fight": 4,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "weapons": ["hand_weapon"],
+                    "options": [{"replaceWeapon": ["hand_weapon"], "withWeapon": ["spear"]}],
+                    "rules": ["fear", "shield"],
+                    "min": 9,
+                    "max": 29
+                }
+            ],
+            "keywords": ["Infantry", "Undead"]
+        },
+        "vampire": {
+            "name": "Vampire",
+            "description": "A lesser vampire lord of the Great Houses.",
+            "min": 1,
+            "max": 1,
+            "category": "hero",
+            "models": [
+                {
+                    "name": "Vampire",
+                    "movement": 6,
+                    "courage": 7,
+                    "shoot": 4,
+                    "fight": 7,
+                    "defense": 5,
+                    "reflexes": 6,
+                    "weapons": [{"id": "vampire_weapon", "count": 4}],
+                    "options": [
+                        {
+                            "replaceWeapon": [{"id": "vampire_weapon", "count": 4}],
+                            "withWeapon": [{"id": "vampire_weapon", "count": 5}, {"id": "vampire_g_weapon", "count": 4}, {"id": "vampire_lance", "count": 4}]
+                        },
+                        {"addRule": "shield"},
+                        {"addRule": "heavy_armor"},
+                        {"addRule": "mount_horse"}
+                    ],
+                    "rules": [{"id": "wounds", "x": 2}, "fear", "leader", {"id": "magic", "x": 1}, "siphon"],
+                    "min": 1,
+                    "max": 1
+                }
+            ],
+            "keywords": ["Hero", "Infantry", "Undead"]
+        },
+        "vampire_lord": {
+            "name": "Vampire Lord",
+            "description": "A greater vampire lord of the Great Houses.",
+            "min": 1,
+            "max": 1,
+            "category": "hero",
+            "models": [
+                {
+                    "name": "Vampire Lord",
+                    "movement": 6,
+                    "courage": 7,
+                    "shoot": 4,
+                    "fight": 8,
+                    "defense": 6,
+                    "reflexes": 6,
+                    "weapons": [{"id": "vampire_weapon", "count": 5}],
+                    "options": [
+                        {
+                            "replaceWeapon": [{"id": "vampire_weapon", "count": 5}],
+                            "withWeapon": [{"id": "vampire_weapon", "count": 6}, {"id": "vampire_g_weapon", "count": 5}, {"id": "vampire_lance", "count": 5}]
+                        },
+                        {"addRule": "shield"},
+                        {"addRule": "heavy_armor"},
+                        {"addRule": "mount_horse"}
+                    ],
+                    "limit": 1,
+                    "rules": ["leader", {"id": "wounds", "x": 3}, "fear", {"id": "magic", "x": 1}, "siphon"],
+                    "min": 1,
+                    "max": 1
+                }
+            ],
+            "keywords": ["Hero", "Infantry", "Undead"]
+        },
+        "vampire_lord_undead": {
+            "name": "Vampire Lord on Undead Dragon",
+            "description": "A greater vampire lord of the Great Houses riding an undead dragon.",
+            "min": 1,
+            "max": 1,
+            "category": "hero",
+            "models": [
+                {
+                    "name": "Vampire Lord on Undead Dragon",
+                    "movement": 8,
+                    "courage": 7,
+                    "shoot": 6,
+                    "fight": 8,
+                    "defense": 6,
+                    "reflexes": 6,
+                    "weapons": [{"id": "vampire_lance", "count": 5}, "necrotic_breath"],
+                    "options": [{"addRule": "shield"}, {"addRule": "heavy_armor"}],
+                    "rules": [{"id": "wounds", "x": 3}, "fear", "leader", {"id": "magic", "x": 1}, "siphon", "fly"],
+                    "min": 1,
+                    "max": 1
+                }
+            ],
+            "keywords": ["Hero", "Cavalry", "Undead"]
+        },
+        "skeleton_archers": {
+            "name": "Skeleton Archers (Custom)",
+            "description": "The risen undead, capable of unleashing deadly volleys to strike down their enemies.",
+            "min": 1,
+            "max": 3,
+            "category": "special",
+            "models": [
+                {
+                    "name": "Skeletal Deadeye",
+                    "movement": 4,
+                    "courage": 6,
+                    "shoot": 4,
+                    "fight": 4,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "weapons": ["hand_weapon", {"id": "long_bow", "count": 2}],
+                    "options": [],
+                    "rules": ["fear"],
+                    "min": 1,
+                    "max": 1
                 },
                 {
-                  "id" : "vampire_lance",
-                  "count" : 4
+                    "name": "Skeleton Archer",
+                    "movement": 4,
+                    "courage": 6,
+                    "shoot": 4,
+                    "fight": 4,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "weapons": ["hand_weapon", "long_bow"],
+                    "options": [],
+                    "rules": ["fear"],
+                    "min": 9,
+                    "max": 29
                 }
-              ]
-            },
-            {
-              "addRule" : "shield"
-            },
-            {
-              "addRule" : "heavy_armor"
-            },
-            {
-              "addRule" : "mount_horse"
-            }
-          ],
-          "rules" : [
-            {
-              "id" : "wounds",
-              "x" : 2
-            },
-            "fear",
-            "leader",
-            {
-              "id" : "magic",
-              "x" : 1
-            },
-            "siphon"
-          ],
-          "min" : 1,
-          "max" : 1
-        }
-      ],
-      "keywords" : [
-        "Hero",
-        "Infantry",
-        "Undead"
-      ]
-    },
-    "vampire_lord" : {
-      "name" : "Vampire Lord",
-      "description" : "A greater vampire lord of the Great Houses.",
-      "min" : 1,
-      "max" : 1,
-      "category" : "hero",
-      "models" : [
-        {
-          "name" : "Vampire Lord",
-          "movement" : 6,
-          "courage" : 7,
-          "shoot" : 4,
-          "fight" : 8,
-          "defense" : 6,
-          "reflexes" : 6,
-          "weapons" : [
-            {
-              "id" : "vampire_weapon",
-              "count" : 5
-            }
-          ],
-          "options" : [
-            {
-              "replaceWeapon" : [
+            ],
+            "keywords": ["Infantry", "Undead"]
+        },
+        "ghouls": {
+            "name": "Ghouls",
+            "description": "Soulless creatures, bound to the will of a vampire lord.",
+            "min": 1,
+            "max": 6,
+            "category": "core",
+            "models": [
                 {
-                  "id" : "vampire_weapon",
-                  "count" : 5
-                }
-              ],
-              "withWeapon" : [
-                {
-                  "id" : "vampire_weapon",
-                  "count" : 6
+                    "max": 1,
+                    "min": 1,
+                    "rules": ["fear"],
+                    "options": [],
+                    "weapons": [{"id": "claws", "count": 3}],
+                    "reflexes": 4,
+                    "defense": 5,
+                    "fight": 4,
+                    "shoot": 3,
+                    "courage": 6,
+                    "movement": 4,
+                    "name": "Ghast"
                 },
                 {
-                  "id" : "vampire_g_weapon",
-                  "count" : 5
+                    "name": "Ghoul",
+                    "movement": 4,
+                    "courage": 6,
+                    "shoot": 3,
+                    "fight": 4,
+                    "defense": 5,
+                    "reflexes": 4,
+                    "rules": ["fear"],
+                    "options": [],
+                    "weapons": [{"id": "claws", "count": 2}],
+                    "min": 9,
+                    "max": 29
+                }
+            ],
+            "keywords": ["Infantry", "Undead"]
+        },
+        "undead_wolves": {
+            "name": "Undead Wolves",
+            "description": "Risen beasts that have been tamed by the vampire lords to rip apart their enemies.",
+            "min": 1,
+            "max": 6,
+            "category": "core",
+            "models": [
+                {
+                    "max": 1,
+                    "min": 1,
+                    "rules": ["scout", "fear"],
+                    "options": [],
+                    "weapons": [{"id": "bite", "count": 2}],
+                    "reflexes": 4,
+                    "defense": 4,
+                    "fight": 4,
+                    "shoot": 3,
+                    "courage": 6,
+                    "movement": 8,
+                    "name": "Dire Wolf"
                 },
                 {
-                  "id" : "vampire_lance",
-                  "count" : 5
+                    "name": "Undead Wolf",
+                    "movement": 8,
+                    "courage": 6,
+                    "shoot": 3,
+                    "fight": 4,
+                    "defense": 4,
+                    "reflexes": 4,
+                    "rules": ["scout", "fear"],
+                    "options": [],
+                    "weapons": ["bite"],
+                    "min": 4,
+                    "max": 14
                 }
-              ]
-            },
-            {
-              "addRule" : "shield"
-            },
-            {
-              "addRule" : "heavy_armor"
-            },
-            {
-              "addRule" : "mount_horse"
-            }
-          ],
-          "limit" : 1,
-          "rules" : [
-            "leader",
-            {
-              "id" : "wounds",
-              "x" : 3
-            },
-            "fear",
-            {
-              "id" : "magic",
-              "x" : 1
-            },
-            "siphon"
-          ],
-          "min" : 1,
-          "max" : 1
-        }
-      ],
-      "keywords" : [
-        "Hero",
-        "Infantry",
-        "Undead"
-      ]
-    },
-    "vampire_lord_undead" : {
-      "name" : "Vampire Lord on Undead Dragon",
-      "description" : "A greater vampire lord of the Great Houses riding an undead dragon.",
-      "min" : 1,
-      "max" : 1,
-      "category" : "hero",
-      "models" : [
-        {
-          "name" : "Vampire Lord on Undead Dragon",
-          "movement" : 8,
-          "courage" : 7,
-          "shoot" : 6,
-          "fight" : 8,
-          "defense" : 6,
-          "reflexes" : 6,
-          "weapons" : [
-            {
-              "id" : "vampire_lance",
-              "count" : 5
-            },
-            "necrotic_breath"
-          ],
-          "options" : [
-            {
-              "addRule" : "shield"
-            },
-            {
-              "addRule" : "heavy_armor"
-            }
-          ],
-          "rules" : [
-            {
-              "id" : "wounds",
-              "x" : 3
-            },
-            "fear",
-            "leader",
-            {
-              "id" : "magic",
-              "x" : 1
-            },
-            "siphon",
-            "fly"
-          ],
-          "min" : 1,
-          "max" : 1
-        }
-      ],
-      "keywords" : [
-        "Hero",
-        "Cavalry",
-        "Undead"
-      ]
-    },
-    "skeleton_archers" : {
-      "name" : "Skeleton Archers (Custom)",
-      "description" : "The risen undead, capable of unleashing deadly volleys to strike down their enemies.",
-      "min" : 1,
-      "max" : 3,
-      "category" : "special",
-      "models" : [
-        {
-          "name" : "Skeletal Deadeye",
-          "movement" : 4,
-          "courage" : 6,
-          "shoot" : 4,
-          "fight" : 4,
-          "defense" : 5,
-          "reflexes" : 5,
-          "weapons" : [
-            "hand_weapon",
-            {
-              "id" : "long_bow",
-              "count" : 2
-            }
-          ],
-          "options" : [],
-          "rules" : [
-            "fear"
-          ],
-          "min" : 1,
-          "max" : 1
+            ],
+            "keywords": ["Infantry", "Beast", "Undead"]
         },
-        {
-          "name" : "Skeleton Archer",
-          "movement" : 4,
-          "courage" : 6,
-          "shoot" : 4,
-          "fight" : 4,
-          "defense" : 5,
-          "reflexes" : 5,
-          "weapons" : [
-            "hand_weapon",
-            "long_bow"
-          ],
-          "options" : [],
-          "rules" : [
-            "fear"
-          ],
-          "min" : 9,
-          "max" : 29
-        }
-      ],
-      "keywords" : [
-        "Infantry",
-        "Undead"
-      ]
-    },
-    "ghouls" : {
-      "name" : "Ghouls",
-      "description" : "Soulless creatures, bound to the will of a vampire lord.",
-      "min" : 1,
-      "max" : 6,
-      "category" : "core",
-      "models" : [
-        {
-          "max" : 1,
-          "min" : 1,
-          "rules" : [
-            "fear"
-          ],
-          "options" : [],
-          "weapons" : [
-            {
-              "id" : "claws",
-              "count" : 3
-            }
-          ],
-          "reflexes" : 4,
-          "defense" : 5,
-          "fight" : 4,
-          "shoot" : 3,
-          "courage" : 6,
-          "movement" : 4,
-          "name" : "Ghast"
-        },
-        {
-          "name" : "Ghoul",
-          "movement" : 4,
-          "courage" : 6,
-          "shoot" : 3,
-          "fight" : 4,
-          "defense" : 5,
-          "reflexes" : 4,
-          "rules" : [
-            "fear"
-          ],
-          "options" : [],
-          "weapons" : [
-            {
-              "id" : "claws",
-              "count" : 2
-            }
-          ],
-          "min" : 9,
-          "max" : 29
-        }
-      ],
-      "keywords" : [
-        "Infantry",
-        "Undead"
-      ]
-    },
-    "undead_wolves" : {
-      "name" : "Undead Wolves",
-      "description" : "Risen beasts that have been tamed by the vampire lords to rip apart their enemies.",
-      "min" : 1,
-      "max" : 6,
-      "category" : "core",
-      "models" : [
-        {
-          "max" : 1,
-          "min" : 1,
-          "rules" : [
-            "scout",
-            "fear"
-          ],
-          "options" : [],
-          "weapons" : [
-            {
-              "id" : "bite",
-              "count" : 2
-            }
-          ],
-          "reflexes" : 4,
-          "defense" : 4,
-          "fight" : 4,
-          "shoot" : 3,
-          "courage" : 6,
-          "movement" : 8,
-          "name" : "Dire Wolf"
-        },
-        {
-          "name" : "Undead Wolf",
-          "movement" : 8,
-          "courage" : 6,
-          "shoot" : 3,
-          "fight" : 4,
-          "defense" : 4,
-          "reflexes" : 4,
-          "rules" : [
-            "scout",
-            "fear"
-          ],
-          "options" : [],
-          "weapons" : [
-            "bite"
-          ],
-          "min" : 4,
-          "max" : 14
-        }
-      ],
-      "keywords" : [
-        "Infantry",
-        "Beast",
-        "Undead"
-      ]
-    },
-    "vampiric_bats" : {
-      "name" : "Bat Swarms",
-      "description" : "A swarm of vampiric bats that roam the battlefield and strike at unsuspecting foes.",
-      "min" : 1,
-      "max" : 4,
-      "category" : "elite",
-      "models" : [
-        {
-          "name" : "Bat Swarm",
-          "movement" : 8,
-          "courage" : 6,
-          "shoot" : 3,
-          "fight" : 4,
-          "defense" : 3,
-          "reflexes" : 4,
-          "rules" : [
-            "skirmishers",
-            "fear",
-            "siphon",
-            {
-              "id" : "wounds",
-              "x" : 3
-            },
-            "hover"
-          ],
-          "options" : [],
-          "weapons" : [
-            {
-              "id" : "bite",
-              "count" : 5
-            }
-          ],
-          "min" : 2,
-          "max" : 6
-        }
-      ],
-      "keywords" : [
-        "Swarm",
-        "Beast",
-        "Undead"
-      ]
-    },
-    "spectre_knights" : {
-      "name" : "Spectre Knights",
-      "description" : "Undead Horseriders that ride with uneering speed across the battlefield.",
-      "min" : 1,
-      "max" : 6,
-      "category" : "elite",
-      "models" : [
-        {
-          "name" : "Wraith Knight",
-          "movement" : 8,
-          "courage" : 6,
-          "shoot" : 4,
-          "fight" : 4,
-          "defense" : 7,
-          "reflexes" : 4,
-          "weapons" : [
-            {
-              "id" : "spectral_blade",
-              "count" : 2
-            }
-          ],
-          "options" : [
-            {
-              "replaceWeapon" : [
+        "vampiric_bats": {
+            "name": "Bat Swarms",
+            "description": "A swarm of vampiric bats that roam the battlefield and strike at unsuspecting foes.",
+            "min": 1,
+            "max": 4,
+            "category": "elite",
+            "models": [
                 {
-                  "id" : "spectral_blade",
-                  "count" : 2
+                    "name": "Bat Swarm",
+                    "movement": 8,
+                    "courage": 6,
+                    "shoot": 3,
+                    "fight": 4,
+                    "defense": 3,
+                    "reflexes": 4,
+                    "rules": ["skirmishers", "fear", "siphon", {"id": "wounds", "x": 3}, "hover"],
+                    "options": [],
+                    "weapons": [{"id": "bite", "count": 5}],
+                    "min": 2,
+                    "max": 6
                 }
-              ],
-              "withWeapon" : [
+            ],
+            "keywords": ["Swarm", "Beast", "Undead"]
+        },
+        "spectre_knights": {
+            "name": "Spectre Knights",
+            "description": "Undead Horseriders that ride with uneering speed across the battlefield.",
+            "min": 1,
+            "max": 6,
+            "category": "elite",
+            "models": [
                 {
-                  "id" : "spectral_lance",
-                  "count" : 2
-                }
-              ]
-            }
-          ],
-          "rules" : [
-            "shield",
-            "fear",
-            "ethereal"
-          ],
-          "min" : 1,
-          "max" : 1
-        },
-        {
-          "name" : "Spectre Knight",
-          "movement" : 8,
-          "courage" : 6,
-          "shoot" : 4,
-          "fight" : 4,
-          "defense" : 7,
-          "reflexes" : 4,
-          "weapons" : [
-            "spectral_blade"
-          ],
-          "options" : [
-            {
-              "replaceWeapon" : [
-                "spectral_blade"
-              ],
-              "withWeapon" : [
-                "spectral_lance"
-              ]
-            }
-          ],
-          "rules" : [
-            "shield",
-            "fear",
-            "ethereal"
-          ],
-          "min" : 4,
-          "max" : 14
-        }
-      ],
-      "keywords" : [
-        "Cavalry",
-        "Undead"
-      ]
-    },
-    "crypt_hunters" : {
-      "name" : "Crypt Hunters",
-      "description" : "Terryfing creatures that stalk the massive tombs and crypts of the lands.",
-      "min" : 1,
-      "max" : 6,
-      "category" : "elite",
-      "models" : [
-        {
-          "max" : 1,
-          "min" : 1,
-          "rules" : [
-            "fear",
-            {
-              "id" : "resilient",
-              "x" : 3
-            },
-            {
-              "id" : "wounds",
-              "x" : 3
-            }
-          ],
-          "options" : [],
-          "weapons" : [
-            {
-              "id" : "claws",
-              "count" : 4
-            }
-          ],
-          "reflexes" : 5,
-          "defense" : 6,
-          "fight" : 4,
-          "shoot" : 3,
-          "courage" : 6,
-          "movement" : 6,
-          "name" : "Crypt Stalker"
-        },
-        {
-          "name" : "Crypt Hunter",
-          "movement" : 6,
-          "courage" : 6,
-          "shoot" : 3,
-          "fight" : 4,
-          "defense" : 6,
-          "reflexes" : 5,
-          "rules" : [
-            "fear",
-            {
-              "id" : "resilient",
-              "x" : 3
-            },
-            {
-              "id" : "wounds",
-              "x" : 3
-            }
-          ],
-          "options" : [],
-          "weapons" : [
-            {
-              "id" : "claws",
-              "count" : 3
-            }
-          ],
-          "min" : 2,
-          "max" : 8
-        }
-      ],
-      "keywords" : [
-        "Monstrous Infantry",
-        "Undead"
-      ]
-    },
-    "bats" : {
-      "name" : "Giant Bats",
-      "description" : "A pair of feral bats that roam the battlefield and strike at unsuspecting foes.",
-      "min" : 1,
-      "max" : 4,
-      "category" : "elite",
-      "models" : [
-        {
-          "name" : "Giant Bat",
-          "movement" : 8,
-          "courage" : 6,
-          "shoot" : 3,
-          "fight" : 4,
-          "defense" : 3,
-          "reflexes" : 4,
-          "rules" : [
-            "fear",
-            {
-              "id" : "wounds",
-              "x" : 2
-            },
-            "fly"
-          ],
-          "options" : [],
-          "weapons" : [
-            {
-              "id" : "bite",
-              "count" : 2
-            }
-          ],
-          "min" : 2,
-          "max" : 6
-        }
-      ],
-      "keywords" : [
-        "Beast",
-        "Undead"
-      ]
-    },
-    "crypt_watch" : {
-      "name" : "Crypt Watch",
-      "description" : "Undying guardians of the massive tombs and crypts that lie below.",
-      "min" : 1,
-      "max" : 6,
-      "category" : "elite",
-      "models" : [
-        {
-          "name" : "Watch Commander",
-          "movement" : 4,
-          "courage" : 6,
-          "shoot" : 4,
-          "fight" : 4,
-          "defense" : 7,
-          "reflexes" : 4,
-          "weapons" : [
-            {
-              "id" : "spectral_blade",
-              "count" : 2
-            }
-          ],
-          "options" : [
-            {
-              "replaceWeapon" : [
+                    "name": "Wraith Knight",
+                    "movement": 8,
+                    "courage": 6,
+                    "shoot": 4,
+                    "fight": 4,
+                    "defense": 7,
+                    "reflexes": 4,
+                    "weapons": [{"id": "spectral_blade", "count": 2}],
+                    "options": [{"replaceWeapon": [{"id": "spectral_blade", "count": 2}], "withWeapon": [{"id": "spectral_lance", "count": 2}]}],
+                    "rules": ["shield", "fear", "ethereal"],
+                    "min": 1,
+                    "max": 1
+                },
                 {
-                  "id" : "spectral_blade",
-                  "count" : 2
+                    "name": "Spectre Knight",
+                    "movement": 8,
+                    "courage": 6,
+                    "shoot": 4,
+                    "fight": 4,
+                    "defense": 7,
+                    "reflexes": 4,
+                    "weapons": ["spectral_blade"],
+                    "options": [{"replaceWeapon": ["spectral_blade"], "withWeapon": ["spectral_lance"]}],
+                    "rules": ["shield", "fear", "ethereal"],
+                    "min": 4,
+                    "max": 14
                 }
-              ],
-              "withWeapon" : [
+            ],
+            "keywords": ["Cavalry", "Undead"]
+        },
+        "crypt_hunters": {
+            "name": "Crypt Hunters",
+            "description": "Terryfing creatures that stalk the massive tombs and crypts of the lands.",
+            "min": 1,
+            "max": 6,
+            "category": "elite",
+            "models": [
                 {
-                  "id" : "spectral_great",
-                  "count" : 2
+                    "max": 1,
+                    "min": 1,
+                    "rules": ["fear", {"id": "resilient", "x": 3}, {"id": "wounds", "x": 3}],
+                    "options": [],
+                    "weapons": [{"id": "claws", "count": 4}],
+                    "reflexes": 5,
+                    "defense": 6,
+                    "fight": 4,
+                    "shoot": 3,
+                    "courage": 6,
+                    "movement": 6,
+                    "name": "Crypt Stalker"
+                },
+                {
+                    "name": "Crypt Hunter",
+                    "movement": 6,
+                    "courage": 6,
+                    "shoot": 3,
+                    "fight": 4,
+                    "defense": 6,
+                    "reflexes": 5,
+                    "rules": ["fear", {"id": "resilient", "x": 3}, {"id": "wounds", "x": 3}],
+                    "options": [],
+                    "weapons": [{"id": "claws", "count": 3}],
+                    "min": 2,
+                    "max": 8
                 }
-              ]
-            }
-          ],
-          "rules" : [
-            "shield",
-            "fear"
-          ],
-          "min" : 1,
-          "max" : 1
+            ],
+            "keywords": ["Monstrous Infantry", "Undead"]
         },
-        {
-          "name" : "Crypt Watch",
-          "movement" : 4,
-          "courage" : 6,
-          "shoot" : 4,
-          "fight" : 4,
-          "defense" : 7,
-          "reflexes" : 4,
-          "weapons" : [
-            "spectral_blade"
-          ],
-          "options" : [
-            {
-              "replaceWeapon" : [
-                "spectral_blade"
-              ],
-              "withWeapon" : [
-                "spectral_great"
-              ]
-            }
-          ],
-          "rules" : [
-            "shield",
-            "fear"
-          ],
-          "min" : 9,
-          "max" : 29
-        }
-      ],
-      "keywords" : [
-        "Infantry",
-        "Undead"
-      ]
-    }
-  },
-  "weapons" : {
-    "vampire_weapon" : {
-      "name" : "Royal Blade",
-      "ap" : 2,
-      "attacks" : 1,
-      "short" : "Melee"
-    },
-    "vampire_lance" : {
-      "name" : "Royal Lance",
-      "ap" : 2,
-      "attacks" : 1,
-      "short" : "Melee",
-      "rules" : [
-        {
-          "id" : "impact",
-          "x" : 1
-        }
-      ]
-    },
-    "vampire_g_weapon" : {
-      "name" : "Royal Great weapon",
-      "ap" : 4,
-      "attacks" : 1,
-      "short" : "Melee"
-    },
-    "necrotic_breath" : {
-      "name" : "Necrotic Breath",
-      "ap" : 3,
-      "attacks" : 3,
-      "short" : 9,
-      "medium" : 18
-    },
-    "claws" : {
-      "name" : "Rending Claws",
-      "ap" : 0,
-      "attacks" : 1,
-      "short" : "Melee",
-      "rules" : [
-        {
-          "id" : "rending"
-        }
-      ]
-    },
-    "bite" : {
-      "name" : "Bite",
-      "ap" : 0,
-      "attacks" : 1,
-      "short" : "Melee"
-    },
-    "lance_heavy" : {
-      "name" : "Lance (Heavy)",
-      "ap" : 1,
-      "attacks" : 1,
-      "short" : "Melee",
-      "rules" : [
-        {
-          "id" : "impact",
-          "x" : 1
-        }
-      ]
-    },
-    "spectral_blade" : {
-      "name" : "Spectral Blade",
-      "ap" : 1,
-      "attacks" : 1,
-      "short" : "Melee",
-      "rules" : [
-        {
-          "id" : "deadly",
-          "x" : 2
-        }
-      ]
-    },
-    "spectral_lance" : {
-      "name" : "Spectral Lance",
-      "ap" : 1,
-      "attacks" : 1,
-      "short" : "Melee",
-      "rules" : [
-        {
-          "id" : "impact",
-          "x" : 1
+        "bats": {
+            "name": "Giant Bats",
+            "description": "A pair of feral bats that roam the battlefield and strike at unsuspecting foes.",
+            "min": 1,
+            "max": 4,
+            "category": "elite",
+            "models": [
+                {
+                    "name": "Giant Bat",
+                    "movement": 8,
+                    "courage": 6,
+                    "shoot": 3,
+                    "fight": 4,
+                    "defense": 3,
+                    "reflexes": 4,
+                    "rules": ["fear", {"id": "wounds", "x": 2}, "fly"],
+                    "options": [],
+                    "weapons": [{"id": "bite", "count": 2}],
+                    "min": 2,
+                    "max": 6
+                }
+            ],
+            "keywords": ["Beast", "Undead"]
         },
-        {
-          "id" : "deadly",
-          "x" : 2
+        "crypt_watch": {
+            "name": "Crypt Watch",
+            "description": "Undying guardians of the massive tombs and crypts that lie below.",
+            "min": 1,
+            "max": 6,
+            "category": "elite",
+            "options": [{"addRule": "shield"}, {"replaceWeapon": [{"id": "spectral_blade", "count": 2}], "withWeapon": [{"id": "spectral_great", "count": 2}]}],
+            "models": [
+                {
+                    "name": "Watch Commander",
+                    "movement": 4,
+                    "courage": 6,
+                    "shoot": 5,
+                    "fight": 6,
+                    "defense": 7,
+                    "reflexes": 5,
+                    "weapons": [{"id": "spectral_blade", "count": 2}],
+                    "min": 1,
+                    "max": 1
+                },
+                {
+                    "name": "Crypt Watch",
+                    "movement": 4,
+                    "courage": 6,
+                    "shoot": 5,
+                    "fight": 6,
+                    "defense": 7,
+                    "reflexes": 5,
+                    "weapons": ["spectral_blade"],
+                    "min": 9,
+                    "max": 29
+                }
+            ],
+            "keywords": ["Infantry", "Undead"]
         }
-      ]
     },
-    "spectral_great" : {
-      "name" : "Spectral Greatblade",
-      "ap" : 3,
-      "attacks" : 1,
-      "short" : "Melee",
-      "rules" : [
-        {
-          "id" : "deadly",
-          "x" : 2
+    "weapons": {
+        "vampire_weapon": {"name": "Royal Blade", "ap": 2, "attacks": 1, "short": "Melee"},
+        "vampire_lance": {"name": "Royal Lance", "ap": 2, "attacks": 1, "short": "Melee", "rules": [{"id": "impact", "x": 1}]},
+        "vampire_g_weapon": {"name": "Royal Great weapon", "ap": 4, "attacks": 1, "short": "Melee"},
+        "necrotic_breath": {"name": "Necrotic Breath", "ap": 3, "attacks": 3, "short": 9, "medium": 18},
+        "claws": {"name": "Rending Claws", "ap": 0, "attacks": 1, "short": "Melee", "rules": [{"id": "rending"}]},
+        "bite": {"name": "Bite", "ap": 0, "attacks": 1, "short": "Melee"},
+        "lance_heavy": {"name": "Lance (Heavy)", "ap": 1, "attacks": 1, "short": "Melee", "rules": [{"id": "impact", "x": 1}]},
+        "spectral_blade": {"name": "Spectral Blade", "ap": 1, "attacks": 1, "short": "Melee", "rules": ["spectral"]},
+        "spectral_lance": {"name": "Spectral Lance", "ap": 1, "attacks": 1, "short": "Melee", "rules": [{"id": "impact", "x": 1}, "spectral"]},
+        "spectral_great": {"name": "Spectral Greatblade", "ap": 3, "attacks": 1, "short": "Melee", "rules": ["spectral"]}
+    },
+    "rules": {
+        "spectral": {"name": "Spectral", "description": "Hit rolls of 1 or 2 from this weapon cause 2 hits instead of 1. Additional hits must be assigned to the same model.", "points": ["weapon.attacks", {"multiply": 2}]},
+        "heavy_armor": {"name": "Heavy Armor", "description": "This model has +2 to its Save characteristic.", "points": 6},
+        "mount_horse": {"name": "Undead Horse", "hidden": true, "description_short": "Movement +2\" and counts as Cavalry", "description": "Increases movement by 2\".", "points": 2},
+        "siphon": {
+            "name": "Vampiric Siphon",
+            "description": "At the end of any activation in which this model slew any enemy models, you can heal 1 wound that has been allocated to this model.",
+            "points": 4
+        },
+        "skirmishers": {"name": "Skirmishers", "description": "This unit has a 4\" coherency and may not be more than 8\" away from any model in the unit at the end of a move action.", "points": 2},
+        "distract": {"name": "Distracting", "description": "Enemy units within 6\" get -1 Strength.", "points": 3},
+        "ethereal": {"name": "Ethereal", "description": "This unit may ignore models and any terrain when moving.", "points": 4}
+    },
+    "relics": [],
+    "author": "Xekon#8266",
+    "powers": {
+        "bat_form": {
+            "name": "Bat Form",
+            "description": "This model gains the Fly special rule until the end of the turn. This power may only be cast once per turn.",
+            "flavor": "The vampire lord transforms themselves into a giant bat, traversing the batttlefield at ease.",
+            "charge": 7
+        },
+        "raise_dead": {
+            "name": "Raise Dead",
+            "description": "Target friendly \"Undead\" Infantry unit within 12\" restores 1D3 models. This power may only be cast once per turn.",
+            "flavor": "The Vampire Lord enslaves the souls of the fallen once more.",
+            "charge": 5
         }
-      ]
-    }
-  },
-  "rules" : {
-    "shield" : {
-      "name" : "Shield",
-      "description" : "Whenever this model loses a wound, roll a D10. On a 3 or less that wound is not lost.",
-      "points" : 5
     },
-    "heavy_armor" : {
-      "name" : "Heavy Armor",
-      "description" : "This model has +2 to its Save characteristic.",
-      "points" : 6
-    },
-    "mount_horse" : {
-      "name" : "Undead Horse",
-      "hidden" : true,
-      "description_short" : "Movement +2\" and counts as Cavalry",
-      "description" : "Increases movement by 2\".",
-      "points" : 2
-    },
-    "siphon" : {
-      "name" : "Vampiric Siphon",
-      "description" : "At the end of any activation in which this model slew any enemy models, you can heal 1 wound that has been allocated to this model.",
-      "points" : 4
-    },
-    "skirmishers" : {
-      "name" : "Skirmishers",
-      "description" : "This unit has a 4\" coherency and may not be more than 8\" away from any model in the unit at the end of a move action.",
-      "points" : 2
-    },
-    "distract" : {
-      "name" : "Distracting",
-      "description" : "Enemy units within 6\" get -1 Strength.",
-      "points" : 3
-    },
-    "ethereal" : {
-      "name" : "Ethereal",
-      "description" : "This unit may ignore models and any terrain when moving.",
-      "points" : 4
-    }
-  },
-  "relics" : [],
-  "author" : "Xekon#8266",
-  "powers" : {
-    "bat_form" : {
-      "name" : "Bat Form",
-      "description" : "This model gains the Fly special rule until the end of the turn. This power may only be cast once per turn.",
-      "flavor" : "The vampire lord transforms themselves into a giant bat, traversing the batttlefield at ease.",
-      "charge" : 7
-    },
-    "raise_dead" : {
-      "name" : "Raise Dead",
-      "description" : "Target friendly \"Undead\" Infantry unit within 12\" restores 1D3 models. This power may only be cast once per turn.",
-      "flavor" : "The Vampire Lord enslaves the souls of the fallen once more.",
-      "charge" : 5
-    }
-  },
-  "strategies" : []
+    "strategies": []
 }

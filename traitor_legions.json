@@ -1,666 +1,310 @@
 {
-  "name" : "Traitor Legions",
-  "id" : "traitor_legions",
-  "color" : "#231f20",
-  "version" : "0.1",
-  "author" : "Xekon#8266",
-  "subfactions" : {
-    "rage_legions" : {
-      "name" : "Rage",
-      "id" : "rage_legions",
-      "color" : "#ff0000",
-      "restricted" : true,
-      "background" : "Warriors of unbridled fury."
+    "name": "Traitor Legions",
+    "id": "traitor_legions",
+    "color": "#231f20",
+    "version": "0.1",
+    "author": "Xekon#8266",
+    "subfactions": {
+        "rage_legions": {"name": "Rage", "id": "rage_legions", "color": "#ff0000", "restricted": true, "background": "Warriors of unbridled fury."},
+        "change_legions": {"name": "Change", "id": "change_legions", "color": "#18abcc", "restricted": true, "background": "Mighty Sorcerers that bring down a storm of spells."},
+        "plague_legions": {"name": "Plague", "id": "plague_legions", "color": "#90ee90", "restricted": true, "background": "Resilient spreaders of decay."},
+        "lust_legions": {"name": "Lust", "id": "lust_legions", "color": "#800080", "restricted": true, "background": "Sadistic and twisted Warriors."}
     },
-    "change_legions" : {
-      "name" : "Change",
-      "id" : "change_legions",
-      "color" : "#18abcc",
-      "restricted" : true,
-      "background" : "Mighty Sorcerers that bring down a storm of spells."
-    },
-    "plague_legions" : {
-      "name" : "Plague",
-      "id" : "plague_legions",
-      "color" : "#90ee90",
-      "restricted" : true,
-      "background" : "Resilient spreaders of decay."
-    },
-    "lust_legions" : {
-      "name" : "Lust",
-      "id" : "lust_legions",
-      "color" : "#800080",
-      "restricted" : true,
-      "background" : "Sadistic and twisted Warriors."
-    }
-  },
-  "units" : {
-    "exalted_lord" : {
-      "name" : "Exalted Lord",
-      "description" : "A exalted lord of the dark gods.",
-      "min" : 1,
-      "max" : 1,
-      "category" : "hero",
-      "models" : [
-        {
-          "name" : "Exalted Lord",
-          "movement" : 6,
-          "courage" : 5,
-          "shoot" : 5,
-          "fight" : 5,
-          "defense" : 5,
-          "reflexes" : 5,
-          "weapons" : [
-            {
-              "id" : "hand_weapon_heavy",
-              "count" : 3
-            }
-          ],
-          "options" : [
-            {
-              "replaceWeapon" : [
+    "units": {
+        "exalted_lord": {
+            "name": "Exalted Lord",
+            "description": "A exalted lord of the dark gods.",
+            "min": 1,
+            "max": 1,
+            "category": "hero",
+            "models": [
                 {
-                  "id" : "hand_weapon_heavy",
-                  "count" : 3
+                    "name": "Exalted Lord",
+                    "movement": 6,
+                    "courage": 5,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "weapons": [{"id": "hand_weapon_heavy", "count": 3}],
+                    "options": [
+                        {
+                            "replaceWeapon": [{"id": "hand_weapon_heavy", "count": 3}],
+                            "withWeapon": [{"id": "hand_weapon_heavy", "count": 6}, {"id": "halberd_heavy", "count": 3}, {"id": "great_weapon_heavy", "count": 3}]
+                        }
+                    ],
+                    "rules": ["leader", {"id": "tough", "x": 2}, {"id": "wounds", "x": 4}],
+                    "min": 1,
+                    "max": 1
                 }
-              ],
-              "withWeapon" : [
-                {
-                  "id" : "hand_weapon_heavy",
-                  "count" : 6
-                },
-                {
-                  "id" : "halberd_heavy",
-                  "count" : 3
-                },
-                {
-                  "id" : "great_weapon_heavy",
-                  "count" : 3
-                }
-              ]
-            }
-          ],
-          "rules" : [
-            "leader",
-            {
-              "id" : "tough",
-              "x" : 2
-            },
-            {
-              "id" : "wounds",
-              "x" : 4
-            }
-          ],
-          "min" : 1,
-          "max" : 1
-        }
-      ],
-      "subfactions" : [
-        "none",
-        "change_legions",
-        "rage_legions",
-        "lust_legions",
-        "plague_legions"
-      ]
-    },
-    "exalted_sorcerer" : {
-      "name" : "Exalted Sorcerer",
-      "description" : "An exalted sorcerer, master of the arcane arts.",
-      "min" : 1,
-      "max" : 1,
-      "category" : "hero",
-      "models" : [
-        {
-          "name" : "Exalted Sorcerer",
-          "movement" : 6,
-          "courage" : 5,
-          "shoot" : 5,
-          "fight" : 5,
-          "defense" : 5,
-          "reflexes" : 5,
-          "weapons" : [
-            {
-              "id" : "hand_weapon_heavy",
-              "count" : 2
-            }
-          ],
-          "options" : [],
-          "rules" : [
-            "leader",
-            {
-              "id" : "wounds",
-              "x" : 2
-            },
-            {
-              "id" : "magic",
-              "x" : 3
-            }
-          ],
-          "min" : 1,
-          "max" : 1
-        }
-      ],
-      "subfactions" : [
-        "change_legions"
-      ]
-    },
-    "traitor_warriors" : {
-      "name" : "Traitor Warriors",
-      "description" : "Warriors who serve the Traitor Gods.",
-      "min" : 1,
-      "max" : 6,
-      "category" : "core",
-      "models" : [
-        {
-          "name" : "Aspiring Champion",
-          "movement" : 6,
-          "courage" : 6,
-          "shoot" : 5,
-          "fight" : 6,
-          "defense" : 8,
-          "reflexes" : 4,
-          "weapons" : [
-            {
-              "id" : "hand_weapon_heavy",
-              "count" : 3
-            }
-          ],
-          "options" : [
-            {
-              "replaceWeapon" : [
-                {
-                  "id" : "hand_weapon_heavy",
-                  "count" : 3
-                }
-              ],
-              "withWeapon" : [
-                {
-                  "id" : "hand_weapon_heavy",
-                  "count" : 6
-                },
-                {
-                  "id" : "halberd_heavy",
-                  "count" : 3
-                },
-                {
-                  "id" : "great_weapon_heavy",
-                  "count" : 3
-                }
-              ]
-            }
-          ],
-          "rules" : [],
-          "min" : 1,
-          "max" : 1
+            ],
+            "subfactions": ["none", "change_legions", "rage_legions", "lust_legions", "plague_legions"]
         },
-        {
-          "name" : "Traitor Warrior",
-          "movement" : 6,
-          "courage" : 6,
-          "shoot" : 5,
-          "fight" : 6,
-          "defense" : 8,
-          "reflexes" : 4,
-          "weapons" : [
-            {
-              "id" : "hand_weapon_heavy",
-              "count" : 2
-            }
-          ],
-          "options" : [
-            {
-              "replaceWeapon" : [
+        "exalted_sorcerer": {
+            "name": "Exalted Sorcerer",
+            "description": "An exalted sorcerer, master of the arcane arts.",
+            "min": 1,
+            "max": 1,
+            "category": "hero",
+            "models": [
                 {
-                  "id" : "hand_weapon_heavy",
-                  "count" : 2
+                    "name": "Exalted Sorcerer",
+                    "movement": 6,
+                    "courage": 5,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "weapons": [{"id": "hand_weapon_heavy", "count": 2}],
+                    "options": [],
+                    "rules": ["leader", {"id": "wounds", "x": 2}, {"id": "magic", "x": 3}],
+                    "min": 1,
+                    "max": 1
                 }
-              ],
-              "withWeapon" : [
-                {
-                  "id" : "hand_weapon_heavy",
-                  "count" : 4
-                },
-                {
-                  "id" : "halberd_heavy",
-                  "count" : 2
-                },
-                {
-                  "id" : "great_weapon_heavy",
-                  "count" : 2
-                }
-              ]
-            }
-          ],
-          "rules" : [],
-          "min" : 9,
-          "max" : 29
-        }
-      ],
-      "subfactions" : [
-        "none",
-        "change_legions",
-        "rage_legions",
-        "lust_legions",
-        "plague_legions"
-      ],
-      "options" : [
-        {
-          "addRule" : "shield"
-        }
-      ]
-    },
-    "traitor_barbarians" : {
-      "name" : "Traitor Barbarians",
-      "description" : "Frenzied Warriors serving the Traitor Gods.",
-      "min" : 1,
-      "max" : 6,
-      "category" : "core",
-      "models" : [
-        {
-          "name" : "Traitor Chieftain",
-          "movement" : 6,
-          "courage" : 5,
-          "shoot" : 5,
-          "fight" : 5,
-          "defense" : 5,
-          "reflexes" : 3,
-          "weapons" : [
-            {
-              "id" : "hand_weapon",
-              "count" : 2
-            }
-          ],
-          "options" : [
-            {
-              "replaceWeapon" : [
-                {
-                  "id" : "hand_weapon",
-                  "count" : 2
-                }
-              ],
-              "withWeapon" : [
-                {
-                  "id" : "hand_weapon",
-                  "count" : 4
-                },
-                {
-                  "id" : "great_weapon",
-                  "count" : 2
-                },
-                {
-                  "id" : "spear",
-                  "count" : 2
-                }
-              ]
-            }
-          ],
-          "rules" : [],
-          "min" : 1,
-          "max" : 1
+            ],
+            "subfactions": ["change_legions"]
         },
-        {
-          "name" : "Traitor Barbarian",
-          "movement" : 6,
-          "courage" : 5,
-          "shoot" : 5,
-          "fight" : 5,
-          "defense" : 5,
-          "reflexes" : 3,
-          "weapons" : [
-            "hand_weapon"
-          ],
-          "options" : [
-            {
-              "replaceWeapon" : [
-                "hand_weapon"
-              ],
-              "withWeapon" : [
+        "traitor_warriors": {
+            "name": "Traitor Warriors",
+            "description": "Warriors who serve the Traitor Gods.",
+            "min": 1,
+            "max": 6,
+            "category": "core",
+            "models": [
                 {
-                  "id" : "hand_weapon",
-                  "count" : 2
+                    "name": "Aspiring Champion",
+                    "movement": 6,
+                    "courage": 6,
+                    "shoot": 5,
+                    "fight": 6,
+                    "defense": 8,
+                    "reflexes": 4,
+                    "weapons": [{"id": "hand_weapon_heavy", "count": 3}],
+                    "options": [
+                        {
+                            "replaceWeapon": [{"id": "hand_weapon_heavy", "count": 3}],
+                            "withWeapon": [{"id": "hand_weapon_heavy", "count": 6}, {"id": "halberd_heavy", "count": 3}, {"id": "great_weapon_heavy", "count": 3}]
+                        }
+                    ],
+                    "rules": [],
+                    "min": 1,
+                    "max": 1
                 },
-                "great_weapon",
-                "spear"
-              ]
-            }
-          ],
-          "rules" : [],
-          "min" : 9,
-          "max" : 29
-        }
-      ],
-      "subfactions" : [
-        "none",
-        "change_legions",
-        "rage_legions",
-        "lust_legions",
-        "plague_legions"
-      ],
-      "options" : [
-        {
-          "addRule" : "shield"
-        }
-      ]
-    },
-    "traitor_lord" : {
-      "name" : "Traitor Lord",
-      "description" : "A lord of the dark gods.",
-      "min" : 1,
-      "max" : 1,
-      "category" : "hero",
-      "models" : [
-        {
-          "name" : "Havoc Lord",
-          "movement" : 6,
-          "courage" : 5,
-          "shoot" : 5,
-          "fight" : 5,
-          "defense" : 5,
-          "reflexes" : 5,
-          "weapons" : [
-            {
-              "id" : "hand_weapon_heavy",
-              "count" : 2
-            }
-          ],
-          "options" : [
-            {
-              "replaceWeapon" : [
                 {
-                  "id" : "hand_weapon_heavy",
-                  "count" : 2
+                    "name": "Traitor Warrior",
+                    "movement": 6,
+                    "courage": 6,
+                    "shoot": 5,
+                    "fight": 6,
+                    "defense": 8,
+                    "reflexes": 4,
+                    "weapons": [{"id": "hand_weapon_heavy", "count": 2}],
+                    "options": [
+                        {
+                            "replaceWeapon": [{"id": "hand_weapon_heavy", "count": 2}],
+                            "withWeapon": [{"id": "hand_weapon_heavy", "count": 4}, {"id": "halberd_heavy", "count": 2}, {"id": "great_weapon_heavy", "count": 2}]
+                        }
+                    ],
+                    "rules": [],
+                    "min": 9,
+                    "max": 29
                 }
-              ],
-              "withWeapon" : [
-                {
-                  "id" : "hand_weapon_heavy",
-                  "count" : 4
-                },
-                {
-                  "id" : "halberd_heavy",
-                  "count" : 2
-                },
-                {
-                  "id" : "great_weapon_heavy",
-                  "count" : 2
-                }
-              ]
-            }
-          ],
-          "rules" : [
-            "leader",
-            {
-              "id" : "tough",
-              "x" : 1
-            },
-            {
-              "id" : "wounds",
-              "x" : 3
-            }
-          ],
-          "min" : 1,
-          "max" : 1
-        }
-      ],
-      "subfactions" : [
-        "none",
-        "change_legions",
-        "rage_legions",
-        "lust_legions",
-        "plague_legions"
-      ]
-    },
-    "traitor_knights" : {
-      "name" : "Traitor Knights",
-      "description" : "Dark Knights who serve the Traitor Gods.",
-      "min" : 1,
-      "max" : 6,
-      "category" : "elite",
-      "models" : [
-        {
-          "name" : "Dark Herald",
-          "movement" : 6,
-          "courage" : 6,
-          "shoot" : 5,
-          "fight" : 6,
-          "defense" : 9,
-          "reflexes" : 4,
-          "weapons" : [
-            {
-              "id" : "hand_weapon_heavy",
-              "count" : 3
-            }
-          ],
-          "options" : [
-            {
-              "replaceWeapon" : [
-                {
-                  "id" : "hand_weapon_heavy",
-                  "count" : 3
-                }
-              ],
-              "withWeapon" : [
-                {
-                  "id" : "halberd_heavy",
-                  "count" : 3
-                },
-                {
-                  "id" : "great_weapon_heavy",
-                  "count" : 3
-                },
-                {
-                  "id" : "lance",
-                  "count" : 3
-                }
-              ]
-            }
-          ],
-          "rules" : [
-            "mount_horse",
-            "shield",
-            "fear"
-          ],
-          "min" : 1,
-          "max" : 1
+            ],
+            "subfactions": ["none", "change_legions", "rage_legions", "lust_legions", "plague_legions"],
+            "options": [{"addRule": "shield"}]
         },
-        {
-          "name" : "Traitor Knight",
-          "movement" : 5,
-          "courage" : 6,
-          "shoot" : 5,
-          "fight" : 6,
-          "defense" : 9,
-          "reflexes" : 4,
-          "weapons" : [
-            {
-              "id" : "hand_weapon_heavy",
-              "count" : 2
-            }
-          ],
-          "options" : [
-            {
-              "replaceWeapon" : [
+        "traitor_barbarians": {
+            "name": "Traitor Barbarians",
+            "description": "Frenzied Warriors serving the Traitor Gods.",
+            "min": 1,
+            "max": 6,
+            "category": "core",
+            "models": [
                 {
-                  "id" : "hand_weapon_heavy",
-                  "count" : 2
-                }
-              ],
-              "withWeapon" : [
-                {
-                  "id" : "halberd_heavy",
-                  "count" : 2
+                    "name": "Traitor Chieftain",
+                    "movement": 6,
+                    "courage": 5,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 3,
+                    "weapons": [{"id": "hand_weapon", "count": 2}],
+                    "options": [
+                        {"replaceWeapon": [{"id": "hand_weapon", "count": 2}], "withWeapon": [{"id": "hand_weapon", "count": 4}, {"id": "great_weapon", "count": 2}, {"id": "spear", "count": 2}]}
+                    ],
+                    "rules": [],
+                    "min": 1,
+                    "max": 1
                 },
                 {
-                  "id" : "great_weapon_heavy",
-                  "count" : 2
-                },
-                {
-                  "id" : "lance",
-                  "count" : 2
+                    "name": "Traitor Barbarian",
+                    "movement": 6,
+                    "courage": 5,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 3,
+                    "weapons": ["hand_weapon"],
+                    "options": [{"replaceWeapon": ["hand_weapon"], "withWeapon": [{"id": "hand_weapon", "count": 2}, "great_weapon", "spear"]}],
+                    "rules": [],
+                    "min": 9,
+                    "max": 29
                 }
-              ]
-            }
-          ],
-          "rules" : [
-            "mount_horse",
-            "shield",
-            "fear"
-          ],
-          "min" : 4,
-          "max" : 14
-        }
-      ],
-      "subfactions" : [
-        "none",
-        "change_legions",
-        "rage_legions",
-        "lust_legions",
-        "plague_legions"
-      ]
-    },
-    "traitor_outriders" : {
-      "name" : "Traitor Outriders",
-      "description" : "Mounted Barbarians, ready to spill blood.",
-      "min" : 1,
-      "max" : 6,
-      "category" : "core",
-      "models" : [
-        {
-          "name" : "Outrider Chieftain",
-          "movement" : 6,
-          "courage" : 5,
-          "shoot" : 5,
-          "fight" : 5,
-          "defense" : 5,
-          "reflexes" : 3,
-          "weapons" : [
-            {
-              "id" : "hand_weapon",
-              "count" : 2
-            }
-          ],
-          "options" : [
-            {
-              "replaceWeapon" : [
-                {
-                  "id" : "hand_weapon",
-                  "count" : 2
-                }
-              ],
-              "withWeapon" : [
-                {
-                  "id" : "great_weapon",
-                  "count" : 2
-                },
-                {
-                  "id" : "lance",
-                  "count" : 2
-                }
-              ]
-            }
-          ],
-          "rules" : [
-            "mount_horse"
-          ],
-          "min" : 1,
-          "max" : 1
+            ],
+            "subfactions": ["none", "change_legions", "rage_legions", "lust_legions", "plague_legions"],
+            "options": [{"addRule": "shield"}]
         },
-        {
-          "name" : "Traitor Outrider",
-          "movement" : 6,
-          "courage" : 5,
-          "shoot" : 5,
-          "fight" : 5,
-          "defense" : 5,
-          "reflexes" : 3,
-          "weapons" : [
-            "hand_weapon"
-          ],
-          "options" : [
-            {
-              "replaceWeapon" : [
-                "hand_weapon"
-              ],
-              "withWeapon" : [
-                "great_weapon",
-                "lance"
-              ]
-            }
-          ],
-          "rules" : [
-            "mount_horse"
-          ],
-          "min" : 4,
-          "max" : 14
+        "traitor_lord": {
+            "name": "Traitor Lord",
+            "description": "A lord of the dark gods.",
+            "min": 1,
+            "max": 1,
+            "category": "hero",
+            "models": [
+                {
+                    "name": "Havoc Lord",
+                    "movement": 6,
+                    "courage": 5,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "weapons": [{"id": "hand_weapon_heavy", "count": 2}],
+                    "options": [
+                        {
+                            "replaceWeapon": [{"id": "hand_weapon_heavy", "count": 2}],
+                            "withWeapon": [{"id": "hand_weapon_heavy", "count": 4}, {"id": "halberd_heavy", "count": 2}, {"id": "great_weapon_heavy", "count": 2}]
+                        }
+                    ],
+                    "rules": ["leader", {"id": "tough", "x": 1}, {"id": "wounds", "x": 3}],
+                    "min": 1,
+                    "max": 1
+                }
+            ],
+            "subfactions": ["none", "change_legions", "rage_legions", "lust_legions", "plague_legions"]
+        },
+        "traitor_knights": {
+            "name": "Traitor Knights",
+            "description": "Dark Knights who serve the Traitor Gods.",
+            "min": 1,
+            "max": 6,
+            "category": "elite",
+            "models": [
+                {
+                    "name": "Dark Herald",
+                    "movement": 6,
+                    "courage": 6,
+                    "shoot": 5,
+                    "fight": 6,
+                    "defense": 9,
+                    "reflexes": 4,
+                    "weapons": [{"id": "hand_weapon_heavy", "count": 3}],
+                    "options": [
+                        {
+                            "replaceWeapon": [{"id": "hand_weapon_heavy", "count": 3}],
+                            "withWeapon": [{"id": "halberd_heavy", "count": 3}, {"id": "great_weapon_heavy", "count": 3}, {"id": "lance", "count": 3}]
+                        }
+                    ],
+                    "rules": ["mount_horse", "shield", "fear"],
+                    "min": 1,
+                    "max": 1
+                },
+                {
+                    "name": "Traitor Knight",
+                    "movement": 5,
+                    "courage": 6,
+                    "shoot": 5,
+                    "fight": 6,
+                    "defense": 9,
+                    "reflexes": 4,
+                    "weapons": [{"id": "hand_weapon_heavy", "count": 2}],
+                    "options": [
+                        {
+                            "replaceWeapon": [{"id": "hand_weapon_heavy", "count": 2}],
+                            "withWeapon": [{"id": "halberd_heavy", "count": 2}, {"id": "great_weapon_heavy", "count": 2}, {"id": "lance", "count": 2}]
+                        }
+                    ],
+                    "rules": ["mount_horse", "shield", "fear"],
+                    "min": 4,
+                    "max": 14
+                }
+            ],
+            "subfactions": ["none", "change_legions", "rage_legions", "lust_legions", "plague_legions"]
+        },
+        "traitor_outriders": {
+            "name": "Traitor Outriders",
+            "description": "Mounted Barbarians, ready to spill blood.",
+            "min": 1,
+            "max": 6,
+            "category": "core",
+            "models": [
+                {
+                    "name": "Outrider Chieftain",
+                    "movement": 6,
+                    "courage": 5,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 3,
+                    "weapons": [{"id": "hand_weapon", "count": 2}],
+                    "options": [{"replaceWeapon": [{"id": "hand_weapon", "count": 2}], "withWeapon": [{"id": "great_weapon", "count": 2}, {"id": "lance", "count": 2}]}],
+                    "rules": ["mount_horse"],
+                    "min": 1,
+                    "max": 1
+                },
+                {
+                    "name": "Traitor Outrider",
+                    "movement": 6,
+                    "courage": 5,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 3,
+                    "weapons": ["hand_weapon"],
+                    "options": [{"replaceWeapon": ["hand_weapon"], "withWeapon": ["great_weapon", "lance"]}],
+                    "rules": ["mount_horse"],
+                    "min": 4,
+                    "max": 14
+                }
+            ],
+            "subfactions": ["none", "change_legions", "rage_legions", "lust_legions", "plague_legions"],
+            "options": [{"addRule": "shield"}]
         }
-      ],
-      "subfactions" : [
-        "none",
-        "change_legions",
-        "rage_legions",
-        "lust_legions",
-        "plague_legions"
-      ],
-      "options" : [
-        {
-          "addRule" : "shield"
+    },
+    "weapons": {},
+    "rules": {
+        "mount_horse": {"name": "War Horse", "hidden": true, "description_short": "Movement +2\"", "description": "Increases movement by 2\".", "points": 2}
+    },
+    "strategies": [],
+    "relics": [],
+    "powers": {
+        "bolt": {
+            "name": "Arcane Bolt",
+            "description": "Target enemy model within 12\" takes 1 hit with AP 1. This power may be cast unlimited times.",
+            "flavor": "The enemy is hit by an arcane missile, piercing trough armor and shields alike.",
+            "charge": 6,
+            "subfactions": ["change_legions"]
+        },
+        "flame": {
+            "name": "Living Flame",
+            "description": "Target enemy unit within 12\" takes 6 hits. This power may be cast only three times per game.",
+            "flavor": "The Sorcerer burns the souls of his enemies.",
+            "charge": 8,
+            "subfactions": ["change_legions"]
+        },
+        "fury": {
+            "name": "Furious Assault",
+            "description": "Target friendly unit within 12\" gains the Furious special rule until the end of the turn. This power may be cast only once per turn.",
+            "flavor": "The priest chants a sinister prayer, blessing his fellow Warriors with great rage.",
+            "charge": 7,
+            "subfactions": ["rage_legions"]
+        },
+        "plague": {
+            "name": "Rotten Fortitude",
+            "description": "Target friendly unit within 12\" gains Tough (+1) until the end of the turn. This power may be cast only three times per game.",
+            "flavor": "The sorcerer spreads a joyous disease onto his fellow warriors, making them numb to harm.",
+            "charge": 8,
+            "subfactions": ["plague_legions"]
         }
-      ]
     }
-  },
-  "weapons" : {},
-  "rules" : {
-    "mount_horse" : {
-      "name" : "War Horse",
-      "hidden" : true,
-      "description_short" : "Movement +2\"",
-      "description" : "Increases movement by 2\".",
-      "points" : 2
-    },
-    "shield" : {
-      "name" : "Shield",
-      "description" : "Whenever this model loses a wound, roll a D10. On a 3 or less that wound is not lost.",
-      "points" : 5
-    }
-  },
-  "strategies" : [],
-  "relics" : [],
-  "powers" : {
-    "bolt" : {
-      "name" : "Arcane Bolt",
-      "description" : "Target enemy model within 12\" takes 1 hit with AP 1. This power may be cast unlimited times.",
-      "flavor" : "The enemy is hit by an arcane missile, piercing trough armor and shields alike.",
-      "charge" : 6,
-      "subfactions" : [
-        "change_legions"
-      ]
-    },
-    "flame" : {
-      "name" : "Living Flame",
-      "description" : "Target enemy unit within 12\" takes 6 hits. This power may be cast only three times per game.",
-      "flavor" : "The Sorcerer burns the souls of his enemies.",
-      "charge" : 8,
-      "subfactions" : [
-        "change_legions"
-      ]
-    },
-    "fury" : {
-      "name" : "Furious Assault",
-      "description" : "Target friendly unit within 12\" gains the Furious special rule until the end of the turn. This power may be cast only once per turn.",
-      "flavor" : "The priest chants a sinister prayer, blessing his fellow Warriors with great rage.",
-      "charge" : 7,
-      "subfactions" : [
-        "rage_legions"
-      ]
-    },
-    "plague" : {
-      "name" : "Rotten Fortitude",
-      "description" : "Target friendly unit within 12\" gains Tough (+1) until the end of the turn. This power may be cast only three times per game.",
-      "flavor" : "The sorcerer spreads a joyous disease onto his fellow warriors, making them numb to harm.",
-      "charge" : 8,
-      "subfactions" : [
-        "plague_legions"
-      ]
-    }
-  }
 }
