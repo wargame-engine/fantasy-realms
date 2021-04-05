@@ -1,32 +1,52 @@
 {
     "name": "Fantasy Realms (Beta)",
     "id": "fantasy_realms",
+    "alliances": {"death": {"name": "Bringers of Death"}, "destruction": {"name": "Forces of Destruction"}, "order": {"name": "Keepers of Order"}, "chaos": {"name": "Instruments of Chaos"}},
     "factions": {
-        "vampire_lords": {"name": "Vampire Lords", "id": "vampire_lords", "url": "vampire_lords.json", "color": "#9a1115", "version": "0.1"},
-        "traitor_legions": {"name": "Traitor Legions", "id": "traitor_legions", "url": "traitor_legions.json", "color": "#231f20", "version": "0.1"}
-    },
-    "categories": {
-        "hero": {"name": "Hero"},
-        "core": {"name": "Core"},
-        "elite": {"name": "Elite"},
-        "rare": {"name": "Rare"}
-    },
-    "organizations": {
-        "skirmish": {
-            "name": "Battle (Core)",
-            "cost": 0,
-            "description": "A well-rounded force for taking on any mission.",
-            "categories": {"hero": {"min": 1, "max": 2}, "core": {"min": 2, "max": 4}}
+        "vampire_lords": {
+            "name": "Vampire Lords",
+            "id": "vampire_lords",
+            "url": "vampire_lords.json",
+            "color": "#9a1115",
+            "version": "0.1",
+            "alliance": "death",
+            "description": "The Vampire Lords are powerful vampires who command legions of undead to do their bidding. They defeat their foes with powerful death magic and hordes of undead."
+        },
+        "traitor_legions": {
+            "name": "Traitor Legions",
+            "id": "traitor_legions",
+            "url": "traitor_legions.json",
+            "color": "#231f20",
+            "version": "0.1",
+            "alliance": "chaos",
+            "description": "The Traitor Legions are those who chose to fight for evil instead of order and made a pact with the dark gods. The Traitor Legions use deadly traitor warriors and other barbarians to swiftly crush their foes."
+        },
+        "haunting_ghosts": {
+            "name": "Haunting Ghosts",
+            "id": "haunting_ghosts",
+            "url": "haunting_ghosts.json",
+            "color": "#798D96",
+            "version": "0.1",
+            "alliance": "death",
+            "description": "The Haunting Ghosts are a collection of undead spirits which haunt their hallowed grave sites. The Ghostly Undead use fear and ethereal movement to wash over their foes and scare them into defeat."
         }
     },
+    "hidden_factions": {
+        "eternal_protectors": {
+            "name": "Eternal Protectors",
+            "id": "eternal_protectors",
+            "url": "eternal_protectors.json",
+            "color": "#D4AF37",
+            "version": "0.1",
+            "alliance": "order",
+            "description": "The Eternal Protectors are sworn to protect those who cannot protect themselves and to ward off evil. They wear tough armor and wield mighty weapons to strike down those are unjust."
+        }
+    },
+    "categories": {"hero": {"name": "Hero"}, "core": {"name": "Core"}, "elite": {"name": "Elite"}, "rare": {"name": "Rare"}},
+    "organizations": {
+        "skirmish": {"name": "Battle (Core)", "cost": 0, "description": "A well-rounded force for taking on any mission.", "categories": {"hero": {"min": 1, "max": 2}, "core": {"min": 2, "max": 4}}}
+    },
     "relics": {
-        "resilient": {
-            "name": "Resilient",
-            "rule": "legend_wounds",
-            "description": "Upgrade one Infantry model with Resilient.",
-            "flavor": "This model has seen some of the toughest fighting imaginable and lived to tell the tale.",
-            "points": 10
-        },
         "inspired": {
             "name": "Inspired",
             "rule": "legend_courage",
@@ -44,19 +64,23 @@
         }
     },
     "weapons": {
-        "hand_weapon": {"name": "Hand weapon", "attacks": 1, "short": "Melee"},
-        "hand_weapon_heavy": {"name": "Hand weapon (Heavy)", "attacks": 1, "ap": 1, "short": "Melee"},
+        "hand_weapon": {"name": "Light Hand Weapon", "attacks": 1, "short": "Melee"},
+        "hand_weapon_heavy": {"name": "Heavy Hand Weapon", "attacks": 1, "ap": 1, "short": "Melee"},
         "great_weapon": {"name": "Great weapon", "attacks": 1, "ap": 2, "short": "Melee"},
         "great_weapon_heavy": {"name": "Great weapon (Heavy)", "attacks": 1, "ap": 3, "short": "Melee"},
         "halberd": {"name": "Halberd", "attacks": 1, "ap": 1, "short": "Melee"},
         "halberd_heavy": {"name": "Halberd (Heavy)", "attacks": 1, "ap": 2, "short": "Melee"},
-        "short_bow": {"name": "Shortbow", "attacks": 1, "short": 6, "medium": 12},
-        "long_bow": {"name": "Longbow", "attacks": 1, "short": 12, "medium": 24},
-        "spear": {"name": "Spear", "attacks": 1, "rules": [{"id": "reach", "x": 2}], "short": "Melee"},
-        "lance": {"name": "Lance", "attacks": 1, "rules": [{"id": "impact", "x": 1}], "short": "Melee"}
-   
+        "short_bow": {"name": "Shortbow", "attacks": 1, "ap": 1, "short": 6, "medium": 12},
+        "long_bow": {"name": "Longbow", "attacks": 1, "ap": 1, "short": 12, "medium": 24},
+        "spear": {"name": "Spear", "attacks": 1, "ap": 1, "rules": ["cumbersome", {"id": "reach", "x": 2}], "short": "Melee"},
+        "lance": {"name": "Lance", "attacks": 1, "ap": 1, "rules": [{"id": "impact", "x": 1}], "short": "Melee"}
     },
     "rules": {
+        "light_armor": {"name": "Light Armor", "description": "This model has +1 to its Save characteristic.", "points": 2},
+        "heavy_armor": {"name": "Heavy Armor", "description": "This model has +2 to its Save characteristic.", "points": 4},
+        "skirmishers": {"name": "Skirmishers", "description": "This unit has a 4\" coherency and may not be more than 8\" away from any model in the unit at the end of a move action.", "points": 2},
+        "distract": {"name": "Distracting", "description": "Enemy units within 6\" get -1 Strength.", "points": 3},
+        "ethereal": {"name": "Ethereal", "description": "This model may ignore other models and any terrain when moving.", "points": 2},
         "shield": {"name": "Shield", "description": "This model increases its Save by 1.", "points": 2},
         "legend_wounds": {"name": "Resilient", "description": "This model gains Wounds(+1).", "points": 10},
         "legend_courage": {"name": "Inspired", "description": "This model gains +1 Courage.", "points": 10}

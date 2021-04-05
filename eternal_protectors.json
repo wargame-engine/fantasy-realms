@@ -1,0 +1,24 @@
+{
+    "name": "Eternal Protectors",
+    "id": "eternal_protectors",
+    "author": "guitarninja#5707",
+    "version": "0.1",
+    "color": "#D4AF37",
+    "units": {
+        "ghosts": {
+            "name": "Ghostly Horde",
+            "description": "Foul spirits with various weapons.",
+            "category": "core",
+            "rules": ["ethereal"],
+            "models": [
+                {"name": "Ghost", "movement": 6, "courage": 5, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 5, "weapons": [{"id": "hand_weapon_heavy", "count": 2}], "min": 10, "max": 30}
+            ],
+            "keywords": ["Infantry", "Ghost"]
+        }
+    },
+    "weapons": {},
+    "rules": {},
+    "relics": [],
+    "powers": {},
+    "strategies": []
+}

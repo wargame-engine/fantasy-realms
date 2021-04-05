@@ -1,6 +1,7 @@
 {
     "name": "Vampire Lords",
     "id": "vampire_lords",
+    "author": "Xekon#8266",
     "version": "0.1",
     "color": "#9a1115",
     "units": {
@@ -10,43 +11,39 @@
             "min": 1,
             "max": 6,
             "category": "core",
+            "rules": ["raise_dead"],
             "models": [
-                {"name": "Zombie", "movement": 4, "courage": 6, "shoot": 3, "fight": 4, "defense": 4, "reflexes": 4, "weapons": ["hand_weapon"], "options": [], "rules": ["fear"], "min": 10, "max": 30}
+                {"name": "Zombie", "movement": 5, "courage": 6, "shoot": 3, "fight": 4, "defense": 4, "reflexes": 4, "weapons": ["hand_weapon"], "options": [], "min": 10, "max": 30}
             ],
             "keywords": ["Infantry", "Undead"]
         },
         "skeleton_warriors": {
             "name": "Skeleton Warriors",
             "description": "The risen undead, unending masses in service of a Vampire Lord.",
-            "min": 1,
-            "max": 6,
             "category": "core",
+            "options": [{"replaceWeapon": ["hand_weapon_heavy"], "withWeapon": ["spear"]}, {"addRule": "shield"}],
             "models": [
                 {
                     "name": "Skeletal Champion",
-                    "movement": 4,
+                    "movement": 5,
                     "courage": 6,
                     "shoot": 4,
-                    "fight": 4,
+                    "fight": 5,
                     "defense": 5,
                     "reflexes": 5,
-                    "weapons": [{"id": "hand_weapon", "count": 2}],
-                    "options": [{"replaceWeapon": [{"id": "hand_weapon", "count": 2}], "withWeapon": [{"id": "spear", "count": 2}]}],
-                    "rules": ["fear", "shield"],
+                    "weapons": ["hand_weapon_heavy"],
                     "min": 1,
                     "max": 1
                 },
                 {
                     "name": "Skeleton Warrior",
-                    "movement": 4,
+                    "movement": 5,
                     "courage": 6,
                     "shoot": 4,
-                    "fight": 4,
+                    "fight": 5,
                     "defense": 5,
                     "reflexes": 5,
-                    "weapons": ["hand_weapon"],
-                    "options": [{"replaceWeapon": ["hand_weapon"], "withWeapon": ["spear"]}],
-                    "rules": ["fear", "shield"],
+                    "weapons": ["hand_weapon_heavy"],
                     "min": 9,
                     "max": 29
                 }
@@ -190,7 +187,6 @@
                 {
                     "max": 1,
                     "min": 1,
-                    "rules": ["fear"],
                     "options": [],
                     "weapons": [{"id": "claws", "count": 3}],
                     "reflexes": 4,
@@ -209,7 +205,6 @@
                     "fight": 4,
                     "defense": 5,
                     "reflexes": 4,
-                    "rules": ["fear"],
                     "options": [],
                     "weapons": [{"id": "claws", "count": 2}],
                     "min": 9,
@@ -228,12 +223,11 @@
                 {
                     "max": 1,
                     "min": 1,
-                    "rules": ["scout", "fear"],
-                    "options": [],
+                    "rules": ["scout"],
                     "weapons": [{"id": "bite", "count": 2}],
-                    "reflexes": 4,
-                    "defense": 4,
-                    "fight": 4,
+                    "reflexes": 5,
+                    "defense": 6,
+                    "fight": 5,
                     "shoot": 3,
                     "courage": 6,
                     "movement": 8,
@@ -244,12 +238,11 @@
                     "movement": 8,
                     "courage": 6,
                     "shoot": 3,
-                    "fight": 4,
-                    "defense": 4,
-                    "reflexes": 4,
-                    "rules": ["scout", "fear"],
-                    "options": [],
-                    "weapons": ["bite"],
+                    "fight": 5,
+                    "defense": 6,
+                    "reflexes": 5,
+                    "rules": ["scout"],
+                    "weapons": [{"id": "bite", "count": 2}],
                     "min": 4,
                     "max": 14
                 }
@@ -422,15 +415,15 @@
         "vampire_g_weapon": {"name": "Royal Great weapon", "ap": 4, "attacks": 1, "short": "Melee"},
         "necrotic_breath": {"name": "Necrotic Breath", "ap": 3, "attacks": 3, "short": 9, "medium": 18},
         "claws": {"name": "Rending Claws", "ap": 0, "attacks": 1, "short": "Melee", "rules": [{"id": "rending"}]},
-        "bite": {"name": "Bite", "ap": 0, "attacks": 1, "short": "Melee"},
+        "bite": {"name": "Bite", "ap": 1, "attacks": 1, "short": "Melee"},
         "lance_heavy": {"name": "Lance (Heavy)", "ap": 1, "attacks": 1, "short": "Melee", "rules": [{"id": "impact", "x": 1}]},
         "spectral_blade": {"name": "Spectral Blade", "ap": 1, "attacks": 1, "short": "Melee", "rules": ["spectral"]},
         "spectral_lance": {"name": "Spectral Lance", "ap": 1, "attacks": 1, "short": "Melee", "rules": [{"id": "impact", "x": 1}, "spectral"]},
         "spectral_great": {"name": "Spectral Greatblade", "ap": 3, "attacks": 1, "short": "Melee", "rules": ["spectral"]}
     },
     "rules": {
+        "raise_dead": {"name": "Raise Dead", "description": "Roll a die each time this model kills an enemy model. On a roll of 1 or 2, return a model to this unit. This may not bring the unit over its starting size.", "points": 2},
         "spectral": {"name": "Spectral", "description": "Hit rolls of 1 or 2 from this weapon cause 2 hits instead of 1. Additional hits must be assigned to the same model.", "points": ["weapon.attacks", {"multiply": 2}]},
-        "heavy_armor": {"name": "Heavy Armor", "description": "This model has +2 to its Save characteristic.", "points": 6},
         "mount_horse": {"name": "Undead Horse", "hidden": true, "description_short": "Movement +2\" and counts as Cavalry", "description": "Increases movement by 2\".", "points": 2},
         "siphon": {
             "name": "Vampiric Siphon",
@@ -438,11 +431,9 @@
             "points": 4
         },
         "skirmishers": {"name": "Skirmishers", "description": "This unit has a 4\" coherency and may not be more than 8\" away from any model in the unit at the end of a move action.", "points": 2},
-        "distract": {"name": "Distracting", "description": "Enemy units within 6\" get -1 Strength.", "points": 3},
-        "ethereal": {"name": "Ethereal", "description": "This unit may ignore models and any terrain when moving.", "points": 4}
+        "distract": {"name": "Distracting", "description": "Enemy units within 6\" get -1 Strength.", "points": 3}
     },
     "relics": [],
-    "author": "Xekon#8266",
     "powers": {
         "bat_form": {
             "name": "Bat Form",
