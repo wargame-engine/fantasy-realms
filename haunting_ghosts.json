@@ -57,17 +57,6 @@
             "models": [{"name": "Ghost", "movement": 6, "courage": 5, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 5, "weapons": [{"id": "hand_weapon_heavy", "count": 2}], "min": 10, "max": 30}],
             "keywords": ["Infantry", "Ghost"]
         },
-        "reapers": {
-            "name": "Ghastly Reapers",
-            "description": "Hunting spirits with large reaping weapons.",
-            "category": "core",
-            "rules": ["fly"],
-            "models": [
-                {"name": "Reaper Bell Carrier", "movement": 8, "courage": 6, "shoot": 5, "fight": 5, "defense": 6, "reflexes": 5, "weapons": [{"id": "death_bell", "count": 1}], "min": 1, "max": 1},
-                {"name": "Reaper", "movement": 8, "courage": 6, "shoot": 5, "fight": 5, "defense": 6, "reflexes": 5, "weapons": [{"id": "reaper_scythe", "count": 2}], "min": 3, "max": 30}
-            ],
-            "keywords": ["Infantry", "Ghost"]
-        },
         "stalkers": {
             "name": "Glaive Stalkers",
             "description": "Hunting spirits with glaives.",
@@ -75,6 +64,17 @@
             "rules": ["fly"],
             "models": [
                 {"name": "Glaive Stalkers", "movement": 8, "courage": 6, "shoot": 5, "fight": 5, "defense": 6, "reflexes": 5, "weapons": [{"id": "stalker_glaive", "count": 2}], "min": 4, "max": 16}
+            ],
+            "keywords": ["Infantry", "Ghost"]
+        },
+        "reapers": {
+            "name": "Ghastly Reapers",
+            "description": "Hunting spirits with large reaping weapons.",
+            "category": "elite",
+            "rules": ["fly"],
+            "models": [
+                {"name": "Reaper Bell Carrier", "movement": 8, "courage": 6, "shoot": 5, "fight": 5, "defense": 6, "reflexes": 5, "weapons": [{"id": "death_bell", "count": 1}], "min": 1, "max": 1},
+                {"name": "Reaper", "movement": 8, "courage": 6, "shoot": 5, "fight": 5, "defense": 6, "reflexes": 5, "weapons": [{"id": "reaper_scythe", "count": 2}], "min": 3, "max": 30}
             ],
             "keywords": ["Infantry", "Ghost"]
         }
