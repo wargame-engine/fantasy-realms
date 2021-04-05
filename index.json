@@ -44,7 +44,7 @@
     },
     "categories": {"hero": {"name": "Hero"}, "core": {"name": "Core"}, "elite": {"name": "Elite"}, "rare": {"name": "Rare"}},
     "organizations": {
-        "skirmish": {"name": "Battle (Core)", "cost": 0, "description": "A well-rounded force for taking on any mission.", "categories": {"hero": {"min": 1, "max": 2}, "core": {"min": 2, "max": 4}}}
+        "skirmish": {"name": "Battle (Core)", "cost": 0, "description": "A well-rounded force for taking on any mission.", "categories": {"hero": {"min": 1, "max": 2}, "core": {"min": 2, "max": 4}, "elite": {"min": 0, "max": 3}, "rare": {"rare": 0, "max": 2}}}
     },
     "relics": {
         "inspired": {
