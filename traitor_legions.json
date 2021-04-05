@@ -101,6 +101,13 @@
             "min": 1,
             "max": 6,
             "category": "core",
+            "options": [
+                {
+                    "replaceWeapon": [{"id": "hand_weapon_heavy", "count": 2}],
+                    "withWeapon": [{"id": "hand_weapon_heavy", "count": 3}, {"id": "halberd_heavy", "count": 2}, {"id": "great_weapon_heavy", "count": 2}]
+                },
+                {"addRule": "shield"}
+            ],
             "models": [
                 {
                     "name": "Aspiring Champion",
@@ -108,16 +115,9 @@
                     "courage": 6,
                     "shoot": 5,
                     "fight": 6,
-                    "defense": 8,
-                    "reflexes": 4,
+                    "defense": 7,
+                    "reflexes": 6,
                     "weapons": [{"id": "hand_weapon_heavy", "count": 2}],
-                    "options": [
-                        {
-                            "replaceWeapon": [{"id": "hand_weapon_heavy", "count": 3}],
-                            "withWeapon": [{"id": "hand_weapon_heavy", "count": 6}, {"id": "halberd_heavy", "count": 3}, {"id": "great_weapon_heavy", "count": 3}]
-                        }
-                    ],
-                    "rules": [],
                     "min": 1,
                     "max": 1
                 },
@@ -127,22 +127,14 @@
                     "courage": 6,
                     "shoot": 5,
                     "fight": 6,
-                    "defense": 8,
-                    "reflexes": 4,
+                    "defense": 7,
+                    "reflexes": 6,
                     "weapons": [{"id": "hand_weapon_heavy", "count": 2}],
-                    "options": [
-                        {
-                            "replaceWeapon": [{"id": "hand_weapon_heavy", "count": 2}],
-                            "withWeapon": [{"id": "hand_weapon_heavy", "count": 4}, {"id": "halberd_heavy", "count": 2}, {"id": "great_weapon_heavy", "count": 2}]
-                        }
-                    ],
-                    "rules": [],
                     "min": 4,
                     "max": 29
                 }
             ],
-            "subfactions": ["none", "change_legions", "rage_legions", "lust_legions", "plague_legions"],
-            "options": [{"addRule": "shield"}]
+            "subfactions": ["none", "change_legions", "rage_legions", "lust_legions", "plague_legions"]
         },
         "traitor_barbarians": {
             "name": "Traitor Barbarians",
@@ -235,6 +227,7 @@
             "min": 1,
             "max": 6,
             "category": "core",
+            "options": [{"replaceWeapon": [{"id": "hand_weapon_heavy", "count": 2}], "withWeapon": [{"id": "great_weapon", "count": 2}, {"id": "lance", "count": 2}]}, {"addRule": "shield"}],
             "models": [
                 {
                     "name": "Outrider Chieftain",
@@ -244,8 +237,7 @@
                     "fight": 5,
                     "defense": 5,
                     "reflexes": 4,
-                    "weapons": [{"id": "hand_weapon", "count": 2}],
-                    "options": [{"replaceWeapon": [{"id": "hand_weapon", "count": 2}], "withWeapon": [{"id": "great_weapon", "count": 2}, {"id": "lance", "count": 2}]}],
+                    "weapons": [{"id": "hand_weapon_heavy", "count": 2}],
                     "min": 1,
                     "max": 1
                 },
@@ -257,20 +249,16 @@
                     "fight": 5,
                     "defense": 5,
                     "reflexes": 4,
-                    "weapons": ["hand_weapon"],
-                    "options": [{"replaceWeapon": ["hand_weapon"], "withWeapon": ["great_weapon", "lance"]}],
+                    "weapons": [{"id": "hand_weapon_heavy", "count": 2}],
                     "min": 4,
                     "max": 14
                 }
             ],
-            "subfactions": ["none", "change_legions", "rage_legions", "lust_legions", "plague_legions"],
-            "options": [{"addRule": "shield"}]
+            "subfactions": ["none", "change_legions", "rage_legions", "lust_legions", "plague_legions"]
         }
     },
     "weapons": {},
-    "rules": {
-        "mount_horse": {"name": "War Horse", "hidden": true, "description_short": "Movement +2\"", "description": "Increases movement by 2\".", "points": 2}
-    },
+    "rules": {"mount_horse": {"name": "War Horse", "hidden": true, "description_short": "Movement +2\"", "description": "Increases movement by 2\".", "points": 2}},
     "strategies": [],
     "relics": [],
     "powers": {
