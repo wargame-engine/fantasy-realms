@@ -42,7 +42,7 @@
                     "defense": 6,
                     "reflexes": 6,
                     "weapons": [{"id": "executioner_axe", "count": 3}],
-                    "rules": [{"id": "wounds", "x": 3}, "leader"],
+                    "rules": [{"id": "wounds", "x": 3}, {"id": "leader_x", "x": "Infantry"}],
                     "min": 1,
                     "max": 1
                 }
@@ -64,7 +64,7 @@
                     "defense": 6,
                     "reflexes": 6,
                     "weapons": [{"id": "ghostly_shackles", "count": 3}],
-                    "rules": [{"id": "wounds", "x": 3}, {"id": "ghost_tactics", "x": 1}, "leader"],
+                    "rules": [{"id": "wounds", "x": 3}, {"id": "ghost_tactics", "x": 1}, {"id": "leader_x", "x": "Infantry"}],
                     "min": 1,
                     "max": 1
                 }
@@ -86,7 +86,7 @@
                     "defense": 6,
                     "reflexes": 6,
                     "weapons": [{"id": "frost_sword", "count": 3}],
-                    "rules": [{"id": "wounds", "x": 3}, {"id": "magic", "x": 1}, "soul_lantern", "leader"],
+                    "rules": [{"id": "wounds", "x": 3}, {"id": "magic", "x": 1}, "soul_lantern", {"id": "leader_x", "x": "Infantry"}],
                     "min": 1,
                     "max": 1
                 }

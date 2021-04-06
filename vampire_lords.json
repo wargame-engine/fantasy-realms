@@ -75,7 +75,7 @@
                         {"addRule": "heavy_armor"},
                         {"addRule": "mount_horse"}
                     ],
-                    "rules": [{"id": "wounds", "x": 2}, "fear", "leader", {"id": "magic", "x": 1}, "siphon"],
+                    "rules": [{"id": "wounds", "x": 2}, "fear", {"id": "leader_x", "x": "Infantry"}, {"id": "magic", "x": 1}, "siphon"],
                     "min": 1,
                     "max": 1
                 }
@@ -108,7 +108,7 @@
                         {"addRule": "mount_horse"}
                     ],
                     "limit": 1,
-                    "rules": ["leader", {"id": "wounds", "x": 3}, "fear", {"id": "magic", "x": 1}, "siphon"],
+                    "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "wounds", "x": 3}, "fear", {"id": "magic", "x": 1}, "siphon"],
                     "min": 1,
                     "max": 1
                 }
@@ -132,7 +132,7 @@
                     "reflexes": 6,
                     "weapons": [{"id": "vampire_lance", "count": 5}, "necrotic_breath"],
                     "options": [{"addRule": "shield"}, {"addRule": "heavy_armor"}],
-                    "rules": [{"id": "wounds", "x": 3}, "fear", "leader", {"id": "magic", "x": 1}, "siphon", "fly"],
+                    "rules": [{"id": "wounds", "x": 3}, "fear", {"id": "leader_x", "x": "Infantry"}, {"id": "magic", "x": 1}, "siphon", "fly"],
                     "min": 1,
                     "max": 1
                 }
