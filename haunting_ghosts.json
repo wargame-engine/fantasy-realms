@@ -121,6 +121,16 @@
                 {"name": "Reaper", "movement": 8, "courage": 6, "shoot": 5, "fight": 5, "defense": 6, "reflexes": 5, "weapons": [{"id": "reaper_scythe", "count": 2}], "min": 3, "max": 30}
             ],
             "keywords": ["Infantry", "Ghost"]
+        },
+        "spirits": {
+            "name": "Spirits",
+            "description": "A swarm of spirits.",
+            "category": "core",
+            "rules": ["fly", {"id": "wounds", "x": 3}],
+            "models": [
+                {"name": "Spirits", "movement": 6, "courage": 6, "shoot": 4, "fight": 4, "defense": 5, "reflexes": 5, "weapons": [{"id": "hand_weapon_heavy", "count": 5}], "min": 3, "max": 12}
+            ],
+            "keywords": ["Infantry", "Ghost"]
         }
     },
     "weapons": {
