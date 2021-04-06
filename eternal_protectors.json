@@ -5,19 +5,88 @@
     "version": "0.1",
     "color": "#D4AF37",
     "units": {
-        "ghosts": {
-            "name": "Ghostly Horde",
-            "description": "Foul spirits with various weapons.",
-            "category": "core",
-            "rules": ["ethereal"],
+        "lightning_mage_on_gryhpon": {
+            "name": "Lightning Mage on Gryphon",
+            "description": "A power lightning mage on a hardy gryphon mount.",
+            "category": "hero",
             "models": [
-                {"name": "Ghost", "movement": 6, "courage": 5, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 5, "weapons": [{"id": "hand_weapon_heavy", "count": 2}], "min": 10, "max": 30}
+                {
+                    "name": "Lightning Mage on Gryphon",
+                    "movement": 8,
+                    "courage": 7,
+                    "shoot": 7,
+                    "fight": 7,
+                    "defense": 8,
+                    "reflexes": 6,
+                    "weapons": [{"id": "protector_staff", "count": 4}, {"id": "beak_and_claws", "count": 2}],
+                    "rules": [{"id": "wounds", "x": 4}, {"id": "magic", "x": 1}, {"id": "leader_x", "x": "Infantry, Cavalry"}],
+                    "min": 1,
+                    "max": 1
+                }
             ],
-            "keywords": ["Infantry", "Ghost"]
+            "keywords": ["Cavalry"]
+        },
+        "storm_caller_mage": {
+            "name": "Stormcaller Mage",
+            "description": "A storm calling mage.",
+            "category": "hero",
+            "models": [
+                {
+                    "name": "Stormcaller Mage",
+                    "movement": 6,
+                    "courage": 7,
+                    "shoot": 7,
+                    "fight": 7,
+                    "defense": 8,
+                    "reflexes": 6,
+                    "weapons": [{"id": "protector_staff", "count": 4}],
+                    "rules": [{"id": "wounds", "x": 3}, {"id": "magic", "x": 1}, {"id": "leader_x", "x": "Infantry"}],
+                    "min": 1,
+                    "max": 1
+                }
+            ]
+        },
+        "invokers": {
+            "name": "Invokers",
+            "description": "Warrior mages who invoke the power of lightning to defend themselves.",
+            "category": "elite",
+            "options": [{"replaceWeapon": {"id": "great_staff", "count": 2}, "withWeapon": {"id": "sword_and_staff", "count": 3}}],
+            "models": [
+                {"name": "Invoker", "movement": 6, "courage": 6, "shoot": 6, "fight": 6, "defense": 7, "reflexes": 6, "rules": ["lightning_field", {"id": "wounds", "x": 2}], "weapons": [{"id": "great_staff", "count": 2}], "min": 5, "max": 20}
+            ],
+            "keywords": ["Infantry"]
+        },
+        "channelers": {
+            "name": "Channelers",
+            "description": "Warrior mages in heavy armor who use the power of lightning to strengthen their weapons.",
+            "category": "core",
+            "options": [
+                {"replaceWeapon": {"id": "hand_weapon_heavy", "count": 2}, "withWeapon": {"id": "maul", "count": 2}},
+                {"replaceWeapon": [{"id": "hand_weapon_heavy", "count": 2}, "shield"], "withWeapon": {"id": "great_maul", "count": 2}}
+            ],
+            "models": [
+                {"name": "Channeler", "movement": 6, "courage": 5, "shoot": 6, "fight": 6, "defense": 7, "reflexes": 6, "weapons": [{"id": "hand_weapon_heavy", "count": 2}, "shield"], "min": 5, "max": 20}
+            ],
+            "keywords": ["Infantry"]
+        },
+        "hunters": {
+            "name": "Hunters",
+            "description": "Warriors mages who use the elements to strengthen their crossbows.",
+            "category": "core",
+            "models": [
+                {"name": "Hunter", "movement": 6, "courage": 5, "shoot": 6, "fight": 6, "defense": 7, "reflexes": 6, "weapons": [{"id": "heavy_crossbow_melee", "count": 2}, "heavy_crossbow"], "min": 5, "max": 20}
+            ],
+            "keywords": ["Infantry"]
         }
     },
-    "weapons": {},
-    "rules": {},
+    "weapons": {
+        "sword_and_staff": {"name": "Sword and Staff", "attacks": 1, "ap": 1, "short": "Melee"},
+        "protector_staff": {"name": "Protector's Staff", "attacks": 1, "ap": 4, "short": "Melee"},
+        "beak_and_claws": {"name": "Beak and Claws", "attacks": 3, "ap": 3, "short": "Melee", "rules": ["rending"]}
+    },
+    "rules": {
+        "lightning_field": {"name": "Lightning Field", "description": "Roll a D10 each time this unit is hit by a Shooting attack. On each roll of a 1 or 2 an attack is prevented.", "points": 2}
+    },
     "relics": [],
     "powers": {},
     "strategies": []
