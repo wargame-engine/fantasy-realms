@@ -5,11 +5,33 @@
     "version": "0.1",
     "color": "#4C838A",
     "units": {
+        "shroudeded_knight_on_ghost_horse": {
+            "name": "Shrouded Knight on Ghost Horse",
+            "description": "A frightening execution with a huge axe.",
+            "category": "hero",
+            "rules": ["fly", "fear"],
+            "models": [
+                {
+                    "name": "Shrouded Knight on Ghost Horse",
+                    "movement": 8,
+                    "courage": 7,
+                    "shoot": 7,
+                    "fight": 7,
+                    "defense": 7,
+                    "reflexes": 6,
+                    "weapons": [{"id": "leeching_sword", "count": 4}, {"id": "hooves_and_teeth", "count": 2}],
+                    "rules": [{"id": "wounds", "x": 3}, "ghost_lord"],
+                    "min": 1,
+                    "max": 1
+                }
+            ],
+            "keywords": ["Cavalry", "Ghost"]
+        },
         "executioner": {
             "name": "Executioner",
-            "description": "A magical sorcerer who uses souls to cast powers.",
+            "description": "A frightening execution with a huge axe.",
             "category": "hero",
-            "rules": ["fly"],
+            "rules": ["fly", "fear"],
             "models": [
                 {
                     "name": "Executioner",
@@ -19,8 +41,30 @@
                     "fight": 6,
                     "defense": 6,
                     "reflexes": 6,
-                    "weapons": [{"id": "frost_sword", "count": 3}],
-                    "rules": [{"id": "wounds", "x": 3}, {"id": "magic", "x": 1}, "soul_lantern"],
+                    "weapons": [{"id": "executioner_axe", "count": 3}],
+                    "rules": [{"id": "wounds", "x": 3}],
+                    "min": 1,
+                    "max": 1
+                }
+            ],
+            "keywords": ["Infantry", "Ghost"]
+        },
+        "tormented_spirit": {
+            "name": "Tormented Spirit",
+            "description": "A tormented soul seeking to force those who did wrong to repent.",
+            "category": "hero",
+            "rules": ["fly"],
+            "models": [
+                {
+                    "name": "Tormented Spirit",
+                    "movement": 6,
+                    "courage": 7,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 6,
+                    "reflexes": 6,
+                    "weapons": [{"id": "ghostly_shackles", "count": 3}],
+                    "rules": [{"id": "wounds", "x": 3}, {"id": "ghost_tactics", "x": 1}],
                     "min": 1,
                     "max": 1
                 }
@@ -80,11 +124,23 @@
         }
     },
     "weapons": {
+        "hooves_and_teeth": {"name": "Hooves and Teeth", "attacks": 1, "short": "Melee"},
+        "leeching_sword": {"name": "Leeching Sword", "attacks": 1, "ap": 3, "short": "Melee", "rules": ["leeching"]},
+        "ghostly_shackles": {"name": "Ghostly Shackles", "attacks": 1, "ap": 4, "short": "Melee"},
+        "executioner_axe": {"name": "Executioner Axe", "attacks": 1, "ap": 4, "short": "Melee", "rules": ["rending"]},
         "frost_sword": {"name": "Frost Sword", "attacks": 1, "ap": 2, "short": "Melee"},
         "stalker_glaive": {"name": "Stalker Glaive", "attacks": 1, "ap": 2, "short": "Melee"},
         "reaper_scythe": {"name": "Reaper Scythe", "attacks": 1, "ap": 2, "short": "Melee", "rules": ["rending"]}, "death_bell": {"name": "Death Bell", "attacks": 1, "ap": 3, "short": "Melee"}
     },
     "rules": {
+        "leeching": {"name": "Leeching", "description": "Roll a D10 each time this weapon deals damage to a _Leader_ unit. On a 1 or 2 this model regains one Wound.", "points": 1},
+        "ghost_tactics": {
+            "name": "Ghost Tactics",
+            "inputs": ["x"],
+            "description": "When this unit is activated, choose up to X friendly _Infantry_ units within 6\". Those units may re-roll failed Strength tests of 9+ until the end of the round.",
+            "points": ["rule.x", {"multiply": 10}]
+        },
+        "ghost_lord": {"name": "Ghost Lord", "description": "Once per round, when a friendly _Infantry_ unit within 6\" declares a Fight action, hit rolls of 1 or 2 cause 2 hits instead of 1.", "points": 10},
         "soul_lantern": {"name": "Soul Lantern", "description": "Once per round, a friendly _Infantry_ unit within 6\" gains +1 AP on all Melee weapons.", "points": 10},
         "spectral": {
             "name": "Spectral",
@@ -96,5 +152,27 @@
     },
     "relics": [],
     "powers": {},
-    "strategies": []
+    "strategies": [
+        {
+            "name": "Fearless",
+            "phase": "activation",
+            "description": "Use before activating a unit. That unit may immediately remove up to 2 Shock.",
+            "flavor": "These horrors know no fear, only death.",
+            "cost": 1
+        },
+        {
+            "name": "Ghostly Form",
+            "phase": "activation",
+            "description": "Use when a unit is targeted by an attack. That unit ignores up to 1 AP.",
+            "flavor": "These horrors know no fear, only death.",
+            "cost": 2
+        },
+        {
+            "name": "Nightmares",
+            "phase": "activation",
+            "description": "Use when a unit within 6\" takes a Courage test. That unit suffers -1 Courage.",
+            "flavor": "Their nightmarish form can terrorize even the strongest of wills.",
+            "cost": 1
+        }
+    ]
 }
