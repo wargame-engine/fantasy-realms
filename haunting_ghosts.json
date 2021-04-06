@@ -9,7 +9,7 @@
             "name": "Shrouded Knight on Ghost Horse",
             "description": "A frightening execution with a huge axe.",
             "category": "hero",
-            "rules": ["fly", "fear"],
+            "rules": ["fly"],
             "models": [
                 {
                     "name": "Shrouded Knight on Ghost Horse",
