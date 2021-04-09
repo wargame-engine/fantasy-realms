@@ -3,8 +3,6 @@
   "id" : "high_elves",
   "author" : "Xekon#8266",
   "version" : "0.1",
-  "description" : "Masters of the Arcane, this ancient island nation is made up of powerful wizards, archers and horseriders.",
-  "color" : "#66b2b2",
   "alliance" : "order",
   "units" : {
     "elf_prince" : {
