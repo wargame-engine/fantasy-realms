@@ -3,6 +3,7 @@
   "id" : "high_elves",
   "author" : "Xekon#8266",
   "version" : "0.1",
+  "description" : "Masters of the Arcane, this ancient island nation is made up of powerful wizards, archers and horseriders.",
   "alliance" : "order",
   "units" : {
     "elf_prince" : {
@@ -338,7 +339,10 @@
               "id" : "wounds",
               "x" : 3
             },
-            "leader"
+            {
+              "id" : "leader_x",
+              "x" : "Infantry, Cavalry"
+            }
           ],
           "min" : 1,
           "max" : 1
@@ -464,7 +468,10 @@
               "id" : "wounds",
               "x" : 2
             },
-            "leader"
+            {
+              "id" : "leader_x",
+              "x" : "Infantry, Cavalry"
+            }
           ],
           "min" : 1,
           "max" : 1
@@ -575,6 +582,595 @@
         "Infantry"
       ]
     },
+    "elf_pheonix_pal" : {
+      "name" : "Phoenix Paladin",
+      "description" : "Ancient Protector of the Temple of the Last Flame, blessed by the ancient Pheonix.",
+      "min" : 1,
+      "max" : 1,
+      "category" : "hero",
+      "models" : [
+        {
+          "name" : "Phoenix Paladin",
+          "movement" : 7,
+          "courage" : 7,
+          "shoot" : 7,
+          "fight" : 8,
+          "defense" : 7,
+          "reflexes" : 6,
+          "weapons" : [
+            {
+              "id" : "halberd_heavy",
+              "count" : 3
+            }
+          ],
+          "rules" : [
+            "fear",
+            "fearless",
+            "runes",
+            "leader"
+          ],
+          "min" : 1,
+          "max" : 1
+        }
+      ],
+      "keywords" : [
+        "Hero",
+        "Infantry"
+      ],
+      "options" : []
+    },
+    "elf_dragon_arch" : {
+      "name" : "Archmage on Moon Dragon",
+      "description" : "An archmage riding an ancient dragon.",
+      "min" : 1,
+      "max" : 1,
+      "category" : "hero",
+      "models" : [
+        {
+          "name" : "Archmage",
+          "movement" : 7,
+          "courage" : 6,
+          "shoot" : 6,
+          "fight" : 5,
+          "defense" : 3,
+          "reflexes" : 5,
+          "weapons" : [
+            "hand_weapon"
+          ],
+          "options" : [
+            {
+              "replaceRule" : [
+                {
+                  "id" : "magic",
+                  "x" : 3
+                }
+              ],
+              "withRule" : [
+                {
+                  "id" : "magic",
+                  "x" : 4
+                }
+              ]
+            }
+          ],
+          "rules" : [
+            {
+              "id" : "wounds",
+              "x" : 2
+            },
+            {
+              "id" : "magic",
+              "x" : 3
+            },
+            {
+              "id" : "leader_x",
+              "x" : "Infantry, Cavalry"
+            }
+          ],
+          "min" : 1,
+          "max" : 1
+        },
+        {
+          "name" : "Moon Dragon",
+          "movement" : 10,
+          "courage" : 5,
+          "shoot" : 6,
+          "fight" : 6,
+          "defense" : 12,
+          "reflexes" : 5,
+          "weapons" : [
+            "flames",
+            {
+              "id" : "claws",
+              "count" : 2
+            }
+          ],
+          "rules" : [
+            "fear",
+            "fly",
+            "damage_table_monster",
+            {
+              "id" : "impact",
+              "x" : 3
+            },
+            {
+              "id" : "wounds",
+              "x" : 3
+            }
+          ],
+          "min" : 1,
+          "max" : 1
+        }
+      ],
+      "keywords" : [
+        "Hero",
+        "Flying",
+        "Wizard",
+        "Monstrous Cavalry"
+      ]
+    },
+    "elf_dragon_mage" : {
+      "name" : "Mage on Moon Dragon",
+      "description" : "An aprentice mage riding an ancient dragon.",
+      "min" : 1,
+      "max" : 1,
+      "category" : "hero",
+      "models" : [
+        {
+          "name" : "Mage",
+          "movement" : 7,
+          "courage" : 6,
+          "shoot" : 6,
+          "fight" : 5,
+          "defense" : 3,
+          "reflexes" : 5,
+          "weapons" : [
+            "hand_weapon"
+          ],
+          "options" : [
+            {
+              "replaceRule" : [
+                {
+                  "id" : "magic",
+                  "x" : 1
+                }
+              ],
+              "withRule" : [
+                {
+                  "id" : "magic",
+                  "x" : 2
+                }
+              ]
+            }
+          ],
+          "rules" : [
+            {
+              "id" : "wounds",
+              "x" : 2
+            },
+            {
+              "id" : "magic",
+              "x" : 1
+            },
+            {
+              "id" : "leader_x",
+              "x" : "Infantry, Cavalry"
+            }
+          ],
+          "min" : 1,
+          "max" : 1
+        },
+        {
+          "name" : "Moon Dragon",
+          "movement" : 10,
+          "courage" : 5,
+          "shoot" : 6,
+          "fight" : 6,
+          "defense" : 12,
+          "reflexes" : 5,
+          "weapons" : [
+            "flames",
+            {
+              "id" : "claws",
+              "count" : 2
+            }
+          ],
+          "rules" : [
+            "fear",
+            "fly",
+            "damage_table_monster",
+            {
+              "id" : "impact",
+              "x" : 3
+            },
+            {
+              "id" : "wounds",
+              "x" : 3
+            }
+          ],
+          "min" : 1,
+          "max" : 1
+        }
+      ],
+      "keywords" : [
+        "Hero",
+        "Flying",
+        "Wizard",
+        "Monstrous Cavalry"
+      ]
+    },
+    "great_eagle_prince" : {
+      "name" : "Prince on Great Eagle",
+      "description" : "A prince mounted on a great eagle.",
+      "min" : 1,
+      "max" : 1,
+      "category" : "hero",
+      "models" : [
+        {
+          "name" : "Elven Prince",
+          "movement" : 7,
+          "courage" : 7,
+          "shoot" : 7,
+          "fight" : 7,
+          "defense" : 4,
+          "reflexes" : 6,
+          "weapons" : [
+            {
+              "id" : "hand_weapon_heavy",
+              "count" : 3
+            }
+          ],
+          "options" : [
+            {
+              "replaceWeapon" : [
+                {
+                  "id" : "hand_weapon_heavy",
+                  "count" : 3
+                }
+              ],
+              "withWeapon" : [
+                {
+                  "id" : "lance_heavy",
+                  "count" : 3,
+                  "Object" : {
+                    "id" : "hand_weapon_heavy",
+                    "count" : 4
+                  }
+                },
+                {
+                  "id" : "great_weapon_heavy",
+                  "count" : 3
+                },
+                {
+                  "id" : "spear",
+                  "count" : 3
+                },
+                {
+                  "id" : "halberd_heavy",
+                  "count" : 3
+                },
+                {
+                  "id" : "hand_weapon_heavy",
+                  "count" : 4
+                }
+              ]
+            },
+            {
+              "addWeapon" : "long_bow"
+            },
+            {
+              "addRule" : [
+                "heavy_armor",
+                "shield",
+                "cloak"
+              ]
+            }
+          ],
+          "rules" : [
+            {
+              "id" : "wounds",
+              "x" : 2
+            },
+            {
+              "id" : "leader_x",
+              "x" : "Infantry, Cavalry"
+            }
+          ],
+          "min" : 1,
+          "max" : 1
+        },
+        {
+          "name" : "Great Eagle",
+          "movement" : 8,
+          "courage" : 6,
+          "shoot" : 3,
+          "fight" : 6,
+          "defense" : 5,
+          "reflexes" : 6,
+          "weapons" : [
+            "claws"
+          ],
+          "rules" : [
+            "fly",
+            {
+              "id" : "impact",
+              "x" : 1
+            },
+            {
+              "id" : "wounds",
+              "x" : 4
+            }
+          ],
+          "min" : 1,
+          "max" : 1
+        }
+      ],
+      "keywords" : [
+        "Hero",
+        "Beast",
+        "Monstrous Cavalry"
+      ],
+      "options" : []
+    },
+    "great_eagle_king" : {
+      "name" : "King on Great Eagle",
+      "description" : "A king mounted on a great eagle.",
+      "min" : 1,
+      "max" : 1,
+      "category" : "hero",
+      "models" : [
+        {
+          "name" : "Elven King",
+          "movement" : 7,
+          "courage" : 8,
+          "shoot" : 8,
+          "fight" : 8,
+          "defense" : 4,
+          "reflexes" : 7,
+          "weapons" : [
+            {
+              "id" : "hand_weapon_heavy",
+              "count" : 4
+            }
+          ],
+          "options" : [
+            {
+              "replaceWeapon" : [
+                {
+                  "id" : "hand_weapon_heavy",
+                  "count" : 4
+                }
+              ],
+              "withWeapon" : [
+                {
+                  "id" : "lance_heavy",
+                  "count" : 4
+                },
+                {
+                  "id" : "hand_weapon_heavy",
+                  "count" : 5
+                },
+                {
+                  "id" : "great_weapon_heavy",
+                  "count" : 4
+                },
+                {
+                  "id" : "spear",
+                  "count" : 4
+                },
+                {
+                  "id" : "halberd_heavy",
+                  "count" : 4
+                }
+              ]
+            },
+            {
+              "addWeapon" : "long_bow"
+            },
+            {
+              "addRule" : [
+                "heavy_armor",
+                "shield",
+                "cloak"
+              ]
+            }
+          ],
+          "rules" : [
+            {
+              "id" : "wounds",
+              "x" : 3
+            },
+            {
+              "id" : "leader_x",
+              "x" : "Infantry, Cavalry"
+            }
+          ],
+          "min" : 1,
+          "max" : 1
+        },
+        {
+          "name" : "Great Eagle",
+          "movement" : 8,
+          "courage" : 6,
+          "shoot" : 3,
+          "fight" : 6,
+          "defense" : 5,
+          "reflexes" : 6,
+          "weapons" : [
+            "claws"
+          ],
+          "rules" : [
+            "fly",
+            {
+              "id" : "impact",
+              "x" : 1
+            },
+            {
+              "id" : "wounds",
+              "x" : 4
+            }
+          ],
+          "min" : 1,
+          "max" : 1
+        }
+      ],
+      "keywords" : [
+        "Hero",
+        "Beast",
+        "Monstrous Cavalry"
+      ],
+      "options" : []
+    },
+    "elf_coast" : {
+      "name" : "Coastal Guard Captain",
+      "description" : "A master at naval warfare and leader of the coastal defenses.",
+      "min" : 1,
+      "max" : 1,
+      "category" : "hero",
+      "models" : [
+        {
+          "name" : "Coastal Guard Captain",
+          "movement" : 7,
+          "courage" : 7,
+          "shoot" : 7,
+          "fight" : 7,
+          "defense" : 5,
+          "reflexes" : 6,
+          "weapons" : [
+            {
+              "id" : "spear",
+              "count" : 2
+            }
+          ],
+          "rules" : [
+            "leader",
+            "discipline",
+            "strider",
+            "cloak",
+            "shield"
+          ],
+          "options" : [
+            {
+              "addWeapon" : [
+                {
+                  "id" : "long_bow",
+                  "x" : 2
+                }
+              ]
+            }
+          ],
+          "min" : 1,
+          "max" : 1
+        }
+      ],
+      "keywords" : [
+        "Hero",
+        "Infantry"
+      ]
+    },
+    "elf_skycutter_coast" : {
+      "name" : "Coastal Guard Captain on Elven Skycutter",
+      "description" : "A vessel drawn by a mighty eagle.",
+      "min" : 1,
+      "max" : 1,
+      "category" : "hero",
+      "models" : [
+        {
+          "name" : "Coastal Guard Captain",
+          "movement" : 7,
+          "courage" : 7,
+          "shoot" : 7,
+          "fight" : 7,
+          "defense" : 5,
+          "reflexes" : 6,
+          "weapons" : [
+            {
+              "id" : "spear",
+              "count" : 2
+            }
+          ],
+          "rules" : [
+            "discipline",
+            "strider",
+            "cloak",
+            "shield",
+            {
+              "id" : "leader_x",
+              "x" : "Infantry, Cavalry"
+            }
+          ],
+          "options" : [
+            {
+              "addWeapon" : [
+                {
+                  "id" : "long_bow",
+                  "count" : 2
+                }
+              ]
+            }
+          ],
+          "min" : 1,
+          "max" : 1
+        },
+        {
+          "name" : "Crew",
+          "movement" : 7,
+          "courage" : 6,
+          "shoot" : 6,
+          "fight" : 5,
+          "defense" : 4,
+          "reflexes" : 5,
+          "weapons" : [
+            "hand_weapon",
+            "bow"
+          ],
+          "rules" : [],
+          "min" : 1,
+          "max" : 1,
+          "options" : [
+            {
+              "replaceWeapon" : [
+                "hand_weapon",
+                "bow"
+              ],
+              "withWeapon" : [
+                "ballista"
+              ],
+              "modelLimit" : 1
+            }
+          ]
+        },
+        {
+          "name" : "Eagle Chariot",
+          "movement" : 11,
+          "courage" : 0,
+          "shoot" : 0,
+          "fight" : 0,
+          "defense" : 10,
+          "reflexes" : 0,
+          "weapons" : [
+            "claws"
+          ],
+          "rules" : [
+            "exposed",
+            "damage_table_vehicle",
+            {
+              "id" : "crew",
+              "x" : 3
+            },
+            "fly"
+          ],
+          "min" : 1,
+          "max" : 1
+        }
+      ],
+      "keywords" : [
+        "Hero",
+        "Flying",
+        "Cavalry"
+      ],
+      "options" : []
+    },
     "elf_spear" : {
       "name" : "Silverleaf Spearmen",
       "description" : "Experienced spearmen and the mainline of defense against intruders.",
@@ -666,8 +1262,7 @@
       ],
       "keywords" : [
         "Infantry"
-      ],
-      "options" : []
+      ]
     },
     "elf_vanguard" : {
       "name" : "Silverleaf Vanguard",
@@ -775,14 +1370,14 @@
       ]
     },
     "elf_guard" : {
-      "name" : "Silverleaf Guardians",
+      "name" : "Coastal Guard",
       "description" : "These fearsome warriors protect the coasts and harbor-bastions of the high elf nation.",
       "min" : 1,
       "max" : 6,
       "category" : "core",
       "models" : [
         {
-          "name" : "Silverleaf Sentinel",
+          "name" : "Coastal Guard Champion",
           "movement" : 7,
           "courage" : 7,
           "shoot" : 8,
@@ -798,7 +1393,7 @@
           "max" : 1
         },
         {
-          "name" : "Guardian",
+          "name" : "Guard",
           "movement" : 7,
           "courage" : 7,
           "shoot" : 7,
@@ -924,8 +1519,8 @@
       ],
       "options" : []
     },
-    "elf_pheonixes" : {
-      "name" : "Pheonix Templars",
+    "elf_phoenix-tem" : {
+      "name" : "Phoenix Templars",
       "description" : "Protectors of the Temple of the Last Flame, blessed by the ancient Pheonix.",
       "min" : 1,
       "max" : 3,
@@ -1162,7 +1757,7 @@
           ]
         },
         {
-          "name" : "Eagle Chariot",
+          "name" : "Eagle Skycutter",
           "movement" : 11,
           "courage" : 0,
           "shoot" : 0,
@@ -1186,6 +1781,7 @@
         }
       ],
       "keywords" : [
+        "Flying",
         "Cavalry"
       ],
       "options" : []
@@ -1243,6 +1839,132 @@
         "War Machine"
       ],
       "options" : []
+    },
+    "elf_phoenix" : {
+      "name" : "Flameheart Phoenix",
+      "description" : "Reborn from the ashes of the last flame, this magical being is a deadly creature.",
+      "min" : 1,
+      "max" : 1,
+      "category" : "rare",
+      "models" : [
+        {
+          "name" : "Flameheart Phoenix",
+          "movement" : 11,
+          "courage" : 6,
+          "shoot" : 6,
+          "fight" : 6,
+          "defense" : 10,
+          "reflexes" : 5,
+          "weapons" : [
+            "bite",
+            "flame"
+          ],
+          "rules" : [
+            "fear",
+            "fly",
+            "damage_table_monster",
+            {
+              "id" : "impact",
+              "x" : 3
+            },
+            {
+              "id" : "wounds",
+              "x" : 3
+            }
+          ],
+          "min" : 1,
+          "max" : 1
+        }
+      ],
+      "keywords" : [
+        "Flying",
+        "Monstrous Cavalry"
+      ]
+    },
+    "elf_frost" : {
+      "name" : "Frostfire Phoenix",
+      "description" : "Like a tear frozen in ice, this deadly creature swoops down on its enemies.",
+      "min" : 1,
+      "max" : 1,
+      "category" : "rare",
+      "models" : [
+        {
+          "name" : "Frostfire Phoenix",
+          "movement" : 11,
+          "courage" : 6,
+          "shoot" : 6,
+          "fight" : 6,
+          "defense" : 12,
+          "reflexes" : 5,
+          "weapons" : [
+            "bite"
+          ],
+          "rules" : [
+            "fear",
+            "fly",
+            "damage_table_monster",
+            {
+              "id" : "impact",
+              "x" : 3
+            },
+            {
+              "id" : "wounds",
+              "x" : 3
+            },
+            "distract"
+          ],
+          "min" : 1,
+          "max" : 1
+        }
+      ],
+      "keywords" : [
+        "Flying",
+        "Monstrous Cavarly"
+      ]
+    },
+    "elf_dragon" : {
+      "name" : "Moon Dragon",
+      "description" : "A beatiful and ancient beast, ready to unleash flames upon its enemies.",
+      "min" : 1,
+      "max" : 1,
+      "category" : "rare",
+      "models" : [
+        {
+          "name" : "Moon Dragon",
+          "movement" : 10,
+          "courage" : 5,
+          "shoot" : 6,
+          "fight" : 6,
+          "defense" : 12,
+          "reflexes" : 5,
+          "weapons" : [
+            "flames",
+            {
+              "id" : "claws",
+              "count" : 2
+            }
+          ],
+          "rules" : [
+            "fear",
+            "fly",
+            "damage_table_monster",
+            {
+              "id" : "impact",
+              "x" : 3
+            },
+            {
+              "id" : "wounds",
+              "x" : 3
+            }
+          ],
+          "min" : 1,
+          "max" : 1
+        }
+      ],
+      "keywords" : [
+        "Flying",
+        "Monstrous Cavalry"
+      ]
     }
   },
   "weapons" : {
@@ -1258,9 +1980,9 @@
       ]
     },
     "bite" : {
-      "name" : "Bite",
-      "ap" : 0,
-      "attacks" : 1,
+      "name" : "Beak",
+      "ap" : 2,
+      "attacks" : 3,
       "short" : "Melee"
     },
     "lance_heavy" : {
@@ -1324,6 +2046,25 @@
           "x" : 2
         }
       ]
+    },
+    "flame" : {
+      "name" : "Flaming Breath",
+      "ap" : 1,
+      "attacks" : 3,
+      "short" : "Melee",
+      "rules" : [
+        "bomb",
+        "flame"
+      ]
+    },
+    "flames" : {
+      "name" : "Dragon Breath",
+      "ap" : 1,
+      "attacks" : 4,
+      "rules" : [
+        "flame"
+      ],
+      "short" : 6
     }
   },
   "rules" : {
@@ -1346,6 +2087,11 @@
       "name" : "Warding Runes",
       "description" : "This model has +2 to its Save characteristic when being hit by a Power.",
       "points" : 2
+    },
+    "discipline" : {
+      "name" : "Discipline",
+      "description" : "This unit and all friendly units within 6\" ignore Shock when making any Overwatch or Defensive Stance reaction rolls.",
+      "points" : 15
     }
   },
   "powers" : {
