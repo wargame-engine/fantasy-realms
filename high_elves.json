@@ -2,7 +2,7 @@
   "name" : "High Elves",
   "id" : "high_elves",
   "author" : "Xekon#8266",
-  "version" : "0.1",
+  "version" : "1.0",
   "description" : "Masters of the Arcane, this ancient island nation is made up of powerful wizards, archers and horseriders.",
   "alliance" : "order",
   "units" : {
@@ -99,62 +99,20 @@
           "rules" : [],
           "min" : 0,
           "max" : 2
-        },
-        {
-          "name" : "Great Eagle",
-          "movement" : 8,
-          "courage" : 6,
-          "shoot" : 3,
-          "fight" : 6,
-          "defense" : 5,
-          "reflexes" : 6,
-          "weapons" : [
-            "claws"
-          ],
-          "rules" : [
-            "fly",
-            {
-              "id" : "impact",
-              "x" : 1
-            },
-            {
-              "id" : "wounds",
-              "x" : 4
-            }
-          ],
-          "min" : 0,
-          "max" : 1
-        },
-        {
-          "name" : "Horse Chariot",
-          "movement" : 11,
-          "courage" : 0,
-          "shoot" : 0,
-          "fight" : 0,
-          "defense" : 10,
-          "reflexes" : 0,
-          "weapons" : [
-            "hooves_and_teeth"
-          ],
-          "rules" : [
-            "exposed",
-            {
-              "id" : "impact",
-              "x" : 3
-            },
-            "damage_table_vehicle",
-            {
-              "id" : "crew",
-              "x" : 2
-            }
-          ],
-          "min" : 0,
-          "max" : 1
         }
       ],
       "keywords" : [
         "Hero",
         "Infantry"
+      ],
+      "options" : [
+        {
+          "addModel" : [
+            "great_eagle_att",
+            "chariot"
+          ],
+          "modelLimit" : 1
+        }
       ]
     },
     "elf_king" : {
@@ -246,37 +204,21 @@
           "rules" : [],
           "min" : 0,
           "max" : 2
-        },
-        {
-          "name" : "Horse Chariot",
-          "movement" : 11,
-          "courage" : 0,
-          "shoot" : 0,
-          "fight" : 0,
-          "defense" : 10,
-          "reflexes" : 0,
-          "weapons" : [
-            "hooves_and_teeth"
-          ],
-          "rules" : [
-            "exposed",
-            {
-              "id" : "impact",
-              "x" : 3
-            },
-            "damage_table_vehicle",
-            {
-              "id" : "crew",
-              "x" : 2
-            }
-          ],
-          "min" : 0,
-          "max" : 1
         }
       ],
       "keywords" : [
         "Hero",
         "Infantry"
+      ],
+      "options" : [
+        {
+          "addModel" : [
+            "great_eagle_att",
+            "chariot",
+            "moon_dragon"
+          ],
+          "modelLimit" : 1
+        }
       ]
     },
     "elf_archmage" : {
@@ -329,39 +271,22 @@
           ],
           "min" : 1,
           "max" : 1
-        },
-        {
-          "name" : "Moon Dragon",
-          "movement" : 10,
-          "courage" : 5,
-          "shoot" : 6,
-          "fight" : 6,
-          "defense" : 12,
-          "reflexes" : 5,
-          "weapons" : [
-            "flames",
-            {
-              "id" : "claws",
-              "count" : 2
-            }
-          ],
-          "rules" : [
-            "fear",
-            "fly",
-            "damage_table_monster",
-            {
-              "id" : "impact",
-              "x" : 3
-            }
-          ],
-          "min" : 0,
-          "max" : 1
         }
       ],
       "keywords" : [
         "Hero",
         "Wizard",
         "Infantry"
+      ],
+      "options" : [
+        {
+          "addModel" : [
+            "great_eagle_att",
+            "chariot",
+            "moon_dragon"
+          ],
+          "modelLimit" : 1
+        }
       ]
     },
     "elf_battlemage" : {
@@ -457,39 +382,21 @@
           ],
           "min" : 1,
           "max" : 1
-        },
-        {
-          "name" : "Moon Dragon",
-          "movement" : 10,
-          "courage" : 5,
-          "shoot" : 6,
-          "fight" : 6,
-          "defense" : 12,
-          "reflexes" : 5,
-          "weapons" : [
-            "flames",
-            {
-              "id" : "claws",
-              "count" : 2
-            }
-          ],
-          "rules" : [
-            "fear",
-            "fly",
-            "damage_table_monster",
-            {
-              "id" : "impact",
-              "x" : 3
-            }
-          ],
-          "min" : 0,
-          "max" : 1
         }
       ],
       "keywords" : [
         "Hero",
         "Wizard",
         "Infantry"
+      ],
+      "options" : [
+        {
+          "addModel" : [
+            "chariot",
+            "moon_dragon"
+          ],
+          "modelLimit" : 1
+        }
       ]
     },
     "elf_pheonix_pal" : {
@@ -505,7 +412,7 @@
           "courage" : 7,
           "shoot" : 7,
           "fight" : 8,
-          "defense" : 7,
+          "defense" : 8,
           "reflexes" : 6,
           "weapons" : [
             {
@@ -527,7 +434,15 @@
         "Hero",
         "Infantry"
       ],
-      "options" : []
+      "options" : [
+        {
+          "addModel" : [
+            "phoenix",
+            "frost"
+          ],
+          "modelLimit" : 1
+        }
+      ]
     },
     "elf_coast" : {
       "name" : "Coastal Guard Captain",
@@ -597,34 +512,19 @@
               "modelLimit" : 1
             }
           ]
-        },
-        {
-          "name" : "Eagle Skycutter",
-          "movement" : 11,
-          "courage" : 0,
-          "shoot" : 0,
-          "fight" : 0,
-          "defense" : 10,
-          "reflexes" : 0,
-          "weapons" : [
-            "claws"
-          ],
-          "rules" : [
-            "exposed",
-            "damage_table_vehicle",
-            {
-              "id" : "crew",
-              "x" : 2
-            },
-            "fly"
-          ],
-          "min" : 0,
-          "max" : 1
         }
       ],
       "keywords" : [
         "Hero",
         "Infantry"
+      ],
+      "options" : [
+        {
+          "addModel" : [
+            "skycutter"
+          ],
+          "modelLimit" : 1
+        }
       ]
     },
     "elf_spear" : {
@@ -718,6 +618,11 @@
       ],
       "keywords" : [
         "Infantry"
+      ],
+      "options" : [
+        {
+          "addRule" : "light_armor"
+        }
       ]
     },
     "elf_vanguard" : {
@@ -1427,6 +1332,57 @@
         "Flying",
         "Monstrous Cavalry"
       ]
+    },
+    "elf_sisters" : {
+      "name" : "Veiled Sisters",
+      "description" : "Protectors of the lost kingdom of Charice, clad in ancient magic.",
+      "min" : 1,
+      "max" : 1,
+      "category" : "rare",
+      "models" : [
+        {
+          "name" : "Anointed Sister",
+          "movement" : 7,
+          "courage" : 6,
+          "shoot" : 8,
+          "fight" : 7,
+          "defense" : 5,
+          "reflexes" : 6,
+          "weapons" : [
+            {
+              "id" : "spectral_bow",
+              "count" : 2
+            },
+            "spectral_blade"
+          ],
+          "rules" : [],
+          "min" : 1,
+          "max" : 1,
+          "options" : []
+        },
+        {
+          "name" : "Veiled Sister",
+          "movement" : 7,
+          "courage" : 6,
+          "shoot" : 7,
+          "fight" : 6,
+          "defense" : 5,
+          "reflexes" : 6,
+          "weapons" : [
+            {
+              "id" : "spectral_bow",
+              "count" : 2
+            },
+            "spectral_blade"
+          ],
+          "rules" : [],
+          "min" : 2,
+          "max" : 11
+        }
+      ],
+      "keywords" : [
+        "Infantry"
+      ]
     }
   },
   "weapons" : {
@@ -1527,6 +1483,31 @@
         "flame"
       ],
       "short" : 6
+    },
+    "spectral_bow" : {
+      "name" : "Spectral Bow",
+      "ap" : 1,
+      "attacks" : 1,
+      "rules" : [
+        {
+          "id" : "deadly",
+          "x" : 2
+        }
+      ],
+      "short" : 12,
+      "medium" : 24
+    },
+    "spectral_blade" : {
+      "name" : "Spectral Blade",
+      "ap" : 1,
+      "attacks" : 1,
+      "short" : "Melee",
+      "rules" : [
+        {
+          "id" : "deadly",
+          "x" : 2
+        }
+      ]
     }
   },
   "rules" : {
@@ -1619,5 +1600,162 @@
       "points" : 10,
       "rule" : "runes"
     }
-  ]
+  ],
+  "models" : {
+    "great_eagle_att" : {
+      "name" : "Great Eagle",
+      "movement" : 8,
+      "courage" : 6,
+      "shoot" : 3,
+      "fight" : 6,
+      "defense" : 5,
+      "reflexes" : 6,
+      "weapons" : [
+        "claws"
+      ],
+      "rules" : [
+        "fly",
+        {
+          "id" : "impact",
+          "x" : 1
+        },
+        {
+          "id" : "wounds",
+          "x" : 4
+        }
+      ],
+      "min" : 0,
+      "max" : 1
+    },
+    "chariot" : {
+      "name" : "Horse Chariot",
+      "movement" : 11,
+      "courage" : 0,
+      "shoot" : 0,
+      "fight" : 0,
+      "defense" : 10,
+      "reflexes" : 0,
+      "weapons" : [
+        "hooves_and_teeth"
+      ],
+      "rules" : [
+        "exposed",
+        {
+          "id" : "impact",
+          "x" : 3
+        },
+        "damage_table_vehicle",
+        {
+          "id" : "crew",
+          "x" : 2
+        }
+      ],
+      "min" : 0,
+      "max" : 1
+    },
+    "moon_dragon" : {
+      "name" : "Moon Dragon",
+      "movement" : 10,
+      "courage" : 5,
+      "shoot" : 6,
+      "fight" : 6,
+      "defense" : 12,
+      "reflexes" : 5,
+      "weapons" : [
+        "flames",
+        {
+          "id" : "claws",
+          "count" : 2
+        }
+      ],
+      "rules" : [
+        "fear",
+        "fly",
+        "damage_table_monster",
+        {
+          "id" : "impact",
+          "x" : 3
+        }
+      ],
+      "min" : 0,
+      "max" : 1
+    },
+    "skycutter" : {
+      "name" : "Eagle Skycutter",
+      "movement" : 11,
+      "courage" : 0,
+      "shoot" : 0,
+      "fight" : 0,
+      "defense" : 10,
+      "reflexes" : 0,
+      "weapons" : [
+        "claws"
+      ],
+      "rules" : [
+        "exposed",
+        "damage_table_vehicle",
+        {
+          "id" : "crew",
+          "x" : 2
+        },
+        "fly"
+      ],
+      "min" : 0,
+      "max" : 1
+    },
+    "phoenix" : {
+      "name" : "Flameheart Phoenix",
+      "movement" : 11,
+      "courage" : 6,
+      "shoot" : 6,
+      "fight" : 6,
+      "defense" : 10,
+      "reflexes" : 5,
+      "weapons" : [
+        "bite",
+        "flame"
+      ],
+      "rules" : [
+        "fear",
+        "fly",
+        {
+          "id" : "impact",
+          "x" : 3
+        },
+        {
+          "id" : "wounds",
+          "x" : 3
+        }
+      ],
+      "min" : 1,
+      "max" : 1
+    },
+    "frost" : {
+      "name" : "Frostfire Phoenix",
+      "movement" : 11,
+      "courage" : 6,
+      "shoot" : 6,
+      "fight" : 6,
+      "defense" : 12,
+      "reflexes" : 5,
+      "weapons" : [
+        "bite"
+      ],
+      "rules" : [
+        "fear",
+        "fly",
+        {
+          "id" : "impact",
+          "x" : 3
+        },
+        {
+          "id" : "wounds",
+          "x" : 3
+        },
+        "distract"
+      ],
+      "min" : 1,
+      "max" : 1
+    }
+  }
 }
