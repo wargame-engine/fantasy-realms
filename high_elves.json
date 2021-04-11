@@ -83,6 +83,73 @@
           ],
           "min" : 1,
           "max" : 1
+        },
+        {
+          "name" : "Retinue",
+          "movement" : 7,
+          "courage" : 6,
+          "shoot" : 6,
+          "fight" : 5,
+          "defense" : 4,
+          "reflexes" : 5,
+          "weapons" : [
+            "hand_weapon",
+            "long_bow"
+          ],
+          "rules" : [],
+          "min" : 0,
+          "max" : 2
+        },
+        {
+          "name" : "Great Eagle",
+          "movement" : 8,
+          "courage" : 6,
+          "shoot" : 3,
+          "fight" : 6,
+          "defense" : 5,
+          "reflexes" : 6,
+          "weapons" : [
+            "claws"
+          ],
+          "rules" : [
+            "fly",
+            {
+              "id" : "impact",
+              "x" : 1
+            },
+            {
+              "id" : "wounds",
+              "x" : 4
+            }
+          ],
+          "min" : 0,
+          "max" : 1
+        },
+        {
+          "name" : "Horse Chariot",
+          "movement" : 11,
+          "courage" : 0,
+          "shoot" : 0,
+          "fight" : 0,
+          "defense" : 10,
+          "reflexes" : 0,
+          "weapons" : [
+            "hooves_and_teeth"
+          ],
+          "rules" : [
+            "exposed",
+            {
+              "id" : "impact",
+              "x" : 3
+            },
+            "damage_table_vehicle",
+            {
+              "id" : "crew",
+              "x" : 2
+            }
+          ],
+          "min" : 0,
+          "max" : 1
         }
       ],
       "keywords" : [
@@ -163,6 +230,48 @@
           ],
           "min" : 1,
           "max" : 1
+        },
+        {
+          "name" : "Retinue",
+          "movement" : 7,
+          "courage" : 6,
+          "shoot" : 6,
+          "fight" : 5,
+          "defense" : 4,
+          "reflexes" : 5,
+          "weapons" : [
+            "hand_weapon",
+            "long_bow"
+          ],
+          "rules" : [],
+          "min" : 0,
+          "max" : 2
+        },
+        {
+          "name" : "Horse Chariot",
+          "movement" : 11,
+          "courage" : 0,
+          "shoot" : 0,
+          "fight" : 0,
+          "defense" : 10,
+          "reflexes" : 0,
+          "weapons" : [
+            "hooves_and_teeth"
+          ],
+          "rules" : [
+            "exposed",
+            {
+              "id" : "impact",
+              "x" : 3
+            },
+            "damage_table_vehicle",
+            {
+              "id" : "crew",
+              "x" : 2
+            }
+          ],
+          "min" : 0,
+          "max" : 1
         }
       ],
       "keywords" : [
@@ -220,6 +329,33 @@
           ],
           "min" : 1,
           "max" : 1
+        },
+        {
+          "name" : "Moon Dragon",
+          "movement" : 10,
+          "courage" : 5,
+          "shoot" : 6,
+          "fight" : 6,
+          "defense" : 12,
+          "reflexes" : 5,
+          "weapons" : [
+            "flames",
+            {
+              "id" : "claws",
+              "count" : 2
+            }
+          ],
+          "rules" : [
+            "fear",
+            "fly",
+            "damage_table_monster",
+            {
+              "id" : "impact",
+              "x" : 3
+            }
+          ],
+          "min" : 0,
+          "max" : 1
         }
       ],
       "keywords" : [
@@ -269,259 +405,6 @@
         "Hero",
         "Wizard",
         "Infantry"
-      ]
-    },
-    "elf_chariot_king" : {
-      "name" : "King on Elven Chariot",
-      "description" : "A chariot piloted by a king and an elven warrior.",
-      "min" : 1,
-      "max" : 1,
-      "category" : "hero",
-      "models" : [
-        {
-          "name" : "Elven King",
-          "movement" : 7,
-          "courage" : 8,
-          "shoot" : 8,
-          "fight" : 8,
-          "defense" : 5,
-          "reflexes" : 7,
-          "weapons" : [
-            {
-              "id" : "hand_weapon_heavy",
-              "count" : 4
-            }
-          ],
-          "options" : [
-            {
-              "replaceWeapon" : [
-                {
-                  "id" : "hand_weapon_heavy",
-                  "count" : 4
-                }
-              ],
-              "withWeapon" : [
-                {
-                  "id" : "lance_heavy",
-                  "count" : 4
-                },
-                {
-                  "id" : "hand_weapon_heavy",
-                  "count" : 5
-                },
-                {
-                  "id" : "great_weapon_heavy",
-                  "count" : 4
-                },
-                {
-                  "id" : "spear",
-                  "count" : 4
-                },
-                {
-                  "id" : "halberd_heavy",
-                  "count" : 4
-                }
-              ]
-            },
-            {
-              "addWeapon" : "long_bow"
-            },
-            {
-              "addRule" : [
-                "heavy_armor",
-                "shield",
-                "cloak"
-              ]
-            }
-          ],
-          "rules" : [
-            {
-              "id" : "wounds",
-              "x" : 3
-            },
-            {
-              "id" : "leader_x",
-              "x" : "Infantry, Cavalry"
-            }
-          ],
-          "min" : 1,
-          "max" : 1
-        },
-        {
-          "name" : "Crew",
-          "movement" : 7,
-          "courage" : 6,
-          "shoot" : 6,
-          "fight" : 5,
-          "defense" : 4,
-          "reflexes" : 5,
-          "weapons" : [
-            "hand_weapon",
-            "long_bow"
-          ],
-          "rules" : [],
-          "min" : 1,
-          "max" : 1
-        },
-        {
-          "name" : "Horse Chariot",
-          "movement" : 11,
-          "courage" : 0,
-          "shoot" : 0,
-          "fight" : 0,
-          "defense" : 10,
-          "reflexes" : 0,
-          "weapons" : [
-            "hooves_and_teeth"
-          ],
-          "rules" : [
-            "exposed",
-            {
-              "id" : "impact",
-              "x" : 3
-            },
-            "damage_table_vehicle",
-            {
-              "id" : "crew",
-              "x" : 2
-            }
-          ],
-          "min" : 1,
-          "max" : 1
-        }
-      ],
-      "keywords" : [
-        "Hero",
-        "Cavalry"
-      ],
-      "options" : []
-    },
-    "elf_chariot_prince" : {
-      "name" : "Prince on Elven Chariot",
-      "description" : "A chariot piloted by a prince and an elven warrior.",
-      "min" : 1,
-      "max" : 1,
-      "category" : "hero",
-      "models" : [
-        {
-          "name" : "Elven Prince",
-          "movement" : 7,
-          "courage" : 7,
-          "shoot" : 7,
-          "fight" : 7,
-          "defense" : 5,
-          "reflexes" : 6,
-          "weapons" : [
-            {
-              "id" : "hand_weapon_heavy",
-              "count" : 3
-            }
-          ],
-          "options" : [
-            {
-              "replaceWeapon" : [
-                {
-                  "id" : "hand_weapon_heavy",
-                  "count" : 3
-                }
-              ],
-              "withWeapon" : [
-                {
-                  "id" : "lance_heavy",
-                  "count" : 3,
-                  "Object" : {
-                    "id" : "hand_weapon_heavy",
-                    "count" : 4
-                  }
-                },
-                {
-                  "id" : "great_weapon_heavy",
-                  "count" : 3
-                },
-                {
-                  "id" : "spear",
-                  "count" : 3
-                },
-                {
-                  "id" : "halberd_heavy",
-                  "count" : 3
-                },
-                {
-                  "id" : "hand_weapon_heavy",
-                  "count" : 4
-                }
-              ]
-            },
-            {
-              "addWeapon" : "long_bow"
-            },
-            {
-              "addRule" : [
-                "heavy_armor",
-                "shield",
-                "cloak"
-              ]
-            }
-          ],
-          "rules" : [
-            {
-              "id" : "wounds",
-              "x" : 2
-            },
-            {
-              "id" : "leader_x",
-              "x" : "Infantry, Cavalry"
-            }
-          ],
-          "min" : 1,
-          "max" : 1
-        },
-        {
-          "name" : "Crew",
-          "movement" : 7,
-          "courage" : 6,
-          "shoot" : 6,
-          "fight" : 5,
-          "defense" : 4,
-          "reflexes" : 5,
-          "weapons" : [
-            "hand_weapon",
-            "long_bow"
-          ],
-          "rules" : [],
-          "min" : 1,
-          "max" : 1
-        },
-        {
-          "name" : "Horse Chariot",
-          "movement" : 11,
-          "courage" : 0,
-          "shoot" : 0,
-          "fight" : 0,
-          "defense" : 10,
-          "reflexes" : 0,
-          "weapons" : [
-            "hooves_and_teeth"
-          ],
-          "rules" : [
-            "exposed",
-            {
-              "id" : "impact",
-              "x" : 3
-            },
-            "damage_table_vehicle",
-            {
-              "id" : "crew",
-              "x" : 2
-            }
-          ],
-          "min" : 1,
-          "max" : 1
-        }
-      ],
-      "keywords" : [
-        "Hero",
-        "Cavalry"
       ]
     },
     "elf_mage" : {
@@ -574,6 +457,33 @@
           ],
           "min" : 1,
           "max" : 1
+        },
+        {
+          "name" : "Moon Dragon",
+          "movement" : 10,
+          "courage" : 5,
+          "shoot" : 6,
+          "fight" : 6,
+          "defense" : 12,
+          "reflexes" : 5,
+          "weapons" : [
+            "flames",
+            {
+              "id" : "claws",
+              "count" : 2
+            }
+          ],
+          "rules" : [
+            "fear",
+            "fly",
+            "damage_table_monster",
+            {
+              "id" : "impact",
+              "x" : 3
+            }
+          ],
+          "min" : 0,
+          "max" : 1
         }
       ],
       "keywords" : [
@@ -619,408 +529,6 @@
       ],
       "options" : []
     },
-    "elf_dragon_arch" : {
-      "name" : "Archmage on Moon Dragon",
-      "description" : "An archmage riding an ancient dragon.",
-      "min" : 1,
-      "max" : 1,
-      "category" : "hero",
-      "models" : [
-        {
-          "name" : "Archmage",
-          "movement" : 7,
-          "courage" : 6,
-          "shoot" : 6,
-          "fight" : 5,
-          "defense" : 3,
-          "reflexes" : 5,
-          "weapons" : [
-            "hand_weapon"
-          ],
-          "options" : [
-            {
-              "replaceRule" : [
-                {
-                  "id" : "magic",
-                  "x" : 3
-                }
-              ],
-              "withRule" : [
-                {
-                  "id" : "magic",
-                  "x" : 4
-                }
-              ]
-            }
-          ],
-          "rules" : [
-            {
-              "id" : "wounds",
-              "x" : 2
-            },
-            {
-              "id" : "magic",
-              "x" : 3
-            },
-            {
-              "id" : "leader_x",
-              "x" : "Infantry, Cavalry"
-            }
-          ],
-          "min" : 1,
-          "max" : 1
-        },
-        {
-          "name" : "Moon Dragon",
-          "movement" : 10,
-          "courage" : 5,
-          "shoot" : 6,
-          "fight" : 6,
-          "defense" : 12,
-          "reflexes" : 5,
-          "weapons" : [
-            "flames",
-            {
-              "id" : "claws",
-              "count" : 2
-            }
-          ],
-          "rules" : [
-            "fear",
-            "fly",
-            "damage_table_monster",
-            {
-              "id" : "impact",
-              "x" : 3
-            },
-            {
-              "id" : "wounds",
-              "x" : 3
-            }
-          ],
-          "min" : 1,
-          "max" : 1
-        }
-      ],
-      "keywords" : [
-        "Hero",
-        "Flying",
-        "Wizard",
-        "Monstrous Cavalry"
-      ]
-    },
-    "elf_dragon_mage" : {
-      "name" : "Mage on Moon Dragon",
-      "description" : "An aprentice mage riding an ancient dragon.",
-      "min" : 1,
-      "max" : 1,
-      "category" : "hero",
-      "models" : [
-        {
-          "name" : "Mage",
-          "movement" : 7,
-          "courage" : 6,
-          "shoot" : 6,
-          "fight" : 5,
-          "defense" : 3,
-          "reflexes" : 5,
-          "weapons" : [
-            "hand_weapon"
-          ],
-          "options" : [
-            {
-              "replaceRule" : [
-                {
-                  "id" : "magic",
-                  "x" : 1
-                }
-              ],
-              "withRule" : [
-                {
-                  "id" : "magic",
-                  "x" : 2
-                }
-              ]
-            }
-          ],
-          "rules" : [
-            {
-              "id" : "wounds",
-              "x" : 2
-            },
-            {
-              "id" : "magic",
-              "x" : 1
-            },
-            {
-              "id" : "leader_x",
-              "x" : "Infantry, Cavalry"
-            }
-          ],
-          "min" : 1,
-          "max" : 1
-        },
-        {
-          "name" : "Moon Dragon",
-          "movement" : 10,
-          "courage" : 5,
-          "shoot" : 6,
-          "fight" : 6,
-          "defense" : 12,
-          "reflexes" : 5,
-          "weapons" : [
-            "flames",
-            {
-              "id" : "claws",
-              "count" : 2
-            }
-          ],
-          "rules" : [
-            "fear",
-            "fly",
-            "damage_table_monster",
-            {
-              "id" : "impact",
-              "x" : 3
-            },
-            {
-              "id" : "wounds",
-              "x" : 3
-            }
-          ],
-          "min" : 1,
-          "max" : 1
-        }
-      ],
-      "keywords" : [
-        "Hero",
-        "Flying",
-        "Wizard",
-        "Monstrous Cavalry"
-      ]
-    },
-    "great_eagle_prince" : {
-      "name" : "Prince on Great Eagle",
-      "description" : "A prince mounted on a great eagle.",
-      "min" : 1,
-      "max" : 1,
-      "category" : "hero",
-      "models" : [
-        {
-          "name" : "Elven Prince",
-          "movement" : 7,
-          "courage" : 7,
-          "shoot" : 7,
-          "fight" : 7,
-          "defense" : 4,
-          "reflexes" : 6,
-          "weapons" : [
-            {
-              "id" : "hand_weapon_heavy",
-              "count" : 3
-            }
-          ],
-          "options" : [
-            {
-              "replaceWeapon" : [
-                {
-                  "id" : "hand_weapon_heavy",
-                  "count" : 3
-                }
-              ],
-              "withWeapon" : [
-                {
-                  "id" : "lance_heavy",
-                  "count" : 3,
-                  "Object" : {
-                    "id" : "hand_weapon_heavy",
-                    "count" : 4
-                  }
-                },
-                {
-                  "id" : "great_weapon_heavy",
-                  "count" : 3
-                },
-                {
-                  "id" : "spear",
-                  "count" : 3
-                },
-                {
-                  "id" : "halberd_heavy",
-                  "count" : 3
-                },
-                {
-                  "id" : "hand_weapon_heavy",
-                  "count" : 4
-                }
-              ]
-            },
-            {
-              "addWeapon" : "long_bow"
-            },
-            {
-              "addRule" : [
-                "heavy_armor",
-                "shield",
-                "cloak"
-              ]
-            }
-          ],
-          "rules" : [
-            {
-              "id" : "wounds",
-              "x" : 2
-            },
-            {
-              "id" : "leader_x",
-              "x" : "Infantry, Cavalry"
-            }
-          ],
-          "min" : 1,
-          "max" : 1
-        },
-        {
-          "name" : "Great Eagle",
-          "movement" : 8,
-          "courage" : 6,
-          "shoot" : 3,
-          "fight" : 6,
-          "defense" : 5,
-          "reflexes" : 6,
-          "weapons" : [
-            "claws"
-          ],
-          "rules" : [
-            "fly",
-            {
-              "id" : "impact",
-              "x" : 1
-            },
-            {
-              "id" : "wounds",
-              "x" : 4
-            }
-          ],
-          "min" : 1,
-          "max" : 1
-        }
-      ],
-      "keywords" : [
-        "Hero",
-        "Beast",
-        "Monstrous Cavalry"
-      ],
-      "options" : []
-    },
-    "great_eagle_king" : {
-      "name" : "King on Great Eagle",
-      "description" : "A king mounted on a great eagle.",
-      "min" : 1,
-      "max" : 1,
-      "category" : "hero",
-      "models" : [
-        {
-          "name" : "Elven King",
-          "movement" : 7,
-          "courage" : 8,
-          "shoot" : 8,
-          "fight" : 8,
-          "defense" : 4,
-          "reflexes" : 7,
-          "weapons" : [
-            {
-              "id" : "hand_weapon_heavy",
-              "count" : 4
-            }
-          ],
-          "options" : [
-            {
-              "replaceWeapon" : [
-                {
-                  "id" : "hand_weapon_heavy",
-                  "count" : 4
-                }
-              ],
-              "withWeapon" : [
-                {
-                  "id" : "lance_heavy",
-                  "count" : 4
-                },
-                {
-                  "id" : "hand_weapon_heavy",
-                  "count" : 5
-                },
-                {
-                  "id" : "great_weapon_heavy",
-                  "count" : 4
-                },
-                {
-                  "id" : "spear",
-                  "count" : 4
-                },
-                {
-                  "id" : "halberd_heavy",
-                  "count" : 4
-                }
-              ]
-            },
-            {
-              "addWeapon" : "long_bow"
-            },
-            {
-              "addRule" : [
-                "heavy_armor",
-                "shield",
-                "cloak"
-              ]
-            }
-          ],
-          "rules" : [
-            {
-              "id" : "wounds",
-              "x" : 3
-            },
-            {
-              "id" : "leader_x",
-              "x" : "Infantry, Cavalry"
-            }
-          ],
-          "min" : 1,
-          "max" : 1
-        },
-        {
-          "name" : "Great Eagle",
-          "movement" : 8,
-          "courage" : 6,
-          "shoot" : 3,
-          "fight" : 6,
-          "defense" : 5,
-          "reflexes" : 6,
-          "weapons" : [
-            "claws"
-          ],
-          "rules" : [
-            "fly",
-            {
-              "id" : "impact",
-              "x" : 1
-            },
-            {
-              "id" : "wounds",
-              "x" : 4
-            }
-          ],
-          "min" : 1,
-          "max" : 1
-        }
-      ],
-      "keywords" : [
-        "Hero",
-        "Beast",
-        "Monstrous Cavalry"
-      ],
-      "options" : []
-    },
     "elf_coast" : {
       "name" : "Coastal Guard Captain",
       "description" : "A master at naval warfare and leader of the coastal defenses.",
@@ -1061,59 +569,9 @@
           ],
           "min" : 1,
           "max" : 1
-        }
-      ],
-      "keywords" : [
-        "Hero",
-        "Infantry"
-      ]
-    },
-    "elf_skycutter_coast" : {
-      "name" : "Coastal Guard Captain on Elven Skycutter",
-      "description" : "A vessel drawn by a mighty eagle.",
-      "min" : 1,
-      "max" : 1,
-      "category" : "hero",
-      "models" : [
-        {
-          "name" : "Coastal Guard Captain",
-          "movement" : 7,
-          "courage" : 7,
-          "shoot" : 7,
-          "fight" : 7,
-          "defense" : 5,
-          "reflexes" : 6,
-          "weapons" : [
-            {
-              "id" : "spear",
-              "count" : 2
-            }
-          ],
-          "rules" : [
-            "discipline",
-            "strider",
-            "cloak",
-            "shield",
-            {
-              "id" : "leader_x",
-              "x" : "Infantry, Cavalry"
-            }
-          ],
-          "options" : [
-            {
-              "addWeapon" : [
-                {
-                  "id" : "long_bow",
-                  "count" : 2
-                }
-              ]
-            }
-          ],
-          "min" : 1,
-          "max" : 1
         },
         {
-          "name" : "Crew",
+          "name" : "Retinue",
           "movement" : 7,
           "courage" : 6,
           "shoot" : 6,
@@ -1125,7 +583,7 @@
             "bow"
           ],
           "rules" : [],
-          "min" : 1,
+          "min" : 0,
           "max" : 1,
           "options" : [
             {
@@ -1141,7 +599,7 @@
           ]
         },
         {
-          "name" : "Eagle Chariot",
+          "name" : "Eagle Skycutter",
           "movement" : 11,
           "courage" : 0,
           "shoot" : 0,
@@ -1156,20 +614,18 @@
             "damage_table_vehicle",
             {
               "id" : "crew",
-              "x" : 3
+              "x" : 2
             },
             "fly"
           ],
-          "min" : 1,
+          "min" : 0,
           "max" : 1
         }
       ],
       "keywords" : [
         "Hero",
-        "Flying",
-        "Cavalry"
-      ],
-      "options" : []
+        "Infantry"
+      ]
     },
     "elf_spear" : {
       "name" : "Silverleaf Spearmen",
@@ -1682,15 +1138,27 @@
           "defense" : 4,
           "reflexes" : 5,
           "weapons" : [
-            "hand_weapon",
-            "long_bow"
+            "great_weapon_heavy"
           ],
           "rules" : [],
           "min" : 2,
-          "max" : 2
+          "max" : 2,
+          "options" : [
+            {
+              "replaceWeapon" : [
+                "great_weapon_heavy"
+              ],
+              "withWeapon" : [
+                [
+                  "hand_weapon",
+                  "long_bow"
+                ]
+              ]
+            }
+          ]
         },
         {
-          "name" : "Horse Chariot",
+          "name" : "Chariot",
           "movement" : 11,
           "courage" : 0,
           "shoot" : 0,
@@ -1862,7 +1330,6 @@
           "rules" : [
             "fear",
             "fly",
-            "damage_table_monster",
             {
               "id" : "impact",
               "x" : 3
@@ -1902,7 +1369,6 @@
           "rules" : [
             "fear",
             "fly",
-            "damage_table_monster",
             {
               "id" : "impact",
               "x" : 3
@@ -1950,10 +1416,6 @@
             "damage_table_monster",
             {
               "id" : "impact",
-              "x" : 3
-            },
-            {
-              "id" : "wounds",
               "x" : 3
             }
           ],
