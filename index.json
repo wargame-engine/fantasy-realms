@@ -48,6 +48,15 @@
             "version": "0.1",
             "alliance": "order",
             "description": "Masters of the Arcane, this ancient island nation is made up of powerful wizards, archers and horse riders."
+        },
+        "orcs_and_goblins": {
+            "name": "Orcs and Goblins",
+            "id": "orcs_and_goblins",
+            "url": "orcs_and_goblins.json",
+            "color": "#50974A",
+            "version": "0.1",
+            "alliance": "destruction",
+            "description": "A savage race made up of various warring tribes."
         }
     },
     "categories": {"hero": {"name": "Hero"}, "core": {"name": "Core"}, "elite": {"name": "Elite"}, "rare": {"name": "Rare"}},
