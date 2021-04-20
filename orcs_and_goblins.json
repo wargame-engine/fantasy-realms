@@ -1,5 +1,5 @@
 {
-  "name" : "Greenskins",
+  "name" : "Orcs and Goblins",
   "id" : "orcs_and_goblins",
   "color" : "#50974A",
   "author" : "Xekon#8266",
@@ -8,7 +8,7 @@
   "alliance" : "destruction",
   "units" : {
     "orc_warboss" : {
-      "name" : "Orc Warboss",
+      "name" : "Orc Warboss on foot",
       "description" : "Stronger and more savage than the normal orc.",
       "min" : 1,
       "max" : 1,
@@ -19,33 +19,33 @@
           "movement" : 6,
           "courage" : 7,
           "shoot" : 4,
-          "fight" : 6,
+          "fight" : 7,
           "defense" : 7,
           "reflexes" : 6,
           "weapons" : [
+            "shield",
             {
-              "id" : "hand_weapon_heavy",
-              "count" : 4
-            },
-            "shield"
+              "id" : "boss_smasher",
+              "count" : 2
+            }
           ],
           "options" : [
             {
               "replaceWeapon" : [
                 {
-                  "id" : "hand_weapon_heavy",
-                  "count" : 4
+                  "id" : "boss_smasher",
+                  "count" : 2
                 },
                 "shield"
               ],
               "withWeapon" : [
                 {
-                  "id" : "great_weapon_heavy",
-                  "count" : 4
+                  "id" : "boss_smasher_pair",
+                  "count" : 2
                 },
                 {
-                  "id" : "hand_weapon_heavy",
-                  "count" : 5
+                  "id" : "boss_big_smasher",
+                  "count" : 2
                 }
               ]
             }
@@ -59,76 +59,76 @@
           ],
           "min" : 1,
           "max" : 1
-        },
-        {
-          "name" : "Fire Drake",
-          "movement" : 10,
-          "courage" : 5,
-          "shoot" : 6,
-          "fight" : 6,
-          "defense" : 12,
-          "reflexes" : 5,
-          "weapons" : [
-            "flames",
-            {
-              "id" : "claws",
-              "count" : 2
-            }
-          ],
-          "rules" : [
-            "fear",
-            "fly",
-            "damage_table_monster",
-            {
-              "id" : "impact",
-              "x" : 3
-            },
-            {
-              "id" : "mount",
-              "x" : 1
-            }
-          ],
-          "min" : 0,
-          "max" : 1
         }
       ],
       "keywords" : [
         "Hero",
         "Orc",
         "Infantry"
+      ],
+      "subfactions" : [
+        "none",
+        "mad_moon",
+        "shatter_claw",
+        "savage_suns"
       ]
     },
-    "orc_shaman" : {
-      "name" : "Orc Shaman",
+    "moon_goblin_shaman" : {
+      "name" : "Goblin Shaman on Cave Beast",
       "description" : "",
       "min" : 1,
       "max" : 1,
-      "category" : "test",
+      "category" : "hero",
       "models" : [
         {
-          "name" : "Elven Battlemage",
-          "movement" : 7,
-          "courage" : 7,
-          "shoot" : 6,
-          "fight" : 7,
-          "defense" : 6,
-          "reflexes" : 6,
+          "name" : "Goblin Shaman",
+          "movement" : 8,
+          "courage" : 6,
+          "shoot" : 4,
+          "fight" : 4,
+          "defense" : 5,
+          "reflexes" : 5,
           "weapons" : [
             {
-              "id" : "great_weapon_heavy",
+              "id" : "bite",
               "count" : 3
+            },
+            "staff"
+          ],
+          "options" : [
+            {
+              "replaceRule" : [
+                {
+                  "id" : "magic",
+                  "x" : 1
+                }
+              ],
+              "withRule" : [
+                {
+                  "id" : "magic",
+                  "x" : 2
+                }
+              ]
             }
           ],
-          "options" : [],
           "rules" : [
             {
               "id" : "wounds",
               "x" : 3
             },
-            "leader",
             {
               "id" : "magic",
-              "x" : 2
+              "x" : 1
+            },
+            "crazed",
+            {
+              "id" : "impact",
+              "x" : 1
+            },
+            "agile",
+            {
+              "id" : "leader",
+              "x" : "Infantry, Cavalry"
             }
           ],
           "min" : 1,
@@ -137,13 +137,777 @@
       ],
       "keywords" : [
         "Hero",
-        "Orc",
+        "Goblin",
         "Wizard",
+        "Cavalry"
+      ],
+      "subfactions" : [
+        "mad_moon"
+      ]
+    },
+    "goblin_warboss" : {
+      "name" : "Goblin Warboss on foot",
+      "description" : "",
+      "min" : 1,
+      "max" : 1,
+      "category" : "hero",
+      "models" : [
+        {
+          "name" : "Goblin Warboss",
+          "movement" : 6,
+          "courage" : 7,
+          "shoot" : 5,
+          "fight" : 5,
+          "defense" : 5,
+          "reflexes" : 6,
+          "weapons" : [
+            {
+              "id" : "rusty_sword",
+              "count" : 3
+            },
+            "shield"
+          ],
+          "options" : [
+            {
+              "replaceWeapon" : [
+                {
+                  "id" : "rusty_sword",
+                  "count" : 3
+                },
+                "shield"
+              ],
+              "withWeapon" : [
+                {
+                  "id" : "sickle",
+                  "count" : 3
+                },
+                [
+                  {
+                    "id" : "short_bow",
+                    "count" : 3
+                  },
+                  {
+                    "id" : "rusty_dagger",
+                    "count" : 3
+                  }
+                ],
+                {
+                  "id" : "rusty_greatsword",
+                  "count" : 3
+                }
+              ]
+            },
+            {
+              "addRule" : [
+                "heavy_armor"
+              ]
+            }
+          ],
+          "rules" : [
+            {
+              "id" : "wounds",
+              "x" : 3
+            },
+            "leader"
+          ],
+          "min" : 1,
+          "max" : 1
+        }
+      ],
+      "keywords" : [
+        "Hero",
+        "Goblin",
         "Infantry"
+      ],
+      "subfactions" : [
+        "none",
+        "mad_moon",
+        "shatter_claw",
+        "steel_teeth",
+        "savage_suns"
+      ]
+    },
+    "goblins" : {
+      "name" : "Goblins",
+      "description" : "Small and weak, making up this weakness trough their sheer numbers.",
+      "min" : 1,
+      "max" : 3,
+      "category" : "core",
+      "models" : [
+        {
+          "name" : "Goblin Boss",
+          "movement" : 6,
+          "courage" : 4,
+          "shoot" : 5,
+          "fight" : 4,
+          "defense" : 5,
+          "reflexes" : 5,
+          "weapons" : [
+            "shield",
+            "boss_sword"
+          ],
+          "min" : 1,
+          "max" : 1,
+          "options" : [
+            {
+              "replaceWeapon" : [
+                "boss_sword",
+                "shield"
+              ],
+              "withWeapon" : [
+                [
+                  {
+                    "id" : "shortbow",
+                    "count" : 2
+                  },
+                  {
+                    "id" : "rusty_dagger",
+                    "count" : 2
+                  }
+                ],
+                [
+                  {
+                    "id" : "spear",
+                    "count" : 2
+                  },
+                  "shield"
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "name" : "Goblin",
+          "movement" : 6,
+          "courage" : 4,
+          "shoot" : 5,
+          "fight" : 4,
+          "defense" : 5,
+          "reflexes" : 5,
+          "weapons" : [
+            "rusty_sword",
+            "shield"
+          ],
+          "min" : 9,
+          "max" : 29,
+          "options" : [
+            {
+              "replaceWeapon" : [
+                "rusty_sword",
+                "shield"
+              ],
+              "withWeapon" : [
+                [
+                  "shortbow",
+                  "rusty_dagger"
+                ],
+                [
+                  "spear",
+                  "shield"
+                ]
+              ]
+            },
+            {
+              "replaceWeapon" : [
+                "rusty_sword",
+                "shield"
+              ],
+              "withWeapon" : [
+                [
+                  "net_and_spear"
+                ]
+              ],
+              "modelLimit" : 2
+            }
+          ]
+        }
+      ],
+      "keywords" : [
+        "Goblin",
+        "Infantry"
+      ],
+      "subfactions" : [
+        "none"
+      ],
+      "options" : [
+        {
+          "addRule" : [
+            "banner"
+          ],
+          "modelLimit" : 1
+        },
+        {
+          "addRule" : [
+            "musician"
+          ],
+          "modelLimit" : 1
+        }
+      ]
+    },
+    "orc_warriors" : {
+      "name" : "Orc Warriors",
+      "description" : "Stronger and better equipped than the goblins.",
+      "min" : 1,
+      "max" : 3,
+      "category" : "core",
+      "models" : [
+        {
+          "name" : "Orc Boss",
+          "movement" : 6,
+          "courage" : 4,
+          "shoot" : 5,
+          "fight" : 6,
+          "defense" : 5,
+          "reflexes" : 5,
+          "weapons" : [
+            "boss_cleaver_pair"
+          ],
+          "options" : [
+            {
+              "replaceWeapon" : [
+                "boss_cleaver_pair"
+              ],
+              "withWeapon" : [
+                [
+                  "boss_cleaver",
+                  "shield"
+                ],
+                [
+                  "big_smasher",
+                  "boss_cleaver"
+                ]
+              ]
+            }
+          ],
+          "rules" : [],
+          "min" : 1,
+          "max" : 1
+        },
+        {
+          "name" : "Orc Warrior",
+          "movement" : 6,
+          "courage" : 4,
+          "shoot" : 5,
+          "fight" : 6,
+          "defense" : 5,
+          "reflexes" : 5,
+          "weapons" : [
+            "cleaver_pair"
+          ],
+          "options" : [
+            {
+              "replaceWeapon" : [
+                "cleaver_pair"
+              ],
+              "withWeapon" : [
+                [
+                  "cleaver",
+                  "shield"
+                ]
+              ]
+            },
+            {
+              "replaceWeapon" : [
+                "cleaver_pair"
+              ],
+              "withWeapon" : [
+                [
+                  "big_smasher"
+                ]
+              ],
+              "modelLimit" : 2
+            }
+          ],
+          "rules" : [],
+          "min" : 4,
+          "max" : 19
+        }
+      ],
+      "keywords" : [
+        "Orc",
+        "Infantry"
+      ],
+      "subfactions" : [
+        "none",
+        "steel_teeth"
+      ],
+      "options" : [
+        {
+          "addRule" : [
+            "banner"
+          ],
+          "modelLimit" : 1
+        },
+        {
+          "addRule" : [
+            "musician"
+          ],
+          "modelLimit" : 1
+        }
+      ]
+    },
+    "goblin_riders" : {
+      "name" : "Goblin Spider Riders",
+      "description" : "",
+      "min" : 1,
+      "max" : 6,
+      "category" : "core",
+      "models" : [
+        {
+          "name" : "Goblin Boss",
+          "movement" : 9,
+          "courage" : 4,
+          "shoot" : 5,
+          "fight" : 4,
+          "defense" : 5,
+          "reflexes" : 5,
+          "weapons" : [
+            {
+              "id" : "shortbow",
+              "count" : 3
+            },
+            {
+              "id" : "spear",
+              "count" : 2
+            },
+            {
+              "id" : "spider_bite",
+              "count" : 2
+            }
+          ],
+          "min" : 1,
+          "max" : 1,
+          "rules" : [
+            "strider",
+            "outflank"
+          ]
+        },
+        {
+          "name" : "Goblin Spider Rider",
+          "movement" : 9,
+          "courage" : 4,
+          "shoot" : 5,
+          "fight" : 4,
+          "defense" : 5,
+          "reflexes" : 5,
+          "weapons" : [
+            {
+              "id" : "shortbow",
+              "count" : 2
+            },
+            "spear",
+            {
+              "id" : "spider_bite",
+              "count" : 2
+            }
+          ],
+          "min" : 4,
+          "max" : 19,
+          "rules" : [
+            "strider",
+            "outflank"
+          ]
+        }
+      ],
+      "keywords" : [
+        "Goblin",
+        "Cavalry"
+      ],
+      "subfactions" : [
+        "shatter_claw"
+      ],
+      "options" : [
+        {
+          "addRule" : [
+            "banner"
+          ],
+          "modelLimit" : 1
+        },
+        {
+          "addRule" : [
+            "musician"
+          ],
+          "modelLimit" : 1
+        }
+      ]
+    },
+    "moon_goblin_knights" : {
+      "name" : "Goblin Knights",
+      "description" : "",
+      "min" : 1,
+      "max" : 3,
+      "category" : "elite",
+      "models" : [
+        {
+          "name" : "Goblin Boss",
+          "movement" : 8,
+          "courage" : 4,
+          "shoot" : 3,
+          "fight" : 5,
+          "defense" : 4,
+          "reflexes" : 5,
+          "weapons" : [
+            {
+              "id" : "rusty_dagger",
+              "count" : 3
+            },
+            {
+              "id" : "bite",
+              "count" : 3
+            }
+          ],
+          "min" : 1,
+          "max" : 1,
+          "options" : [
+            {
+              "replaceWeapon" : [
+                {
+                  "id" : "rusty_dagger",
+                  "count" : 3
+                }
+              ],
+              "withWeapon" : [
+                [
+                  {
+                    "id" : "lance",
+                    "count" : 3
+                  }
+                ]
+              ]
+            },
+            {
+              "addRule" : [
+                "heavy_armor"
+              ]
+            }
+          ],
+          "rules" : [
+            "skirmishers",
+            "crazed",
+            {
+              "id" : "impact",
+              "x" : 1
+            },
+            "agile"
+          ]
+        },
+        {
+          "name" : "Goblin Knight",
+          "movement" : 8,
+          "courage" : 4,
+          "shoot" : 3,
+          "fight" : 5,
+          "defense" : 4,
+          "reflexes" : 5,
+          "weapons" : [
+            {
+              "id" : "rusty_dagger",
+              "count" : 2
+            },
+            {
+              "id" : "bite",
+              "count" : 3
+            }
+          ],
+          "min" : 2,
+          "max" : 11,
+          "options" : [
+            {
+              "replaceWeapon" : [
+                {
+                  "id" : "rusty_dagger",
+                  "count" : 2
+                }
+              ],
+              "withWeapon" : [
+                {
+                  "id" : "lance",
+                  "count" : 2
+                }
+              ]
+            },
+            {
+              "addRule" : [
+                "heavy_armor"
+              ]
+            }
+          ],
+          "rules" : [
+            "skirmishers",
+            "crazed",
+            {
+              "id" : "impact",
+              "x" : 1
+            },
+            "agile"
+          ]
+        }
+      ],
+      "keywords" : [
+        "Goblin",
+        "Cavalry"
+      ],
+      "subfactions" : [
+        "mad_moon"
+      ],
+      "options" : [
+        {
+          "addRule" : [
+            "banner"
+          ],
+          "modelLimit" : 1
+        },
+        {
+          "addRule" : [
+            "musician"
+          ],
+          "modelLimit" : 1
+        }
+      ]
+    },
+    "shatter_warriors" : {
+      "name" : "Primal Orc Warriors",
+      "description" : "",
+      "min" : 1,
+      "max" : 3,
+      "category" : "core",
+      "models" : [
+        {
+          "name" : "Primal Orc Boss",
+          "movement" : 6,
+          "courage" : 4,
+          "shoot" : 5,
+          "fight" : 6,
+          "defense" : 5,
+          "reflexes" : 5,
+          "weapons" : [
+            "boss_cleaver_pair"
+          ],
+          "options" : [
+            {
+              "replaceWeapon" : [
+                "boss_cleaver_pair"
+              ],
+              "withWeapon" : [
+                [
+                  {
+                    "id" : "spear",
+                    "count" : 3
+                  }
+                ]
+              ]
+            }
+          ],
+          "rules" : [
+            "furious"
+          ],
+          "min" : 1,
+          "max" : 1
+        },
+        {
+          "name" : "Primal Orc Warrior",
+          "movement" : 6,
+          "courage" : 4,
+          "shoot" : 5,
+          "fight" : 6,
+          "defense" : 5,
+          "reflexes" : 5,
+          "weapons" : [
+            "cleaver_pair"
+          ],
+          "options" : [
+            {
+              "replaceWeapon" : [
+                "cleaver_pair"
+              ],
+              "withWeapon" : [
+                {
+                  "id" : "spear",
+                  "count" : 2
+                }
+              ]
+            }
+          ],
+          "rules" : [
+            "furious"
+          ],
+          "min" : 4,
+          "max" : 19
+        }
+      ],
+      "keywords" : [
+        "Orc",
+        "Infantry"
+      ],
+      "subfactions" : [
+        "shatter_claw"
+      ],
+      "options" : [
+        {
+          "addRule" : [
+            "banner"
+          ],
+          "modelLimit" : 1
+        },
+        {
+          "addRule" : [
+            "musician"
+          ],
+          "modelLimit" : 1
+        }
+      ]
+    },
+    "shatter_goblin_warboss" : {
+      "name" : "Goblin Warboss on Cave Spider",
+      "description" : "",
+      "min" : 1,
+      "max" : 1,
+      "category" : "hero",
+      "models" : [
+        {
+          "name" : "Goblin Warboss",
+          "movement" : 9,
+          "courage" : 7,
+          "shoot" : 5,
+          "fight" : 5,
+          "defense" : 5,
+          "reflexes" : 6,
+          "weapons" : [
+            {
+              "id" : "shortbow",
+              "count" : 3
+            },
+            {
+              "id" : "rusty_dagger",
+              "count" : 3
+            },
+            {
+              "id" : "spider_bite",
+              "count" : 2
+            }
+          ],
+          "options" : [
+            {
+              "replaceWeapon" : [
+                {
+                  "id" : "rusty_dagger",
+                  "count" : 3
+                }
+              ],
+              "withWeapon" : [
+                {
+                  "id" : "sickle",
+                  "count" : 3
+                },
+                {
+                  "id" : "spear",
+                  "count" : 3
+                }
+              ]
+            },
+            {
+              "addRule" : [
+                "shield"
+              ]
+            }
+          ],
+          "rules" : [
+            {
+              "id" : "wounds",
+              "x" : 4
+            },
+            "leader",
+            "strider",
+            "outflank"
+          ],
+          "min" : 1,
+          "max" : 1
+        }
+      ],
+      "keywords" : [
+        "Hero",
+        "Goblin",
+        "Cavalry"
+      ],
+      "subfactions" : [
+        "shatter_claw"
+      ]
+    },
+    "moon_goblin_warboss" : {
+      "name" : "Goblin Warboss on Cave Beast",
+      "description" : "Smaller in stature but even more crazy than their orcish counterpart.",
+      "min" : 1,
+      "max" : 1,
+      "category" : "hero",
+      "models" : [
+        {
+          "name" : "Goblin Warboss",
+          "movement" : 8,
+          "courage" : 7,
+          "shoot" : 5,
+          "fight" : 5,
+          "defense" : 5,
+          "reflexes" : 6,
+          "weapons" : [
+            {
+              "id" : "sickle",
+              "count" : 3
+            },
+            "shield",
+            {
+              "id" : "bite",
+              "count" : 3
+            }
+          ],
+          "options" : [
+            {
+              "replaceWeapon" : [
+                {
+                  "id" : "sickle",
+                  "count" : 3
+                }
+              ],
+              "withWeapon" : [
+                {
+                  "id" : "lance",
+                  "count" : 3
+                }
+              ]
+            },
+            {
+              "addRule" : [
+                "heavy_armor"
+              ]
+            }
+          ],
+          "rules" : [
+            {
+              "id" : "wounds",
+              "x" : 4
+            },
+            "leader",
+            "crazed",
+            {
+              "id" : "impact",
+              "x" : 1
+            },
+            "agile"
+          ],
+          "min" : 1,
+          "max" : 1
+        }
+      ],
+      "keywords" : [
+        "Hero",
+        "Goblin",
+        "Infantry"
+      ],
+      "subfactions" : [
+        "mad_moon"
       ]
     },
     "goblin_shaman" : {
-      "name" : "Goblin Shaman",
+      "name" : "Goblin Shaman on foot",
       "description" : "",
       "min" : 1,
       "max" : 1,
@@ -155,13 +919,10 @@
           "courage" : 6,
           "shoot" : 4,
           "fight" : 4,
-          "defense" : 4,
+          "defense" : 5,
           "reflexes" : 5,
           "weapons" : [
-            {
-              "id" : "hand_weapon_heavy",
-              "count" : 2
-            }
+            "staff"
           ],
           "options" : [
             {
@@ -184,97 +945,157 @@
               "id" : "wounds",
               "x" : 2
             },
-            "leader",
             {
               "id" : "magic",
               "x" : 1
-            }
+            },
+            "leader"
           ],
           "min" : 1,
           "max" : 1
-        },
-        {
-          "name" : "Cave Spider",
-          "movement" : 9,
-          "courage" : 3,
-          "shoot" : 3,
-          "fight" : 4,
-          "defense" : 4,
-          "reflexes" : 3,
-          "weapons" : [
-            {
-              "id" : "spider_bite",
-              "count" : 2
-            }
-          ],
-          "min" : 0,
-          "max" : 1,
-          "rules" : [
-            "strider",
-            "outflank",
-            {
-              "id" : "mount",
-              "x" : 1
-            }
-          ]
-        },
-        {
-          "name" : "Cave Beast",
-          "movement" : 6,
-          "courage" : 4,
-          "shoot" : 3,
-          "fight" : 5,
-          "defense" : 5,
-          "reflexes" : 4,
-          "weapons" : [
-            {
-              "id" : "bite",
-              "count" : 3
-            }
-          ],
-          "min" : 0,
-          "max" : 1,
-          "rules" : [
-            "crazed",
-            {
-              "id" : "impact",
-              "x" : 1
-            },
-            "agile",
-            "skirmishers",
-            {
-              "id" : "mount",
-              "x" : 1
-            }
-          ]
         }
       ],
       "keywords" : [
         "Hero",
         "Goblin",
         "Wizard",
-        "Infantry"
+        "Cavalry"
+      ],
+      "subfactions" : [
+        "none",
+        "mad_moon",
+        "shatter_claw",
+        "savage_suns",
+        "steel_teeth"
       ]
     },
-    "goblin_warboss" : {
-      "name" : "Goblin Warboss",
-      "description" : "",
+    "orc_brutes" : {
+      "name" : "Orc Brutes",
+      "description" : "Bigger than their common brethren, wielding massive weapons.",
+      "min" : 1,
+      "max" : 3,
+      "category" : "elite",
+      "models" : [
+        {
+          "name" : "Orc Boss",
+          "movement" : 6,
+          "courage" : 4,
+          "shoot" : 5,
+          "fight" : 6,
+          "defense" : 7,
+          "reflexes" : 4,
+          "weapons" : [
+            "big_smasher",
+            "boss_gauntlet"
+          ],
+          "options" : [
+            {
+              "replaceWeapon" : [
+                "big_smasher",
+                "boss_gauntlet"
+              ],
+              "withWeapon" : [
+                {
+                  "id" : "boss_big_smasher",
+                  "count" : 2
+                }
+              ]
+            }
+          ],
+          "rules" : [
+            {
+              "id" : "wounds",
+              "x" : 2
+            }
+          ],
+          "min" : 1,
+          "max" : 1
+        },
+        {
+          "name" : "Orc Brute",
+          "movement" : 6,
+          "courage" : 4,
+          "shoot" : 5,
+          "fight" : 6,
+          "defense" : 7,
+          "reflexes" : 4,
+          "weapons" : [
+            "smasher_pair"
+          ],
+          "rules" : [
+            {
+              "id" : "wounds",
+              "x" : 2
+            }
+          ],
+          "options" : [
+            {
+              "replaceWeapon" : [
+                "smasher_pair"
+              ],
+              "withWeapon" : [
+                [
+                  "slasher"
+                ]
+              ]
+            },
+            {
+              "replaceWeapon" : [
+                "smasher_pair"
+              ],
+              "withWeapon" : [
+                [
+                  "big_smasher"
+                ]
+              ],
+              "modelLimit" : 2
+            }
+          ],
+          "min" : 2,
+          "max" : 11
+        }
+      ],
+      "keywords" : [
+        "Orc",
+        "Infantry"
+      ],
+      "subfactions" : [
+        "none"
+      ],
+      "options" : [
+        {
+          "addRule" : [
+            "banner"
+          ],
+          "modelLimit" : 1
+        },
+        {
+          "addRule" : [
+            "musician"
+          ],
+          "modelLimit" : 1
+        }
+      ]
+    },
+    "teeth_orc_warboss" : {
+      "name" : "Armorclad Warboss on foot",
+      "description" : "A walking tank, clad in the best orcish armor and wielding deadly weapons.",
       "min" : 1,
       "max" : 1,
       "category" : "hero",
       "models" : [
         {
-          "name" : "Goblin Warboss",
+          "name" : "Armorclad Warboss",
           "movement" : 6,
           "courage" : 7,
-          "shoot" : 5,
-          "fight" : 5,
-          "defense" : 5,
+          "shoot" : 4,
+          "fight" : 7,
+          "defense" : 7,
           "reflexes" : 6,
           "weapons" : [
             {
-              "id" : "hand_weapon_heavy",
-              "count" : 3
+              "id" : "boss_big_smasher",
+              "count" : 2
             },
             "shield"
           ],
@@ -282,35 +1103,16 @@
             {
               "replaceWeapon" : [
                 {
-                  "id" : "hand_weapon_heavy",
-                  "count" : 3
+                  "id" : "boss_big_smasher",
+                  "count" : 2
                 },
                 "shield"
               ],
               "withWeapon" : [
                 {
-                  "id" : "sickle",
-                  "count" : 3
-                },
-                {
-                  "id" : "lance",
-                  "count" : 3
-                },
-                [
-                  {
-                    "id" : "short_bow",
-                    "count" : 3
-                  },
-                  {
-                    "id" : "hand_weapon",
-                    "count" : 3
-                  }
-                ]
-              ]
-            },
-            {
-              "addRule" : [
-                "heavy_armor"
+                  "id" : "boss_big_smasher_pair",
+                  "count" : 2
+                }
               ]
             }
           ],
@@ -319,650 +1121,139 @@
               "id" : "wounds",
               "x" : 3
             },
-            "leader"
+            "leader",
+            "heavy_armor"
           ],
           "min" : 1,
           "max" : 1
-        },
-        {
-          "name" : "Cave Spider",
-          "movement" : 9,
-          "courage" : 3,
-          "shoot" : 3,
-          "fight" : 4,
-          "defense" : 4,
-          "reflexes" : 3,
-          "weapons" : [
-            {
-              "id" : "spider_bite",
-              "count" : 2
-            }
-          ],
-          "min" : 0,
-          "max" : 1,
-          "rules" : [
-            "strider",
-            "outflank",
-            {
-              "id" : "mount",
-              "x" : 1
-            }
-          ]
-        },
-        {
-          "name" : "Cave Beast",
-          "movement" : 6,
-          "courage" : 4,
-          "shoot" : 3,
-          "fight" : 5,
-          "defense" : 5,
-          "reflexes" : 4,
-          "weapons" : [
-            {
-              "id" : "bite",
-              "count" : 3
-            }
-          ],
-          "min" : 0,
-          "max" : 1,
-          "rules" : [
-            "crazed",
-            {
-              "id" : "impact",
-              "x" : 1
-            },
-            "agile",
-            "skirmishers",
-            {
-              "id" : "mount",
-              "x" : 1
-            }
-          ]
         }
       ],
       "keywords" : [
         "Hero",
-        "Goblin",
-        "Infantry"
-      ]
-    },
-    "goblins" : {
-      "name" : "Goblins",
-      "description" : "",
-      "min" : 1,
-      "max" : 6,
-      "category" : "core",
-      "models" : [
-        {
-          "name" : "Goblin Boss",
-          "movement" : 6,
-          "courage" : 4,
-          "shoot" : 5,
-          "fight" : 4,
-          "defense" : 5,
-          "reflexes" : 5,
-          "weapons" : [
-            {
-              "id" : "hand_weapon_heavy",
-              "count" : 2
-            },
-            "shield"
-          ],
-          "min" : 1,
-          "max" : 1,
-          "options" : [
-            {
-              "replaceWeapon" : [
-                {
-                  "id" : "hand_weapon_heavy",
-                  "count" : 2
-                },
-                "shield"
-              ],
-              "withWeapon" : [
-                [
-                  {
-                    "id" : "short_bow",
-                    "count" : 2
-                  },
-                  {
-                    "id" : "hand_weapon",
-                    "count" : 2
-                  }
-                ],
-                [
-                  {
-                    "id" : "spear",
-                    "count" : 2
-                  },
-                  "shield"
-                ],
-                [
-                  {
-                    "id" : "sickle",
-                    "count" : 2
-                  }
-                ]
-              ]
-            }
-          ]
-        },
-        {
-          "name" : "Goblin",
-          "movement" : 6,
-          "courage" : 4,
-          "shoot" : 5,
-          "fight" : 4,
-          "defense" : 5,
-          "reflexes" : 5,
-          "weapons" : [
-            "hand_weapon_heavy",
-            "shield"
-          ],
-          "min" : 9,
-          "max" : 29,
-          "options" : [
-            {
-              "replaceWeapon" : [
-                "hand_weapon_heavy",
-                "shield"
-              ],
-              "withWeapon" : [
-                [
-                  "short_bow",
-                  "hand_weapon"
-                ],
-                [
-                  "spear",
-                  "shield"
-                ]
-              ]
-            }
-          ]
-        }
-      ],
-      "keywords" : [
-        "Goblin",
-        "Infantry"
-      ]
-    },
-    "orc_warriors" : {
-      "name" : "Orc Warriors",
-      "description" : "",
-      "min" : 1,
-      "max" : 3,
-      "category" : "core",
-      "models" : [
-        {
-          "name" : "Orc Boss",
-          "movement" : 6,
-          "courage" : 5,
-          "shoot" : 5,
-          "fight" : 5,
-          "defense" : 5,
-          "reflexes" : 5,
-          "weapons" : [
-            {
-              "id" : "hand_weapon_heavy",
-              "count" : 2
-            },
-            "shield"
-          ],
-          "rules" : [],
-          "min" : 1,
-          "max" : 1,
-          "options" : [
-            {
-              "replaceWeapon" : [
-                {
-                  "id" : "hand_weapon_heavy",
-                  "count" : 2
-                },
-                "shield"
-              ],
-              "withWeapon" : [
-                [
-                  {
-                    "id" : "hand_weapon_heavy",
-                    "count" : 3
-                  }
-                ],
-                [
-                  {
-                    "id" : "spear",
-                    "count" : 2
-                  },
-                  "shield"
-                ],
-                [
-                  {
-                    "id" : "short_bow",
-                    "count" : 2
-                  },
-                  {
-                    "id" : "hand_weapon",
-                    "count" : 2
-                  }
-                ]
-              ]
-            }
-          ]
-        },
-        {
-          "name" : "Orc Warrior",
-          "movement" : 6,
-          "courage" : 5,
-          "shoot" : 5,
-          "fight" : 5,
-          "defense" : 5,
-          "reflexes" : 5,
-          "weapons" : [
-            "hand_weapon_heavy",
-            "shield"
-          ],
-          "rules" : [],
-          "min" : 4,
-          "max" : 19,
-          "options" : [
-            {
-              "replaceWeapon" : [
-                "hand_weapon_heavy",
-                "shield"
-              ],
-              "withWeapon" : [
-                [
-                  {
-                    "id" : "hand_weapon_heavy",
-                    "count" : 2
-                  }
-                ],
-                [
-                  "spear",
-                  "shield"
-                ],
-                [
-                  "short_bow",
-                  "hand_weapon"
-                ]
-              ]
-            }
-          ]
-        }
-      ],
-      "keywords" : [
         "Orc",
         "Infantry"
-      ]
-    },
-    "goblin_riders" : {
-      "name" : "Goblin Spider Riders",
-      "description" : "",
-      "min" : 1,
-      "max" : 6,
-      "category" : "core",
-      "models" : [
-        {
-          "name" : "Goblin Boss",
-          "movement" : 6,
-          "courage" : 4,
-          "shoot" : 5,
-          "fight" : 4,
-          "defense" : 5,
-          "reflexes" : 5,
-          "weapons" : [
-            {
-              "id" : "short_bow",
-              "count" : 3
-            },
-            {
-              "id" : "spear",
-              "count" : 2
-            }
-          ],
-          "min" : 1,
-          "max" : 1
-        },
-        {
-          "name" : "Goblin Spider Rider",
-          "movement" : 6,
-          "courage" : 4,
-          "shoot" : 5,
-          "fight" : 4,
-          "defense" : 5,
-          "reflexes" : 5,
-          "weapons" : [
-            {
-              "id" : "short_bow",
-              "count" : 2
-            },
-            "spear"
-          ],
-          "min" : 4,
-          "max" : 19
-        },
-        {
-          "name" : "Cave Spider",
-          "movement" : 9,
-          "courage" : 3,
-          "shoot" : 3,
-          "fight" : 4,
-          "defense" : 4,
-          "reflexes" : 3,
-          "weapons" : [
-            {
-              "id" : "spider_bite",
-              "count" : 2
-            }
-          ],
-          "min" : 5,
-          "max" : 20,
-          "rules" : [
-            "strider",
-            "outflank",
-            {
-              "id" : "mount",
-              "x" : 1
-            }
-          ]
-        }
       ],
-      "keywords" : [
-        "Goblin",
-        "Cavalry"
+      "subfactions" : [
+        "steel_teeth"
       ]
     },
-    "goblin_knights" : {
-      "name" : "Goblin Knights",
-      "description" : "",
+    "steel_orc_warrior" : {
+      "name" : "Armorclad Brutes",
+      "description" : "Wielding an arsenal of the best orcish weapons and armor.",
       "min" : 1,
       "max" : 3,
       "category" : "elite",
       "models" : [
         {
-          "name" : "Goblin Boss",
+          "name" : "Armorclad Boss",
           "movement" : 6,
           "courage" : 4,
-          "shoot" : 3,
-          "fight" : 5,
-          "defense" : 4,
-          "reflexes" : 5,
-          "weapons" : [
-            {
-              "id" : "hand_weapon",
-              "count" : 3
-            }
-          ],
-          "min" : 1,
-          "max" : 1,
-          "options" : [
-            {
-              "replaceWeapon" : [
-                {
-                  "id" : "hand_weapon",
-                  "count" : 3
-                }
-              ],
-              "withWeapon" : [
-                [
-                  {
-                    "id" : "lance",
-                    "count" : 3
-                  }
-                ]
-              ]
-            },
-            {
-              "addRule" : [
-                "heavy_armor"
-              ]
-            }
-          ],
-          "rules" : [
-            "skirmishers"
-          ]
-        },
-        {
-          "name" : "Goblin Knight",
-          "movement" : 6,
-          "courage" : 4,
-          "shoot" : 3,
-          "fight" : 5,
-          "defense" : 4,
-          "reflexes" : 5,
-          "weapons" : [
-            {
-              "id" : "hand_weapon",
-              "count" : 2
-            }
-          ],
-          "min" : 2,
-          "max" : 11,
-          "options" : [
-            {
-              "replaceWeapon" : [
-                {
-                  "id" : "hand_weapon",
-                  "count" : 2
-                }
-              ],
-              "withWeapon" : [
-                {
-                  "id" : "lance",
-                  "count" : 2
-                }
-              ]
-            },
-            {
-              "addRule" : [
-                "heavy_armor"
-              ]
-            }
-          ],
-          "rules" : [
-            "skirmishers"
-          ]
-        },
-        {
-          "name" : "Cave Beast",
-          "movement" : 6,
-          "courage" : 4,
-          "shoot" : 3,
-          "fight" : 5,
+          "shoot" : 5,
+          "fight" : 6,
           "defense" : 5,
           "reflexes" : 4,
           "weapons" : [
-            {
-              "id" : "bite",
-              "count" : 3
-            }
+            "boss_cleaver",
+            "shield"
           ],
-          "min" : 3,
-          "max" : 12,
-          "rules" : [
-            "crazed",
-            {
-              "id" : "impact",
-              "x" : 1
-            },
-            "agile",
-            "skirmishers",
-            {
-              "id" : "mount",
-              "x" : 1
-            }
-          ]
-        }
-      ],
-      "keywords" : [
-        "Goblin",
-        "Cavalry"
-      ]
-    },
-    "savage_warriors" : {
-      "name" : "Savage Orc Warriors",
-      "description" : "",
-      "min" : 1,
-      "max" : 3,
-      "category" : "core",
-      "models" : [
-        {
-          "name" : "Savage Orc Boss",
-          "movement" : 6,
-          "courage" : 5,
-          "shoot" : 5,
-          "fight" : 6,
-          "defense" : 5,
-          "reflexes" : 5,
-          "weapons" : [
-            {
-              "id" : "hand_weapon_heavy",
-              "count" : 3
-            }
-          ],
-          "rules" : [],
-          "min" : 1,
-          "max" : 1,
           "options" : [
             {
               "replaceWeapon" : [
-                {
-                  "id" : "hand_weapon_heavy",
-                  "count" : 3
-                }
+                "boss_cleaver",
+                "shield"
               ],
               "withWeapon" : [
                 [
-                  {
-                    "id" : "spear",
-                    "count" : 3
-                  }
+                  "boss_smasher"
                 ]
               ]
             }
-          ]
+          ],
+          "rules" : [
+            {
+              "id" : "wounds",
+              "x" : 2
+            },
+            "heavy_armor"
+          ],
+          "min" : 1,
+          "max" : 1
         },
         {
-          "name" : "Savage Orc Warrior",
+          "name" : "Armorclad Brute",
           "movement" : 6,
-          "courage" : 5,
+          "courage" : 4,
           "shoot" : 5,
           "fight" : 6,
           "defense" : 5,
-          "reflexes" : 5,
+          "reflexes" : 4,
           "weapons" : [
-            {
-              "id" : "hand_weapon_heavy",
-              "count" : 2
-            }
+            "cleaver_pair",
+            "shield"
           ],
-          "rules" : [],
-          "min" : 4,
-          "max" : 19,
+          "rules" : [
+            {
+              "id" : "wounds",
+              "x" : 2
+            },
+            "heavy_armor"
+          ],
           "options" : [
             {
               "replaceWeapon" : [
-                {
-                  "id" : "hand_weapon_heavy",
-                  "count" : 2
-                }
+                "cleaver_pair",
+                "shield"
               ],
               "withWeapon" : [
-                {
-                  "id" : "spear",
-                  "count" : 2
-                }
-              ]
+                [
+                  "big_smasher"
+                ]
+              ],
+              "modelLimit" : 2
             }
-          ]
+          ],
+          "min" : 2,
+          "max" : 11
         }
       ],
       "keywords" : [
         "Orc",
         "Infantry"
+      ],
+      "subfactions" : [
+        "steel_teeth"
+      ],
+      "options" : [
+        {
+          "addRule" : [
+            "banner"
+          ],
+          "modelLimit" : 1
+        },
+        {
+          "addRule" : [
+            "musician"
+          ],
+          "modelLimit" : 1
+        }
       ]
     }
   },
   "weapons" : {
-    "claws" : {
-      "name" : "Rending Claws",
+    "shortbow" : {
+      "name" : "Shortbow",
       "ap" : 1,
-      "attacks" : 2,
+      "attacks" : 1,
+      "short" : 9,
+      "medium" : 18
+    },
+    "shield" : {
+      "name" : "Shield",
+      "attacks" : 0,
       "short" : "Melee",
       "rules" : [
         {
-          "id" : "rending"
-        }
-      ]
-    },
-    "bite" : {
-      "name" : "Fangs and Teeth",
-      "ap" : 2,
-      "attacks" : 1,
-      "short" : "Melee"
-    },
-    "bow" : {
-      "name" : "Bow",
-      "attacks" : 1,
-      "medium" : 18,
-      "short" : 9
-    },
-    "flame" : {
-      "name" : "Flaming Breath",
-      "ap" : 1,
-      "attacks" : 3,
-      "short" : "Melee",
-      "rules" : [
-        "bomb",
-        "flame"
-      ]
-    },
-    "flames" : {
-      "name" : "Dragon Breath",
-      "ap" : 1,
-      "attacks" : 4,
-      "rules" : [
-        "flame"
-      ],
-      "short" : 9
-    },
-    "butcher_blade" : {
-      "name" : "Butcher Blade",
-      "ap" : 4,
-      "attacks" : 1,
-      "short" : "Melee"
-    },
-    "sickle" : {
-      "name" : "Moon-sickle",
-      "ap" : 3,
-      "attacks" : 1,
-      "short" : "Melee"
-    },
-    "spider_bite" : {
-      "name" : "Spider Bite",
-      "attacks" : 1,
-      "short" : "Melee",
-      "rules" : [
-        {
-          "id" : "poison",
-          "x" : 2
-        }
-      ]
-    },
-    "tusks" : {
-      "name" : "Brutal Tusks",
-      "ap" : 1,
-      "attacks" : 1,
-      "short" : "Melee"
-    },
-    "lance_heavy" : {
-      "name" : "Heavy Lance",
-      "ap" : 2,
-      "attacks" : 1,
-      "short" : "Melee",
-      "rules" : [
-        {
-          "id" : "impact",
-          "x" : 1
+          "id" : "shield"
         }
       ]
     },
@@ -980,21 +1271,203 @@
         }
       ]
     },
-    "shield" : {
-      "name" : "Shield",
-      "attacks" : 0,
+    "spider_bite" : {
+      "name" : "Spider Bite",
+      "attacks" : 1,
       "short" : "Melee",
       "rules" : [
         {
-          "id" : "shield"
+          "id" : "poison",
+          "x" : 2
         }
       ]
+    },
+    "claws" : {
+      "name" : "Rending Claws",
+      "ap" : 1,
+      "attacks" : 2,
+      "short" : "Melee",
+      "rules" : [
+        {
+          "id" : "rending"
+        }
+      ]
+    },
+    "bite" : {
+      "name" : "Fangs and Teeth",
+      "ap" : 2,
+      "attacks" : 1,
+      "short" : "Melee"
+    },
+    "sickle" : {
+      "name" : "Moon-sickle",
+      "ap" : 3,
+      "attacks" : 1,
+      "short" : "Melee",
+      "note" : "goblins only"
+    },
+    "rusty_dagger" : {
+      "name" : "Rusty Dagger",
+      "attacks" : 1,
+      "short" : "Melee",
+      "notes" : "goblins only"
+    },
+    "staff" : {
+      "name" : "Moon Staff",
+      "attacks" : 1,
+      "short" : "Melee",
+      "notes" : "goblins only",
+      "ap" : 3
+    },
+    "boss_sword" : {
+      "name" : "Boss Sword",
+      "attacks" : 2,
+      "short" : "Melee",
+      "notes" : "goblins only",
+      "ap" : 1
+    },
+    "rusty_greatsword" : {
+      "name" : "Rusty Greatsword",
+      "attacks" : 1,
+      "short" : "Melee",
+      "notes" : "goblins only",
+      "ap" : 2
+    },
+    "rusty_sword" : {
+      "name" : "Rusty Sword",
+      "attacks" : 1,
+      "short" : "Melee",
+      "notes" : "goblins only",
+      "ap" : 1
+    },
+    "gauntlet" : {
+      "name" : "Spiked Gauntlet",
+      "attacks" : 1,
+      "short" : "Melee",
+      "notes" : "orcs only",
+      "ap" : 1
+    },
+    "dagger" : {
+      "name" : "Crude Cutter",
+      "attacks" : 1,
+      "short" : "Melee",
+      "notes" : "orcs only"
+    },
+    "cleaver" : {
+      "name" : "Cleaver",
+      "ap" : 2,
+      "attacks" : 1,
+      "short" : "Melee",
+      "notes" : "standard weapon"
+    },
+    "cleaver_pair" : {
+      "name" : "Pair of Cleavers",
+      "ap" : 2,
+      "attacks" : 2,
+      "short" : "Melee",
+      "notes" : "paired weapon for standard units"
+    },
+    "boss_cleaver" : {
+      "name" : "Boss Cleaver",
+      "ap" : 2,
+      "attacks" : 2,
+      "short" : "Melee",
+      "notes" : "standard weapon for bosses"
+    },
+    "boss_cleaver_pair" : {
+      "name" : "Pair of Boss Cleavers",
+      "ap" : 2,
+      "attacks" : 3,
+      "short" : "Melee",
+      "notes" : "paired weapon for bosses"
+    },
+    "big_smasher" : {
+      "name" : "Big Smasher",
+      "ap" : 6,
+      "attacks" : 2,
+      "short" : "Melee",
+      "note" : "for heroes only"
+    },
+    "boss_big_smasher" : {
+      "name" : "Boss Big Smasher",
+      "ap" : 6,
+      "attacks" : 2,
+      "short" : "Melee",
+      "note" : "for heroes only"
+    },
+    "boss_big_smasher_pair" : {
+      "name" : "Pair of Boss Big Smashers",
+      "ap" : 6,
+      "attacks" : 3,
+      "short" : "Melee",
+      "note" : "for heroes only"
+    },
+    "smasher" : {
+      "name" : "Smasher",
+      "ap" : 4,
+      "attacks" : 1,
+      "short" : "Melee",
+      "notes" : "brute"
+    },
+    "smasher_pair" : {
+      "name" : "Pair of Smashers",
+      "ap" : 4,
+      "attacks" : 2,
+      "short" : "Melee",
+      "notes" : "brute"
+    },
+    "boss_smasher" : {
+      "name" : "Boss Smasher",
+      "ap" : 4,
+      "attacks" : 2,
+      "short" : "Melee",
+      "notes" : "brute"
+    },
+    "boss_smasher_pair" : {
+      "name" : "Pair of Boss Smashers",
+      "ap" : 4,
+      "attacks" : 3,
+      "short" : "Melee",
+      "notes" : "brute"
+    },
+    "slasher" : {
+      "name" : "Slasher",
+      "ap" : 4,
+      "attacks" : 2,
+      "short" : "Melee",
+      "notes" : "brute",
+      "rules" : [
+        {
+          "id" : "reach",
+          "x" : 2
+        }
+      ]
+    },
+    "boss_slasher" : {
+      "name" : "Boss Slasher",
+      "ap" : 5,
+      "attacks" : 2,
+      "short" : "Melee",
+      "notes" : "brute",
+      "rules" : [
+        {
+          "id" : "reach",
+          "x" : 2
+        }
+      ]
+    },
+    "boss_gauntlet" : {
+      "name" : "Scythed Gauntlet",
+      "attacks" : 2,
+      "short" : "Melee",
+      "notes" : "orcs only",
+      "ap" : 3
     }
   },
   "rules" : {
     "crazed" : {
       "name" : "Crazed",
-      "description" : "Whenever you activate this unit make an initiative test. If successful, until the end of the turn whenever you make a move action with this unit you may sprint without needing to make an initiative test.",
+      "description" : "When you activate this unit make an initiative test. If successful, until the end of the turn whenever you make a move action with this unit you may sprint without needing to make an initiative test.",
       "points" : 4
     },
     "net" : {
@@ -1018,11 +1491,20 @@
           "multiply" : 2
         }
       ]
+    },
+    "banner" : {
+      "name" : "Banner",
+      "description" : "This unit may re-roll a single failed Courage test when removing Shock.",
+      "points" : 5
+    },
+    "musician" : {
+      "name" : "Musician",
+      "description" : "This unit may re-roll a single failed Initiative test when sprinting.",
+      "points" : 5
     }
   },
   "powers" : {},
-  "strategies" : [
-  ],
+  "strategies" : [],
   "relics" : [
     {
       "name" : "Bloody Banner",
@@ -1178,5 +1660,34 @@
       ]
     }
   },
-  "subfactions" : {}
+  "subfactions" : {
+    "steel_teeth" : {
+      "name" : "Steel Teeth Tribe",
+      "id" : "steel_teeth",
+      "color" : "#800080",
+      "restricted" : true,
+      "background" : "Armed to the teeth with armor and weapons."
+    },
+    "savage_suns" : {
+      "name" : "Savage Suns Tribe",
+      "id" : "savage_suns",
+      "color" : "#800080",
+      "restricted" : true,
+      "background" : "Following the way of speed, these greenskin crush their enemies under their hooves and wheels."
+    },
+    "mad_moon" : {
+      "name" : "Mad Moon Tribe",
+      "id" : "mad_moon",
+      "color" : "#800080",
+      "restricted" : true,
+      "background" : "These greenskin are the sneakiest and craziest of the bunch."
+    },
+    "shatter_claw" : {
+      "name" : "Shattered Claw Tribe",
+      "id" : "shatter_claw",
+      "color" : "#800080",
+      "restricted" : true,
+      "background" : "Bonded with savage beasts, these greenskin are not to be trifled with."
+    }
+  }
 }
