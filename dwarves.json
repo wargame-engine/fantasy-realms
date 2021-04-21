@@ -1,0 +1,1266 @@
+{
+  "name" : "Dwarves",
+  "id" : "dwarves",
+  "color" : "#A55D35",
+  "author" : "Xekon#8266",
+  "version" : "0.1",
+  "description" : "A stout race of miners, engineers and warriors.",
+  "alliance" : "order",
+  "units" : {
+    "thane_foot" : {
+      "name" : "Thane on foot",
+      "description" : "The head of a dwarven clan and a master smith.",
+      "min" : 1,
+      "max" : 1,
+      "category" : "hero",
+      "models" : [
+        {
+          "name" : "Thane",
+          "movement" : 5,
+          "courage" : 7,
+          "shoot" : 4,
+          "fight" : 6,
+          "defense" : 7,
+          "reflexes" : 6,
+          "rules" : [
+            {
+              "id" : "wounds",
+              "x" : 3
+            },
+            "leader"
+          ],
+          "weapons" : [
+            {
+              "id" : "runic_great",
+              "count" : 4
+            }
+          ],
+          "min" : 1,
+          "max" : 1
+        }
+      ],
+      "keywords" : [
+        "Hero",
+        "Infantry"
+      ],
+      "subfactions" : [
+        "none"
+      ]
+    },
+    "runepriest_foot" : {
+      "name" : "Runepriest on foot",
+      "description" : "Uses runes to smite down their foes.",
+      "min" : 1,
+      "max" : 1,
+      "category" : "hero",
+      "models" : [
+        {
+          "name" : "Runepriest",
+          "movement" : 5,
+          "courage" : 6,
+          "shoot" : 4,
+          "fight" : 5,
+          "defense" : 7,
+          "reflexes" : 6,
+          "rules" : [
+            {
+              "id" : "wounds",
+              "x" : 3
+            },
+            {
+              "id" : "magic",
+              "x" : 1
+            },
+            "leader"
+          ],
+          "weapons" : [
+            {
+              "id" : "runic",
+              "count" : 4
+            }
+          ],
+          "min" : 1,
+          "max" : 1
+        }
+      ],
+      "keywords" : [
+        "Hero",
+        "Wizard",
+        "Infantry"
+      ],
+      "subfactions" : [
+        "none"
+      ]
+    },
+    "dwarf_warriors" : {
+      "name" : "Dwarven Warriors",
+      "description" : "A squad of dwarven warriors.",
+      "min" : 1,
+      "max" : 3,
+      "category" : "core",
+      "models" : [
+        {
+          "name" : "Longbeard",
+          "movement" : 5,
+          "courage" : 5,
+          "shoot" : 4,
+          "fight" : 6,
+          "defense" : 5,
+          "reflexes" : 5,
+          "weapons" : [
+            {
+              "id" : "dwarf_hand",
+              "count" : 2
+            },
+            "shield"
+          ],
+          "options" : [
+            {
+              "replaceWeapon" : [
+                {
+                  "id" : "dwarf_hand",
+                  "count" : 2
+                },
+                "shield"
+              ],
+              "withWeapon" : [
+                {
+                  "id" : "dwarf_great",
+                  "count" : 3
+                }
+              ]
+            }
+          ],
+          "min" : 1,
+          "max" : 1
+        },
+        {
+          "name" : "Warrior",
+          "movement" : 5,
+          "courage" : 5,
+          "shoot" : 4,
+          "fight" : 6,
+          "defense" : 5,
+          "reflexes" : 5,
+          "weapons" : [
+            "dwarf_hand",
+            "shield"
+          ],
+          "options" : [],
+          "min" : 4,
+          "max" : 19
+        }
+      ],
+      "keywords" : [
+        "Infantry"
+      ],
+      "subfactions" : [
+        "none"
+      ],
+      "options" : [
+        {
+          "replaceWeapon" : [
+            "dwarf_hand",
+            "shield"
+          ],
+          "withWeapon" : [
+            {
+              "id" : "dwarf_great",
+              "count" : 2
+            }
+          ],
+          "modelLimit" : "1/5"
+        },
+        {
+          "addRule" : [
+            "banner"
+          ],
+          "modelLimit" : 1
+        },
+        {
+          "addRule" : [
+            "musician"
+          ],
+          "modelLimit" : 1
+        }
+      ]
+    },
+    "dwarf_rangers" : {
+      "name" : "Dwarven Rangers",
+      "description" : "A squad of dwarven scouts.",
+      "min" : 1,
+      "max" : 3,
+      "category" : "elite",
+      "models" : [
+        {
+          "name" : "Longbeard",
+          "movement" : 5,
+          "courage" : 6,
+          "shoot" : 5,
+          "fight" : 5,
+          "defense" : 5,
+          "reflexes" : 6,
+          "weapons" : [
+            {
+              "id" : "crossbow",
+              "count" : 2
+            },
+            {
+              "id" : "throw_axe",
+              "count" : 2
+            },
+            {
+              "id" : "dwarf_dagger"
+            }
+          ],
+          "options" : [
+            {
+              "replaceWeapon" : [
+                {
+                  "id" : "crossbow",
+                  "count" : 2
+                }
+              ],
+              "withWeapon" : [
+                {
+                  "id" : "marks_crossbow",
+                  "count" : 2
+                }
+              ]
+            }
+          ],
+          "rules" : [
+            "scout"
+          ],
+          "min" : 1,
+          "max" : 1
+        },
+        {
+          "name" : "Ranger",
+          "movement" : 5,
+          "courage" : 6,
+          "shoot" : 5,
+          "fight" : 5,
+          "defense" : 5,
+          "reflexes" : 6,
+          "weapons" : [
+            "crossbow",
+            "throw_axe",
+            "dwarf_dagger"
+          ],
+          "min" : 2,
+          "max" : 11,
+          "rules" : [
+            "scout"
+          ]
+        }
+      ],
+      "keywords" : [
+        "Infantry"
+      ],
+      "subfactions" : [
+        "none"
+      ],
+      "options" : [
+        {
+          "addRule" : "shield"
+        },
+        {
+          "addRule" : [
+            "banner"
+          ],
+          "modelLimit" : 1
+        },
+        {
+          "addRule" : [
+            "musician"
+          ],
+          "modelLimit" : 1
+        }
+      ]
+    },
+    "dwarf_veterans" : {
+      "name" : "Dwarven Veterans",
+      "description" : "A squad of dwarven veterans.",
+      "min" : 1,
+      "max" : 3,
+      "category" : "core",
+      "models" : [
+        {
+          "name" : "Dwarf Longbeard",
+          "movement" : 5,
+          "courage" : 5,
+          "shoot" : 4,
+          "fight" : 6,
+          "defense" : 6,
+          "reflexes" : 5,
+          "weapons" : [
+            {
+              "id" : "runic",
+              "count" : 3
+            }
+          ],
+          "options" : [],
+          "min" : 1,
+          "max" : 1
+        },
+        {
+          "name" : "Dwarf Veteran",
+          "movement" : 5,
+          "courage" : 5,
+          "shoot" : 4,
+          "fight" : 6,
+          "defense" : 6,
+          "reflexes" : 5,
+          "weapons" : [
+            {
+              "id" : "runic",
+              "count" : 2
+            }
+          ],
+          "options" : [],
+          "min" : 4,
+          "max" : 19
+        }
+      ],
+      "keywords" : [
+        "Infantry"
+      ],
+      "subfactions" : [
+        "none"
+      ],
+      "options" : [
+        {
+          "addRule" : [
+            "banner"
+          ],
+          "modelLimit" : 1
+        },
+        {
+          "addRule" : [
+            "musician"
+          ],
+          "modelLimit" : 1
+        }
+      ]
+    },
+    "dwarf_arbalesters" : {
+      "name" : "Dwarven Arbalester",
+      "description" : "A squad of dwarven heavy crossbowmen.",
+      "min" : 1,
+      "max" : 3,
+      "category" : "core",
+      "models" : [
+        {
+          "name" : "Longbeard",
+          "movement" : 5,
+          "courage" : 5,
+          "shoot" : 5,
+          "fight" : 5,
+          "defense" : 5,
+          "reflexes" : 5,
+          "weapons" : [
+            {
+              "id" : "crossbow",
+              "count" : 2
+            },
+            {
+              "id" : "dwarf_dagger"
+            }
+          ],
+          "min" : 1,
+          "max" : 1
+        },
+        {
+          "name" : "Dwarf Arbalester",
+          "movement" : 5,
+          "courage" : 5,
+          "shoot" : 5,
+          "fight" : 5,
+          "defense" : 5,
+          "reflexes" : 5,
+          "weapons" : [
+            "crossbow",
+            "dwarf_dagger"
+          ],
+          "min" : 4,
+          "max" : 19
+        }
+      ],
+      "keywords" : [
+        "Infantry"
+      ],
+      "subfactions" : [
+        "none"
+      ],
+      "options" : [
+        {
+          "addWeapon" : [
+            "buckler"
+          ]
+        },
+        {
+          "addRule" : [
+            "banner"
+          ],
+          "modelLimit" : 1
+        },
+        {
+          "addRule" : [
+            "musician"
+          ],
+          "modelLimit" : 1
+        }
+      ]
+    },
+    "dwarf_deepguard" : {
+      "name" : "Dwarven Deepguard",
+      "description" : "A squad of veteran heavy riflemen.",
+      "min" : 1,
+      "max" : 3,
+      "category" : "elite",
+      "models" : [
+        {
+          "name" : "Longbeard",
+          "movement" : 5,
+          "courage" : 5,
+          "shoot" : 5,
+          "fight" : 6,
+          "defense" : 6,
+          "reflexes" : 5,
+          "weapons" : [
+            {
+              "id" : "rifle",
+              "count" : 2
+            },
+            "dwarf_dagger"
+          ],
+          "options" : [
+            {
+              "replaceWeapon" : [
+                {
+                  "id" : "rifle",
+                  "count" : 2
+                },
+                "dwarf_dagger"
+              ],
+              "withWeapon" : [
+                [
+                  {
+                    "id" : "volley_rifle"
+                  }
+                ]
+              ]
+            }
+          ],
+          "rules" : [],
+          "min" : 1,
+          "max" : 1
+        },
+        {
+          "name" : "Deepguard",
+          "movement" : 5,
+          "courage" : 5,
+          "shoot" : 5,
+          "fight" : 6,
+          "defense" : 6,
+          "reflexes" : 5,
+          "weapons" : [
+            "rifle",
+            "dwarf_dagger"
+          ],
+          "min" : 2,
+          "max" : 11,
+          "options" : []
+        }
+      ],
+      "keywords" : [
+        "Infantry"
+      ],
+      "subfactions" : [
+        "none"
+      ],
+      "options" : [
+        {
+          "replaceWeapon" : [
+            "rifle"
+          ],
+          "withWeapon" : [
+            {
+              "id" : "crank_rifle"
+            }
+          ],
+          "modelLimit" : "1/3"
+        },
+        {
+          "addRule" : [
+            "banner"
+          ],
+          "modelLimit" : 1
+        },
+        {
+          "addRule" : [
+            "musician"
+          ],
+          "modelLimit" : 1
+        }
+      ]
+    },
+    "cogsmith_foot" : {
+      "name" : "Cogsmith on foot",
+      "description" : "A master engineer, equipped with an array of tools and guns.",
+      "min" : 1,
+      "max" : 1,
+      "category" : "hero",
+      "models" : [
+        {
+          "name" : "Cogsmith",
+          "movement" : 5,
+          "courage" : 6,
+          "shoot" : 5,
+          "fight" : 6,
+          "defense" : 6,
+          "reflexes" : 6,
+          "rules" : [
+            {
+              "id" : "wounds",
+              "x" : 3
+            },
+            "leader",
+            {
+              "id" : "repair",
+              "x" : 3
+            }
+          ],
+          "weapons" : [
+            {
+              "id" : "handgun",
+              "count" : 2
+            },
+            {
+              "id" : "dwarf_dagger",
+              "count" : 4
+            },
+            {
+              "id" : "shotgun"
+            }
+          ],
+          "min" : 1,
+          "max" : 1
+        }
+      ],
+      "keywords" : [
+        "Hero",
+        "Infantry"
+      ],
+      "subfactions" : [
+        "none"
+      ]
+    },
+    "stalker_foot" : {
+      "name" : "Gloomstalker on foot",
+      "description" : "A master pathfinder with great tenacity.",
+      "min" : 1,
+      "max" : 1,
+      "category" : "hero",
+      "models" : [
+        {
+          "name" : "Gloomstalker",
+          "movement" : 5,
+          "courage" : 6,
+          "shoot" : 6,
+          "fight" : 6,
+          "defense" : 7,
+          "reflexes" : 6,
+          "weapons" : [
+            {
+              "id" : "marks_crossbow"
+            },
+            {
+              "id" : "dwarf_dagger",
+              "count" : 4
+            }
+          ],
+          "rules" : [
+            "ambush",
+            "leader",
+            {
+              "id" : "wounds",
+              "x" : 3
+            },
+            "healing"
+          ],
+          "min" : 1,
+          "max" : 1
+        }
+      ],
+      "keywords" : [
+        "Infantry"
+      ],
+      "subfactions" : [
+        "none"
+      ]
+    },
+    "dwarf_crew" : {
+      "name" : "Dwarven Crewmates",
+      "description" : "A squad of dwarven glory-seekers.",
+      "min" : 1,
+      "max" : 3,
+      "category" : "core",
+      "models" : [
+        {
+          "name" : "Longbeard",
+          "movement" : 5,
+          "courage" : 5,
+          "shoot" : 5,
+          "fight" : 6,
+          "defense" : 6,
+          "reflexes" : 5,
+          "weapons" : [
+            {
+              "id" : "dwarf_dagger",
+              "count" : 2
+            },
+            "volley_pistol"
+          ],
+          "options" : [
+            {
+              "replaceWeapon" : [
+                "volley_pistol"
+              ],
+              "withWeapon" : [
+                [
+                  "flare_pistol"
+                ]
+              ]
+            }
+          ],
+          "min" : 1,
+          "max" : 1
+        },
+        {
+          "name" : "Crewmate",
+          "movement" : 5,
+          "courage" : 5,
+          "shoot" : 5,
+          "fight" : 6,
+          "defense" : 6,
+          "reflexes" : 5,
+          "weapons" : [
+            "light_handgun",
+            "dwarf_dagger"
+          ],
+          "min" : 4,
+          "max" : 19
+        }
+      ],
+      "keywords" : [
+        "Infantry"
+      ],
+      "subfactions" : [
+        "none"
+      ],
+      "options" : [
+        {
+          "replaceWeapon" : [
+            "light_handgun",
+            "dwarf_dagger"
+          ],
+          "withWeapon" : [
+            {
+              "id" : "crank_rifle"
+            },
+            {
+              "id" : "hook_rifle"
+            },
+            {
+              "id" : "dwarf_pike"
+            }
+          ],
+          "modelLimit" : "1/5"
+        },
+        {
+          "addRule" : [
+            "banner"
+          ],
+          "modelLimit" : 1
+        },
+        {
+          "addRule" : [
+            "musician"
+          ],
+          "modelLimit" : 1
+        }
+      ]
+    },
+    "gearsmith" : {
+      "name" : "Gearsmith",
+      "description" : "",
+      "min" : 1,
+      "max" : 1,
+      "category" : "hero",
+      "models" : [
+        {
+          "name" : "Gearsmith",
+          "movement" : 5,
+          "courage" : 6,
+          "shoot" : 5,
+          "fight" : 6,
+          "defense" : 8,
+          "reflexes" : 6,
+          "rules" : [
+            {
+              "id" : "wounds",
+              "x" : 3
+            },
+            "leader",
+            {
+              "id" : "repair",
+              "x" : 3
+            },
+            "fly"
+          ],
+          "weapons" : [
+            {
+              "id" : "volley_pistol",
+              "count" : 2
+            },
+            {
+              "id" : "dwarf_dagger",
+              "count" : 4
+            }
+          ],
+          "min" : 1,
+          "max" : 1,
+          "options" : [
+            {
+              "replaceWeapon" : [
+                {
+                  "id" : "volley_pistol",
+                  "count" : 2
+                }
+              ],
+              "withWeapon" : [
+                [
+                  "volley_rifle"
+                ]
+              ]
+            },
+            {
+              "replaceWeapon" : [
+                {
+                  "id" : "dwarf_dagger",
+                  "count" : 4
+                }
+              ],
+              "withWeapon" : [
+                [
+                  {
+                    "id" : "dwarf_great",
+                    "count" : 4
+                  }
+                ]
+              ]
+            }
+          ]
+        }
+      ],
+      "keywords" : [
+        "Hero",
+        "Infantry"
+      ],
+      "subfactions" : [
+        "none"
+      ]
+    },
+    "dwarf_skyguard" : {
+      "name" : "Dwarven Skyguard",
+      "description" : "A squad of flying defenders.",
+      "min" : 1,
+      "max" : 3,
+      "category" : "elite",
+      "models" : [
+        {
+          "name" : "Longbeard",
+          "movement" : 5,
+          "courage" : 5,
+          "shoot" : 5,
+          "fight" : 6,
+          "defense" : 6,
+          "reflexes" : 5,
+          "weapons" : [
+            {
+              "id" : "handgun",
+              "count" : 2
+            },
+            "dwarf_pike",
+            "dwarf_dagger"
+          ],
+          "min" : 1,
+          "max" : 1,
+          "rules" : [
+            "fly"
+          ]
+        },
+        {
+          "name" : "Skyguard",
+          "movement" : 5,
+          "courage" : 5,
+          "shoot" : 5,
+          "fight" : 6,
+          "defense" : 6,
+          "reflexes" : 5,
+          "weapons" : [
+            {
+              "id" : "handgun",
+              "count" : 2
+            },
+            "dwarf_pike"
+          ],
+          "min" : 2,
+          "max" : 11,
+          "rules" : [
+            "fly"
+          ]
+        }
+      ],
+      "keywords" : [
+        "Infantry"
+      ],
+      "subfactions" : [
+        "none"
+      ],
+      "options" : [
+        {
+          "replaceWeapon" : [
+            {
+              "id" : "handgun",
+              "count" : 2
+            },
+            "dwarf_pike"
+          ],
+          "withWeapon" : [
+            [
+              {
+                "id" : "volley_rifle"
+              }
+            ],
+            [
+              {
+                "id" : "hook_rifle",
+                "count" : 2
+              },
+              "bayonet"
+            ],
+            [
+              {
+                "id" : "net_launcher",
+                "count" : 2
+              }
+            ]
+          ],
+          "modelLimit" : "1/3"
+        },
+        {
+          "addRule" : [
+            "banner"
+          ],
+          "modelLimit" : 1
+        },
+        {
+          "addRule" : [
+            "musician"
+          ],
+          "modelLimit" : 1
+        }
+      ]
+    }
+  },
+  "weapons" : {
+    "shield" : {
+      "name" : "Shield",
+      "attacks" : 0,
+      "short" : "Melee",
+      "rules" : [
+        {
+          "id" : "shield"
+        }
+      ]
+    },
+    "dwarf_hand" : {
+      "name" : "Dwarven Handweapon",
+      "attacks" : 1,
+      "ap" : 2,
+      "short" : "Melee"
+    },
+    "dwarf_great" : {
+      "name" : "Dwarven Greatweapon",
+      "attacks" : 1,
+      "ap" : 2,
+      "short" : "Melee",
+      "rules" : [
+        "rending"
+      ]
+    },
+    "throw_axe" : {
+      "name" : "Throwing Axe",
+      "attacks" : 1,
+      "ap" : 2,
+      "short" : 6,
+      "rules" : [
+        "assault"
+      ]
+    },
+    "crossbow" : {
+      "name" : "Crossbow",
+      "ap" : 2,
+      "attacks" : 1,
+      "short" : 9,
+      "medium" : 18
+    },
+    "handgun" : {
+      "name" : "Heavy Handgun",
+      "ap" : 4,
+      "attacks" : 1,
+      "short" : 6,
+      "medium" : 12
+    },
+    "dwarf_dagger" : {
+      "name" : "Dwarven Shortblade",
+      "attacks" : 1,
+      "ap" : 1,
+      "short" : "Melee"
+    },
+    "runic_great" : {
+      "name" : "Runic Greatweapon",
+      "attacks" : 1,
+      "ap" : 4,
+      "short" : "Melee",
+      "rules" : [
+        "rending"
+      ]
+    },
+    "runic" : {
+      "name" : "Runic Handweapon",
+      "attacks" : 1,
+      "ap" : 4,
+      "short" : "Melee"
+    },
+    "rifle" : {
+      "name" : "Dwarven Rifle",
+      "ap" : 4,
+      "attacks" : 1,
+      "short" : 9,
+      "medium" : 18
+    },
+    "crank_rifle" : {
+      "name" : "Dwarven Crank Rifle",
+      "ap" : 4,
+      "attacks" : 3,
+      "short" : 9,
+      "medium" : 18,
+      "rules" : [
+        "overheat"
+      ]
+    },
+    "great_crossbow" : {
+      "name" : "Great Crossbow",
+      "ap" : 3,
+      "attacks" : 1,
+      "short" : 12,
+      "medium" : 24,
+      "rules" : [
+        "crank",
+        "rending"
+      ]
+    },
+    "buckler" : {
+      "name" : "Buckler",
+      "attacks" : 0,
+      "short" : "Melee",
+      "rules" : [
+        {
+          "id" : "buckler"
+        }
+      ]
+    },
+    "shotgun" : {
+      "name" : "Dwarven Shotgun",
+      "ap" : 4,
+      "attacks" : 1,
+      "short" : 9,
+      "medium" : 18,
+      "rules" : [
+        {
+          "id" : "blast",
+          "x" : 2
+        }
+      ]
+    },
+    "marks_crossbow" : {
+      "name" : "Marksman's Crossbow",
+      "ap" : 2,
+      "attacks" : 1,
+      "short" : 12,
+      "medium" : 24
+    },
+    "volley_rifle" : {
+      "name" : "Dwarven Volley Gun",
+      "ap" : 4,
+      "attacks" : 6,
+      "short" : 6,
+      "medium" : 12,
+      "rules" : [
+        "overheat"
+      ]
+    },
+    "volley_pistol" : {
+      "name" : "Volley Pistol",
+      "ap" : 1,
+      "attacks" : 3,
+      "short" : 6,
+      "medium" : 12
+    },
+    "light_handgun" : {
+      "name" : "Light Handgun",
+      "ap" : 1,
+      "attacks" : 2,
+      "short" : 6,
+      "medium" : 12
+    },
+    "flare_pistol" : {
+      "name" : "Flare Pistol",
+      "ap" : 2,
+      "attacks" : 2,
+      "short" : 6,
+      "medium" : 12
+    },
+    "dwarf_pike" : {
+      "name" : "Dwarven Warpike",
+      "attacks" : 1,
+      "ap" : 4,
+      "short" : "Melee",
+      "rules" : [
+        {
+          "id" : "reach",
+          "x" : 2
+        }
+      ]
+    },
+    "hook_rifle" : {
+      "name" : "Hook-Rifle",
+      "ap" : 6,
+      "attacks" : 1,
+      "short" : 12,
+      "medium" : 24
+    },
+    "bayonet" : {
+      "name" : "Bayonet",
+      "attacks" : 1,
+      "short" : "Melee"
+    },
+    "net_launcher" : {
+      "name" : "Net Launcher",
+      "attacks" : 1,
+      "ap" : 4,
+      "rules" : [
+        "net_0"
+      ],
+      "short" : 9,
+      "medium" : 18
+    }
+  },
+  "rules" : {
+    "banner" : {
+      "name" : "Banner",
+      "description" : "This unit may re-roll a single failed Courage test when removing Shock.",
+      "points" : 5
+    },
+    "musician" : {
+      "name" : "Musician",
+      "description" : "This unit may re-roll a single failed Initiative test when sprinting.",
+      "points" : 5
+    },
+    "buckler" : {
+      "name" : "Buckler",
+      "description" : "This model has +1 Save against melee attacks.",
+      "points" : 1
+    },
+    "healing" : {
+      "name" : "Healing Potion",
+      "description" : "Once per game when you activate this unit, you may heal D3 wounds that have been allocated to this unit.",
+      "points" : 5
+    },
+    "net_0" : {
+      "name" : "Barbed Net",
+      "description" : "Units hit by this weapon half their movement until the end of the turn.",
+      "points" : 3
+    }
+  },
+  "powers" : {},
+  "strategies" : [],
+  "relics" : [
+    {
+      "name" : "Bloody Banner",
+      "description" : "Upgrade one Orc Warboss model with Frenzy Banner.",
+      "flavor" : "A crimson banner, dyed in the blood of the Warboss's greatest kills, inciting an endless rage in their followers.",
+      "points" : 10,
+      "rule" : "frenzy_banner"
+    }
+  ],
+  "models" : {
+    "chariot" : {
+      "name" : "Boar Chariot",
+      "movement" : 11,
+      "courage" : 0,
+      "shoot" : 0,
+      "fight" : 0,
+      "defense" : 10,
+      "reflexes" : 0,
+      "weapons" : [
+        {
+          "id" : "tusks",
+          "count" : 2
+        }
+      ],
+      "rules" : [
+        "exposed",
+        {
+          "id" : "impact",
+          "x" : 3
+        },
+        "damage_table_vehicle",
+        {
+          "id" : "crew",
+          "x" : 2
+        }
+      ],
+      "min" : 0,
+      "max" : 1
+    },
+    "drake" : {
+      "name" : "Fire Drake",
+      "movement" : 10,
+      "courage" : 5,
+      "shoot" : 6,
+      "fight" : 6,
+      "defense" : 12,
+      "reflexes" : 5,
+      "weapons" : [
+        "flames",
+        {
+          "id" : "claws",
+          "count" : 2
+        }
+      ],
+      "rules" : [
+        "fear",
+        "fly",
+        "damage_table_monster",
+        {
+          "id" : "impact",
+          "x" : 3
+        }
+      ],
+      "min" : 0,
+      "max" : 1
+    },
+    "spider_mount" : {
+      "name" : "Cave Spider",
+      "movement" : 9,
+      "courage" : 3,
+      "shoot" : 3,
+      "fight" : 4,
+      "defense" : 4,
+      "reflexes" : 3,
+      "weapons" : [
+        {
+          "id" : "spider_bite",
+          "count" : 2
+        }
+      ],
+      "min" : 0,
+      "max" : 1,
+      "rules" : [
+        "strider",
+        "outflank",
+        {
+          "id" : "mount",
+          "x" : 1
+        }
+      ]
+    },
+    "beast_mount" : {
+      "name" : "Cave Beast",
+      "movement" : 6,
+      "courage" : 4,
+      "shoot" : 3,
+      "fight" : 5,
+      "defense" : 5,
+      "reflexes" : 4,
+      "weapons" : [
+        {
+          "id" : "bite",
+          "count" : 3
+        }
+      ],
+      "min" : 0,
+      "max" : 1,
+      "rules" : [
+        "crazed",
+        {
+          "id" : "impact",
+          "x" : 1
+        },
+        "agile",
+        "skirmishers",
+        {
+          "id" : "mount",
+          "x" : 1
+        }
+      ]
+    },
+    "black_iron_orc" : {
+      "name" : "Black-Iron Orc Warrior",
+      "movement" : 6,
+      "courage" : 5,
+      "shoot" : 5,
+      "fight" : 5,
+      "defense" : 6,
+      "reflexes" : 4,
+      "weapons" : [
+        {
+          "id" : "hand_weapon",
+          "count" : 2
+        }
+      ],
+      "min" : 0,
+      "max" : 2,
+      "rules" : [
+        "heavy_armor"
+      ],
+      "options" : [
+        {
+          "replaceWeapon" : [
+            {
+              "id" : "hand_weapon",
+              "count" : 2
+            }
+          ],
+          "withWeapon" : [
+            "great_weapon"
+          ]
+        }
+      ]
+    }
+  },
+  "subfactions" : {
+    "primal_focus" : {
+      "name" : "Primal Focus",
+      "id" : "primal_focus",
+      "color" : "#800080",
+      "restricted" : true,
+      "background" : "A force that uses a lot of wild beasts, savage orc warriors and spiritual beings."
+    }
+  }
+}
