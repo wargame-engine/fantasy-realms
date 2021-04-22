@@ -947,7 +947,10 @@
             "dwarf_dagger"
           ],
           "min" : 3,
-          "max" : 3
+          "max" : 3,
+          "rules" : [
+            "fearless"
+          ]
         }
       ],
       "keywords" : [
@@ -998,7 +1001,10 @@
             "dwarf_dagger"
           ],
           "min" : 3,
-          "max" : 3
+          "max" : 3,
+          "rules" : [
+            "fearless"
+          ]
         }
       ],
       "keywords" : [
