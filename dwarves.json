@@ -27,7 +27,8 @@
               "id" : "wounds",
               "x" : 3
             },
-            "leader"
+            "leader",
+            "fearless"
           ],
           "weapons" : [
             {
@@ -71,7 +72,8 @@
               "id" : "magic",
               "x" : 1
             },
-            "leader"
+            "leader",
+            "fearless"
           ],
           "weapons" : [
             {
@@ -183,6 +185,9 @@
           ],
           "modelLimit" : 1
         }
+      ],
+      "rules" : [
+        "fearless"
       ]
     },
     "dwarf_rangers" : {
@@ -277,6 +282,9 @@
           ],
           "modelLimit" : 1
         }
+      ],
+      "rules" : [
+        "fearless"
       ]
     },
     "dwarf_veterans" : {
@@ -342,6 +350,9 @@
           ],
           "modelLimit" : 1
         }
+      ],
+      "rules" : [
+        "fearless"
       ]
     },
     "dwarf_arbalesters" : {
@@ -411,6 +422,9 @@
           ],
           "modelLimit" : 1
         }
+      ],
+      "rules" : [
+        "fearless"
       ]
     },
     "dwarf_deepguard" : {
@@ -504,6 +518,9 @@
           ],
           "modelLimit" : 1
         }
+      ],
+      "rules" : [
+        "fearless"
       ]
     },
     "cogsmith_foot" : {
@@ -555,6 +572,9 @@
       ],
       "subfactions" : [
         "none"
+      ],
+      "rules" : [
+        "fearless"
       ]
     },
     "stalker_foot" : {
@@ -599,10 +619,13 @@
       ],
       "subfactions" : [
         "none"
+      ],
+      "rules" : [
+        "fearless"
       ]
     },
     "dwarf_crew" : {
-      "name" : "Dwarven Crewmates",
+      "name" : "Dwarven Pioneers",
       "description" : "A squad of dwarven glory-seekers.",
       "min" : 1,
       "max" : 3,
@@ -639,7 +662,7 @@
           "max" : 1
         },
         {
-          "name" : "Crewmate",
+          "name" : "Pioneer",
           "movement" : 5,
           "courage" : 5,
           "shoot" : 5,
@@ -691,6 +714,9 @@
           ],
           "modelLimit" : 1
         }
+      ],
+      "rules" : [
+        "fearless"
       ]
     },
     "gearsmith" : {
@@ -771,6 +797,9 @@
       ],
       "subfactions" : [
         "none"
+      ],
+      "rules" : [
+        "fearless"
       ]
     },
     "dwarf_skyguard" : {
@@ -873,6 +902,111 @@
           ],
           "modelLimit" : 1
         }
+      ],
+      "rules" : [
+        "fearless"
+      ]
+    },
+    "cannon" : {
+      "name" : "Forgefire Cannon",
+      "description" : "",
+      "min" : 1,
+      "max" : 3,
+      "category" : "rare",
+      "models" : [
+        {
+          "name" : "Forgefire Cannon",
+          "movement" : 5,
+          "shoot" : 5,
+          "defense" : 8,
+          "rules" : [
+            {
+              "id" : "team",
+              "x" : 3
+            },
+            "damage_table_warmachine"
+          ],
+          "weapons" : [
+            "cannon"
+          ],
+          "min" : 1,
+          "max" : 1,
+          "reflexes" : 0,
+          "fight" : 0,
+          "courage" : 0
+        },
+        {
+          "name" : "Dwarven Crew",
+          "movement" : 5,
+          "courage" : 5,
+          "shoot" : 5,
+          "fight" : 5,
+          "defense" : 6,
+          "reflexes" : 5,
+          "weapons" : [
+            "dwarf_dagger"
+          ],
+          "min" : 3,
+          "max" : 3
+        }
+      ],
+      "keywords" : [
+        "Warmachine",
+        "Artillery"
+      ],
+      "subfactions" : [
+        "none"
+      ]
+    },
+    "mortar" : {
+      "name" : "Hellblaster Mortar",
+      "description" : "",
+      "min" : 1,
+      "max" : 3,
+      "category" : "rare",
+      "models" : [
+        {
+          "name" : "Hellblaster Mortar",
+          "movement" : 5,
+          "shoot" : 4,
+          "defense" : 8,
+          "rules" : [
+            {
+              "id" : "team",
+              "x" : 3
+            },
+            "damage_table_warmachine"
+          ],
+          "weapons" : [
+            "mortar"
+          ],
+          "min" : 1,
+          "max" : 1,
+          "reflexes" : 0,
+          "fight" : 0,
+          "courage" : 0
+        },
+        {
+          "name" : "Dwarven Crew",
+          "movement" : 5,
+          "courage" : 5,
+          "shoot" : 5,
+          "fight" : 5,
+          "defense" : 6,
+          "reflexes" : 5,
+          "weapons" : [
+            "dwarf_dagger"
+          ],
+          "min" : 3,
+          "max" : 3
+        }
+      ],
+      "keywords" : [
+        "Warmachine",
+        "Artillery"
+      ],
+      "subfactions" : [
+        "none"
       ]
     }
   },
@@ -954,7 +1088,7 @@
       "medium" : 18
     },
     "crank_rifle" : {
-      "name" : "Dwarven Crank Rifle",
+      "name" : "Crank Rifle",
       "ap" : 4,
       "attacks" : 3,
       "short" : 9,
@@ -1005,7 +1139,7 @@
       "medium" : 24
     },
     "volley_rifle" : {
-      "name" : "Dwarven Volley Gun",
+      "name" : "Volley Gun",
       "ap" : 4,
       "attacks" : 6,
       "short" : 6,
@@ -1068,6 +1202,46 @@
       ],
       "short" : 9,
       "medium" : 18
+    },
+    "cannon" : {
+      "name" : "Cannon",
+      "profiles" : [
+        {
+          "name" : "Mortar",
+          "ap" : 7,
+          "attacks" : 1,
+          "medium" : 48,
+          "short" : 24,
+          "rules" : [
+            {
+              "id" : "blast",
+              "x" : 3
+            },
+            "scatter"
+          ]
+        },
+        {
+          "name" : "Grapeshot",
+          "attacks" : 3,
+          "ap" : 3,
+          "short" : 6,
+          "medium" : 12
+        }
+      ]
+    },
+    "mortar" : {
+      "rules" : [
+        {
+          "id" : "blast",
+          "x" : 3
+        },
+        "scatter"
+      ],
+      "short" : 24,
+      "medium" : 48,
+      "attacks" : 1,
+      "ap" : 7,
+      "name" : "Mortar"
     }
   },
   "rules" : {
@@ -1095,13 +1269,54 @@
       "name" : "Barbed Net",
       "description" : "Units hit by this weapon half their movement until the end of the turn.",
       "points" : 3
+    },
+    "repair" : {
+      "name" : "Repair",
+      "inputs" : [
+        "x"
+      ],
+      "description" : "At any point during this unit's activation, if within 3\" of a Vehicle or Warmachine, roll one die. On an X or less the vehicle may remove one critical damage.",
+      "points" : [
+        "rule.x",
+        {
+          "multiply" : 2
+        }
+      ]
     }
   },
   "powers" : {},
-  "strategies" : [],
+  "strategies" : [
+    {
+      "phase" : "activation",
+      "subfactions" : [
+        "none"
+      ],
+      "name" : "Suppressive Fire",
+      "flavor" : "With high rate of fire and experimental ammo, dwarven machineguns can be used to pin down enemy troops with ease.",
+      "description" : "Use when a Dwarf Infantry unit that contains a Crank Rifle or Volley Gun fires. It is treated as having Shock(+2) for that action.",
+      "cost" : 1
+    },
+    {
+      "phase" : "activation",
+      "subfactions" : [
+        "none"
+      ],
+      "name" : "Knack",
+      "flavor" : "All dwarves have a natural expertise in fixing (and breaking) machinery and weapons.",
+      "description" : "Use when a Warmachine unit is activated. That unit may repair one critical damage caused by a penetrating hit.",
+      "cost" : 1
+    },
+    {
+      "name" : "Stubborn",
+      "phase" : "activation",
+      "description" : "Use before activating a unit. That unit may immediately remove up to 2 Shock.",
+      "flavor" : "Standing steadfast like their mountain halls.",
+      "cost" : 1
+    }
+  ],
   "relics" : [
     {
-      "name" : "Bloody Banner",
+      "name" : "",
       "description" : "Upgrade one Orc Warboss model with Frenzy Banner.",
       "flavor" : "A crimson banner, dyed in the blood of the Warboss's greatest kills, inciting an endless rage in their followers.",
       "points" : 10,
