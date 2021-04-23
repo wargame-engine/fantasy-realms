@@ -1347,7 +1347,91 @@
             }
           ],
           "min" : 1,
-          "max" : 3
+          "max" : 1
+        }
+      ],
+      "keywords" : [
+        "Monster",
+        "Infantry"
+      ],
+      "subfactions" : [
+        "none",
+        "magic_focus",
+        "melee_focus"
+      ]
+    },
+    "forge_golem" : {
+      "name" : "Forgefire Golem",
+      "description" : "",
+      "min" : 1,
+      "max" : 3,
+      "category" : "rare",
+      "models" : [
+        {
+          "name" : "Forgefire Golem",
+          "movement" : 4,
+          "fight" : 6,
+          "shoot" : 5,
+          "defense" : 10,
+          "courage" : 6,
+          "reflexes" : 4,
+          "weapons" : [
+            {
+              "id" : "runic_great",
+              "count" : 2
+            },
+            {
+              "id" : "cannon"
+            }
+          ],
+          "rules" : [
+            "damage_table_monster",
+            "fearless"
+          ],
+          "min" : 1,
+          "max" : 1
+        }
+      ],
+      "keywords" : [
+        "Monster",
+        "Infantry"
+      ],
+      "subfactions" : [
+        "none",
+        "magic_focus",
+        "melee_focus"
+      ]
+    },
+    "rune_golem" : {
+      "name" : "Runic Golems",
+      "description" : "",
+      "min" : 1,
+      "max" : 3,
+      "category" : "elite",
+      "models" : [
+        {
+          "name" : "Runic Golem",
+          "movement" : 4,
+          "fight" : 6,
+          "shoot" : 4,
+          "defense" : 8,
+          "courage" : 6,
+          "reflexes" : 4,
+          "weapons" : [
+            {
+              "id" : "runic_great",
+              "count" : 2
+            }
+          ],
+          "rules" : [
+            "fearless",
+            {
+              "id" : "wounds",
+              "x" : 4
+            }
+          ],
+          "min" : 3,
+          "max" : 12
         }
       ],
       "keywords" : [
