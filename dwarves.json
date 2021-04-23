@@ -8,7 +8,7 @@
   "alliance" : "order",
   "units" : {
     "thane" : {
-      "name" : "Thane on foot",
+      "name" : "Thane",
       "description" : "The head of a dwarven clan and a master smith.",
       "min" : 1,
       "max" : 1,
@@ -51,7 +51,7 @@
       ]
     },
     "runepriest" : {
-      "name" : "Runepriest on foot",
+      "name" : "Runepriest",
       "description" : "Uses runes to smite down their foes.",
       "min" : 1,
       "max" : 1,
@@ -115,7 +115,7 @@
       ]
     },
     "cogsmith" : {
-      "name" : "Cogsmith on foot",
+      "name" : "Cogsmith",
       "description" : "A master engineer, equipped with an array of tools and guns.",
       "min" : 1,
       "max" : 1,
@@ -256,7 +256,7 @@
       ]
     },
     "stalker" : {
-      "name" : "Gloomstalker on foot",
+      "name" : "Gloomstalker",
       "description" : "A master pathfinder with great tenacity.",
       "min" : 1,
       "max" : 1,
@@ -365,7 +365,8 @@
                   "id" : "runic_great",
                   "count" : 3
                 }
-              ]
+              ],
+              "modelLimit" : 2
             },
             {
               "addWeapon" : [
@@ -571,7 +572,7 @@
       "category" : "core",
       "models" : [
         {
-          "name" : "Dwarf Longbeard",
+          "name" : "Longbeard",
           "movement" : 5,
           "courage" : 5,
           "shoot" : 4,
@@ -580,7 +581,7 @@
           "reflexes" : 5,
           "weapons" : [
             {
-              "id" : "runic",
+              "id" : "runic_great",
               "count" : 3
             }
           ],
@@ -589,7 +590,7 @@
           "max" : 1
         },
         {
-          "name" : "Dwarf Veteran",
+          "name" : "Veteran",
           "movement" : 5,
           "courage" : 5,
           "shoot" : 4,
@@ -598,7 +599,7 @@
           "reflexes" : 5,
           "weapons" : [
             {
-              "id" : "runic",
+              "id" : "runic_great",
               "count" : 2
             }
           ],
@@ -625,7 +626,9 @@
         }
       ],
       "rules" : [
-        "fearless"
+        {
+          "id" : "fearless"
+        }
       ],
       "subfactions" : [
         "none",
@@ -1343,7 +1346,8 @@
                   "id" : "runic_great",
                   "count" : 3
                 }
-              ]
+              ],
+              "modelLimit" : 2
             }
           ],
           "min" : 1,
@@ -1385,7 +1389,7 @@
             }
           ],
           "rules" : [
-            "damage_table_monster",
+            "damage_table_warmachine",
             "fearless"
           ],
           "min" : 1,
@@ -1393,7 +1397,7 @@
         }
       ],
       "keywords" : [
-        "Monster",
+        "Warmachine",
         "Infantry"
       ],
       "subfactions" : [
@@ -1442,6 +1446,127 @@
         "none",
         "magic_focus",
         "melee_focus"
+      ]
+    },
+    "dwarf_berserker" : {
+      "name" : "Dwarven Berserkers",
+      "description" : "A squad of dwarven warriors that rush into the fray.",
+      "min" : 1,
+      "max" : 3,
+      "category" : "elite",
+      "models" : [
+        {
+          "name" : "Longbeard",
+          "movement" : 5,
+          "courage" : 5,
+          "shoot" : 4,
+          "fight" : 6,
+          "defense" : 6,
+          "reflexes" : 5,
+          "weapons" : [
+            {
+              "id" : "runic",
+              "count" : 3
+            }
+          ],
+          "options" : [],
+          "min" : 1,
+          "max" : 1
+        },
+        {
+          "name" : "Berserker",
+          "movement" : 5,
+          "courage" : 5,
+          "shoot" : 4,
+          "fight" : 6,
+          "defense" : 6,
+          "reflexes" : 5,
+          "weapons" : [
+            {
+              "id" : "runic",
+              "count" : 2
+            }
+          ],
+          "options" : [],
+          "min" : 4,
+          "max" : 19
+        }
+      ],
+      "keywords" : [
+        "Infantry"
+      ],
+      "options" : [
+        {
+          "addRule" : [
+            "banner"
+          ],
+          "modelLimit" : 1
+        },
+        {
+          "addRule" : [
+            "musician"
+          ],
+          "modelLimit" : 1
+        }
+      ],
+      "rules" : [
+        "fearless",
+        {
+          "id" : "furious"
+        },
+        {
+          "id" : "fanatical"
+        }
+      ],
+      "subfactions" : [
+        "none",
+        "melee_focus",
+        "magic_focus"
+      ]
+    },
+    "berserker_champion" : {
+      "name" : "Gloryseeker",
+      "description" : "First into the fray, this champion is imbued with an endless rage.",
+      "min" : 1,
+      "max" : 1,
+      "category" : "hero",
+      "models" : [
+        {
+          "name" : "Gloryseeker",
+          "movement" : 5,
+          "courage" : 5,
+          "shoot" : 4,
+          "fight" : 6,
+          "defense" : 7,
+          "reflexes" : 5,
+          "rules" : [
+            {
+              "id" : "wounds",
+              "x" : 3
+            },
+            "leader",
+            "fearless",
+            "fanatical",
+            "furious"
+          ],
+          "weapons" : [
+            {
+              "id" : "runic_great",
+              "count" : 6
+            }
+          ],
+          "min" : 1,
+          "max" : 1
+        }
+      ],
+      "keywords" : [
+        "Hero",
+        "Infantry"
+      ],
+      "subfactions" : [
+        "none",
+        "melee_focus",
+        "magic_focus"
       ]
     }
   },
