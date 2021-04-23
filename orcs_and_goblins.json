@@ -25,27 +25,27 @@
           "weapons" : [
             "shield",
             {
-              "id" : "boss_smasher",
-              "count" : 2
+              "id" : "smasher",
+              "count" : 4
             }
           ],
           "options" : [
             {
               "replaceWeapon" : [
                 {
-                  "id" : "boss_smasher",
-                  "count" : 2
+                  "id" : "smasher",
+                  "count" : 4
                 },
                 "shield"
               ],
               "withWeapon" : [
                 {
-                  "id" : "boss_smasher_pair",
-                  "count" : 2
+                  "id" : "big_smasher",
+                  "count" : 4
                 },
                 {
-                  "id" : "boss_big_smasher",
-                  "count" : 2
+                  "id" : "smasher",
+                  "count" : 5
                 }
               ]
             }
@@ -70,7 +70,8 @@
         "none",
         "trickery_focus",
         "speed_focus",
-        "primal_focus"
+        "primal_focus",
+        "armor_focus"
       ]
     },
     "moon_goblin_shaman" : {
@@ -142,7 +143,11 @@
         "Cavalry"
       ],
       "subfactions" : [
-        "trickery_focus"
+        "none",
+        "trickery_focus",
+        "speed_focus",
+        "primal_focus",
+        "armor_focus"
       ]
     },
     "goblin_warboss" : {
@@ -244,14 +249,20 @@
           "reflexes" : 5,
           "weapons" : [
             "shield",
-            "boss_sword"
+            {
+              "id" : "rusty_sword",
+              "count" : 2
+            }
           ],
           "min" : 1,
           "max" : 1,
           "options" : [
             {
               "replaceWeapon" : [
-                "boss_sword",
+                {
+                  "id" : "rusty_sword",
+                  "count" : 2
+                },
                 "shield"
               ],
               "withWeapon" : [
@@ -364,21 +375,34 @@
           "defense" : 5,
           "reflexes" : 5,
           "weapons" : [
-            "boss_cleaver_pair"
+            {
+              "id" : "cleaver",
+              "count" : 2
+            },
+            "shield"
           ],
           "options" : [
             {
               "replaceWeapon" : [
-                "boss_cleaver_pair"
+                {
+                  "id" : "cleaver",
+                  "count" : 2
+                },
+                "shield"
               ],
               "withWeapon" : [
                 [
-                  "boss_cleaver",
-                  "shield"
+                  {
+                    "id" : "cleaver",
+                    "count" : 3
+                  }
                 ],
                 [
                   "big_smasher",
-                  "boss_cleaver"
+                  {
+                    "id" : "cleaver",
+                    "count" : 2
+                  }
                 ]
               ]
             }
@@ -396,33 +420,31 @@
           "defense" : 5,
           "reflexes" : 5,
           "weapons" : [
-            "cleaver_pair"
+            {
+              "id" : "cleaver"
+            },
+            {
+              "id" : "shield"
+            }
           ],
           "options" : [
             {
               "replaceWeapon" : [
-                "cleaver_pair"
+                {
+                  "id" : "cleaver"
+                },
+                {
+                  "id" : "shield"
+                }
               ],
               "withWeapon" : [
-                [
-                  "cleaver",
-                  "shield"
-                ]
+                {
+                  "id" : "cleaver",
+                  "count" : 2
+                }
               ]
-            },
-            {
-              "replaceWeapon" : [
-                "cleaver_pair"
-              ],
-              "withWeapon" : [
-                [
-                  "big_smasher"
-                ]
-              ],
-              "modelLimit" : 2
             }
           ],
-          "rules" : [],
           "min" : 4,
           "max" : 19
         }
@@ -432,6 +454,20 @@
         "Infantry"
       ],
       "options" : [
+        {
+          "replaceWeapon" : [
+            {
+              "id" : "cleaver",
+              "count" : 2
+            }
+          ],
+          "withWeapon" : [
+            [
+              "big_smasher"
+            ]
+          ],
+          "modelLimit" : "1/5"
+        },
         {
           "addRule" : [
             "banner"
@@ -520,9 +556,6 @@
         "Goblin",
         "Cavalry"
       ],
-      "subfactions" : [
-        "primal_focus"
-      ],
       "options" : [
         {
           "addRule" : [
@@ -536,9 +569,16 @@
           ],
           "modelLimit" : 1
         }
+      ],
+      "subfactions" : [
+        "none",
+        "trickery_focus",
+        "speed_focus",
+        "primal_focus",
+        "armor_focus"
       ]
     },
-    "moon_goblin_knights" : {
+    "goblin_knights" : {
       "name" : "Goblin Knights",
       "description" : "",
       "min" : 1,
@@ -654,10 +694,6 @@
         "Goblin",
         "Cavalry"
       ],
-      "subfactions" : [
-        "trickery_focus",
-        "speed_focus"
-      ],
       "options" : [
         {
           "addRule" : [
@@ -671,6 +707,13 @@
           ],
           "modelLimit" : 1
         }
+      ],
+      "subfactions" : [
+        "none",
+        "trickery_focus",
+        "speed_focus",
+        "primal_focus",
+        "armor_focus"
       ]
     },
     "primal_warriors" : {
@@ -689,7 +732,10 @@
           "defense" : 5,
           "reflexes" : 5,
           "weapons" : [
-            "boss_cleaver_pair"
+            {
+              "id" : "cleaver",
+              "count" : 3
+            }
           ],
           "options" : [
             {
@@ -721,7 +767,10 @@
           "defense" : 5,
           "reflexes" : 5,
           "weapons" : [
-            "cleaver_pair"
+            {
+              "id" : "cleaver",
+              "count" : 2
+            }
           ],
           "options" : [
             {
@@ -747,9 +796,6 @@
         "Orc",
         "Infantry"
       ],
-      "subfactions" : [
-        "primal_faction"
-      ],
       "options" : [
         {
           "addRule" : [
@@ -763,6 +809,13 @@
           ],
           "modelLimit" : 1
         }
+      ],
+      "subfactions" : [
+        "none",
+        "trickery_focus",
+        "speed_focus",
+        "primal_focus",
+        "armor_focus"
       ]
     },
     "primal_goblin_warboss" : {
@@ -838,7 +891,11 @@
         "Cavalry"
       ],
       "subfactions" : [
-        "primal_focus"
+        "none",
+        "trickery_focus",
+        "speed_focus",
+        "primal_focus",
+        "armor_focus"
       ]
     },
     "speed_goblin_warboss" : {
@@ -911,8 +968,11 @@
         "Infantry"
       ],
       "subfactions" : [
+        "none",
         "trickery_focus",
-        "speed_focus"
+        "speed_focus",
+        "primal_focus",
+        "armor_focus"
       ]
     },
     "goblin_shaman" : {
@@ -994,20 +1054,29 @@
           "defense" : 7,
           "reflexes" : 4,
           "weapons" : [
-            "big_smasher",
-            "boss_gauntlet"
+            {
+              "id" : "big_smasher",
+              "count" : 2
+            }
           ],
           "options" : [
             {
               "replaceWeapon" : [
-                "big_smasher",
-                "boss_gauntlet"
-              ],
-              "withWeapon" : [
                 {
-                  "id" : "boss_big_smasher",
+                  "id" : "big_smasher",
                   "count" : 2
                 }
+              ],
+              "withWeapon" : [
+                [
+                  {
+                    "id" : "gauntlet"
+                  },
+                  {
+                    "id" : "smasher",
+                    "count" : 2
+                  }
+                ]
               ]
             }
           ],
@@ -1029,7 +1098,10 @@
           "defense" : 7,
           "reflexes" : 4,
           "weapons" : [
-            "smasher_pair"
+            {
+              "id" : "smasher",
+              "count" : 2
+            }
           ],
           "rules" : [
             {
@@ -1039,25 +1111,27 @@
           ],
           "options" : [
             {
+              "modelLimit" : "2/3",
               "replaceWeapon" : [
-                "smasher_pair"
+                {
+                  "id" : "smasher",
+                  "count" : 2
+                }
               ],
               "withWeapon" : [
                 [
-                  "slasher"
+                  {
+                    "id" : "slasher",
+                    "count" : 2
+                  }
+                ],
+                [
+                  {
+                    "id" : "big_smasher",
+                    "count" : 2
+                  }
                 ]
               ]
-            },
-            {
-              "replaceWeapon" : [
-                "smasher_pair"
-              ],
-              "withWeapon" : [
-                [
-                  "big_smasher"
-                ]
-              ],
-              "modelLimit" : 2
             }
           ],
           "min" : 2,
@@ -1067,9 +1141,6 @@
       "keywords" : [
         "Orc",
         "Infantry"
-      ],
-      "subfactions" : [
-        "none"
       ],
       "options" : [
         {
@@ -1084,6 +1155,13 @@
           ],
           "modelLimit" : 1
         }
+      ],
+      "subfactions" : [
+        "none",
+        "trickery_focus",
+        "speed_focus",
+        "primal_focus",
+        "armor_focus"
       ]
     },
     "armor_orc_warboss" : {
@@ -1103,8 +1181,8 @@
           "reflexes" : 6,
           "weapons" : [
             {
-              "id" : "boss_big_smasher",
-              "count" : 2
+              "id" : "big_smasher",
+              "count" : 4
             },
             "shield"
           ],
@@ -1112,15 +1190,15 @@
             {
               "replaceWeapon" : [
                 {
-                  "id" : "boss_big_smasher",
-                  "count" : 2
+                  "id" : "big_smasher",
+                  "count" : 4
                 },
                 "shield"
               ],
               "withWeapon" : [
                 {
-                  "id" : "boss_big_smasher_pair",
-                  "count" : 2
+                  "id" : "big_smasher",
+                  "count" : 5
                 }
               ]
             }
@@ -1143,6 +1221,10 @@
         "Infantry"
       ],
       "subfactions" : [
+        "none",
+        "trickery_focus",
+        "speed_focus",
+        "primal_focus",
         "armor_focus"
       ]
     },
@@ -1162,18 +1244,27 @@
           "defense" : 5,
           "reflexes" : 4,
           "weapons" : [
-            "boss_cleaver",
-            "shield"
+            "shield",
+            {
+              "id" : "cleaver",
+              "count" : 3
+            }
           ],
           "options" : [
             {
               "replaceWeapon" : [
-                "boss_cleaver",
+                {
+                  "id" : "cleaver",
+                  "count" : 3
+                },
                 "shield"
               ],
               "withWeapon" : [
                 [
-                  "boss_smasher"
+                  {
+                    "id" : "big_smasher",
+                    "count" : 2
+                  }
                 ]
               ]
             }
@@ -1197,8 +1288,11 @@
           "defense" : 5,
           "reflexes" : 4,
           "weapons" : [
-            "cleaver_pair",
-            "shield"
+            "shield",
+            {
+              "id" : "cleaver",
+              "count" : 2
+            }
           ],
           "rules" : [
             {
@@ -1207,20 +1301,7 @@
             },
             "heavy_armor"
           ],
-          "options" : [
-            {
-              "replaceWeapon" : [
-                "cleaver_pair",
-                "shield"
-              ],
-              "withWeapon" : [
-                [
-                  "big_smasher"
-                ]
-              ],
-              "modelLimit" : 2
-            }
-          ],
+          "options" : [],
           "min" : 2,
           "max" : 11
         }
@@ -1229,10 +1310,25 @@
         "Orc",
         "Infantry"
       ],
-      "subfactions" : [
-        "armor_focus"
-      ],
       "options" : [
+        {
+          "replaceWeapon" : [
+            {
+              "id" : "cleaver",
+              "count" : 2
+            },
+            "shield"
+          ],
+          "withWeapon" : [
+            [
+              {
+                "id" : "big_smasher",
+                "count" : 2
+              }
+            ]
+          ],
+          "modelLimit" : "1/3"
+        },
         {
           "addRule" : [
             "banner"
@@ -1245,6 +1341,13 @@
           ],
           "modelLimit" : 1
         }
+      ],
+      "subfactions" : [
+        "none",
+        "trickery_focus",
+        "speed_focus",
+        "primal_focus",
+        "armor_focus"
       ]
     }
   },
@@ -1328,32 +1431,21 @@
       "notes" : "goblins only",
       "ap" : 3
     },
-    "boss_sword" : {
-      "name" : "Boss Sword",
-      "attacks" : 2,
-      "short" : "Melee",
-      "notes" : "goblins only",
-      "ap" : 1
-    },
     "rusty_greatsword" : {
       "name" : "Rusty Greatsword",
       "attacks" : 1,
       "short" : "Melee",
       "notes" : "goblins only",
-      "ap" : 2
+      "ap" : 1,
+      "rules" : [
+        "rending"
+      ]
     },
     "rusty_sword" : {
       "name" : "Rusty Sword",
       "attacks" : 1,
       "short" : "Melee",
       "notes" : "goblins only",
-      "ap" : 1
-    },
-    "gauntlet" : {
-      "name" : "Spiked Gauntlet",
-      "attacks" : 1,
-      "short" : "Melee",
-      "notes" : "orcs only",
       "ap" : 1
     },
     "dagger" : {
@@ -1366,85 +1458,25 @@
       "name" : "Cleaver",
       "ap" : 2,
       "attacks" : 1,
-      "short" : "Melee",
-      "notes" : "standard weapon"
-    },
-    "cleaver_pair" : {
-      "name" : "Pair of Cleavers",
-      "ap" : 2,
-      "attacks" : 2,
-      "short" : "Melee",
-      "notes" : "paired weapon for standard units"
-    },
-    "boss_cleaver" : {
-      "name" : "Boss Cleaver",
-      "ap" : 2,
-      "attacks" : 2,
-      "short" : "Melee",
-      "notes" : "standard weapon for bosses"
-    },
-    "boss_cleaver_pair" : {
-      "name" : "Pair of Boss Cleavers",
-      "ap" : 2,
-      "attacks" : 3,
-      "short" : "Melee",
-      "notes" : "paired weapon for bosses"
+      "short" : "Melee"
     },
     "big_smasher" : {
       "name" : "Big Smasher",
       "ap" : 6,
-      "attacks" : 2,
-      "short" : "Melee",
-      "note" : "for heroes only"
-    },
-    "boss_big_smasher" : {
-      "name" : "Boss Big Smasher",
-      "ap" : 6,
-      "attacks" : 2,
-      "short" : "Melee",
-      "note" : "for heroes only"
-    },
-    "boss_big_smasher_pair" : {
-      "name" : "Pair of Boss Big Smashers",
-      "ap" : 6,
-      "attacks" : 3,
-      "short" : "Melee",
-      "note" : "for heroes only"
+      "attacks" : 1,
+      "short" : "Melee"
     },
     "smasher" : {
       "name" : "Smasher",
       "ap" : 4,
       "attacks" : 1,
-      "short" : "Melee",
-      "notes" : "brute"
-    },
-    "smasher_pair" : {
-      "name" : "Pair of Smashers",
-      "ap" : 4,
-      "attacks" : 2,
-      "short" : "Melee",
-      "notes" : "brute"
-    },
-    "boss_smasher" : {
-      "name" : "Boss Smasher",
-      "ap" : 4,
-      "attacks" : 2,
-      "short" : "Melee",
-      "notes" : "brute"
-    },
-    "boss_smasher_pair" : {
-      "name" : "Pair of Boss Smashers",
-      "ap" : 4,
-      "attacks" : 3,
-      "short" : "Melee",
-      "notes" : "brute"
+      "short" : "Melee"
     },
     "slasher" : {
       "name" : "Slasher",
       "ap" : 4,
-      "attacks" : 2,
+      "attacks" : 1,
       "short" : "Melee",
-      "notes" : "brute",
       "rules" : [
         {
           "id" : "reach",
@@ -1452,24 +1484,10 @@
         }
       ]
     },
-    "boss_slasher" : {
-      "name" : "Boss Slasher",
-      "ap" : 5,
-      "attacks" : 2,
-      "short" : "Melee",
-      "notes" : "brute",
-      "rules" : [
-        {
-          "id" : "reach",
-          "x" : 2
-        }
-      ]
-    },
-    "boss_gauntlet" : {
+    "gauntlet" : {
       "name" : "Scythed Gauntlet",
-      "attacks" : 2,
+      "attacks" : 1,
       "short" : "Melee",
-      "notes" : "orcs only",
       "ap" : 3
     }
   },
@@ -1516,159 +1534,21 @@
   "strategies" : [],
   "relics" : [
     {
-      "name" : "Bloody Banner",
+      "name" : "Bloody Trophy",
       "description" : "Upgrade one Orc Warboss model with Frenzy Banner.",
       "flavor" : "A crimson banner, dyed in the blood of the Warboss's greatest kills, inciting an endless rage in their followers.",
       "points" : 10,
-      "rule" : "frenzy_banner"
+      "rule" : "frenzy_banner",
+      "subfactions" : [
+        "armor_focus",
+        "speed_focus",
+        "none",
+        "trickery_focus",
+        "primal_focus"
+      ]
     }
   ],
-  "models" : {
-    "chariot" : {
-      "name" : "Boar Chariot",
-      "movement" : 11,
-      "courage" : 0,
-      "shoot" : 0,
-      "fight" : 0,
-      "defense" : 10,
-      "reflexes" : 0,
-      "weapons" : [
-        {
-          "id" : "tusks",
-          "count" : 2
-        }
-      ],
-      "rules" : [
-        "exposed",
-        {
-          "id" : "impact",
-          "x" : 3
-        },
-        "damage_table_vehicle",
-        {
-          "id" : "crew",
-          "x" : 2
-        }
-      ],
-      "min" : 0,
-      "max" : 1
-    },
-    "drake" : {
-      "name" : "Fire Drake",
-      "movement" : 10,
-      "courage" : 5,
-      "shoot" : 6,
-      "fight" : 6,
-      "defense" : 12,
-      "reflexes" : 5,
-      "weapons" : [
-        "flames",
-        {
-          "id" : "claws",
-          "count" : 2
-        }
-      ],
-      "rules" : [
-        "fear",
-        "fly",
-        "damage_table_monster",
-        {
-          "id" : "impact",
-          "x" : 3
-        }
-      ],
-      "min" : 0,
-      "max" : 1
-    },
-    "spider_mount" : {
-      "name" : "Cave Spider",
-      "movement" : 9,
-      "courage" : 3,
-      "shoot" : 3,
-      "fight" : 4,
-      "defense" : 4,
-      "reflexes" : 3,
-      "weapons" : [
-        {
-          "id" : "spider_bite",
-          "count" : 2
-        }
-      ],
-      "min" : 0,
-      "max" : 1,
-      "rules" : [
-        "strider",
-        "outflank",
-        {
-          "id" : "mount",
-          "x" : 1
-        }
-      ]
-    },
-    "beast_mount" : {
-      "name" : "Cave Beast",
-      "movement" : 6,
-      "courage" : 4,
-      "shoot" : 3,
-      "fight" : 5,
-      "defense" : 5,
-      "reflexes" : 4,
-      "weapons" : [
-        {
-          "id" : "bite",
-          "count" : 3
-        }
-      ],
-      "min" : 0,
-      "max" : 1,
-      "rules" : [
-        "crazed",
-        {
-          "id" : "impact",
-          "x" : 1
-        },
-        "agile",
-        "skirmishers",
-        {
-          "id" : "mount",
-          "x" : 1
-        }
-      ]
-    },
-    "black_iron_orc" : {
-      "name" : "Black-Iron Orc Warrior",
-      "movement" : 6,
-      "courage" : 5,
-      "shoot" : 5,
-      "fight" : 5,
-      "defense" : 6,
-      "reflexes" : 4,
-      "weapons" : [
-        {
-          "id" : "hand_weapon",
-          "count" : 2
-        }
-      ],
-      "min" : 0,
-      "max" : 2,
-      "rules" : [
-        "heavy_armor"
-      ],
-      "options" : [
-        {
-          "replaceWeapon" : [
-            {
-              "id" : "hand_weapon",
-              "count" : 2
-            }
-          ],
-          "withWeapon" : [
-            "great_weapon"
-          ]
-        }
-      ]
-    }
-  },
+  "models" : {},
   "subfactions" : {
     "armor_focus" : {
       "name" : "Armor Focus",
