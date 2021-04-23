@@ -27,8 +27,7 @@
               "id" : "wounds",
               "x" : 3
             },
-            "leader",
-            "fearless"
+            "leader"
           ],
           "weapons" : [
             {
@@ -47,7 +46,9 @@
       "subfactions" : [
         "none",
         "melee_focus",
-        "magic_focus"
+        "magic_focus",
+        "black_focus",
+        "scout_focus"
       ]
     },
     "runepriest" : {
@@ -74,8 +75,7 @@
               "id" : "magic",
               "x" : 1
             },
-            "leader",
-            "fearless"
+            "leader"
           ],
           "weapons" : [
             {
@@ -110,7 +110,9 @@
       ],
       "subfactions" : [
         "none",
+        "melee_focus",
         "magic_focus",
+        "black_focus",
         "scout_focus"
       ]
     },
@@ -161,13 +163,13 @@
         "Hero",
         "Infantry"
       ],
+      "rules" : [],
       "subfactions" : [
         "none",
+        "melee_focus",
+        "magic_focus",
         "black_focus",
         "scout_focus"
-      ],
-      "rules" : [
-        "fearless"
       ]
     },
     "gearsmith" : {
@@ -246,13 +248,13 @@
         "Hero",
         "Infantry"
       ],
+      "rules" : [],
       "subfactions" : [
         "none",
+        "melee_focus",
+        "magic_focus",
         "black_focus",
-        "magic_focus"
-      ],
-      "rules" : [
-        "fearless"
+        "scout_focus"
       ]
     },
     "stalker" : {
@@ -294,13 +296,13 @@
       "keywords" : [
         "Infantry"
       ],
+      "rules" : [],
       "subfactions" : [
         "none",
-        "scout_focus",
-        "melee_focus"
-      ],
-      "rules" : [
-        "fearless"
+        "melee_focus",
+        "magic_focus",
+        "black_focus",
+        "scout_focus"
       ]
     },
     "runepriest_elemental" : {
@@ -324,7 +326,6 @@
               "x" : 1
             },
             "leader",
-            "fearless",
             "damage_table_monster",
             "strider"
           ],
@@ -367,13 +368,6 @@
                 }
               ],
               "modelLimit" : 2
-            },
-            {
-              "addWeapon" : [
-                {
-                  "id" : "throw_rock"
-                }
-              ]
             }
           ],
           "min" : 1,
@@ -388,8 +382,10 @@
       ],
       "subfactions" : [
         "none",
+        "melee_focus",
         "magic_focus",
-        "melee_focus"
+        "black_focus",
+        "scout_focus"
       ]
     },
     "dwarf_arbalesters" : {
@@ -438,10 +434,6 @@
       "keywords" : [
         "Infantry"
       ],
-      "subfactions" : [
-        "none",
-        "scout_focus"
-      ],
       "options" : [
         {
           "addWeapon" : [
@@ -461,8 +453,13 @@
           "modelLimit" : 1
         }
       ],
-      "rules" : [
-        "fearless"
+      "rules" : [],
+      "subfactions" : [
+        "none",
+        "melee_focus",
+        "magic_focus",
+        "black_focus",
+        "scout_focus"
       ]
     },
     "dwarf_grunts" : {
@@ -560,9 +557,7 @@
           "modelLimit" : 1
         }
       ],
-      "rules" : [
-        "fearless"
-      ]
+      "rules" : []
     },
     "dwarf_veterans" : {
       "name" : "Dwarven Veterans",
@@ -626,14 +621,14 @@
         }
       ],
       "rules" : [
-        {
-          "id" : "fearless"
-        }
+        {}
       ],
       "subfactions" : [
         "none",
         "melee_focus",
-        "magic_focus"
+        "magic_focus",
+        "black_focus",
+        "scout_focus"
       ]
     },
     "dwarf_pathfinders" : {
@@ -728,11 +723,11 @@
           "modelLimit" : 1
         }
       ],
-      "rules" : [
-        "fearless"
-      ],
+      "rules" : [],
       "subfactions" : [
         "none",
+        "melee_focus",
+        "magic_focus",
         "black_focus",
         "scout_focus"
       ]
@@ -808,11 +803,6 @@
       "keywords" : [
         "Infantry"
       ],
-      "subfactions" : [
-        "none",
-        "scout_focus",
-        "melee_focus"
-      ],
       "options" : [
         {
           "replaceRule" : [
@@ -842,8 +832,13 @@
           "modelLimit" : 1
         }
       ],
-      "rules" : [
-        "fearless"
+      "rules" : [],
+      "subfactions" : [
+        "none",
+        "melee_focus",
+        "magic_focus",
+        "black_focus",
+        "scout_focus"
       ]
     },
     "dwarf_gunners" : {
@@ -920,11 +915,6 @@
       "keywords" : [
         "Infantry"
       ],
-      "subfactions" : [
-        "none",
-        "black_focus",
-        "scout_focus"
-      ],
       "options" : [
         {
           "replaceWeapon" : [
@@ -953,8 +943,13 @@
           "modelLimit" : 1
         }
       ],
-      "rules" : [
-        "fearless"
+      "rules" : [],
+      "subfactions" : [
+        "none",
+        "melee_focus",
+        "magic_focus",
+        "black_focus",
+        "scout_focus"
       ]
     },
     "dwarf_skyguard" : {
@@ -1054,11 +1049,11 @@
           "modelLimit" : 1
         }
       ],
-      "rules" : [
-        "fearless"
-      ],
+      "rules" : [],
       "subfactions" : [
         "none",
+        "melee_focus",
+        "magic_focus",
         "black_focus",
         "scout_focus"
       ]
@@ -1182,9 +1177,7 @@
           "modelLimit" : 1
         }
       ],
-      "rules" : [
-        "fearless"
-      ],
+      "rules" : [],
       "subfactions" : [
         "none",
         "melee_focus",
@@ -1234,18 +1227,12 @@
           ],
           "min" : 3,
           "max" : 3,
-          "rules" : [
-            "fearless"
-          ]
+          "rules" : []
         }
       ],
       "keywords" : [
         "Warmachine",
         "Artillery"
-      ],
-      "subfactions" : [
-        "none",
-        "black_focus"
       ]
     },
     "hellblaster" : {
@@ -1289,9 +1276,7 @@
           ],
           "min" : 3,
           "max" : 3,
-          "rules" : [
-            "fearless"
-          ]
+          "rules" : []
         }
       ],
       "keywords" : [
@@ -1300,7 +1285,10 @@
       ],
       "subfactions" : [
         "none",
-        "black_focus"
+        "melee_focus",
+        "magic_focus",
+        "black_focus",
+        "scout_focus"
       ]
     },
     "rune_elemental" : {
@@ -1330,7 +1318,6 @@
           ],
           "rules" : [
             "damage_table_monster",
-            "fearless",
             "strider"
           ],
           "options" : [
@@ -1360,8 +1347,10 @@
       ],
       "subfactions" : [
         "none",
+        "melee_focus",
         "magic_focus",
-        "melee_focus"
+        "black_focus",
+        "scout_focus"
       ]
     },
     "forge_golem" : {
@@ -1381,7 +1370,7 @@
           "reflexes" : 4,
           "weapons" : [
             {
-              "id" : "runic_great",
+              "id" : "runic_fist",
               "count" : 2
             },
             {
@@ -1389,8 +1378,7 @@
             }
           ],
           "rules" : [
-            "damage_table_warmachine",
-            "fearless"
+            "damage_table_warmachine"
           ],
           "min" : 1,
           "max" : 1
@@ -1400,10 +1388,28 @@
         "Warmachine",
         "Infantry"
       ],
+      "options" : [
+        {
+          "replaceWeapon" : [
+            {
+              "id" : "runic_fist",
+              "count" : 2
+            }
+          ],
+          "withWeapon" : [
+            {
+              "id" : "runic_great",
+              "count" : 3
+            }
+          ]
+        }
+      ],
       "subfactions" : [
         "none",
+        "melee_focus",
         "magic_focus",
-        "melee_focus"
+        "black_focus",
+        "scout_focus"
       ]
     },
     "rune_golem" : {
@@ -1428,7 +1434,6 @@
             }
           ],
           "rules" : [
-            "fearless",
             {
               "id" : "wounds",
               "x" : 4
@@ -1444,8 +1449,10 @@
       ],
       "subfactions" : [
         "none",
+        "melee_focus",
         "magic_focus",
-        "melee_focus"
+        "black_focus",
+        "scout_focus"
       ]
     },
     "dwarf_berserker" : {
@@ -1510,7 +1517,6 @@
         }
       ],
       "rules" : [
-        "fearless",
         {
           "id" : "furious"
         },
@@ -1521,7 +1527,9 @@
       "subfactions" : [
         "none",
         "melee_focus",
-        "magic_focus"
+        "magic_focus",
+        "black_focus",
+        "scout_focus"
       ]
     },
     "berserker_champion" : {
@@ -1545,7 +1553,6 @@
               "x" : 3
             },
             "leader",
-            "fearless",
             "fanatical",
             "furious"
           ],
@@ -1566,7 +1573,9 @@
       "subfactions" : [
         "none",
         "melee_focus",
-        "magic_focus"
+        "magic_focus",
+        "black_focus",
+        "scout_focus"
       ]
     }
   },
@@ -1934,7 +1943,7 @@
       "name" : "Knack",
       "flavor" : "All dwarves have a natural expertise in fixing (and breaking) machinery and weapons.",
       "description" : "Use when a Warmachine unit is activated. That unit may repair one critical damage caused by a penetrating hit.",
-      "cost" : 1,
+      "cost" : 2,
       "subfactions" : [
         "none",
         "melee_focus",
@@ -1958,7 +1967,14 @@
       "phase" : "activation",
       "description" : "Use before activating a unit. That unit may immediately remove up to 2 Shock.",
       "flavor" : "Standing steadfast like their mountain halls.",
-      "cost" : 1
+      "cost" : 1,
+      "subfactions" : [
+        "none",
+        "melee_focus",
+        "magic_focus",
+        "black_focus",
+        "scout_focus"
+      ]
     }
   ],
   "relics" : [
