@@ -31,12 +31,43 @@
           ],
           "weapons" : [
             {
-              "id" : "runic_great",
+              "id" : "runic",
               "count" : 4
             }
           ],
           "min" : 1,
-          "max" : 1
+          "max" : 1,
+          "options" : [
+            {
+              "replaceWeapon" : [
+                {
+                  "id" : "runic",
+                  "count" : 4
+                }
+              ],
+              "withWeapon" : [
+                {
+                  "id" : "runic_great",
+                  "count" : 4
+                }
+              ]
+            },
+            {
+              "addWeapon" : [
+                "shield"
+              ]
+            },
+            {
+              "addWeapon" : [
+                {
+                  "id" : "crossbow"
+                },
+                {
+                  "id" : "volley_pistol"
+                }
+              ]
+            }
+          ]
         }
       ],
       "keywords" : [
@@ -80,7 +111,7 @@
           "weapons" : [
             {
               "id" : "runic",
-              "count" : 4
+              "count" : 3
             }
           ],
           "options" : [
@@ -96,6 +127,25 @@
                   "id" : "magic",
                   "x" : 2
                 }
+              ]
+            },
+            {
+              "replaceWeapon" : [
+                {
+                  "id" : "runic",
+                  "count" : 3
+                }
+              ],
+              "withWeapon" : [
+                {
+                  "id" : "runic_great",
+                  "count" : 3
+                }
+              ]
+            },
+            {
+              "addWeapon" : [
+                "shield"
               ]
             }
           ],
@@ -416,7 +466,7 @@
           "max" : 1
         },
         {
-          "name" : "Dwarf Arbalester",
+          "name" : "Arbalester",
           "movement" : 5,
           "courage" : 5,
           "shoot" : 5,
@@ -1186,6 +1236,83 @@
         "scout_focus"
       ]
     },
+    "dwarf_berserker" : {
+      "name" : "Dwarven Berserkers",
+      "description" : "A squad of dwarven warriors that rush into the fray.",
+      "min" : 1,
+      "max" : 3,
+      "category" : "elite",
+      "models" : [
+        {
+          "name" : "Longbeard",
+          "movement" : 5,
+          "courage" : 5,
+          "shoot" : 4,
+          "fight" : 6,
+          "defense" : 6,
+          "reflexes" : 5,
+          "weapons" : [
+            {
+              "id" : "runic",
+              "count" : 3
+            }
+          ],
+          "options" : [],
+          "min" : 1,
+          "max" : 1
+        },
+        {
+          "name" : "Berserker",
+          "movement" : 5,
+          "courage" : 5,
+          "shoot" : 4,
+          "fight" : 6,
+          "defense" : 6,
+          "reflexes" : 5,
+          "weapons" : [
+            {
+              "id" : "runic",
+              "count" : 2
+            }
+          ],
+          "options" : [],
+          "min" : 4,
+          "max" : 19
+        }
+      ],
+      "keywords" : [
+        "Infantry"
+      ],
+      "options" : [
+        {
+          "addRule" : [
+            "banner"
+          ],
+          "modelLimit" : 1
+        },
+        {
+          "addRule" : [
+            "musician"
+          ],
+          "modelLimit" : 1
+        }
+      ],
+      "rules" : [
+        {
+          "id" : "furious"
+        },
+        {
+          "id" : "fanatical"
+        }
+      ],
+      "subfactions" : [
+        "none",
+        "melee_focus",
+        "magic_focus",
+        "black_focus",
+        "scout_focus"
+      ]
+    },
     "cannon" : {
       "name" : "Cannon",
       "description" : "",
@@ -1455,83 +1582,6 @@
         "scout_focus"
       ]
     },
-    "dwarf_berserker" : {
-      "name" : "Dwarven Berserkers",
-      "description" : "A squad of dwarven warriors that rush into the fray.",
-      "min" : 1,
-      "max" : 3,
-      "category" : "elite",
-      "models" : [
-        {
-          "name" : "Longbeard",
-          "movement" : 5,
-          "courage" : 5,
-          "shoot" : 4,
-          "fight" : 6,
-          "defense" : 6,
-          "reflexes" : 5,
-          "weapons" : [
-            {
-              "id" : "runic",
-              "count" : 3
-            }
-          ],
-          "options" : [],
-          "min" : 1,
-          "max" : 1
-        },
-        {
-          "name" : "Berserker",
-          "movement" : 5,
-          "courage" : 5,
-          "shoot" : 4,
-          "fight" : 6,
-          "defense" : 6,
-          "reflexes" : 5,
-          "weapons" : [
-            {
-              "id" : "runic",
-              "count" : 2
-            }
-          ],
-          "options" : [],
-          "min" : 4,
-          "max" : 19
-        }
-      ],
-      "keywords" : [
-        "Infantry"
-      ],
-      "options" : [
-        {
-          "addRule" : [
-            "banner"
-          ],
-          "modelLimit" : 1
-        },
-        {
-          "addRule" : [
-            "musician"
-          ],
-          "modelLimit" : 1
-        }
-      ],
-      "rules" : [
-        {
-          "id" : "furious"
-        },
-        {
-          "id" : "fanatical"
-        }
-      ],
-      "subfactions" : [
-        "none",
-        "melee_focus",
-        "magic_focus",
-        "black_focus",
-        "scout_focus"
-      ]
-    },
     "berserker_champion" : {
       "name" : "Gloryseeker",
       "description" : "First into the fray, this champion is imbued with an endless rage.",
@@ -1544,8 +1594,8 @@
           "movement" : 5,
           "courage" : 5,
           "shoot" : 4,
-          "fight" : 6,
-          "defense" : 7,
+          "fight" : 7,
+          "defense" : 6,
           "reflexes" : 5,
           "rules" : [
             {
@@ -1576,6 +1626,87 @@
         "magic_focus",
         "black_focus",
         "scout_focus"
+      ]
+    },
+    "dwarf_miners" : {
+      "name" : "Dwarven Miners",
+      "description" : "A squad of dwarven miners, hiding beneath the battlefield.",
+      "min" : 1,
+      "max" : 3,
+      "category" : "core",
+      "models" : [
+        {
+          "name" : "Longbeard",
+          "movement" : 5,
+          "courage" : 5,
+          "shoot" : 4,
+          "fight" : 6,
+          "defense" : 5,
+          "reflexes" : 5,
+          "weapons" : [
+            {
+              "id" : "dwarf_great",
+              "count" : 2
+            }
+          ],
+          "options" : [],
+          "min" : 1,
+          "max" : 1
+        },
+        {
+          "name" : "Miner",
+          "movement" : 5,
+          "courage" : 5,
+          "shoot" : 4,
+          "fight" : 6,
+          "defense" : 5,
+          "reflexes" : 5,
+          "weapons" : [
+            "dwarf_great"
+          ],
+          "min" : 4,
+          "max" : 19
+        }
+      ],
+      "keywords" : [
+        "Infantry"
+      ],
+      "subfactions" : [
+        "none",
+        "melee_focus",
+        "magic_focus",
+        "black_focus",
+        "scout_focus"
+      ],
+      "options" : [
+        {
+          "replaceWeapon" : [
+            "dwarf_great"
+          ],
+          "withWeapon" : [
+            {
+              "id" : "dwarf_drill"
+            }
+          ],
+          "modelLimit" : "1/5"
+        },
+        {
+          "addRule" : [
+            "banner"
+          ],
+          "modelLimit" : 1
+        },
+        {
+          "addRule" : [
+            "musician"
+          ],
+          "modelLimit" : 1
+        }
+      ],
+      "rules" : [
+        {
+          "id" : "ambush"
+        }
       ]
     }
   },
@@ -1890,6 +2021,19 @@
       ],
       "short" : 6,
       "medium" : 12
+    },
+    "dwarf_drill" : {
+      "name" : "Mining Drill",
+      "attacks" : 1,
+      "ap" : 2,
+      "short" : "Melee",
+      "rules" : [
+        "rending",
+        {
+          "id" : "impact",
+          "x" : 3
+        }
+      ]
     }
   },
   "rules" : {
@@ -1936,7 +2080,18 @@
       "points" : 5
     }
   },
-  "powers" : {},
+  "powers" : {
+    "shield" : {
+      "subfactions" : [
+        "none",
+        "magic_focus"
+      ],
+      "name" : "Rune of Protection",
+      "description" : "Target a friendly unit within 12\". Until the end of the round, roll a D10 each time that unit is hit. On a 3 or less, that hit is ignored.",
+      "charge" : 7,
+      "flavor" : "A mystical barrier."
+    }
+  },
   "strategies" : [
     {
       "phase" : "activation",
@@ -1986,152 +2141,7 @@
       "rule" : "brew"
     }
   ],
-  "models" : {
-    "chariot" : {
-      "name" : "Boar Chariot",
-      "movement" : 11,
-      "courage" : 0,
-      "shoot" : 0,
-      "fight" : 0,
-      "defense" : 10,
-      "reflexes" : 0,
-      "weapons" : [
-        {
-          "id" : "tusks",
-          "count" : 2
-        }
-      ],
-      "rules" : [
-        "exposed",
-        {
-          "id" : "impact",
-          "x" : 3
-        },
-        "damage_table_vehicle",
-        {
-          "id" : "crew",
-          "x" : 2
-        }
-      ],
-      "min" : 0,
-      "max" : 1
-    },
-    "drake" : {
-      "name" : "Fire Drake",
-      "movement" : 10,
-      "courage" : 5,
-      "shoot" : 6,
-      "fight" : 6,
-      "defense" : 12,
-      "reflexes" : 5,
-      "weapons" : [
-        "flames",
-        {
-          "id" : "claws",
-          "count" : 2
-        }
-      ],
-      "rules" : [
-        "fear",
-        "fly",
-        "damage_table_monster",
-        {
-          "id" : "impact",
-          "x" : 3
-        }
-      ],
-      "min" : 0,
-      "max" : 1
-    },
-    "spider_mount" : {
-      "name" : "Cave Spider",
-      "movement" : 9,
-      "courage" : 3,
-      "shoot" : 3,
-      "fight" : 4,
-      "defense" : 4,
-      "reflexes" : 3,
-      "weapons" : [
-        {
-          "id" : "spider_bite",
-          "count" : 2
-        }
-      ],
-      "min" : 0,
-      "max" : 1,
-      "rules" : [
-        "strider",
-        "outflank",
-        {
-          "id" : "mount",
-          "x" : 1
-        }
-      ]
-    },
-    "beast_mount" : {
-      "name" : "Cave Beast",
-      "movement" : 6,
-      "courage" : 4,
-      "shoot" : 3,
-      "fight" : 5,
-      "defense" : 5,
-      "reflexes" : 4,
-      "weapons" : [
-        {
-          "id" : "bite",
-          "count" : 3
-        }
-      ],
-      "min" : 0,
-      "max" : 1,
-      "rules" : [
-        "crazed",
-        {
-          "id" : "impact",
-          "x" : 1
-        },
-        "agile",
-        "skirmishers",
-        {
-          "id" : "mount",
-          "x" : 1
-        }
-      ]
-    },
-    "black_iron_orc" : {
-      "name" : "Black-Iron Orc Warrior",
-      "movement" : 6,
-      "courage" : 5,
-      "shoot" : 5,
-      "fight" : 5,
-      "defense" : 6,
-      "reflexes" : 4,
-      "weapons" : [
-        {
-          "id" : "hand_weapon",
-          "count" : 2
-        }
-      ],
-      "min" : 0,
-      "max" : 2,
-      "rules" : [
-        "heavy_armor"
-      ],
-      "options" : [
-        {
-          "replaceWeapon" : [
-            {
-              "id" : "hand_weapon",
-              "count" : 2
-            }
-          ],
-          "withWeapon" : [
-            "great_weapon"
-          ]
-        }
-      ]
-    }
-  },
+  "models" : {},
   "subfactions" : {
     "black_focus" : {
       "name" : "Blackpowder Focus",
