@@ -659,6 +659,11 @@
       "options" : [
         {
           "addRule" : [
+            "shield"
+          ]
+        },
+        {
+          "addRule" : [
             "banner"
           ],
           "modelLimit" : 1
@@ -669,9 +674,6 @@
           ],
           "modelLimit" : 1
         }
-      ],
-      "rules" : [
-        {}
       ],
       "subfactions" : [
         "none",
@@ -729,7 +731,9 @@
           "weapons" : [
             "light_handgun",
             {
-              "id" : "dwarf_dagger"
+              "id" : "dwarf_dagger",
+              "Number" : 0,
+              "count" : 2
             }
           ],
           "min" : 4,
@@ -744,7 +748,8 @@
           "replaceWeapon" : [
             "light_handgun",
             {
-              "id" : "dwarf_dagger"
+              "id" : "dwarf_dagger",
+              "count" : 2
             }
           ],
           "withWeapon" : [
@@ -978,7 +983,8 @@
             {
               "id" : "crank_rifle"
             }
-          ]
+          ],
+          "modelLimit" : "1/3"
         },
         {
           "addRule" : [
@@ -1084,7 +1090,8 @@
                 "count" : 2
               }
             ]
-          ]
+          ],
+          "modelLimit" : "1/3"
         },
         {
           "addRule" : [
@@ -1121,7 +1128,7 @@
           "courage" : 6,
           "shoot" : 5,
           "fight" : 5,
-          "defense" : 7,
+          "defense" : 6,
           "reflexes" : 5,
           "weapons" : [
             {
@@ -1155,7 +1162,7 @@
           "courage" : 6,
           "shoot" : 5,
           "fight" : 5,
-          "defense" : 7,
+          "defense" : 6,
           "reflexes" : 5,
           "weapons" : [
             "dwarf_dagger",
@@ -1276,8 +1283,8 @@
             }
           ],
           "options" : [],
-          "min" : 4,
-          "max" : 19
+          "min" : 2,
+          "max" : 11
         }
       ],
       "keywords" : [
@@ -1441,7 +1448,8 @@
             {
               "id" : "runic_fist",
               "count" : 2
-            }
+            },
+            "throw_rock"
           ],
           "rules" : [
             "damage_table_monster",
@@ -1863,8 +1871,8 @@
     },
     "light_handgun" : {
       "name" : "Light Handgun",
-      "ap" : 1,
-      "attacks" : 2,
+      "ap" : 2,
+      "attacks" : 1,
       "short" : 6,
       "medium" : 12,
       "rules" : [
@@ -2014,24 +2022,23 @@
       "ap" : 6,
       "rules" : [
         {
-          "id" : "deadly",
-          "x" : 3
+          "id" : "blast",
+          "x" : 2
         },
         "scatter"
       ],
-      "short" : 6,
-      "medium" : 12
+      "short" : 9,
+      "medium" : 18
     },
     "dwarf_drill" : {
       "name" : "Mining Drill",
       "attacks" : 1,
-      "ap" : 2,
+      "ap" : 4,
       "short" : "Melee",
       "rules" : [
-        "rending",
         {
           "id" : "impact",
-          "x" : 3
+          "x" : 1
         }
       ]
     }
@@ -2084,12 +2091,33 @@
     "shield" : {
       "subfactions" : [
         "none",
-        "magic_focus"
+        "magic_focus",
+        "black_focus",
+        "melee_focus",
+        "scout_focus"
       ],
       "name" : "Rune of Protection",
       "description" : "Target a friendly unit within 12\". Until the end of the round, roll a D10 each time that unit is hit. On a 3 or less, that hit is ignored.",
       "charge" : 7,
       "flavor" : "A mystical barrier."
+    },
+    "missile" : {
+      "subfactions" : [
+        "black_focus"
+      ],
+      "name" : "Magic Missile",
+      "description" : "Target an enemy model within 12\". That model takes an automatic hit with AP6.",
+      "charge" : 6,
+      "flavor" : "A missile infused with dwarven magic."
+    },
+    "crystal_trap" : {
+      "subfactions" : [
+        "scout_focus"
+      ],
+      "name" : "Crystaline Trap",
+      "description" : "Target an enemy unit within 18\". That unit takes 4 automatic hits with AP1.",
+      "charge" : 6,
+      "flavor" : "Many colored crystals explode out of the ground and impale anyone close to it."
     }
   },
   "strategies" : [
@@ -2109,13 +2137,13 @@
     },
     {
       "phase" : "activation",
+      "name" : "Napalm Ammunition",
+      "description" : "Use when a Dwarf Infantry unit that contains a Crank Rifle or Volley Gun fires. It is treated as having Shock(+2) and ignores cover bonuses for that action.",
+      "flavor" : "Using experimental rounds to incinerate their foes to ashes and make the survivors flee.",
+      "cost" : 2,
       "subfactions" : [
         "black_focus"
-      ],
-      "name" : "Suppressive Fire",
-      "flavor" : "With high rate of fire and experimental ammo, dwarven machineguns can be used to pin down enemy troops with ease.",
-      "description" : "Use when a Dwarf Infantry unit that contains a Crank Rifle or Volley Gun fires. It is treated as having Shock(+2) for that action.",
-      "cost" : 1
+      ]
     },
     {
       "name" : "Stubborn",
@@ -2123,6 +2151,30 @@
       "description" : "Use before activating a unit. That unit may immediately remove up to 2 Shock.",
       "flavor" : "Standing steadfast like their mountain halls.",
       "cost" : 1,
+      "subfactions" : [
+        "none",
+        "melee_focus",
+        "magic_focus",
+        "black_focus",
+        "scout_focus"
+      ]
+    },
+    {
+      "name" : "Spider Mines",
+      "phase" : "activation",
+      "description" : "Use when a Dwarf Infantry unit is charged. The charging unit takes 4 automatic hits with AP0.",
+      "flavor" : "Novice Engineers build these to learn the intricate mechanism of greater warmachines.",
+      "cost" : 1,
+      "subfactions" : [
+        "black_focus"
+      ]
+    },
+    {
+      "name" : "Shieldwall",
+      "phase" : "activation",
+      "description" : "Use when a Dwarf Infanty unit with Shields is charged or targeted by a shooting attack. That unit gains +1 Save until end of turn.",
+      "flavor" : "Standing strong against all odds.",
+      "cost" : 2,
       "subfactions" : [
         "none",
         "melee_focus",
@@ -2138,7 +2190,14 @@
       "description" : "Upgrade one Hero model with Dwarven Brew.",
       "flavor" : "Dwarves are known for their love of alcohol, which they even carry into battle.",
       "points" : 10,
-      "rule" : "brew"
+      "rule" : "brew",
+      "subfactions" : [
+        "none",
+        "melee_focus",
+        "magic_focus",
+        "black_focus",
+        "scout_focus"
+      ]
     }
   ],
   "models" : {},
@@ -2158,18 +2217,18 @@
       "background" : "A force that focuses heavily on magic and rune-enchanted equipment."
     },
     "melee_focus" : {
-      "name" : "Melee Focus",
+      "name" : "Combat Focus",
       "id" : "melee_focus",
       "color" : "#800080",
       "restricted" : true,
-      "background" : "A force that focuses on getting into the fray."
+      "background" : "A force that focuses on overruning their foe in glorious combat."
     },
     "scout_focus" : {
-      "name" : "Scouting Focus",
+      "name" : "Tunneler Focus",
       "id" : "scout_focus",
       "color" : "#800080",
       "restricted" : true,
-      "background" : "A force that focuses on ambushing and outflanking their enemies."
+      "background" : "A force that focuses on ambushing their enemies from below the battlefield."
     }
   }
 }
