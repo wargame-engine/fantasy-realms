@@ -2,6 +2,7 @@
   "name" : "Sea Elves",
   "id" : "sea_elves",
   "author" : "Xekon#8266",
+  "color" : "#03414e",
   "version" : "1.0",
   "description" : "Raising from the depths of the ocean, transmuted by their ancient magic.",
   "alliance" : "order",
@@ -551,19 +552,19 @@
               "count" : 6
             },
             {
-              "id" : "net_launcher"
+              "id" : "harpoon"
             }
           ],
           "options" : [
             {
               "replaceWeapon" : [
                 {
-                  "id" : "net_launcher"
+                  "id" : "harpoon"
                 }
               ],
               "withWeapon" : [
                 {
-                  "id" : "harpoon"
+                  "id" : "net_launcher"
                 }
               ]
             }
