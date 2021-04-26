@@ -89,6 +89,14 @@
       "version" : "0.1",
       "alliance" : "order",
       "description" : "A stout race of miners, engineers and warriors."
+    },
+    "beast_curse_horde" : {
+      "name" : "Beast-Curse Horde",
+      "id" : "beast_curse_horde",
+      "url" : "beast_curse_horde.json",
+      "color" : "#954535",
+      "version" : "0.1",
+      "alliance" : "chaos"
     }
   },
   "categories" : {
@@ -226,15 +234,15 @@
       "name" : "Shortbow",
       "attacks" : 1,
       "ap" : 1,
-      "short" : 6,
-      "medium" : 12
+      "short" : 9,
+      "medium" : 18
     },
     "long_bow" : {
       "name" : "Longbow",
       "attacks" : 1,
       "ap" : 1,
-      "short" : 12,
-      "medium" : 24
+      "short" : 18,
+      "medium" : 36
     },
     "spear" : {
       "name" : "Spear",
@@ -260,6 +268,23 @@
         }
       ],
       "short" : "Melee"
+    },
+    "buckler" : {
+      "name" : "Buckler",
+      "attacks" : 0,
+      "short" : "Melee",
+      "rules" : [
+        {
+          "id" : "buckler"
+        }
+      ]
+    },
+    "bow" : {
+      "name" : "Bow",
+      "attacks" : 1,
+      "ap" : 1,
+      "short" : 12,
+      "medium" : 24
     }
   },
   "rules" : {
@@ -315,6 +340,26 @@
           "multiply" : 10
         }
       ]
+    },
+    "banner" : {
+      "name" : "Banner",
+      "description" : "This unit may re-roll a single failed Courage test when removing Shock.",
+      "points" : 5
+    },
+    "musician" : {
+      "name" : "Musician",
+      "description" : "This unit may re-roll a single failed Initiative test when sprinting.",
+      "points" : 5
+    },
+    "leeching" : {
+      "name" : "Leeching",
+      "description" : "Roll a D10 each time this weapon deals damage to a _Leader_ unit. On a 1 or 2 this model regains one Wound.",
+      "points" : 1
+    },
+    "buckler" : {
+      "name" : "Buckler",
+      "description" : "This model has +1 Save against melee attacks.",
+      "points" : 1
     }
   }
 }
