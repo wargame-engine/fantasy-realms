@@ -1,0 +1,776 @@
+{
+  "name" : "Beast-Curse Horde",
+  "id" : "beast_curse_horde",
+  "author" : "Valgaav#9736",
+  "color" : "#654321",
+  "version" : "0.1",
+  "alliance" : "chaos",
+  "subfactions" : {
+    "rage_legions" : {
+      "name" : "Wrath Legion",
+      "id" : "rage_legions",
+      "color" : "#ff0000",
+      "restricted" : true,
+      "background" : "Warriors of unbridled fury."
+    },
+    "change_legions" : {
+      "name" : "Arcane Legion",
+      "id" : "change_legions",
+      "color" : "#18abcc",
+      "restricted" : true,
+      "background" : "Mighty Sorcerers that bring down a storm of spells."
+    },
+    "plague_legions" : {
+      "name" : "Corrupted Legion",
+      "id" : "plague_legions",
+      "color" : "#90ee90",
+      "restricted" : true,
+      "background" : "Resilient spreaders of decay."
+    },
+    "lust_legions" : {
+      "name" : "Sinful Legion",
+      "id" : "lust_legions",
+      "color" : "#800080",
+      "restricted" : true,
+      "background" : "Sadistic and twisted Warriors."
+    }
+  },
+  "units" : {
+    "brutal_lord" : {
+      "name" : "Brutalizer Lord",
+      "description" : "Cursed and twisted into a beastial shape.",
+      "category" : "hero",
+      "models" : [
+        {
+          "name" : "Brutalizer Lord",
+          "movement" : 9,
+          "courage" : 6,
+          "shoot" : 4,
+          "fight" : 6,
+          "defense" : 6,
+          "reflexes" : 6,
+          "weapons" : [
+            {
+              "id" : "gouging_horns",
+              "count" : 2
+            },
+            {
+              "id" : "brutal_great",
+              "count" : 3
+            }
+          ],
+          "min" : 1,
+          "max" : 1,
+          "options" : [
+            {
+              "replaceRule" : [
+                {
+                  "id" : "brutal_tactics",
+                  "x" : 1
+                }
+              ],
+              "withRule" : [
+                {
+                  "id" : "brutal_tactics",
+                  "x" : 2
+                }
+              ]
+            }
+          ],
+          "rules" : [
+            {
+              "id" : "wounds",
+              "x" : 4
+            },
+            {
+              "id" : "brutal_tactics",
+              "x" : 1
+            },
+            "leader"
+          ]
+        }
+      ],
+      "subfactions" : [
+        "none",
+        "change_legions",
+        "rage_legions",
+        "lust_legions",
+        "plague_legions"
+      ],
+      "keywords" : [
+        "Hero",
+        "Beast",
+        "Infantry"
+      ]
+    },
+    "despoiler_lord" : {
+      "name" : "Despoiler Lord",
+      "description" : "A lord of the horde.",
+      "min" : 1,
+      "max" : 1,
+      "category" : "hero",
+      "models" : [
+        {
+          "name" : "Despoiler Lord",
+          "movement" : 8,
+          "courage" : 7,
+          "shoot" : 4,
+          "fight" : 6,
+          "defense" : 7,
+          "reflexes" : 6,
+          "weapons" : [
+            {
+              "id" : "gore_great",
+              "count" : 6
+            }
+          ],
+          "rules" : [
+            {
+              "id" : "leader_x",
+              "x" : "Infantry"
+            },
+            {
+              "id" : "wounds",
+              "x" : 3
+            }
+          ],
+          "min" : 1,
+          "max" : 1
+        }
+      ],
+      "subfactions" : [
+        "none",
+        "change_legions",
+        "rage_legions",
+        "lust_legions",
+        "plague_legions"
+      ],
+      "keywords" : [
+        "Hero",
+        "Infantry"
+      ]
+    },
+    "satyr_raiders" : {
+      "name" : "Satyr Raiders",
+      "description" : "Cursed and twisted into a beastial shape.",
+      "category" : "core",
+      "models" : [
+        {
+          "name" : "Longhorn",
+          "movement" : 8,
+          "courage" : 4,
+          "shoot" : 5,
+          "fight" : 5,
+          "defense" : 4,
+          "reflexes" : 4,
+          "weapons" : [
+            "thorn_bow",
+            {
+              "id" : "crude_dagger",
+              "count" : 2
+            }
+          ],
+          "options" : [
+            {
+              "replaceWeapon" : [
+                "thorn_bow",
+                {
+                  "id" : "crude_dagger",
+                  "count" : 2
+                }
+              ],
+              "withWeapon" : [
+                [
+                  {
+                    "id" : "crude_spear",
+                    "count" : 2
+                  },
+                  "shield"
+                ],
+                [
+                  {
+                    "id" : "gore_blade",
+                    "count" : 2
+                  },
+                  "shield"
+                ]
+              ]
+            }
+          ],
+          "min" : 1,
+          "max" : 1
+        },
+        {
+          "name" : "Satyr Raider",
+          "movement" : 8,
+          "courage" : 4,
+          "shoot" : 5,
+          "fight" : 5,
+          "defense" : 4,
+          "reflexes" : 4,
+          "weapons" : [
+            "thorn_bow",
+            "crude_dagger"
+          ],
+          "min" : 9,
+          "max" : 29,
+          "options" : [
+            {
+              "replaceWeapon" : [
+                "thorn_bow",
+                "crude_dagger"
+              ],
+              "withWeapon" : [
+                [
+                  "crude_spear",
+                  "shield"
+                ],
+                [
+                  "gore_blade",
+                  "shield"
+                ]
+              ]
+            }
+          ]
+        }
+      ],
+      "subfactions" : [
+        "none",
+        "change_legions",
+        "rage_legions",
+        "lust_legions",
+        "plague_legions"
+      ],
+      "options" : [
+        {
+          "addRule" : [
+            "banner"
+          ],
+          "modelLimit" : 1
+        },
+        {
+          "addRule" : [
+            "musician"
+          ],
+          "modelLimit" : 1
+        }
+      ],
+      "rules" : [
+        "scout"
+      ]
+    },
+    "satyr_warriors" : {
+      "name" : "Satyr Warriors",
+      "description" : "Cursed and twisted into a beastial shape.",
+      "category" : "core",
+      "models" : [
+        {
+          "name" : "Longhorn",
+          "movement" : 8,
+          "courage" : 4,
+          "shoot" : 4,
+          "fight" : 5,
+          "defense" : 4,
+          "reflexes" : 4,
+          "weapons" : [
+            {
+              "id" : "gore_blade",
+              "count" : 3
+            }
+          ],
+          "options" : [
+            {
+              "replaceWeapon" : [
+                {
+                  "id" : "gore_blade",
+                  "count" : 3
+                }
+              ],
+              "withWeapon" : [
+                [
+                  {
+                    "id" : "gore_blade",
+                    "count" : 2
+                  },
+                  "shield"
+                ]
+              ]
+            }
+          ],
+          "min" : 1,
+          "max" : 1
+        },
+        {
+          "name" : "Satyr Warrior",
+          "movement" : 8,
+          "courage" : 4,
+          "shoot" : 4,
+          "fight" : 5,
+          "defense" : 4,
+          "reflexes" : 4,
+          "weapons" : [
+            {
+              "id" : "gore_blade",
+              "count" : 2
+            }
+          ],
+          "min" : 9,
+          "max" : 29,
+          "options" : [
+            {
+              "replaceWeapon" : [
+                {
+                  "id" : "gore_blade",
+                  "count" : 2
+                }
+              ],
+              "withWeapon" : [
+                [
+                  "gore_blade",
+                  "shield"
+                ]
+              ]
+            }
+          ]
+        }
+      ],
+      "subfactions" : [
+        "none",
+        "change_legions",
+        "rage_legions",
+        "lust_legions",
+        "plague_legions"
+      ],
+      "options" : [
+        {
+          "addRule" : [
+            "banner"
+          ],
+          "modelLimit" : 1
+        },
+        {
+          "addRule" : [
+            "musician"
+          ],
+          "modelLimit" : 1
+        }
+      ],
+      "rules" : [
+        "light_armor"
+      ]
+    },
+    "gorehorns" : {
+      "name" : "Gorehorns",
+      "description" : "Cursed and twisted into a beastial shape.",
+      "category" : "core",
+      "models" : [
+        {
+          "name" : "Slaughter-Lord",
+          "movement" : 8,
+          "courage" : 5,
+          "shoot" : 4,
+          "fight" : 5,
+          "defense" : 4,
+          "reflexes" : 5,
+          "weapons" : [
+            {
+              "id" : "gore_great",
+              "count" : 3
+            }
+          ],
+          "min" : 1,
+          "max" : 1
+        },
+        {
+          "name" : "Gorehorn",
+          "movement" : 8,
+          "courage" : 5,
+          "shoot" : 4,
+          "fight" : 5,
+          "defense" : 4,
+          "reflexes" : 5,
+          "weapons" : [
+            {
+              "id" : "gore_great",
+              "count" : 2
+            }
+          ],
+          "min" : 4,
+          "max" : 19
+        }
+      ],
+      "subfactions" : [
+        "none",
+        "change_legions",
+        "rage_legions",
+        "lust_legions",
+        "plague_legions"
+      ],
+      "rules" : [
+        "heavy_armor"
+      ],
+      "options" : [
+        {
+          "addRule" : [
+            "banner"
+          ],
+          "modelLimit" : 1
+        },
+        {
+          "addRule" : [
+            "musician"
+          ],
+          "modelLimit" : 1
+        }
+      ]
+    },
+    "minotaurs" : {
+      "name" : "Minotaurs",
+      "description" : "Cursed and twisted into a beastial shape.",
+      "category" : "elite",
+      "models" : [
+        {
+          "name" : "Bloodhorn",
+          "movement" : 9,
+          "courage" : 4,
+          "shoot" : 4,
+          "fight" : 5,
+          "defense" : 6,
+          "reflexes" : 4,
+          "weapons" : [
+            {
+              "id" : "gouging_horns",
+              "count" : 2
+            },
+            {
+              "id" : "brutal_axe",
+              "count" : 4
+            },
+            "shield"
+          ],
+          "min" : 1,
+          "max" : 1,
+          "options" : [
+            {
+              "replaceWeapon" : [
+                {
+                  "id" : "brutal_axe",
+                  "count" : 4
+                },
+                "shield"
+              ],
+              "withWeapon" : [
+                [
+                  {
+                    "id" : "brutal_axe",
+                    "count" : 5
+                  }
+                ],
+                [
+                  {
+                    "id" : "brutal_great",
+                    "count" : 4
+                  }
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "name" : "Minotaur",
+          "movement" : 9,
+          "courage" : 4,
+          "shoot" : 4,
+          "fight" : 5,
+          "defense" : 6,
+          "reflexes" : 4,
+          "weapons" : [
+            {
+              "id" : "gouging_horns",
+              "count" : 2
+            },
+            {
+              "id" : "brutal_axe",
+              "count" : 3
+            },
+            "shield"
+          ],
+          "min" : 2,
+          "max" : 5,
+          "options" : [
+            {
+              "replaceWeapon" : [
+                {
+                  "id" : "brutal_axe",
+                  "count" : 3
+                },
+                "shield"
+              ],
+              "withWeapon" : [
+                [
+                  {
+                    "id" : "brutal_axe",
+                    "count" : 4
+                  }
+                ],
+                [
+                  {
+                    "id" : "brutal_great",
+                    "count" : 3
+                  }
+                ]
+              ]
+            }
+          ]
+        }
+      ],
+      "subfactions" : [
+        "none",
+        "change_legions",
+        "rage_legions",
+        "lust_legions",
+        "plague_legions"
+      ],
+      "options" : [
+        {
+          "addRule" : [
+            "banner"
+          ],
+          "modelLimit" : 1
+        },
+        {
+          "addRule" : [
+            "musician"
+          ],
+          "modelLimit" : 1
+        }
+      ],
+      "rules" : [
+        {
+          "id" : "wounds",
+          "x" : 2
+        }
+      ],
+      "keywords" : [
+        "Beast",
+        "Infantry"
+      ]
+    },
+    "centaurs" : {
+      "name" : "Centaurs",
+      "description" : "Cursed and twisted into a beastial shape.",
+      "category" : "elite",
+      "models" : [
+        {
+          "name" : "Bloodhoof",
+          "movement" : 10,
+          "courage" : 4,
+          "shoot" : 4,
+          "fight" : 5,
+          "defense" : 6,
+          "reflexes" : 4,
+          "weapons" : [
+            {
+              "id" : "brutal_spear",
+              "count" : 3
+            },
+            {
+              "id" : "hooves_and_teeth",
+              "count" : 2
+            },
+            "buckler"
+          ],
+          "min" : 1,
+          "max" : 1
+        },
+        {
+          "name" : "Centaur",
+          "movement" : 10,
+          "courage" : 4,
+          "shoot" : 4,
+          "fight" : 5,
+          "defense" : 6,
+          "reflexes" : 4,
+          "weapons" : [
+            {
+              "id" : "brutal_spear",
+              "count" : 2
+            },
+            {
+              "id" : "hooves_and_teeth",
+              "count" : 2
+            },
+            "buckler"
+          ],
+          "min" : 2,
+          "max" : 11
+        }
+      ],
+      "subfactions" : [
+        "none",
+        "change_legions",
+        "rage_legions",
+        "lust_legions",
+        "plague_legions"
+      ],
+      "options" : [
+        {
+          "addRule" : [
+            "banner"
+          ],
+          "modelLimit" : 1
+        },
+        {
+          "addRule" : [
+            "musician"
+          ],
+          "modelLimit" : 1
+        }
+      ],
+      "rules" : [
+        {
+          "id" : "impact",
+          "x" : 1
+        }
+      ],
+      "keywords" : [
+        "Beast",
+        "Infantry"
+      ]
+    }
+  },
+  "weapons" : {
+    "shield" : {
+      "name" : "Shield",
+      "attacks" : 0,
+      "short" : "Melee",
+      "rules" : [
+        {
+          "id" : "shield"
+        }
+      ]
+    },
+    "gore_blade" : {
+      "name" : "Gore Blade",
+      "ap" : 1,
+      "attacks" : 1,
+      "short" : "Melee"
+    },
+    "crude_dagger" : {
+      "name" : "Crude Dagger",
+      "attacks" : 1,
+      "short" : "Melee"
+    },
+    "crude_spear" : {
+      "name" : "Crude Spear",
+      "ap" : 1,
+      "attacks" : 1,
+      "short" : "Melee",
+      "rules" : [
+        {
+          "id" : "reach",
+          "x" : 2
+        },
+        "cumbersome"
+      ]
+    },
+    "hooves_and_teeth" : {
+      "name" : "Hooves and Teeth",
+      "attacks" : 1,
+      "short" : "Melee",
+      "ap" : 1
+    },
+    "thorn_bow" : {
+      "name" : "Bleakthorn Bow",
+      "ap" : 1,
+      "attacks" : 1,
+      "medium" : 18,
+      "short" : 9
+    },
+    "gore_great" : {
+      "name" : "Despoiler's Greatblade",
+      "ap" : 4,
+      "attacks" : 1,
+      "short" : "Melee"
+    },
+    "brutal_great" : {
+      "name" : "Brutalizer Greataxe",
+      "ap" : 7,
+      "attacks" : 1,
+      "short" : "Melee",
+      "rules" : [
+        "rending"
+      ]
+    },
+    "brutal_axe" : {
+      "name" : "Brutalizer War-Axe",
+      "ap" : 5,
+      "attacks" : 1,
+      "short" : "Melee",
+      "rules" : [
+        "rending"
+      ]
+    },
+    "gouging_horns" : {
+      "name" : "Gouging Horns",
+      "ap" : 1,
+      "attacks" : 1,
+      "short" : "Melee"
+    },
+    "buckler" : {
+      "name" : "Buckler",
+      "attacks" : 0,
+      "short" : "Melee",
+      "rules" : [
+        {
+          "id" : "buckler"
+        }
+      ]
+    },
+    "brutal_spear" : {
+      "name" : "Brutalizer Spear",
+      "ap" : 1,
+      "attacks" : 1,
+      "short" : "Melee",
+      "rules" : [
+        {
+          "id" : "reach",
+          "x" : 2
+        }
+      ]
+    }
+  },
+  "rules" : {
+    "banner" : {
+      "name" : "Banner",
+      "description" : "This unit may re-roll a single failed Courage test when removing Shock.",
+      "points" : 5
+    },
+    "musician" : {
+      "name" : "Musician",
+      "description" : "This unit may re-roll a single failed Initiative test when sprinting.",
+      "points" : 5
+    },
+    "buckler" : {
+      "name" : "Buckler",
+      "description" : "This model has +1 Save against melee attacks.",
+      "points" : 1
+    },
+    "brutal_tactics" : {
+      "name" : "Brutalizer Tactics",
+      "inputs" : [
+        "x"
+      ],
+      "description" : "When this unit is activated, choose up to X friendly _Infantry_ units within 6\". Those units gain +1 AP on all Melee weapons.",
+      "points" : [
+        "rule.x",
+        {
+          "multiply" : 10
+        }
+      ]
+    }
+  },
+  "strategies" : [],
+  "relics" : [],
+  "powers" : {}
+}
