@@ -90,10 +90,10 @@
       "alliance" : "order",
       "description" : "A stout race of miners, engineers and warriors."
     },
-    "beast_curse_horde" : {
-      "name" : "Beast-Curse Horde",
-      "id" : "beast_curse_horde",
-      "url" : "beast_curse_horde.json",
+    "beastmen_horde" : {
+      "name" : "Beastmen Horde",
+      "id" : "beastmen_horde",
+      "url" : "beastmen_horde.json",
       "color" : "#954535",
       "version" : "0.1",
       "alliance" : "chaos"
