@@ -1,0 +1,450 @@
+{
+  "name" : "Human Kingdoms",
+  "id" : "human_kingdoms",
+  "color" : "#087194",
+  "author" : "Xekon#8266",
+  "version" : "0.1",
+  "description" : "",
+  "alliance" : "order",
+  "units" : {
+    "footsoldier" : {
+      "name" : "Footsoldier",
+      "description" : "",
+      "category" : "core",
+      "models" : [
+        {
+          "name" : "Sergeant",
+          "movement" : 6,
+          "courage" : 4,
+          "shoot" : 4,
+          "fight" : 5,
+          "defense" : 6,
+          "reflexes" : 5,
+          "weapons" : [
+            {
+              "id" : "sword",
+              "count" : 2
+            }
+          ],
+          "min" : 1,
+          "max" : 1,
+          "options" : [
+            {
+              "replaceWeapon" : [
+                {
+                  "id" : "sword",
+                  "count" : 2
+                }
+              ],
+              "withWeapon" : [
+                {
+                  "id" : "spear",
+                  "count" : 2
+                },
+                [
+                  "halberd",
+                  "sword"
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "name" : "Footsoldier",
+          "movement" : 6,
+          "courage" : 4,
+          "shoot" : 4,
+          "fight" : 5,
+          "defense" : 6,
+          "reflexes" : 5,
+          "weapons" : [
+            "sword"
+          ],
+          "min" : 9,
+          "max" : 29,
+          "options" : [
+            {
+              "replaceWeapon" : [
+                "sword"
+              ],
+              "withWeapon" : [
+                {
+                  "id" : "spear"
+                },
+                {
+                  "id" : "halberd"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "keywords" : [
+        "Infantry"
+      ],
+      "options" : [
+        {
+          "addRule" : [
+            "banner"
+          ],
+          "modelLimit" : 1
+        },
+        {
+          "addRule" : [
+            "musician"
+          ],
+          "modelLimit" : 1
+        }
+      ]
+    },
+    "captain" : {
+      "name" : "Captain",
+      "description" : "",
+      "category" : "hero",
+      "models" : [
+        {
+          "name" : "Captain",
+          "movement" : 6,
+          "courage" : 6,
+          "shoot" : 5,
+          "fight" : 6,
+          "defense" : 5,
+          "reflexes" : 6,
+          "weapons" : [
+            {
+              "id" : "zweihänder",
+              "count" : 3
+            }
+          ],
+          "min" : 1,
+          "max" : 1,
+          "rules" : [
+            {
+              "id" : "wounds",
+              "x" : 3
+            },
+            "leader"
+          ],
+          "options" : [
+            {
+              "addWeapon" : "handgun"
+            },
+            {
+              "addRule" : "shield"
+            },
+            {
+              "addRule" : [
+                "light_armor",
+                "heavy_armor"
+              ]
+            }
+          ]
+        }
+      ],
+      "keywords" : [
+        "Hero",
+        "Infantry"
+      ]
+    },
+    "bowmen" : {
+      "name" : "Bowmen",
+      "description" : "",
+      "category" : "core",
+      "models" : [
+        {
+          "name" : "Marksman",
+          "movement" : 6,
+          "courage" : 4,
+          "shoot" : 5,
+          "fight" : 4,
+          "defense" : 5,
+          "reflexes" : 5,
+          "weapons" : [
+            "bow",
+            {
+              "id" : "dagger",
+              "count" : 2
+            }
+          ],
+          "min" : 1,
+          "max" : 1
+        },
+        {
+          "name" : "Bowmen",
+          "movement" : 6,
+          "courage" : 4,
+          "shoot" : 5,
+          "fight" : 4,
+          "defense" : 5,
+          "reflexes" : 5,
+          "weapons" : [
+            "bow",
+            "dagger"
+          ],
+          "min" : 9,
+          "max" : 29
+        }
+      ],
+      "keywords" : [
+        "Infantry"
+      ],
+      "options" : [
+        {
+          "replaceWeapon" : [
+            "bow"
+          ],
+          "withWeapon" : [
+            {
+              "id" : "heavy_crossbow"
+            }
+          ]
+        },
+        {
+          "addRule" : [
+            "banner"
+          ],
+          "modelLimit" : 1
+        },
+        {
+          "addRule" : [
+            "musician"
+          ],
+          "modelLimit" : 1
+        }
+      ]
+    },
+    "handgunners" : {
+      "name" : "Handgunners",
+      "description" : "",
+      "category" : "core",
+      "models" : [
+        {
+          "name" : "Marksman",
+          "movement" : 6,
+          "courage" : 4,
+          "shoot" : 5,
+          "fight" : 4,
+          "defense" : 5,
+          "reflexes" : 5,
+          "weapons" : [
+            "handgun",
+            {
+              "id" : "dagger",
+              "count" : 2
+            }
+          ],
+          "min" : 1,
+          "max" : 1,
+          "options" : [
+            {
+              "replaceWeapon" : [
+                "handgun"
+              ],
+              "withWeapon" : [
+                {
+                  "id" : "sniper_rifle"
+                },
+                {
+                  "id" : "handgun",
+                  "count" : 2
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name" : "Handgunner",
+          "movement" : 6,
+          "courage" : 4,
+          "shoot" : 5,
+          "fight" : 4,
+          "defense" : 5,
+          "reflexes" : 5,
+          "weapons" : [
+            "handgun",
+            "dagger"
+          ],
+          "min" : 9,
+          "max" : 29
+        }
+      ],
+      "keywords" : [
+        "Infantry"
+      ],
+      "options" : [
+        {
+          "addRule" : [
+            "banner"
+          ],
+          "modelLimit" : 1
+        },
+        {
+          "addRule" : [
+            "musician"
+          ],
+          "modelLimit" : 1
+        }
+      ]
+    }
+  },
+  "weapons" : {
+    "shield" : {
+      "name" : "Shield",
+      "attacks" : 0,
+      "short" : "Melee",
+      "rules" : [
+        {
+          "id" : "shield"
+        }
+      ]
+    },
+    "buckler" : {
+      "name" : "Buckler",
+      "attacks" : 0,
+      "short" : "Melee",
+      "rules" : [
+        {
+          "id" : "buckler"
+        }
+      ]
+    },
+    "sword" : {
+      "name" : "Sword",
+      "ap" : 1,
+      "attacks" : 1,
+      "short" : "Melee"
+    },
+    "halberd" : {
+      "name" : "Halberd",
+      "ap" : 3,
+      "attacks" : 1,
+      "short" : "Melee",
+      "rules" : [
+        {
+          "id" : "reach",
+          "x" : 1
+        },
+        "rending"
+      ]
+    },
+    "spear" : {
+      "name" : "Spear",
+      "ap" : 1,
+      "attacks" : 1,
+      "short" : "Melee",
+      "rules" : [
+        {
+          "id" : "reach",
+          "x" : 1
+        }
+      ]
+    },
+    "zweihänder" : {
+      "name" : "Zweihänder",
+      "ap" : 6,
+      "attacks" : 1,
+      "short" : "Melee",
+      "rules" : [
+        "rending"
+      ]
+    },
+    "handgun" : {
+      "name" : "Handgun",
+      "ap" : 4,
+      "attacks" : 1,
+      "short" : 6,
+      "medium" : 12,
+      "rules" : [
+        "pistol"
+      ]
+    },
+    "dagger" : {
+      "name" : "Dagger",
+      "attacks" : 1,
+      "short" : "Melee"
+    },
+    "sniper_rifle" : {
+      "name" : "Sniper Rifle",
+      "ap" : 5,
+      "attacks" : 1,
+      "short" : 12,
+      "medium" : 24,
+      "rules" : [
+        "sniper"
+      ]
+    }
+  },
+  "rules" : {
+    "repair" : {
+      "name" : "Repair",
+      "inputs" : [
+        "x"
+      ],
+      "description" : "At any point during this unit's activation, if within 3\" of a Vehicle or Warmachine, roll one die. On an X or less the vehicle may remove one critical damage.",
+      "points" : [
+        "rule.x",
+        {
+          "multiply" : 2
+        }
+      ]
+    },
+    "repair_toolkit" : {
+      "name" : "Repair Toolkit",
+      "description" : "This model and its unit may spend one action to repair one vehicle or warmachine within 3\" that has suffered critical damage.",
+      "points" : 5
+    },
+    "rune" : {
+      "name" : "Blazing Rune",
+      "description" : "Once per round, a friendly _Infantry_ unit within 6\" gains +3“ the next time it makes a Move or Charge action.",
+      "points" : 5
+    },
+    "whip" : {
+      "name" : "Barbed Whip",
+      "description" : "When this unit is activated, friendly _Slave_ units 6\" may choose to activate for free if they have not activated yet and perform the same actions as this unit. Friendly _Slave_ units within 6\" may use this unit's Courage value when taking Courage tests. This unit may not be targetted by enemy attacks while it is within 3\" of another friendly _Slave_ unit unless that unit is also a Leader and attacking in Melee.",
+      "points" : 10
+    },
+    "horn_of_winter" : {
+      "name" : "Horn of Winter",
+      "description" : "Once per round, a friendly _Infantry_ unit within 6\" gains +3“ the next time it makes a Move or Charge action.",
+      "points" : 10
+    }
+  },
+  "powers" : {
+    "fireball" : {
+      "name" : "Fireball",
+      "description" : "Target enemy unit within 12\" takes 6 hits with AP 1. This power may be cast unlimited times.",
+      "flavor" : "Conjuring a fireball comes natural to wizards, especially those that sow discord.",
+      "charge" : 6
+    }
+  },
+  "strategies" : [
+    {
+      "name" : "Stubborn",
+      "phase" : "activation",
+      "description" : "Use before activating a unit. That unit may immediately remove up to 2 Shock.",
+      "flavor" : "Standing steadfast like their mountain halls.",
+      "cost" : 1,
+      "subfactions" : [
+        "none",
+        "melee_focus",
+        "magic_focus",
+        "black_focus",
+        "scout_focus"
+      ]
+    },
+    {
+      "subfactions" : [
+        "none",
+        "change_traitors"
+      ],
+      "name" : "Blazing Runes",
+      "phase" : "activation",
+      "description" : "Use before an Infantry unit fights. Hit rolls of 1 or 2 gain +1 AP.",
+      "flavor" : "Chaos Warriors wield enchanted weapons, covered in unholy runes and burning with dark magic.",
+      "cost" : 1
+    }
+  ],
+  "relics" : [],
+  "models" : {},
+  "subfactions" : {}
+}
