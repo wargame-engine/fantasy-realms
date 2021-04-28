@@ -99,13 +99,13 @@
       "alliance" : "chaos"
     },
     "human_kingdoms" : {
-      "name" : "Human Kingdoms",
+      "name" : "Great Kingdoms",
       "id" : "human_kingdoms",
       "url" : "human_kingdoms.json",
       "color" : "#087194",
       "version" : "0.1",
       "alliance" : "order",
-      "description" : ""
+      "description" : "A collection of various kingdoms, infighting for political presence but uniting under one banner to defend their home."
     }
   },
   "categories" : {
@@ -309,6 +309,19 @@
       "rules" : [
         "pistol"
       ]
+    },
+    "wizard_staff" : {
+      "name" : "Wizard Staff",
+      "attacks" : 1,
+      "ap" : 5,
+      "short" : "Melee",
+      "rules" : [
+        {
+          "id" : "reach",
+          "x" : 1
+        },
+        "rending"
+      ]
     }
   },
   "rules" : {
@@ -384,6 +397,11 @@
       "name" : "Buckler",
       "description" : "This model has +1 Save against melee attacks.",
       "points" : 1
+    },
+    "mount_horse" : {
+      "name" : "Warhorse",
+      "description" : "This model has +2\" Movement.",
+      "points" : 2
     }
   }
 }
