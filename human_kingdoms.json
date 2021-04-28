@@ -22,7 +22,7 @@
           "reflexes" : 5,
           "weapons" : [
             {
-              "id" : "sword",
+              "id" : "handweapon",
               "count" : 2
             }
           ],
@@ -32,7 +32,7 @@
             {
               "replaceWeapon" : [
                 {
-                  "id" : "sword",
+                  "id" : "handweapon",
                   "count" : 2
                 }
               ],
@@ -43,7 +43,7 @@
                 },
                 [
                   "halberd",
-                  "sword"
+                  "handweapon"
                 ]
               ]
             }
@@ -58,14 +58,14 @@
           "defense" : 6,
           "reflexes" : 5,
           "weapons" : [
-            "sword"
+            "handweapon"
           ],
           "min" : 9,
           "max" : 29,
           "options" : [
             {
               "replaceWeapon" : [
-                "sword"
+                "handweapon"
               ],
               "withWeapon" : [
                 {
@@ -308,37 +308,6 @@
         }
       ]
     },
-    "sword" : {
-      "name" : "Sword",
-      "ap" : 1,
-      "attacks" : 1,
-      "short" : "Melee"
-    },
-    "halberd" : {
-      "name" : "Halberd",
-      "ap" : 3,
-      "attacks" : 1,
-      "short" : "Melee",
-      "rules" : [
-        {
-          "id" : "reach",
-          "x" : 1
-        },
-        "rending"
-      ]
-    },
-    "spear" : {
-      "name" : "Spear",
-      "ap" : 1,
-      "attacks" : 1,
-      "short" : "Melee",
-      "rules" : [
-        {
-          "id" : "reach",
-          "x" : 1
-        }
-      ]
-    },
     "zweihänder" : {
       "name" : "Zweihänder",
       "ap" : 6,
@@ -347,21 +316,6 @@
       "rules" : [
         "rending"
       ]
-    },
-    "handgun" : {
-      "name" : "Handgun",
-      "ap" : 4,
-      "attacks" : 1,
-      "short" : 6,
-      "medium" : 12,
-      "rules" : [
-        "pistol"
-      ]
-    },
-    "dagger" : {
-      "name" : "Dagger",
-      "attacks" : 1,
-      "short" : "Melee"
     },
     "sniper_rifle" : {
       "name" : "Sniper Rifle",
