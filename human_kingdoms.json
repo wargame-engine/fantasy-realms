@@ -4,6 +4,177 @@
   "author" : "Xekon#8266",
   "version" : "0.1",
   "units" : {
+    "battle_mage" : {
+      "name" : "Battlemage",
+      "description" : "",
+      "category" : "hero",
+      "models" : [
+        {
+          "name" : "Battlemage",
+          "movement" : 6,
+          "courage" : 5,
+          "shoot" : 4,
+          "fight" : 5,
+          "defense" : 5,
+          "reflexes" : 5,
+          "weapons" : [
+            "wizard_staff",
+            "handweapon"
+          ],
+          "min" : 1,
+          "max" : 1,
+          "rules" : [
+            {
+              "id" : "wounds",
+              "x" : 3
+            },
+            "leader",
+            {
+              "id" : "magic",
+              "x" : 1
+            }
+          ],
+          "options" : [
+            {
+              "replaceRule" : [
+                {
+                  "id" : "magic",
+                  "x" : 1
+                }
+              ],
+              "withRule" : [
+                {
+                  "id" : "magic",
+                  "x" : 2
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "keywords" : [
+        "Hero",
+        "Wizard",
+        "Infantry"
+      ]
+    },
+    "warrior_priest" : {
+      "name" : "Warrior-Priest",
+      "description" : "",
+      "category" : "hero",
+      "models" : [
+        {
+          "name" : "Warrior-Priest",
+          "movement" : 6,
+          "courage" : 7,
+          "shoot" : 4,
+          "fight" : 6,
+          "defense" : 6,
+          "reflexes" : 6,
+          "weapons" : [
+            {
+              "id" : "maul",
+              "count" : 3
+            },
+            "shield"
+          ],
+          "min" : 1,
+          "max" : 1,
+          "rules" : [
+            {
+              "id" : "wounds",
+              "x" : 3
+            },
+            "leader",
+            "furious",
+            "battle_prayer",
+            {
+              "id" : "dispel",
+              "x" : 1
+            },
+            "grail"
+          ],
+          "options" : [
+            {
+              "replaceWeapon" : [
+                {
+                  "id" : "maul",
+                  "count" : 3
+                },
+                "shield"
+              ],
+              "withWeapon" : [
+                {
+                  "id" : "great_maul",
+                  "count" : 3
+                },
+                {
+                  "id" : "maul",
+                  "count" : 4
+                }
+              ]
+            },
+            {
+              "addRule" : "heavy_armor"
+            }
+          ]
+        }
+      ],
+      "keywords" : [
+        "Hero",
+        "Wizard",
+        "Infantry"
+      ]
+    },
+    "captain" : {
+      "name" : "Captain",
+      "description" : "",
+      "category" : "hero",
+      "models" : [
+        {
+          "name" : "Captain",
+          "movement" : 6,
+          "courage" : 6,
+          "shoot" : 5,
+          "fight" : 6,
+          "defense" : 5,
+          "reflexes" : 6,
+          "weapons" : [
+            {
+              "id" : "zweihänder",
+              "count" : 3
+            }
+          ],
+          "min" : 1,
+          "max" : 1,
+          "rules" : [
+            {
+              "id" : "wounds",
+              "x" : 3
+            },
+            "leader"
+          ],
+          "options" : [
+            {
+              "addWeapon" : "handgun"
+            },
+            {
+              "addRule" : "shield"
+            },
+            {
+              "addRule" : [
+                "light_armor",
+                "heavy_armor"
+              ]
+            }
+          ]
+        }
+      ],
+      "keywords" : [
+        "Hero",
+        "Infantry"
+      ]
+    },
     "men_at_arms" : {
       "name" : "Men-at-arms",
       "description" : "",
@@ -71,7 +242,8 @@
                 {
                   "id" : "halberd"
                 }
-              ]
+              ],
+              "modelLimit" : "all"
             }
           ]
         }
@@ -92,55 +264,6 @@
           ],
           "modelLimit" : 1
         }
-      ]
-    },
-    "captain" : {
-      "name" : "Captain",
-      "description" : "",
-      "category" : "hero",
-      "models" : [
-        {
-          "name" : "Captain",
-          "movement" : 6,
-          "courage" : 6,
-          "shoot" : 5,
-          "fight" : 6,
-          "defense" : 5,
-          "reflexes" : 6,
-          "weapons" : [
-            {
-              "id" : "zweihänder",
-              "count" : 3
-            }
-          ],
-          "min" : 1,
-          "max" : 1,
-          "rules" : [
-            {
-              "id" : "wounds",
-              "x" : 3
-            },
-            "leader"
-          ],
-          "options" : [
-            {
-              "addWeapon" : "handgun"
-            },
-            {
-              "addRule" : "shield"
-            },
-            {
-              "addRule" : [
-                "light_armor",
-                "heavy_armor"
-              ]
-            }
-          ]
-        }
-      ],
-      "keywords" : [
-        "Hero",
-        "Infantry"
       ]
     },
     "bowmen" : {
@@ -194,7 +317,8 @@
             {
               "id" : "light_crossbow"
             }
-          ]
+          ],
+          "modelLimit" : "all"
         },
         {
           "addRule" : [
@@ -366,7 +490,8 @@
                   "id" : "rifle",
                   "count" : 2
                 }
-              ]
+              ],
+              "modelLimit" : "all"
             }
           ]
         }
@@ -450,7 +575,8 @@
                   "id" : "zweihänder",
                   "count" : 2
                 }
-              ]
+              ],
+              "modelLimit" : "all"
             }
           ]
         }
@@ -574,9 +700,6 @@
                   "count" : 2
                 }
               ]
-            },
-            {
-              "addRule" : "grail"
             }
           ],
           "min" : 1,
@@ -609,7 +732,8 @@
                 {
                   "id" : "lance"
                 }
-              ]
+              ],
+              "modelLimit" : "all"
             }
           ],
           "min" : 2,
@@ -632,6 +756,9 @@
           ],
           "modelLimit" : 1
         }
+      ],
+      "rules" : [
+        "grail"
       ]
     },
     "cannon" : {
@@ -781,7 +908,8 @@
             {
               "id" : "heavy_crossbow"
             }
-          ]
+          ],
+          "modelLimit" : "all"
         },
         {
           "addRule" : [
@@ -800,153 +928,9 @@
         "skirmishers",
         "scout"
       ]
-    },
-    "warrior_priest" : {
-      "name" : "Warrior-Priest",
-      "description" : "",
-      "category" : "hero",
-      "models" : [
-        {
-          "name" : "Warrior-Priest",
-          "movement" : 6,
-          "courage" : 7,
-          "shoot" : 4,
-          "fight" : 6,
-          "defense" : 6,
-          "reflexes" : 6,
-          "weapons" : [
-            {
-              "id" : "maul",
-              "count" : 3
-            },
-            "shield"
-          ],
-          "min" : 1,
-          "max" : 1,
-          "rules" : [
-            {
-              "id" : "wounds",
-              "x" : 3
-            },
-            "leader",
-            "furious",
-            "battle_prayer",
-            {
-              "id" : "dispel",
-              "x" : 1
-            }
-          ],
-          "options" : [
-            {
-              "replaceWeapon" : [
-                {
-                  "id" : "maul",
-                  "count" : 3
-                },
-                "shield"
-              ],
-              "withWeapon" : [
-                {
-                  "id" : "great_maul",
-                  "count" : 3
-                },
-                {
-                  "id" : "maul",
-                  "count" : 4
-                }
-              ]
-            },
-            {
-              "addRule" : "heavy_armor"
-            },
-            {
-              "addRule" : "grail"
-            }
-          ]
-        }
-      ],
-      "keywords" : [
-        "Hero",
-        "Wizard",
-        "Infantry"
-      ]
-    },
-    "battle_mage" : {
-      "name" : "Battlemage",
-      "description" : "",
-      "category" : "hero",
-      "models" : [
-        {
-          "name" : "Battlemage",
-          "movement" : 6,
-          "courage" : 5,
-          "shoot" : 4,
-          "fight" : 5,
-          "defense" : 5,
-          "reflexes" : 5,
-          "weapons" : [
-            "wizard_staff",
-            "handweapon"
-          ],
-          "min" : 1,
-          "max" : 1,
-          "rules" : [
-            {
-              "id" : "wounds",
-              "x" : 3
-            },
-            "leader",
-            {
-              "id" : "magic",
-              "x" : 1
-            }
-          ],
-          "options" : [
-            {
-              "replaceRule" : [
-                {
-                  "id" : "magic",
-                  "x" : 1
-                }
-              ],
-              "withRule" : [
-                {
-                  "id" : "magic",
-                  "x" : 2
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "keywords" : [
-        "Hero",
-        "Wizard",
-        "Infantry"
-      ]
     }
   },
   "weapons" : {
-    "shield" : {
-      "name" : "Shield",
-      "attacks" : 0,
-      "short" : "Melee",
-      "rules" : [
-        {
-          "id" : "shield"
-        }
-      ]
-    },
-    "buckler" : {
-      "name" : "Buckler",
-      "attacks" : 0,
-      "short" : "Melee",
-      "rules" : [
-        {
-          "id" : "buckler"
-        }
-      ]
-    },
     "zweihänder" : {
       "name" : "Zweihänder",
       "ap" : 6,
@@ -1038,19 +1022,6 @@
       "attacks" : 1,
       "ap" : 5,
       "name" : "Mortar"
-    },
-    "wizard_staff" : {
-      "name" : "Wizard Staff",
-      "attacks" : 1,
-      "ap" : 5,
-      "short" : "Melee",
-      "rules" : [
-        {
-          "id" : "reach",
-          "x" : 1
-        },
-        "rending"
-      ]
     }
   },
   "rules" : {
@@ -1085,10 +1056,10 @@
       "points" : 10
     },
     "grail" : {
-      "name" : "Sacred Grail",
+      "name" : "Smiting Blade",
       "description" : "This unit has +1AP with melee weapons when attacking _Demon_ and _Undead_ units.",
       "points" : [
-        10
+        1
       ]
     },
     "battle_prayer" : {
