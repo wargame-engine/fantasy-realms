@@ -97,6 +97,15 @@
       "color" : "#954535",
       "version" : "0.1",
       "alliance" : "chaos"
+    },
+    "human_kingdoms" : {
+      "name" : "Human Kingdoms",
+      "id" : "human_kingdoms",
+      "url" : "human_kingdoms.json",
+      "color" : "#087194",
+      "version" : "0.1",
+      "alliance" : "order",
+      "description" : ""
     }
   },
   "categories" : {
@@ -166,7 +175,13 @@
       "name" : "Great-staff",
       "attacks" : 1,
       "ap" : 2,
-      "short" : "Melee"
+      "short" : "Melee",
+      "rules" : [
+        {
+          "id" : "reach",
+          "x" : 1
+        }
+      ]
     },
     "maul" : {
       "name" : "Maul",
@@ -182,39 +197,15 @@
         "shield"
       ]
     },
-    "hand_weapon" : {
-      "name" : "Light Hand Weapon",
+    "dagger" : {
+      "name" : "Dagger",
       "attacks" : 1,
       "short" : "Melee"
     },
-    "hand_weapon_heavy" : {
-      "name" : "Heavy Hand Weapon",
+    "handweapon" : {
+      "name" : "Handweapon",
       "attacks" : 1,
       "ap" : 1,
-      "short" : "Melee"
-    },
-    "great_weapon" : {
-      "name" : "Great weapon",
-      "attacks" : 1,
-      "ap" : 2,
-      "short" : "Melee"
-    },
-    "great_weapon_heavy" : {
-      "name" : "Great weapon (Heavy)",
-      "attacks" : 1,
-      "ap" : 3,
-      "short" : "Melee"
-    },
-    "halberd" : {
-      "name" : "Halberd",
-      "attacks" : 1,
-      "ap" : 1,
-      "short" : "Melee"
-    },
-    "halberd_heavy" : {
-      "name" : "Halberd (Heavy)",
-      "attacks" : 1,
-      "ap" : 2,
       "short" : "Melee"
     },
     "heavy_crossbow" : {
@@ -248,22 +239,25 @@
       "name" : "Spear",
       "attacks" : 1,
       "ap" : 1,
+      "short" : "Melee",
       "rules" : [
-        "cumbersome",
         {
           "id" : "reach",
-          "x" : 2
+          "x" : 1
         }
-      ],
-      "short" : "Melee"
+      ]
     },
     "lance" : {
       "name" : "Lance",
       "attacks" : 1,
-      "ap" : 1,
+      "ap" : 2,
       "rules" : [
         {
           "id" : "impact",
+          "x" : 1
+        },
+        {
+          "id" : "reach",
           "x" : 1
         }
       ],
@@ -285,6 +279,36 @@
       "ap" : 1,
       "short" : 12,
       "medium" : 24
+    },
+    "halberd" : {
+      "name" : "Halberd",
+      "ap" : 3,
+      "attacks" : 1,
+      "short" : "Melee",
+      "rules" : [
+        {
+          "id" : "reach",
+          "x" : 1
+        },
+        "rending"
+      ]
+    },
+    "light_crossbow" : {
+      "name" : "Light Crossbow",
+      "attacks" : 1,
+      "ap" : 2,
+      "short" : 9,
+      "medium" : 18
+    },
+    "handgun" : {
+      "name" : "Handgun",
+      "ap" : 4,
+      "attacks" : 1,
+      "short" : 6,
+      "medium" : 12,
+      "rules" : [
+        "pistol"
+      ]
     }
   },
   "rules" : {
