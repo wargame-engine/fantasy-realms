@@ -7,11 +7,9 @@
   "description" : "Raising from the depths of the ocean, transmuted by their ancient magic.",
   "alliance" : "order",
   "units" : {
-    "king_foot" : {
-      "name" : "Depthbound King on foot",
-      "description" : "Cursed by an ancient artifact, this tyrant resurfaces from the depths.",
-      "min" : 1,
-      "max" : 1,
+    "king" : {
+      "name" : "Depthbound King",
+      "description" : "Bound by accursed armor, this tyrant resurfaces from the depths.",
       "category" : "hero",
       "models" : [
         {
@@ -28,7 +26,7 @@
               "count" : 4
             },
             {
-              "id" : "tide_sword",
+              "id" : "handweapon",
               "count" : 3
             }
           ],
@@ -74,13 +72,11 @@
     },
     "king_mount" : {
       "name" : "Depthbound King on Moonlight Kelpie",
-      "description" : "Cursed by an ancient artifact, this tyrant resurfaces from the depths.",
-      "min" : 1,
-      "max" : 1,
+      "description" : "Riding a magical beast of the ocean into countless raids on the land dwellers.",
       "category" : "hero",
       "models" : [
         {
-          "name" : "Depthbound King",
+          "name" : "Depthbound King on Moonlight Kelpie",
           "movement" : 10,
           "courage" : 7,
           "shoot" : 5,
@@ -93,7 +89,7 @@
               "count" : 4
             },
             {
-              "id" : "tide_sword",
+              "id" : "handweapon",
               "count" : 3
             },
             {
@@ -151,14 +147,12 @@
       ]
     },
     "prophet" : {
-      "name" : "Depthbound Prophet",
+      "name" : "Prophet",
       "description" : "Using twisted prophecies to bring down pain upon their foes.",
-      "min" : 1,
-      "max" : 1,
       "category" : "hero",
       "models" : [
         {
-          "name" : "Depthbound Prophet",
+          "name" : "Prophet",
           "movement" : 8,
           "courage" : 6,
           "shoot" : 4,
@@ -167,10 +161,13 @@
           "reflexes" : 5,
           "weapons" : [
             {
-              "id" : "tide_sword",
+              "id" : "handweapon",
               "count" : 3
             },
-            "swarm"
+            {
+              "id" : "swarm",
+              "count" : 8
+            }
           ],
           "options" : [],
           "rules" : [
@@ -180,10 +177,7 @@
             },
             "leader",
             "outflank",
-            {
-              "id" : "incite",
-              "x" : 3
-            }
+            "curse"
           ],
           "min" : 1,
           "max" : 1
@@ -195,14 +189,12 @@
       ]
     },
     "tideweaver" : {
-      "name" : "Depthbound Tideweaver",
-      "description" : "Emerging from the depths of the abyss, this wizad is not to be trifled with.",
-      "min" : 1,
-      "max" : 1,
+      "name" : "Tideweaver",
+      "description" : "Emerging from the depths of the abyss, this wizard is not to be trifled with.",
       "category" : "hero",
       "models" : [
         {
-          "name" : "Depthbound Tideweaver",
+          "name" : "Tideweaver",
           "movement" : 8,
           "courage" : 6,
           "shoot" : 4,
@@ -211,7 +203,7 @@
           "reflexes" : 5,
           "weapons" : [
             {
-              "id" : "tide_sword",
+              "id" : "handweapon",
               "count" : 2
             }
           ],
@@ -222,6 +214,52 @@
               "x" : 3
             },
             "leader",
+            {
+              "id" : "magic",
+              "x" : 2
+            }
+          ],
+          "min" : 1,
+          "max" : 1
+        }
+      ],
+      "keywords" : [
+        "Hero",
+        "Wizard",
+        "Infantry"
+      ]
+    },
+    "soulflayer" : {
+      "name" : "Soulflayer",
+      "description" : "This cruel individual enslaves their enemies souls to fuel arcane artifacts.",
+      "category" : "hero",
+      "models" : [
+        {
+          "name" : "Soulflayer",
+          "movement" : 8,
+          "courage" : 6,
+          "shoot" : 4,
+          "fight" : 6,
+          "defense" : 7,
+          "reflexes" : 6,
+          "weapons" : [
+            {
+              "id" : "halberd",
+              "count" : 2
+            },
+            {
+              "id" : "handweapon",
+              "count" : 2
+            }
+          ],
+          "options" : [],
+          "rules" : [
+            {
+              "id" : "wounds",
+              "x" : 3
+            },
+            "leader",
+            "soul",
             {
               "id" : "magic",
               "x" : 1
@@ -237,29 +275,38 @@
         "Infantry"
       ]
     },
-    "soulflayer" : {
-      "name" : "Depthbound Soulflayer",
-      "description" : "This cruel individual enslaves their enemies souls to fuel arcane artifacts.",
-      "min" : 1,
-      "max" : 1,
-      "category" : "test",
+    "loreseeker" : {
+      "name" : "Loreseeker Hybrid",
+      "description" : "Unleashing ancient horrors from their forbidden scrolls and artifacts.",
+      "category" : "hero",
       "models" : [
         {
-          "name" : "Depthbound Soulflayer",
+          "name" : "Loreseeker Hybrid",
           "movement" : 8,
           "courage" : 6,
           "shoot" : 4,
           "fight" : 6,
           "defense" : 5,
-          "reflexes" : 5,
-          "weapons" : [],
+          "reflexes" : 6,
+          "weapons" : [
+            "dagger",
+            {
+              "id" : "tentacle",
+              "count" : 6
+            },
+            {
+              "id" : "great_maul",
+              "count" : 2
+            }
+          ],
           "options" : [],
           "rules" : [
             {
               "id" : "wounds",
               "x" : 3
             },
-            "leader"
+            "leader",
+            "fear"
           ],
           "min" : 1,
           "max" : 1
@@ -271,29 +318,72 @@
         "Infantry"
       ]
     },
-    "loreseeker" : {
-      "name" : "Depthbound Loreseeker",
-      "description" : "Unleashing ancient horrors from their forbidden scrolls and artifacts.",
-      "min" : 1,
-      "max" : 1,
-      "category" : "test",
+    "tidelord" : {
+      "name" : "Tide Lord",
+      "description" : "A veteran of the civil war, leading small raids on the coasts of their foes.",
+      "category" : "hero",
       "models" : [
         {
-          "name" : "Depthbound Loreseeker",
+          "name" : "Tide Lord",
           "movement" : 8,
           "courage" : 6,
-          "shoot" : 4,
-          "fight" : 6,
-          "defense" : 5,
-          "reflexes" : 5,
-          "weapons" : [],
-          "options" : [],
+          "shoot" : 5,
+          "fight" : 5,
+          "defense" : 6,
+          "reflexes" : 6,
+          "weapons" : [
+            {
+              "id" : "handweapon",
+              "count" : 3
+            },
+            "shield"
+          ],
           "rules" : [
+            "leader",
             {
               "id" : "wounds",
               "x" : 3
             },
-            "leader"
+            {
+              "id" : "raid_tactics",
+              "x" : 1
+            }
+          ],
+          "options" : [
+            {
+              "replaceWeapon" : [
+                {
+                  "id" : "handweapon",
+                  "count" : 3
+                },
+                "shield"
+              ],
+              "withWeapon" : [
+                {
+                  "id" : "halberd",
+                  "count" : 2
+                }
+              ]
+            },
+            {
+              "addWeapon" : [
+                "riptide_bow"
+              ]
+            },
+            {
+              "replaceRule" : [
+                {
+                  "id" : "raid_tactics",
+                  "x" : 1
+                }
+              ],
+              "withRule" : [
+                {
+                  "id" : "raid_tactics",
+                  "x" : 2
+                }
+              ]
+            }
           ],
           "min" : 1,
           "max" : 1
@@ -301,19 +391,16 @@
       ],
       "keywords" : [
         "Hero",
-        "Wizard",
         "Infantry"
       ]
     },
     "guard" : {
-      "name" : "Depthbound Guardians on Bloodreef Eels",
+      "name" : "Guardians on Bloodreef Eels",
       "description" : "Enslaved by ancient spell and clad in cursed armor.",
-      "min" : 1,
-      "max" : 3,
       "category" : "elite",
       "models" : [
         {
-          "name" : "Depthbound Prince",
+          "name" : "Prince on Bloodreef Eel",
           "movement" : 10,
           "courage" : 4,
           "shoot" : 5,
@@ -339,9 +426,10 @@
                 }
               ],
               "withWeapon" : [
-                {
-                  "id" : "shock_spear"
-                }
+                [
+                  "shock_spear",
+                  "tide_sabre"
+                ]
               ]
             }
           ],
@@ -352,10 +440,10 @@
           "max" : 1
         },
         {
-          "name" : "Depthbound Guardian",
+          "name" : "Guardian on Bloodreef Eel",
           "movement" : 10,
           "courage" : 4,
-          "shoot" : 5,
+          "shoot" : 4,
           "fight" : 6,
           "defense" : 7,
           "reflexes" : 4,
@@ -381,7 +469,8 @@
                 {
                   "id" : "shock_spear"
                 }
-              ]
+              ],
+              "modelLimit" : "all"
             }
           ],
           "rules" : [
@@ -412,8 +501,6 @@
     "thralls" : {
       "name" : "Depthbound Thralls",
       "description" : "Enslaved by ritualistic magic, these thralls march ever forward.",
-      "min" : 1,
-      "max" : 6,
       "category" : "core",
       "models" : [
         {
@@ -426,12 +513,8 @@
           "reflexes" : 4,
           "weapons" : [
             {
-              "id" : "coral_bow",
+              "id" : "tide_great",
               "count" : 2
-            },
-            {
-              "id" : "tide_sword",
-              "count" : 3
             }
           ],
           "min" : 1,
@@ -440,25 +523,26 @@
             {
               "replaceWeapon" : [
                 {
-                  "id" : "coral_bow",
+                  "id" : "tide_great",
                   "count" : 2
-                },
-                {
-                  "id" : "tide_sword",
-                  "count" : 3
                 }
               ],
               "withWeapon" : [
                 [
                   {
-                    "id" : "tide_great",
+                    "id" : "coral_bow"
+                  },
+                  {
+                    "id" : "handweapon",
                     "count" : 3
                   }
                 ],
                 [
-                  "riptide_bow",
                   {
-                    "id" : "tide_dagger",
+                    "id" : "riptide_bow"
+                  },
+                  {
+                    "id" : "dagger",
                     "count" : 3
                   }
                 ]
@@ -475,33 +559,27 @@
           "defense" : 5,
           "reflexes" : 4,
           "weapons" : [
-            "coral_bow",
-            {
-              "id" : "tide_sword",
-              "count" : 2
-            }
+            "tide_great"
           ],
           "options" : [
             {
               "replaceWeapon" : [
-                "coral_bow",
-                {
-                  "id" : "tide_sword",
-                  "count" : 2
-                }
+                "tide_great"
               ],
               "withWeapon" : [
                 [
+                  "coral_bow",
                   {
-                    "id" : "tide_great",
+                    "id" : "handweapon",
                     "count" : 2
                   }
                 ],
                 [
                   "riptide_bow",
-                  "tide_dagger"
+                  "dagger"
                 ]
-              ]
+              ],
+              "modelLimit" : "all"
             }
           ],
           "rules" : [],
@@ -530,12 +608,10 @@
     "predator" : {
       "name" : "Depthbound Predators on Giant Shark",
       "description" : "Cursed Pack Hunters, striving to slay ever greater prey.",
-      "min" : 1,
-      "max" : 3,
       "category" : "elite",
       "models" : [
         {
-          "name" : "Depthbound Predator",
+          "name" : "Depthbound Predator on Giant Shark",
           "movement" : 10,
           "courage" : 4,
           "shoot" : 6,
@@ -548,7 +624,7 @@
               "count" : 3
             },
             {
-              "id" : "tide_sword",
+              "id" : "handweapon",
               "count" : 6
             },
             {
@@ -581,6 +657,117 @@
         "Monster",
         "Cavalry"
       ]
+    },
+    "hybrids" : {
+      "name" : "Depthbound Hybrids",
+      "description" : "",
+      "category" : "core",
+      "models" : [
+        {
+          "name" : "Depthbound Hybrid",
+          "movement" : 6,
+          "courage" : 4,
+          "shoot" : 4,
+          "fight" : 5,
+          "defense" : 5,
+          "reflexes" : 4,
+          "weapons" : [
+            {
+              "id" : "tentacle",
+              "count" : 4
+            },
+            {
+              "id" : "handweapon",
+              "count" : 2
+            },
+            "shield"
+          ],
+          "rules" : [],
+          "min" : 5,
+          "max" : 15
+        }
+      ],
+      "keywords" : [
+        "Infantry"
+      ],
+      "options" : [
+        {
+          "replaceWeapon" : [
+            {
+              "id" : "handweapon",
+              "count" : 2
+            },
+            "shield"
+          ],
+          "withWeapon" : [
+            {
+              "id" : "great_maul",
+              "count" : 2
+            }
+          ],
+          "modelLimit" : "all"
+        },
+        {
+          "addRule" : [
+            "banner"
+          ],
+          "modelLimit" : 1
+        },
+        {
+          "addRule" : [
+            "musician"
+          ],
+          "modelLimit" : 1
+        }
+      ]
+    },
+    "leviathan" : {
+      "name" : "Guardians on Worldeater Leviathan",
+      "description" : "",
+      "category" : "rare",
+      "models" : [
+        {
+          "name" : "Guardians on Worldeater Leviathan",
+          "movement" : 12,
+          "courage" : 5,
+          "shoot" : 6,
+          "fight" : 7,
+          "defense" : 12,
+          "reflexes" : 5,
+          "weapons" : [
+            {
+              "id" : "crush_bite",
+              "count" : 2
+            },
+            {
+              "id" : "harpoon",
+              "count" : 2
+            },
+            {
+              "id" : "spear",
+              "count" : 6
+            },
+            {
+              "id" : "fins",
+              "count" : 4
+            }
+          ],
+          "rules" : [
+            "hover",
+            "damage_table_monster",
+            {
+              "id" : "impact",
+              "x" : 3
+            }
+          ],
+          "min" : 1,
+          "max" : 1
+        }
+      ],
+      "keywords" : [
+        "Monster",
+        "Beast"
+      ]
     }
   },
   "weapons" : {
@@ -604,7 +791,7 @@
     "riptide_bow" : {
       "name" : "Riptide Bow",
       "ap" : 1,
-      "attacks" : 2,
+      "attacks" : 1,
       "rules" : [
         {
           "id" : "deadly",
@@ -641,7 +828,7 @@
         "cumbersome",
         {
           "id" : "reach",
-          "x" : 2
+          "x" : 1
         }
       ]
     },
@@ -649,16 +836,10 @@
       "name" : "Tidestone Halberd",
       "ap" : 6,
       "attacks" : 1,
-      "short" : "Melee"
-    },
-    "a_lance" : {
-      "name" : "Anointed Lance",
-      "ap" : 2,
-      "attacks" : 1,
       "short" : "Melee",
       "rules" : [
         {
-          "id" : "impact",
+          "id" : "reach",
           "x" : 1
         }
       ]
@@ -671,7 +852,7 @@
       "rules" : [
         {
           "id" : "reach",
-          "x" : 2
+          "x" : 1
         },
         {
           "id" : "blast",
@@ -685,17 +866,6 @@
       "attacks" : 1,
       "short" : "Melee"
     },
-    "tide_sword" : {
-      "name" : "Tidestone Sword",
-      "ap" : 1,
-      "attacks" : 1,
-      "short" : "Melee"
-    },
-    "tide_dagger" : {
-      "name" : "Tidestone Dagger",
-      "attacks" : 1,
-      "short" : "Melee"
-    },
     "tide_sabre" : {
       "name" : "Tidestone Sabre",
       "ap" : 2,
@@ -704,7 +874,7 @@
     },
     "swarm" : {
       "name" : "Bladefish Swarm",
-      "attacks" : 8,
+      "attacks" : 1,
       "medium" : 18,
       "short" : 9
     },
@@ -746,6 +916,33 @@
           "ap" : 2
         }
       ]
+    },
+    "tentacle" : {
+      "name" : "Lashing Tentacle",
+      "attacks" : 1,
+      "ap" : 1,
+      "short" : "Melee",
+      "rules" : [
+        {
+          "id" : "reach",
+          "x" : 2
+        }
+      ]
+    },
+    "crush_bite" : {
+      "name" : "Crushing Maw",
+      "attacks" : 1,
+      "ap" : 8,
+      "short" : "Melee",
+      "rules" : [
+        "rending"
+      ]
+    },
+    "fins" : {
+      "name" : "Scythed Fins",
+      "attacks" : 1,
+      "ap" : 5,
+      "short" : "Melee"
     }
   },
   "rules" : {
@@ -759,38 +956,54 @@
       "description" : "Units engaged in Melee with a model that has this weapon suffer -1 to Initiative tests when escaping combat for each weapon with this rule.",
       "points" : 1
     },
-    "frenzy" : {
-      "name" : "Frenzy",
-      "description" : "Add 1 to the attack characteristic of a weapon the model wields. When this model fights, hit rolls of 1 or 2 generate an additional attack.",
-      "points" : 6
-    },
-    "incite" : {
-      "name" : "Incite",
-      "description" : "This unit and all friendly units within 6“ gain +X“ movement when making a charge action.",
-      "inputs" : [
-        "x"
-      ],
-      "points" : [
-        "rule.x",
-        {
-          "multiply" : 3
-        }
-      ]
-    },
     "net_0" : {
       "name" : "Barbed Net",
       "description" : "Units hit by this weapon half their movement until the end of the turn.",
       "points" : 3
     },
-    "banner" : {
-      "name" : "Banner",
-      "description" : "This unit may re-roll a single failed Courage test when removing Shock.",
-      "points" : 5
+    "raid_tactics" : {
+      "name" : "Raider Tactics",
+      "inputs" : [
+        "x"
+      ],
+      "description" : "When this unit is activated, choose up to X friendly _Infantry_ units within 6\". Those units may re-roll failed Strength tests of 9+ until the end of the round.",
+      "points" : [
+        "rule.x",
+        {
+          "multiply" : 10
+        }
+      ]
     },
-    "musician" : {
-      "name" : "Musician",
-      "description" : "This unit may re-roll a single failed Initiative test when sprinting.",
-      "points" : 5
+    "battle_prayer" : {
+      "name" : "Battle Prayer",
+      "description" : "When this unit is activated, choose a Blessing for this unit or a friendly _Infantry_ unit within 6\" to receive until the end of the turn:\n* Divine Shield: Roll a die when a model in this unit loses a wound. On a value of 1 or 2 that wound is not lost.\n* Righteous Fury: When this unit fights, hit rolls of 1 or 2 generate an additional attack.\n* Healing Word: One model in the unit immediately heals D3 wounds.",
+      "points" : [
+        15
+      ]
+    },
+    "curse" : {
+      "name" : "Dark Prophecies",
+      "description" : "When this unit is activated, choose a Curse for an enemy _Infantry_ unit within 6\" to receive until the end of the turn:\n* Blinding Ink: This unit has -1 Strength and Accuracy when fighting or making a shooting attack.\n* Brittle Bones: When this unit is targeted by an attack, hit rolls of 1 or 2 generate an additional attack.\n* Soul Siphon: One model in the unit immediately takes 2 hits with AP2.",
+      "points" : [
+        15
+      ]
+    },
+    "hatred" : {
+      "name" : "Hatred",
+      "inputs" : [
+        "x"
+      ],
+      "description" : "This unit has +1AP with melee weapons when attacking units of X types.",
+      "points" : [
+        10
+      ]
+    },
+    "soul" : {
+      "name" : "Soulspike",
+      "description" : "This unit has +1AP with melee weapons when attacking _Hero_ or _Monster_ units.",
+      "points" : [
+        1
+      ]
     }
   },
   "powers" : {},
@@ -803,14 +1016,6 @@
       "cost" : 1
     }
   ],
-  "relics" : [
-    {
-      "name" : "Rune of Sanguine Tides",
-      "description" : "Upgrade one Depthbound King model with Frenzy.",
-      "flavor" : "Inscribed onto the skin, inciting blind rage and bloodshed.",
-      "points" : 15,
-      "rule" : "frenzy"
-    }
-  ],
+  "relics" : [],
   "models" : {}
 }
