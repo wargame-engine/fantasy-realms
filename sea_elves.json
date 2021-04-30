@@ -329,14 +329,13 @@
           "courage" : 6,
           "shoot" : 5,
           "fight" : 5,
-          "defense" : 6,
+          "defense" : 7,
           "reflexes" : 6,
           "weapons" : [
             {
               "id" : "handweapon",
               "count" : 3
-            },
-            "shield"
+            }
           ],
           "rules" : [
             "leader",
@@ -355,13 +354,11 @@
                 {
                   "id" : "handweapon",
                   "count" : 3
-                },
-                "shield"
+                }
               ],
               "withWeapon" : [
                 {
-                  "id" : "halberd",
-                  "count" : 2
+                  "id" : "halberd"
                 }
               ]
             },
