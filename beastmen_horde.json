@@ -10,28 +10,24 @@
       "name" : "Wrath Legion",
       "id" : "rage_legions",
       "color" : "#ff0000",
-      "restricted" : true,
       "background" : "Warriors of unbridled fury."
     },
     "change_legions" : {
       "name" : "Arcane Legion",
       "id" : "change_legions",
       "color" : "#18abcc",
-      "restricted" : true,
       "background" : "Mighty Sorcerers that bring down a storm of spells."
     },
     "plague_legions" : {
       "name" : "Corrupted Legion",
       "id" : "plague_legions",
       "color" : "#90ee90",
-      "restricted" : true,
       "background" : "Resilient spreaders of decay."
     },
     "lust_legions" : {
       "name" : "Sinful Legion",
       "id" : "lust_legions",
       "color" : "#800080",
-      "restricted" : true,
       "background" : "Sadistic and twisted Warriors."
     }
   },
@@ -718,6 +714,77 @@
         "Infantry"
       ]
     },
+    "ogre_centaurs" : {
+      "name" : "Ogre Centaurs",
+      "description" : "Not all centaurs are made of humans...or of horses.  These monstrous centaurs lead any charge they're part of...",
+      "category" : "elite",
+      "models" : [
+        {
+          "name" : "Ogre Centaur",
+          "movement" : 10,
+          "courage" : 5,
+          "shoot" : 4,
+          "fight" : 6,
+          "defense" : 7,
+          "reflexes" : 5,
+          "weapons" : [
+            {
+              "id" : "handweapon",
+              "count" : 6
+            },
+            {
+              "id" : "lizzer_claws",
+              "count" : 2
+            }
+          ],
+          "min" : 3,
+          "max" : 6
+        }
+      ],
+      "subfactions" : [
+        "none",
+        "change_legions",
+        "rage_legions",
+        "lust_legions",
+        "plague_legions"
+      ],
+      "options" : [
+        {
+          "replaceWeapon" : [
+            {
+              "id" : "handweapon",
+              "count" : 6
+            }
+          ],
+          "withWeapon" : [
+              {
+                "id" : "giant_hammer",
+                "count" : 3
+              },
+              {
+                "id" : "crude_polearm",
+                "count" : 4
+              }
+              
+            ]
+        }
+      ],
+      "rules" : [
+        {
+          "id" : "impact",
+          "x" : 1
+        },
+        {
+          "id" : "wounds",
+          "x" : 3
+        }
+
+      ],
+      "keywords" : [
+        "Beast",
+        "Heavy Infantry"
+      ]
+    },
     "cyclops" : {
       "name" : "Cyclops",
       "description" : "Cursed and twisted into a beastial shape.",
@@ -816,9 +883,21 @@
       "rules" : [
         {
           "id" : "reach",
-          "x" : 2
+          "x" : 1
         },
         "cumbersome"
+      ]
+    },
+    "crude_polearm" : {
+      "name" : "Crude Polearm",
+      "ap" : 2,
+      "attacks" : 1,
+      "short" : "Melee",
+      "rules" : [
+        {
+          "id" : "reach",
+          "x" : 1
+        }
       ]
     },
     "hooves_and_teeth" : {
@@ -872,7 +951,7 @@
       "rules" : [
         {
           "id" : "reach",
-          "x" : 2
+          "x" : 1
         }
       ]
     },
@@ -884,7 +963,7 @@
       "rules" : [
         {
           "id" : "reach",
-          "x" : 2
+          "x" : 1
         }
       ]
     },
@@ -896,7 +975,7 @@
       "rules" : [
         {
           "id" : "reach",
-          "x" : 2
+          "x" : 1
         }
       ]
     },
@@ -923,10 +1002,26 @@
         {
           "id" : "deadly",
           "x" : 3
+          
         }
+        
       ]
+    },
+    "lizzer_claws" : {
+      "name" : "Lizard Claws",
+      "ap" : 2,
+      "attacks" : 1,
+      "short" : "Melee"
+
+    },
+    "giant_hammer" : {
+      "name" : "Big Crusher",
+      "ap" : 4,
+      "attacks" : 1,
+      "short" : "Melee"
     }
   },
+  
   "rules" : {
     "brutal_tactics" : {
       "name" : "Brutalizer Tactics",
@@ -1002,9 +1097,10 @@
       "cost" : 1
     },
     {
-      "subfactions" : [
-        "alien_hunters"
-      ],
+     "subfactions" : [
+       "none",
+       "change_traitors"
+    ],      
       "name" : "Thorngate",
       "phase" : "pre_game",
       "description" : "Up to half of any force's units, one point for each may be placed in reserves before the game begins. At the beginning of any round after the first, those units may be set up within 6\" of any table edge and more than 12\" from any enemy units. If both players have reserves arriving on the same turn, roll off to see who places theirs first.",
