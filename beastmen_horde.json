@@ -938,6 +938,7 @@
         "Monster",
         "Infantry"
       ]
+      }
     },
   "weapons" : {
     "gore_blade" : {
@@ -1092,7 +1093,7 @@
       "rules" : [        
           {
             "id" : "reach",
-            "x" : 1
+            "x" : 2
           }
       ]
     }
@@ -1214,5 +1215,4 @@
       ]
     }
   }
-}
 }
