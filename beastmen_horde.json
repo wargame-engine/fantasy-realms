@@ -795,8 +795,6 @@
       "category" : "hero",
       "models" : [
         {
-          "models" : [
-            {
               "name" : "Blessed Ogre Centaur",
               "movement" : 10,
               "courage" : 6,
@@ -851,10 +849,8 @@
                 }
               ]
             }
-            ]
-            }
           ],
-          "subfactions" : [
+            "subfactions" : [
             "none",
             "change_legions",
             "rage_legions",
@@ -864,7 +860,7 @@
           "keywords" : [
             "Hero",
             "Beast",
-            "Heavy_Infantry"
+            "Heavy Infantry"
           ]
         },
       "cyclops" : {
@@ -943,8 +939,7 @@
         "Monster",
         "Infantry"
       ]
-    }
-  },
+    },
   "weapons" : {
     "gore_blade" : {
       "name" : "Gore Blade",
@@ -1221,4 +1216,5 @@
       ]
     }
   }
+}
 }
