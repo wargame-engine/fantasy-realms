@@ -43,7 +43,7 @@
       "models" : [
         {
           "name" : "Minotaur Lord",
-          "movement" : 9,
+          "movement" : 7,
           "courage" : 6,
           "shoot" : 4,
           "fight" : 6,
@@ -112,7 +112,7 @@
       "models" : [
         {
           "name" : "Satyr Lord",
-          "movement" : 8,
+          "movement" : 7,
           "courage" : 6,
           "shoot" : 4,
           "fight" : 6,
@@ -179,7 +179,7 @@
       "models" : [
         {
           "name" : "Satyr Shaman",
-          "movement" : 8,
+          "movement" : 7,
           "courage" : 4,
           "shoot" : 4,
           "fight" : 5,
@@ -241,7 +241,7 @@
       "models" : [
         {
           "name" : "Longhorn",
-          "movement" : 8,
+          "movement" : 7,
           "courage" : 4,
           "shoot" : 5,
           "fight" : 5,
@@ -286,7 +286,7 @@
         },
         {
           "name" : "Satyr Raider",
-          "movement" : 8,
+          "movement" : 7,
           "courage" : 4,
           "shoot" : 5,
           "fight" : 5,
@@ -350,7 +350,7 @@
       "models" : [
         {
           "name" : "Longhorn",
-          "movement" : 8,
+          "movement" : 7,
           "courage" : 4,
           "shoot" : 4,
           "fight" : 5,
@@ -386,7 +386,7 @@
         },
         {
           "name" : "Satyr Warrior",
-          "movement" : 8,
+          "movement" : 7,
           "courage" : 4,
           "shoot" : 4,
           "fight" : 5,
@@ -448,7 +448,7 @@
       "models" : [
         {
           "name" : "Slaughter-Lord",
-          "movement" : 8,
+          "movement" : 7,
           "courage" : 4,
           "shoot" : 4,
           "fight" : 5,
@@ -465,7 +465,7 @@
         },
         {
           "name" : "Satyr Despoiler",
-          "movement" : 8,
+          "movement" : 7,
           "courage" : 4,
           "shoot" : 4,
           "fight" : 5,
@@ -511,7 +511,7 @@
       "models" : [
         {
           "name" : "Bloodhorn",
-          "movement" : 9,
+          "movement" : 8,
           "courage" : 4,
           "shoot" : 4,
           "fight" : 5,
@@ -558,7 +558,7 @@
         },
         {
           "name" : "Minotaur",
-          "movement" : 9,
+          "movement" : 8,
           "courage" : 4,
           "shoot" : 4,
           "fight" : 5,
@@ -643,7 +643,7 @@
       "models" : [
         {
           "name" : "Bloodhoof",
-          "movement" : 10,
+          "movement" : 8,
           "courage" : 4,
           "shoot" : 4,
           "fight" : 5,
@@ -665,7 +665,7 @@
         },
         {
           "name" : "Centaur",
-          "movement" : 10,
+          "movement" : 8,
           "courage" : 4,
           "shoot" : 4,
           "fight" : 5,
