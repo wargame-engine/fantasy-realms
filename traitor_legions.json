@@ -51,17 +51,17 @@
           "defense" : 7,
           "reflexes" : 6,
           "weapons" : [
+            "shield",
             {
-              "id" : "rune_great",
+              "id" : "hexed_halberd",
               "count" : 4
-            },
-            "shield"
+            }
           ],
           "options" : [
             {
               "replaceWeapon" : [
                 {
-                  "id" : "rune_great",
+                  "id" : "hexed_halberd",
                   "count" : 4
                 }
               ],
@@ -71,7 +71,7 @@
                   "count" : 4
                 },
                 {
-                  "id" : "hexed_halberd",
+                  "id" : "rune_great",
                   "count" : 4
                 }
               ]
@@ -154,6 +154,11 @@
                 "id" : "magic",
                 "x" : 2
               }
+            },
+            {
+              "addRule" : [
+                "companion"
+              ]
             }
           ],
           "rules" : [
@@ -321,7 +326,7 @@
           "reflexes" : 4,
           "weapons" : [
             {
-              "id" : "barbarian_blade",
+              "id" : "handweapon",
               "count" : 3
             },
             "shield"
@@ -330,7 +335,7 @@
             {
               "replaceWeapon" : [
                 {
-                  "id" : "barbarian_blade",
+                  "id" : "handweapon",
                   "count" : 3
                 },
                 "shield"
@@ -356,7 +361,7 @@
           "reflexes" : 4,
           "weapons" : [
             {
-              "id" : "barbarian_blade",
+              "id" : "handweapon",
               "count" : 2
             },
             "shield"
@@ -367,7 +372,7 @@
             {
               "replaceWeapon" : [
                 {
-                  "id" : "barbarian_blade",
+                  "id" : "handweapon",
                   "count" : 2
                 },
                 "shield"
@@ -418,12 +423,12 @@
           "reflexes" : 4,
           "weapons" : [
             {
-              "id" : "rune_lance",
-              "count" : 3
-            },
-            {
               "id" : "hooves_and_teeth",
               "count" : 2
+            },
+            {
+              "id" : "hexed_halberd",
+              "count" : 3
             }
           ],
           "rules" : [
@@ -435,7 +440,7 @@
             {
               "replaceWeapon" : [
                 {
-                  "id" : "rune_lance",
+                  "id" : "hexed_halberd",
                   "count" : 3
                 }
               ],
@@ -445,7 +450,7 @@
                   "count" : 3
                 },
                 {
-                  "id" : "hexed_halberd",
+                  "id" : "rune_lance",
                   "count" : 3
                 }
               ]
@@ -530,7 +535,7 @@
           "reflexes" : 4,
           "weapons" : [
             {
-              "id" : "barbarian_blade",
+              "id" : "handweapon",
               "count" : 3
             },
             {
@@ -545,7 +550,7 @@
             {
               "replaceWeapon" : [
                 {
-                  "id" : "barbarian_blade",
+                  "id" : "handweapon",
                   "count" : 3
                 },
                 "shield"
@@ -571,7 +576,7 @@
           "reflexes" : 4,
           "weapons" : [
             {
-              "id" : "barbarian_blade",
+              "id" : "handweapon",
               "count" : 2
             },
             {
@@ -586,7 +591,7 @@
             {
               "replaceWeapon" : [
                 {
-                  "id" : "barbarian_blade",
+                  "id" : "handweapon",
                   "count" : 2
                 },
                 "shield"
@@ -623,9 +628,9 @@
         }
       ]
     },
-    "standard_bearer" : {
-      "name" : "Exalted Hero with Standard",
-      "description" : "An chosen standard bearer of the dark gods.",
+    "icon_bearer" : {
+      "name" : "Exalted Hero with Accursed Icon",
+      "description" : "An chosen icon bearer of the dark gods.",
       "min" : 1,
       "max" : 1,
       "category" : "hero",
@@ -647,34 +652,16 @@
           "rules" : [
             {
               "id" : "wounds",
-              "x" : 2
+              "x" : 3
             },
             "support",
-            "banner_of_zeal"
+            {
+              "id" : "icon_x",
+              "x" : "Infantry"
+            }
           ],
           "min" : 1,
-          "max" : 1,
-          "options" : [
-            {
-              "replaceRule" : [
-                "banner_of_zeal"
-              ],
-              "withRule" : [
-                {
-                  "id" : "banner_of_wrath"
-                },
-                {
-                  "id" : "banner_of_nightmares"
-                },
-                {
-                  "id" : "banner_of_pestilence"
-                },
-                {
-                  "id" : "banner_of_speed"
-                }
-              ]
-            }
-          ]
+          "max" : 1
         }
       ],
       "subfactions" : [
@@ -705,17 +692,17 @@
           "defense" : 7,
           "reflexes" : 6,
           "weapons" : [
+            "shield",
             {
-              "id" : "rune_great",
+              "id" : "hexed_halberd",
               "count" : 4
-            },
-            "shield"
+            }
           ],
           "options" : [
             {
               "replaceWeapon" : [
                 {
-                  "id" : "rune_great",
+                  "id" : "hexed_halberd",
                   "count" : 4
                 }
               ],
@@ -725,7 +712,7 @@
                   "count" : 4
                 },
                 {
-                  "id" : "hexed_halberd",
+                  "id" : "rune_great",
                   "count" : 4
                 },
                 {
@@ -765,13 +752,13 @@
         "Cavalry"
       ]
     },
-    "fallen_paladin" : {
-      "name" : "Fallen Paladin",
-      "description" : "Eternal Protectors who have been corrupted by the dark gods.",
+    "chosen" : {
+      "name" : "Traitor Chosen",
+      "description" : "Blessed by their dark gods, these warriors set out to slay the mightiest heroes.",
       "category" : "elite",
       "models" : [
         {
-          "name" : "Oathbreaker Paladin",
+          "name" : "Traitor Paladin",
           "movement" : 5,
           "courage" : 5,
           "shoot" : 4,
@@ -788,7 +775,7 @@
           "max" : 1
         },
         {
-          "name" : "Fallen Paladin",
+          "name" : "Traitor Chosen",
           "movement" : 5,
           "courage" : 6,
           "shoot" : 4,
@@ -801,8 +788,8 @@
               "count" : 3
             }
           ],
-          "min" : 4,
-          "max" : 19
+          "min" : 2,
+          "max" : 11
         }
       ],
       "subfactions" : [
@@ -825,26 +812,171 @@
           ],
           "modelLimit" : 1
         }
+      ],
+      "rules" : [
+        "assassin"
+      ]
+    },
+    "traitor_cultists" : {
+      "name" : "Traitor Cultists",
+      "description" : "Fanatical masses serving the Traitor Gods.",
+      "category" : "core",
+      "models" : [
+        {
+          "name" : "Traitor Adept",
+          "movement" : 6,
+          "courage" : 4,
+          "shoot" : 4,
+          "fight" : 5,
+          "defense" : 5,
+          "reflexes" : 4,
+          "weapons" : [
+            {
+              "id" : "rune_blade",
+              "count" : 3
+            }
+          ],
+          "options" : [
+            {
+              "replaceWeapon" : [
+                {
+                  "id" : "rune_blade",
+                  "count" : 3
+                }
+              ],
+              "withWeapon" : [
+                [
+                  {
+                    "id" : "rune_blade",
+                    "count" : 2
+                  },
+                  "shield"
+                ],
+                [
+                  "long_bow",
+                  {
+                    "id" : "handweapon",
+                    "count" : 3
+                  }
+                ]
+              ]
+            },
+            {
+              "replaceRule" : [
+                {
+                  "id" : "dispel",
+                  "x" : 1
+                }
+              ],
+              "withRule" : [
+                {
+                  "id" : "magic",
+                  "x" : 1
+                }
+              ]
+            }
+          ],
+          "min" : 1,
+          "max" : 1,
+          "rules" : [
+            {
+              "id" : "dispel",
+              "x" : 1
+            }
+          ]
+        },
+        {
+          "name" : "Traitor Cultist",
+          "movement" : 6,
+          "courage" : 4,
+          "shoot" : 4,
+          "fight" : 5,
+          "defense" : 5,
+          "reflexes" : 4,
+          "weapons" : [
+            {
+              "id" : "handweapon",
+              "count" : 2
+            }
+          ],
+          "min" : 9,
+          "max" : 29,
+          "options" : [
+            {
+              "replaceWeapon" : [
+                {
+                  "id" : "rune_blade",
+                  "count" : 2
+                }
+              ],
+              "withWeapon" : [
+                [
+                  "rune_blade",
+                  "shield"
+                ],
+                [
+                  "bow",
+                  {
+                    "id" : "handweapon",
+                    "count" : 2
+                  }
+                ]
+              ],
+              "modelLimit" : "all"
+            }
+          ]
+        }
+      ],
+      "subfactions" : [
+        "none",
+        "rage_legions",
+        "lust_legions",
+        "plague_legions",
+        "change_legion"
+      ],
+      "options" : [
+        {
+          "replaceWeapon" : [
+            {
+              "id" : "rune_blade",
+              "count" : 2
+            }
+          ],
+          "withWeapon" : [
+            [
+              "halberd"
+            ]
+          ],
+          "modelLimit" : "3/10"
+        },
+        {
+          "addRule" : [
+            "artifact"
+          ],
+          "modelLimit" : "1/10"
+        },
+        {
+          "addRule" : [
+            "companion"
+          ],
+          "modelLimit" : "1/10"
+        },
+        {
+          "addRule" : [
+            "banner"
+          ],
+          "modelLimit" : 1
+        },
+        {
+          "addRule" : [
+            "musician"
+          ],
+          "modelLimit" : 1
+        }
       ]
     }
   },
   "weapons" : {
-    "barbarian_blade" : {
-      "name" : "Barbarian Blade",
-      "ap" : 1,
-      "attacks" : 1,
-      "short" : "Melee"
-    },
-    "shield" : {
-      "name" : "Shield",
-      "attacks" : 0,
-      "short" : "Melee",
-      "rules" : [
-        {
-          "id" : "shield"
-        }
-      ]
-    },
     "barbarian_spear" : {
       "name" : "Barbarian Spear",
       "ap" : 2,
@@ -853,7 +985,7 @@
       "rules" : [
         {
           "id" : "reach",
-          "x" : 2
+          "x" : 1
         }
       ]
     },
@@ -881,14 +1013,15 @@
     },
     "rune_halberd" : {
       "name" : "Runecarved Halberd",
-      "ap" : 1,
+      "ap" : 2,
       "attacks" : 1,
       "short" : "Melee",
       "rules" : [
         {
           "id" : "reach",
-          "x" : 2
-        }
+          "x" : 1
+        },
+        "rending"
       ]
     },
     "rune_great" : {
@@ -904,9 +1037,10 @@
       "short" : "Melee",
       "rules" : [
         {
-          "id" : "impact",
+          "id" : "reach",
           "x" : 1
-        }
+        },
+        "lance"
       ]
     },
     "hexed_halberd" : {
@@ -917,17 +1051,9 @@
       "rules" : [
         {
           "id" : "reach",
-          "x" : 2
-        }
-      ]
-    },
-    "leeching_sword" : {
-      "name" : "Leeching Sword",
-      "attacks" : 1,
-      "ap" : 3,
-      "short" : "Melee",
-      "rules" : [
-        "leeching"
+          "x" : 1
+        },
+        "rending"
       ]
     },
     "demon_great" : {
@@ -954,30 +1080,15 @@
         }
       ]
     },
-    "banner_of_wrath" : {
-      "name" : "Banner of Wrath",
-      "description" : "Once per round, a friendly _Infantry_ unit within 6\" gains +1 AP on all Melee weapons.",
-      "points" : 10
+    "artifact" : {
+      "name" : "Cursed Artifact",
+      "description" : "Once per turn, for every model with this rule, add +1 to a cast roll of a friendly _Wizard_ unit within 6“ of this unit.",
+      "points" : 5
     },
-    "banner_of_nightmares" : {
-      "name" : "Banner of Nightmares",
-      "description" : "Enemy units within 6\" get -1 courage.",
-      "points" : 10
-    },
-    "banner_of_speed" : {
-      "name" : "Banner of Speed",
-      "description" : "Once per round, a friendly _Infantry_ unit within 6\" gains +3“ the next time it makes a Move or Charge action.",
-      "points" : 10
-    },
-    "banner_of_pestilence" : {
-      "name" : "Banner of Pestilence",
-      "description" : "Enemy units within 6\" get -1 strength.",
-      "points" : 10
-    },
-    "banner_of_zeal" : {
-      "name" : "Banner of Zeal",
-      "description" : "Once per round, a friendly _Infantry_ unit within 6\" may re-roll a single failed Courage test when removing Shock.",
-      "points" : 10
+    "companion" : {
+      "name" : "Arcane Companion",
+      "description" : "Once per turn when a power within 24“ of this model gets dispelled, deal 1 hit with AP(2) to the caster.",
+      "points" : 5
     }
   },
   "strategies" : [

@@ -13,7 +13,7 @@
       "models" : [
         {
           "name" : "Elven Prince",
-          "movement" : 8,
+          "movement" : 7,
           "courage" : 6,
           "shoot" : 6,
           "fight" : 7,
@@ -95,7 +95,7 @@
       "models" : [
         {
           "name" : "Archmage",
-          "movement" : 8,
+          "movement" : 7,
           "courage" : 6,
           "shoot" : 4,
           "fight" : 5,
@@ -134,7 +134,7 @@
       "models" : [
         {
           "name" : "Phoenix Paladin",
-          "movement" : 8,
+          "movement" : 7,
           "courage" : 6,
           "shoot" : 4,
           "fight" : 6,
@@ -179,7 +179,7 @@
           "name" : "High-Warden",
           "max" : 1,
           "min" : 1,
-          "movement" : 8,
+          "movement" : 7,
           "courage" : 5,
           "shoot" : 6,
           "fight" : 6,
@@ -222,7 +222,7 @@
           "max" : 19,
           "min" : 4,
           "name" : "Soldier",
-          "movement" : 8,
+          "movement" : 7,
           "courage" : 5,
           "shoot" : 6,
           "fight" : 6,
@@ -455,7 +455,7 @@
       "models" : [
         {
           "name" : "Guard Captain",
-          "movement" : 8,
+          "movement" : 7,
           "courage" : 5,
           "shoot" : 6,
           "fight" : 6,
@@ -479,7 +479,7 @@
         },
         {
           "name" : "Guard",
-          "movement" : 8,
+          "movement" : 7,
           "courage" : 5,
           "shoot" : 6,
           "fight" : 6,
@@ -525,7 +525,7 @@
       "models" : [
         {
           "name" : "Highlands Champion",
-          "movement" : 8,
+          "movement" : 7,
           "courage" : 6,
           "shoot" : 4,
           "fight" : 6,
@@ -533,7 +533,7 @@
           "reflexes" : 5,
           "weapons" : [
             {
-              "id" : "great_axe",
+              "id" : "great_blade",
               "count" : 3
             }
           ],
@@ -551,7 +551,7 @@
         },
         {
           "name" : "Protector",
-          "movement" : 8,
+          "movement" : 7,
           "courage" : 6,
           "shoot" : 4,
           "fight" : 6,
@@ -559,7 +559,7 @@
           "reflexes" : 5,
           "weapons" : [
             {
-              "id" : "great_axe",
+              "id" : "great_blade",
               "count" : 2
             }
           ],
@@ -599,7 +599,7 @@
       "models" : [
         {
           "name" : "Slayer",
-          "movement" : 8,
+          "movement" : 7,
           "courage" : 5,
           "shoot" : 6,
           "fight" : 6,
@@ -623,7 +623,7 @@
         },
         {
           "name" : "Ranger",
-          "movement" : 8,
+          "movement" : 7,
           "courage" : 5,
           "shoot" : 6,
           "fight" : 6,
@@ -654,7 +654,7 @@
       "models" : [
         {
           "name" : "Pheonix Knight",
-          "movement" : 8,
+          "movement" : 7,
           "courage" : 6,
           "shoot" : 4,
           "fight" : 6,
@@ -677,7 +677,7 @@
         },
         {
           "name" : "Templar",
-          "movement" : 8,
+          "movement" : 7,
           "courage" : 6,
           "shoot" : 4,
           "fight" : 6,
@@ -724,50 +724,54 @@
     "elf_dragoon" : {
       "name" : "Dragoons",
       "description" : "Clad in magical armor, these royal warriors are mighty foes.",
-      "min" : 1,
-      "max" : 3,
       "category" : "rare",
       "models" : [
         {
           "name" : "Dragon Templar",
-          "movement" : 6,
-          "courage" : 7,
-          "shoot" : 7,
-          "fight" : 7,
+          "movement" : 10,
+          "courage" : 5,
+          "shoot" : 4,
+          "fight" : 6,
           "defense" : 7,
-          "reflexes" : 6,
+          "reflexes" : 5,
           "weapons" : [
             {
               "id" : "lance",
+              "count" : 3
+            },
+            {
+              "id" : "hooves_and_teeth",
               "count" : 2
             }
           ],
           "rules" : [
             "runes",
-            "shield",
-            "mount_horse"
+            "fearless"
           ],
           "min" : 1,
           "max" : 1
         },
         {
           "name" : "Dragoon",
-          "movement" : 6,
-          "courage" : 7,
-          "shoot" : 6,
+          "movement" : 10,
+          "courage" : 5,
+          "shoot" : 4,
           "fight" : 6,
           "defense" : 7,
-          "reflexes" : 6,
+          "reflexes" : 5,
           "weapons" : [
             {
               "id" : "lance",
+              "count" : 2
+            },
+            {
+              "id" : "hooves_and_teeth",
               "count" : 2
             }
           ],
           "rules" : [
             "runes",
-            "shield",
-            "mount_horse"
+            "fearless"
           ],
           "min" : 2,
           "max" : 11
@@ -776,7 +780,20 @@
       "keywords" : [
         "Cavalry"
       ],
-      "options" : []
+      "options" : [
+        {
+          "addRule" : [
+            "banner"
+          ],
+          "modelLimit" : 1
+        },
+        {
+          "addRule" : [
+            "musician"
+          ],
+          "modelLimit" : 1
+        }
+      ]
     },
     "great_eagle" : {
       "name" : "Great Eagle",
@@ -860,7 +877,7 @@
                 ],
                 [
                   {
-                    "id" : "great_axe"
+                    "id" : "great_blade"
                   },
                   "handweapon"
                 ]
@@ -890,7 +907,7 @@
         }
       ],
       "keywords" : [
-        "Monster",
+        "Beast",
         "Warmachine",
         "Cavalry"
       ],
@@ -927,7 +944,7 @@
         }
       ],
       "keywords" : [
-        "Monster",
+        "Beast",
         "Warmachine",
         "Cavalry"
       ],
@@ -942,7 +959,7 @@
       "models" : [
         {
           "name" : "Crew",
-          "movement" : 8,
+          "movement" : 7,
           "courage" : 5,
           "shoot" : 4,
           "fight" : 6,
@@ -956,7 +973,7 @@
         },
         {
           "name" : "Great Ballista",
-          "movement" : 8,
+          "movement" : 7,
           "courage" : 0,
           "shoot" : 6,
           "fight" : 0,
@@ -969,8 +986,7 @@
             {
               "id" : "team",
               "x" : 2
-            },
-            "damage_table_warmachine"
+            }
           ],
           "min" : 1,
           "max" : 1
@@ -987,7 +1003,7 @@
       "description" : "Reborn from the ashes of the last flame, this magical being is a deadly creature.",
       "min" : 1,
       "max" : 1,
-      "category" : "rare",
+      "category" : "test",
       "models" : [
         {
           "name" : "Flameheart Phoenix",
@@ -1018,8 +1034,8 @@
         }
       ],
       "keywords" : [
-        "Flying",
-        "Monstrous Cavalry"
+        "Beast",
+        "Monster"
       ]
     },
     "elf_frost" : {
@@ -1027,7 +1043,7 @@
       "description" : "Like a tear frozen in ice, this deadly creature swoops down on its enemies.",
       "min" : 1,
       "max" : 1,
-      "category" : "rare",
+      "category" : "test",
       "models" : [
         {
           "name" : "Frostfire Phoenix",
@@ -1058,8 +1074,8 @@
         }
       ],
       "keywords" : [
-        "Flying",
-        "Monstrous Cavarly"
+        "Beast",
+        "Monster"
       ]
     },
     "elf_dragon" : {
@@ -1098,8 +1114,7 @@
         }
       ],
       "keywords" : [
-        "Flying",
-        "Monstrous Cavalry"
+        "Monster"
       ]
     },
     "elf_sisters" : {
@@ -1109,7 +1124,7 @@
       "models" : [
         {
           "name" : "Anointed Sister",
-          "movement" : 8,
+          "movement" : 7,
           "courage" : 5,
           "shoot" : 6,
           "fight" : 5,
@@ -1133,7 +1148,7 @@
         },
         {
           "name" : "Sister of the Veil",
-          "movement" : 8,
+          "movement" : 7,
           "courage" : 5,
           "shoot" : 6,
           "fight" : 5,
@@ -1158,7 +1173,7 @@
       "models" : [
         {
           "name" : "Tide Lord",
-          "movement" : 8,
+          "movement" : 7,
           "courage" : 6,
           "shoot" : 5,
           "fight" : 5,
@@ -1229,7 +1244,7 @@
         "Infantry"
       ]
     },
-    "elf_archmage_dra" : {
+    "elf_archmage_mount" : {
       "name" : "Archmage on Warhorse",
       "description" : "A powerful spellcaster of the High Elves.",
       "category" : "hero",
@@ -1269,7 +1284,199 @@
       "keywords" : [
         "Hero",
         "Wizard",
+        "Cavalry"
+      ]
+    },
+    "mage_blade_lord" : {
+      "name" : "Mageblade Lord",
+      "description" : "A cunning warrior and powerful spellcaster, servant of the Ivory Council.",
+      "category" : "hero",
+      "models" : [
+        {
+          "name" : "Mageblade Lord",
+          "movement" : 7,
+          "courage" : 6,
+          "shoot" : 4,
+          "fight" : 6,
+          "defense" : 7,
+          "reflexes" : 6,
+          "weapons" : [
+            {
+              "id" : "great_blade",
+              "count" : 2
+            }
+          ],
+          "rules" : [
+            {
+              "id" : "wounds",
+              "x" : 3
+            },
+            "leader",
+            {
+              "id" : "magic",
+              "x" : 1
+            },
+            "cloak"
+          ],
+          "min" : 1,
+          "max" : 1
+        }
+      ],
+      "keywords" : [
+        "Hero",
+        "Wizard",
         "Infantry"
+      ]
+    },
+    "mage_blades" : {
+      "name" : "Elven Mageblades",
+      "description" : "Combining ancient spells and finely crafted weapons to become strong warriors.",
+      "category" : "elite",
+      "models" : [
+        {
+          "name" : "Magister",
+          "movement" : 7,
+          "courage" : 5,
+          "shoot" : 4,
+          "fight" : 6,
+          "defense" : 6,
+          "reflexes" : 5,
+          "weapons" : [
+            {
+              "id" : "great_blade",
+              "count" : 3
+            }
+          ],
+          "rules" : [
+            {
+              "id" : "dispel",
+              "x" : 1
+            },
+            "cloak"
+          ],
+          "min" : 1,
+          "max" : 1
+        },
+        {
+          "name" : "Mageblade",
+          "movement" : 7,
+          "courage" : 5,
+          "shoot" : 4,
+          "fight" : 6,
+          "defense" : 6,
+          "reflexes" : 5,
+          "weapons" : [
+            {
+              "id" : "great_blade",
+              "count" : 2
+            }
+          ],
+          "rules" : [
+            "cloak"
+          ],
+          "min" : 2,
+          "max" : 11
+        }
+      ],
+      "keywords" : [
+        "Hero",
+        "Infantry"
+      ],
+      "options" : [
+        {
+          "addRule" : [
+            "banner"
+          ],
+          "modelLimit" : 1
+        },
+        {
+          "addRule" : [
+            "musician"
+          ],
+          "modelLimit" : 1
+        }
+      ]
+    },
+    "elf_dragoon_knight" : {
+      "name" : "Dragon Knight",
+      "description" : "Clad in magical armor, this royal warrior crushes any defense.",
+      "category" : "hero",
+      "models" : [
+        {
+          "name" : "Dragon Knight",
+          "movement" : 10,
+          "courage" : 6,
+          "shoot" : 5,
+          "fight" : 6,
+          "defense" : 6,
+          "reflexes" : 6,
+          "weapons" : [
+            {
+              "id" : "handweapon",
+              "count" : 6
+            },
+            {
+              "id" : "hooves_and_teeth",
+              "count" : 2
+            },
+            "shield"
+          ],
+          "rules" : [
+            "runes",
+            "fearless",
+            {
+              "id" : "leader_x",
+              "x" : "Cavalry"
+            },
+            {
+              "id" : "wounds",
+              "x" : 3
+            }
+          ],
+          "min" : 1,
+          "max" : 1,
+          "options" : [
+            {
+              "replaceWeapon" : [
+                {
+                  "id" : "handweapon",
+                  "count" : 6
+                }
+              ],
+              "withWeapon" : [
+                [
+                  {
+                    "id" : "lance",
+                    "count" : 3
+                  }
+                ],
+                [
+                  {
+                    "id" : "halberd",
+                    "count" : 3
+                  }
+                ]
+              ]
+            },
+            {
+              "replaceWeapon" : [
+                "shield"
+              ],
+              "withWeapon" : [
+                {
+                  "id" : "long_bow"
+                },
+                {
+                  "id" : "dragon_banner"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "keywords" : [
+        "Hero",
+        "Cavalry"
       ]
     }
   },
@@ -1368,11 +1575,21 @@
       "attacks" : 1,
       "short" : "Melee"
     },
-    "great_axe" : {
-      "name" : "Great-axe",
+    "great_blade" : {
+      "name" : "Great-blade",
       "attacks" : 1,
       "ap" : 4,
       "short" : "Melee"
+    },
+    "dragon_banner" : {
+      "name" : "Dragon Banner",
+      "attacks" : 0,
+      "short" : "Melee",
+      "rules" : [
+        {
+          "id" : "dragon_banner"
+        }
+      ]
     }
   },
   "rules" : {
@@ -1431,6 +1648,11 @@
           "multiply" : 10
         }
       ]
+    },
+    "dragon_banner" : {
+      "name" : "Dragon Banner",
+      "description" : "Once per round, a friendly _Cavalry_ unit within 6\" gains +3“ the next time it makes a Move or Charge action.",
+      "points" : 10
     }
   },
   "powers" : {
@@ -1496,162 +1718,5 @@
       "points" : 10,
       "rule" : "runes"
     }
-  ],
-  "models" : {
-    "great_eagle_att" : {
-      "name" : "Great Eagle",
-      "movement" : 8,
-      "courage" : 6,
-      "shoot" : 3,
-      "fight" : 6,
-      "defense" : 5,
-      "reflexes" : 6,
-      "weapons" : [
-        "claws"
-      ],
-      "rules" : [
-        "fly",
-        {
-          "id" : "impact",
-          "x" : 1
-        },
-        {
-          "id" : "wounds",
-          "x" : 4
-        }
-      ],
-      "min" : 0,
-      "max" : 1
-    },
-    "chariot" : {
-      "name" : "Horse Chariot",
-      "movement" : 11,
-      "courage" : 0,
-      "shoot" : 0,
-      "fight" : 0,
-      "defense" : 10,
-      "reflexes" : 0,
-      "weapons" : [
-        "hooves_and_teeth"
-      ],
-      "rules" : [
-        "exposed",
-        {
-          "id" : "impact",
-          "x" : 3
-        },
-        "damage_table_vehicle",
-        {
-          "id" : "crew",
-          "x" : 2
-        }
-      ],
-      "min" : 0,
-      "max" : 1
-    },
-    "moon_dragon" : {
-      "name" : "Moon Dragon",
-      "movement" : 10,
-      "courage" : 5,
-      "shoot" : 6,
-      "fight" : 6,
-      "defense" : 12,
-      "reflexes" : 5,
-      "weapons" : [
-        "flames",
-        {
-          "id" : "claws",
-          "count" : 2
-        }
-      ],
-      "rules" : [
-        "fear",
-        "fly",
-        "damage_table_monster",
-        {
-          "id" : "impact",
-          "x" : 3
-        }
-      ],
-      "min" : 0,
-      "max" : 1
-    },
-    "skycutter" : {
-      "name" : "Eagle Skycutter",
-      "movement" : 11,
-      "courage" : 0,
-      "shoot" : 0,
-      "fight" : 0,
-      "defense" : 10,
-      "reflexes" : 0,
-      "weapons" : [
-        "claws"
-      ],
-      "rules" : [
-        "exposed",
-        "damage_table_vehicle",
-        {
-          "id" : "crew",
-          "x" : 2
-        },
-        "fly"
-      ],
-      "min" : 0,
-      "max" : 1
-    },
-    "phoenix" : {
-      "name" : "Flameheart Phoenix",
-      "movement" : 11,
-      "courage" : 6,
-      "shoot" : 6,
-      "fight" : 6,
-      "defense" : 10,
-      "reflexes" : 5,
-      "weapons" : [
-        "bite",
-        "flame"
-      ],
-      "rules" : [
-        "fear",
-        "fly",
-        {
-          "id" : "impact",
-          "x" : 3
-        },
-        {
-          "id" : "wounds",
-          "x" : 3
-        }
-      ],
-      "min" : 1,
-      "max" : 1
-    },
-    "frost" : {
-      "name" : "Frostfire Phoenix",
-      "movement" : 11,
-      "courage" : 6,
-      "shoot" : 6,
-      "fight" : 6,
-      "defense" : 12,
-      "reflexes" : 5,
-      "weapons" : [
-        "bite"
-      ],
-      "rules" : [
-        "fear",
-        "fly",
-        {
-          "id" : "impact",
-          "x" : 3
-        },
-        {
-          "id" : "wounds",
-          "x" : 3
-        },
-        "distract"
-      ],
-      "min" : 1,
-      "max" : 1
-    }
-  }
+  ]
 }

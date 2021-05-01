@@ -360,7 +360,8 @@
                     "count" : 2
                   }
                 ]
-              ]
+              ],
+              "modelLimit" : "all"
             }
           ],
           "min" : 9,
@@ -654,7 +655,8 @@
                   "id" : "spectral_great",
                   "count" : 2
                 }
-              ]
+              ],
+              "modelLimit" : "all"
             }
           ]
         }
@@ -1038,16 +1040,6 @@
       "name" : "Leeching",
       "description" : "Roll a D10 each time this weapon deals damage to a _Leader_ unit. On a 1 or 2 this model regains one Wound.",
       "points" : 1
-    },
-    "banner" : {
-      "name" : "Banner",
-      "description" : "This unit may re-roll a single failed Courage test when removing Shock.",
-      "points" : 5
-    },
-    "musician" : {
-      "name" : "Musician",
-      "description" : "This unit may re-roll a single failed Initiative test when sprinting.",
-      "points" : 5
     }
   },
   "relics" : [],

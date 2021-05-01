@@ -96,8 +96,7 @@
       "url" : "beastmen_horde.json",
       "color" : "#954535",
       "version" : "0.1",
-      "alliance" : "chaos",
-      "description": "The Beastmen are a race of human-like beasts found in forests. Their main goal is to disrupt and destroy the races of mankind through savage all-out raids."
+      "alliance" : "chaos"
     },
     "human_kingdoms" : {
       "name" : "Great Kingdoms",
@@ -254,13 +253,10 @@
       "ap" : 2,
       "rules" : [
         {
-          "id" : "impact",
-          "x" : 1
-        },
-        {
           "id" : "reach",
           "x" : 1
-        }
+        },
+        "lance"
       ],
       "short" : "Melee"
     },
@@ -322,6 +318,15 @@
           "x" : 1
         },
         "rending"
+      ]
+    },
+    "leeching_sword" : {
+      "name" : "Leeching Sword",
+      "attacks" : 1,
+      "ap" : 3,
+      "short" : "Melee",
+      "rules" : [
+        "leeching"
       ]
     }
   },
@@ -403,6 +408,14 @@
       "name" : "Warhorse",
       "description" : "This model has +2\" Movement.",
       "points" : 2
+    },
+    "icon_x" : {
+      "name" : "Icon",
+      "description" : "Friendly units of X types within 6\" may re-roll a single failed Courage test when removing Shock.",
+      "points" : 10,
+      "inputs" : [
+        "x"
+      ]
     }
   }
 }
