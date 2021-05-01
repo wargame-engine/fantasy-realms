@@ -769,7 +769,6 @@
                 "id" : "big_stick",
                 "count" : 4
               }
-              
             ]
         }
       ],
@@ -1095,11 +1094,10 @@
             "id" : "reach",
             "x" : 1
           }
-
       ]
     }
   },
-  
+
   "rules" : {
     "brutal_tactics" : {
       "name" : "Brutalizer Tactics",
