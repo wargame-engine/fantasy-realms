@@ -77,7 +77,7 @@
       "id" : "sea_elves",
       "url" : "sea_elves.json",
       "color" : "#03414e",
-      "version" : "0.1",
+      "version" : "1.0",
       "alliance" : "order",
       "description" : "Raising from the depths of the ocean, transmuted by their ancient magic."
     },
@@ -107,6 +107,15 @@
       "version" : "0.1",
       "alliance" : "order",
       "description" : "A collection of various kingdoms, infighting for political presence but uniting under one banner to defend their home."
+    },
+    "chaos_dwarves" : {
+      "name" : "Chaos Dwarves",
+      "id" : "chaos_dwarves",
+      "url" : "chaos_dwarves.json",
+      "color" : "#360c30",
+      "version" : "0.1",
+      "alliance" : "chaos",
+      "description" : "Corrupted by the dark gods, these dwarves imbue twisted warmachines with demonic magic."
     }
   },
   "categories" : {

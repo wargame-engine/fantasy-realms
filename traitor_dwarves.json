@@ -1,11 +1,7 @@
 {
   "name" : "Traitor Dwarves",
   "id" : "traitor_dwarves",
-  "color" : "#360c30",
   "author" : "Xekon#8266",
-  "version" : "0.1",
-  "description" : "Corrupted by the dark gods, these dwarves imbue twisted warmachines with demonic magic.",
-  "alliance" : "chaos",
   "units" : {
     "daemonsmith" : {
       "name" : "Daemonsmith",
@@ -348,8 +344,15 @@
     "blazing_staff" : {
       "name" : "Blazing Staff",
       "attacks" : 1,
-      "ap" : 6,
-      "short" : "Melee"
+      "ap" : 5,
+      "short" : "Melee",
+      "rules" : [
+        {
+          "id" : "reach",
+          "x" : 1
+        },
+        "rending"
+      ]
     },
     "fire_amulet" : {
       "name" : "Scorching Amulet",
