@@ -96,7 +96,8 @@
       "url" : "beastmen_horde.json",
       "color" : "#954535",
       "version" : "0.1",
-      "alliance" : "chaos"
+      "alliance" : "chaos",
+      "description": "The Beastmen are a race of human-like beasts found in forests. Their main goal is to disrupt and destroy the races of mankind through savage all-out raids."
     },
     "human_kingdoms" : {
       "name" : "Great Kingdoms",
