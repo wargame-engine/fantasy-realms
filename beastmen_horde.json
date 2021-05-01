@@ -1090,7 +1090,7 @@
       "attacks" : 1,
       "short" : "Melee"
     },
-    "Big_Stick" : {
+    "big_stick" : {
       "Name" : "Giant Polearm",
       "ap" : 2,
       "attacks" : 1,
