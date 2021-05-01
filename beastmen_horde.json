@@ -1096,7 +1096,10 @@
       "attacks" : 1,
       "short" : "Melee",
       "rules" : [        
-          "reach"
+          {
+            "id" : "reach",
+            "x" : 1
+          }
 
       ]
     }
