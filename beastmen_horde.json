@@ -720,7 +720,7 @@
     },
     "ogre_centaurs" : {
       "name" : "Ogre Centaurs",
-      "description" : "Not all centaurs are made of humans...or of horses.  These monstrous centaurs lead any charge they're part of...",
+      "description" : "Not all centaurs are made of humans...or of horses.  These monstrous centaurs lead any charge they're part of",
       "category" : "elite",
       "models" : [
         {
@@ -766,7 +766,7 @@
                 "count" : 3
               },
               {
-                "id" : "halberd",
+                "id" : "big_stick",
                 "count" : 4
               }
               
@@ -789,7 +789,85 @@
         "Heavy Infantry"
       ]
     },
-    "cyclops" : {
+    "Blessed Ogre Centaur" : {
+      "name" : "Blessed Ogre Centaur",
+      "description" : "The greatest of Ogre Centaurs can channel the wrath of the heavens above.",
+      "category" : "hero",
+      "models" : [
+        {
+          "models" : [
+            {
+              "name" : "Blessed Ogre Centaur",
+              "movement" : 10,
+              "courage" : 6,
+              "shoot" : 5,
+              "fight" : 6,
+              "defense" : 7,
+              "reflexes" : 7,
+              "weapons" : [
+                {
+                  "id" : "gore_great",
+                  "count" : 4
+                },
+                {
+                  "id" : "lizzer_claws",
+                  "count" : 2
+                } 
+              ],
+              "min" : 1,
+              "max" : 1
+            }
+          ],
+          "rules" : [
+            {
+              "id" : "impact",
+              "x" : 1
+            },
+            {
+              "id" : "wounds",
+              "x" : 3
+            },
+            {
+              "id" : "magic",
+              "x" : 1
+            },    
+            {
+              "id" : "despoiler_tactics",
+            "x" : 1
+          }
+          ],
+          "options" : [
+            {
+              "replaceRule" : [
+                {
+                  "id" : "despoiler_tactics",
+                  "x" : 1
+                }
+              ],
+              "withRule" : [
+                {
+                  "id" : "despoiler_tactics",
+                  "x" : 2
+                }
+              ]
+            }
+            ]
+            }
+          ],
+          "subfactions" : [
+            "none",
+            "change_legions",
+            "rage_legions",
+            "lust_legions",
+            "plague_legions"
+          ],
+          "keywords" : [
+            "Hero",
+            "Beast",
+            "Heavy_Infantry"
+          ]
+        },
+      "cyclops" : {
       "name" : "Cyclops",
       "description" : "Cursed and twisted into a beastial shape.",
       "category" : "rare",
@@ -1011,6 +1089,16 @@
       "ap" : 4,
       "attacks" : 1,
       "short" : "Melee"
+    },
+    "Big_Stick" : {
+      "Name" : "Giant Polearm",
+      "ap" : 2,
+      "attacks" : 1,
+      "short" : "Melee",
+      "rules" : [        
+          "reach"
+
+      ]
     }
   },
   
@@ -1028,6 +1116,19 @@
         }
       ]
     },
+    "charger_tactics" : {
+      "name" : "Siegebreaker Tactics",
+      "inputs" : [
+        "x"
+      ],
+      "description" : "When this unit is activated, choose up to X friendly _Beast_ units within 6\". This model and those units may re-roll failed Strength tests of 9+ until the end of the round.",
+      "points" : [
+        "rule.x",
+        {
+          "multiply" : 10
+        }
+      ]
+    }, 
     "incite" : {
       "name" : "Incite",
       "description" : "When this unit is activated, choose up to X friendly _Infantry_ units within 6\". This model and those units gain +3“ Move next time they charge.",
