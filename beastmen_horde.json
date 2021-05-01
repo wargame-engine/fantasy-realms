@@ -10,28 +10,24 @@
       "name" : "Wrath Legion",
       "id" : "rage_legions",
       "color" : "#ff0000",
-      "restricted" : true,
       "background" : "Warriors of unbridled fury."
     },
     "change_legions" : {
       "name" : "Arcane Legion",
       "id" : "change_legions",
       "color" : "#18abcc",
-      "restricted" : true,
       "background" : "Mighty Sorcerers that bring down a storm of spells."
     },
     "plague_legions" : {
       "name" : "Corrupted Legion",
       "id" : "plague_legions",
       "color" : "#90ee90",
-      "restricted" : true,
       "background" : "Resilient spreaders of decay."
     },
     "lust_legions" : {
       "name" : "Sinful Legion",
       "id" : "lust_legions",
       "color" : "#800080",
-      "restricted" : true,
       "background" : "Sadistic and twisted Warriors."
     }
   },
@@ -766,7 +762,7 @@
                 "count" : 3
               },
               {
-                "id" : "halberd",
+                "id" : "crude_polearm",
                 "count" : 4
               }
               
@@ -887,9 +883,21 @@
       "rules" : [
         {
           "id" : "reach",
-          "x" : 2
+          "x" : 1
         },
         "cumbersome"
+      ]
+    },
+    "crude_polearm" : {
+      "name" : "Crude Polearm",
+      "ap" : 2,
+      "attacks" : 1,
+      "short" : "Melee",
+      "rules" : [
+        {
+          "id" : "reach",
+          "x" : 1
+        }
       ]
     },
     "hooves_and_teeth" : {
@@ -943,7 +951,7 @@
       "rules" : [
         {
           "id" : "reach",
-          "x" : 2
+          "x" : 1
         }
       ]
     },
@@ -955,7 +963,7 @@
       "rules" : [
         {
           "id" : "reach",
-          "x" : 2
+          "x" : 1
         }
       ]
     },
@@ -967,7 +975,7 @@
       "rules" : [
         {
           "id" : "reach",
-          "x" : 2
+          "x" : 1
         }
       ]
     },
