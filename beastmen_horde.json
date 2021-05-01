@@ -771,10 +771,6 @@
       ],
       "rules" : [
         {
-          "id" : "impact",
-          "x" : 1
-        },
-        {
           "id" : "wounds",
           "x" : 3
         }
