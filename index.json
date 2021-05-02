@@ -34,7 +34,27 @@
       "color" : "#9a1115",
       "version" : "0.1",
       "alliance" : "death",
-      "description" : "The Vampire Lords are powerful vampires who command legions of undead to do their bidding. They defeat their foes with powerful death magic and hordes of undead."
+      "description" : "The Vampire Lords are powerful vampires who command legions of undead to do their bidding. They defeat their foes with powerful death magic and hordes of undead.",
+      "subfactions" : {
+        "bone" : {
+          "name" : "Bone",
+          "id" : "bone",
+          "color" : "#90305d",
+          "description" : "Raising endless armies of skeletal soldiers to do their bidding."
+        },
+        "blood" : {
+          "name" : "Blood",
+          "id" : "blood",
+          "color" : "#547588",
+          "description" : "Fledgling vampires are eager to drink and don't have the patience for just biting their enemies."
+        },
+        "dread" : {
+          "name" : "Dread",
+          "id" : "dread",
+          "color" : "#547588",
+          "description" : "Using illusions, necromancy and their own kin against their foes, these Vampire Lords are masters of attritional warfare."
+        }
+      }
     },
     "traitor_legions" : {
       "name" : "Traitor Legions",
@@ -43,7 +63,39 @@
       "color" : "#231f20",
       "version" : "0.1",
       "alliance" : "chaos",
-      "description" : "The Traitor Legions are those who chose to fight for evil instead of order and made a pact with the dark gods. The Traitor Legions use deadly traitor warriors and other barbarians to swiftly crush their foes."
+      "description" : "The Traitor Legions are those who chose to fight for evil instead of order and made a pact with the dark gods. The Traitor Legions use deadly traitor warriors and other barbarians to swiftly crush their foes.",
+      "subfactions" : {
+        "change" : {
+          "name" : "Magic",
+          "id" : "change",
+          "color" : "#90305d",
+          "description" : "Mighty Sorcerers that bring down a storm of spells, empowered by hordes of cultists that give their life in pursuit of knowledge."
+        },
+        "pestilence" : {
+          "name" : "Pestilence",
+          "id" : "pestilence",
+          "color" : "#547588",
+          "description" : "The forces of the unstoppable decay of all life, born anew as a warrior of the dark gods."
+        },
+        "wrath" : {
+          "name" : "Wrath",
+          "id" : "wrath",
+          "color" : "#547588",
+          "description" : "Warriors of unbridled fury, filled with an eternal bloodlust and always looking for ever greater foes to still it."
+        },
+        "excess" : {
+          "name" : "Excess",
+          "id" : "excess",
+          "color" : "#547588",
+          "description" : "Sadistic and twisted Warriors, always seeking for new ways of ecstasy."
+        },
+        "deception" : {
+          "name" : "Deception",
+          "id" : "deception",
+          "color" : "#6a0001",
+          "description" : "Agents of chaos that undermine enemy forces and crumble them from within or lead a corrupt government themselves."
+        }
+      }
     },
     "haunting_ghosts" : {
       "name" : "Haunting Ghosts",
@@ -61,7 +113,33 @@
       "color" : "#38733a",
       "version" : "0.1",
       "alliance" : "order",
-      "description" : "Masters of the Arcane, this ancient island nation is made up of powerful wizards, archers and horse riders."
+      "description" : "Masters of the Arcane, this ancient island nation is shrouded in mystery.",
+      "subfactions" : {
+        "temple" : {
+          "name" : "Phoenix Temple",
+          "id" : "temple",
+          "color" : "#90305d",
+          "description" : "Defenders of the Temple of the Last Flame, leading crusades agains the forces that seek to destroy it."
+        },
+        "polis" : {
+          "name" : "Polis",
+          "id" : "polis",
+          "color" : "#547588",
+          "description" : "An amalgamation of several city states, masters of urban fighting and outlasting sieges."
+        },
+        "magic" : {
+          "name" : "Magic",
+          "id" : "magic",
+          "color" : "#547588",
+          "description" : "Agents of the Ivory Citadel, focusing on Mageblades and mighty wizards."
+        },
+        "beasts" : {
+          "name" : "Beastmasters",
+          "id" : "beasts",
+          "color" : "#800080",
+          "background" : "A force that focuses heavily on cavalry and giant beasts."
+        }
+      }
     },
     "orcs_and_goblins" : {
       "name" : "Orcs and Goblins",
@@ -70,14 +148,40 @@
       "color" : "#50974A",
       "version" : "0.1",
       "alliance" : "destruction",
-      "description" : "A savage race made up of various warring tribes."
+      "description" : "A savage race made up of various warring tribes.",
+      "subfactions" : {
+        "armor" : {
+          "name" : "Armor",
+          "id" : "armor",
+          "color" : "#90305d",
+          "description" : "The great goblin forges are blazing anew, supplying their orcish masters with mastercrafted equipment as crude as they may seem."
+        },
+        "speed" : {
+          "name" : "Speed",
+          "id" : "speed",
+          "color" : "#547588",
+          "description" : "This force focuses on using chariots, boars and anything that goes fast."
+        },
+        "trickery" : {
+          "name" : "Trickery",
+          "id" : "trickery",
+          "color" : "#547588",
+          "description" : "Striking in moonlight, these masters of deception, as far as orcs are concerned, use outflanking and ambush maneuvers to gain the upper hand."
+        },
+        "primal" : {
+          "name" : "Primal",
+          "id" : "primal",
+          "color" : "#547588",
+          "description" : "Empowered by their animalistic gods, the strongest warriors charge into battle with fearsome beasts at their side."
+        }
+      }
     },
     "sea_elves" : {
       "name" : "Sea Elves",
       "id" : "sea_elves",
       "url" : "sea_elves.json",
       "color" : "#03414e",
-      "version" : "0.1",
+      "version" : "1.0",
       "alliance" : "order",
       "description" : "Raising from the depths of the ocean, transmuted by their ancient magic."
     },
@@ -88,7 +192,33 @@
       "color" : "#A55D35",
       "version" : "0.1",
       "alliance" : "order",
-      "description" : "A stout race of miners, engineers and warriors."
+      "description" : "A stout race of miners, engineers and warriors.",
+      "subfactions" : {
+        "blackpowder" : {
+          "name" : "Blackpowder",
+          "id" : "blackpowder",
+          "color" : "#800080",
+          "background" : "A force that focuses heavily on guns and artillery."
+        },
+        "magic" : {
+          "name" : "Magic",
+          "id" : "magic",
+          "color" : "#800080",
+          "background" : "A force that focuses heavily on magic and rune-enchanted equipment."
+        },
+        "combat" : {
+          "name" : "Combat",
+          "id" : "combat",
+          "color" : "#800080",
+          "background" : "A force that focuses on overruning their foe in glorious combat."
+        },
+        "tunneler" : {
+          "name" : "Tunneler",
+          "id" : "tunneler",
+          "color" : "#800080",
+          "background" : "A force that focuses on ambushing their enemies from below the battlefield."
+        }
+      }
     },
     "beastmen_horde" : {
       "name" : "Beastmen Horde",
@@ -96,7 +226,34 @@
       "url" : "beastmen_horde.json",
       "color" : "#954535",
       "version" : "0.1",
-      "alliance" : "chaos"
+      "alliance" : "chaos",
+      "description" : "The Beastmen are a race of human-like beasts found in forests. Their main goal is to disrupt and destroy the races of mankind through savage all-out raids.",
+      "subfactions" : {
+        "change" : {
+          "name" : "Magic",
+          "id" : "change",
+          "color" : "#90305d",
+          "description" : "Mighty Shamans that bring down a storm of spells, empowered by hordes of ravaging beasts that give their life in pursuit of power."
+        },
+        "pestilence" : {
+          "name" : "Pestilence",
+          "id" : "pestilence",
+          "color" : "#547588",
+          "description" : "The forces of the unstoppable decay of all life, born anew as a warrior of the dark gods."
+        },
+        "wrath" : {
+          "name" : "Wrath",
+          "id" : "wrath",
+          "color" : "#547588",
+          "description" : "Warriors of unbridled fury, filled with an eternal bloodlust and always looking for ever greater foes to still it."
+        },
+        "excess" : {
+          "name" : "Excess",
+          "id" : "excess",
+          "color" : "#547588",
+          "description" : "Sadistic and twisted Warriors, always seeking for new ways of ecstasy."
+        }
+      }
     },
     "human_kingdoms" : {
       "name" : "Great Kingdoms",
@@ -105,7 +262,68 @@
       "color" : "#087194",
       "version" : "0.1",
       "alliance" : "order",
-      "description" : "A collection of various kingdoms, infighting for political presence but uniting under one banner to defend their home."
+      "description" : "A collection of various kingdoms, infighting for political presence but uniting under one banner to defend their home.",
+      "subfactions" : {
+        "order" : {
+          "name" : "Holy Order",
+          "id" : "order",
+          "color" : "#90305d",
+          "description" : "Leading crusades against the forces of chaos and death, blessed by their gods."
+        },
+        "polis" : {
+          "name" : "Polis",
+          "id" : "polis",
+          "color" : "#547588",
+          "description" : "An amalgamation of several city states, masters of urban fighting and outlasting sieges."
+        },
+        "magic" : {
+          "name" : "Magic",
+          "id" : "magic",
+          "color" : "#547588",
+          "description" : "Mighty wizards from all across the kingdoms come togethet to smite down their foes with arcane spell."
+        },
+        "blackpowder" : {
+          "name" : "Blackpowder",
+          "id" : "blackpowder",
+          "color" : "#800080",
+          "background" : "A force that focuses heavily on guns and artillery."
+        }
+      }
+    },
+    "traitor_dwarves" : {
+      "name" : "Traitor Dwarves",
+      "id" : "traitor_dwarves",
+      "url" : "traitor_dwarves.json",
+      "color" : "#360c30",
+      "version" : "0.1",
+      "alliance" : "chaos",
+      "description" : "Corrupted by the dark gods, these dwarves imbue twisted warmachines with demonic magic.",
+      "subfactions" : {
+        "forge" : {
+          "name" : "Forge",
+          "id" : "forge",
+          "color" : "#90305d",
+          "description" : "A force that focueses Daemonsmiths and various animated soldiers."
+        },
+        "wrath" : {
+          "name" : "Wrath",
+          "id" : "wrath",
+          "color" : "#547588",
+          "description" : "Warriors of unbridled fury, filled with an eternal bloodlust and always looking for ever greater foes to still it."
+        },
+        "excess" : {
+          "name" : "Excess",
+          "id" : "excess",
+          "color" : "#547588",
+          "description" : "Sadistic and twisted Warriors, always seeking for new ways of ecstasy."
+        },
+        "blackpowder" : {
+          "name" : "Blackpowder",
+          "id" : "blackpowder",
+          "color" : "#800080",
+          "background" : "A force that focuses heavily on guns and artillery."
+        }
+      }
     }
   },
   "categories" : {
@@ -166,7 +384,7 @@
   },
   "weapons" : {
     "great_maul" : {
-      "name" : "Great-maul",
+      "name" : "Great-weapon",
       "attacks" : 1,
       "ap" : 4,
       "short" : "Melee"
@@ -184,7 +402,7 @@
       ]
     },
     "maul" : {
-      "name" : "Maul",
+      "name" : "Heavy Handweapon",
       "attacks" : 1,
       "ap" : 2,
       "short" : "Melee"
@@ -253,13 +471,10 @@
       "ap" : 2,
       "rules" : [
         {
-          "id" : "impact",
-          "x" : 1
-        },
-        {
           "id" : "reach",
           "x" : 1
-        }
+        },
+        "lance"
       ],
       "short" : "Melee"
     },
@@ -322,6 +537,40 @@
         },
         "rending"
       ]
+    },
+    "leeching_sword" : {
+      "name" : "Leeching Sword",
+      "attacks" : 1,
+      "ap" : 3,
+      "short" : "Melee",
+      "rules" : [
+        "leeching"
+      ]
+    },
+    "rending_blade" : {
+      "name" : "Rending Blade",
+      "attacks" : 1,
+      "ap" : 2,
+      "short" : "Melee",
+      "rules" : [
+        "rending"
+      ]
+    },
+    "rending_great" : {
+      "name" : "Rending Great-blade",
+      "attacks" : 1,
+      "ap" : 4,
+      "short" : "Melee",
+      "rules" : [
+        "rending"
+      ]
+    },
+    "repeater_crossbow" : {
+      "name" : "Repeater-Crossbow",
+      "attacks" : 1,
+      "ap" : 1,
+      "short" : 6,
+      "medium" : 12
     }
   },
   "rules" : {
@@ -402,6 +651,24 @@
       "name" : "Warhorse",
       "description" : "This model has +2\" Movement.",
       "points" : 2
+    },
+    "icon_x" : {
+      "name" : "Icon",
+      "description" : "Friendly units of X types within 6\" may re-roll a single failed Courage test when removing Shock.",
+      "points" : 10,
+      "inputs" : [
+        "x"
+      ]
+    },
+    "spectral" : {
+      "name" : "Spectral",
+      "description" : "Hit rolls of 1 or 2 from this weapon cause 2 hits instead of 1. Additional hits must be assigned to the same model.",
+      "points" : [
+        "weapon.attacks",
+        {
+          "multiply" : 2
+        }
+      ]
     }
   }
 }

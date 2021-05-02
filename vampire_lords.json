@@ -65,6 +65,12 @@
         "Hero",
         "Undead",
         "Cavalry"
+      ],
+      "subfactions" : [
+        "blood",
+        "bone",
+        "dread",
+        "none"
       ]
     },
     "vampire_lord_horse" : {
@@ -132,6 +138,12 @@
         "Hero",
         "Undead",
         "Cavalry"
+      ],
+      "subfactions" : [
+        "blood",
+        "bone",
+        "dread",
+        "none"
       ]
     },
     "vampire_lord" : {
@@ -192,6 +204,12 @@
         "Hero",
         "Undead",
         "Infantry"
+      ],
+      "subfactions" : [
+        "blood",
+        "bone",
+        "dread",
+        "none"
       ]
     },
     "strigoi_lord" : {
@@ -235,6 +253,12 @@
         "Hero",
         "Infantry",
         "Undead"
+      ],
+      "subfactions" : [
+        "blood",
+        "bone",
+        "dread",
+        "none"
       ]
     },
     "zombies" : {
@@ -278,6 +302,12 @@
           ],
           "modelLimit" : 1
         }
+      ],
+      "subfactions" : [
+        "blood",
+        "bone",
+        "dread",
+        "none"
       ]
     },
     "skeletons" : {
@@ -360,7 +390,8 @@
                     "count" : 2
                   }
                 ]
-              ]
+              ],
+              "modelLimit" : "all"
             }
           ],
           "min" : 9,
@@ -384,6 +415,12 @@
           ],
           "modelLimit" : 1
         }
+      ],
+      "subfactions" : [
+        "blood",
+        "bone",
+        "dread",
+        "none"
       ]
     },
     "ghouls" : {
@@ -432,6 +469,12 @@
       "keywords" : [
         "Undead",
         "Infantry"
+      ],
+      "subfactions" : [
+        "blood",
+        "bone",
+        "dread",
+        "none"
       ]
     },
     "barghests" : {
@@ -484,6 +527,12 @@
         "Undead",
         "Beast",
         "Infantry"
+      ],
+      "subfactions" : [
+        "blood",
+        "bone",
+        "dread",
+        "none"
       ]
     },
     "bat_swarms" : {
@@ -521,6 +570,12 @@
       "keywords" : [
         "Beast",
         "Infantry"
+      ],
+      "subfactions" : [
+        "blood",
+        "bone",
+        "dread",
+        "none"
       ]
     },
     "feral_ghouls" : {
@@ -581,6 +636,12 @@
       "keywords" : [
         "Undead",
         "Infantry"
+      ],
+      "subfactions" : [
+        "blood",
+        "bone",
+        "dread",
+        "none"
       ]
     },
     "crypt_watch" : {
@@ -654,7 +715,8 @@
                   "id" : "spectral_great",
                   "count" : 2
                 }
-              ]
+              ],
+              "modelLimit" : "all"
             }
           ]
         }
@@ -676,6 +738,12 @@
           ],
           "modelLimit" : 1
         }
+      ],
+      "subfactions" : [
+        "blood",
+        "bone",
+        "dread",
+        "none"
       ]
     },
     "skeletal_knights" : {
@@ -748,6 +816,12 @@
           ],
           "modelLimit" : 1
         }
+      ],
+      "subfactions" : [
+        "blood",
+        "bone",
+        "dread",
+        "none"
       ]
     },
     "vampire_knights" : {
@@ -825,6 +899,12 @@
           ],
           "modelLimit" : 1
         }
+      ],
+      "subfactions" : [
+        "blood",
+        "bone",
+        "dread",
+        "none"
       ]
     }
   },
@@ -1038,16 +1118,6 @@
       "name" : "Leeching",
       "description" : "Roll a D10 each time this weapon deals damage to a _Leader_ unit. On a 1 or 2 this model regains one Wound.",
       "points" : 1
-    },
-    "banner" : {
-      "name" : "Banner",
-      "description" : "This unit may re-roll a single failed Courage test when removing Shock.",
-      "points" : 5
-    },
-    "musician" : {
-      "name" : "Musician",
-      "description" : "This unit may re-roll a single failed Initiative test when sprinting.",
-      "points" : 5
     }
   },
   "relics" : [],
@@ -1056,13 +1126,25 @@
       "name" : "Bat Form",
       "description" : "This model gains the Fly special rule until the end of the turn. This power may only be cast once per turn.",
       "flavor" : "The vampire lord transforms themselves into a giant bat, traversing the batttlefield at ease.",
-      "charge" : 7
+      "charge" : 7,
+      "subfactions" : [
+        "blood",
+        "bone",
+        "dread",
+        "none"
+      ]
     },
     "raise_dead" : {
       "name" : "Raise Dead",
       "description" : "Target friendly \"Undead\" Infantry unit within 12\" restores 1D3 models. This power may only be cast once per turn.",
       "flavor" : "The Vampire Lord enslaves the souls of the fallen once more.",
-      "charge" : 5
+      "charge" : 5,
+      "subfactions" : [
+        "blood",
+        "bone",
+        "dread",
+        "none"
+      ]
     }
   },
   "strategies" : []

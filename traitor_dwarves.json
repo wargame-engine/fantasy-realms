@@ -1,11 +1,7 @@
 {
   "name" : "Traitor Dwarves",
   "id" : "traitor_dwarves",
-  "color" : "#360c30",
   "author" : "Xekon#8266",
-  "version" : "0.1",
-  "description" : "Corrupted by the dark gods, these dwarves imbue twisted warmachines with demonic magic.",
-  "alliance" : "chaos",
   "units" : {
     "daemonsmith" : {
       "name" : "Daemonsmith",
@@ -65,6 +61,13 @@
         "Hero",
         "Wizard",
         "Infantry"
+      ],
+      "subfactions" : [
+        "blackpowder",
+        "wrath",
+        "excess",
+        "forge",
+        "none"
       ]
     },
     "iron_souls" : {
@@ -127,6 +130,13 @@
           ],
           "modelLimit" : 1
         }
+      ],
+      "subfactions" : [
+        "blackpowder",
+        "wrath",
+        "excess",
+        "forge",
+        "none"
       ]
     },
     "pyre_souls" : {
@@ -189,6 +199,13 @@
           ],
           "modelLimit" : 1
         }
+      ],
+      "subfactions" : [
+        "blackpowder",
+        "wrath",
+        "excess",
+        "forge",
+        "none"
       ]
     },
     "iron_lord" : {
@@ -241,6 +258,13 @@
       "keywords" : [
         "Hero",
         "Infantry"
+      ],
+      "subfactions" : [
+        "blackpowder",
+        "wrath",
+        "excess",
+        "forge",
+        "none"
       ]
     },
     "orc_slaves" : {
@@ -321,6 +345,13 @@
         "speed_focus",
         "primal_focus",
         "armor_focus"
+      ],
+      "subfactions_0" : [
+        "blackpowder",
+        "wrath",
+        "excess",
+        "forge",
+        "none"
       ]
     }
   },
@@ -348,8 +379,15 @@
     "blazing_staff" : {
       "name" : "Blazing Staff",
       "attacks" : 1,
-      "ap" : 6,
-      "short" : "Melee"
+      "ap" : 5,
+      "short" : "Melee",
+      "rules" : [
+        {
+          "id" : "reach",
+          "x" : 1
+        },
+        "rending"
+      ]
     },
     "fire_amulet" : {
       "name" : "Scorching Amulet",
@@ -512,8 +550,6 @@
     }
   ],
   "relics" : [],
-  "models" : {},
-  "subfactions" : {},
   "hidden_units" : [
     {
       "name" : "Forgefire Golem",
