@@ -4,36 +4,6 @@
   "author" : "Xekon#8266",
   "color" : "#231f20",
   "version" : "0.1",
-  "subfactions" : {
-    "rage_legions" : {
-      "name" : "Wrath Legion",
-      "id" : "rage_legions",
-      "color" : "#ff0000",
-      "restricted" : true,
-      "background" : "Warriors of unbridled fury."
-    },
-    "change_legions" : {
-      "name" : "Arcane Legion",
-      "id" : "change_legions",
-      "color" : "#18abcc",
-      "restricted" : true,
-      "background" : "Mighty Sorcerers that bring down a storm of spells."
-    },
-    "plague_legions" : {
-      "name" : "Corrupted Legion",
-      "id" : "plague_legions",
-      "color" : "#90ee90",
-      "restricted" : true,
-      "background" : "Resilient spreaders of decay."
-    },
-    "lust_legions" : {
-      "name" : "Sinful Legion",
-      "id" : "lust_legions",
-      "color" : "#800080",
-      "restricted" : true,
-      "background" : "Sadistic and twisted Warriors."
-    }
-  },
   "units" : {
     "traitor_lord" : {
       "name" : "Traitor Lord",
@@ -115,10 +85,11 @@
       ],
       "subfactions" : [
         "none",
-        "change_legions",
-        "rage_legions",
-        "lust_legions",
-        "plague_legions"
+        "wrath",
+        "excess",
+        "pestilence",
+        "change",
+        "deception"
       ],
       "keywords" : [
         "Hero",
@@ -181,10 +152,11 @@
       ],
       "subfactions" : [
         "none",
-        "change_legions",
-        "rage_legions",
-        "lust_legions",
-        "plague_legions"
+        "wrath",
+        "excess",
+        "pestilence",
+        "change",
+        "deception"
       ],
       "keywords" : [
         "Hero",
@@ -291,10 +263,11 @@
       ],
       "subfactions" : [
         "none",
-        "change_legions",
-        "rage_legions",
-        "lust_legions",
-        "plague_legions"
+        "wrath",
+        "excess",
+        "pestilence",
+        "change",
+        "deception"
       ],
       "options" : [
         {
@@ -386,10 +359,11 @@
       ],
       "subfactions" : [
         "none",
-        "change_legions",
-        "rage_legions",
-        "lust_legions",
-        "plague_legions"
+        "wrath",
+        "excess",
+        "pestilence",
+        "change",
+        "deception"
       ],
       "options" : [
         {
@@ -500,10 +474,11 @@
       ],
       "subfactions" : [
         "none",
-        "change_legions",
-        "rage_legions",
-        "lust_legions",
-        "plague_legions"
+        "wrath",
+        "excess",
+        "pestilence",
+        "change",
+        "deception"
       ],
       "options" : [
         {
@@ -608,10 +583,11 @@
       ],
       "subfactions" : [
         "none",
-        "change_legions",
-        "rage_legions",
-        "lust_legions",
-        "plague_legions"
+        "wrath",
+        "excess",
+        "pestilence",
+        "change",
+        "deception"
       ],
       "options" : [
         {
@@ -666,10 +642,11 @@
       ],
       "subfactions" : [
         "none",
-        "change_legions",
-        "rage_legions",
-        "lust_legions",
-        "plague_legions"
+        "wrath",
+        "excess",
+        "pestilence",
+        "change",
+        "deception"
       ],
       "keywords" : [
         "Hero",
@@ -742,10 +719,11 @@
       ],
       "subfactions" : [
         "none",
-        "change_legions",
-        "rage_legions",
-        "lust_legions",
-        "plague_legions"
+        "wrath",
+        "excess",
+        "pestilence",
+        "change",
+        "deception"
       ],
       "keywords" : [
         "Hero",
@@ -794,10 +772,11 @@
       ],
       "subfactions" : [
         "none",
-        "change_legions",
-        "rage_legions",
-        "lust_legions",
-        "plague_legions"
+        "wrath",
+        "excess",
+        "pestilence",
+        "change",
+        "deception"
       ],
       "options" : [
         {
@@ -929,10 +908,11 @@
       ],
       "subfactions" : [
         "none",
-        "rage_legions",
-        "lust_legions",
-        "plague_legions",
-        "change_legion"
+        "wrath",
+        "excess",
+        "pestilence",
+        "change",
+        "deception"
       ],
       "options" : [
         {
@@ -1095,10 +1075,11 @@
     {
       "subfactions" : [
         "none",
-        "change_legion",
-        "plague_legion",
-        "lust_legion",
-        "rage_legion"
+        "wrath",
+        "excess",
+        "pestilence",
+        "change",
+        "deception"
       ],
       "name" : "Eye of the Gods",
       "phase" : "activation",
@@ -1109,10 +1090,11 @@
     {
       "subfactions" : [
         "none",
-        "change_legion",
-        "plague_legion",
-        "lust_legion",
-        "rage_legion"
+        "wrath",
+        "excess",
+        "pestilence",
+        "change",
+        "deception"
       ],
       "name" : "Fearless",
       "phase" : "activation",
@@ -1123,7 +1105,11 @@
     {
       "subfactions" : [
         "none",
-        "change_traitors"
+        "wrath",
+        "excess",
+        "pestilence",
+        "change",
+        "deception"
       ],
       "name" : "Blazing Runes",
       "phase" : "activation",
@@ -1140,7 +1126,7 @@
       "flavor" : "The enemy is hit by an arcane missile, piercing trough armor and shields alike.",
       "charge" : 6,
       "subfactions" : [
-        "change_legions"
+        "change"
       ]
     },
     "flame" : {
@@ -1149,7 +1135,7 @@
       "flavor" : "The Sorcerer burns the souls of his enemies.",
       "charge" : 8,
       "subfactions" : [
-        "change_legions"
+        "change"
       ]
     },
     "fury" : {
@@ -1158,7 +1144,7 @@
       "flavor" : "The priest chants a sinister prayer, blessing his fellow Warriors with great rage.",
       "charge" : 7,
       "subfactions" : [
-        "rage_legions"
+        "wrath"
       ]
     },
     "plague" : {
@@ -1167,7 +1153,7 @@
       "flavor" : "The sorcerer spreads a joyous disease onto his fellow warriors, making them numb to harm.",
       "charge" : 8,
       "subfactions" : [
-        "plague_legions"
+        "pestilence"
       ]
     }
   }

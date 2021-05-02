@@ -56,6 +56,13 @@
         "Hero",
         "Wizard",
         "Infantry"
+      ],
+      "subfactions" : [
+        "none",
+        "blackpowder",
+        "order",
+        "polis",
+        "magic"
       ]
     },
     "warrior_priest" : {
@@ -87,12 +94,7 @@
             },
             "leader",
             "furious",
-            "battle_prayer",
-            {
-              "id" : "dispel",
-              "x" : 1
-            },
-            "grail"
+            "battle_prayer"
           ],
           "options" : [
             {
@@ -124,6 +126,13 @@
         "Hero",
         "Wizard",
         "Infantry"
+      ],
+      "subfactions" : [
+        "none",
+        "blackpowder",
+        "order",
+        "polis",
+        "magic"
       ]
     },
     "captain" : {
@@ -173,6 +182,13 @@
       "keywords" : [
         "Hero",
         "Infantry"
+      ],
+      "subfactions" : [
+        "none",
+        "blackpowder",
+        "order",
+        "polis",
+        "magic"
       ]
     },
     "men_at_arms" : {
@@ -264,6 +280,13 @@
           ],
           "modelLimit" : 1
         }
+      ],
+      "subfactions" : [
+        "none",
+        "blackpowder",
+        "order",
+        "polis",
+        "magic"
       ]
     },
     "bowmen" : {
@@ -332,6 +355,13 @@
           ],
           "modelLimit" : 1
         }
+      ],
+      "subfactions" : [
+        "none",
+        "blackpowder",
+        "order",
+        "polis",
+        "magic"
       ]
     },
     "handgunners" : {
@@ -405,6 +435,13 @@
           ],
           "modelLimit" : 1
         }
+      ],
+      "subfactions" : [
+        "none",
+        "blackpowder",
+        "order",
+        "polis",
+        "magic"
       ]
     },
     "pistoliers" : {
@@ -506,6 +543,13 @@
           ],
           "modelLimit" : 1
         }
+      ],
+      "subfactions" : [
+        "none",
+        "blackpowder",
+        "order",
+        "polis",
+        "magic"
       ]
     },
     "honor_guard" : {
@@ -523,7 +567,7 @@
           "reflexes" : 5,
           "weapons" : [
             {
-              "id" : "greatweapon",
+              "id" : "great_maul",
               "count" : 3
             }
           ],
@@ -533,7 +577,7 @@
             {
               "replaceWeapon" : [
                 {
-                  "id" : "greatweapon",
+                  "id" : "great_maul",
                   "count" : 3
                 }
               ],
@@ -556,7 +600,7 @@
           "reflexes" : 6,
           "weapons" : [
             {
-              "id" : "greatweapon",
+              "id" : "great_maul",
               "count" : 2
             }
           ],
@@ -566,7 +610,7 @@
             {
               "replaceWeapon" : [
                 {
-                  "id" : "greatweapon",
+                  "id" : "great_maul",
                   "count" : 2
                 }
               ],
@@ -597,6 +641,13 @@
           ],
           "modelLimit" : 1
         }
+      ],
+      "subfactions" : [
+        "none",
+        "blackpowder",
+        "order",
+        "polis",
+        "magic"
       ]
     },
     "realm_knights" : {
@@ -660,6 +711,13 @@
           ],
           "modelLimit" : 1
         }
+      ],
+      "subfactions" : [
+        "none",
+        "blackpowder",
+        "order",
+        "polis",
+        "magic"
       ]
     },
     "paladins" : {
@@ -758,7 +816,14 @@
         }
       ],
       "rules" : [
-        "grail"
+        "assassin"
+      ],
+      "subfactions" : [
+        "none",
+        "blackpowder",
+        "order",
+        "polis",
+        "magic"
       ]
     },
     "cannon" : {
@@ -807,6 +872,13 @@
       "keywords" : [
         "Warmachine",
         "Artillery"
+      ],
+      "subfactions" : [
+        "none",
+        "blackpowder",
+        "order",
+        "polis",
+        "magic"
       ]
     },
     "mortar" : {
@@ -855,6 +927,13 @@
       "keywords" : [
         "Warmachine",
         "Artillery"
+      ],
+      "subfactions" : [
+        "none",
+        "blackpowder",
+        "order",
+        "polis",
+        "magic"
       ]
     },
     "hunters" : {
@@ -927,6 +1006,13 @@
       "rules" : [
         "skirmishers",
         "scout"
+      ],
+      "subfactions" : [
+        "none",
+        "blackpowder",
+        "order",
+        "polis",
+        "magic"
       ]
     }
   },
@@ -976,12 +1062,6 @@
       "short" : 9,
       "medium" : 18
     },
-    "greatweapon" : {
-      "name" : "Greatweapon",
-      "ap" : 4,
-      "attacks" : 1,
-      "short" : "Melee"
-    },
     "cannon" : {
       "name" : "Cannon",
       "profiles" : [
@@ -1025,42 +1105,10 @@
     }
   },
   "rules" : {
-    "hatred" : {
-      "name" : "Hatred",
-      "inputs" : [
-        "x"
-      ],
-      "description" : "This unit has +1AP with melee weapons when attacking units of X types.",
-      "points" : [
-        10
-      ]
-    },
     "repair_toolkit" : {
       "name" : "Repair Toolkit",
       "description" : "This model and its unit may spend one action to repair one vehicle or warmachine within 3\" that has suffered critical damage.",
       "points" : 5
-    },
-    "rune" : {
-      "name" : "Blazing Rune",
-      "description" : "Once per round, a friendly _Infantry_ unit within 6\" gains +3“ the next time it makes a Move or Charge action.",
-      "points" : 5
-    },
-    "whip" : {
-      "name" : "Barbed Whip",
-      "description" : "When this unit is activated, friendly _Slave_ units 6\" may choose to activate for free if they have not activated yet and perform the same actions as this unit. Friendly _Slave_ units within 6\" may use this unit's Courage value when taking Courage tests. This unit may not be targetted by enemy attacks while it is within 3\" of another friendly _Slave_ unit unless that unit is also a Leader and attacking in Melee.",
-      "points" : 10
-    },
-    "horn_of_winter" : {
-      "name" : "Horn of Winter",
-      "description" : "Once per round, a friendly _Infantry_ unit within 6\" gains +3“ the next time it makes a Move or Charge action.",
-      "points" : 10
-    },
-    "grail" : {
-      "name" : "Smiting Blade",
-      "description" : "This unit has +1AP with melee weapons when attacking _Demon_ and _Undead_ units.",
-      "points" : [
-        1
-      ]
     },
     "battle_prayer" : {
       "name" : "Battle Prayer",
@@ -1074,37 +1122,18 @@
     "fireball" : {
       "name" : "Fireball",
       "description" : "Target enemy unit within 12\" takes 6 hits with AP 1. This power may be cast unlimited times.",
-      "flavor" : "Conjuring a fireball comes natural to wizards, especially those that sow discord.",
-      "charge" : 6
+      "flavor" : "Conjuring a fireball comes natural to wizards, especially for those that sow discord.",
+      "charge" : 6,
+      "subfactions" : [
+        "none",
+        "blackpowder",
+        "order",
+        "polis",
+        "magic"
+      ]
     }
   },
-  "strategies" : [
-    {
-      "name" : "Stubborn",
-      "phase" : "activation",
-      "description" : "Use before activating a unit. That unit may immediately remove up to 2 Shock.",
-      "flavor" : "Standing steadfast like their mountain halls.",
-      "cost" : 1,
-      "subfactions" : [
-        "none",
-        "melee_focus",
-        "magic_focus",
-        "black_focus",
-        "scout_focus"
-      ]
-    },
-    {
-      "subfactions" : [
-        "none",
-        "change_traitors"
-      ],
-      "name" : "Blazing Runes",
-      "phase" : "activation",
-      "description" : "Use before an Infantry unit fights. Hit rolls of 1 or 2 gain +1 AP.",
-      "flavor" : "Chaos Warriors wield enchanted weapons, covered in unholy runes and burning with dark magic.",
-      "cost" : 1
-    }
-  ],
+  "strategies" : [],
   "relics" : [],
   "models" : {},
   "subfactions" : {}
