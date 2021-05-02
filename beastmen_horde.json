@@ -819,7 +819,7 @@
         "change"
       ]
     },
-    "Blessed Ogre Centaur" : {
+    "blessed_ogre_centaur" : {
       "name" : "Blessed Ogre Centaur",
       "description" : "The greatest of Ogre Centaurs can channel the wrath of the heavens above.",
       "category" : "hero",
@@ -834,7 +834,7 @@
               "reflexes" : 7,
               "weapons" : [
                 {
-                  "id" : "gore_great",
+                  "id" : "great_maul",
                   "count" : 4
                 },
                 {
@@ -970,7 +970,7 @@
         "change"
       ]
        },
-      "Cockatrice" : {
+      "cockatrice" : {
         "name" : "Cockatrice",
         "description" : "A ferocious beast looking for a target to sharpen its talons.",
         "category" : "rare",
