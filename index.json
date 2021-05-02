@@ -290,10 +290,10 @@
         }
       }
     },
-    "chaos_dwarves" : {
-      "name" : "Chaos Dwarves",
-      "id" : "chaos_dwarves",
-      "url" : "chaos_dwarves.json",
+    "traitor_dwarves" : {
+      "name" : "Traitor Dwarves",
+      "id" : "traitor_dwarves",
+      "url" : "traitor_dwarves.json",
       "color" : "#360c30",
       "version" : "0.1",
       "alliance" : "chaos",
