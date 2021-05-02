@@ -5,32 +5,6 @@
   "color" : "#954535",
   "version" : "0.1",
   "alliance" : "chaos",
-  "subfactions" : {
-    "rage_legions" : {
-      "name" : "Wrath Legion",
-      "id" : "rage_legions",
-      "color" : "#ff0000",
-      "background" : "Warriors of unbridled fury."
-    },
-    "change_legions" : {
-      "name" : "Arcane Legion",
-      "id" : "change_legions",
-      "color" : "#18abcc",
-      "background" : "Mighty Sorcerers that bring down a storm of spells."
-    },
-    "plague_legions" : {
-      "name" : "Corrupted Legion",
-      "id" : "plague_legions",
-      "color" : "#90ee90",
-      "background" : "Resilient spreaders of decay."
-    },
-    "lust_legions" : {
-      "name" : "Sinful Legion",
-      "id" : "lust_legions",
-      "color" : "#800080",
-      "background" : "Sadistic and twisted Warriors."
-    }
-  },
   "units" : {
     "minotaur_lord" : {
       "name" : "Minotaur Lord",
@@ -88,10 +62,10 @@
       ],
       "subfactions" : [
         "none",
-        "change_legions",
-        "rage_legions",
-        "lust_legions",
-        "plague_legions"
+        "pestilence",
+        "wrath",
+        "excess",
+        "change"
       ],
       "keywords" : [
         "Hero",
@@ -116,7 +90,7 @@
           "reflexes" : 8,
           "weapons" : [
             {
-              "id" : "gore_great",
+              "id" : "great_maul",
               "count" : 6
             }
           ],
@@ -154,16 +128,16 @@
           ]
         }
       ],
-      "subfactions" : [
-        "none",
-        "change_legions",
-        "rage_legions",
-        "lust_legions",
-        "plague_legions"
-      ],
       "keywords" : [
         "Hero",
         "Infantry"
+      ],
+      "subfactions" : [
+        "none",
+        "pestilence",
+        "wrath",
+        "excess",
+        "change"
       ]
     },
     "satyr_shaman" : {
@@ -183,7 +157,7 @@
           "reflexes" : 6,
           "weapons" : [
             {
-              "id" : "despoiler_staff"
+              "id" : "wizard_staff"
             }
           ],
           "rules" : [
@@ -217,16 +191,84 @@
           ]
         }
       ],
-      "subfactions" : [
-        "none",
-        "change_legions",
-        "rage_legions",
-        "lust_legions",
-        "plague_legions"
-      ],
       "keywords" : [
         "Hero",
         "Wizard",
+        "Infantry"
+      ],
+      "subfactions" : [
+        "none",
+        "pestilence",
+        "wrath",
+        "excess",
+        "change"
+      ]
+    },
+    "minotaur_mage" : {
+      "name" : "Minotaur Wizard",
+      "description" : "A beastman who chose to pursue the arcane arts.",
+      "category" : "hero",
+      "models" : [
+        {
+          "name" : "Minotaur Wizard",
+          "movement" : 7,
+          "courage" : 6,
+          "shoot" : 4,
+          "fight" : 6,
+          "defense" : 8,
+          "reflexes" : 8,
+          "weapons" : [
+            {
+              "id" : "big_wizard_staff",
+              "count" : 2
+            },
+            {
+              "id" : "enchanted_horns",
+              "count" : 3
+            },
+            {
+              "id" : "cloven_hooves",
+              "count" : 3
+            }
+          ],
+          "min" : 1,
+          "max" : 1,
+          "options" : [
+            {
+              "replaceRule" : [
+                {
+                  "id" : "magic",
+                  "x" : 1
+                }
+              ],
+              "withRule" : [
+                {
+                  "id" : "magic",
+                  "x" : 2
+                }
+              ]
+            }
+          ],
+          "rules" : [
+            {
+              "id" : "wounds",
+              "x" : 4
+            },
+            {
+              "id" : "magic",
+              "x" : 1
+            },
+            "leader"
+          ]
+        }
+      ],
+      "subfactions" : [
+        "none",
+        "change_legions"
+      ],
+      "keywords" : [
+        "Hero",
+        "Monster",
         "Infantry"
       ]
     },
@@ -244,32 +286,32 @@
           "defense" : 4,
           "reflexes" : 4,
           "weapons" : [
-            "thorn_bow",
+            "short_bow",
             {
-              "id" : "crude_dagger",
+              "id" : "dagger",
               "count" : 2
             }
           ],
           "options" : [
             {
               "replaceWeapon" : [
-                "thorn_bow",
+                "short_bow",
                 {
-                  "id" : "crude_dagger",
+                  "id" : "dagger",
                   "count" : 2
                 }
               ],
               "withWeapon" : [
                 [
                   {
-                    "id" : "crude_spear",
+                    "id" : "spear",
                     "count" : 2
                   },
                   "shield"
                 ],
                 [
                   {
-                    "id" : "gore_blade",
+                    "id" : "handweapon",
                     "count" : 2
                   },
                   "shield"
@@ -289,37 +331,31 @@
           "defense" : 4,
           "reflexes" : 4,
           "weapons" : [
-            "thorn_bow",
-            "crude_dagger"
+            "short_bow",
+            "dagger"
           ],
           "min" : 9,
           "max" : 29,
           "options" : [
             {
               "replaceWeapon" : [
-                "thorn_bow",
-                "crude_dagger"
+                "short_bow",
+                "dagger"
               ],
               "withWeapon" : [
                 [
-                  "crude_spear",
+                  "spear",
                   "shield"
                 ],
                 [
-                  "gore_blade",
+                  "handweapon",
                   "shield"
                 ]
-              ]
+              ],
+              "modelLimit" : "all"
             }
           ]
         }
-      ],
-      "subfactions" : [
-        "none",
-        "change_legions",
-        "rage_legions",
-        "lust_legions",
-        "plague_legions"
       ],
       "options" : [
         {
@@ -337,6 +373,13 @@
       ],
       "rules" : [
         "scout"
+      ],
+      "subfactions" : [
+        "none",
+        "pestilence",
+        "wrath",
+        "excess",
+        "change"
       ]
     },
     "satyr_warriors" : {
@@ -354,7 +397,7 @@
           "reflexes" : 4,
           "weapons" : [
             {
-              "id" : "gore_blade",
+              "id" : "handweapon",
               "count" : 3
             }
           ],
@@ -362,14 +405,14 @@
             {
               "replaceWeapon" : [
                 {
-                  "id" : "gore_blade",
+                  "id" : "handweapon",
                   "count" : 3
                 }
               ],
               "withWeapon" : [
                 [
                   {
-                    "id" : "gore_blade",
+                    "id" : "handweapon",
                     "count" : 2
                   },
                   "shield"
@@ -390,7 +433,7 @@
           "reflexes" : 4,
           "weapons" : [
             {
-              "id" : "gore_blade",
+              "id" : "handweapon",
               "count" : 2
             }
           ],
@@ -400,26 +443,20 @@
             {
               "replaceWeapon" : [
                 {
-                  "id" : "gore_blade",
+                  "id" : "handweapon",
                   "count" : 2
                 }
               ],
               "withWeapon" : [
                 [
-                  "gore_blade",
+                  "handweapon",
                   "shield"
                 ]
-              ]
+              ],
+              "modelLimit" : "all"
             }
           ]
         }
-      ],
-      "subfactions" : [
-        "none",
-        "change_legions",
-        "rage_legions",
-        "lust_legions",
-        "plague_legions"
       ],
       "options" : [
         {
@@ -435,7 +472,14 @@
           "modelLimit" : 1
         }
       ],
-      "rules" : []
+      "rules" : [],
+      "subfactions" : [
+        "none",
+        "pestilence",
+        "wrath",
+        "excess",
+        "change"
+      ]
     },
     "satyr_despoiler" : {
       "name" : "Satyr Despoilers",
@@ -452,7 +496,7 @@
           "reflexes" : 5,
           "weapons" : [
             {
-              "id" : "gore_great",
+              "id" : "great_maul",
               "count" : 3
             }
           ],
@@ -469,20 +513,13 @@
           "reflexes" : 5,
           "weapons" : [
             {
-              "id" : "gore_great",
+              "id" : "great_maul",
               "count" : 2
             }
           ],
           "min" : 4,
           "max" : 19
         }
-      ],
-      "subfactions" : [
-        "none",
-        "change_legions",
-        "rage_legions",
-        "lust_legions",
-        "plague_legions"
       ],
       "rules" : [],
       "options" : [
@@ -498,6 +535,13 @@
           ],
           "modelLimit" : 1
         }
+      ],
+      "subfactions" : [
+        "none",
+        "pestilence",
+        "wrath",
+        "excess",
+        "change"
       ]
     },
     "minotaurs" : {
@@ -595,17 +639,11 @@
                     "count" : 3
                   }
                 ]
-              ]
+              ],
+              "modelLimit" : "all"
             }
           ]
         }
-      ],
-      "subfactions" : [
-        "none",
-        "change_legions",
-        "rage_legions",
-        "lust_legions",
-        "plague_legions"
       ],
       "options" : [
         {
@@ -630,6 +668,13 @@
       "keywords" : [
         "Monster",
         "Infantry"
+      ],
+      "subfactions" : [
+        "none",
+        "pestilence",
+        "wrath",
+        "excess",
+        "change"
       ]
     },
     "centaurs" : {
@@ -647,7 +692,7 @@
           "reflexes" : 4,
           "weapons" : [
             {
-              "id" : "brutal_spear",
+              "id" : "spear",
               "count" : 3
             },
             {
@@ -669,7 +714,7 @@
           "reflexes" : 4,
           "weapons" : [
             {
-              "id" : "brutal_spear",
+              "id" : "spear",
               "count" : 2
             },
             {
@@ -678,16 +723,9 @@
             },
             "buckler"
           ],
-          "min" : 2,
-          "max" : 11
+          "min" : 4,
+          "max" : 19
         }
-      ],
-      "subfactions" : [
-        "none",
-        "change_legions",
-        "rage_legions",
-        "lust_legions",
-        "plague_legions"
       ],
       "options" : [
         {
@@ -703,20 +741,22 @@
           "modelLimit" : 1
         }
       ],
-      "rules" : [
-        {
-          "id" : "impact",
-          "x" : 1
-        }
-      ],
+      "rules" : [],
       "keywords" : [
         "Beast",
         "Infantry"
+      ],
+      "subfactions" : [
+        "none",
+        "pestilence",
+        "wrath",
+        "excess",
+        "change"
       ]
     },
     "ogre_centaurs" : {
       "name" : "Ogre Centaurs",
-      "description" : "Not all centaurs are made of humans...or of horses.  These monstrous centaurs lead any charge they're part of...",
+      "description" : "Not all centaurs are made of humans...or of horses.  These monstrous centaurs lead any charge they're part of",
       "category" : "elite",
       "models" : [
         {
@@ -741,13 +781,6 @@
           "max" : 6
         }
       ],
-      "subfactions" : [
-        "none",
-        "change_legions",
-        "rage_legions",
-        "lust_legions",
-        "plague_legions"
-      ],
       "options" : [
         {
           "replaceWeapon" : [
@@ -757,16 +790,15 @@
             }
           ],
           "withWeapon" : [
-              {
-                "id" : "giant_hammer",
-                "count" : 3
-              },
-              {
-                "id" : "crude_polearm",
-                "count" : 4
-              }
-              
-            ]
+            {
+              "id" : "great_maul",
+              "count" : 3
+            },
+            {
+              "id" : "crude_polearm",
+              "count" : 4
+            }
+          ]
         }
       ],
       "rules" : [
@@ -774,14 +806,94 @@
           "id" : "wounds",
           "x" : 3
         }
-
       ],
       "keywords" : [
         "Beast",
         "Heavy Infantry"
+      ],
+      "subfactions" : [
+        "none",
+        "pestilence",
+        "wrath",
+        "excess",
+        "change"
       ]
     },
-    "cyclops" : {
+    "Blessed Ogre Centaur" : {
+      "name" : "Blessed Ogre Centaur",
+      "description" : "The greatest of Ogre Centaurs can channel the wrath of the heavens above.",
+      "category" : "hero",
+      "models" : [
+        {
+              "name" : "Blessed Ogre Centaur",
+              "movement" : 10,
+              "courage" : 6,
+              "shoot" : 5,
+              "fight" : 6,
+              "defense" : 7,
+              "reflexes" : 7,
+              "weapons" : [
+                {
+                  "id" : "gore_great",
+                  "count" : 4
+                },
+                {
+                  "id" : "lizzer_claws",
+                  "count" : 2
+                } 
+              ],
+              "min" : 1,
+              "max" : 1
+            }
+          ],
+          "rules" : [
+            {
+              "id" : "impact",
+              "x" : 1
+            },
+            {
+              "id" : "wounds",
+              "x" : 3
+            },
+            {
+              "id" : "magic",
+              "x" : 1
+            },    
+            {
+              "id" : "charger_tactics",
+            "x" : 1
+          }
+          ],
+          "options" : [
+            {
+              "replaceRule" : [
+                {
+                  "id" : "charger_tactics",
+                  "x" : 1
+                }
+              ],
+              "withRule" : [
+                {
+                  "id" : "charger_tactics",
+                  "x" : 2
+                }
+              ]
+            }
+          ],
+            "subfactions" : [
+            "none",
+            "change_legions",
+            "rage_legions",
+            "lust_legions",
+            "plague_legions"
+          ],
+          "keywords" : [
+            "Hero",
+            "Beast",
+            "Heavy Infantry"
+          ]
+        },
+      "cyclops" : {
       "name" : "Cyclops",
       "description" : "Cursed and twisted into a beastial shape.",
       "category" : "rare",
@@ -796,7 +908,7 @@
           "reflexes" : 5,
           "weapons" : [
             {
-              "id" : "gore_great",
+              "id" : "great_maul",
               "count" : 2
             },
             {
@@ -809,7 +921,7 @@
             {
               "replaceWeapon" : [
                 {
-                  "id" : "gore_great",
+                  "id" : "great_maul",
                   "count" : 2
                 },
                 {
@@ -846,44 +958,68 @@
           ]
         }
       ],
-      "subfactions" : [
-        "none",
-        "change_legions",
-        "rage_legions",
-        "lust_legions",
-        "plague_legions"
-      ],
       "keywords" : [
         "Monster",
         "Infantry"
+      ],
+      "subfactions" : [
+        "none",
+        "pestilence",
+        "wrath",
+        "excess",
+        "change"
       ]
-    }
-  },
+       },
+      "Cockatrice" : {
+        "name" : "Cockatrice",
+        "description" : "A ferocious beast looking for a target to sharpen its talons.",
+        "category" : "rare",
+        "models" : [
+          {
+            "name" : "Cockatrice",
+            "movement" : 14,
+            "courage" : 4,
+            "shoot" : 5,
+            "fight" : 5,
+            "defense" : 8,
+            "reflexes" : 6,
+            "weapons" : [
+              {
+                "id" : "sharp_beak",
+                "count" : 1
+              },
+              {
+                "id" : "handweapon",
+                "count" : 3
+              },
+              {
+                "id" : "cock_gaze"
+              }
+            ],
+            "min" : 1,
+            "max" : 1,
+            "rules" : [
+              "fear",
+              "fly",
+              "damage_table_monster"
+            ]
+          }
+        ],
+        "subfactions" : [
+          "none",
+          "change_legions",
+          "rage_legions",
+          "lust_legions",
+          "plague_legions"
+        ],
+        "keywords" : [
+          "Monster",
+          "Infantry",
+          "Flying"
+        ]
+            }
+    },
   "weapons" : {
-    "gore_blade" : {
-      "name" : "Gore Blade",
-      "ap" : 1,
-      "attacks" : 1,
-      "short" : "Melee"
-    },
-    "crude_dagger" : {
-      "name" : "Crude Dagger",
-      "attacks" : 1,
-      "short" : "Melee"
-    },
-    "crude_spear" : {
-      "name" : "Crude Spear",
-      "ap" : 1,
-      "attacks" : 1,
-      "short" : "Melee",
-      "rules" : [
-        {
-          "id" : "reach",
-          "x" : 1
-        },
-        "cumbersome"
-      ]
-    },
     "crude_polearm" : {
       "name" : "Crude Polearm",
       "ap" : 2,
@@ -901,19 +1037,6 @@
       "attacks" : 1,
       "short" : "Melee",
       "ap" : 1
-    },
-    "thorn_bow" : {
-      "name" : "Bleakthorn Bow",
-      "ap" : 1,
-      "attacks" : 1,
-      "medium" : 18,
-      "short" : 9
-    },
-    "gore_great" : {
-      "name" : "Despoiler's Greatblade",
-      "ap" : 4,
-      "attacks" : 1,
-      "short" : "Melee"
     },
     "brutal_great" : {
       "name" : "Brutalizer Greataxe",
@@ -938,30 +1061,6 @@
       "ap" : 1,
       "attacks" : 1,
       "short" : "Melee"
-    },
-    "brutal_spear" : {
-      "name" : "Brutalizer Spear",
-      "ap" : 1,
-      "attacks" : 1,
-      "short" : "Melee",
-      "rules" : [
-        {
-          "id" : "reach",
-          "x" : 1
-        }
-      ]
-    },
-    "despoiler_staff" : {
-      "name" : "Bleakthorn Greatstaff",
-      "ap" : 5,
-      "attacks" : 1,
-      "short" : "Melee",
-      "rules" : [
-        {
-          "id" : "reach",
-          "x" : 1
-        }
-      ]
     },
     "brutal_halberd" : {
       "name" : "Savage Greatblade",
@@ -998,26 +1097,79 @@
         {
           "id" : "deadly",
           "x" : 3
-          
         }
-        
       ]
+    }, 
+       "cock_gaze" : {
+      "name" : "Petrifying Gaze",
+      "attacks" : 1,
+      "ap" : 8,
+      "rules" : [
+        {
+        "id" : "deadly",
+        "x" : 3
+        }
+      ],
+      "short" : 9,
+      "medium" : 9 
     },
-    "lizzer_claws" : {
+
+    "sharp_beak" : {
+      "name" : "Sharp Beak",
+      "attacks" : 1,
+      "ap" : 4,
+      "short" : "Melee"
+        },    
+        
+        "lizzer_claws" : {
       "name" : "Lizard Claws",
       "ap" : 2,
       "attacks" : 1,
       "short" : "Melee"
-
     },
     "giant_hammer" : {
       "name" : "Big Crusher",
       "ap" : 4,
       "attacks" : 1,
       "short" : "Melee"
+    },
+    "enchanted_horns" : {
+      "name" : "Enchanted Horns",
+      "ap" : 5,
+      "attacks" : 1,
+      "short" : "Melee"
+    },
+    "big_wizard_staff" : {
+      "name" : "Wildfocusing Staff",
+      "ap" : 4,
+      "attacks" : 1,
+      "short" : "Melee",
+      "rules" : [
+        {
+          "id" : "reach",
+          "x" : 1
+        }
+      ]
+    },
+    "cloven_hooves" : {
+      "name" : "Cloven Hooves",
+      "ap" : 2,
+      "attacks" : 1,
+      "short" : "Melee"
+    },
+    "big_stick" : {
+      "name" : "Giant Polearm",
+      "ap" : 2,
+      "attacks" : 1,
+      "short" : "Melee",
+      "rules" : [        
+          {
+            "id" : "reach",
+            "x" : 2
+          }
+      ]
     }
   },
-  
   "rules" : {
     "brutal_tactics" : {
       "name" : "Brutalizer Tactics",
@@ -1032,6 +1184,19 @@
         }
       ]
     },
+    "charger_tactics" : {
+      "name" : "Siegebreaker Tactics",
+      "inputs" : [
+        "x"
+      ],
+      "description" : "When this unit is activated, choose up to X friendly _Beast_ units within 6\". This model and those units may re-roll failed Strength tests of 9+ until the end of the round.",
+      "points" : [
+        "rule.x",
+        {
+          "multiply" : 10
+        }
+      ]
+    }, 
     "incite" : {
       "name" : "Incite",
       "description" : "When this unit is activated, choose up to X friendly _Infantry_ units within 6\". This model and those units gain +3“ Move next time they charge.",
@@ -1082,10 +1247,6 @@
       "cost" : 1
     },
     {
-      "subfactions" : [
-        "none",
-        "change_traitors"
-      ],
       "name" : "Sinister Blades",
       "phase" : "activation",
       "description" : "Use before an Infantry unit fights. Hit rolls of 1 or 2 gain +1 AP.",
@@ -1093,10 +1254,6 @@
       "cost" : 1
     },
     {
-     "subfactions" : [
-       "none",
-       "change_traitors"
-    ],      
       "name" : "Thorngate",
       "phase" : "pre_game",
       "description" : "Up to half of any force's units, one point for each may be placed in reserves before the game begins. At the beginning of any round after the first, those units may be set up within 6\" of any table edge and more than 12\" from any enemy units. If both players have reserves arriving on the same turn, roll off to see who places theirs first.",
@@ -1114,10 +1271,10 @@
       "school" : "storm",
       "subfactions" : [
         "none",
-        "change_legions",
-        "rage_legions",
-        "lust_legions",
-        "plague_legions"
+        "pestilence",
+        "wrath",
+        "excess",
+        "change"
       ]
     }
   }

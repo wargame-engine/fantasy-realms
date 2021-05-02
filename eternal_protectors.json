@@ -1,93 +1,427 @@
 {
-    "name": "Eternal Protectors",
-    "id": "eternal_protectors",
-    "author": "guitarninja#5707",
-    "version": "0.1",
-    "color": "#D4AF37",
-    "units": {
-        "lightning_mage_on_gryhpon": {
-            "name": "Lightning Mage on Gryphon",
-            "description": "A power lightning mage on a hardy gryphon mount.",
-            "category": "hero",
-            "models": [
-                {
-                    "name": "Lightning Mage on Gryphon",
-                    "movement": 8,
-                    "courage": 7,
-                    "shoot": 7,
-                    "fight": 7,
-                    "defense": 8,
-                    "reflexes": 6,
-                    "weapons": [{"id": "protector_staff", "count": 4}, {"id": "beak_and_claws", "count": 2}],
-                    "rules": [{"id": "wounds", "x": 4}, {"id": "magic", "x": 1}, {"id": "leader_x", "x": "Infantry, Cavalry"}],
-                    "min": 1,
-                    "max": 1
-                }
-            ],
-            "keywords": ["Cavalry"]
-        },
-        "storm_caller_mage": {
-            "name": "Stormcaller Mage",
-            "description": "A storm calling mage.",
-            "category": "hero",
-            "models": [
-                {
-                    "name": "Stormcaller Mage",
-                    "movement": 6,
-                    "courage": 7,
-                    "shoot": 7,
-                    "fight": 7,
-                    "defense": 8,
-                    "reflexes": 6,
-                    "weapons": [{"id": "protector_staff", "count": 4}],
-                    "rules": [{"id": "wounds", "x": 3}, {"id": "magic", "x": 1}, {"id": "leader_x", "x": "Infantry"}],
-                    "min": 1,
-                    "max": 1
-                }
-            ]
-        },
-        "invokers": {
-            "name": "Invokers",
-            "description": "Warrior mages who invoke the power of lightning to defend themselves.",
-            "category": "elite",
-            "options": [{"replaceWeapon": {"id": "great_staff", "count": 2}, "withWeapon": {"id": "sword_and_staff", "count": 3}}],
-            "models": [
-                {"name": "Invoker", "movement": 6, "courage": 6, "shoot": 6, "fight": 6, "defense": 7, "reflexes": 6, "rules": ["lightning_field", {"id": "wounds", "x": 2}], "weapons": [{"id": "great_staff", "count": 2}], "min": 5, "max": 20}
-            ],
-            "keywords": ["Infantry"]
-        },
-        "channelers": {
-            "name": "Channelers",
-            "description": "Warrior mages in heavy armor who use the power of lightning to strengthen their weapons.",
-            "category": "core",
-            "options": [
-                {"replaceWeapon": {"id": "hand_weapon_heavy", "count": 2}, "withWeapon": {"id": "maul", "count": 2}},
-                {"replaceWeapon": [{"id": "hand_weapon_heavy", "count": 2}, "shield"], "withWeapon": {"id": "great_maul", "count": 2}}
-            ],
-            "models": [
-                {"name": "Channeler", "movement": 6, "courage": 5, "shoot": 6, "fight": 6, "defense": 7, "reflexes": 6, "weapons": [{"id": "hand_weapon_heavy", "count": 2}, "shield"], "min": 5, "max": 20}
-            ],
-            "keywords": ["Infantry"]
-        },
-        "hunters": {
-            "name": "Hunters",
-            "description": "Warriors mages who use the elements to strengthen their crossbows.",
-            "category": "core",
-            "models": [
-                {"name": "Hunter", "movement": 6, "courage": 5, "shoot": 6, "fight": 6, "defense": 7, "reflexes": 6, "weapons": [{"id": "heavy_crossbow_melee", "count": 2}, "heavy_crossbow"], "min": 5, "max": 20}
-            ],
-            "keywords": ["Infantry"]
+  "name" : "Eternal Protectors",
+  "id" : "eternal_protectors",
+  "author" : "guitarninja#5707",
+  "version" : "0.1",
+  "color" : "#D4AF37",
+  "units" : {
+    "lightning_mage_on_gryhpon" : {
+      "name" : "Stormcaller Mage on Gryphon",
+      "description" : "A power lightning mage on a hardy gryphon mount.",
+      "category" : "hero",
+      "models" : [
+        {
+          "name" : "Stormcaller Mage on Gryphon",
+          "movement" : 8,
+          "courage" : 7,
+          "shoot" : 7,
+          "fight" : 7,
+          "defense" : 8,
+          "reflexes" : 6,
+          "weapons" : [
+            {
+              "id" : "protector_staff",
+              "count" : 4
+            },
+            {
+              "id" : "beak_and_claws",
+              "count" : 6
+            }
+          ],
+          "rules" : [
+            {
+              "id" : "wounds",
+              "x" : 4
+            },
+            {
+              "id" : "magic",
+              "x" : 1
+            },
+            {
+              "id" : "leader_x",
+              "x" : "Infantry, Cavalry"
+            },
+            "fly"
+          ],
+          "min" : 1,
+          "max" : 1
         }
+      ],
+      "keywords" : [
+        "Hero",
+        "Beast",
+        "Cavalry"
+      ]
     },
-    "weapons": {
-        "sword_and_staff": {"name": "Sword and Staff", "attacks": 1, "ap": 1, "short": "Melee"},
-        "protector_staff": {"name": "Protector's Staff", "attacks": 1, "ap": 4, "short": "Melee"},
-        "beak_and_claws": {"name": "Beak and Claws", "attacks": 3, "ap": 3, "short": "Melee", "rules": ["rending"]}
+    "storm_caller_mage" : {
+      "name" : "Stormcaller Mage",
+      "description" : "A storm calling mage.",
+      "category" : "hero",
+      "models" : [
+        {
+          "name" : "Stormcaller Mage",
+          "movement" : 5,
+          "courage" : 7,
+          "shoot" : 6,
+          "fight" : 6,
+          "defense" : 8,
+          "reflexes" : 6,
+          "weapons" : [
+            {
+              "id" : "protector_staff",
+              "count" : 4
+            }
+          ],
+          "rules" : [
+            {
+              "id" : "wounds",
+              "x" : 3
+            },
+            {
+              "id" : "magic",
+              "x" : 1
+            },
+            {
+              "id" : "leader_x",
+              "x" : "Infantry"
+            }
+          ],
+          "min" : 1,
+          "max" : 1
+        }
+      ],
+      "keywords" : [
+        "Hero",
+        "Infantry"
+      ]
     },
-    "rules": {
-        "lightning_field": {"name": "Lightning Field", "description": "Roll a D10 each time this unit is hit by a Shooting attack. On each roll of a 1 or 2 an attack is prevented.", "points": 2}
+    "invokers" : {
+      "name" : "Invokers",
+      "description" : "Warrior mages who invoke the power of lightning to defend themselves.",
+      "category" : "elite",
+      "models" : [
+        {
+          "options" : [
+            {
+              "replaceWeapon" : {
+                "id" : "sword_and_staff",
+                "count" : 4
+              },
+              "withWeapon" : [
+                {
+                  "id" : "great_staff",
+                  "count" : 3
+                }
+              ]
+            }
+          ],
+          "name" : "Invoker",
+          "movement" : 5,
+          "courage" : 6,
+          "shoot" : 6,
+          "fight" : 6,
+          "defense" : 7,
+          "reflexes" : 6,
+          "rules" : [
+            "lightning_field",
+            {
+              "id" : "wounds",
+              "x" : 2
+            }
+          ],
+          "weapons" : [
+            {
+              "id" : "sword_and_staff",
+              "count" : 4
+            }
+          ],
+          "min" : 3,
+          "max" : 12
+        }
+      ],
+      "keywords" : [
+        "Infantry"
+      ],
+      "options" : [
+        {
+          "addRule" : [
+            "banner"
+          ],
+          "modelLimit" : 1
+        },
+        {
+          "addRule" : [
+            "musician"
+          ],
+          "modelLimit" : 1
+        }
+      ]
     },
-    "relics": [],
-    "powers": {},
-    "strategies": []
+    "warriors" : {
+      "name" : "Warriors",
+      "description" : "Warrior mages in heavy armor who use the power of lightning to strengthen their weapons.",
+      "category" : "core",
+      "models" : [
+        {
+          "name" : "Warriors",
+          "min" : 5,
+          "max" : 20,
+          "movement" : 5,
+          "courage" : 5,
+          "shoot" : 6,
+          "fight" : 6,
+          "defense" : 6,
+          "reflexes" : 6,
+          "weapons" : [
+            {
+              "id" : "handweapon",
+              "count" : 3
+            }
+          ],
+          "options" : [
+            {
+              "replaceWeapon" : [
+                {
+                  "id" : "handweapon",
+                  "count" : 3
+                }
+              ],
+              "withWeapon" : [
+                {
+                  "id" : "maul",
+                  "count" : 3
+                },
+                [
+                  {
+                    "id" : "maul",
+                    "count" : 2
+                  },
+                  "shield"
+                ],
+                [
+                  {
+                    "id" : "handweapon",
+                    "count" : 2
+                  },
+                  "shield"
+                ]
+              ],
+              "modelLimit" : "all"
+            },
+            {
+              "replaceWeapon" : [
+                {
+                  "id" : "handweapon",
+                  "count" : 2
+                },
+                "shield"
+              ],
+              "withWeapon" : {
+                "id" : "great_maul",
+                "count" : 2
+              },
+              "modelLimit" : "1/5"
+            }
+          ]
+        }
+      ],
+      "keywords" : [
+        "Infantry"
+      ],
+      "options" : [
+        {
+          "addRule" : [
+            "banner"
+          ],
+          "modelLimit" : 1
+        },
+        {
+          "addRule" : [
+            "musician"
+          ],
+          "modelLimit" : 1
+        }
+      ]
+    },
+    "hunters" : {
+      "name" : "Hunters",
+      "description" : "Warriors mages who use the elements to strengthen their crossbows.",
+      "category" : "core",
+      "models" : [
+        {
+          "name" : "Hunter",
+          "movement" : 5,
+          "courage" : 5,
+          "shoot" : 6,
+          "fight" : 6,
+          "defense" : 7,
+          "reflexes" : 6,
+          "weapons" : [
+            {
+              "id" : "handweapon",
+              "count" : 2
+            },
+            "heavy_crossbow"
+          ],
+          "min" : 5,
+          "max" : 20,
+          "options" : [
+            {
+              "replaceWeapon" : [
+                "heavy_crossbow"
+              ],
+              "withWeapon" : [
+                [
+                  {
+                    "id" : "repeater_crossbow",
+                    "count" : 3
+                  }
+                ]
+              ],
+              "modelLimit" : "all"
+            },
+            {
+              "replaceWeapon" : [
+                "heavy_crossbow"
+              ],
+              "withWeapon" : [
+                "storm_crossbow",
+                "great_bow"
+              ],
+              "modelLimit" : "1/5"
+            },
+            {
+              "addRule" : [
+                "ambush",
+                "outflank"
+              ],
+              "modelLimit" : "all"
+            }
+          ]
+        }
+      ],
+      "keywords" : [
+        "Infantry"
+      ]
+    },
+    "veterans" : {
+      "name" : "Veterans",
+      "description" : "Warrior mages in heavy armor who use storm-charged weapons to bring justice to those that oppose them.",
+      "category" : "elite",
+      "models" : [
+        {
+          "min" : 3,
+          "max" : 12,
+          "name" : "Eternal Veteran",
+          "movement" : 5,
+          "courage" : 5,
+          "shoot" : 6,
+          "fight" : 6,
+          "defense" : 7,
+          "reflexes" : 6,
+          "weapons" : [
+            {
+              "id" : "rending_blade",
+              "count" : 2
+            },
+            "enchanted_shield"
+          ],
+          "options" : [
+            {
+              "replaceWeapon" : [
+                {
+                  "id" : "rending_blade",
+                  "count" : 2
+                },
+                "enchanted_shield"
+              ],
+              "withWeapon" : [
+                [
+                  {
+                    "id" : "rending_great",
+                    "count" : 3
+                  }
+                ]
+              ],
+              "modelLimit" : "1/3"
+            }
+          ]
+        }
+      ],
+      "keywords" : [
+        "Infantry"
+      ]
+    }
+  },
+  "weapons" : {
+    "sword_and_staff" : {
+      "name" : "Sword and Staff",
+      "attacks" : 1,
+      "ap" : 1,
+      "short" : "Melee"
+    },
+    "protector_staff" : {
+      "name" : "Protector's Staff",
+      "attacks" : 1,
+      "ap" : 4,
+      "short" : "Melee",
+      "rules" : [
+        {
+          "id" : "reach",
+          "x" : 1
+        }
+      ]
+    },
+    "beak_and_claws" : {
+      "name" : "Beak and Claws",
+      "attacks" : 1,
+      "ap" : 3,
+      "short" : "Melee",
+      "rules" : [
+        "rending"
+      ]
+    },
+    "enchanted_shield" : {
+      "name" : "Enchanted Shield",
+      "attacks" : 0,
+      "short" : "Melee",
+      "rules" : [
+        "shield",
+        {
+          "id" : "resilient",
+          "x" : 3
+        }
+      ]
+    },
+    "great_bow" : {
+      "name" : "Thunderbolt-Greatbow",
+      "attacks" : 1,
+      "ap" : 3,
+      "short" : 12,
+      "medium" : 24,
+      "rules" : [
+        "spectral"
+      ]
+    },
+    "storm_crossbow" : {
+      "name" : "Thunderbolt-Crossbow",
+      "attacks" : 1,
+      "ap" : 3,
+      "short" : 9,
+      "medium" : 18,
+      "rules" : [
+        "spectral"
+      ]
+    }
+  },
+  "rules" : {
+    "lightning_field" : {
+      "name" : "Lightning Field",
+      "description" : "Roll a D10 each time this unit is hit by a Shooting attack. On each roll of a 1 or 2 an attack is prevented.",
+      "points" : 2
+    }
+  },
+  "relics" : [],
+  "powers" : {},
+  "strategies" : []
 }

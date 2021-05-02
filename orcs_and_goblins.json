@@ -25,7 +25,7 @@
           "weapons" : [
             "shield",
             {
-              "id" : "smasher",
+              "id" : "great_maul",
               "count" : 4
             }
           ],
@@ -33,7 +33,7 @@
             {
               "replaceWeapon" : [
                 {
-                  "id" : "smasher",
+                  "id" : "great_maul",
                   "count" : 4
                 },
                 "shield"
@@ -44,7 +44,7 @@
                   "count" : 4
                 },
                 {
-                  "id" : "smasher",
+                  "id" : "great_maul",
                   "count" : 5
                 }
               ]
@@ -68,10 +68,10 @@
       ],
       "subfactions" : [
         "none",
-        "trickery_focus",
-        "speed_focus",
-        "primal_focus",
-        "armor_focus"
+        "trickery",
+        "speed",
+        "primal",
+        "armor"
       ]
     },
     "moon_goblin_shaman" : {
@@ -94,7 +94,7 @@
               "id" : "bite",
               "count" : 3
             },
-            "staff"
+            "wizard_staff"
           ],
           "options" : [
             {
@@ -144,10 +144,10 @@
       ],
       "subfactions" : [
         "none",
-        "trickery_focus",
-        "speed_focus",
-        "primal_focus",
-        "armor_focus"
+        "trickery",
+        "speed",
+        "primal",
+        "armor"
       ]
     },
     "goblin_warboss" : {
@@ -167,7 +167,7 @@
           "reflexes" : 6,
           "weapons" : [
             {
-              "id" : "rusty_sword",
+              "id" : "handweapon",
               "count" : 3
             },
             "shield"
@@ -176,7 +176,7 @@
             {
               "replaceWeapon" : [
                 {
-                  "id" : "rusty_sword",
+                  "id" : "handweapon",
                   "count" : 3
                 },
                 "shield"
@@ -192,12 +192,12 @@
                     "count" : 3
                   },
                   {
-                    "id" : "rusty_dagger",
+                    "id" : "dagger",
                     "count" : 3
                   }
                 ],
                 {
-                  "id" : "rusty_greatsword",
+                  "id" : "rending_blade",
                   "count" : 3
                 }
               ]
@@ -226,10 +226,10 @@
       ],
       "subfactions" : [
         "none",
-        "trickery_focus",
-        "speed_focus",
-        "primal_focus",
-        "armor_focus"
+        "trickery",
+        "speed",
+        "primal",
+        "armor"
       ]
     },
     "goblins" : {
@@ -250,7 +250,7 @@
           "weapons" : [
             "shield",
             {
-              "id" : "rusty_sword",
+              "id" : "handweapon",
               "count" : 2
             }
           ],
@@ -260,7 +260,7 @@
             {
               "replaceWeapon" : [
                 {
-                  "id" : "rusty_sword",
+                  "id" : "handweapon",
                   "count" : 2
                 },
                 "shield"
@@ -268,11 +268,11 @@
               "withWeapon" : [
                 [
                   {
-                    "id" : "shortbow",
+                    "id" : "short_bow",
                     "count" : 2
                   },
                   {
-                    "id" : "rusty_dagger",
+                    "id" : "dagger",
                     "count" : 2
                   }
                 ],
@@ -296,7 +296,7 @@
           "defense" : 5,
           "reflexes" : 5,
           "weapons" : [
-            "rusty_sword",
+            "handweapon",
             "shield"
           ],
           "min" : 9,
@@ -304,13 +304,13 @@
           "options" : [
             {
               "replaceWeapon" : [
-                "rusty_sword",
+                "handweapon",
                 "shield"
               ],
               "withWeapon" : [
                 [
-                  "shortbow",
-                  "rusty_dagger"
+                  "short_bow",
+                  "dagger"
                 ],
                 [
                   "spear",
@@ -320,7 +320,7 @@
             },
             {
               "replaceWeapon" : [
-                "rusty_sword",
+                "handweapon",
                 "shield"
               ],
               "withWeapon" : [
@@ -353,10 +353,10 @@
       ],
       "subfactions" : [
         "none",
-        "trickery_focus",
-        "speed_focus",
-        "primal_focus",
-        "armor_focus"
+        "trickery",
+        "speed",
+        "primal",
+        "armor"
       ]
     },
     "orc_warriors" : {
@@ -376,7 +376,7 @@
           "reflexes" : 5,
           "weapons" : [
             {
-              "id" : "cleaver",
+              "id" : "maul",
               "count" : 2
             },
             "shield"
@@ -385,7 +385,7 @@
             {
               "replaceWeapon" : [
                 {
-                  "id" : "cleaver",
+                  "id" : "maul",
                   "count" : 2
                 },
                 "shield"
@@ -393,14 +393,14 @@
               "withWeapon" : [
                 [
                   {
-                    "id" : "cleaver",
+                    "id" : "maul",
                     "count" : 3
                   }
                 ],
                 [
                   "big_smasher",
                   {
-                    "id" : "cleaver",
+                    "id" : "maul",
                     "count" : 2
                   }
                 ]
@@ -421,7 +421,7 @@
           "reflexes" : 5,
           "weapons" : [
             {
-              "id" : "cleaver"
+              "id" : "maul"
             },
             {
               "id" : "shield"
@@ -431,7 +431,7 @@
             {
               "replaceWeapon" : [
                 {
-                  "id" : "cleaver"
+                  "id" : "maul"
                 },
                 {
                   "id" : "shield"
@@ -439,10 +439,11 @@
               ],
               "withWeapon" : [
                 {
-                  "id" : "cleaver",
+                  "id" : "maul",
                   "count" : 2
                 }
-              ]
+              ],
+              "modelLimit" : "all"
             }
           ],
           "min" : 4,
@@ -457,7 +458,7 @@
         {
           "replaceWeapon" : [
             {
-              "id" : "cleaver",
+              "id" : "maul",
               "count" : 2
             }
           ],
@@ -483,10 +484,10 @@
       ],
       "subfactions" : [
         "none",
-        "trickery_focus",
-        "speed_focus",
-        "primal_focus",
-        "armor_focus"
+        "trickery",
+        "speed",
+        "primal",
+        "armor"
       ]
     },
     "goblin_riders" : {
@@ -506,7 +507,7 @@
           "reflexes" : 5,
           "weapons" : [
             {
-              "id" : "shortbow",
+              "id" : "short_bow",
               "count" : 3
             },
             {
@@ -535,7 +536,7 @@
           "reflexes" : 5,
           "weapons" : [
             {
-              "id" : "shortbow",
+              "id" : "short_bow",
               "count" : 2
             },
             "spear",
@@ -572,10 +573,10 @@
       ],
       "subfactions" : [
         "none",
-        "trickery_focus",
-        "speed_focus",
-        "primal_focus",
-        "armor_focus"
+        "tirckery",
+        "speed",
+        "primal",
+        "armor"
       ]
     },
     "goblin_knights" : {
@@ -595,7 +596,7 @@
           "reflexes" : 5,
           "weapons" : [
             {
-              "id" : "rusty_dagger",
+              "id" : "dagger",
               "count" : 3
             },
             {
@@ -609,7 +610,7 @@
             {
               "replaceWeapon" : [
                 {
-                  "id" : "rusty_dagger",
+                  "id" : "dagger",
                   "count" : 3
                 }
               ],
@@ -617,14 +618,9 @@
                 [
                   {
                     "id" : "lance",
-                    "count" : 3
+                    "count" : 2
                   }
                 ]
-              ]
-            },
-            {
-              "addRule" : [
-                "heavy_armor"
               ]
             }
           ],
@@ -648,7 +644,7 @@
           "reflexes" : 5,
           "weapons" : [
             {
-              "id" : "rusty_dagger",
+              "id" : "dagger",
               "count" : 2
             },
             {
@@ -662,21 +658,16 @@
             {
               "replaceWeapon" : [
                 {
-                  "id" : "rusty_dagger",
+                  "id" : "dagger",
                   "count" : 2
                 }
               ],
               "withWeapon" : [
                 {
-                  "id" : "lance",
-                  "count" : 2
+                  "id" : "lance"
                 }
-              ]
-            },
-            {
-              "addRule" : [
-                "heavy_armor"
-              ]
+              ],
+              "modelLimit" : "all"
             }
           ],
           "rules" : [
@@ -697,6 +688,12 @@
       "options" : [
         {
           "addRule" : [
+            "heavy_armor"
+          ],
+          "modelLimit" : "all"
+        },
+        {
+          "addRule" : [
             "banner"
           ],
           "modelLimit" : 1
@@ -710,10 +707,10 @@
       ],
       "subfactions" : [
         "none",
-        "trickery_focus",
-        "speed_focus",
-        "primal_focus",
-        "armor_focus"
+        "trickery",
+        "speed",
+        "primal",
+        "armor"
       ]
     },
     "primal_warriors" : {
@@ -733,14 +730,17 @@
           "reflexes" : 5,
           "weapons" : [
             {
-              "id" : "cleaver",
+              "id" : "maul",
               "count" : 3
             }
           ],
           "options" : [
             {
               "replaceWeapon" : [
-                "boss_cleaver_pair"
+                {
+                  "id" : "maul",
+                  "count" : 3
+                }
               ],
               "withWeapon" : [
                 [
@@ -768,21 +768,25 @@
           "reflexes" : 5,
           "weapons" : [
             {
-              "id" : "cleaver",
+              "id" : "maul",
               "count" : 2
             }
           ],
           "options" : [
             {
               "replaceWeapon" : [
-                "cleaver_pair"
+                {
+                  "id" : "maul",
+                  "count" : 2
+                }
               ],
               "withWeapon" : [
                 {
                   "id" : "spear",
                   "count" : 2
                 }
-              ]
+              ],
+              "modelLimit" : "all"
             }
           ],
           "rules" : [
@@ -812,10 +816,10 @@
       ],
       "subfactions" : [
         "none",
-        "trickery_focus",
-        "speed_focus",
-        "primal_focus",
-        "armor_focus"
+        "trickery",
+        "speed",
+        "primal",
+        "armor"
       ]
     },
     "primal_goblin_warboss" : {
@@ -835,11 +839,11 @@
           "reflexes" : 6,
           "weapons" : [
             {
-              "id" : "shortbow",
+              "id" : "short_bow",
               "count" : 3
             },
             {
-              "id" : "rusty_dagger",
+              "id" : "handweapon",
               "count" : 3
             },
             {
@@ -851,7 +855,7 @@
             {
               "replaceWeapon" : [
                 {
-                  "id" : "rusty_dagger",
+                  "id" : "handweapon",
                   "count" : 3
                 }
               ],
@@ -892,10 +896,10 @@
       ],
       "subfactions" : [
         "none",
-        "trickery_focus",
-        "speed_focus",
-        "primal_focus",
-        "armor_focus"
+        "trickery",
+        "speed",
+        "primal",
+        "armor"
       ]
     },
     "speed_goblin_warboss" : {
@@ -969,10 +973,10 @@
       ],
       "subfactions" : [
         "none",
-        "trickery_focus",
-        "speed_focus",
-        "primal_focus",
-        "armor_focus"
+        "trickery",
+        "speed",
+        "primal",
+        "armor"
       ]
     },
     "goblin_shaman" : {
@@ -991,7 +995,7 @@
           "defense" : 5,
           "reflexes" : 5,
           "weapons" : [
-            "staff"
+            "wizard_staff"
           ],
           "options" : [
             {
@@ -1032,10 +1036,10 @@
       ],
       "subfactions" : [
         "none",
-        "trickery_focus",
-        "speed_focus",
-        "primal_focus",
-        "armor_focus"
+        "trickery",
+        "speed",
+        "primal",
+        "armor"
       ]
     },
     "orc_brutes" : {
@@ -1073,7 +1077,7 @@
                     "id" : "gauntlet"
                   },
                   {
-                    "id" : "smasher",
+                    "id" : "great_maul",
                     "count" : 2
                   }
                 ]
@@ -1099,7 +1103,7 @@
           "reflexes" : 4,
           "weapons" : [
             {
-              "id" : "smasher",
+              "id" : "great_maul",
               "count" : 2
             }
           ],
@@ -1109,7 +1113,6 @@
               "x" : 2
             }
           ],
-          "options" : [],
           "min" : 2,
           "max" : 11
         }
@@ -1123,14 +1126,14 @@
           "modelLimit" : "2/3",
           "replaceWeapon" : [
             {
-              "id" : "smasher",
+              "id" : "great_maul",
               "count" : 2
             }
           ],
           "withWeapon" : [
             [
               {
-                "id" : "slasher",
+                "id" : "halberd",
                 "count" : 2
               }
             ],
@@ -1157,10 +1160,10 @@
       ],
       "subfactions" : [
         "none",
-        "trickery_focus",
-        "speed_focus",
-        "primal_focus",
-        "armor_focus"
+        "trickery",
+        "speed",
+        "primal",
+        "armor"
       ]
     },
     "armor_orc_warboss" : {
@@ -1221,10 +1224,10 @@
       ],
       "subfactions" : [
         "none",
-        "trickery_focus",
-        "speed_focus",
-        "primal_focus",
-        "armor_focus"
+        "trickery",
+        "speed",
+        "primal",
+        "armor"
       ]
     },
     "armor_orc_brute" : {
@@ -1245,7 +1248,7 @@
           "weapons" : [
             "shield",
             {
-              "id" : "cleaver",
+              "id" : "maul",
               "count" : 3
             }
           ],
@@ -1253,7 +1256,7 @@
             {
               "replaceWeapon" : [
                 {
-                  "id" : "cleaver",
+                  "id" : "maul",
                   "count" : 3
                 },
                 "shield"
@@ -1289,7 +1292,7 @@
           "weapons" : [
             "shield",
             {
-              "id" : "cleaver",
+              "id" : "maul",
               "count" : 2
             }
           ],
@@ -1300,7 +1303,6 @@
             },
             "heavy_armor"
           ],
-          "options" : [],
           "min" : 2,
           "max" : 11
         }
@@ -1313,7 +1315,7 @@
         {
           "replaceWeapon" : [
             {
-              "id" : "cleaver",
+              "id" : "maul",
               "count" : 2
             },
             "shield"
@@ -1327,7 +1329,7 @@
             ],
             [
               {
-                "id" : "slasher",
+                "id" : "halberd",
                 "count" : 2
               }
             ]
@@ -1349,31 +1351,14 @@
       ],
       "subfactions" : [
         "none",
-        "trickery_focus",
-        "speed_focus",
-        "primal_focus",
-        "armor_focus"
+        "trickery",
+        "speed",
+        "primal",
+        "armor"
       ]
     }
   },
   "weapons" : {
-    "shortbow" : {
-      "name" : "Shortbow",
-      "ap" : 1,
-      "attacks" : 1,
-      "short" : 9,
-      "medium" : 18
-    },
-    "shield" : {
-      "name" : "Shield",
-      "attacks" : 0,
-      "short" : "Melee",
-      "rules" : [
-        {
-          "id" : "shield"
-        }
-      ]
-    },
     "net_and_spear" : {
       "name" : "Spear and Net",
       "attacks" : 1,
@@ -1381,10 +1366,9 @@
       "ap" : 1,
       "rules" : [
         "net",
-        "cumbersome",
         {
           "id" : "reach",
-          "x" : 2
+          "x" : 1
         }
       ]
     },
@@ -1423,71 +1407,11 @@
       "short" : "Melee",
       "note" : "goblins only"
     },
-    "rusty_dagger" : {
-      "name" : "Rusty Dagger",
-      "attacks" : 1,
-      "short" : "Melee",
-      "notes" : "goblins only"
-    },
-    "staff" : {
-      "name" : "Moon Staff",
-      "attacks" : 1,
-      "short" : "Melee",
-      "notes" : "goblins only",
-      "ap" : 3
-    },
-    "rusty_greatsword" : {
-      "name" : "Rusty Greatsword",
-      "attacks" : 1,
-      "short" : "Melee",
-      "notes" : "goblins only",
-      "ap" : 1,
-      "rules" : [
-        "rending"
-      ]
-    },
-    "rusty_sword" : {
-      "name" : "Rusty Sword",
-      "attacks" : 1,
-      "short" : "Melee",
-      "notes" : "goblins only",
-      "ap" : 1
-    },
-    "dagger" : {
-      "name" : "Crude Cutter",
-      "attacks" : 1,
-      "short" : "Melee",
-      "notes" : "orcs only"
-    },
-    "cleaver" : {
-      "name" : "Cleaver",
-      "ap" : 2,
-      "attacks" : 1,
-      "short" : "Melee"
-    },
     "big_smasher" : {
       "name" : "Big Smasher",
       "ap" : 6,
       "attacks" : 1,
       "short" : "Melee"
-    },
-    "smasher" : {
-      "name" : "Smasher",
-      "ap" : 4,
-      "attacks" : 1,
-      "short" : "Melee"
-    },
-    "slasher" : {
-      "name" : "Slasher",
-      "ap" : 4,
-      "attacks" : 1,
-      "short" : "Melee",
-      "rules" : [
-        {
-          "id" : "reach",
-          "x" : 2
-        }
-      ]
     },
     "gauntlet" : {
       "name" : "Scythed Gauntlet",
@@ -1545,43 +1469,12 @@
       "points" : 10,
       "rule" : "frenzy_banner",
       "subfactions" : [
-        "armor_focus",
-        "speed_focus",
+        "armor",
+        "speed",
         "none",
-        "trickery_focus",
-        "primal_focus"
+        "trickery",
+        "primal"
       ]
     }
-  ],
-  "models" : {},
-  "subfactions" : {
-    "armor_focus" : {
-      "name" : "Armor Focus",
-      "id" : "armor_focus",
-      "color" : "#800080",
-      "restricted" : true,
-      "background" : "A force focused on heavy armor and big weapons."
-    },
-    "speed_focus" : {
-      "name" : "Speed Focus",
-      "id" : "speed_focus",
-      "color" : "#800080",
-      "restricted" : true,
-      "background" : "A force that is fanatical about going fast, using a lot of boars and chariots."
-    },
-    "trickery_focus" : {
-      "name" : "Trickery Focus",
-      "id" : "trickery_focus",
-      "color" : "#800080",
-      "restricted" : true,
-      "background" : "A force that focuses on outflanking and ambushing their opponent."
-    },
-    "primal_focus" : {
-      "name" : "Primal Focus",
-      "id" : "primal_focus",
-      "color" : "#800080",
-      "restricted" : true,
-      "background" : "A force that uses a lot of wild beasts, savage orc warriors and spiritual beings."
-    }
-  }
+  ]
 }

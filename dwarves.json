@@ -31,7 +31,7 @@
           ],
           "weapons" : [
             {
-              "id" : "runic",
+              "id" : "rending_great",
               "count" : 4
             }
           ],
@@ -41,20 +41,18 @@
             {
               "replaceWeapon" : [
                 {
-                  "id" : "runic",
+                  "id" : "rending_great",
                   "count" : 4
                 }
               ],
               "withWeapon" : [
-                {
-                  "id" : "runic_great",
-                  "count" : 4
-                }
-              ]
-            },
-            {
-              "addWeapon" : [
-                "shield"
+                [
+                  {
+                    "id" : "great_maul",
+                    "count" : 4
+                  },
+                  "shield"
+                ]
               ]
             },
             {
@@ -76,10 +74,10 @@
       ],
       "subfactions" : [
         "none",
-        "melee_focus",
-        "magic_focus",
-        "black_focus",
-        "scout_focus"
+        "combat",
+        "magic",
+        "blackpowder",
+        "tunneler"
       ]
     },
     "runepriest" : {
@@ -110,7 +108,7 @@
           ],
           "weapons" : [
             {
-              "id" : "runic",
+              "id" : "rending_great",
               "count" : 3
             }
           ],
@@ -132,20 +130,18 @@
             {
               "replaceWeapon" : [
                 {
-                  "id" : "runic",
+                  "id" : "rending_great",
                   "count" : 3
                 }
               ],
               "withWeapon" : [
-                {
-                  "id" : "runic_great",
-                  "count" : 3
-                }
-              ]
-            },
-            {
-              "addWeapon" : [
-                "shield"
+                [
+                  {
+                    "id" : "great_maul",
+                    "count" : 3
+                  },
+                  "shield"
+                ]
               ]
             }
           ],
@@ -160,10 +156,10 @@
       ],
       "subfactions" : [
         "none",
-        "melee_focus",
-        "magic_focus",
-        "black_focus",
-        "scout_focus"
+        "combat",
+        "magic",
+        "blackpowder",
+        "tunneler"
       ]
     },
     "cogsmith" : {
@@ -198,7 +194,7 @@
               "count" : 2
             },
             {
-              "id" : "dwarf_dagger",
+              "id" : "handweapon",
               "count" : 4
             },
             {
@@ -216,10 +212,10 @@
       "rules" : [],
       "subfactions" : [
         "none",
-        "melee_focus",
-        "magic_focus",
-        "black_focus",
-        "scout_focus"
+        "combat",
+        "magic",
+        "blackpowder",
+        "tunneler"
       ]
     },
     "gearsmith" : {
@@ -255,7 +251,7 @@
               "count" : 2
             },
             {
-              "id" : "dwarf_dagger",
+              "id" : "handweapon",
               "count" : 4
             }
           ],
@@ -278,14 +274,14 @@
             {
               "replaceWeapon" : [
                 {
-                  "id" : "dwarf_dagger",
+                  "id" : "handweapon",
                   "count" : 4
                 }
               ],
               "withWeapon" : [
                 [
                   {
-                    "id" : "dwarf_great",
+                    "id" : "rending_blade",
                     "count" : 4
                   }
                 ]
@@ -301,10 +297,10 @@
       "rules" : [],
       "subfactions" : [
         "none",
-        "melee_focus",
-        "magic_focus",
-        "black_focus",
-        "scout_focus"
+        "combat",
+        "magic",
+        "blackpowder",
+        "tunneler"
       ]
     },
     "stalker" : {
@@ -327,7 +323,7 @@
               "id" : "marks_crossbow"
             },
             {
-              "id" : "dwarf_dagger",
+              "id" : "handweapon",
               "count" : 4
             }
           ],
@@ -349,10 +345,10 @@
       "rules" : [],
       "subfactions" : [
         "none",
-        "melee_focus",
-        "magic_focus",
-        "black_focus",
-        "scout_focus"
+        "combat",
+        "magic",
+        "blackpowder",
+        "tunneler"
       ]
     },
     "runepriest_elemental" : {
@@ -413,7 +409,7 @@
               ],
               "withWeapon" : [
                 {
-                  "id" : "runic_great",
+                  "id" : "rending_great",
                   "count" : 3
                 }
               ],
@@ -432,10 +428,10 @@
       ],
       "subfactions" : [
         "none",
-        "melee_focus",
-        "magic_focus",
-        "black_focus",
-        "scout_focus"
+        "combat",
+        "magic",
+        "blackpowder",
+        "tunneler"
       ]
     },
     "dwarf_arbalesters" : {
@@ -458,7 +454,7 @@
               "id" : "crossbow"
             },
             {
-              "id" : "dwarf_dagger",
+              "id" : "handweapon",
               "count" : 2
             }
           ],
@@ -475,7 +471,7 @@
           "reflexes" : 5,
           "weapons" : [
             "crossbow",
-            "dwarf_dagger"
+            "handweapon"
           ],
           "min" : 4,
           "max" : 19
@@ -506,10 +502,10 @@
       "rules" : [],
       "subfactions" : [
         "none",
-        "melee_focus",
-        "magic_focus",
-        "black_focus",
-        "scout_focus"
+        "combat",
+        "magic",
+        "blackpowder",
+        "tunneler"
       ]
     },
     "dwarf_grunts" : {
@@ -529,7 +525,7 @@
           "reflexes" : 5,
           "weapons" : [
             {
-              "id" : "dwarf_hand",
+              "id" : "maul",
               "count" : 2
             },
             "shield"
@@ -538,14 +534,14 @@
             {
               "replaceWeapon" : [
                 {
-                  "id" : "dwarf_hand",
+                  "id" : "maul",
                   "count" : 2
                 },
                 "shield"
               ],
               "withWeapon" : [
                 {
-                  "id" : "dwarf_great",
+                  "id" : "rending_blade",
                   "count" : 3
                 }
               ]
@@ -563,7 +559,7 @@
           "defense" : 5,
           "reflexes" : 5,
           "weapons" : [
-            "dwarf_hand",
+            "maul",
             "shield"
           ],
           "min" : 4,
@@ -573,22 +569,15 @@
       "keywords" : [
         "Infantry"
       ],
-      "subfactions" : [
-        "none",
-        "melee_focus",
-        "magic_focus",
-        "black_focus",
-        "scout_focus"
-      ],
       "options" : [
         {
           "replaceWeapon" : [
-            "dwarf_hand",
+            "maul",
             "shield"
           ],
           "withWeapon" : [
             {
-              "id" : "dwarf_great",
+              "id" : "rending_blade",
               "count" : 2
             }
           ],
@@ -607,7 +596,14 @@
           "modelLimit" : 1
         }
       ],
-      "rules" : []
+      "rules" : [],
+      "subfactions" : [
+        "none",
+        "combat",
+        "magic",
+        "blackpowder",
+        "tunneler"
+      ]
     },
     "dwarf_veterans" : {
       "name" : "Dwarven Veterans",
@@ -626,11 +622,28 @@
           "reflexes" : 5,
           "weapons" : [
             {
-              "id" : "runic_great",
+              "id" : "rending_blade",
               "count" : 3
+            },
+            "shield"
+          ],
+          "options" : [
+            {
+              "replaceWeapon" : [
+                {
+                  "id" : "rending_blade",
+                  "count" : 3
+                },
+                "shield"
+              ],
+              "withWeapon" : [
+                {
+                  "id" : "rending_great",
+                  "count" : 3
+                }
+              ]
             }
           ],
-          "options" : [],
           "min" : 1,
           "max" : 1
         },
@@ -644,11 +657,29 @@
           "reflexes" : 5,
           "weapons" : [
             {
-              "id" : "runic_great",
+              "id" : "rending_blade",
               "count" : 2
+            },
+            "shield"
+          ],
+          "options" : [
+            {
+              "replaceWeapon" : [
+                {
+                  "id" : "rending_blade",
+                  "count" : 2
+                },
+                "shield"
+              ],
+              "withWeapon" : [
+                {
+                  "id" : "rending_great",
+                  "count" : 2
+                }
+              ],
+              "modelLimit" : "all"
             }
           ],
-          "options" : [],
           "min" : 4,
           "max" : 19
         }
@@ -657,11 +688,6 @@
         "Infantry"
       ],
       "options" : [
-        {
-          "addRule" : [
-            "shield"
-          ]
-        },
         {
           "addRule" : [
             "banner"
@@ -677,10 +703,10 @@
       ],
       "subfactions" : [
         "none",
-        "melee_focus",
-        "magic_focus",
-        "black_focus",
-        "scout_focus"
+        "combat",
+        "magic",
+        "blackpowder",
+        "tunneler"
       ]
     },
     "dwarf_pathfinders" : {
@@ -700,7 +726,7 @@
           "reflexes" : 5,
           "weapons" : [
             {
-              "id" : "dwarf_dagger",
+              "id" : "handweapon",
               "count" : 2
             },
             "volley_pistol"
@@ -731,8 +757,7 @@
           "weapons" : [
             "light_handgun",
             {
-              "id" : "dwarf_dagger",
-              "Number" : 0,
+              "id" : "handweapon",
               "count" : 2
             }
           ],
@@ -748,7 +773,7 @@
           "replaceWeapon" : [
             "light_handgun",
             {
-              "id" : "dwarf_dagger",
+              "id" : "handweapon",
               "count" : 2
             }
           ],
@@ -757,11 +782,12 @@
               "id" : "crank_rifle"
             },
             {
-              "id" : "dwarf_pike"
-            },
-            {
               "id" : "hook_rifle"
-            }
+            },
+            [
+              "halberd",
+              "handweapon"
+            ]
           ],
           "modelLimit" : "1/5"
         },
@@ -781,10 +807,10 @@
       "rules" : [],
       "subfactions" : [
         "none",
-        "melee_focus",
-        "magic_focus",
-        "black_focus",
-        "scout_focus"
+        "combat",
+        "magic",
+        "blackpowder",
+        "tunneler"
       ]
     },
     "dwarf_commando" : {
@@ -811,7 +837,7 @@
               "count" : 2
             },
             {
-              "id" : "dwarf_dagger",
+              "id" : "handweapon",
               "count" : 2
             }
           ],
@@ -846,7 +872,7 @@
           "weapons" : [
             "crossbow",
             "throw_axe",
-            "dwarf_dagger"
+            "handweapon"
           ],
           "min" : 2,
           "max" : 11,
@@ -869,10 +895,12 @@
             {
               "id" : "ambush"
             }
-          ]
+          ],
+          "modelLimit" : "all"
         },
         {
-          "addRule" : "shield"
+          "addRule" : "shield",
+          "modelLimit" : "all"
         },
         {
           "addRule" : [
@@ -890,10 +918,10 @@
       "rules" : [],
       "subfactions" : [
         "none",
-        "melee_focus",
-        "magic_focus",
-        "black_focus",
-        "scout_focus"
+        "combat",
+        "magic",
+        "blackpowder",
+        "tunneler"
       ]
     },
     "dwarf_gunners" : {
@@ -916,7 +944,7 @@
               "id" : "volley_pistol"
             },
             {
-              "id" : "dwarf_dagger",
+              "id" : "handweapon",
               "count" : 2
             }
           ],
@@ -936,12 +964,12 @@
             {
               "replaceWeapon" : [
                 {
-                  "id" : "dwarf_dagger"
+                  "id" : "handweapon"
                 }
               ],
               "withWeapon" : [
                 {
-                  "id" : "dwarf_great"
+                  "id" : "rending_blade"
                 }
               ]
             }
@@ -960,7 +988,7 @@
           "reflexes" : 5,
           "weapons" : [
             "rifle",
-            "dwarf_dagger"
+            "handweapon"
           ],
           "min" : 2,
           "max" : 11,
@@ -974,7 +1002,7 @@
         {
           "replaceWeapon" : [
             "rifle",
-            "dwarf_dagger"
+            "handweapon"
           ],
           "withWeapon" : [
             {
@@ -1002,10 +1030,10 @@
       "rules" : [],
       "subfactions" : [
         "none",
-        "melee_focus",
-        "magic_focus",
-        "black_focus",
-        "scout_focus"
+        "combat",
+        "magic",
+        "blackpowder",
+        "tunneler"
       ]
     },
     "dwarf_skyguard" : {
@@ -1028,8 +1056,8 @@
               "id" : "handgun",
               "count" : 2
             },
-            "dwarf_pike",
-            "dwarf_dagger"
+            "halberd",
+            "handweapon"
           ],
           "min" : 1,
           "max" : 1,
@@ -1050,7 +1078,7 @@
               "id" : "handgun",
               "count" : 2
             },
-            "dwarf_pike"
+            "halberd"
           ],
           "min" : 2,
           "max" : 11,
@@ -1069,7 +1097,7 @@
               "id" : "handgun",
               "count" : 2
             },
-            "dwarf_pike"
+            "halberd"
           ],
           "withWeapon" : [
             [
@@ -1109,10 +1137,10 @@
       "rules" : [],
       "subfactions" : [
         "none",
-        "melee_focus",
-        "magic_focus",
-        "black_focus",
-        "scout_focus"
+        "combat",
+        "magic",
+        "blackpowder",
+        "tunneler"
       ]
     },
     "dwarf_engineers" : {
@@ -1132,7 +1160,7 @@
           "reflexes" : 5,
           "weapons" : [
             {
-              "id" : "dwarf_dagger"
+              "id" : "handweapon"
             },
             {
               "id" : "volley_pistol"
@@ -1165,7 +1193,7 @@
           "defense" : 6,
           "reflexes" : 5,
           "weapons" : [
-            "dwarf_dagger",
+            "handweapon",
             {
               "id" : "handgun",
               "count" : 2
@@ -1182,12 +1210,12 @@
         {
           "replaceWeapon" : [
             {
-              "id" : "dwarf_dagger"
+              "id" : "handweapon"
             }
           ],
           "withWeapon" : [
             {
-              "id" : "dwarf_great"
+              "id" : "rending_blade"
             }
           ]
         },
@@ -1237,10 +1265,10 @@
       "rules" : [],
       "subfactions" : [
         "none",
-        "melee_focus",
-        "magic_focus",
-        "black_focus",
-        "scout_focus"
+        "combat",
+        "magic",
+        "blackpowder",
+        "tunneler"
       ]
     },
     "dwarf_berserker" : {
@@ -1260,7 +1288,7 @@
           "reflexes" : 5,
           "weapons" : [
             {
-              "id" : "runic",
+              "id" : "rending_great",
               "count" : 3
             }
           ],
@@ -1278,7 +1306,7 @@
           "reflexes" : 5,
           "weapons" : [
             {
-              "id" : "runic",
+              "id" : "rending_great",
               "count" : 2
             }
           ],
@@ -1314,10 +1342,10 @@
       ],
       "subfactions" : [
         "none",
-        "melee_focus",
-        "magic_focus",
-        "black_focus",
-        "scout_focus"
+        "combat",
+        "magic",
+        "blackpowder",
+        "tunneler"
       ]
     },
     "cannon" : {
@@ -1357,7 +1385,7 @@
           "defense" : 6,
           "reflexes" : 5,
           "weapons" : [
-            "dwarf_dagger"
+            "handweapon"
           ],
           "min" : 3,
           "max" : 3,
@@ -1367,6 +1395,13 @@
       "keywords" : [
         "Warmachine",
         "Artillery"
+      ],
+      "subfactions" : [
+        "none",
+        "combat",
+        "magic",
+        "blackpowder",
+        "tunneler"
       ]
     },
     "hellblaster" : {
@@ -1406,7 +1441,7 @@
           "defense" : 6,
           "reflexes" : 5,
           "weapons" : [
-            "dwarf_dagger"
+            "handweapon"
           ],
           "min" : 3,
           "max" : 3,
@@ -1419,10 +1454,10 @@
       ],
       "subfactions" : [
         "none",
-        "melee_focus",
-        "magic_focus",
-        "black_focus",
-        "scout_focus"
+        "combat",
+        "magic",
+        "blackpowder",
+        "tunneler"
       ]
     },
     "rune_elemental" : {
@@ -1465,7 +1500,7 @@
               ],
               "withWeapon" : [
                 {
-                  "id" : "runic_great",
+                  "id" : "rending_great",
                   "count" : 3
                 }
               ],
@@ -1482,10 +1517,10 @@
       ],
       "subfactions" : [
         "none",
-        "melee_focus",
-        "magic_focus",
-        "black_focus",
-        "scout_focus"
+        "combat",
+        "magic",
+        "blackpowder",
+        "tunneler"
       ]
     },
     "forge_golem" : {
@@ -1533,7 +1568,7 @@
           ],
           "withWeapon" : [
             {
-              "id" : "runic_great",
+              "id" : "rending_great",
               "count" : 3
             }
           ]
@@ -1541,10 +1576,10 @@
       ],
       "subfactions" : [
         "none",
-        "melee_focus",
-        "magic_focus",
-        "black_focus",
-        "scout_focus"
+        "combat",
+        "magic",
+        "blackpowder",
+        "tunneler"
       ]
     },
     "rune_golem" : {
@@ -1564,7 +1599,7 @@
           "reflexes" : 4,
           "weapons" : [
             {
-              "id" : "runic_great",
+              "id" : "great_maul",
               "count" : 2
             }
           ],
@@ -1584,10 +1619,10 @@
       ],
       "subfactions" : [
         "none",
-        "melee_focus",
-        "magic_focus",
-        "black_focus",
-        "scout_focus"
+        "combat",
+        "magic",
+        "blackpowder",
+        "tunneler"
       ]
     },
     "berserker_champion" : {
@@ -1616,7 +1651,7 @@
           ],
           "weapons" : [
             {
-              "id" : "runic_great",
+              "id" : "rending_great",
               "count" : 6
             }
           ],
@@ -1630,10 +1665,10 @@
       ],
       "subfactions" : [
         "none",
-        "melee_focus",
-        "magic_focus",
-        "black_focus",
-        "scout_focus"
+        "combat",
+        "magic",
+        "blackpowder",
+        "tunneler"
       ]
     },
     "dwarf_miners" : {
@@ -1653,7 +1688,7 @@
           "reflexes" : 5,
           "weapons" : [
             {
-              "id" : "dwarf_great",
+              "id" : "rending_blade",
               "count" : 2
             }
           ],
@@ -1670,7 +1705,7 @@
           "defense" : 5,
           "reflexes" : 5,
           "weapons" : [
-            "dwarf_great"
+            "rending_blade"
           ],
           "min" : 4,
           "max" : 19
@@ -1679,17 +1714,10 @@
       "keywords" : [
         "Infantry"
       ],
-      "subfactions" : [
-        "none",
-        "melee_focus",
-        "magic_focus",
-        "black_focus",
-        "scout_focus"
-      ],
       "options" : [
         {
           "replaceWeapon" : [
-            "dwarf_great"
+            "rending_blade"
           ],
           "withWeapon" : [
             {
@@ -1715,6 +1743,13 @@
         {
           "id" : "ambush"
         }
+      ],
+      "subfactions" : [
+        "none",
+        "combat",
+        "magic",
+        "blackpowder",
+        "tunneler"
       ]
     }
   },
@@ -1727,21 +1762,6 @@
         {
           "id" : "shield"
         }
-      ]
-    },
-    "dwarf_hand" : {
-      "name" : "Dwarven Handweapon",
-      "attacks" : 1,
-      "ap" : 2,
-      "short" : "Melee"
-    },
-    "dwarf_great" : {
-      "name" : "Dwarven Greatweapon",
-      "attacks" : 1,
-      "ap" : 2,
-      "short" : "Melee",
-      "rules" : [
-        "rending"
       ]
     },
     "throw_axe" : {
@@ -1769,27 +1789,6 @@
       "rules" : [
         "pistol"
       ]
-    },
-    "dwarf_dagger" : {
-      "name" : "Dwarven Shortblade",
-      "attacks" : 1,
-      "ap" : 1,
-      "short" : "Melee"
-    },
-    "runic_great" : {
-      "name" : "Runic Greatweapon",
-      "attacks" : 1,
-      "ap" : 4,
-      "short" : "Melee",
-      "rules" : [
-        "rending"
-      ]
-    },
-    "runic" : {
-      "name" : "Runic Handweapon",
-      "attacks" : 1,
-      "ap" : 4,
-      "short" : "Melee"
     },
     "rifle" : {
       "name" : "Dwarven Rifle",
@@ -1887,18 +1886,6 @@
       "medium" : 12,
       "rules" : [
         "pistol"
-      ]
-    },
-    "dwarf_pike" : {
-      "name" : "Dwarven Warpike",
-      "attacks" : 1,
-      "ap" : 4,
-      "short" : "Melee",
-      "rules" : [
-        {
-          "id" : "reach",
-          "x" : 2
-        }
       ]
     },
     "hook_rifle" : {
@@ -2089,35 +2076,36 @@
   },
   "powers" : {
     "shield" : {
-      "subfactions" : [
-        "none",
-        "magic_focus",
-        "black_focus",
-        "melee_focus",
-        "scout_focus"
-      ],
       "name" : "Rune of Protection",
       "description" : "Target a friendly unit within 12\". Until the end of the round, roll a D10 each time that unit is hit. On a 3 or less, that hit is ignored.",
       "charge" : 7,
-      "flavor" : "A mystical barrier."
+      "flavor" : "A mystical barrier.",
+      "subfactions" : [
+        "none",
+        "combat",
+        "magic",
+        "blackpowder",
+        "tunneler"
+      ]
     },
     "missile" : {
-      "subfactions" : [
-        "black_focus"
-      ],
       "name" : "Magic Missile",
       "description" : "Target an enemy model within 12\". That model takes an automatic hit with AP6.",
       "charge" : 6,
-      "flavor" : "A missile infused with dwarven magic."
+      "flavor" : "A missile infused with dwarven magic.",
+      "subfactions" : [
+        "none",
+        "magic"
+      ]
     },
     "crystal_trap" : {
-      "subfactions" : [
-        "scout_focus"
-      ],
       "name" : "Crystaline Trap",
       "description" : "Target an enemy unit within 18\". That unit takes 4 automatic hits with AP1.",
       "charge" : 6,
-      "flavor" : "Many colored crystals explode out of the ground and impale anyone close to it."
+      "flavor" : "Many colored crystals explode out of the ground and impale anyone close to it.",
+      "subfactions" : [
+        "tunneler"
+      ]
     }
   },
   "strategies" : [
@@ -2129,10 +2117,10 @@
       "cost" : 2,
       "subfactions" : [
         "none",
-        "melee_focus",
-        "magic_focus",
-        "black_focus",
-        "scout_focus"
+        "combat",
+        "magic",
+        "blackpowder",
+        "tunneler"
       ]
     },
     {
@@ -2142,7 +2130,7 @@
       "flavor" : "Using experimental rounds to incinerate their foes to ashes and make the survivors flee.",
       "cost" : 2,
       "subfactions" : [
-        "black_focus"
+        "blackpowder"
       ]
     },
     {
@@ -2153,10 +2141,10 @@
       "cost" : 1,
       "subfactions" : [
         "none",
-        "melee_focus",
-        "magic_focus",
-        "black_focus",
-        "scout_focus"
+        "combat",
+        "magic",
+        "blackpowder",
+        "tunneler"
       ]
     },
     {
@@ -2166,7 +2154,7 @@
       "flavor" : "Novice Engineers build these to learn the intricate mechanism of greater warmachines.",
       "cost" : 1,
       "subfactions" : [
-        "black_focus"
+        "blackpowder"
       ]
     },
     {
@@ -2177,10 +2165,10 @@
       "cost" : 2,
       "subfactions" : [
         "none",
-        "melee_focus",
-        "magic_focus",
-        "black_focus",
-        "scout_focus"
+        "combat",
+        "magic",
+        "blackpowder",
+        "tunneler"
       ]
     }
   ],
@@ -2190,45 +2178,8 @@
       "description" : "Upgrade one Hero model with Dwarven Brew.",
       "flavor" : "Dwarves are known for their love of alcohol, which they even carry into battle.",
       "points" : 10,
-      "rule" : "brew",
-      "subfactions" : [
-        "none",
-        "melee_focus",
-        "magic_focus",
-        "black_focus",
-        "scout_focus"
-      ]
+      "rule" : "brew"
     }
   ],
-  "models" : {},
-  "subfactions" : {
-    "black_focus" : {
-      "name" : "Blackpowder Focus",
-      "id" : "black_focus",
-      "color" : "#800080",
-      "restricted" : true,
-      "background" : "A force that focuses heavily on guns and artillery."
-    },
-    "magic_focus" : {
-      "name" : "Runecraft Focus",
-      "id" : "magic_focus",
-      "color" : "#800080",
-      "restricted" : true,
-      "background" : "A force that focuses heavily on magic and rune-enchanted equipment."
-    },
-    "melee_focus" : {
-      "name" : "Combat Focus",
-      "id" : "melee_focus",
-      "color" : "#800080",
-      "restricted" : true,
-      "background" : "A force that focuses on overruning their foe in glorious combat."
-    },
-    "scout_focus" : {
-      "name" : "Tunneler Focus",
-      "id" : "scout_focus",
-      "color" : "#800080",
-      "restricted" : true,
-      "background" : "A force that focuses on ambushing their enemies from below the battlefield."
-    }
-  }
+  "models" : {}
 }
