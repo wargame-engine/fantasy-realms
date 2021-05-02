@@ -552,6 +552,149 @@
           "x" : 2
         }
       ]
+    },
+    "knight" : {
+      "name" : "Sage-Knight",
+      "description" : "A warrior mage, clad in magical armor and wielding elemental weaponry.",
+      "category" : "hero",
+      "models" : [
+        {
+          "name" : "Sage-Knight",
+          "min" : 1,
+          "max" : 1,
+          "movement" : 5,
+          "courage" : 7,
+          "shoot" : 6,
+          "fight" : 6,
+          "defense" : 7,
+          "reflexes" : 6,
+          "rules" : [
+            {
+              "id" : "wounds",
+              "x" : 3
+            },
+            "leader"
+          ],
+          "options" : [
+            {
+              "replaceWeapon" : [
+                {
+                  "id" : "storm_blade",
+                  "count" : 3
+                },
+                "shield"
+              ],
+              "withWeapon" : [
+                [
+                  {
+                    "id" : "storm_hammer",
+                    "count" : 2
+                  }
+                ],
+                [
+                  {
+                    "id" : "storm_blade",
+                    "count" : 4
+                  }
+                ],
+                [
+                  {
+                    "id" : "great_maul",
+                    "count" : 3
+                  }
+                ],
+                [
+                  {
+                    "id" : "halberd",
+                    "count" : 3
+                  }
+                ],
+                [
+                  {
+                    "id" : "storm_glaive",
+                    "count" : 2
+                  }
+                ],
+                [
+                  {
+                    "id" : "storm_blade_0",
+                    "count" : 2
+                  },
+                  "shield"
+                ],
+                [
+                  {
+                    "id" : "repeater_crossbow",
+                    "count" : 2
+                  },
+                  {
+                    "id" : "maul",
+                    "count" : 3
+                  }
+                ],
+                [
+                  {
+                    "id" : "maul",
+                    "count" : 5
+                  }
+                ],
+                [
+                  {
+                    "id" : "maul",
+                    "count" : 4
+                  },
+                  "starfall_banner"
+                ],
+                [
+                  {
+                    "id" : "maul",
+                    "count" : 2
+                  },
+                  {
+                    "id" : "storm_blade",
+                    "count" : 3
+                  }
+                ]
+              ]
+            },
+            {
+              "addRule" : [
+                {
+                  "id" : "icon_x",
+                  "x" : "Infantry"
+                },
+                {
+                  "id" : "magic",
+                  "x" : 1
+                },
+                {
+                  "id" : "eternal_tactics",
+                  "x" : 1
+                },
+                {
+                  "id" : "adamant_tactics",
+                  "x" : 1
+                },
+                {
+                  "id" : "magic",
+                  "x" : 2
+                }
+              ]
+            }
+          ],
+          "weapons" : [
+            {
+              "id" : "storm_blade",
+              "count" : 3
+            },
+            "shield"
+          ]
+        }
+      ],
+      "keywords" : [
+        "Hero",
+        "Infantry"
+      ]
     }
   },
   "weapons" : {
@@ -648,6 +791,38 @@
           "x" : 1
         }
       ]
+    },
+    "storm_blade" : {
+      "name" : "Runecarved Warblade",
+      "attacks" : 1,
+      "ap" : 3,
+      "short" : "Melee"
+    },
+    "storm_blade_0" : {
+      "name" : "Stormfront Warblade",
+      "attacks" : 1,
+      "ap" : 3,
+      "short" : "Melee",
+      "rules" : [
+        "stormstrike"
+      ]
+    },
+    "starfall_banner" : {
+      "name" : "Starfall Banner",
+      "attacks" : 1,
+      "ap" : 6,
+      "rules" : [
+        {
+          "id" : "ammo",
+          "x" : 1
+        },
+        {
+          "id" : "blast",
+          "x" : 3
+        },
+        "scatter"
+      ],
+      "short" : 24
     }
   },
   "rules" : {
@@ -677,6 +852,32 @@
       ],
       "inputs" : [
         "x"
+      ]
+    },
+    "eternal_tactics" : {
+      "name" : "Eternal Tactics",
+      "inputs" : [
+        "x"
+      ],
+      "description" : "When this unit is activated, choose up to X friendly _Infantry_ units within 6\". This unit and those units may re-roll failed Strength tests of 9+ until the end of the round.",
+      "points" : [
+        "rule.x",
+        {
+          "multiply" : 10
+        }
+      ]
+    },
+    "adamant_tactics" : {
+      "name" : "Adamant Tactics",
+      "inputs" : [
+        "x"
+      ],
+      "description" : "When this unit is activated, choose up to X friendly _Infantry_ units within 6\". This unit and those units may re-roll failed Save tests of 9+ until the end of the round.",
+      "points" : [
+        "rule.x",
+        {
+          "multiply" : 10
+        }
       ]
     }
   },
