@@ -61,6 +61,13 @@
         "Hero",
         "Wizard",
         "Infantry"
+      ],
+      "subfactions" : [
+        "blackpowder",
+        "wrath",
+        "excess",
+        "forge",
+        "none"
       ]
     },
     "iron_souls" : {
@@ -123,6 +130,13 @@
           ],
           "modelLimit" : 1
         }
+      ],
+      "subfactions" : [
+        "blackpowder",
+        "wrath",
+        "excess",
+        "forge",
+        "none"
       ]
     },
     "pyre_souls" : {
@@ -185,6 +199,13 @@
           ],
           "modelLimit" : 1
         }
+      ],
+      "subfactions" : [
+        "blackpowder",
+        "wrath",
+        "excess",
+        "forge",
+        "none"
       ]
     },
     "iron_lord" : {
@@ -237,6 +258,13 @@
       "keywords" : [
         "Hero",
         "Infantry"
+      ],
+      "subfactions" : [
+        "blackpowder",
+        "wrath",
+        "excess",
+        "forge",
+        "none"
       ]
     },
     "orc_slaves" : {
@@ -317,6 +345,13 @@
         "speed_focus",
         "primal_focus",
         "armor_focus"
+      ],
+      "subfactions_0" : [
+        "blackpowder",
+        "wrath",
+        "excess",
+        "forge",
+        "none"
       ]
     }
   },
@@ -515,8 +550,6 @@
     }
   ],
   "relics" : [],
-  "models" : {},
-  "subfactions" : {},
   "hidden_units" : [
     {
       "name" : "Forgefire Golem",
