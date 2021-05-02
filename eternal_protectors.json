@@ -101,20 +101,35 @@
       "category" : "elite",
       "models" : [
         {
-          "options" : [
+          "name" : "Great-Invoker",
+          "movement" : 5,
+          "courage" : 6,
+          "shoot" : 6,
+          "fight" : 6,
+          "defense" : 7,
+          "reflexes" : 6,
+          "rules" : [
+            "lightning_field",
             {
-              "replaceWeapon" : {
-                "id" : "sword_and_staff",
-                "count" : 4
-              },
-              "withWeapon" : [
-                {
-                  "id" : "great_staff",
-                  "count" : 3
-                }
-              ]
+              "id" : "wounds",
+              "x" : 2
+            },
+            {
+              "id" : "magic",
+              "x" : 1
             }
           ],
+          "weapons" : [
+            {
+              "id" : "sword_and_staff",
+              "count" : 4
+            }
+          ],
+          "min" : 1,
+          "max" : 1
+        },
+        {
+          "options" : [],
           "name" : "Invoker",
           "movement" : 5,
           "courage" : 6,
@@ -135,14 +150,26 @@
               "count" : 4
             }
           ],
-          "min" : 3,
-          "max" : 12
+          "min" : 2,
+          "max" : 11
         }
       ],
       "keywords" : [
         "Infantry"
       ],
       "options" : [
+        {
+          "replaceWeapon" : {
+            "id" : "sword_and_staff",
+            "count" : 4
+          },
+          "withWeapon" : [
+            {
+              "id" : "great_staff",
+              "count" : 3
+            }
+          ]
+        },
         {
           "addRule" : [
             "banner"
@@ -163,9 +190,9 @@
       "category" : "core",
       "models" : [
         {
-          "name" : "Warriors",
-          "min" : 5,
-          "max" : 20,
+          "name" : "Great-Warrior",
+          "min" : 1,
+          "max" : 1,
           "movement" : 5,
           "courage" : 5,
           "shoot" : 6,
@@ -177,50 +204,22 @@
               "id" : "handweapon",
               "count" : 3
             }
-          ],
-          "options" : [
+          ]
+        },
+        {
+          "name" : "Warrior",
+          "min" : 4,
+          "max" : 19,
+          "movement" : 5,
+          "courage" : 5,
+          "shoot" : 6,
+          "fight" : 6,
+          "defense" : 6,
+          "reflexes" : 6,
+          "weapons" : [
             {
-              "replaceWeapon" : [
-                {
-                  "id" : "handweapon",
-                  "count" : 3
-                }
-              ],
-              "withWeapon" : [
-                {
-                  "id" : "maul",
-                  "count" : 3
-                },
-                [
-                  {
-                    "id" : "maul",
-                    "count" : 2
-                  },
-                  "shield"
-                ],
-                [
-                  {
-                    "id" : "handweapon",
-                    "count" : 2
-                  },
-                  "shield"
-                ]
-              ],
-              "modelLimit" : "all"
-            },
-            {
-              "replaceWeapon" : [
-                {
-                  "id" : "handweapon",
-                  "count" : 2
-                },
-                "shield"
-              ],
-              "withWeapon" : {
-                "id" : "great_maul",
-                "count" : 2
-              },
-              "modelLimit" : "1/5"
+              "id" : "handweapon",
+              "count" : 3
             }
           ]
         }
@@ -229,6 +228,49 @@
         "Infantry"
       ],
       "options" : [
+        {
+          "replaceWeapon" : [
+            {
+              "id" : "handweapon",
+              "count" : 3
+            }
+          ],
+          "withWeapon" : [
+            {
+              "id" : "maul",
+              "count" : 3
+            },
+            [
+              {
+                "id" : "maul",
+                "count" : 2
+              },
+              "shield"
+            ],
+            [
+              {
+                "id" : "handweapon",
+                "count" : 2
+              },
+              "shield"
+            ]
+          ],
+          "modelLimit" : "all"
+        },
+        {
+          "replaceWeapon" : [
+            {
+              "id" : "handweapon",
+              "count" : 2
+            },
+            "shield"
+          ],
+          "withWeapon" : {
+            "id" : "great_maul",
+            "count" : 2
+          },
+          "modelLimit" : "1/5"
+        },
         {
           "addRule" : [
             "banner"
@@ -249,6 +291,24 @@
       "category" : "core",
       "models" : [
         {
+          "name" : "Great-Hunter",
+          "movement" : 5,
+          "courage" : 5,
+          "shoot" : 6,
+          "fight" : 6,
+          "defense" : 7,
+          "reflexes" : 6,
+          "weapons" : [
+            {
+              "id" : "handweapon",
+              "count" : 2
+            },
+            "heavy_crossbow"
+          ],
+          "min" : 1,
+          "max" : 1
+        },
+        {
           "name" : "Hunter",
           "movement" : 5,
           "courage" : 5,
@@ -263,45 +323,48 @@
             },
             "heavy_crossbow"
           ],
-          "min" : 5,
-          "max" : 20,
-          "options" : [
-            {
-              "replaceWeapon" : [
-                "heavy_crossbow"
-              ],
-              "withWeapon" : [
-                [
-                  {
-                    "id" : "repeater_crossbow",
-                    "count" : 3
-                  }
-                ]
-              ],
-              "modelLimit" : "all"
-            },
-            {
-              "replaceWeapon" : [
-                "heavy_crossbow"
-              ],
-              "withWeapon" : [
-                "storm_crossbow",
-                "great_bow"
-              ],
-              "modelLimit" : "1/5"
-            },
-            {
-              "addRule" : [
-                "ambush",
-                "outflank"
-              ],
-              "modelLimit" : "all"
-            }
-          ]
+          "min" : 4,
+          "max" : 19
         }
       ],
       "keywords" : [
         "Infantry"
+      ],
+      "options" : [
+        {
+          "replaceWeapon" : [
+            "heavy_crossbow"
+          ],
+          "withWeapon" : [
+            {
+              "id" : "heavy_bow"
+            },
+            [
+              {
+                "id" : "repeater_crossbow",
+                "count" : 3
+              }
+            ]
+          ],
+          "modelLimit" : "all"
+        },
+        {
+          "replaceWeapon" : [
+            "heavy_crossbow"
+          ],
+          "withWeapon" : [
+            "storm_crossbow",
+            "great_bow"
+          ],
+          "modelLimit" : "1/5"
+        },
+        {
+          "addRule" : [
+            "ambush",
+            "outflank"
+          ],
+          "modelLimit" : "all"
+        }
       ]
     },
     "veterans" : {
@@ -310,9 +373,9 @@
       "category" : "elite",
       "models" : [
         {
-          "min" : 3,
-          "max" : 12,
-          "name" : "Eternal Veteran",
+          "min" : 1,
+          "max" : 1,
+          "name" : "Great-Veteran",
           "movement" : 5,
           "courage" : 5,
           "shoot" : 6,
@@ -321,8 +384,8 @@
           "reflexes" : 6,
           "weapons" : [
             {
-              "id" : "rending_blade",
-              "count" : 2
+              "id" : "handweapon",
+              "count" : 3
             },
             "enchanted_shield"
           ],
@@ -330,26 +393,164 @@
             {
               "replaceWeapon" : [
                 {
-                  "id" : "rending_blade",
-                  "count" : 2
+                  "id" : "handweapon",
+                  "count" : 3
                 },
                 "enchanted_shield"
               ],
               "withWeapon" : [
                 [
                   {
-                    "id" : "rending_great",
-                    "count" : 3
+                    "id" : "storm_hammer",
+                    "count" : 2
                   }
                 ]
-              ],
-              "modelLimit" : "1/3"
+              ]
             }
           ]
+        },
+        {
+          "min" : 2,
+          "max" : 11,
+          "name" : "Veteran",
+          "movement" : 5,
+          "courage" : 5,
+          "shoot" : 6,
+          "fight" : 6,
+          "defense" : 7,
+          "reflexes" : 6,
+          "weapons" : [
+            {
+              "id" : "handweapon",
+              "count" : 3
+            },
+            "enchanted_shield"
+          ]
+        }
+      ],
+      "options" : [
+        {
+          "replaceWeapon" : [
+            {
+              "id" : "handweapon",
+              "count" : 3
+            },
+            "enchanted_shield"
+          ],
+          "withWeapon" : [
+            [
+              {
+                "id" : "maul",
+                "count" : 2
+              },
+              "enchanted_shield"
+            ]
+          ],
+          "modelLimit" : "all"
+        },
+        {
+          "replaceWeapon" : [
+            {
+              "id" : "handweapon",
+              "count" : 3
+            },
+            "enchanted_shield"
+          ],
+          "withWeapon" : [
+            [
+              {
+                "id" : "storm_hammer",
+                "count" : 2
+              }
+            ]
+          ],
+          "modelLimit" : "1/3"
         }
       ],
       "keywords" : [
         "Infantry"
+      ]
+    },
+    "paladins" : {
+      "keywords" : [
+        "Infantry"
+      ],
+      "name" : "Paladins",
+      "description" : "Warrior mages in heavy armor who infuse their great-weapons with elemental magic.",
+      "category" : "elite",
+      "models" : [
+        {
+          "name" : "Great-Paladin",
+          "min" : 1,
+          "max" : 1,
+          "movement" : 5,
+          "courage" : 5,
+          "shoot" : 6,
+          "fight" : 6,
+          "defense" : 7,
+          "reflexes" : 6,
+          "weapons" : [
+            {
+              "id" : "storm_axe",
+              "count" : 3
+            }
+          ]
+        },
+        {
+          "name" : "Paladin",
+          "min" : 2,
+          "max" : 11,
+          "movement" : 5,
+          "courage" : 5,
+          "shoot" : 6,
+          "fight" : 6,
+          "defense" : 7,
+          "reflexes" : 6,
+          "weapons" : [
+            {
+              "id" : "storm_axe",
+              "count" : 3
+            }
+          ]
+        }
+      ],
+      "options" : [
+        {
+          "replaceWeapon" : [
+            {
+              "id" : "storm_axe",
+              "count" : 3
+            }
+          ],
+          "withWeapon" : [
+            {
+              "id" : "storm_glaive",
+              "count" : 2
+            },
+            {
+              "id" : "storm_hammer",
+              "count" : 2
+            }
+          ],
+          "modelLimit" : "all"
+        },
+        {
+          "modelLimit" : "all",
+          "addRule" : [
+            {
+              "id" : "fear"
+            },
+            {
+              "id" : "lightning_field"
+            }
+          ]
+        }
+      ],
+      "rules" : [
+        {
+          "id" : "wounds",
+          "x" : 2
+        }
       ]
     }
   },
@@ -400,7 +601,7 @@
       "short" : 12,
       "medium" : 24,
       "rules" : [
-        "spectral"
+        "stormstrike"
       ]
     },
     "storm_crossbow" : {
@@ -410,7 +611,42 @@
       "short" : 9,
       "medium" : 18,
       "rules" : [
-        "spectral"
+        "stormstrike"
+      ]
+    },
+    "heavy_bow" : {
+      "name" : "Greatbow",
+      "attacks" : 1,
+      "ap" : 3,
+      "short" : 12,
+      "medium" : 24
+    },
+    "storm_hammer" : {
+      "name" : "Lightning Hammer",
+      "attacks" : 1,
+      "ap" : 5,
+      "short" : "Melee",
+      "rules" : [
+        "stormstrike"
+      ]
+    },
+    "storm_axe" : {
+      "name" : "Volatile Greataxe",
+      "attacks" : 1,
+      "ap" : 4,
+      "short" : "Melee"
+    },
+    "storm_glaive" : {
+      "name" : "Storm Glaive",
+      "attacks" : 1,
+      "ap" : 4,
+      "short" : "Melee",
+      "rules" : [
+        "stormstrike",
+        {
+          "id" : "reach",
+          "x" : 1
+        }
       ]
     }
   },
@@ -419,6 +655,29 @@
       "name" : "Lightning Field",
       "description" : "Roll a D10 each time this unit is hit by a Shooting attack. On each roll of a 1 or 2 an attack is prevented.",
       "points" : 2
+    },
+    "stormstrike" : {
+      "name" : "Stormstrike",
+      "description" : "Hit rolls of 1 or 2 from this weapon cause 2 hits instead of 1. Additional hits must be assigned to the same model.",
+      "points" : [
+        "weapon.attacks",
+        {
+          "multiply" : 2
+        }
+      ]
+    },
+    "stormstrike_x" : {
+      "name" : "Stormstrike",
+      "description" : "Hit rolls of 1 or 2 from this weapon cause 2 hits instead of 1. Additional hits must be assigned to the same model.",
+      "points" : [
+        "weapon.attacks",
+        {
+          "multiply" : "rule.x"
+        }
+      ],
+      "inputs" : [
+        "x"
+      ]
     }
   },
   "relics" : [],
