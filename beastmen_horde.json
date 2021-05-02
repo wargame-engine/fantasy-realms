@@ -204,6 +204,74 @@
         "change"
       ]
     },
+    "minotaur_mage" : {
+      "name" : "Minotaur Wizard",
+      "description" : "A beastman who chose to pursue the arcane arts.",
+      "category" : "hero",
+      "models" : [
+        {
+          "name" : "Minotaur Wizard",
+          "movement" : 7,
+          "courage" : 6,
+          "shoot" : 4,
+          "fight" : 6,
+          "defense" : 8,
+          "reflexes" : 8,
+          "weapons" : [
+            {
+              "id" : "big_wizard_staff",
+              "count" : 2
+            },
+            {
+              "id" : "enchanted_horns",
+              "count" : 3
+            },
+            {
+              "id" : "cloven_hooves",
+              "count" : 3
+            }
+          ],
+          "min" : 1,
+          "max" : 1,
+          "options" : [
+            {
+              "replaceRule" : [
+                {
+                  "id" : "magic",
+                  "x" : 1
+                }
+              ],
+              "withRule" : [
+                {
+                  "id" : "magic",
+                  "x" : 2
+                }
+              ]
+            }
+          ],
+          "rules" : [
+            {
+              "id" : "wounds",
+              "x" : 4
+            },
+            {
+              "id" : "magic",
+              "x" : 1
+            },
+            "leader"
+          ]
+        }
+      ],
+      "subfactions" : [
+        "none",
+        "change_legions"
+      ],
+      "keywords" : [
+        "Hero",
+        "Monster",
+        "Infantry"
+      ]
+    },
     "satyr_raiders" : {
       "name" : "Satyr Raiders",
       "description" : "Cursed and twisted into a beastial shape.",
@@ -688,7 +756,7 @@
     },
     "ogre_centaurs" : {
       "name" : "Ogre Centaurs",
-      "description" : "Not all centaurs are made of humans...or of horses.  These monstrous centaurs lead any charge they're part of...",
+      "description" : "Not all centaurs are made of humans...or of horses.  These monstrous centaurs lead any charge they're part of",
       "category" : "elite",
       "models" : [
         {
@@ -751,7 +819,81 @@
         "change"
       ]
     },
-    "cyclops" : {
+    "blessed_ogre_centaur" : {
+      "name" : "Blessed Ogre Centaur",
+      "description" : "The greatest of Ogre Centaurs can channel the wrath of the heavens above.",
+      "category" : "hero",
+      "models" : [
+        {
+              "name" : "Blessed Ogre Centaur",
+              "movement" : 10,
+              "courage" : 6,
+              "shoot" : 5,
+              "fight" : 6,
+              "defense" : 7,
+              "reflexes" : 7,
+              "weapons" : [
+                {
+                  "id" : "great_maul",
+                  "count" : 4
+                },
+                {
+                  "id" : "lizzer_claws",
+                  "count" : 2
+                } 
+              ],
+              "min" : 1,
+              "max" : 1
+            }
+          ],
+          "rules" : [
+            {
+              "id" : "impact",
+              "x" : 1
+            },
+            {
+              "id" : "wounds",
+              "x" : 3
+            },
+            {
+              "id" : "magic",
+              "x" : 1
+            },    
+            {
+              "id" : "charger_tactics",
+            "x" : 1
+          }
+          ],
+          "options" : [
+            {
+              "replaceRule" : [
+                {
+                  "id" : "charger_tactics",
+                  "x" : 1
+                }
+              ],
+              "withRule" : [
+                {
+                  "id" : "charger_tactics",
+                  "x" : 2
+                }
+              ]
+            }
+          ],
+            "subfactions" : [
+            "none",
+            "change_legions",
+            "rage_legions",
+            "lust_legions",
+            "plague_legions"
+          ],
+          "keywords" : [
+            "Hero",
+            "Beast",
+            "Heavy Infantry"
+          ]
+        },
+      "cyclops" : {
       "name" : "Cyclops",
       "description" : "Cursed and twisted into a beastial shape.",
       "category" : "rare",
@@ -827,8 +969,56 @@
         "excess",
         "change"
       ]
-    }
-  },
+       },
+      "cockatrice" : {
+        "name" : "Cockatrice",
+        "description" : "A ferocious beast looking for a target to sharpen its talons.",
+        "category" : "rare",
+        "models" : [
+          {
+            "name" : "Cockatrice",
+            "movement" : 14,
+            "courage" : 4,
+            "shoot" : 5,
+            "fight" : 5,
+            "defense" : 8,
+            "reflexes" : 6,
+            "weapons" : [
+              {
+                "id" : "sharp_beak",
+                "count" : 1
+              },
+              {
+                "id" : "handweapon",
+                "count" : 3
+              },
+              {
+                "id" : "cock_gaze"
+              }
+            ],
+            "min" : 1,
+            "max" : 1,
+            "rules" : [
+              "fear",
+              "fly",
+              "damage_table_monster"
+            ]
+          }
+        ],
+        "subfactions" : [
+          "none",
+          "change_legions",
+          "rage_legions",
+          "lust_legions",
+          "plague_legions"
+        ],
+        "keywords" : [
+          "Monster",
+          "Infantry",
+          "Flying"
+        ]
+            }
+    },
   "weapons" : {
     "crude_polearm" : {
       "name" : "Crude Polearm",
@@ -909,12 +1099,75 @@
           "x" : 3
         }
       ]
+    }, 
+       "cock_gaze" : {
+      "name" : "Petrifying Gaze",
+      "attacks" : 1,
+      "ap" : 8,
+      "rules" : [
+        {
+        "id" : "deadly",
+        "x" : 3
+        }
+      ],
+      "short" : 9,
+      "medium" : 9 
     },
-    "lizzer_claws" : {
+
+    "sharp_beak" : {
+      "name" : "Sharp Beak",
+      "attacks" : 1,
+      "ap" : 4,
+      "short" : "Melee"
+        },    
+        
+        "lizzer_claws" : {
       "name" : "Lizard Claws",
       "ap" : 2,
       "attacks" : 1,
       "short" : "Melee"
+    },
+    "giant_hammer" : {
+      "name" : "Big Crusher",
+      "ap" : 4,
+      "attacks" : 1,
+      "short" : "Melee"
+    },
+    "enchanted_horns" : {
+      "name" : "Enchanted Horns",
+      "ap" : 5,
+      "attacks" : 1,
+      "short" : "Melee"
+    },
+    "big_wizard_staff" : {
+      "name" : "Wildfocusing Staff",
+      "ap" : 4,
+      "attacks" : 1,
+      "short" : "Melee",
+      "rules" : [
+        {
+          "id" : "reach",
+          "x" : 1
+        }
+      ]
+    },
+    "cloven_hooves" : {
+      "name" : "Cloven Hooves",
+      "ap" : 2,
+      "attacks" : 1,
+      "short" : "Melee"
+    },
+    "big_stick" : {
+      "name" : "Giant Polearm",
+      "ap" : 2,
+      "attacks" : 1,
+      "short" : "Melee",
+      "rules" : [        
+          {
+            "id" : "reach",
+            "x" : 2
+          }
+      ]
     }
   },
   "rules" : {
@@ -931,6 +1184,19 @@
         }
       ]
     },
+    "charger_tactics" : {
+      "name" : "Siegebreaker Tactics",
+      "inputs" : [
+        "x"
+      ],
+      "description" : "When this unit is activated, choose up to X friendly _Beast_ units within 6\". This model and those units may re-roll failed Strength tests of 9+ until the end of the round.",
+      "points" : [
+        "rule.x",
+        {
+          "multiply" : 10
+        }
+      ]
+    }, 
     "incite" : {
       "name" : "Incite",
       "description" : "When this unit is activated, choose up to X friendly _Infantry_ units within 6\". This model and those units gain +3“ Move next time they charge.",
