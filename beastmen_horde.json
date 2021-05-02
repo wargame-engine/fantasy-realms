@@ -677,6 +677,42 @@
         "change"
       ]
     },
+    "Twisted Raptors" : {
+      "name" : "Twisted Raptors",
+      "description" : "Twisted birds raised by twisted beastmen",
+      "category" : "core",
+      "models" : [
+        {
+          "name" : "Twisted Raptor",
+          "movement" : 8,
+          "courage" : 4,
+          "shoot" : 4,
+          "fight" : 6,
+          "defense" : 6,
+          "reflexes" : 6,
+          "weapons" : [
+            {
+              "id" : "raptor_talons",
+              "count" : 2
+            }
+          ],
+          "min" : 1,
+          "max" : 10
+        }
+      ],
+      "rules" : [],
+      "keywords" : [
+        "Beast",
+        "Infantry"
+      ],
+      "subfactions" : [
+        "none",
+        "pestilence",
+        "wrath",
+        "excess",
+        "change"
+      ]
+    },
     "centaurs" : {
       "name" : "Centaurs",
       "description" : "Cursed and twisted into a beastial shape.",
@@ -1132,6 +1168,18 @@
       "ap" : 4,
       "attacks" : 1,
       "short" : "Melee"
+    },
+    "raptor_talons" : {
+      "name" : "Raptor Talons",
+      "ap" : 2,
+      "attacks" : 1,
+      "short" : "Melee",
+      "rules" : [
+        {
+          "id" : "impact",
+          "x" : 1
+        }
+      ]
     },
     "enchanted_horns" : {
       "name" : "Enchanted Horns",
