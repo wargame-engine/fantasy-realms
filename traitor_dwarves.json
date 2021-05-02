@@ -267,8 +267,8 @@
         "none"
       ]
     },
-    "orc_slaves" : {
-      "name" : "Orc Slaves",
+    "soul_bound_orcs" : {
+      "name" : "Soul-bound Orcs",
       "description" : "",
       "category" : "core",
       "models" : [
@@ -291,7 +291,7 @@
           "max" : 1
         },
         {
-          "name" : "Orc Slave",
+          "name" : "Soul-bound Orc",
           "movement" : 6,
           "courage" : 4,
           "shoot" : 4,
@@ -307,7 +307,7 @@
         }
       ],
       "keywords" : [
-        "Slave",
+        "Soul-bound",
         "Infantry"
       ],
       "options" : [
@@ -508,9 +508,9 @@
       "description" : "Once per round, a friendly _Infantry_ unit within 6\" gains +3“ the next time it makes a Move or Charge action.",
       "points" : 5
     },
-    "whip" : {
-      "name" : "Barbed Whip",
-      "description" : "When this unit is activated, friendly _Slave_ units 6\" may choose to activate for free if they have not activated yet and perform the same actions as this unit. Friendly _Slave_ units within 6\" may use this unit's Courage value when taking Courage tests. This unit may not be targetted by enemy attacks while it is within 3\" of another friendly _Slave_ unit unless that unit is also a Leader and attacking in Melee.",
+    "soul_gem" : {
+      "name" : "Soul Gem",
+      "description" : "When this unit is activated, friendly _Soul-bound_ units 6\" may choose to activate for free if they have not activated yet and perform the same actions as this unit. Friendly _Soul-bound_ units within 6\" may use this unit's Courage value when taking Courage tests. This unit may not be targeted by enemy attacks while it is within 3\" of another friendly _Soul-bound_ unit unless that unit is also a Leader and attacking in Melee.",
       "points" : 10
     }
   },
