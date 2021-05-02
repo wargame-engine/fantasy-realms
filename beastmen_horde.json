@@ -230,6 +230,74 @@
         "Infantry"
       ]
     },
+    "minotaur_mage" : {
+      "name" : "Minotaur Wizard",
+      "description" : "A beastman who chose to pursue the arcane arts.",
+      "category" : "hero",
+      "models" : [
+        {
+          "name" : "Minotaur Wizard",
+          "movement" : 7,
+          "courage" : 6,
+          "shoot" : 4,
+          "fight" : 6,
+          "defense" : 8,
+          "reflexes" : 8,
+          "weapons" : [
+            {
+              "id" : "big_wizard_staff",
+              "count" : 2
+            },
+            {
+              "id" : "enchanted_horns",
+              "count" : 3
+            },
+            {
+              "id" : "cloven_hooves",
+              "count" : 3
+            }
+          ],
+          "min" : 1,
+          "max" : 1,
+          "options" : [
+            {
+              "replaceRule" : [
+                {
+                  "id" : "magic",
+                  "x" : 1
+                }
+              ],
+              "withRule" : [
+                {
+                  "id" : "magic",
+                  "x" : 2
+                }
+              ]
+            }
+          ],
+          "rules" : [
+            {
+              "id" : "wounds",
+              "x" : 4
+            },
+            {
+              "id" : "magic",
+              "x" : 1
+            },
+            "leader"
+          ]
+        }
+      ],
+      "subfactions" : [
+        "none",
+        "change_legions"
+      ],
+      "keywords" : [
+        "Hero",
+        "Monster",
+        "Infantry"
+      ]
+    },
     "satyr_raiders" : {
       "name" : "Satyr Raiders",
       "description" : "Cursed and twisted into a beastial shape.",
@@ -934,7 +1002,7 @@
         "Monster",
         "Infantry"
       ]
-      },
+       },
       "Cockatrice" : {
         "name" : "Cockatrice",
         "description" : "A ferocious beast looking for a target to sharpen its talons.",
@@ -982,7 +1050,7 @@
           "Infantry",
           "Flying"
         ]
-        }
+            }
     },
   "weapons" : {
     "gore_blade" : {
@@ -1127,8 +1195,8 @@
         }
         
       ]
-    },
-    "cock_gaze" : {
+    }, 
+       "cock_gaze" : {
       "name" : "Petrifying Gaze",
       "attacks" : 1,
       "ap" : 8,
@@ -1147,9 +1215,9 @@
       "attacks" : 1,
       "ap" : 4,
       "short" : "Melee"
-        },
-  
-    "lizzer_claws" : {
+        },    
+        
+        "lizzer_claws" : {
       "name" : "Lizard Claws",
       "ap" : 2,
       "attacks" : 1,
@@ -1159,6 +1227,30 @@
     "giant_hammer" : {
       "name" : "Big Crusher",
       "ap" : 4,
+      "attacks" : 1,
+      "short" : "Melee"
+    },
+    "enchanted_horns" : {
+      "name" : "Enchanted Horns",
+      "ap" : 5,
+      "attacks" : 1,
+      "short" : "Melee"
+    },
+    "big_wizard_staff" : {
+      "name" : "Wildfocusing Staff",
+      "ap" : 4,
+      "attacks" : 1,
+      "short" : "Melee",
+      "rules" : [
+        {
+          "id" : "reach",
+          "x" : 1
+        }
+      ]
+    },
+    "cloven_hooves" : {
+      "name" : "Cloven Hooves",
+      "ap" : 2,
       "attacks" : 1,
       "short" : "Melee"
     },
@@ -1174,7 +1266,9 @@
           }
       ]
     }
+    
   },
+  
 
   "rules" : {
     "brutal_tactics" : {
