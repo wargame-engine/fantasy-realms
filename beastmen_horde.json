@@ -934,7 +934,55 @@
         "Monster",
         "Infantry"
       ]
-      }
+      },
+      "Cockatrice" : {
+        "name" : "Cockatrice",
+        "description" : "A ferocious beast looking for a target to sharpen its talons.",
+        "category" : "rare",
+        "models" : [
+          {
+            "name" : "Cockatrice",
+            "movement" : 14,
+            "courage" : 4,
+            "shoot" : 5,
+            "fight" : 5,
+            "defense" : 8,
+            "reflexes" : 6,
+            "weapons" : [
+              {
+                "id" : "sharp_beak",
+                "count" : 1
+              },
+              {
+                "id" : "handweapon",
+                "count" : 3
+              },
+              {
+                "id" : "cock_gaze"
+              }
+            ],
+            "min" : 1,
+            "max" : 1,
+            "rules" : [
+              "fear",
+              "fly",
+              "damage_table_monster"
+            ]
+          }
+        ],
+        "subfactions" : [
+          "none",
+          "change_legions",
+          "rage_legions",
+          "lust_legions",
+          "plague_legions"
+        ],
+        "keywords" : [
+          "Monster",
+          "Infantry",
+          "Flying"
+        ]
+        }
     },
   "weapons" : {
     "gore_blade" : {
@@ -1080,6 +1128,27 @@
         
       ]
     },
+    "cock_gaze" : {
+      "name" : "Petrifying Gaze",
+      "attacks" : 1,
+      "ap" : 8,
+      "rules" : [
+        {
+        "id" : "deadly",
+        "x" : 3
+        }
+      ],
+      "short" : 9,
+      "medium" : 9 
+    },
+
+    "sharp_beak" : {
+      "name" : "Sharp Beak",
+      "attacks" : 1,
+      "ap" : 4,
+      "short" : "Melee"
+        },
+  
     "lizzer_claws" : {
       "name" : "Lizard Claws",
       "ap" : 2,
