@@ -7,7 +7,7 @@
   "units" : {
     "lightning_mage_on_gryhpon" : {
       "name" : "Stormcaller Mage on Gryphon",
-      "description" : "A power lightning mage on a hardy gryphon mount.",
+      "description" : "A mighty lightning mage on a hardy gryphon mount, swooping down on his foes.",
       "category" : "hero",
       "models" : [
         {
@@ -44,55 +44,21 @@
             "fly"
           ],
           "min" : 1,
-          "max" : 1
+          "max" : 1,
+          "options" : [
+            {
+              "addWeapon" : [
+                "spirit_flask"
+              ],
+              "limit" : 3
+            }
+          ]
         }
       ],
       "keywords" : [
         "Hero",
         "Beast",
         "Cavalry"
-      ]
-    },
-    "storm_caller_mage" : {
-      "name" : "Stormcaller Mage",
-      "description" : "A storm calling mage.",
-      "category" : "hero",
-      "models" : [
-        {
-          "name" : "Stormcaller Mage",
-          "movement" : 5,
-          "courage" : 7,
-          "shoot" : 6,
-          "fight" : 6,
-          "defense" : 8,
-          "reflexes" : 6,
-          "weapons" : [
-            {
-              "id" : "protector_staff",
-              "count" : 4
-            }
-          ],
-          "rules" : [
-            {
-              "id" : "wounds",
-              "x" : 3
-            },
-            {
-              "id" : "magic",
-              "x" : 1
-            },
-            {
-              "id" : "leader_x",
-              "x" : "Infantry"
-            }
-          ],
-          "min" : 1,
-          "max" : 1
-        }
-      ],
-      "keywords" : [
-        "Hero",
-        "Infantry"
       ]
     },
     "invokers" : {
@@ -103,7 +69,7 @@
         {
           "name" : "Great-Invoker",
           "movement" : 5,
-          "courage" : 6,
+          "courage" : 5,
           "shoot" : 6,
           "fight" : 6,
           "defense" : 7,
@@ -132,7 +98,7 @@
           "options" : [],
           "name" : "Invoker",
           "movement" : 5,
-          "courage" : 6,
+          "courage" : 5,
           "shoot" : 6,
           "fight" : 6,
           "defense" : 7,
@@ -169,18 +135,6 @@
               "count" : 3
             }
           ]
-        },
-        {
-          "addRule" : [
-            "banner"
-          ],
-          "modelLimit" : 1
-        },
-        {
-          "addRule" : [
-            "musician"
-          ],
-          "modelLimit" : 1
         }
       ]
     },
@@ -197,7 +151,7 @@
           "courage" : 5,
           "shoot" : 6,
           "fight" : 6,
-          "defense" : 6,
+          "defense" : 7,
           "reflexes" : 6,
           "weapons" : [
             {
@@ -214,7 +168,7 @@
           "courage" : 5,
           "shoot" : 6,
           "fight" : 6,
-          "defense" : 6,
+          "defense" : 7,
           "reflexes" : 6,
           "weapons" : [
             {
@@ -270,18 +224,6 @@
             "count" : 2
           },
           "modelLimit" : "1/5"
-        },
-        {
-          "addRule" : [
-            "banner"
-          ],
-          "modelLimit" : 1
-        },
-        {
-          "addRule" : [
-            "musician"
-          ],
-          "modelLimit" : 1
         }
       ]
     },
@@ -491,7 +433,7 @@
           "reflexes" : 6,
           "weapons" : [
             {
-              "id" : "heavy_maul",
+              "id" : "great_maul",
               "count" : 3
             }
           ]
@@ -508,7 +450,7 @@
           "reflexes" : 6,
           "weapons" : [
             {
-              "id" : "heavy_maul",
+              "id" : "great_maul",
               "count" : 3
             }
           ]
@@ -518,7 +460,7 @@
         {
           "replaceWeapon" : [
             {
-              "id" : "heavy_maul",
+              "id" : "great_maul",
               "count" : 3
             }
           ],
@@ -717,7 +659,7 @@
       "category" : "hero",
       "models" : [
         {
-          "name" : "Celestial-Knight",
+          "name" : "Tempest-Knight",
           "min" : 1,
           "max" : 1,
           "movement" : 5,
@@ -767,7 +709,7 @@
                 ],
                 [
                   {
-                    "id" : "halberd"
+                    "id" : "storm_glaive"
                   },
                   "ward_lantern"
                 ],
@@ -823,6 +765,104 @@
       ],
       "keywords" : [
         "Hero",
+        "Infantry"
+      ]
+    },
+    "stormwings" : {
+      "name" : "Stormwings",
+      "description" : "Warrior mages, equipped with a pair of tempest-wings and magical weapons.",
+      "category" : "elite",
+      "models" : [
+        {
+          "name" : "Great-Stormwing",
+          "min" : 1,
+          "max" : 1,
+          "movement" : 8,
+          "courage" : 5,
+          "shoot" : 6,
+          "fight" : 6,
+          "defense" : 7,
+          "reflexes" : 6,
+          "weapons" : [
+            {
+              "id" : "throw_maul",
+              "count" : 2
+            },
+            "shield"
+          ]
+        },
+        {
+          "name" : "Stormwing",
+          "min" : 2,
+          "max" : 11,
+          "movement" : 8,
+          "courage" : 5,
+          "shoot" : 6,
+          "fight" : 6,
+          "defense" : 7,
+          "reflexes" : 6,
+          "weapons" : [
+            "storm_javelin",
+            "shield"
+          ]
+        }
+      ],
+      "rules" : [
+        "fly",
+        "ambush"
+      ],
+      "options" : [
+        {
+          "replaceWeapon" : [
+            "storm_javelin",
+            "shield"
+          ],
+          "withWeapon" : [
+            [
+              {
+                "id" : "throw_maul",
+                "count" : 3
+              }
+            ],
+            [
+              {
+                "id" : "throw_maul",
+                "count" : 2
+              },
+              "shield"
+            ]
+          ],
+          "modelLimit" : "all"
+        },
+        {
+          "replaceWeapon" : [
+            "storm_javelin",
+            "shield"
+          ],
+          "withWeapon" : [
+            [
+              {
+                "id" : "storm_hammer",
+                "count" : 2
+              }
+            ],
+            [
+              {
+                "id" : "storm_glaive",
+                "count" : 2
+              }
+            ],
+            [
+              {
+                "id" : "great_maul",
+                "count" : 3
+              }
+            ]
+          ],
+          "modelLimit" : "1/3"
+        }
+      ],
+      "keywords" : [
         "Infantry"
       ]
     }
@@ -1029,6 +1069,64 @@
         }
       ],
       "short" : "Melee"
+    },
+    "beak_and_claws" : {
+      "name" : "Beak and Claws",
+      "ap" : 4,
+      "attacks" : 1,
+      "short" : "Melee",
+      "rules" : [
+        "stormstrike"
+      ]
+    },
+    "throw_maul" : {
+      "name" : "Tempest Hammer",
+      "profiles" : [
+        {
+          "name" : "Melee",
+          "ap" : 2,
+          "attacks" : 1,
+          "short" : "Melee"
+        },
+        {
+          "name" : "Thrown",
+          "ap" : 2,
+          "attacks" : 1,
+          "medium" : 12,
+          "short" : 6,
+          "rules" : [
+            "assault"
+          ]
+        }
+      ]
+    },
+    "storm_javelin" : {
+      "name" : "Stormstrike Javelin",
+      "profiles" : [
+        {
+          "name" : "Melee",
+          "ap" : 2,
+          "attacks" : 1,
+          "short" : "Melee",
+          "rules" : [
+            {
+              "id" : "reach",
+              "x" : 1
+            }
+          ]
+        },
+        {
+          "name" : "Thrown",
+          "ap" : 2,
+          "attacks" : 1,
+          "medium" : 18,
+          "short" : 9,
+          "rules" : [
+            "assault",
+            "stormstrike"
+          ]
+        }
+      ]
     }
   },
   "rules" : {
