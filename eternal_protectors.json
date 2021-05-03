@@ -749,12 +749,12 @@
           "name" : "Celestial Beast",
           "min" : 0,
           "max" : 1,
-          "movement" : 6,
-          "courage" : 5,
+          "movement" : 7,
+          "courage" : 4,
           "shoot" : 6,
           "fight" : 6,
           "defense" : 5,
-          "reflexes" : 4,
+          "reflexes" : 6,
           "weapons" : [
             {
               "id" : "bite_and_claw",
@@ -864,6 +864,328 @@
       ],
       "keywords" : [
         "Infantry"
+      ]
+    },
+    "beasts" : {
+      "name" : "Celestial Beast",
+      "description" : "",
+      "category" : "core",
+      "models" : [
+        {
+          "name" : "Celestial Alpha",
+          "min" : 1,
+          "max" : 1,
+          "movement" : 7,
+          "courage" : 4,
+          "shoot" : 6,
+          "fight" : 6,
+          "defense" : 5,
+          "reflexes" : 5,
+          "weapons" : [
+            {
+              "id" : "bite_and_claw",
+              "count" : 2
+            }
+          ]
+        },
+        {
+          "name" : "Celestial Beast",
+          "min" : 4,
+          "max" : 19,
+          "movement" : 7,
+          "courage" : 4,
+          "shoot" : 6,
+          "fight" : 6,
+          "defense" : 5,
+          "reflexes" : 5,
+          "weapons" : [
+            {
+              "id" : "bite_and_claw",
+              "count" : 2
+            }
+          ]
+        }
+      ]
+    },
+    "scale-knight_lizard" : {
+      "name" : "Scale-Knight on Dragon-Lizard",
+      "description" : "A warrior mage, equipped with an arsenal of weapons.",
+      "category" : "hero",
+      "models" : [
+        {
+          "name" : "Scale-Knight",
+          "min" : 1,
+          "max" : 1,
+          "movement" : 8,
+          "courage" : 7,
+          "shoot" : 6,
+          "fight" : 6,
+          "defense" : 7,
+          "reflexes" : 6,
+          "rules" : [
+            {
+              "id" : "wounds",
+              "x" : 4
+            },
+            "leader"
+          ],
+          "options" : [
+            {
+              "replaceWeapon" : [
+                {
+                  "id" : "storm_blade",
+                  "count" : 2
+                },
+                "shield"
+              ],
+              "withWeapon" : [
+                [
+                  {
+                    "id" : "storm_glaive"
+                  },
+                  "shield"
+                ],
+                [
+                  {
+                    "id" : "storm_hammer"
+                  },
+                  "shield"
+                ]
+              ]
+            },
+            {
+              "addWeapon" : [
+                "spirit_flask"
+              ],
+              "limit" : 3
+            },
+            {
+              "addRule" : [
+                {
+                  "id" : "magic",
+                  "x" : 1
+                }
+              ]
+            }
+          ],
+          "weapons" : [
+            {
+              "id" : "storm_blade",
+              "count" : 2
+            },
+            "shield",
+            {
+              "id" : "dragon_bite",
+              "count" : 3
+            },
+            {
+              "id" : "beak_and_claws",
+              "count" : 3
+            }
+          ]
+        }
+      ],
+      "keywords" : [
+        "Hero",
+        "Infantry"
+      ]
+    },
+    "protectors_lizard" : {
+      "name" : "Protectors on Dragon-Lizards",
+      "description" : "",
+      "category" : "rare",
+      "options" : [
+        {
+          "replaceWeapon" : [
+            {
+              "id" : "storm_blade",
+              "count" : 3
+            },
+            {
+              "id" : "repeater_crossbow",
+              "count" : 3
+            }
+          ],
+          "withWeapon" : [
+            [
+              {
+                "id" : "storm_hammer",
+                "count" : 3
+              }
+            ],
+            [
+              {
+                "id" : "storm_glaive",
+                "count" : 3
+              }
+            ],
+            [
+              {
+                "id" : "storm_blade_0",
+                "count" : 4
+              }
+            ]
+          ]
+        }
+      ],
+      "rules" : [
+        {
+          "id" : "wounds",
+          "x" : 3
+        }
+      ],
+      "models" : [
+        {
+          "name" : "Champion on Dragon-Lizard",
+          "min" : 1,
+          "max" : 1,
+          "movement" : 8,
+          "courage" : 5,
+          "shoot" : 6,
+          "fight" : 6,
+          "defense" : 7,
+          "reflexes" : 6,
+          "weapons" : [
+            {
+              "id" : "storm_blade",
+              "count" : 3
+            },
+            {
+              "id" : "beak_and_claws",
+              "count" : 2
+            },
+            {
+              "id" : "dragon_bite",
+              "count" : 2
+            },
+            "buckler",
+            {
+              "id" : "repeater_crossbow",
+              "count" : 3
+            }
+          ]
+        },
+        {
+          "name" : "Protector on Dragon-Lizard",
+          "min" : 1,
+          "max" : 5,
+          "movement" : 8,
+          "courage" : 5,
+          "shoot" : 6,
+          "fight" : 6,
+          "defense" : 7,
+          "reflexes" : 6,
+          "weapons" : [
+            {
+              "id" : "storm_blade",
+              "count" : 3
+            },
+            {
+              "id" : "beak_and_claws",
+              "count" : 2
+            },
+            {
+              "id" : "dragon_bite",
+              "count" : 2
+            },
+            "buckler",
+            {
+              "id" : "repeater_crossbow",
+              "count" : 3
+            }
+          ]
+        }
+      ],
+      "keywords" : [
+        "Hero",
+        "Infantry"
+      ]
+    },
+    "scale_knight_drake" : {
+      "name" : "Scale-Knight on Starborn Drake",
+      "description" : "A warrior mage, equipped with an arsenal of weapons.",
+      "category" : "hero",
+      "models" : [
+        {
+          "name" : "Scale-Knight",
+          "min" : 1,
+          "max" : 1,
+          "movement" : 8,
+          "courage" : 7,
+          "shoot" : 7,
+          "fight" : 7,
+          "defense" : 12,
+          "reflexes" : 6,
+          "rules" : [
+            "leader",
+            "damage_table_monster",
+            "fly",
+            {
+              "id" : "magic",
+              "x" : 1
+            }
+          ],
+          "options" : [
+            {
+              "replaceWeapon" : [
+                {
+                  "id" : "storm_hammer",
+                  "count" : 3
+                },
+                "shield"
+              ],
+              "withWeapon" : [
+                [
+                  {
+                    "id" : "storm_glaive",
+                    "count" : 3
+                  },
+                  "shield"
+                ]
+              ]
+            },
+            {
+              "addWeapon" : [
+                "spirit_flask"
+              ],
+              "limit" : 3
+            },
+            {
+              "replaceRule" : [
+                {
+                  "id" : "magic",
+                  "x" : 1
+                }
+              ],
+              "withRule" : [
+                {
+                  "id" : "magic",
+                  "x" : 2
+                }
+              ]
+            }
+          ],
+          "weapons" : [
+            {
+              "id" : "storm_hammer",
+              "count" : 3
+            },
+            "shield",
+            {
+              "id" : "dragon_bite",
+              "count" : 4
+            },
+            {
+              "id" : "beak_and_claws",
+              "count" : 4
+            }
+          ]
+        }
+      ],
+      "keywords" : [
+        "Hero",
+        "Monster",
+        "Cavalry"
       ]
     }
   },
@@ -1051,7 +1373,7 @@
       ]
     },
     "bite_and_claw" : {
-      "name" : "Bite and Claws",
+      "name" : "Teeth and Claws",
       "ap" : 1,
       "attacks" : 1,
       "rules" : [
@@ -1071,7 +1393,7 @@
       "short" : "Melee"
     },
     "beak_and_claws" : {
-      "name" : "Beak and Claws",
+      "name" : "Bite and Claws",
       "ap" : 4,
       "attacks" : 1,
       "short" : "Melee",
@@ -1126,6 +1448,16 @@
             "stormstrike"
           ]
         }
+      ]
+    },
+    "dragon_bite" : {
+      "name" : "Dragon's Breath",
+      "ap" : 4,
+      "attacks" : 1,
+      "medium" : 12,
+      "short" : 6,
+      "rules" : [
+        "stormstrike"
       ]
     }
   },
