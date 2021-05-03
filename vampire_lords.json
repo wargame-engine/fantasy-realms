@@ -20,42 +20,95 @@
           "reflexes" : 6,
           "weapons" : [
             {
-              "id" : "bale_blade",
+              "id" : "great_maul",
               "count" : 4
             },
-            "breath"
+            {
+              "id" : "feral_claws",
+              "count" : 4
+            },
+            {
+              "id" : "scream",
+              "count" : 2
+            }
           ],
           "options" : [
             {
               "replaceWeapon" : [
                 {
-                  "id" : "bale_blade",
+                  "id" : "great_maul",
                   "count" : 4
                 }
               ],
               "withWeapon" : [
                 {
-                  "id" : "bale_lance",
-                  "count" : 4
+                  "id" : "great_lance",
+                  "count" : 3
                 }
               ]
             },
             {
-              "addRule" : {
-                "id" : "magic",
-                "x" : 1
-              }
+              "addWeapon" : [
+                "shield"
+              ]
+            },
+            {
+              "replaceRule" : [
+                {
+                  "id" : "magic",
+                  "x" : 1
+                }
+              ],
+              "withRule" : [
+                {
+                  "id" : "magic",
+                  "x" : 2
+                }
+              ]
+            },
+            {
+              "replaceWeapon" : [
+                {
+                  "id" : "scream",
+                  "count" : 2
+                }
+              ],
+              "withWeapon" : [
+                "breath"
+              ]
+            },
+            {
+              "replaceRule" : [
+                {
+                  "id" : "knight_tactics",
+                  "x" : 1
+                }
+              ],
+              "withRule" : [
+                {
+                  "id" : "knight_tactics",
+                  "x" : 2
+                }
+              ]
             }
           ],
           "rules" : [
             "fear",
-            "siphon",
             {
               "id" : "leader",
               "x" : "Infantry, Cavalry"
             },
             "damage_table_monster",
-            "fly"
+            "fly",
+            {
+              "id" : "magic",
+              "x" : 1
+            },
+            {
+              "id" : "knight_tactics",
+              "x" : 1
+            },
+            "siphon"
           ],
           "min" : 1,
           "max" : 1
@@ -88,7 +141,7 @@
           "reflexes" : 6,
           "weapons" : [
             {
-              "id" : "bale_blade",
+              "id" : "maul",
               "count" : 4
             },
             {
@@ -100,27 +153,57 @@
             {
               "replaceWeapon" : [
                 {
-                  "id" : "bale_blade",
+                  "id" : "maul",
                   "count" : 4
                 }
               ],
               "withWeapon" : [
                 {
-                  "id" : "bale_lance",
-                  "count" : 4
+                  "id" : "great_lance",
+                  "count" : 2
+                },
+                {
+                  "id" : "leeching_sword",
+                  "count" : 3
                 }
               ]
             },
             {
-              "addRule" : {
-                "id" : "magic",
-                "x" : 1
-              }
+              "addWeapon" : [
+                "shield"
+              ]
+            },
+            {
+              "replaceRule" : [
+                {
+                  "id" : "magic",
+                  "x" : 1
+                }
+              ],
+              "withRule" : [
+                {
+                  "id" : "magic",
+                  "x" : 2
+                }
+              ]
+            },
+            {
+              "replaceRule" : [
+                {
+                  "id" : "knight_tactics",
+                  "x" : 1
+                }
+              ],
+              "withRule" : [
+                {
+                  "id" : "knight_tactics",
+                  "x" : 2
+                }
+              ]
             }
           ],
           "rules" : [
             "fear",
-            "siphon",
             {
               "id" : "leader",
               "x" : "Infantry, Cavalry"
@@ -128,6 +211,14 @@
             {
               "id" : "wounds",
               "x" : 3
+            },
+            {
+              "id" : "magic",
+              "x" : 1
+            },
+            {
+              "id" : "knight_tactics",
+              "x" : 1
             }
           ],
           "min" : 1,
@@ -153,7 +244,7 @@
       "models" : [
         {
           "name" : "Vampire Lord",
-          "movement" : 7,
+          "movement" : 6,
           "courage" : 8,
           "shoot" : 4,
           "fight" : 6,
@@ -161,7 +252,7 @@
           "reflexes" : 6,
           "weapons" : [
             {
-              "id" : "bale_blade",
+              "id" : "maul",
               "count" : 4
             }
           ],
@@ -169,22 +260,58 @@
             {
               "replaceWeapon" : [
                 {
-                  "id" : "bale_blade",
+                  "id" : "maul",
                   "count" : 4
                 }
               ],
               "withWeapon" : [
                 {
                   "id" : "leeching_sword",
-                  "count" : 6
+                  "count" : 3
+                },
+                {
+                  "id" : "great_maul",
+                  "count" : 3
                 }
               ]
             },
             {
-              "addRule" : {
-                "id" : "magic",
-                "x" : 1
-              }
+              "addWeapon" : [
+                "shield"
+              ]
+            },
+            {
+              "addRule" : [
+                "fly"
+              ]
+            },
+            {
+              "replaceRule" : [
+                {
+                  "id" : "magic",
+                  "x" : 1
+                }
+              ],
+              "withRule" : [
+                {
+                  "id" : "magic",
+                  "x" : 2
+                }
+              ]
+            },
+            {
+              "replaceRule" : [
+                {
+                  "id" : "vampire_tactics",
+                  "x" : 1
+                }
+              ],
+              "withRule" : [
+                {
+                  "id" : "vampire_tactics",
+                  "x" : 2
+                }
+              ]
             }
           ],
           "rules" : [
@@ -193,8 +320,16 @@
               "x" : 3
             },
             "fear",
-            "siphon",
-            "leader"
+            "leader",
+            {
+              "id" : "magic",
+              "x" : 1
+            },
+            {
+              "id" : "vampire_tactics",
+              "x" : 1
+            },
+            "siphon"
           ],
           "min" : 1,
           "max" : 1
@@ -219,7 +354,7 @@
       "models" : [
         {
           "name" : "Strigoi Lord",
-          "movement" : 6,
+          "movement" : 7,
           "courage" : 8,
           "shoot" : 5,
           "fight" : 6,
@@ -227,23 +362,58 @@
           "reflexes" : 6,
           "weapons" : [
             {
-              "id" : "strigoi_claws",
+              "id" : "feral_claws",
               "count" : 4
             },
+            "vampire_bite"
+          ],
+          "options" : [
             {
-              "id" : "vampiric_bite"
+              "replaceRule" : [
+                {
+                  "id" : "magic",
+                  "x" : 1
+                }
+              ],
+              "withRule" : [
+                {
+                  "id" : "magic",
+                  "x" : 2
+                }
+              ]
+            },
+            {
+              "replaceRule" : [
+                {
+                  "id" : "vampire_tactics",
+                  "x" : 1
+                }
+              ],
+              "withRule" : [
+                {
+                  "id" : "vampire_tactics",
+                  "x" : 2
+                }
+              ]
             }
           ],
-          "options" : [],
           "rules" : [
             {
               "id" : "wounds",
-              "x" : 4
+              "x" : 3
             },
             "fear",
-            "siphon",
             "leader",
-            "fly"
+            "fly",
+            {
+              "id" : "magic",
+              "x" : 1
+            },
+            {
+              "id" : "vampire_tactics",
+              "x" : 1
+            },
+            "siphon"
           ],
           "min" : 1,
           "max" : 1
@@ -275,7 +445,7 @@
           "defense" : 4,
           "reflexes" : 4,
           "weapons" : [
-            "bite"
+            "unarmed"
           ],
           "rules" : [
             "raise_dead",
@@ -324,41 +494,11 @@
           "defense" : 4,
           "reflexes" : 5,
           "weapons" : [
-            {
-              "id" : "rusty_sword",
-              "count" : 2
-            },
+            "handweapon",
             "shield"
           ],
           "min" : 1,
-          "max" : 1,
-          "options" : [
-            {
-              "id" : "rusty_greatsword"
-            },
-            {
-              "replaceWeapon" : [
-                {
-                  "id" : "rusty_sword",
-                  "count" : 2
-                },
-                "shield"
-              ],
-              "withWeapon" : [
-                [
-                  {
-                    "id" : "rusty_spear",
-                    "count" : 2
-                  },
-                  "shield"
-                ],
-                {
-                  "id" : "rusty_greatsword",
-                  "count" : 3
-                }
-              ]
-            }
-          ]
+          "max" : 1
         },
         {
           "name" : "Skeleton",
@@ -369,31 +509,10 @@
           "defense" : 4,
           "reflexes" : 5,
           "weapons" : [
-            "rusty_sword",
+            "handweapon",
             "shield"
           ],
-          "options" : [
-            {
-              "replaceWeapon" : [
-                "rusty_sword",
-                "shield"
-              ],
-              "withWeapon" : [
-                [
-                  "rusty_spear",
-                  "shield"
-                ],
-                [
-                  "bone_bow",
-                  {
-                    "id" : "rusty_dagger",
-                    "count" : 2
-                  }
-                ]
-              ],
-              "modelLimit" : "all"
-            }
-          ],
+          "options" : [],
           "min" : 9,
           "max" : 29
         }
@@ -403,6 +522,26 @@
         "Infantry"
       ],
       "options" : [
+        {
+          "replaceWeapon" : [
+            "handweapon",
+            "shield"
+          ],
+          "withWeapon" : [
+            [
+              "bone_bow",
+              {
+                "id" : "dagger",
+                "count" : 2
+              }
+            ],
+            [
+              "spear",
+              "shield"
+            ]
+          ],
+          "modelLimit" : "all"
+        },
         {
           "addRule" : [
             "banner"
@@ -441,7 +580,7 @@
           "weapons" : [
             {
               "id" : "claws",
-              "count" : 3
+              "count" : 2
             }
           ]
         },
@@ -497,8 +636,8 @@
           ],
           "weapons" : [
             {
-              "id" : "claws",
-              "count" : 3
+              "id" : "bite",
+              "count" : 2
             }
           ]
         },
@@ -515,12 +654,12 @@
           ],
           "weapons" : [
             {
-              "id" : "claws",
+              "id" : "bite",
               "count" : 2
             }
           ],
-          "min" : 2,
-          "max" : 11
+          "min" : 4,
+          "max" : 19
         }
       ],
       "keywords" : [
@@ -594,7 +733,7 @@
           "weapons" : [
             {
               "id" : "feral_claws",
-              "count" : 4
+              "count" : 3
             }
           ],
           "options" : [],
@@ -660,29 +799,12 @@
           "weapons" : [
             {
               "id" : "spectral_blade",
-              "count" : 3
+              "count" : 2
             },
             "shield"
           ],
           "min" : 1,
-          "max" : 1,
-          "options" : [
-            {
-              "replaceWeapon" : [
-                {
-                  "id" : "spectral_blade",
-                  "count" : 3
-                },
-                "shield"
-              ],
-              "withWeapon" : [
-                {
-                  "id" : "spectral_great",
-                  "count" : 3
-                }
-              ]
-            }
-          ]
+          "max" : 1
         },
         {
           "name" : "Crypt Watch",
@@ -700,25 +822,7 @@
             "shield"
           ],
           "min" : 4,
-          "max" : 19,
-          "options" : [
-            {
-              "replaceWeapon" : [
-                {
-                  "id" : "spectral_blade",
-                  "count" : 2
-                },
-                "shield"
-              ],
-              "withWeapon" : [
-                {
-                  "id" : "spectral_great",
-                  "count" : 2
-                }
-              ],
-              "modelLimit" : "all"
-            }
-          ]
+          "max" : 19
         }
       ],
       "keywords" : [
@@ -726,6 +830,22 @@
         "Infantry"
       ],
       "options" : [
+        {
+          "replaceWeapon" : [
+            {
+              "id" : "spectral_blade",
+              "count" : 2
+            },
+            "shield"
+          ],
+          "withWeapon" : [
+            {
+              "id" : "spectral_great",
+              "count" : 2
+            }
+          ],
+          "modelLimit" : "all"
+        },
         {
           "addRule" : [
             "banner"
@@ -762,7 +882,7 @@
           "weapons" : [
             {
               "id" : "spectral_lance",
-              "count" : 3
+              "count" : 2
             },
             {
               "id" : "hooves_and_teeth",
@@ -778,7 +898,7 @@
           "movement" : 10,
           "courage" : 6,
           "shoot" : 4,
-          "fight" : 4,
+          "fight" : 6,
           "defense" : 5,
           "reflexes" : 4,
           "weapons" : [
@@ -839,8 +959,8 @@
           "reflexes" : 4,
           "weapons" : [
             {
-              "id" : "bale_lance",
-              "count" : 4
+              "id" : "great_lance",
+              "count" : 3
             },
             {
               "id" : "hooves_and_teeth",
@@ -861,7 +981,7 @@
           "reflexes" : 4,
           "weapons" : [
             {
-              "id" : "bale_lance",
+              "id" : "great_lance",
               "count" : 3
             },
             {
@@ -879,7 +999,6 @@
         "Cavalry"
       ],
       "rules" : [
-        "fear",
         {
           "id" : "wounds",
           "x" : 2
@@ -906,26 +1025,232 @@
         "dread",
         "none"
       ]
+    },
+    "risen_king" : {
+      "name" : "Risen King",
+      "description" : "",
+      "category" : "hero",
+      "models" : [
+        {
+          "name" : "Risen King",
+          "movement" : 5,
+          "courage" : 8,
+          "shoot" : 4,
+          "fight" : 6,
+          "defense" : 7,
+          "reflexes" : 6,
+          "weapons" : [
+            {
+              "id" : "spectral_blade",
+              "count" : 2
+            },
+            "shield"
+          ],
+          "options" : [
+            {
+              "replaceWeapon" : [
+                {
+                  "id" : "spectral_blade",
+                  "count" : 2
+                },
+                "shield"
+              ],
+              "withWeapon" : [
+                {
+                  "id" : "spectral_great",
+                  "count" : 2
+                },
+                [
+                  {
+                    "id" : "spectral_blade"
+                  },
+                  "icon_staff"
+                ]
+              ]
+            }
+          ],
+          "min" : 1,
+          "max" : 1
+        }
+      ],
+      "keywords" : [
+        "Hero",
+        "Undead",
+        "Infantry"
+      ],
+      "subfactions" : [
+        "blood",
+        "bone",
+        "dread",
+        "none"
+      ],
+      "rules" : [
+        "fear",
+        {
+          "id" : "wounds",
+          "x" : 3
+        },
+        {
+          "id" : "magic",
+          "x" : 1
+        },
+        "leader"
+      ]
+    },
+    "watch_captain" : {
+      "name" : "Watch Captain",
+      "description" : "",
+      "category" : "hero",
+      "models" : [
+        {
+          "name" : "Watch Captain",
+          "movement" : 5,
+          "courage" : 7,
+          "shoot" : 4,
+          "fight" : 6,
+          "defense" : 6,
+          "reflexes" : 6,
+          "weapons" : [
+            {
+              "id" : "spectral_blade",
+              "count" : 2
+            },
+            "handweapon"
+          ],
+          "min" : 1,
+          "max" : 1
+        }
+      ],
+      "keywords" : [
+        "Hero",
+        "Undead",
+        "Infantry"
+      ],
+      "subfactions" : [
+        "blood",
+        "bone",
+        "dread",
+        "none"
+      ],
+      "rules" : [
+        {
+          "id" : "wounds",
+          "x" : 3
+        },
+        "support"
+      ]
+    },
+    "risen_king_mount" : {
+      "name" : "Risen King on Undead Horse",
+      "description" : "",
+      "category" : "hero",
+      "models" : [
+        {
+          "name" : "Risen King",
+          "movement" : 10,
+          "courage" : 8,
+          "shoot" : 4,
+          "fight" : 6,
+          "defense" : 7,
+          "reflexes" : 6,
+          "weapons" : [
+            {
+              "id" : "spectral_lance",
+              "count" : 2
+            },
+            "shield",
+            {
+              "id" : "hooves_and_teeth",
+              "count" : 2
+            }
+          ],
+          "min" : 1,
+          "max" : 1
+        }
+      ],
+      "keywords" : [
+        "Hero",
+        "Undead",
+        "Infantry"
+      ],
+      "subfactions" : [
+        "blood",
+        "bone",
+        "dread",
+        "none"
+      ],
+      "rules" : [
+        "fear",
+        {
+          "id" : "wounds",
+          "x" : 3
+        },
+        {
+          "id" : "magic",
+          "x" : 1
+        },
+        "leader"
+      ]
     }
   },
   "weapons" : {
-    "bale_blade" : {
-      "name" : "Baleful Blade",
-      "ap" : 5,
+    "hooves_and_teeth" : {
+      "name" : "Hooves and Teeth",
       "attacks" : 1,
-      "short" : "Melee"
+      "short" : "Melee",
+      "ap" : 1
     },
-    "bale_lance" : {
-      "name" : "Baleful Lance",
-      "ap" : 5,
+    "spectral_great" : {
+      "name" : "Spectral Greatblade",
+      "ap" : 4,
+      "attacks" : 1,
+      "short" : "Melee",
+      "rules" : [
+        "spectral"
+      ]
+    },
+    "spectral_lance" : {
+      "name" : "Spectral Lance",
+      "ap" : 3,
       "attacks" : 1,
       "short" : "Melee",
       "rules" : [
         {
-          "id" : "impact",
+          "id" : "reach",
           "x" : 1
-        }
+        },
+        "spectral",
+        "lance"
       ]
+    },
+    "spectral_blade" : {
+      "name" : "Spectral Blade",
+      "ap" : 2,
+      "attacks" : 1,
+      "short" : "Melee",
+      "rules" : [
+        "spectral"
+      ]
+    },
+    "great_lance" : {
+      "name" : "Great-lance",
+      "attacks" : 1,
+      "ap" : 4,
+      "short" : "Melee",
+      "rules" : [
+        {
+          "id" : "reach",
+          "x" : 1
+        },
+        "lance"
+      ]
+    },
+    "bone_bow" : {
+      "name" : "Bone Bow",
+      "attacks" : 1,
+      "ap" : 2,
+      "short" : 12,
+      "medium" : 24
     },
     "breath" : {
       "name" : "Necrotic Breath",
@@ -940,8 +1265,14 @@
         }
       ]
     },
+    "bite" : {
+      "name" : "Ravenous Bite",
+      "attacks" : 1,
+      "short" : "Melee",
+      "ap" : 1
+    },
     "claws" : {
-      "name" : "Rending Maw and Claws",
+      "name" : "Rending Claws",
       "ap" : 1,
       "attacks" : 1,
       "short" : "Melee",
@@ -951,121 +1282,8 @@
         }
       ]
     },
-    "spectral_blade" : {
-      "name" : "Spectral Blade",
-      "ap" : 3,
-      "attacks" : 1,
-      "short" : "Melee",
-      "rules" : [
-        "spectral"
-      ]
-    },
-    "spectral_lance" : {
-      "name" : "Spectral Lance",
-      "ap" : 1,
-      "attacks" : 1,
-      "short" : "Melee",
-      "rules" : [
-        {
-          "id" : "impact",
-          "x" : 1
-        },
-        "spectral"
-      ]
-    },
-    "spectral_great" : {
-      "name" : "Spectral Greatblade",
-      "ap" : 5,
-      "attacks" : 1,
-      "short" : "Melee",
-      "rules" : [
-        "spectral"
-      ]
-    },
-    "leeching_sword" : {
-      "name" : "Leeching Sword",
-      "attacks" : 1,
-      "ap" : 3,
-      "short" : "Melee",
-      "rules" : [
-        "leeching"
-      ]
-    },
-    "rusty_sword" : {
-      "name" : "Rusty Sword",
-      "attacks" : 1,
-      "short" : "Melee",
-      "ap" : 1
-    },
-    "shield" : {
-      "name" : "Shield",
-      "attacks" : 0,
-      "short" : "Melee",
-      "rules" : [
-        {
-          "id" : "shield"
-        }
-      ]
-    },
-    "rusty_spear" : {
-      "name" : "Rusty Spear",
-      "attacks" : 1,
-      "short" : "Melee",
-      "ap" : 1,
-      "rules" : [
-        {
-          "id" : "reach",
-          "x" : 2
-        },
-        "cumbersome"
-      ]
-    },
-    "rusty_greatsword" : {
-      "name" : "Rusty Greatsword",
-      "attacks" : 1,
-      "short" : "Melee",
-      "ap" : 2,
-      "rules" : [
-        "rending"
-      ]
-    },
-    "bite" : {
-      "name" : "Ravenous Bite",
-      "attacks" : 1,
-      "short" : "Melee"
-    },
-    "vampiric_bite" : {
-      "name" : "Vampiric Bite",
-      "attacks" : 1,
-      "short" : "Melee",
-      "ap" : 7
-    },
-    "strigoi_claws" : {
-      "name" : "Scything Claws",
-      "ap" : 5,
-      "attacks" : 1,
-      "short" : "Melee"
-    },
-    "bone_bow" : {
-      "name" : "Bone Bow",
-      "attacks" : 1,
-      "ap" : 2,
-      "short" : 12,
-      "medium" : 24
-    },
-    "rusty_dagger" : {
-      "name" : "Rusty Dagger",
-      "attacks" : 1,
-      "short" : "Melee"
-    },
-    "hooves_and_teeth" : {
-      "name" : "Hooves and Teeth",
-      "attacks" : 1,
-      "short" : "Melee",
-      "ap" : 1
-    },
     "feral_claws" : {
-      "name" : "Contaminated Maw and Claws",
+      "name" : "Scything Claws",
       "ap" : 4,
       "attacks" : 1,
       "short" : "Melee",
@@ -1074,6 +1292,39 @@
           "id" : "rending"
         }
       ]
+    },
+    "vampire_bite" : {
+      "name" : "Vampiric Bite",
+      "attacks" : 1,
+      "short" : "Melee",
+      "ap" : 5,
+      "rules" : [
+        "leeching"
+      ]
+    },
+    "scream" : {
+      "name" : "Maddening Screech",
+      "ap" : 3,
+      "attacks" : 1,
+      "short" : 9,
+      "medium" : 18,
+      "rules" : [
+        {
+          "id" : "shocking",
+          "x" : 2
+        }
+      ]
+    },
+    "icon_staff" : {
+      "name" : "Gravetide Standard",
+      "attacks" : 0,
+      "rules" : [
+        {
+          "id" : "icon_x",
+          "x" : "Infantry"
+        }
+      ],
+      "short" : "Melee"
     }
   },
   "rules" : {
@@ -1082,42 +1333,41 @@
       "description" : "Roll a die each time this model kills an enemy model. On a roll of 1 or 2, return a model to this unit. This may not bring the unit over its starting size.",
       "points" : 2
     },
-    "spectral" : {
-      "name" : "Spectral",
-      "description" : "Hit rolls of 1 or 2 from this weapon cause 2 hits instead of 1. Additional hits must be assigned to the same model.",
-      "points" : [
-        "weapon.attacks",
-        {
-          "multiply" : 2
-        }
-      ]
-    },
-    "mount_horse" : {
-      "name" : "Undead Horse",
-      "hidden" : true,
-      "description_short" : "Movement +2\" and counts as Cavalry",
-      "description" : "Increases movement by 2\".",
-      "points" : 2
-    },
     "siphon" : {
       "name" : "Vampiric Siphon",
       "description" : "At the end of any activation in which this model slew any enemy models, you can heal 1 wound that has been allocated to this model.",
-      "points" : 4
+      "points" : 5
     },
-    "skirmishers" : {
-      "name" : "Skirmishers",
-      "description" : "This unit has a 4\" coherency and may not be more than 8\" away from any model in the unit at the end of a move action.",
-      "points" : 2
+    "vampire_tactics" : {
+      "name" : "Vampire Tactics",
+      "inputs" : [
+        "x"
+      ],
+      "description" : "When this unit is activated, choose up to X friendly _Infantry_ units within 6\". This unit and those units may re-roll failed Strength tests of 9+ until the end of the round.",
+      "points" : [
+        "rule.x",
+        {
+          "multiply" : 10
+        }
+      ]
     },
-    "distract" : {
-      "name" : "Distracting",
-      "description" : "Enemy units within 6\" get -1 Strength.",
-      "points" : 3
+    "knight_tactics" : {
+      "name" : "Knight Tactics",
+      "inputs" : [
+        "x"
+      ],
+      "description" : "When this unit is activated, choose up to X friendly _Cavalry_ units within 6\". This unit and those units may re-roll failed Strength tests of 9+ until the end of the round.",
+      "points" : [
+        "rule.x",
+        {
+          "multiply" : 10
+        }
+      ]
     },
-    "leeching" : {
-      "name" : "Leeching",
-      "description" : "Roll a D10 each time this weapon deals damage to a _Leader_ unit. On a 1 or 2 this model regains one Wound.",
-      "points" : 1
+    "soul_lantern" : {
+      "name" : "Soul Lantern",
+      "description" : "Once per round, a friendly _Infantry_ unit within 6\" gains +1 AP on all Melee weapons.",
+      "points" : 10
     }
   },
   "relics" : [],
