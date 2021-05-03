@@ -491,7 +491,7 @@
           "reflexes" : 6,
           "weapons" : [
             {
-              "id" : "storm_axe",
+              "id" : "heavy_maul",
               "count" : 3
             }
           ]
@@ -508,7 +508,7 @@
           "reflexes" : 6,
           "weapons" : [
             {
-              "id" : "storm_axe",
+              "id" : "heavy_maul",
               "count" : 3
             }
           ]
@@ -518,7 +518,7 @@
         {
           "replaceWeapon" : [
             {
-              "id" : "storm_axe",
+              "id" : "heavy_maul",
               "count" : 3
             }
           ],
@@ -553,13 +553,171 @@
         }
       ]
     },
-    "knight" : {
+    "sage_knight" : {
       "name" : "Sage-Knight",
       "description" : "A warrior mage, clad in magical armor and wielding elemental weaponry.",
       "category" : "hero",
       "models" : [
         {
           "name" : "Sage-Knight",
+          "min" : 1,
+          "max" : 1,
+          "movement" : 5,
+          "courage" : 7,
+          "shoot" : 6,
+          "fight" : 6,
+          "defense" : 7,
+          "reflexes" : 6,
+          "rules" : [
+            {
+              "id" : "wounds",
+              "x" : 3
+            },
+            "leader",
+            {
+              "id" : "magic",
+              "x" : 1
+            }
+          ],
+          "options" : [
+            {
+              "replaceWeapon" : [
+                {
+                  "id" : "great_staff",
+                  "count" : 3
+                }
+              ],
+              "withWeapon" : [
+                [
+                  {
+                    "id" : "maul",
+                    "count" : 3
+                  },
+                  "starfall_banner"
+                ],
+                [
+                  {
+                    "id" : "maul",
+                    "count" : 2
+                  },
+                  "icon_staff"
+                ],
+                [
+                  {
+                    "id" : "great_staff"
+                  },
+                  "soul_lantern"
+                ],
+                [
+                  {
+                    "id" : "maul",
+                    "count" : 3
+                  },
+                  "grim_staff"
+                ]
+              ]
+            },
+            {
+              "addWeapon" : [
+                "spirit_flask"
+              ],
+              "limit" : 3
+            }
+          ],
+          "weapons" : [
+            {
+              "id" : "protector_staff",
+              "count" : 3
+            }
+          ]
+        }
+      ],
+      "keywords" : [
+        "Hero",
+        "Infantry"
+      ]
+    },
+    "celestial_knight" : {
+      "name" : "Celestial-Knight",
+      "description" : "A warrior mage, equipped with a pair of tempest-wings and magical weapons.",
+      "category" : "hero",
+      "models" : [
+        {
+          "name" : "Celestial-Knight",
+          "min" : 1,
+          "max" : 1,
+          "movement" : 8,
+          "courage" : 7,
+          "shoot" : 6,
+          "fight" : 6,
+          "defense" : 7,
+          "reflexes" : 6,
+          "rules" : [
+            {
+              "id" : "wounds",
+              "x" : 3
+            },
+            "leader",
+            "fly"
+          ],
+          "options" : [
+            {
+              "replaceWeapon" : [
+                {
+                  "id" : "great_bow",
+                  "count" : 3
+                },
+                {
+                  "id" : "handweapon",
+                  "count" : 2
+                }
+              ],
+              "withWeapon" : [
+                [
+                  {
+                    "id" : "storm_blade",
+                    "count" : 4
+                  },
+                  "soul_lantern"
+                ]
+              ]
+            },
+            {
+              "addWeapon" : [
+                "spirit_flask"
+              ],
+              "limit" : 3
+            },
+            {
+              "addWeapon" : [
+                "bird"
+              ]
+            }
+          ],
+          "weapons" : [
+            {
+              "id" : "great_bow",
+              "count" : 3
+            },
+            {
+              "id" : "handweapon",
+              "count" : 3
+            }
+          ]
+        }
+      ],
+      "keywords" : [
+        "Hero",
+        "Infantry"
+      ]
+    },
+    "tempest_knight" : {
+      "name" : "Tempest-Knight",
+      "description" : "A warrior mage, equipped with an arsenal of weapons.",
+      "category" : "hero",
+      "models" : [
+        {
+          "name" : "Celestial-Knight",
           "min" : 1,
           "max" : 1,
           "movement" : 5,
@@ -580,23 +738,11 @@
               "replaceWeapon" : [
                 {
                   "id" : "storm_blade",
-                  "count" : 3
+                  "count" : 2
                 },
                 "shield"
               ],
               "withWeapon" : [
-                [
-                  {
-                    "id" : "storm_hammer",
-                    "count" : 2
-                  }
-                ],
-                [
-                  {
-                    "id" : "storm_blade",
-                    "count" : 4
-                  }
-                ],
                 [
                   {
                     "id" : "great_maul",
@@ -605,78 +751,45 @@
                 ],
                 [
                   {
-                    "id" : "halberd",
-                    "count" : 3
-                  }
-                ],
-                [
-                  {
-                    "id" : "storm_glaive",
-                    "count" : 2
-                  }
-                ],
-                [
-                  {
-                    "id" : "storm_blade_0",
-                    "count" : 2
-                  },
-                  "shield"
-                ],
-                [
-                  {
-                    "id" : "repeater_crossbow",
-                    "count" : 2
-                  },
-                  {
-                    "id" : "maul",
-                    "count" : 3
-                  }
-                ],
-                [
-                  {
-                    "id" : "maul",
-                    "count" : 5
-                  }
-                ],
-                [
-                  {
                     "id" : "maul",
                     "count" : 4
-                  },
-                  "starfall_banner"
+                  }
                 ],
                 [
                   {
-                    "id" : "maul",
+                    "id" : "storm_blade",
                     "count" : 2
                   },
                   {
-                    "id" : "storm_blade",
-                    "count" : 3
+                    "id" : "maul",
+                    "count" : 2
                   }
+                ],
+                [
+                  {
+                    "id" : "halberd"
+                  },
+                  "ward_lantern"
+                ],
+                [
+                  {
+                    "id" : "storm_blade",
+                    "count" : 2
+                  },
+                  "ward_lantern"
                 ]
               ]
             },
             {
+              "addWeapon" : [
+                "spirit_flask"
+              ],
+              "limit" : 3
+            },
+            {
               "addRule" : [
                 {
-                  "id" : "icon_x",
-                  "x" : "Infantry"
-                },
-                {
-                  "id" : "magic",
-                  "x" : 1
-                },
-                {
-                  "id" : "eternal_tactics",
-                  "x" : 1
-                },
-                {
-                  "id" : "adamant_tactics",
-                  "x" : 1
-                },
-                {
-                  "id" : "magic",
+                  "id" : "herald",
                   "x" : 2
                 }
               ]
@@ -685,9 +798,26 @@
           "weapons" : [
             {
               "id" : "storm_blade",
-              "count" : 3
+              "count" : 2
             },
             "shield"
+          ]
+        },
+        {
+          "name" : "Celestial Beast",
+          "min" : 0,
+          "max" : 1,
+          "movement" : 6,
+          "courage" : 5,
+          "shoot" : 6,
+          "fight" : 6,
+          "defense" : 5,
+          "reflexes" : 4,
+          "weapons" : [
+            {
+              "id" : "bite_and_claw",
+              "count" : 4
+            }
           ]
         }
       ],
@@ -714,15 +844,6 @@
           "id" : "reach",
           "x" : 1
         }
-      ]
-    },
-    "beak_and_claws" : {
-      "name" : "Beak and Claws",
-      "attacks" : 1,
-      "ap" : 3,
-      "short" : "Melee",
-      "rules" : [
-        "rending"
       ]
     },
     "enchanted_shield" : {
@@ -773,12 +894,6 @@
         "stormstrike"
       ]
     },
-    "storm_axe" : {
-      "name" : "Volatile Greataxe",
-      "attacks" : 1,
-      "ap" : 4,
-      "short" : "Melee"
-    },
     "storm_glaive" : {
       "name" : "Storm Glaive",
       "attacks" : 1,
@@ -793,13 +908,13 @@
       ]
     },
     "storm_blade" : {
-      "name" : "Runecarved Warblade",
+      "name" : "Celestial Warblade",
       "attacks" : 1,
       "ap" : 3,
       "short" : "Melee"
     },
     "storm_blade_0" : {
-      "name" : "Stormfront Warblade",
+      "name" : "Volatile Warblade",
       "attacks" : 1,
       "ap" : 3,
       "short" : "Melee",
@@ -823,6 +938,97 @@
         "scatter"
       ],
       "short" : 24
+    },
+    "icon_staff" : {
+      "name" : "Celestial Standard",
+      "attacks" : 0,
+      "rules" : [
+        {
+          "id" : "icon_x",
+          "x" : "Infantry"
+        }
+      ],
+      "short" : "Melee"
+    },
+    "soul_lantern" : {
+      "name" : "Soul Lantern",
+      "attacks" : 1,
+      "rules" : [
+        "soul_lantern",
+        "spectral"
+      ],
+      "ap" : 1,
+      "short" : 6
+    },
+    "grim_staff" : {
+      "name" : "Grim Reliquary",
+      "attacks" : 0,
+      "rules" : [
+        "fear",
+        "distract"
+      ],
+      "short" : "Melee"
+    },
+    "spirit_flask" : {
+      "name" : "Spirit Flask",
+      "attacks" : 1,
+      "ap" : 3,
+      "short" : 12,
+      "rules" : [
+        {
+          "id" : "blast",
+          "x" : 2
+        },
+        {
+          "id" : "ammo",
+          "x" : 1
+        },
+        "spectral"
+      ]
+    },
+    "bird" : {
+      "name" : "Celestial Eagle",
+      "profiles" : [
+        {
+          "name" : "Claws",
+          "ap" : 2,
+          "attacks" : 1,
+          "rules" : [
+            "rending"
+          ],
+          "short" : "Melee"
+        },
+        {
+          "name" : "Beak",
+          "ap" : 2,
+          "attacks" : 1,
+          "medium" : 24,
+          "short" : 12,
+          "rules" : [
+            "rending"
+          ]
+        }
+      ]
+    },
+    "bite_and_claw" : {
+      "name" : "Bite and Claws",
+      "ap" : 1,
+      "attacks" : 1,
+      "rules" : [
+        "rending"
+      ],
+      "short" : "Melee"
+    },
+    "ward_lantern" : {
+      "name" : "Warding Lantern",
+      "attacks" : 0,
+      "rules" : [
+        {
+          "id" : "dispel",
+          "x" : 1
+        }
+      ],
+      "short" : "Melee"
     }
   },
   "rules" : {
@@ -830,16 +1036,6 @@
       "name" : "Lightning Field",
       "description" : "Roll a D10 each time this unit is hit by a Shooting attack. On each roll of a 1 or 2 an attack is prevented.",
       "points" : 2
-    },
-    "stormstrike" : {
-      "name" : "Stormstrike",
-      "description" : "Hit rolls of 1 or 2 from this weapon cause 2 hits instead of 1. Additional hits must be assigned to the same model.",
-      "points" : [
-        "weapon.attacks",
-        {
-          "multiply" : 2
-        }
-      ]
     },
     "stormstrike_x" : {
       "name" : "Stormstrike",
@@ -867,16 +1063,31 @@
         }
       ]
     },
-    "adamant_tactics" : {
-      "name" : "Adamant Tactics",
+    "soul_lantern" : {
+      "name" : "Soul Lantern",
+      "description" : "Once per round, a friendly _Infantry_ unit within 6\" gains +1 AP on all Melee weapons.",
+      "points" : 10
+    },
+    "stormstrike" : {
+      "name" : "Stormstrike",
+      "description" : "Hit rolls of 1 or 2 from this weapon cause 2 hits instead of 1. Additional hits must be assigned to the same model.",
+      "points" : [
+        "weapon.attacks",
+        {
+          "multiply" : 2
+        }
+      ]
+    },
+    "herald" : {
+      "name" : "Heralding Call",
+      "description" : "When this unit is activated, choose up to X friendly _Infantry_ units within 6\". This model and those units gain +3“ Move next time they move or charge.",
       "inputs" : [
         "x"
       ],
-      "description" : "When this unit is activated, choose up to X friendly _Infantry_ units within 6\". This unit and those units may re-roll failed Save tests of 9+ until the end of the round.",
       "points" : [
         "rule.x",
         {
-          "multiply" : 10
+          "multiply" : 3
         }
       ]
     }
