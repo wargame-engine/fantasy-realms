@@ -196,5 +196,9 @@
         "mournfang_tusks": {"name": "Cavalry Tusks", "attacks": 1, "ap": 3, "rules": ["lance"], "short": "melee"},
         "boomstick": {"name": "Boomstick", "attacks": 3, "ap": 3, "short": 6, "medium": 12},
         "ironfist": {"name": "Ironfist", "attacks": 1, "ap": 1, "short": "melee", "rules": ["buckler"]}
+    },
+    "rules" : {
+        "merc_tactics": {"name": "Mercenary Tactics", "inputs": ["x"], "description": "When this unit is activated, choose up to X friendly _Infantry_ units within 6\" to receive one of the following bonuses until the end of the round: \n * Re-roll failed Strength tests of 9+ \n * Re-roll failed Initiative tests of 9+", "points": ["rule.x", {"multiply": 10}]
+}
     }
 }
