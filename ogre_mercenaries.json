@@ -68,7 +68,8 @@
                     "min": 1,
                     "max": 1,
                     "rules": [{"id": "wounds", "x": 2}],
-                    "weapons": [{"id": "maul", "count": 4}]
+                    "weapons": [{"id": "maul", "count": 4}],
+                    "options": [{"replaceWeapon" : [{"id" : "maul", "count" : 5}], "withWeapon" : [[{"id" : "maul", "count" : 4}, {"id" : "ironfist", "count" : 1}]]}]
                 },
                 {
                     "name": "Ogre Private",
@@ -82,7 +83,7 @@
                     "max": 11,
                     "rules": [{"id": "wounds", "x": 2}],
                     "weapons": [{"id": "maul", "count": 3}],
-                    "options": [{"addRule": ["banner"], "modelLimit": 1}, {"addRule": ["musician"], "modelLimit": 1}]
+                    "options": [{"replaceWeapon" : [{"id" : "maul", "count" : 3}], "withWeapon" : [[{"id" : "maul", "count" : 2}, {"id" : "ironfist", "count" : 1}]]}, {"addRule": ["banner"], "modelLimit": 1}, {"addRule": ["musician"], "modelLimit": 1}]
                 }
             ]
         },
@@ -103,7 +104,8 @@
                     "min": 1,
                     "max": 1,
                     "rules": [{"id": "wounds", "x": 2}],
-                    "weapons": [{"id": "great_maul", "count": 4}]
+                    "weapons": [{"id": "great_maul", "count": 5}],
+                    "options": [{"replaceWeapon" : [{"id" : "great_maul", "count" : 5}], "withWeapon" : [[{"id" : "great_maul", "count" : 4}, {"id" : "ironfist", "count" : 1}]]}]
                 },
                 {
                     "name": "Ogre Veteran",
@@ -116,8 +118,8 @@
                     "min": 2,
                     "max": 8,
                     "rules": [{"id": "wounds", "x": 2}],
-                    "weapons": [{"id": "great_maul", "count": 3}],
-                    "options": [{"addRule": ["banner"], "modelLimit": 1}, {"addRule": ["musician"], "modelLimit": 1}]
+                    "weapons": [{"id": "great_maul", "count": 4}],
+                    "options": [{"replaceWeapon" : [{"id" : "great_maul", "count" : 4}], "withWeapon" : [[{"id" : "great_maul", "count" : 3}, {"id" : "ironfist", "count" : 1}]]}, {"addRule": ["banner"], "modelLimit": 1}, {"addRule": ["musician"], "modelLimit": 1}]
                 }
             ]
         },
@@ -170,7 +172,7 @@
                     "min": 1,
                     "max": 1,
                     "rules": [{"id": "wounds", "x": 3}, {"id": "impact", "x": 2}],
-                    "weapons": [{"id": "great_maul", "count": 3}, {"id": "mournfang_tusks", "count": 4}, {"id": "handgun", "count": 1}]
+                    "weapons": [{"id": "great_maul", "count": 3}, {"id": "mournfang_tusks", "count": 4}, {"id": "handgun", "count": 1}, {"id" : "ironfist", "count" : 1}]
                 },
                 {
                     "name": "Ogre Cavalry",
@@ -182,7 +184,7 @@
                     "min": 2,
                     "max": 8,
                     "rules": [{"id": "wounds", "x": 3}, {"id": "impact", "x": 2}],
-                    "weapons": [{"id": "great_maul", "count": 3}, {"id": "mournfang_tusks", "count": 4}],
+                    "weapons": [{"id": "great_maul", "count": 3}, {"id": "mournfang_tusks", "count": 4}, {"id" : "ironfist", "count" : 1}],
                     "options": [{"addRule": ["banner"], "modelLimit": 1}, {"addRule": ["musician"], "modelLimit": 1}]
                 }
             ]
@@ -192,6 +194,7 @@
         "capn_weapon": {"name": "Captain's Peacekeeper", "attacks": 1, "ap": 5, "short": "Melee"},
         "ogre_fists": {"name": "Ogre Fists", "attacks": 1, "ap": 3, "short": "Melee"},
         "mournfang_tusks": {"name": "Cavalry Tusks", "attacks": 1, "ap": 3, "rules": ["lance"], "short": "melee"},
-        "boomstick": {"name": "Boomstick", "attacks": 3, "ap": 3, "short": 6, "medium": 12}
+        "boomstick": {"name": "Boomstick", "attacks": 3, "ap": 3, "short": 6, "medium": 12},
+        "ironfist": {"name": "Ironfist", "attacks": 1, "ap": 1, "short": "melee", "rules": ["buckler"]}
     }
 }

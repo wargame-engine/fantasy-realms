@@ -3,7 +3,7 @@
   "id" : "beastmen_horde",
   "author" : "Valgaav#9736",
   "color" : "#954535",
-  "version" : "0.1",
+  "version" : "1.0",
   "alliance" : "chaos",
   "units" : {
     "minotaur_lord" : {
