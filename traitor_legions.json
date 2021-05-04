@@ -23,16 +23,16 @@
           "weapons" : [
             "shield",
             {
-              "id" : "hexed_halberd",
-              "count" : 4
+              "id" : "halberd",
+              "count" : 3
             }
           ],
           "options" : [
             {
               "replaceWeapon" : [
                 {
-                  "id" : "hexed_halberd",
-                  "count" : 4
+                  "id" : "halberd",
+                  "count" : 3
                 }
               ],
               "withWeapon" : [
@@ -41,7 +41,7 @@
                   "count" : 4
                 },
                 {
-                  "id" : "rune_great",
+                  "id" : "great_maul",
                   "count" : 4
                 }
               ]
@@ -112,8 +112,8 @@
           "defense" : 7,
           "reflexes" : 5,
           "weapons" : [
-            "rune_blade",
-            "rune_great"
+            "maul",
+            "great_maul"
           ],
           "options" : [
             {
@@ -177,42 +177,11 @@
           "defense" : 7,
           "reflexes" : 5,
           "weapons" : [
-            {
-              "id" : "rune_blade",
-              "count" : 3
-            },
+            "halberd",
             "shield"
           ],
           "min" : 1,
-          "max" : 1,
-          "options" : [
-            {
-              "replaceWeapon" : [
-                {
-                  "id" : "rune_blade",
-                  "count" : 3
-                },
-                "shield"
-              ],
-              "withWeapon" : [
-                {
-                  "id" : "rune_blade",
-                  "count" : 4
-                },
-                {
-                  "id" : "rune_great",
-                  "count" : 3
-                },
-                [
-                  {
-                    "id" : "rune_halberd",
-                    "count" : 3
-                  },
-                  "shield"
-                ]
-              ]
-            }
-          ]
+          "max" : 1
         },
         {
           "name" : "Traitor Warrior",
@@ -221,44 +190,13 @@
           "shoot" : 4,
           "fight" : 6,
           "defense" : 7,
-          "reflexes" : 6,
+          "reflexes" : 5,
           "weapons" : [
-            {
-              "id" : "rune_blade",
-              "count" : 2
-            },
+            "halberd",
             "shield"
           ],
           "min" : 4,
-          "max" : 19,
-          "options" : [
-            {
-              "replaceWeapon" : [
-                {
-                  "id" : "rune_blade",
-                  "count" : 2
-                },
-                "shield"
-              ],
-              "withWeapon" : [
-                {
-                  "id" : "rune_blade",
-                  "count" : 3
-                },
-                {
-                  "id" : "rune_great",
-                  "count" : 2
-                },
-                [
-                  {
-                    "id" : "rune_halberd",
-                    "count" : 2
-                  },
-                  "shield"
-                ]
-              ]
-            }
-          ]
+          "max" : 19
         }
       ],
       "subfactions" : [
@@ -270,6 +208,30 @@
         "deception"
       ],
       "options" : [
+        {
+          "replaceWeapon" : [
+            "halberd",
+            "shield"
+          ],
+          "withWeapon" : [
+            {
+              "id" : "maul",
+              "count" : 3
+            },
+            {
+              "id" : "great_maul",
+              "count" : 2
+            },
+            [
+              {
+                "id" : "maul",
+                "count" : 2
+              },
+              "shield"
+            ]
+          ],
+          "modelLimit" : "all"
+        },
         {
           "addRule" : [
             "banner"
@@ -298,28 +260,7 @@
           "defense" : 4,
           "reflexes" : 4,
           "weapons" : [
-            {
-              "id" : "handweapon",
-              "count" : 3
-            },
-            "shield"
-          ],
-          "options" : [
-            {
-              "replaceWeapon" : [
-                {
-                  "id" : "handweapon",
-                  "count" : 3
-                },
-                "shield"
-              ],
-              "withWeapon" : [
-                {
-                  "id" : "barbarian_spear",
-                  "count" : 2
-                }
-              ]
-            }
+            "barbarian_spear"
           ],
           "min" : 1,
           "max" : 1
@@ -333,28 +274,11 @@
           "defense" : 4,
           "reflexes" : 4,
           "weapons" : [
-            {
-              "id" : "handweapon",
-              "count" : 2
-            },
-            "shield"
+            "barbarian_spear"
           ],
           "min" : 9,
           "max" : 29,
-          "options" : [
-            {
-              "replaceWeapon" : [
-                {
-                  "id" : "handweapon",
-                  "count" : 2
-                },
-                "shield"
-              ],
-              "withWeapon" : [
-                "barbarian_spear"
-              ]
-            }
-          ]
+          "options" : []
         }
       ],
       "subfactions" : [
@@ -366,6 +290,22 @@
         "deception"
       ],
       "options" : [
+        {
+          "replaceWeapon" : [
+            "barbarian_spear"
+          ],
+          "withWeapon" : [
+            {
+              "id" : "handweapon",
+              "count" : 3
+            },
+            [
+              "handweapon",
+              "shield"
+            ]
+          ],
+          "modelLimit" : "all"
+        },
         {
           "addRule" : [
             "banner"
@@ -393,17 +333,18 @@
           "courage" : 6,
           "shoot" : 5,
           "fight" : 6,
-          "defense" : 8,
-          "reflexes" : 4,
+          "defense" : 7,
+          "reflexes" : 5,
           "weapons" : [
             {
               "id" : "hooves_and_teeth",
               "count" : 2
             },
             {
-              "id" : "hexed_halberd",
-              "count" : 3
-            }
+              "id" : "heavy_lance",
+              "count" : 2
+            },
+            "shield"
           ],
           "rules" : [
             "fear"
@@ -414,18 +355,14 @@
             {
               "replaceWeapon" : [
                 {
-                  "id" : "hexed_halberd",
-                  "count" : 3
+                  "id" : "heavy_lance",
+                  "count" : 2
                 }
               ],
               "withWeapon" : [
                 {
-                  "id" : "rune_great",
-                  "count" : 3
-                },
-                {
-                  "id" : "rune_lance",
-                  "count" : 3
+                  "id" : "halberd",
+                  "count" : 2
                 }
               ]
             }
@@ -437,33 +374,18 @@
           "courage" : 6,
           "shoot" : 5,
           "fight" : 6,
-          "defense" : 8,
-          "reflexes" : 4,
+          "defense" : 7,
+          "reflexes" : 5,
           "weapons" : [
             {
-              "id" : "rune_lance",
+              "id" : "heavy_lance",
               "count" : 2
             },
             {
               "id" : "hooves_and_teeth",
               "count" : 2
-            }
-          ],
-          "options" : [
-            {
-              "replaceWeapon" : [
-                {
-                  "id" : "rune_lance",
-                  "count" : 2
-                }
-              ],
-              "withWeapon" : [
-                {
-                  "id" : "rune_great",
-                  "count" : 2
-                }
-              ]
-            }
+            },
+            "shield"
           ],
           "rules" : [
             "fear"
@@ -481,6 +403,21 @@
         "deception"
       ],
       "options" : [
+        {
+          "replaceWeapon" : [
+            {
+              "id" : "heavy_lance",
+              "count" : 2
+            }
+          ],
+          "withWeapon" : [
+            {
+              "id" : "great_maul",
+              "count" : 2
+            }
+          ],
+          "modelLimit" : "all"
+        },
         {
           "addRule" : [
             "banner"
@@ -511,7 +448,7 @@
           "weapons" : [
             {
               "id" : "handweapon",
-              "count" : 3
+              "count" : 2
             },
             {
               "id" : "hooves_and_teeth",
@@ -520,26 +457,7 @@
             "shield"
           ],
           "min" : 1,
-          "max" : 1,
-          "options" : [
-            {
-              "replaceWeapon" : [
-                {
-                  "id" : "handweapon",
-                  "count" : 3
-                },
-                "shield"
-              ],
-              "withWeapon" : [
-                [
-                  {
-                    "id" : "barbarian_spear"
-                  },
-                  "barbarian_javelin"
-                ]
-              ]
-            }
-          ]
+          "max" : 1
         },
         {
           "name" : "Traitor Outrider",
@@ -561,24 +479,7 @@
             "shield"
           ],
           "min" : 4,
-          "max" : 14,
-          "options" : [
-            {
-              "replaceWeapon" : [
-                {
-                  "id" : "handweapon",
-                  "count" : 2
-                },
-                "shield"
-              ],
-              "withWeapon" : [
-                [
-                  "barbarian_spear",
-                  "barbarian_javelin"
-                ]
-              ]
-            }
-          ]
+          "max" : 14
         }
       ],
       "subfactions" : [
@@ -590,6 +491,22 @@
         "deception"
       ],
       "options" : [
+        {
+          "replaceWeapon" : [
+            {
+              "id" : "handweapon",
+              "count" : 2
+            },
+            "shield"
+          ],
+          "withWeapon" : [
+            [
+              "barbarian_spear",
+              "barbarian_javelin"
+            ]
+          ],
+          "modelLimit" : "all"
+        },
         {
           "addRule" : [
             "banner"
@@ -621,7 +538,7 @@
           "reflexes" : 6,
           "weapons" : [
             {
-              "id" : "rune_blade",
+              "id" : "maul",
               "count" : 4
             }
           ],
@@ -671,16 +588,16 @@
           "weapons" : [
             "shield",
             {
-              "id" : "hexed_halberd",
-              "count" : 4
+              "id" : "halberd",
+              "count" : 3
             }
           ],
           "options" : [
             {
               "replaceWeapon" : [
                 {
-                  "id" : "hexed_halberd",
-                  "count" : 4
+                  "id" : "halberd",
+                  "count" : 3
                 }
               ],
               "withWeapon" : [
@@ -689,11 +606,11 @@
                   "count" : 4
                 },
                 {
-                  "id" : "rune_great",
+                  "id" : "great_maul",
                   "count" : 4
                 },
                 {
-                  "id" : "rune_lance",
+                  "id" : "heavy_lance",
                   "count" : 4
                 }
               ]
@@ -745,8 +662,8 @@
           "reflexes" : 5,
           "weapons" : [
             {
-              "id" : "demon_great",
-              "count" : 4
+              "id" : "rending_great",
+              "count" : 3
             }
           ],
           "min" : 1,
@@ -762,7 +679,7 @@
           "reflexes" : 6,
           "weapons" : [
             {
-              "id" : "demon_great",
+              "id" : "rending_great",
               "count" : 3
             }
           ],
@@ -811,48 +728,8 @@
           "reflexes" : 4,
           "weapons" : [
             {
-              "id" : "rune_blade",
-              "count" : 3
-            }
-          ],
-          "options" : [
-            {
-              "replaceWeapon" : [
-                {
-                  "id" : "rune_blade",
-                  "count" : 3
-                }
-              ],
-              "withWeapon" : [
-                [
-                  {
-                    "id" : "rune_blade",
-                    "count" : 2
-                  },
-                  "shield"
-                ],
-                [
-                  "long_bow",
-                  {
-                    "id" : "handweapon",
-                    "count" : 3
-                  }
-                ]
-              ]
-            },
-            {
-              "replaceRule" : [
-                {
-                  "id" : "dispel",
-                  "x" : 1
-                }
-              ],
-              "withRule" : [
-                {
-                  "id" : "magic",
-                  "x" : 1
-                }
-              ]
+              "id" : "maul",
+              "count" : 2
             }
           ],
           "min" : 1,
@@ -874,36 +751,12 @@
           "reflexes" : 4,
           "weapons" : [
             {
-              "id" : "handweapon",
+              "id" : "maul",
               "count" : 2
             }
           ],
           "min" : 9,
-          "max" : 29,
-          "options" : [
-            {
-              "replaceWeapon" : [
-                {
-                  "id" : "rune_blade",
-                  "count" : 2
-                }
-              ],
-              "withWeapon" : [
-                [
-                  "rune_blade",
-                  "shield"
-                ],
-                [
-                  "bow",
-                  {
-                    "id" : "handweapon",
-                    "count" : 2
-                  }
-                ]
-              ],
-              "modelLimit" : "all"
-            }
-          ]
+          "max" : 29
         }
       ],
       "subfactions" : [
@@ -918,7 +771,29 @@
         {
           "replaceWeapon" : [
             {
-              "id" : "rune_blade",
+              "id" : "maul",
+              "count" : 2
+            }
+          ],
+          "withWeapon" : [
+            [
+              "maul",
+              "shield"
+            ],
+            [
+              "bow",
+              {
+                "id" : "handweapon",
+                "count" : 2
+              }
+            ]
+          ],
+          "modelLimit" : "all"
+        },
+        {
+          "replaceWeapon" : [
+            {
+              "id" : "maul",
               "count" : 2
             }
           ],
@@ -985,33 +860,8 @@
       "short" : 6,
       "medium" : 12
     },
-    "rune_blade" : {
-      "name" : "Runecarved Blade",
-      "ap" : 2,
-      "attacks" : 1,
-      "short" : "Melee"
-    },
-    "rune_halberd" : {
-      "name" : "Runecarved Halberd",
-      "ap" : 2,
-      "attacks" : 1,
-      "short" : "Melee",
-      "rules" : [
-        {
-          "id" : "reach",
-          "x" : 1
-        },
-        "rending"
-      ]
-    },
-    "rune_great" : {
-      "name" : "Runecarved Greatblade",
-      "ap" : 4,
-      "attacks" : 1,
-      "short" : "Melee"
-    },
-    "rune_lance" : {
-      "name" : "Runecarved Lance",
+    "heavy_lance" : {
+      "name" : "Heavy Lance",
       "ap" : 2,
       "attacks" : 1,
       "short" : "Melee",
@@ -1022,28 +872,6 @@
         },
         "lance"
       ]
-    },
-    "hexed_halberd" : {
-      "name" : "Hexed Halberd",
-      "ap" : 2,
-      "attacks" : 1,
-      "short" : "Melee",
-      "rules" : [
-        {
-          "id" : "reach",
-          "x" : 1
-        },
-        "rending"
-      ]
-    },
-    "demon_great" : {
-      "name" : "Daemonforged Greatblade",
-      "ap" : 4,
-      "attacks" : 1,
-      "short" : "Melee",
-      "rules" : [
-        "rending"
-      ]
     }
   },
   "rules" : {
@@ -1052,7 +880,7 @@
       "inputs" : [
         "x"
       ],
-      "description" : "When this unit is activated, choose up to X friendly _Infantry_ units within 6\". Those units may re-roll failed Strength tests of 9+ until the end of the round.",
+      "description" : "When this unit is activated, choose up to X friendly _Infantry_ units within 6\". This unit and those units may re-roll failed Strength tests of 9+ until the end of the round.",
       "points" : [
         "rule.x",
         {
@@ -1083,8 +911,8 @@
       ],
       "name" : "Eye of the Gods",
       "phase" : "activation",
-      "description" : "Use when a unit destroys an enemy unit. That unit gains +1 Strength until the end of the battle. A unit may only be affected by this once.",
-      "flavor" : "The forces of chaos commit massacres to appease their dark gods.",
+      "description" : "Use when a friendly unit destroys an enemy unit. That unit gains +1 Strength until the end of the battle. A unit may only be affected by this strategy once.",
+      "flavor" : "The forces of chaos commit countless bloodbaths to appease their dark gods, in hope of gainign boons and turning into a demon lord.",
       "cost" : 2
     },
     {
@@ -1122,18 +950,18 @@
   "powers" : {
     "bolt" : {
       "name" : "Arcane Bolt",
-      "description" : "Target enemy model within 12\" takes 1 hit with AP 1. This power may be cast unlimited times.",
-      "flavor" : "The enemy is hit by an arcane missile, piercing trough armor and shields alike.",
+      "description" : "Target enemy model within 12\" takes 3 hits with AP 1. This power may be cast unlimited times.",
+      "flavor" : "The enemy is hit by an unseen force, ripping trough armor and shields alike.",
       "charge" : 6,
       "subfactions" : [
         "change"
       ]
     },
-    "flame" : {
-      "name" : "Living Flame",
+    "soul_fire" : {
+      "name" : "Soul Fire",
       "description" : "Target enemy unit within 12\" takes 6 hits. This power may be cast only three times per game.",
-      "flavor" : "The Sorcerer burns the souls of his enemies.",
-      "charge" : 8,
+      "flavor" : "The Sorcerer sings an unholy chant, incinerating the souls of his enemies.",
+      "charge" : 7,
       "subfactions" : [
         "change"
       ]
@@ -1141,7 +969,7 @@
     "fury" : {
       "name" : "Furious Assault",
       "description" : "Target friendly unit within 12\" gains the Furious special rule until the end of the turn. This power may be cast only once per turn.",
-      "flavor" : "The priest chants a sinister prayer, blessing his fellow Warriors with great rage.",
+      "flavor" : "The priest chants a sinister prayer, blessing his fellow Warriors with a great rage.",
       "charge" : 7,
       "subfactions" : [
         "wrath"
@@ -1151,7 +979,7 @@
       "name" : "Rotten Fortitude",
       "description" : "Target friendly unit within 12\" gains Tough (+1) until the end of the turn. This power may be cast only three times per game.",
       "flavor" : "The sorcerer spreads a joyous disease onto his fellow warriors, making them numb to harm.",
-      "charge" : 8,
+      "charge" : 7,
       "subfactions" : [
         "pestilence"
       ]
