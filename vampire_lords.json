@@ -42,7 +42,7 @@
               ],
               "withWeapon" : [
                 {
-                  "id" : "great_lance",
+                  "id" : "lance",
                   "count" : 3
                 }
               ]
@@ -159,7 +159,7 @@
               ],
               "withWeapon" : [
                 {
-                  "id" : "great_lance",
+                  "id" : "lance",
                   "count" : 2
                 },
                 {
@@ -959,7 +959,7 @@
           "reflexes" : 4,
           "weapons" : [
             {
-              "id" : "great_lance",
+              "id" : "lance",
               "count" : 3
             },
             {
@@ -981,7 +981,7 @@
           "reflexes" : 4,
           "weapons" : [
             {
-              "id" : "great_lance",
+              "id" : "lance",
               "count" : 3
             },
             {
@@ -1206,7 +1206,7 @@
       "attacks" : 1,
       "short" : "Melee",
       "rules" : [
-        "spectral"
+        "lethal"
       ]
     },
     "spectral_lance" : {
@@ -1219,7 +1219,7 @@
           "id" : "reach",
           "x" : 1
         },
-        "spectral",
+        "lethal",
         "lance"
       ]
     },
@@ -1229,20 +1229,7 @@
       "attacks" : 1,
       "short" : "Melee",
       "rules" : [
-        "spectral"
-      ]
-    },
-    "great_lance" : {
-      "name" : "Great-lance",
-      "attacks" : 1,
-      "ap" : 4,
-      "short" : "Melee",
-      "rules" : [
-        {
-          "id" : "reach",
-          "x" : 1
-        },
-        "lance"
+        "lethal"
       ]
     },
     "bone_bow" : {
@@ -1320,7 +1307,7 @@
       "attacks" : 0,
       "rules" : [
         {
-          "id" : "icon_x",
+          "id" : "icon",
           "x" : "Infantry"
         }
       ],

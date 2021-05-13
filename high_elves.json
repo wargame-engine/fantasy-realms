@@ -83,16 +83,8 @@
           "max" : 1
         }
       ],
-      "keywords" : [
-        "Hero",
-        "Infantry"
-      ],
       "subfactions" : [
-        "none",
-        "magic",
-        "polis",
-        "temple",
-        "beasts"
+        "none"
       ]
     },
     "elf_archmage" : {
@@ -134,11 +126,7 @@
         "Infantry"
       ],
       "subfactions" : [
-        "none",
-        "magic",
-        "polis",
-        "temple",
-        "beasts"
+        "none"
       ]
     },
     "elf_phoenix_pal" : {
@@ -179,16 +167,11 @@
         }
       ],
       "keywords" : [
-        "Hero",
+        "Wizard",
         "Infantry"
       ],
-      "options" : [],
       "subfactions" : [
-        "none",
-        "magic",
-        "polis",
-        "temple",
-        "beasts"
+        "none"
       ]
     },
     "elf_soldier" : {
@@ -207,34 +190,16 @@
           "defense" : 5,
           "reflexes" : 5,
           "weapons" : [
-            {
-              "id" : "handweapon",
-              "count" : 2
-            },
-            "shield"
-          ],
-          "rules" : [
-            {
-              "id" : "dispel",
-              "x" : 1
-            }
+            "shield",
+            "handweapon"
           ],
           "options" : [
             {
-              "replaceWeapon" : [
+              "addRule" : [
                 {
-                  "id" : "handweapon",
-                  "count" : 2
-                },
-                "shield"
-              ],
-              "withWeapon" : [
-                [
-                  {
-                    "id" : "exalted_blade",
-                    "count" : 2
-                  }
-                ]
+                  "id" : "dispel",
+                  "x" : 1
+                }
               ]
             }
           ]
@@ -252,43 +217,44 @@
           "weapons" : [
             "handweapon",
             "shield"
-          ],
-          "options" : [
-            {
-              "replaceWeapon" : [
-                "handweapon",
-                "shield"
-              ],
-              "withWeapon" : [
-                [
-                  {
-                    "id" : "long_bow"
-                  },
-                  {
-                    "id" : "dagger"
-                  }
-                ],
-                [
-                  {
-                    "id" : "halberd"
-                  }
-                ],
-                [
-                  {
-                    "id" : "spear"
-                  },
-                  "shield"
-                ]
-              ],
-              "modelLimit" : "all"
-            }
           ]
         }
       ],
-      "keywords" : [
-        "Infantry"
-      ],
       "options" : [
+        {
+          "replaceWeapon" : [
+            "handweapon",
+            "shield"
+          ],
+          "withWeapon" : [
+            [
+              {
+                "id" : "long_bow"
+              },
+              {
+                "id" : "dagger"
+              }
+            ],
+            [
+              {
+                "id" : "halberd"
+              }
+            ],
+            [
+              {
+                "id" : "spear"
+              },
+              "shield"
+            ],
+            [
+              {
+                "id" : "handweapon",
+                "count" : 2
+              }
+            ]
+          ],
+          "modelLimit" : "all"
+        },
         {
           "addRule" : [
             "banner"
@@ -303,11 +269,7 @@
         }
       ],
       "subfactions" : [
-        "none",
-        "magic",
-        "polis",
-        "temple",
-        "beasts"
+        "none"
       ]
     },
     "elf_vanguard" : {
@@ -326,23 +288,23 @@
           "weapons" : [
             "long_bow",
             {
-              "id" : "handweapon",
-              "count" : 3
-            },
-            {
               "id" : "hooves_and_teeth",
               "count" : 2
-            }
-          ],
-          "rules" : [
-            "outflank",
-            {
-              "id" : "dispel",
-              "x" : 1
-            }
+            },
+            "spear"
           ],
           "min" : 1,
-          "max" : 1
+          "max" : 1,
+          "options" : [
+            {
+              "addRule" : [
+                {
+                  "id" : "dispel",
+                  "x" : 1
+                }
+              ]
+            }
+          ]
         },
         {
           "name" : "Vanguard",
@@ -360,7 +322,6 @@
               "count" : 2
             }
           ],
-          "options" : [],
           "rules" : [
             "outflank"
           ],
@@ -386,11 +347,7 @@
         }
       ],
       "subfactions" : [
-        "none",
-        "magic",
-        "polis",
-        "temple",
-        "beasts"
+        "none"
       ]
     },
     "elf_knight" : {
@@ -411,36 +368,31 @@
               "id" : "hooves_and_teeth",
               "count" : 2
             },
-            {
-              "id" : "lance",
-              "count" : 2
-            },
-            "shield"
-          ],
-          "rules" : [
-            {
-              "id" : "dispel",
-              "x" : 1
-            }
+            "shield",
+            "lance"
           ],
           "min" : 1,
           "max" : 1,
           "options" : [
             {
               "replaceWeapon" : [
-                {
-                  "id" : "lance",
-                  "count" : 2
-                },
-                "shield"
+                "lance"
               ],
               "withWeapon" : [
                 [
                   {
                     "id" : "exalted_blade",
-                    "count" : 4
+                    "count" : 2
                   }
                 ]
+              ]
+            },
+            {
+              "addRule" : [
+                {
+                  "id" : "dispel",
+                  "x" : 1
+                }
               ]
             }
           ]
@@ -483,11 +435,7 @@
         }
       ],
       "subfactions" : [
-        "none",
-        "magic",
-        "polis",
-        "temple",
-        "beasts"
+        "none"
       ]
     },
     "elf_guard" : {
@@ -505,17 +453,18 @@
           "reflexes" : 5,
           "weapons" : [
             "long_bow",
-            {
-              "id" : "spear",
-              "count" : 2
-            }
+            "spear"
           ],
           "min" : 1,
           "max" : 1,
-          "rules" : [
+          "options" : [
             {
-              "id" : "dispel",
-              "x" : 1
+              "addRule" : [
+                {
+                  "id" : "dispel",
+                  "x" : 1
+                }
+              ]
             }
           ]
         },
@@ -535,12 +484,9 @@
           "max" : 19
         }
       ],
-      "keywords" : [
-        "Infantry"
-      ],
       "options" : [
         {
-          "addRule" : "shield",
+          "addWeapon" : "shield",
           "modelLimit" : "all"
         },
         {
@@ -560,11 +506,7 @@
         "fearless"
       ],
       "subfactions" : [
-        "none",
-        "magic",
-        "polis",
-        "temple",
-        "beasts"
+        "none"
       ]
     },
     "elf_protectors" : {
@@ -582,21 +524,22 @@
           "reflexes" : 5,
           "weapons" : [
             {
-              "id" : "great_maul",
-              "count" : 3
-            }
-          ],
-          "rules" : [
-            "fearless",
-            "agile",
-            "cloak",
-            {
-              "id" : "dispel",
-              "x" : 1
+              "id" : "great",
+              "count" : 2
             }
           ],
           "min" : 1,
-          "max" : 1
+          "max" : 1,
+          "options" : [
+            {
+              "addRule" : [
+                {
+                  "id" : "dispel",
+                  "x" : 1
+                }
+              ]
+            }
+          ]
         },
         {
           "name" : "Protector",
@@ -608,21 +551,18 @@
           "reflexes" : 5,
           "weapons" : [
             {
-              "id" : "great_maul",
+              "id" : "great",
               "count" : 2
             }
-          ],
-          "rules" : [
-            "fearless",
-            "agile",
-            "cloak"
           ],
           "min" : 4,
           "max" : 19
         }
       ],
-      "keywords" : [
-        "Infantry"
+      "rules" : [
+        "fearless",
+        "agile",
+        "cloak"
       ],
       "options" : [
         {
@@ -639,11 +579,7 @@
         }
       ],
       "subfactions" : [
-        "none",
-        "magic",
-        "polis",
-        "temple",
-        "beasts"
+        "none"
       ]
     },
     "elf_rangers" : {
@@ -665,17 +601,18 @@
             "long_bow",
             "handweapon"
           ],
-          "rules" : [
-            "skirmishers",
-            "ambush",
-            {
-              "id" : "dispel",
-              "x" : 1
-            }
-          ],
           "min" : 1,
           "max" : 1,
-          "options" : []
+          "options" : [
+            {
+              "addRule" : [
+                {
+                  "id" : "dispel",
+                  "x" : 1
+                }
+              ]
+            }
+          ]
         },
         {
           "name" : "Ranger",
@@ -689,30 +626,21 @@
             "long_bow",
             "handweapon"
           ],
-          "rules" : [
-            "skirmishers",
-            "ambush"
-          ],
           "min" : 4,
           "max" : 19
         }
       ],
-      "keywords" : [
-        "Infantry"
+      "rules" : [
+        "skirmishers",
+        "ambush"
       ],
       "subfactions" : [
-        "none",
-        "magic",
-        "polis",
-        "temple",
-        "beasts"
+        "none"
       ]
     },
     "elf_phoenix-tem" : {
       "name" : "Phoenix Templars",
       "description" : "Protectors of the Temple of the Last Flame, blessed by the ancient Pheonix.",
-      "min" : 1,
-      "max" : 3,
       "category" : "elite",
       "models" : [
         {
@@ -726,17 +654,21 @@
           "weapons" : [
             {
               "id" : "halberd",
-              "count" : 3
-            }
-          ],
-          "rules" : [
-            {
-              "id" : "dispel",
-              "x" : 1
+              "count" : 2
             }
           ],
           "min" : 1,
-          "max" : 1
+          "max" : 1,
+          "options" : [
+            {
+              "addRule" : [
+                {
+                  "id" : "dispel",
+                  "x" : 1
+                }
+              ]
+            }
+          ]
         },
         {
           "name" : "Templar",
@@ -752,13 +684,9 @@
               "count" : 2
             }
           ],
-          "rules" : [],
           "min" : 2,
           "max" : 11
         }
-      ],
-      "keywords" : [
-        "Infantry"
       ],
       "options" : [
         {
@@ -784,11 +712,7 @@
         "phoenix_armor"
       ],
       "subfactions" : [
-        "none",
-        "magic",
-        "polis",
-        "temple",
-        "beasts"
+        "none"
       ]
     },
     "elf_dragoon" : {
@@ -807,16 +731,12 @@
           "weapons" : [
             {
               "id" : "lance",
-              "count" : 3
+              "count" : 2
             },
             {
               "id" : "hooves_and_teeth",
               "count" : 2
             }
-          ],
-          "rules" : [
-            "runes",
-            "fearless"
           ],
           "min" : 1,
           "max" : 1
@@ -839,13 +759,13 @@
               "count" : 2
             }
           ],
-          "rules" : [
-            "runes",
-            "fearless"
-          ],
           "min" : 2,
           "max" : 11
         }
+      ],
+      "rules" : [
+        "runes",
+        "fearless"
       ],
       "keywords" : [
         "Cavalry"
@@ -865,11 +785,7 @@
         }
       ],
       "subfactions" : [
-        "none",
-        "magic",
-        "polis",
-        "temple",
-        "beasts"
+        "none"
       ]
     },
     "great_eagle" : {
@@ -961,17 +877,11 @@
                 ],
                 [
                   {
-                    "id" : "great_maul"
+                    "id" : "great"
                   },
                   "handweapon"
                 ]
               ]
-            },
-            {
-              "addRule" : [
-                "banner"
-              ],
-              "modelLimit" : 1
             },
             {
               "replaceWeapon" : [
@@ -986,6 +896,11 @@
                   "count" : 2
                 }
               ]
+            },
+            {
+              "addRule" : [
+                "banner"
+              ]
             }
           ]
         }
@@ -995,13 +910,8 @@
         "Warmachine",
         "Cavalry"
       ],
-      "options" : [],
       "subfactions" : [
-        "none",
-        "magic",
-        "polis",
-        "temple",
-        "beasts"
+        "none"
       ]
     },
     "elf_skycutter" : {
@@ -1030,8 +940,7 @@
             "fly"
           ],
           "min" : 1,
-          "max" : 1,
-          "options" : []
+          "max" : 1
         }
       ],
       "keywords" : [
@@ -1039,13 +948,8 @@
         "Warmachine",
         "Cavalry"
       ],
-      "options" : [],
       "subfactions" : [
-        "none",
-        "magic",
-        "polis",
-        "temple",
-        "beasts"
+        "none"
       ]
     },
     "elf_ballista" : {
@@ -1055,20 +959,6 @@
       "max" : 3,
       "category" : "rare",
       "models" : [
-        {
-          "name" : "Crew",
-          "movement" : 7,
-          "courage" : 5,
-          "shoot" : 4,
-          "fight" : 6,
-          "defense" : 5,
-          "reflexes" : 5,
-          "weapons" : [
-            "handweapon"
-          ],
-          "min" : 2,
-          "max" : 2
-        },
         {
           "name" : "Great Ballista",
           "movement" : 7,
@@ -1088,159 +978,28 @@
           ],
           "min" : 1,
           "max" : 1
+        },
+        {
+          "name" : "Crew",
+          "movement" : 7,
+          "courage" : 5,
+          "shoot" : 4,
+          "fight" : 6,
+          "defense" : 5,
+          "reflexes" : 5,
+          "weapons" : [
+            "handweapon"
+          ],
+          "min" : 2,
+          "max" : 2
         }
       ],
       "keywords" : [
         "Infantry",
         "Warmachine"
       ],
-      "options" : [],
       "subfactions" : [
-        "none",
-        "magic",
-        "polis",
-        "temple",
-        "beasts"
-      ]
-    },
-    "elf_phoenix" : {
-      "name" : "Flameheart Phoenix",
-      "description" : "Reborn from the ashes of the last flame, this magical being is a deadly creature.",
-      "min" : 1,
-      "max" : 1,
-      "category" : "test",
-      "models" : [
-        {
-          "name" : "Flameheart Phoenix",
-          "movement" : 11,
-          "courage" : 6,
-          "shoot" : 6,
-          "fight" : 6,
-          "defense" : 10,
-          "reflexes" : 5,
-          "weapons" : [
-            "bite",
-            "flame"
-          ],
-          "rules" : [
-            "fear",
-            "fly",
-            {
-              "id" : "impact",
-              "x" : 3
-            },
-            {
-              "id" : "wounds",
-              "x" : 3
-            }
-          ],
-          "min" : 1,
-          "max" : 1
-        }
-      ],
-      "keywords" : [
-        "Beast",
-        "Monster"
-      ],
-      "subfactions" : [
-        "none",
-        "magic",
-        "polis",
-        "temple",
-        "beasts"
-      ]
-    },
-    "elf_frost" : {
-      "name" : "Frostfire Phoenix",
-      "description" : "Like a tear frozen in ice, this deadly creature swoops down on its enemies.",
-      "min" : 1,
-      "max" : 1,
-      "category" : "test",
-      "models" : [
-        {
-          "name" : "Frostfire Phoenix",
-          "movement" : 11,
-          "courage" : 6,
-          "shoot" : 6,
-          "fight" : 6,
-          "defense" : 12,
-          "reflexes" : 5,
-          "weapons" : [
-            "bite"
-          ],
-          "rules" : [
-            "fear",
-            "fly",
-            {
-              "id" : "impact",
-              "x" : 3
-            },
-            {
-              "id" : "wounds",
-              "x" : 3
-            },
-            "distract"
-          ],
-          "min" : 1,
-          "max" : 1
-        }
-      ],
-      "keywords" : [
-        "Beast",
-        "Monster"
-      ],
-      "subfactions" : [
-        "none",
-        "magic",
-        "polis",
-        "temple",
-        "beasts"
-      ]
-    },
-    "elf_dragon" : {
-      "name" : "Moon Dragon",
-      "description" : "A beatiful and ancient beast, ready to unleash flames upon its enemies.",
-      "min" : 1,
-      "max" : 1,
-      "category" : "test",
-      "models" : [
-        {
-          "name" : "Moon Dragon",
-          "movement" : 10,
-          "courage" : 5,
-          "shoot" : 6,
-          "fight" : 6,
-          "defense" : 12,
-          "reflexes" : 5,
-          "weapons" : [
-            "flames",
-            {
-              "id" : "claws",
-              "count" : 2
-            }
-          ],
-          "rules" : [
-            "fear",
-            "fly",
-            "damage_table_monster",
-            {
-              "id" : "impact",
-              "x" : 3
-            }
-          ],
-          "min" : 1,
-          "max" : 1
-        }
-      ],
-      "keywords" : [
-        "Monster"
-      ],
-      "subfactions" : [
-        "none",
-        "magic",
-        "polis",
-        "temple",
-        "beasts"
+        "none"
       ]
     },
     "elf_sisters" : {
@@ -1257,11 +1016,8 @@
           "defense" : 5,
           "reflexes" : 5,
           "weapons" : [
-            {
-              "id" : "spectral_bow",
-              "count" : 2
-            },
-            "handweapon"
+            "handweapon",
+            "spectral_bow"
           ],
           "min" : 1,
           "max" : 1,
@@ -1299,13 +1055,13 @@
         "beasts"
       ]
     },
-    "tidelord" : {
-      "name" : "Tide Lord",
+    "coast_lord" : {
+      "name" : "Coastal Lord",
       "description" : "A veteran of the civil war, protecting the coasts of the elven nation.",
       "category" : "hero",
       "models" : [
         {
-          "name" : "Tide Lord",
+          "name" : "Coastal Lord",
           "movement" : 7,
           "courage" : 6,
           "shoot" : 5,
@@ -1326,10 +1082,6 @@
             },
             {
               "id" : "sentinel_tactics",
-              "x" : 1
-            },
-            {
-              "id" : "dispel",
               "x" : 1
             }
           ],
@@ -1366,6 +1118,14 @@
                   "x" : 2
                 }
               ]
+            },
+            {
+              "addRule" : [
+                {
+                  "id" : "dispel",
+                  "x" : 1
+                }
+              ]
             }
           ],
           "min" : 1,
@@ -1377,11 +1137,7 @@
         "Infantry"
       ],
       "subfactions" : [
-        "none",
-        "magic",
-        "polis",
-        "temple",
-        "beasts"
+        "none"
       ]
     },
     "elf_archmage_mount" : {
@@ -1449,7 +1205,7 @@
           "reflexes" : 6,
           "weapons" : [
             {
-              "id" : "great_maul",
+              "id" : "great",
               "count" : 2
             }
           ],
@@ -1470,16 +1226,11 @@
         }
       ],
       "keywords" : [
-        "Hero",
         "Wizard",
         "Infantry"
       ],
       "subfactions" : [
-        "none",
-        "magic",
-        "polis",
-        "temple",
-        "beasts"
+        "none"
       ]
     },
     "mage_blades" : {
@@ -1497,19 +1248,34 @@
           "reflexes" : 5,
           "weapons" : [
             {
-              "id" : "great_maul",
-              "count" : 3
+              "id" : "great",
+              "count" : 2
             }
           ],
           "rules" : [
             {
               "id" : "dispel",
               "x" : 1
-            },
-            "cloak"
+            }
           ],
           "min" : 1,
-          "max" : 1
+          "max" : 1,
+          "options" : [
+            {
+              "replaceRule" : [
+                {
+                  "id" : "dispel",
+                  "x" : 1
+                }
+              ],
+              "withRule" : [
+                {
+                  "id" : "magic",
+                  "x" : 1
+                }
+              ]
+            }
+          ]
         },
         {
           "name" : "Mageblade",
@@ -1521,20 +1287,16 @@
           "reflexes" : 5,
           "weapons" : [
             {
-              "id" : "great_maul",
+              "id" : "great",
               "count" : 2
             }
-          ],
-          "rules" : [
-            "cloak"
           ],
           "min" : 2,
           "max" : 11
         }
       ],
-      "keywords" : [
-        "Hero",
-        "Infantry"
+      "rules" : [
+        "cloak"
       ],
       "options" : [
         {
@@ -1551,11 +1313,7 @@
         }
       ],
       "subfactions" : [
-        "none",
-        "magic",
-        "polis",
-        "temple",
-        "beasts"
+        "none"
       ]
     },
     "elf_dragoon_knight" : {
@@ -1640,11 +1398,7 @@
         "Cavalry"
       ],
       "subfactions" : [
-        "none",
-        "magic",
-        "polis",
-        "temple",
-        "beasts"
+        "none"
       ]
     }
   },
@@ -1693,34 +1447,12 @@
         }
       ]
     },
-    "flame" : {
-      "name" : "Flaming Breath",
-      "ap" : 1,
-      "attacks" : 3,
-      "short" : "Melee",
-      "rules" : [
-        "bomb",
-        "flame"
-      ]
-    },
-    "flames" : {
-      "name" : "Dragon Breath",
-      "ap" : 1,
-      "attacks" : 4,
-      "rules" : [
-        "flame"
-      ],
-      "short" : 6
-    },
     "spectral_bow" : {
       "name" : "Spectral Bow",
       "ap" : 3,
       "attacks" : 1,
       "rules" : [
-        {
-          "id" : "deadly",
-          "x" : 2
-        }
+        "lethal"
       ],
       "short" : 9,
       "medium" : 18
@@ -1731,10 +1463,7 @@
       "attacks" : 1,
       "short" : "Melee",
       "rules" : [
-        {
-          "id" : "deadly",
-          "x" : 2
-        }
+        "lethal"
       ]
     },
     "exalted_blade" : {

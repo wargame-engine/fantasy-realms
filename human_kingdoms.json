@@ -80,7 +80,7 @@
           "reflexes" : 6,
           "weapons" : [
             {
-              "id" : "maul",
+              "id" : "heavy",
               "count" : 3
             },
             "shield"
@@ -100,18 +100,18 @@
             {
               "replaceWeapon" : [
                 {
-                  "id" : "maul",
+                  "id" : "heavy",
                   "count" : 3
                 },
                 "shield"
               ],
               "withWeapon" : [
                 {
-                  "id" : "great_maul",
+                  "id" : "great",
                   "count" : 3
                 },
                 {
-                  "id" : "maul",
+                  "id" : "heavy",
                   "count" : 4
                 }
               ]
@@ -165,7 +165,7 @@
           ],
           "options" : [
             {
-              "addWeapon" : "handgun"
+              "addWeapon" : "light_flintlock"
             },
             {
               "addRule" : "shield"
@@ -202,36 +202,14 @@
           "courage" : 4,
           "shoot" : 4,
           "fight" : 5,
-          "defense" : 6,
+          "defense" : 5,
           "reflexes" : 5,
           "weapons" : [
-            {
-              "id" : "handweapon",
-              "count" : 2
-            }
+            "handweapon",
+            "shield"
           ],
           "min" : 1,
-          "max" : 1,
-          "options" : [
-            {
-              "replaceWeapon" : [
-                {
-                  "id" : "handweapon",
-                  "count" : 2
-                }
-              ],
-              "withWeapon" : [
-                {
-                  "id" : "spear",
-                  "count" : 2
-                },
-                [
-                  "halberd",
-                  "handweapon"
-                ]
-              ]
-            }
-          ]
+          "max" : 1
         },
         {
           "name" : "Man-at-arms",
@@ -239,35 +217,38 @@
           "courage" : 4,
           "shoot" : 4,
           "fight" : 5,
-          "defense" : 6,
+          "defense" : 5,
           "reflexes" : 5,
           "weapons" : [
-            "handweapon"
+            "handweapon",
+            "shield"
           ],
           "min" : 9,
-          "max" : 29,
-          "options" : [
-            {
-              "replaceWeapon" : [
-                "handweapon"
-              ],
-              "withWeapon" : [
-                {
-                  "id" : "spear"
-                },
-                {
-                  "id" : "halberd"
-                }
-              ],
-              "modelLimit" : "all"
-            }
-          ]
+          "max" : 29
         }
       ],
       "keywords" : [
         "Infantry"
       ],
       "options" : [
+        {
+          "replaceWeapon" : [
+            "handweapon",
+            "shield"
+          ],
+          "withWeapon" : [
+            [
+              "spear",
+              "shield"
+            ],
+            [
+              "halberd",
+              "buckler"
+            ],
+            "great"
+          ],
+          "modelLimit" : "all"
+        },
         {
           "addRule" : [
             "banner"
@@ -378,25 +359,22 @@
           "defense" : 5,
           "reflexes" : 5,
           "weapons" : [
-            "handgun",
-            {
-              "id" : "dagger",
-              "count" : 2
-            }
+            "light_handgun",
+            "dagger"
           ],
           "min" : 1,
           "max" : 1,
           "options" : [
             {
               "replaceWeapon" : [
-                "handgun"
+                "light_handgun"
               ],
               "withWeapon" : [
                 {
                   "id" : "sniper_rifle"
                 },
                 {
-                  "id" : "handgun",
+                  "id" : "light_handgun",
                   "count" : 2
                 }
               ]
@@ -412,7 +390,7 @@
           "defense" : 5,
           "reflexes" : 5,
           "weapons" : [
-            "handgun",
+            "light_handgun",
             "dagger"
           ],
           "min" : 9,
@@ -423,6 +401,14 @@
         "Infantry"
       ],
       "options" : [
+        {
+          "replaceWeapon" : [
+            "light_handgun"
+          ],
+          "withWeapon" : [
+            "rifle"
+          ]
+        },
         {
           "addRule" : [
             "banner"
@@ -459,36 +445,22 @@
           "reflexes" : 5,
           "weapons" : [
             {
-              "id" : "handgun",
-              "count" : 2
-            },
-            {
               "id" : "hooves_and_teeth",
               "count" : 2
             },
-            {
-              "id" : "handweapon",
-              "count" : 2
-            }
+            "handweapon",
+            "light_handgun"
           ],
           "min" : 1,
           "max" : 1,
           "options" : [
             {
               "replaceWeapon" : [
-                {
-                  "id" : "handgun",
-                  "count" : 2
-                }
+                "light_handgun"
               ],
               "withWeapon" : [
-                {
-                  "id" : "grenade_launcher"
-                },
-                {
-                  "id" : "rifle",
-                  "count" : 2
-                }
+                "rifle",
+                "grenade_launcher"
               ]
             }
           ]
@@ -503,40 +475,28 @@
           "fight" : 5,
           "weapons" : [
             {
-              "id" : "handgun",
-              "count" : 2
-            },
-            {
               "id" : "hooves_and_teeth",
               "count" : 2
             },
-            "handweapon"
+            "handweapon",
+            "light_handgun"
           ],
           "min" : 2,
-          "max" : 11,
-          "options" : [
-            {
-              "replaceWeapon" : [
-                {
-                  "id" : "handgun",
-                  "count" : 2
-                }
-              ],
-              "withWeapon" : [
-                {
-                  "id" : "rifle",
-                  "count" : 2
-                }
-              ],
-              "modelLimit" : "all"
-            }
-          ]
+          "max" : 11
         }
       ],
       "keywords" : [
         "Cavalry"
       ],
       "options" : [
+        {
+          "replaceWeapon" : [
+            "light_handgun"
+          ],
+          "withWeapon" : [
+            "rifle"
+          ]
+        },
         {
           "addRule" : [
             "musician"
@@ -561,74 +521,44 @@
           "name" : "Champion",
           "movement" : 6,
           "courage" : 5,
-          "shoot" : 4,
+          "shoot" : 5,
           "fight" : 6,
           "defense" : 6,
           "reflexes" : 5,
           "weapons" : [
-            {
-              "id" : "great_maul",
-              "count" : 3
-            }
+            "great"
           ],
           "min" : 1,
-          "max" : 1,
-          "options" : [
-            {
-              "replaceWeapon" : [
-                {
-                  "id" : "great_maul",
-                  "count" : 3
-                }
-              ],
-              "withWeapon" : [
-                {
-                  "id" : "zweihänder",
-                  "count" : 3
-                }
-              ]
-            }
-          ]
+          "max" : 1
         },
         {
           "name" : "Honor Guard",
           "movement" : 6,
           "courage" : 5,
-          "shoot" : 4,
+          "shoot" : 5,
           "fight" : 6,
           "defense" : 6,
           "reflexes" : 6,
           "weapons" : [
-            {
-              "id" : "great_maul",
-              "count" : 2
-            }
+            "great"
           ],
           "min" : 4,
-          "max" : 19,
-          "options" : [
-            {
-              "replaceWeapon" : [
-                {
-                  "id" : "great_maul",
-                  "count" : 2
-                }
-              ],
-              "withWeapon" : [
-                {
-                  "id" : "zweihänder",
-                  "count" : 2
-                }
-              ],
-              "modelLimit" : "all"
-            }
-          ]
+          "max" : 19
         }
       ],
       "keywords" : [
         "Infantry"
       ],
       "options" : [
+        {
+          "replaceWeapon" : [
+            "great"
+          ],
+          "withWeapon" : [
+            "zweihänder"
+          ],
+          "modelLimit" : "all"
+        },
         {
           "addRule" : [
             "banner"
@@ -659,19 +589,17 @@
           "name" : "Knight Champion",
           "movement" : 8,
           "courage" : 5,
-          "shoot" : 4,
+          "shoot" : 5,
           "fight" : 6,
-          "defense" : 7,
+          "defense" : 6,
           "reflexes" : 6,
           "weapons" : [
             {
-              "id" : "lance",
-              "count" : 2
-            },
-            {
               "id" : "hooves_and_teeth",
               "count" : 2
-            }
+            },
+            "lance",
+            "shield"
           ],
           "min" : 1,
           "max" : 1
@@ -680,16 +608,17 @@
           "name" : "Realm Knight",
           "movement" : 8,
           "courage" : 5,
-          "shoot" : 4,
+          "shoot" : 5,
           "fight" : 6,
-          "defense" : 7,
+          "defense" : 6,
           "reflexes" : 6,
           "weapons" : [
             {
               "id" : "hooves_and_teeth",
               "count" : 2
             },
-            "lance"
+            "lance",
+            "shield"
           ],
           "min" : 2,
           "max" : 11
@@ -731,34 +660,16 @@
           "courage" : 6,
           "shoot" : 4,
           "fight" : 6,
-          "defense" : 7,
+          "defense" : 6,
           "reflexes" : 6,
           "weapons" : [
-            {
-              "id" : "maul",
-              "count" : 2
-            },
             {
               "id" : "hooves_and_teeth",
               "count" : 2
             },
-            "handweapon"
-          ],
-          "options" : [
-            {
-              "replaceWeapon" : [
-                {
-                  "id" : "maul",
-                  "count" : 2
-                }
-              ],
-              "withWeapon" : [
-                {
-                  "id" : "lance",
-                  "count" : 2
-                }
-              ]
-            }
+            "handweapon",
+            "heavy",
+            "shield"
           ],
           "min" : 1,
           "max" : 1
@@ -769,30 +680,16 @@
           "courage" : 5,
           "shoot" : 4,
           "fight" : 6,
-          "defense" : 7,
+          "defense" : 6,
           "reflexes" : 6,
           "weapons" : [
             {
               "id" : "hooves_and_teeth",
               "count" : 2
             },
-            "maul",
-            "handweapon"
-          ],
-          "options" : [
-            {
-              "replaceWeapon" : [
-                {
-                  "id" : "maul"
-                }
-              ],
-              "withWeapon" : [
-                {
-                  "id" : "lance"
-                }
-              ],
-              "modelLimit" : "all"
-            }
+            "heavy",
+            "handweapon",
+            "shield"
           ],
           "min" : 2,
           "max" : 11
@@ -802,6 +699,15 @@
         "Cavalry"
       ],
       "options" : [
+        {
+          "replaceWeapon" : [
+            "heavy"
+          ],
+          "withWeapon" : [
+            "lance"
+          ],
+          "modelLimit" : "all"
+        },
         {
           "addRule" : [
             "banner"
@@ -951,10 +857,7 @@
           "reflexes" : 5,
           "weapons" : [
             "bow",
-            {
-              "id" : "handweapon",
-              "count" : 2
-            }
+            "handweapon"
           ],
           "min" : 1,
           "max" : 1
@@ -1028,7 +931,7 @@
     },
     "sniper_rifle" : {
       "name" : "Sniper Rifle",
-      "ap" : 5,
+      "ap" : 2,
       "attacks" : 1,
       "short" : 12,
       "medium" : 24,
@@ -1044,7 +947,7 @@
     },
     "grenade_launcher" : {
       "name" : "Grenade Launcher",
-      "ap" : 5,
+      "ap" : 3,
       "attacks" : 1,
       "short" : 6,
       "medium" : 12,
@@ -1052,15 +955,9 @@
         {
           "id" : "blast",
           "x" : 2
-        }
+        },
+        "lethal"
       ]
-    },
-    "rifle" : {
-      "name" : "Rifle",
-      "ap" : 4,
-      "attacks" : 1,
-      "short" : 9,
-      "medium" : 18
     },
     "cannon" : {
       "name" : "Cannon",
