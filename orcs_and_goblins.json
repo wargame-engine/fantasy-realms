@@ -1360,7 +1360,28 @@
     }
   },
   "powers" : {},
-  "strategies" : [],
+  "strategies" : [
+    {
+      "name" : "Here We Go!",
+      "phase" : "activation",
+      "description" : "Use when a unit declares a Charge action. That unit gets +3\" of Movement for that action.",
+      "cost" : 1
+    },
+    {
+      "name" : "Smash Them",
+      "phase" : "activation",
+      "flavor" : "It's about time we got to fighting.",
+      "description" : "Use when an _Infantry_ unit performs a Fight action. Hit rolls of 1 or 2 cause an additional hit.",
+      "cost" : 1
+    },
+    {
+      "name" : "Tough Ones",
+      "phase" : "activation",
+      "flavor" : "These Orcs are some of the toughest you've ever seen.",
+      "description" : "Use before taking Save rolls for an _Infantry_ unit. It gets +1 Save.",
+      "cost" : 2
+    }
+  ],
   "relics" : [
     {
       "name" : "Bloody Trophy",

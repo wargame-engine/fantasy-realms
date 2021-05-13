@@ -901,5 +901,28 @@
         }
       ]
     }
+  },
+  "strategies" : {
+    "thick_skinned" : {
+      "phase" : "activation",
+      "name" : "Thick Skinned",
+      "description" : "Use before taking Save rolls for an Infantry unit. It gets +1 Save.",
+      "flavor" : "Ogres are said to have layers of hardened skin that are impossible to penetrate.",
+      "cost" : 2
+    },
+    "brutality" : {
+      "phase" : "activation",
+      "name" : "Brutality",
+      "description" : "Use before fighting with a _Infantry_ unit. Hit rolls of 1 or 2 gain +1 AP.",
+      "flavor" : "With their superior strength and savagery these ogres can easily crush any opposition.",
+      "cost" : 1
+    },
+    "bull_rush" : {
+      "name" : "Bull Rush",
+      "phase" : "activation",
+      "description" : "Use when a unit declares a Charge action. That unit gets +3\" of Movement for that action.",
+      "cost" : 1,
+      "flavor" : "Rushing head first into danger without a care for losses on both sides."
+    }
   }
 }

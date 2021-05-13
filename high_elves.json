@@ -1618,15 +1618,22 @@
       "name" : "Valor",
       "phase" : "activation",
       "description" : "Use before activating a unit. That unit may immediately remove up to 2 Shock.",
-      "flavor" : "There is no glory to be found in fleeing.",
-      "cost" : 1,
-      "subfactions" : [
-        "none",
-        "magic",
-        "polis",
-        "temple",
-        "beasts"
-      ]
+      "flavor" : "Standing in the face of near extinction has battle hardened even the youngest of their kind.",
+      "cost" : 1
+    },
+    {
+      "name" : "Veterancy",
+      "phase" : "activation",
+      "description" : "Use when taking a Initiative test. That unit is treated as having +2 Initiative for that test.",
+      "flavor" : "With countless battles experienced, these soldiers are trained to react to any situation.",
+      "cost" : 1
+    },
+    {
+      "name" : "Moonfire Arrows",
+      "phase" : "activation",
+      "description" : "Use before an _Infantry_ unit shoots. Hit rolls of 1 or 2 gain +1 AP.",
+      "flavor" : "Weaved out of the light of the stars and enchanted by ancient secrets, these arrows are a potent weapon to slay even the greatest beasts.",
+      "cost" : 1
     }
   ],
   "relics" : []
