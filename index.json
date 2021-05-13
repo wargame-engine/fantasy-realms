@@ -27,6 +27,23 @@
       "alliance" : "order",
       "description" : "The Eternal Protectors are sworn to protect those who cannot protect themselves and to ward off evil. They wear tough armor and wield mighty weapons to strike down those are unjust."
     },
+    "ogre_mercenaries" : {
+      "name" : "Ogre Mercenaries",
+      "id" : "ogre_mercenaries",
+      "url" : "ogre_mercenaries.json",
+      "color" : "#954535",
+      "version" : "0.1",
+      "alliance" : "destruction",
+      "description": "Large-bodied mercenaries with huge appetites for gold and destruction"
+    },
+    "greatogre_raiders" : {"name": "Greatogre Raiders",
+    "id": "greatogre_raiders",
+    "url": "greatogre_raiders.json",
+    "color": "#4f9ae0",
+    "version": "0.1",
+    "description": "The greatest of ogre tribes, who only interact with their lessers when they need something - food, coin, or just a challenge!",
+    "alliance": "destruction"
+    },
     "vampire_lords" : {
       "name" : "Vampire Lords",
       "id" : "vampire_lords",
