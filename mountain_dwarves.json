@@ -1142,24 +1142,6 @@
       "short" : 12,
       "medium" : 24
     },
-    "harpoon_rifle" : {
-      "name" : "Harpoon-Rifle",
-      "profiles" : [
-        {
-          "name" : "Melee",
-          "attacks" : 1,
-          "ap" : 3,
-          "short" : "Melee"
-        },
-        {
-          "name" : "Ranged",
-          "ap" : 6,
-          "attacks" : 1,
-          "short" : 12,
-          "medium" : 24
-        }
-      ]
-    },
     "net_launcher" : {
       "name" : "Net Launcher",
       "attacks" : 1,
@@ -1291,21 +1273,6 @@
     }
   },
   "rules" : {
-    "banner" : {
-      "name" : "Banner",
-      "description" : "This unit may re-roll a single failed Courage test when removing Shock.",
-      "points" : 5
-    },
-    "musician" : {
-      "name" : "Musician",
-      "description" : "This unit may re-roll a single failed Initiative test when sprinting.",
-      "points" : 5
-    },
-    "buckler" : {
-      "name" : "Buckler",
-      "description" : "This model has +1 Save against melee attacks.",
-      "points" : 1
-    },
     "brew" : {
       "name" : "Dwarven Brew",
       "description" : "Once per game when you activate this unit, you may heal D3 wounds that have been allocated to this unit."
@@ -1337,23 +1304,6 @@
   "powers" : {},
   "strategies" : [
     {
-      "phase" : "activation",
-      "name" : "Knack",
-      "flavor" : "All dwarves have a natural expertise in fixing (and breaking) machinery and weapons.",
-      "description" : "Use when a Warmachine unit is activated. That unit may repair one critical damage caused by a penetrating hit.",
-      "cost" : 2,
-      "subfactions" : [
-        "none"
-      ]
-    },
-    {
-      "phase" : "activation",
-      "name" : "Napalm Ammunition",
-      "description" : "Use when a Dwarf Infantry unit that contains a Crank Rifle or Volley Gun fires. It is treated as having Shock(+2) and ignores cover bonuses for that action.",
-      "flavor" : "Using experimental rounds to incinerate their foes to ashes and make the survivors flee.",
-      "cost" : 2
-    },
-    {
       "name" : "Stubborn",
       "phase" : "activation",
       "description" : "Use before activating a unit. That unit may immediately remove up to 2 Shock.",
@@ -1364,22 +1314,21 @@
       ]
     },
     {
-      "name" : "Spider Mines",
-      "phase" : "activation",
-      "description" : "Use when a Dwarf Infantry unit is charged. The charging unit takes 4 automatic hits with AP0.",
-      "flavor" : "Novice Engineers build these to learn the intricate mechanism of greater warmachines.",
-      "cost" : 1,
-      "subfactions" : []
-    },
-    {
       "name" : "Shieldwall",
       "phase" : "activation",
-      "description" : "Use when a Dwarf Infanty unit with Shields is charged or targeted by a shooting attack. That unit gains +1 Save until end of turn.",
-      "flavor" : "Standing strong against all odds.",
+      "description" : "Use when a _Dwarf Infanty_ unit with Shields is charged or targeted by a shooting attack. That unit gains +1 Save until end of turn.",
+      "flavor" : "Forming a shieldwall, dwarven formations are able to hold objectives against all odds.",
       "cost" : 2,
       "subfactions" : [
         "none"
       ]
+    },
+    {
+      "phase" : "activation",
+      "name" : "Final Stand",
+      "description" : "Use when a unit is destroyed. If that unit has not activated yet this round, it may perform one shoot or fight action before it is destroyed.",
+      "flavor" : "A Dwarf fights to the last breath.",
+      "cost" : 1
     }
   ],
   "relics" : [

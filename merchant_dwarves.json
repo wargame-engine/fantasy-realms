@@ -720,21 +720,21 @@
     {
       "phase" : "activation",
       "name" : "Knack",
-      "flavor" : "All dwarves have a natural expertise in fixing (and breaking) machinery and weapons.",
-      "description" : "Use when a Warmachine unit is activated. That unit may repair one critical damage caused by a penetrating hit.",
+      "flavor" : "All dwarves have a natural expertise in fixing complex machinery.",
+      "description" : "Use when a Vehicle or Warmachine unit is activated. That unit may repair one critical damage caused by a penetrating hit.",
       "cost" : 2
     },
     {
       "name" : "Stubborn",
       "phase" : "activation",
       "description" : "Use before activating a unit. That unit may immediately remove up to 2 Shock.",
-      "flavor" : "Standing steadfast like their mountain halls.",
+      "flavor" : "Not letting such nuisance as sure defeat break them has made them withstand so many onslaughts.",
       "cost" : 1
     },
     {
       "name" : "Spider Mines",
       "phase" : "activation",
-      "description" : "Use when a Dwarf Infantry unit is charged. The charging unit takes 4 automatic hits with AP0.",
+      "description" : "Use when a _Dwarf Infantry_ unit is charged. The charging unit takes 4 automatic hits with AP0.",
       "flavor" : "Novice Engineers build these to learn the intricate mechanism of greater warmachines.",
       "cost" : 1
     }

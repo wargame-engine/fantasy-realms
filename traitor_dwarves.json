@@ -375,20 +375,6 @@
   },
   "strategies" : [
     {
-      "name" : "Stubborn",
-      "phase" : "activation",
-      "description" : "Use before activating a unit. That unit may immediately remove up to 2 Shock.",
-      "flavor" : "Standing steadfast like their mountain halls.",
-      "cost" : 1,
-      "subfactions" : [
-        "none",
-        "melee_focus",
-        "magic_focus",
-        "black_focus",
-        "scout_focus"
-      ]
-    },
-    {
       "subfactions" : [
         "none",
         "change_traitors"
@@ -396,266 +382,31 @@
       "name" : "Blazing Runes",
       "phase" : "activation",
       "description" : "Use before an Infantry unit fights. Hit rolls of 1 or 2 gain +1 AP.",
-      "flavor" : "Chaos Warriors wield enchanted weapons, covered in unholy runes and burning with dark magic.",
+      "flavor" : "Traitor Dwarves wield enchanted weapons, covered in unholy runes and burning with dark magic.",
+      "cost" : 1
+    },
+    {
+      "subfactions" : [
+        "none",
+        "wrath",
+        "excess",
+        "pestilence",
+        "change",
+        "deception"
+      ],
+      "name" : "Unnatural Strength",
+      "phase" : "activation",
+      "description" : "Use when a friendly unit destroys an enemy unit. That unit gains +1 Strength until the end of the battle. A unit may only be affected by this strategy once.",
+      "flavor" : "Traitor Dwarves consume the souls of foes they’ve slain to gain ever greater strength.",
+      "cost" : 2
+    },
+    {
+      "phase" : "activation",
+      "name" : "Daemonforged Bullets",
+      "flavor" : "Possessed bullets, forged in Hellfire and inscribed with cursed runes, are highly unstable but very effective.",
+      "description" : "Use before an Infantry unit shoots. Add +6\" to the short and long range bands of all weapons.",
       "cost" : 1
     }
   ],
-  "relics" : [],
-  "hidden_units" : [
-    {
-      "name" : "Forgefire Golem",
-      "description" : "",
-      "min" : 1,
-      "max" : 3,
-      "category" : "test",
-      "models" : [
-        {
-          "name" : "Forgefire Golem",
-          "movement" : 4,
-          "fight" : 6,
-          "shoot" : 5,
-          "defense" : 10,
-          "courage" : 6,
-          "reflexes" : 4,
-          "weapons" : [
-            {
-              "id" : "runic_fist",
-              "count" : 2
-            },
-            {
-              "id" : "cannon"
-            }
-          ],
-          "rules" : [
-            "damage_table_warmachine"
-          ],
-          "min" : 1,
-          "max" : 1
-        }
-      ],
-      "keywords" : [
-        "Warmachine",
-        "Infantry"
-      ],
-      "options" : [
-        {
-          "replaceWeapon" : [
-            {
-              "id" : "runic_fist",
-              "count" : 2
-            }
-          ],
-          "withWeapon" : [
-            {
-              "id" : "runic_great",
-              "count" : 3
-            }
-          ]
-        }
-      ],
-      "subfactions" : [
-        "none",
-        "melee_focus",
-        "magic_focus",
-        "black_focus",
-        "scout_focus"
-      ]
-    },
-    {
-      "name" : "Runecarved Elemental",
-      "description" : "",
-      "min" : 1,
-      "max" : 3,
-      "category" : "test",
-      "models" : [
-        {
-          "name" : "Runecarved Elemental",
-          "movement" : 4,
-          "fight" : 7,
-          "shoot" : 4,
-          "defense" : 12,
-          "courage" : 6,
-          "reflexes" : 4,
-          "weapons" : [
-            {
-              "id" : "runic_fist",
-              "count" : 2
-            },
-            {
-              "id" : "runic_fist",
-              "count" : 2
-            },
-            "throw_rock"
-          ],
-          "rules" : [
-            "damage_table_monster",
-            "strider"
-          ],
-          "options" : [
-            {
-              "replaceWeapon" : [
-                {
-                  "id" : "runic_fist",
-                  "count" : 2
-                }
-              ],
-              "withWeapon" : [
-                {
-                  "id" : "runic_great",
-                  "count" : 3
-                }
-              ],
-              "modelLimit" : 2
-            }
-          ],
-          "min" : 1,
-          "max" : 1
-        }
-      ],
-      "keywords" : [
-        "Monster",
-        "Infantry"
-      ],
-      "subfactions" : [
-        "none",
-        "melee_focus",
-        "magic_focus",
-        "black_focus",
-        "scout_focus"
-      ]
-    },
-    {
-      "name" : "Cannon",
-      "description" : "",
-      "min" : 1,
-      "max" : 3,
-      "category" : "test",
-      "models" : [
-        {
-          "name" : "Cannon",
-          "movement" : 5,
-          "shoot" : 5,
-          "defense" : 8,
-          "rules" : [
-            {
-              "id" : "team",
-              "x" : 3
-            },
-            "damage_table_warmachine"
-          ],
-          "weapons" : [
-            "cannon"
-          ],
-          "min" : 1,
-          "max" : 1,
-          "reflexes" : 0,
-          "fight" : 0,
-          "courage" : 0
-        },
-        {
-          "name" : "Dwarven Crew",
-          "movement" : 5,
-          "courage" : 5,
-          "shoot" : 5,
-          "fight" : 5,
-          "defense" : 6,
-          "reflexes" : 5,
-          "weapons" : [
-            "dwarf_dagger"
-          ],
-          "min" : 3,
-          "max" : 3,
-          "rules" : []
-        }
-      ],
-      "keywords" : [
-        "Warmachine",
-        "Artillery"
-      ]
-    },
-    {
-      "name" : "Apprentice",
-      "description" : "",
-      "category" : "hero",
-      "models" : [
-        {
-          "name" : "Acolyte",
-          "movement" : 5,
-          "courage" : 6,
-          "shoot" : 4,
-          "fight" : 5,
-          "defense" : 6,
-          "reflexes" : 6,
-          "rules" : [
-            {
-              "id" : "wounds",
-              "x" : 2
-            },
-            "support",
-            {
-              "id" : "magic",
-              "x" : 1
-            }
-          ],
-          "weapons" : [
-            "blazing_staff",
-            "fire_amulet"
-          ],
-          "min" : 1,
-          "max" : 1
-        }
-      ],
-      "keywords" : [
-        "Hero",
-        "Wizard",
-        "Infantry"
-      ]
-    },
-    {
-      "name" : "Pyre Lord",
-      "description" : "",
-      "category" : "hero",
-      "models" : [
-        {
-          "name" : "Pyre Lord",
-          "movement" : 5,
-          "courage" : 6,
-          "shoot" : 5,
-          "fight" : 5,
-          "defense" : 7,
-          "reflexes" : 6,
-          "rules" : [
-            {
-              "id" : "wounds",
-              "x" : 3
-            },
-            "soul_gem"
-          ],
-          "weapons" : [
-            "demon_rifle",
-            {
-              "id" : "demon_blade",
-              "count" : 4
-            }
-          ],
-          "min" : 1,
-          "max" : 1,
-          "options" : [
-            {
-              "replaceWeapon" : [
-                "demon_rifle"
-              ],
-              "withWeapon" : [
-                "flamethrower"
-              ]
-            }
-          ]
-        }
-      ],
-      "keywords" : [
-        "Hero",
-        "Infantry"
-      ]
-    }
-  ]
+  "relics" : []
 }

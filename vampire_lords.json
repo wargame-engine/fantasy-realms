@@ -1384,5 +1384,45 @@
       ]
     }
   },
-  "strategies" : []
+  "strategies" : {
+    "fearless" : {
+      "name" : "Fearless",
+      "phase" : "activation",
+      "description" : "Use before activating a unit. That unit may immediately remove up to 2 Shock.",
+      "flavor" : "With no morale to break, the undead hordes march forward even in the face of death.",
+      "cost" : 1,
+      "subfactions" : [
+        "blood",
+        "bone",
+        "dread",
+        "none"
+      ]
+    },
+    "dread" : {
+      "name" : "Eternal Dread",
+      "phase" : "activation",
+      "description" : "Use when a unit within 6\" takes a Courage test. That unit suffers -1 Courage.",
+      "flavor" : "Half-rotten and surrounded by a miasma of death and decay, striking fear into even the heart of angels.",
+      "cost" : 1,
+      "subfactions" : [
+        "blood",
+        "bone",
+        "dread",
+        "none"
+      ]
+    },
+    "living_dead" : {
+      "name" : "Living Dead",
+      "phase" : "activation",
+      "description" : "Use when a unit declares a Charge action. That unit gets +3\" of Movement for that action.",
+      "flavor" : "Corpses raised from their grave, preying on their once beloved with uncanny ferocity.",
+      "cost" : 1,
+      "subfactions" : [
+        "blood",
+        "bone",
+        "dread",
+        "none"
+      ]
+    }
+  }
 }
