@@ -41,7 +41,7 @@
                   "count" : 4
                 },
                 {
-                  "id" : "great_maul",
+                  "id" : "great",
                   "count" : 4
                 }
               ]
@@ -112,8 +112,8 @@
           "defense" : 7,
           "reflexes" : 5,
           "weapons" : [
-            "maul",
-            "great_maul"
+            "heavy",
+            "great"
           ],
           "options" : [
             {
@@ -215,16 +215,16 @@
           ],
           "withWeapon" : [
             {
-              "id" : "maul",
+              "id" : "heavy",
               "count" : 3
             },
             {
-              "id" : "great_maul",
+              "id" : "great",
               "count" : 2
             },
             [
               {
-                "id" : "maul",
+                "id" : "heavy",
                 "count" : 2
               },
               "shield"
@@ -260,7 +260,7 @@
           "defense" : 4,
           "reflexes" : 4,
           "weapons" : [
-            "barbarian_spear"
+            "polearm"
           ],
           "min" : 1,
           "max" : 1
@@ -274,7 +274,7 @@
           "defense" : 4,
           "reflexes" : 4,
           "weapons" : [
-            "barbarian_spear"
+            "polearm"
           ],
           "min" : 9,
           "max" : 29,
@@ -292,7 +292,7 @@
       "options" : [
         {
           "replaceWeapon" : [
-            "barbarian_spear"
+            "polearm"
           ],
           "withWeapon" : [
             {
@@ -341,7 +341,7 @@
               "count" : 2
             },
             {
-              "id" : "heavy_lance",
+              "id" : "lance",
               "count" : 2
             },
             "shield"
@@ -355,7 +355,7 @@
             {
               "replaceWeapon" : [
                 {
-                  "id" : "heavy_lance",
+                  "id" : "lance",
                   "count" : 2
                 }
               ],
@@ -378,7 +378,7 @@
           "reflexes" : 5,
           "weapons" : [
             {
-              "id" : "heavy_lance",
+              "id" : "lance",
               "count" : 2
             },
             {
@@ -406,13 +406,13 @@
         {
           "replaceWeapon" : [
             {
-              "id" : "heavy_lance",
+              "id" : "lance",
               "count" : 2
             }
           ],
           "withWeapon" : [
             {
-              "id" : "great_maul",
+              "id" : "great",
               "count" : 2
             }
           ],
@@ -501,7 +501,7 @@
           ],
           "withWeapon" : [
             [
-              "barbarian_spear",
+              "polearm",
               "barbarian_javelin"
             ]
           ],
@@ -522,7 +522,7 @@
       ]
     },
     "icon_bearer" : {
-      "name" : "Exalted Hero with Accursed Icon",
+      "name" : "Traitor Lord with Accursed Icon",
       "description" : "An chosen icon bearer of the dark gods.",
       "min" : 1,
       "max" : 1,
@@ -538,7 +538,7 @@
           "reflexes" : 6,
           "weapons" : [
             {
-              "id" : "maul",
+              "id" : "heavy",
               "count" : 4
             }
           ],
@@ -549,7 +549,7 @@
             },
             "support",
             {
-              "id" : "icon_x",
+              "id" : "icon",
               "x" : "Infantry"
             }
           ],
@@ -606,11 +606,11 @@
                   "count" : 4
                 },
                 {
-                  "id" : "great_maul",
+                  "id" : "great",
                   "count" : 4
                 },
                 {
-                  "id" : "heavy_lance",
+                  "id" : "lance",
                   "count" : 4
                 }
               ]
@@ -728,7 +728,7 @@
           "reflexes" : 4,
           "weapons" : [
             {
-              "id" : "maul",
+              "id" : "heavy",
               "count" : 2
             }
           ],
@@ -751,7 +751,7 @@
           "reflexes" : 4,
           "weapons" : [
             {
-              "id" : "maul",
+              "id" : "heavy",
               "count" : 2
             }
           ],
@@ -771,13 +771,13 @@
         {
           "replaceWeapon" : [
             {
-              "id" : "maul",
+              "id" : "heavy",
               "count" : 2
             }
           ],
           "withWeapon" : [
             [
-              "maul",
+              "heavy",
               "shield"
             ],
             [
@@ -793,7 +793,7 @@
         {
           "replaceWeapon" : [
             {
-              "id" : "maul",
+              "id" : "heavy",
               "count" : 2
             }
           ],
@@ -832,18 +832,6 @@
     }
   },
   "weapons" : {
-    "barbarian_spear" : {
-      "name" : "Barbarian Spear",
-      "ap" : 2,
-      "attacks" : 1,
-      "short" : "Melee",
-      "rules" : [
-        {
-          "id" : "reach",
-          "x" : 1
-        }
-      ]
-    },
     "hooves_and_teeth" : {
       "name" : "Hooves and Teeth",
       "attacks" : 1,
@@ -859,19 +847,6 @@
       ],
       "short" : 6,
       "medium" : 12
-    },
-    "heavy_lance" : {
-      "name" : "Heavy Lance",
-      "ap" : 2,
-      "attacks" : 1,
-      "short" : "Melee",
-      "rules" : [
-        {
-          "id" : "reach",
-          "x" : 1
-        },
-        "lance"
-      ]
     }
   },
   "rules" : {

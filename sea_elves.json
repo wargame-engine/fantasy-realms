@@ -22,7 +22,7 @@
           "reflexes" : 6,
           "weapons" : [
             {
-              "id" : "tide_great",
+              "id" : "great",
               "count" : 4
             },
             {
@@ -34,14 +34,14 @@
             {
               "replaceWeapon" : [
                 {
-                  "id" : "tide_great",
+                  "id" : "great",
                   "count" : 4
                 }
               ],
               "withWeapon" : [
                 {
-                  "id" : "tide_halberd",
-                  "count" : 3
+                  "id" : "halberd",
+                  "count" : 4
                 }
               ]
             },
@@ -85,7 +85,7 @@
           "reflexes" : 6,
           "weapons" : [
             {
-              "id" : "tide_great",
+              "id" : "great",
               "count" : 4
             },
             {
@@ -105,14 +105,14 @@
             {
               "replaceWeapon" : [
                 {
-                  "id" : "tide_great",
+                  "id" : "great",
                   "count" : 4
                 }
               ],
               "withWeapon" : [
                 {
-                  "id" : "tide_halberd",
-                  "count" : 3
+                  "id" : "halberd",
+                  "count" : 4
                 }
               ]
             },
@@ -295,7 +295,7 @@
               "count" : 6
             },
             {
-              "id" : "great_maul",
+              "id" : "great",
               "count" : 2
             }
           ],
@@ -391,117 +391,13 @@
         "Infantry"
       ]
     },
-    "guard" : {
-      "name" : "Guardians on Bloodreef Eels",
-      "description" : "Enslaved by ancient spell and clad in cursed armor.",
-      "category" : "elite",
-      "models" : [
-        {
-          "name" : "Prince on Bloodreef Eel",
-          "movement" : 10,
-          "courage" : 4,
-          "shoot" : 5,
-          "fight" : 6,
-          "defense" : 7,
-          "reflexes" : 4,
-          "weapons" : [
-            {
-              "id" : "tide_sabre",
-              "count" : 3
-            },
-            {
-              "id" : "bite",
-              "count" : 2
-            }
-          ],
-          "options" : [
-            {
-              "replaceWeapon" : [
-                {
-                  "id" : "tide_sabre",
-                  "count" : 3
-                }
-              ],
-              "withWeapon" : [
-                [
-                  "shock_spear",
-                  "tide_sabre"
-                ]
-              ]
-            }
-          ],
-          "rules" : [
-            "hover"
-          ],
-          "min" : 1,
-          "max" : 1
-        },
-        {
-          "name" : "Guardian on Bloodreef Eel",
-          "movement" : 10,
-          "courage" : 4,
-          "shoot" : 4,
-          "fight" : 6,
-          "defense" : 7,
-          "reflexes" : 4,
-          "weapons" : [
-            {
-              "id" : "tide_sabre",
-              "count" : 2
-            },
-            {
-              "id" : "bite",
-              "count" : 2
-            }
-          ],
-          "options" : [
-            {
-              "replaceWeapon" : [
-                {
-                  "id" : "tide_sabre",
-                  "count" : 2
-                }
-              ],
-              "withWeapon" : [
-                {
-                  "id" : "shock_spear"
-                }
-              ],
-              "modelLimit" : "all"
-            }
-          ],
-          "rules" : [
-            "hover"
-          ],
-          "min" : 2,
-          "max" : 11
-        }
-      ],
-      "keywords" : [
-        "Cavalry"
-      ],
-      "options" : [
-        {
-          "addRule" : [
-            "banner"
-          ],
-          "modelLimit" : 1
-        },
-        {
-          "addRule" : [
-            "musician"
-          ],
-          "modelLimit" : 1
-        }
-      ]
-    },
     "thralls" : {
       "name" : "Depthbound Thralls",
       "description" : "Enslaved by ritualistic magic, these thralls march ever forward.",
       "category" : "core",
       "models" : [
         {
-          "name" : "Soulbound",
+          "name" : "Soulbound Thrall",
           "movement" : 8,
           "courage" : 4,
           "shoot" : 5,
@@ -509,43 +405,10 @@
           "defense" : 5,
           "reflexes" : 4,
           "weapons" : [
-            {
-              "id" : "tide_great",
-              "count" : 2
-            }
+            "great"
           ],
           "min" : 1,
-          "max" : 1,
-          "options" : [
-            {
-              "replaceWeapon" : [
-                {
-                  "id" : "tide_great",
-                  "count" : 2
-                }
-              ],
-              "withWeapon" : [
-                [
-                  {
-                    "id" : "coral_bow"
-                  },
-                  {
-                    "id" : "handweapon",
-                    "count" : 3
-                  }
-                ],
-                [
-                  {
-                    "id" : "riptide_bow"
-                  },
-                  {
-                    "id" : "dagger",
-                    "count" : 3
-                  }
-                ]
-              ]
-            }
-          ]
+          "max" : 1
         },
         {
           "name" : "Depthbound Thrall",
@@ -556,38 +419,32 @@
           "defense" : 5,
           "reflexes" : 4,
           "weapons" : [
-            "tide_great"
+            "great"
           ],
-          "options" : [
-            {
-              "replaceWeapon" : [
-                "tide_great"
-              ],
-              "withWeapon" : [
-                [
-                  "coral_bow",
-                  {
-                    "id" : "handweapon",
-                    "count" : 2
-                  }
-                ],
-                [
-                  "riptide_bow",
-                  "dagger"
-                ]
-              ],
-              "modelLimit" : "all"
-            }
-          ],
-          "rules" : [],
           "min" : 4,
           "max" : 19
         }
       ],
-      "keywords" : [
-        "Infantry"
-      ],
       "options" : [
+        {
+          "replaceWeapon" : [
+            "great"
+          ],
+          "withWeapon" : [
+            [
+              "coral_bow",
+              {
+                "id" : "handweapon",
+                "count" : 2
+              }
+            ],
+            [
+              "riptide_bow",
+              "dagger"
+            ]
+          ],
+          "modelLimit" : "all"
+        },
         {
           "addRule" : [
             "banner"
@@ -655,6 +512,92 @@
         "Cavalry"
       ]
     },
+    "guard" : {
+      "name" : "Guardians on Bloodreef Eels",
+      "description" : "Enslaved by ancient spell and clad in cursed armor.",
+      "category" : "elite",
+      "models" : [
+        {
+          "name" : "Prince on Bloodreef Eel",
+          "movement" : 10,
+          "courage" : 4,
+          "shoot" : 5,
+          "fight" : 6,
+          "defense" : 7,
+          "reflexes" : 4,
+          "weapons" : [
+            {
+              "id" : "heavy",
+              "count" : 2
+            },
+            {
+              "id" : "bite",
+              "count" : 2
+            }
+          ],
+          "rules" : [
+            "hover"
+          ],
+          "min" : 1,
+          "max" : 1
+        },
+        {
+          "name" : "Guardian on Bloodreef Eel",
+          "movement" : 10,
+          "courage" : 4,
+          "shoot" : 4,
+          "fight" : 6,
+          "defense" : 7,
+          "reflexes" : 4,
+          "weapons" : [
+            {
+              "id" : "heavy",
+              "count" : 2
+            },
+            {
+              "id" : "bite",
+              "count" : 2
+            }
+          ],
+          "rules" : [
+            "hover"
+          ],
+          "min" : 2,
+          "max" : 11
+        }
+      ],
+      "keywords" : [
+        "Cavalry"
+      ],
+      "options" : [
+        {
+          "replaceWeapon" : [
+            {
+              "id" : "heavy",
+              "count" : 2
+            }
+          ],
+          "withWeapon" : [
+            {
+              "id" : "shock_spear"
+            }
+          ],
+          "modelLimit" : "all"
+        },
+        {
+          "addRule" : [
+            "banner"
+          ],
+          "modelLimit" : 1
+        },
+        {
+          "addRule" : [
+            "musician"
+          ],
+          "modelLimit" : 1
+        }
+      ]
+    },
     "hybrids" : {
       "name" : "Depthbound Hybrids",
       "description" : "",
@@ -679,7 +622,6 @@
             },
             "shield"
           ],
-          "rules" : [],
           "min" : 5,
           "max" : 15
         }
@@ -698,7 +640,7 @@
           ],
           "withWeapon" : [
             {
-              "id" : "great_maul",
+              "id" : "great",
               "count" : 2
             }
           ],
@@ -790,10 +732,7 @@
       "ap" : 1,
       "attacks" : 1,
       "rules" : [
-        {
-          "id" : "deadly",
-          "x" : 2
-        }
+        "lethal"
       ],
       "short" : 12,
       "medium" : 24
@@ -815,32 +754,6 @@
         }
       ]
     },
-    "net_and_spear" : {
-      "name" : "Spear and Net",
-      "attacks" : 1,
-      "short" : "Melee",
-      "ap" : 1,
-      "rules" : [
-        "net",
-        "cumbersome",
-        {
-          "id" : "reach",
-          "x" : 1
-        }
-      ]
-    },
-    "tide_halberd" : {
-      "name" : "Tidestone Halberd",
-      "ap" : 6,
-      "attacks" : 1,
-      "short" : "Melee",
-      "rules" : [
-        {
-          "id" : "reach",
-          "x" : 1
-        }
-      ]
-    },
     "shock_spear" : {
       "name" : "Shock Spear",
       "ap" : 2,
@@ -856,18 +769,6 @@
           "x" : 2
         }
       ]
-    },
-    "tide_great" : {
-      "name" : "Tidestone Greatsword",
-      "ap" : 3,
-      "attacks" : 1,
-      "short" : "Melee"
-    },
-    "tide_sabre" : {
-      "name" : "Tidestone Sabre",
-      "ap" : 2,
-      "attacks" : 1,
-      "short" : "Melee"
     },
     "swarm" : {
       "name" : "Bladefish Swarm",

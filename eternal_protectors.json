@@ -191,12 +191,12 @@
           ],
           "withWeapon" : [
             {
-              "id" : "maul",
+              "id" : "heavy",
               "count" : 3
             },
             [
               {
-                "id" : "maul",
+                "id" : "heavy",
                 "count" : 2
               },
               "shield"
@@ -220,7 +220,7 @@
             "shield"
           ],
           "withWeapon" : {
-            "id" : "great_maul",
+            "id" : "great",
             "count" : 2
           },
           "modelLimit" : "1/5"
@@ -382,7 +382,7 @@
           "withWeapon" : [
             [
               {
-                "id" : "maul",
+                "id" : "heavy",
                 "count" : 2
               },
               "enchanted_shield"
@@ -433,7 +433,7 @@
           "reflexes" : 6,
           "weapons" : [
             {
-              "id" : "great_maul",
+              "id" : "great",
               "count" : 3
             }
           ]
@@ -450,7 +450,7 @@
           "reflexes" : 6,
           "weapons" : [
             {
-              "id" : "great_maul",
+              "id" : "great",
               "count" : 3
             }
           ]
@@ -460,7 +460,7 @@
         {
           "replaceWeapon" : [
             {
-              "id" : "great_maul",
+              "id" : "great",
               "count" : 3
             }
           ],
@@ -532,14 +532,14 @@
               "withWeapon" : [
                 [
                   {
-                    "id" : "maul",
+                    "id" : "heavy",
                     "count" : 3
                   },
                   "starfall_banner"
                 ],
                 [
                   {
-                    "id" : "maul",
+                    "id" : "heavy",
                     "count" : 2
                   },
                   "icon_staff"
@@ -552,7 +552,7 @@
                 ],
                 [
                   {
-                    "id" : "maul",
+                    "id" : "heavy",
                     "count" : 3
                   },
                   "grim_staff"
@@ -687,13 +687,13 @@
               "withWeapon" : [
                 [
                   {
-                    "id" : "great_maul",
+                    "id" : "great",
                     "count" : 3
                   }
                 ],
                 [
                   {
-                    "id" : "maul",
+                    "id" : "heavy",
                     "count" : 4
                   }
                 ],
@@ -703,7 +703,7 @@
                     "count" : 2
                   },
                   {
-                    "id" : "maul",
+                    "id" : "heavy",
                     "count" : 2
                   }
                 ],
@@ -854,7 +854,7 @@
             ],
             [
               {
-                "id" : "great_maul",
+                "id" : "great",
                 "count" : 3
               }
             ]
@@ -1227,7 +1227,7 @@
       "short" : 12,
       "medium" : 24,
       "rules" : [
-        "stormstrike"
+        "lethal"
       ]
     },
     "storm_crossbow" : {
@@ -1237,7 +1237,7 @@
       "short" : 9,
       "medium" : 18,
       "rules" : [
-        "stormstrike"
+        "lethal"
       ]
     },
     "heavy_bow" : {
@@ -1253,7 +1253,7 @@
       "ap" : 5,
       "short" : "Melee",
       "rules" : [
-        "stormstrike"
+        "lethal"
       ]
     },
     "storm_glaive" : {
@@ -1262,7 +1262,7 @@
       "ap" : 4,
       "short" : "Melee",
       "rules" : [
-        "stormstrike",
+        "lethal",
         {
           "id" : "reach",
           "x" : 1
@@ -1281,7 +1281,7 @@
       "ap" : 3,
       "short" : "Melee",
       "rules" : [
-        "stormstrike"
+        "lethal"
       ]
     },
     "starfall_banner" : {
@@ -1398,7 +1398,7 @@
       "attacks" : 1,
       "short" : "Melee",
       "rules" : [
-        "stormstrike"
+        "lethal"
       ]
     },
     "throw_maul" : {
@@ -1445,7 +1445,7 @@
           "short" : 9,
           "rules" : [
             "assault",
-            "stormstrike"
+            "lethal"
           ]
         }
       ]
@@ -1457,7 +1457,7 @@
       "medium" : 12,
       "short" : 6,
       "rules" : [
-        "stormstrike"
+        "lethal"
       ]
     }
   },
@@ -1466,19 +1466,6 @@
       "name" : "Lightning Field",
       "description" : "Roll a D10 each time this unit is hit by a Shooting attack. On each roll of a 1 or 2 an attack is prevented.",
       "points" : 2
-    },
-    "stormstrike_x" : {
-      "name" : "Stormstrike",
-      "description" : "Hit rolls of 1 or 2 from this weapon cause 2 hits instead of 1. Additional hits must be assigned to the same model.",
-      "points" : [
-        "weapon.attacks",
-        {
-          "multiply" : "rule.x"
-        }
-      ],
-      "inputs" : [
-        "x"
-      ]
     },
     "eternal_tactics" : {
       "name" : "Eternal Tactics",
@@ -1497,16 +1484,6 @@
       "name" : "Soul Lantern",
       "description" : "Once per round, a friendly _Infantry_ unit within 6\" gains +1 AP on all Melee weapons.",
       "points" : 10
-    },
-    "stormstrike" : {
-      "name" : "Stormstrike",
-      "description" : "Hit rolls of 1 or 2 from this weapon cause 2 hits instead of 1. Additional hits must be assigned to the same model.",
-      "points" : [
-        "weapon.attacks",
-        {
-          "multiply" : 2
-        }
-      ]
     },
     "herald" : {
       "name" : "Heralding Call",

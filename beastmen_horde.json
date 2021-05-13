@@ -90,7 +90,7 @@
           "reflexes" : 8,
           "weapons" : [
             {
-              "id" : "great_maul",
+              "id" : "great",
               "count" : 6
             }
           ],
@@ -287,37 +287,7 @@
           "reflexes" : 4,
           "weapons" : [
             "short_bow",
-            {
-              "id" : "dagger",
-              "count" : 2
-            }
-          ],
-          "options" : [
-            {
-              "replaceWeapon" : [
-                "short_bow",
-                {
-                  "id" : "dagger",
-                  "count" : 2
-                }
-              ],
-              "withWeapon" : [
-                [
-                  {
-                    "id" : "spear",
-                    "count" : 2
-                  },
-                  "shield"
-                ],
-                [
-                  {
-                    "id" : "handweapon",
-                    "count" : 2
-                  },
-                  "shield"
-                ]
-              ]
-            }
+            "dagger"
           ],
           "min" : 1,
           "max" : 1
@@ -335,29 +305,27 @@
             "dagger"
           ],
           "min" : 9,
-          "max" : 29,
-          "options" : [
-            {
-              "replaceWeapon" : [
-                "short_bow",
-                "dagger"
-              ],
-              "withWeapon" : [
-                [
-                  "spear",
-                  "shield"
-                ],
-                [
-                  "handweapon",
-                  "shield"
-                ]
-              ],
-              "modelLimit" : "all"
-            }
-          ]
+          "max" : 29
         }
       ],
       "options" : [
+        {
+          "replaceWeapon" : [
+            "short_bow",
+            "dagger"
+          ],
+          "withWeapon" : [
+            [
+              "spear",
+              "shield"
+            ],
+            [
+              "handweapon",
+              "shield"
+            ]
+          ],
+          "modelLimit" : "all"
+        },
         {
           "addRule" : [
             "banner"
@@ -398,26 +366,7 @@
           "weapons" : [
             {
               "id" : "handweapon",
-              "count" : 3
-            }
-          ],
-          "options" : [
-            {
-              "replaceWeapon" : [
-                {
-                  "id" : "handweapon",
-                  "count" : 3
-                }
-              ],
-              "withWeapon" : [
-                [
-                  {
-                    "id" : "handweapon",
-                    "count" : 2
-                  },
-                  "shield"
-                ]
-              ]
+              "count" : 2
             }
           ],
           "min" : 1,
@@ -438,27 +387,25 @@
             }
           ],
           "min" : 9,
-          "max" : 29,
-          "options" : [
-            {
-              "replaceWeapon" : [
-                {
-                  "id" : "handweapon",
-                  "count" : 2
-                }
-              ],
-              "withWeapon" : [
-                [
-                  "handweapon",
-                  "shield"
-                ]
-              ],
-              "modelLimit" : "all"
-            }
-          ]
+          "max" : 29
         }
       ],
       "options" : [
+        {
+          "replaceWeapon" : [
+            {
+              "id" : "handweapon",
+              "count" : 2
+            }
+          ],
+          "withWeapon" : [
+            [
+              "handweapon",
+              "shield"
+            ]
+          ],
+          "modelLimit" : "all"
+        },
         {
           "addRule" : [
             "banner"
@@ -472,7 +419,6 @@
           "modelLimit" : 1
         }
       ],
-      "rules" : [],
       "subfactions" : [
         "none",
         "pestilence",
@@ -496,8 +442,8 @@
           "reflexes" : 5,
           "weapons" : [
             {
-              "id" : "great_maul",
-              "count" : 3
+              "id" : "great",
+              "count" : 2
             }
           ],
           "min" : 1,
@@ -513,7 +459,7 @@
           "reflexes" : 5,
           "weapons" : [
             {
-              "id" : "great_maul",
+              "id" : "great",
               "count" : 2
             }
           ],
@@ -521,7 +467,6 @@
           "max" : 19
         }
       ],
-      "rules" : [],
       "options" : [
         {
           "addRule" : [
@@ -700,10 +645,9 @@
           "max" : 10
         }
       ],
-      "rules" : [],
       "keywords" : [
         "Beast",
-        "Infantry"
+        "Cavalry"
       ],
       "subfactions" : [
         "none",
@@ -729,7 +673,7 @@
           "weapons" : [
             {
               "id" : "spear",
-              "count" : 3
+              "count" : 2
             },
             {
               "id" : "hooves_and_teeth",
@@ -777,10 +721,9 @@
           "modelLimit" : 1
         }
       ],
-      "rules" : [],
       "keywords" : [
         "Beast",
-        "Infantry"
+        "Cavalry"
       ],
       "subfactions" : [
         "none",
@@ -827,11 +770,11 @@
           ],
           "withWeapon" : [
             {
-              "id" : "great_maul",
+              "id" : "great",
               "count" : 3
             },
             {
-              "id" : "crude_polearm",
+              "id" : "polearm",
               "count" : 4
             }
           ]
@@ -861,75 +804,75 @@
       "category" : "hero",
       "models" : [
         {
-              "name" : "Blessed Ogre Centaur",
-              "movement" : 10,
-              "courage" : 6,
-              "shoot" : 5,
-              "fight" : 6,
-              "defense" : 7,
-              "reflexes" : 7,
-              "weapons" : [
-                {
-                  "id" : "great_maul",
-                  "count" : 4
-                },
-                {
-                  "id" : "lizzer_claws",
-                  "count" : 2
-                } 
-              ],
-              "min" : 1,
-              "max" : 1
+          "name" : "Blessed Ogre Centaur",
+          "movement" : 10,
+          "courage" : 6,
+          "shoot" : 5,
+          "fight" : 6,
+          "defense" : 7,
+          "reflexes" : 7,
+          "weapons" : [
+            {
+              "id" : "great",
+              "count" : 4
+            },
+            {
+              "id" : "lizzer_claws",
+              "count" : 2
             }
           ],
-          "rules" : [
-            {
-              "id" : "impact",
-              "x" : 1
-            },
-            {
-              "id" : "wounds",
-              "x" : 3
-            },
-            {
-              "id" : "magic",
-              "x" : 1
-            },    
+          "min" : 1,
+          "max" : 1
+        }
+      ],
+      "rules" : [
+        {
+          "id" : "impact",
+          "x" : 1
+        },
+        {
+          "id" : "wounds",
+          "x" : 3
+        },
+        {
+          "id" : "magic",
+          "x" : 1
+        },
+        {
+          "id" : "charger_tactics",
+          "x" : 1
+        }
+      ],
+      "options" : [
+        {
+          "replaceRule" : [
             {
               "id" : "charger_tactics",
-            "x" : 1
-          }
-          ],
-          "options" : [
-            {
-              "replaceRule" : [
-                {
-                  "id" : "charger_tactics",
-                  "x" : 1
-                }
-              ],
-              "withRule" : [
-                {
-                  "id" : "charger_tactics",
-                  "x" : 2
-                }
-              ]
+              "x" : 1
             }
           ],
-            "subfactions" : [
-            "none",
-            "change_legions",
-            "rage_legions",
-            "lust_legions",
-            "plague_legions"
-          ],
-          "keywords" : [
-            "Hero",
-            "Beast",
-            "Heavy Infantry"
+          "withRule" : [
+            {
+              "id" : "charger_tactics",
+              "x" : 2
+            }
           ]
-        },
-      "cyclops" : {
+        }
+      ],
+      "subfactions" : [
+        "none",
+        "change_legions",
+        "rage_legions",
+        "lust_legions",
+        "plague_legions"
+      ],
+      "keywords" : [
+        "Hero",
+        "Beast",
+        "Heavy Infantry"
+      ]
+    },
+    "cyclops" : {
       "name" : "Cyclops",
       "description" : "Cursed and twisted into a beastial shape.",
       "category" : "rare",
@@ -944,7 +887,7 @@
           "reflexes" : 5,
           "weapons" : [
             {
-              "id" : "great_maul",
+              "id" : "great",
               "count" : 2
             },
             {
@@ -957,7 +900,7 @@
             {
               "replaceWeapon" : [
                 {
-                  "id" : "great_maul",
+                  "id" : "great",
                   "count" : 2
                 },
                 {
@@ -1005,69 +948,57 @@
         "excess",
         "change"
       ]
-       },
-      "cockatrice" : {
-        "name" : "Cockatrice",
-        "description" : "A ferocious beast looking for a target to sharpen its talons.",
-        "category" : "rare",
-        "models" : [
-          {
-            "name" : "Cockatrice",
-            "movement" : 14,
-            "courage" : 4,
-            "shoot" : 5,
-            "fight" : 5,
-            "defense" : 8,
-            "reflexes" : 6,
-            "weapons" : [
-              {
-                "id" : "sharp_beak",
-                "count" : 1
-              },
-              {
-                "id" : "handweapon",
-                "count" : 3
-              },
-              {
-                "id" : "cock_gaze"
-              }
-            ],
-            "min" : 1,
-            "max" : 1,
-            "rules" : [
-              "fear",
-              "fly",
-              "damage_table_monster"
-            ]
-          }
-        ],
-        "subfactions" : [
-          "none",
-          "change_legions",
-          "rage_legions",
-          "lust_legions",
-          "plague_legions"
-        ],
-        "keywords" : [
-          "Monster",
-          "Infantry",
-          "Flying"
-        ]
-            }
     },
-  "weapons" : {
-    "crude_polearm" : {
-      "name" : "Crude Polearm",
-      "ap" : 2,
-      "attacks" : 1,
-      "short" : "Melee",
-      "rules" : [
+    "cockatrice" : {
+      "name" : "Cockatrice",
+      "description" : "A ferocious beast looking for a target to sharpen its talons.",
+      "category" : "rare",
+      "models" : [
         {
-          "id" : "reach",
-          "x" : 1
+          "name" : "Cockatrice",
+          "movement" : 14,
+          "courage" : 4,
+          "shoot" : 5,
+          "fight" : 5,
+          "defense" : 8,
+          "reflexes" : 6,
+          "weapons" : [
+            {
+              "id" : "sharp_beak",
+              "count" : 1
+            },
+            {
+              "id" : "handweapon",
+              "count" : 3
+            },
+            {
+              "id" : "cock_gaze"
+            }
+          ],
+          "min" : 1,
+          "max" : 1,
+          "rules" : [
+            "fear",
+            "fly",
+            "damage_table_monster"
+          ]
         }
+      ],
+      "subfactions" : [
+        "none",
+        "change_legions",
+        "rage_legions",
+        "lust_legions",
+        "plague_legions"
+      ],
+      "keywords" : [
+        "Monster",
+        "Infantry",
+        "Flying"
       ]
-    },
+    }
+  },
+  "weapons" : {
     "hooves_and_teeth" : {
       "name" : "Hooves and Teeth",
       "attacks" : 1,
@@ -1135,29 +1066,27 @@
           "x" : 3
         }
       ]
-    }, 
-       "cock_gaze" : {
+    },
+    "cock_gaze" : {
       "name" : "Petrifying Gaze",
       "attacks" : 1,
       "ap" : 8,
       "rules" : [
         {
-        "id" : "deadly",
-        "x" : 3
+          "id" : "deadly",
+          "x" : 3
         }
       ],
       "short" : 9,
-      "medium" : 9 
+      "medium" : 9
     },
-
     "sharp_beak" : {
       "name" : "Sharp Beak",
       "attacks" : 1,
       "ap" : 4,
       "short" : "Melee"
-        },    
-        
-        "lizzer_claws" : {
+    },
+    "lizzer_claws" : {
       "name" : "Lizard Claws",
       "ap" : 2,
       "attacks" : 1,
@@ -1210,11 +1139,11 @@
       "ap" : 2,
       "attacks" : 1,
       "short" : "Melee",
-      "rules" : [        
-          {
-            "id" : "reach",
-            "x" : 2
-          }
+      "rules" : [
+        {
+          "id" : "reach",
+          "x" : 2
+        }
       ]
     }
   },
@@ -1244,7 +1173,7 @@
           "multiply" : 10
         }
       ]
-    }, 
+    },
     "incite" : {
       "name" : "Incite",
       "description" : "When this unit is activated, choose up to X friendly _Infantry_ units within 6\". This model and those units gain +3“ Move next time they charge.",

@@ -13,7 +13,7 @@
           "movement" : 5,
           "courage" : 6,
           "shoot" : 5,
-          "fight" : 5,
+          "fight" : 6,
           "defense" : 7,
           "reflexes" : 6,
           "rules" : [
@@ -26,11 +26,11 @@
               "id" : "magic",
               "x" : 2
             },
-            "rune"
+            "possession"
           ],
           "weapons" : [
             {
-              "id" : "demon_hammer",
+              "id" : "rending_great",
               "count" : 2
             }
           ],
@@ -40,7 +40,7 @@
             {
               "replaceWeapon" : [
                 {
-                  "id" : "demon_hammer",
+                  "id" : "rending_great",
                   "count" : 2
                 }
               ],
@@ -52,13 +52,12 @@
               ]
             },
             {
-              "addWeapon" : "demon_handgun"
+              "addWeapon" : "light_flintlock"
             }
           ]
         }
       ],
       "keywords" : [
-        "Hero",
         "Wizard",
         "Infantry"
       ],
@@ -72,7 +71,7 @@
     },
     "iron_souls" : {
       "name" : "Iron Souls",
-      "description" : "",
+      "description" : "Branded with cursed runes and filled with eternal hatred, inflicting pain upon their foes.",
       "category" : "core",
       "models" : [
         {
@@ -84,17 +83,14 @@
           "defense" : 6,
           "reflexes" : 4,
           "weapons" : [
-            {
-              "id" : "demon_hand",
-              "count" : 2
-            },
-            "shield"
+            "shield",
+            "heavy"
           ],
           "min" : 1,
           "max" : 1,
           "options" : [
             {
-              "addWeapon" : "demon_handgun"
+              "addWeapon" : "light_flintlock"
             }
           ]
         },
@@ -107,86 +103,24 @@
           "defense" : 6,
           "reflexes" : 4,
           "weapons" : [
-            "demon_hand",
+            "heavy",
             "shield"
           ],
           "min" : 4,
           "max" : 19
         }
       ],
-      "keywords" : [
-        "Infantry"
-      ],
       "options" : [
         {
-          "addRule" : [
-            "banner"
+          "replaceWeapon" : [
+            "heavy",
+            "shield"
           ],
-          "modelLimit" : 1
+          "withWeapon" : [
+            "rifle_glaive"
+          ],
+          "modelLimit" : "all"
         },
-        {
-          "addRule" : [
-            "musician"
-          ],
-          "modelLimit" : 1
-        }
-      ],
-      "subfactions" : [
-        "blackpowder",
-        "wrath",
-        "excess",
-        "forge",
-        "none"
-      ]
-    },
-    "pyre_souls" : {
-      "name" : "Pyre Souls",
-      "description" : "",
-      "category" : "core",
-      "models" : [
-        {
-          "name" : "Ironclad",
-          "movement" : 5,
-          "courage" : 4,
-          "shoot" : 5,
-          "fight" : 5,
-          "defense" : 6,
-          "reflexes" : 4,
-          "weapons" : [
-            "demon_rifle",
-            {
-              "id" : "demon_dagger",
-              "count" : 2
-            }
-          ],
-          "min" : 1,
-          "max" : 1,
-          "options" : [
-            {
-              "addWeapon" : "demon_handgun"
-            }
-          ]
-        },
-        {
-          "name" : "Pyre Soul",
-          "movement" : 5,
-          "courage" : 4,
-          "shoot" : 5,
-          "fight" : 5,
-          "defense" : 6,
-          "reflexes" : 4,
-          "weapons" : [
-            "demon_rifle",
-            "demon_dagger"
-          ],
-          "min" : 4,
-          "max" : 19
-        }
-      ],
-      "keywords" : [
-        "Infantry"
-      ],
-      "options" : [
         {
           "addRule" : [
             "banner"
@@ -218,7 +152,7 @@
           "movement" : 5,
           "courage" : 6,
           "shoot" : 5,
-          "fight" : 5,
+          "fight" : 6,
           "defense" : 7,
           "reflexes" : 6,
           "rules" : [
@@ -230,10 +164,10 @@
           ],
           "weapons" : [
             {
-              "id" : "demon_hammer",
+              "id" : "rending_great",
               "count" : 4
             },
-            "demon_handgun"
+            "light_flintlock"
           ],
           "min" : 1,
           "max" : 1,
@@ -241,13 +175,13 @@
             {
               "replaceWeapon" : [
                 {
-                  "id" : "demon_hammer",
+                  "id" : "rending_great",
                   "count" : 4
                 }
               ],
               "withWeapon" : [
                 {
-                  "id" : "demon_halberd",
+                  "id" : "halberd",
                   "count" : 4
                 }
               ]
@@ -276,16 +210,13 @@
           "name" : "Overseer",
           "movement" : 6,
           "courage" : 4,
-          "shoot" : 4,
+          "shoot" : 5,
           "fight" : 6,
           "defense" : 5,
           "reflexes" : 4,
           "weapons" : [
-            {
-              "id" : "demon_hand",
-              "count" : 2
-            },
-            "shield"
+            "shield",
+            "heavy"
           ],
           "min" : 1,
           "max" : 1
@@ -294,12 +225,12 @@
           "name" : "Soul-bound Orc",
           "movement" : 6,
           "courage" : 4,
-          "shoot" : 4,
+          "shoot" : 5,
           "fight" : 6,
           "defense" : 5,
           "reflexes" : 4,
           "weapons" : [
-            "demon_hand",
+            "heavy",
             "shield"
           ],
           "min" : 9,
@@ -313,13 +244,13 @@
       "options" : [
         {
           "replaceWeapon" : [
-            "demon_hand",
+            "heavy",
             "shield"
           ],
           "withWeapon" : [
             [
               {
-                "id" : "demon_blade",
+                "id" : "rending_blade",
                 "count" : 2
               }
             ]
@@ -340,13 +271,6 @@
         }
       ],
       "subfactions" : [
-        "none",
-        "trickery_focus",
-        "speed_focus",
-        "primal_focus",
-        "armor_focus"
-      ],
-      "subfactions_0" : [
         "blackpowder",
         "wrath",
         "excess",
@@ -356,26 +280,6 @@
     }
   },
   "weapons" : {
-    "shield" : {
-      "name" : "Shield",
-      "attacks" : 0,
-      "short" : "Melee",
-      "rules" : [
-        {
-          "id" : "shield"
-        }
-      ]
-    },
-    "buckler" : {
-      "name" : "Buckler",
-      "attacks" : 0,
-      "short" : "Melee",
-      "rules" : [
-        {
-          "id" : "buckler"
-        }
-      ]
-    },
     "blazing_staff" : {
       "name" : "Blazing Staff",
       "attacks" : 1,
@@ -401,87 +305,33 @@
         }
       ]
     },
-    "demon_hammer" : {
-      "name" : "Daemonforged Warhammer",
-      "ap" : 5,
-      "attacks" : 1,
-      "short" : "Melee"
-    },
-    "demon_handgun" : {
-      "name" : "Daemonforged Handgun",
-      "ap" : 3,
-      "attacks" : 1,
-      "short" : 6,
-      "medium" : 12,
-      "rules" : [
-        "pistol",
-        "rending"
-      ]
-    },
-    "demon_blade" : {
-      "name" : "Daemonforged Blades",
-      "ap" : 3,
-      "attacks" : 1,
-      "short" : "Melee"
-    },
-    "demon_rifle" : {
-      "name" : "Daemonforged Rifle",
-      "ap" : 3,
-      "attacks" : 1,
-      "short" : 9,
-      "medium" : 18,
-      "rules" : [
-        "rending"
-      ]
-    },
-    "demon_halberd" : {
-      "name" : "Daemonforged Halberd",
-      "ap" : 4,
-      "attacks" : 1,
-      "short" : "Melee",
-      "rules" : [
-        {
-          "id" : "reach",
-          "x" : 2
-        }
-      ]
-    },
-    "demon_dagger" : {
-      "name" : "Daemonforged Dagger",
-      "ap" : 1,
-      "attacks" : 1,
-      "short" : "Melee"
-    },
-    "flamethrower" : {
-      "name" : "Flamethrower",
+    "rifle_glaive" : {
+      "name" : "Rifle-Glaive",
       "profiles" : [
         {
-          "name" : "Stream",
-          "short" : 6,
-          "medium" : 12,
-          "ap" : 5,
-          "attacks" : 2,
+          "name" : "Rifle",
+          "ap" : 2,
+          "attacks" : 1,
+          "short" : 9,
+          "medium" : 18,
           "rules" : [
-            "flame"
+            "rapid_fire"
           ]
         },
         {
-          "name" : "Spray",
-          "short" : 6,
-          "medium" : 12,
-          "ap" : 1,
-          "attacks" : 5,
+          "ap" : 3,
+          "attacks" : 1,
+          "short" : "Melee",
           "rules" : [
-            "flame"
-          ]
+            {
+              "id" : "reach",
+              "x" : 1
+            },
+            "rending"
+          ],
+          "name" : "Glaive"
         }
       ]
-    },
-    "demon_hand" : {
-      "name" : "Daemonforged Handweapon",
-      "ap" : 2,
-      "attacks" : 1,
-      "short" : "Melee"
     }
   },
   "rules" : {
@@ -503,9 +353,9 @@
       "description" : "This model and its unit may spend one action to repair one vehicle or warmachine within 3\" that has suffered critical damage.",
       "points" : 5
     },
-    "rune" : {
-      "name" : "Blazing Rune",
-      "description" : "Once per round, a friendly _Infantry_ unit within 6\" gains +3“ the next time it makes a Move or Charge action.",
+    "possession" : {
+      "name" : "Possession",
+      "description" : "Once per round, a friendly _Infantry_ unit within 6\" gains +3“ the next time it moves or charges.",
       "points" : 5
     },
     "soul_gem" : {
@@ -519,7 +369,8 @@
       "name" : "Fireball",
       "description" : "Target enemy unit within 12\" takes 6 hits with AP 1. This power may be cast unlimited times.",
       "flavor" : "Conjuring a fireball comes natural to wizards, especially those that sow discord.",
-      "charge" : 6
+      "charge" : 6,
+      "school" : "fire"
     }
   },
   "strategies" : [
