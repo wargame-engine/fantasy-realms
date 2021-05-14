@@ -1547,70 +1547,21 @@
     }
   },
   "powers" : {
-    "vortex" : {
-      "name" : "Arcane Vortex",
-      "description" : "All enemy units within 6\" take 6 hits. This power may only be cast once per game.",
-      "flavor" : "Calling upon the might of the heavens, the wizard summons forth a magical whirlwind.",
-      "charge" : 4,
-      "subfactions" : [
-        "none",
-        "magic",
-        "polis",
-        "temple",
-        "beasts"
-      ]
+    "haste" : {
+      "name" : "Haste",
+      "description" : "Target friendly unit within 12\" may immediately make a free move action.",
+      "charge" : 7
     },
-    "radiance" : {
-      "name" : "Radiance",
-      "description" : "Target enemy unit within 12\" has -1 to Strength or Accuracy until your next turn. This power may be cast unlimited times.",
-      "flavor" : "The wizard creates a bright light that blinds and disorientates their foes.",
+    "blind" : {
+      "name" : "Blind",
+      "description" : "Target enemy unit within 12\" gets -1 Accuracy until the end of the round.",
       "charge" : 6,
-      "subfactions" : [
-        "none",
-        "magic",
-        "polis",
-        "temple",
-        "beasts"
-      ]
+      "school" : "shadow"
     },
-    "shield" : {
-      "name" : "Nimbus Shield",
-      "description" : "Target friendly unit within 12\" has +1 to their Saves until your next turn. This power may be cast unlimited times.",
-      "flavor" : "The wizard creates a glistening energy shield around an ally, protecting them from harm.",
-      "charge" : 7,
-      "subfactions" : [
-        "none",
-        "magic",
-        "polis",
-        "temple",
-        "beasts"
-      ]
-    },
-    "spears" : {
-      "name" : "Solar Spears",
-      "description" : "Target enemy unit within 12\" take 3 hits with AP 3. This power may only be cast 3 times per game.",
-      "flavor" : "The wizard summons a hail of burning spears to burn away their enemies.",
-      "charge" : 5,
-      "subfactions" : [
-        "none",
-        "magic",
-        "polis",
-        "temple",
-        "beasts"
-      ]
-    },
-    "arrows" : {
-      "name" : "Glistening Volley",
-      "description" : "Target enemy unit within 12\" takes 3 hits. This power may be cast unlimited times.",
-      "flavor" : "The wizard shoots an enemy with magic arrows.",
-      "charge" : 8,
-      "subfactions" : [
-        "none",
-        "magic",
-        "polis",
-        "temple",
-        "beasts"
-      ]
+    "lightning_storm" : {
+      "name" : "Lightning Storm",
+      "description" : "Target enemy unit within 12\" take 5 hits each with AP 0.",
+      "charge" : 7
     }
   },
   "strategies" : [

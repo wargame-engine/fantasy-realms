@@ -1240,12 +1240,34 @@
   ],
   "relics" : [],
   "powers" : {
-    "bolt" : {
-      "name" : "Lightning Bolt",
-      "description" : "Target enemy unit within 12“ takes 3 hits with AP 1 and has -1 to its Save characteristic until end of turn. This power may only be cast three times per game.",
-      "flavor" : "The enemy is hit by powerful magical discharge, rending armor and burning flesh.",
+    "weakness" : {
+      "name" : "Weakness",
+      "description" : "Target enemy unit within 12\" must re-roll one die of your choice on its next Save test.",
       "charge" : 6,
-      "school" : "storm",
+      "subfactions" : [
+        "none",
+        "pestilence",
+        "wrath",
+        "excess",
+        "change"
+      ]
+    },
+    "pain" : {
+      "name" : "Pain",
+      "description" : "Target enemy model within 12\" takes 1 automatic hit with AP(3).",
+      "charge" : 6,
+      "subfactions" : [
+        "none",
+        "pestilence",
+        "wrath",
+        "excess",
+        "change"
+      ]
+    },
+    "lightning_bolt" : {
+      "name" : "Lightning Bolt",
+      "description" : "Target enemy unit within 18\" takes 1 hit with AP 7.",
+      "charge" : 6,
       "subfactions" : [
         "none",
         "pestilence",

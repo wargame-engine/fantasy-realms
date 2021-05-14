@@ -1301,7 +1301,23 @@
       "points" : 5
     }
   },
-  "powers" : {},
+  "powers" : {
+    "lightning_bolt" : {
+      "name" : "Lightning Bolt",
+      "description" : "Target enemy unit within 18\" takes 1 hit with AP 7.",
+      "charge" : 6
+    },
+    "slow" : {
+      "name" : "Slow",
+      "description" : "Target enemy unit within 12\" gets -2\" of Movement until the end of the round.",
+      "charge" : 7
+    },
+    "haste" : {
+      "name" : "Haste",
+      "description" : "Target friendly unit within 12\" may immediately make a free move action.",
+      "charge" : 7
+    }
+  },
   "strategies" : [
     {
       "name" : "Stubborn",

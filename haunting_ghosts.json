@@ -562,7 +562,30 @@
     }
   },
   "relics" : [],
-  "powers" : {},
+  "powers" : {
+    "raise_dead" : {
+      "name" : "Raise Dead",
+      "description" : "Target friendly _Undead_ Infantry unit within 12\" restores 1D3 models. This power may only be cast once per turn.",
+      "charge" : 5,
+      "subfactions" : [
+        "blood",
+        "bone",
+        "dread",
+        "none"
+      ]
+    },
+    "blind" : {
+      "name" : "Blind",
+      "description" : "Target enemy unit within 12\" gets -1 Accuracy until the end of the round.",
+      "charge" : 6,
+      "school" : "shadow"
+    },
+    "shroud" : {
+      "name" : "Shroud",
+      "description" : "Target friendly unit within 12\" gets -1 to be hit the next time it is attacked.",
+      "charge" : 6
+    }
+  },
   "strategies" : [
     {
       "name" : "Fearless",

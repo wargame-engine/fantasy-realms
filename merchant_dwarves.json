@@ -715,7 +715,23 @@
       "points" : 5
     }
   },
-  "powers" : {},
+  "powers" : {
+    "haste" : {
+      "name" : "Haste",
+      "description" : "Target friendly unit within 12\" may immediately make a free move action.",
+      "charge" : 7
+    },
+    "fireball" : {
+      "name" : "Fireball",
+      "description" : "Target enemy unit within 12\" takes 3 hits with AP 3.",
+      "charge" : 6
+    },
+    "shroud" : {
+      "name" : "Shroud",
+      "description" : "Target friendly unit within 12\" gets -1 to be hit the next time it is attacked.",
+      "charge" : 6
+    }
+  },
   "strategies" : [
     {
       "phase" : "activation",
