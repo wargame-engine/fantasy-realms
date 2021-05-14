@@ -723,7 +723,7 @@
     },
     "fireball" : {
       "name" : "Fireball",
-      "description" : "Target enemy unit within 12\" takes 3 hits with AP 3.",
+      "description" : "Target enemy unit within 12\" takes 3 hits with AP(3).",
       "charge" : 6
     },
     "shroud" : {

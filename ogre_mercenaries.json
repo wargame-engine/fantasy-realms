@@ -1,7 +1,7 @@
 {
   "name" : "Ogre Mercenaries",
   "id" : "ogre_mercenaries",
-  "color" : "#954535",
+  "color" : "#50974A",
   "author" : "Valgaav#9736",
   "version" : "0.1",
   "description" : "Large-bodied mercenaries with huge appetites for gold and destruction.",
@@ -849,7 +849,7 @@
     },
     "siphon" : {
       "name" : "Siphon",
-      "description" : "Target enemy unit within 12\" takes 2 hits with AP 3 and this unit regains 1 wound.",
+      "description" : "Target enemy unit within 12\" takes 2 hits with AP(3) and this unit regains 1 wound.",
       "charge" : 7
     }
   }

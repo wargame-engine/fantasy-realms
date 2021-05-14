@@ -20,7 +20,7 @@
           "reflexes" : 6,
           "weapons" : [
             {
-              "id" : "great_maul",
+              "id" : "great",
               "count" : 4
             },
             {
@@ -36,14 +36,14 @@
             {
               "replaceWeapon" : [
                 {
-                  "id" : "great_maul",
+                  "id" : "great",
                   "count" : 4
                 }
               ],
               "withWeapon" : [
                 {
                   "id" : "lance",
-                  "count" : 3
+                  "count" : 4
                 }
               ]
             },
@@ -120,10 +120,10 @@
         "Cavalry"
       ],
       "subfactions" : [
+        "none",
         "blood",
         "bone",
-        "dread",
-        "none"
+        "dread"
       ]
     },
     "vampire_lord_horse" : {
@@ -141,7 +141,7 @@
           "reflexes" : 6,
           "weapons" : [
             {
-              "id" : "maul",
+              "id" : "heavy",
               "count" : 4
             },
             {
@@ -153,14 +153,14 @@
             {
               "replaceWeapon" : [
                 {
-                  "id" : "maul",
+                  "id" : "heavy",
                   "count" : 4
                 }
               ],
               "withWeapon" : [
                 {
                   "id" : "lance",
-                  "count" : 2
+                  "count" : 3
                 },
                 {
                   "id" : "leeching_sword",
@@ -252,7 +252,7 @@
           "reflexes" : 6,
           "weapons" : [
             {
-              "id" : "maul",
+              "id" : "heavy",
               "count" : 4
             }
           ],
@@ -260,7 +260,7 @@
             {
               "replaceWeapon" : [
                 {
-                  "id" : "maul",
+                  "id" : "heavy",
                   "count" : 4
                 }
               ],
@@ -270,7 +270,7 @@
                   "count" : 3
                 },
                 {
-                  "id" : "great_maul",
+                  "id" : "great",
                   "count" : 3
                 }
               ]
@@ -878,7 +878,7 @@
           "shoot" : 4,
           "fight" : 6,
           "defense" : 5,
-          "reflexes" : 4,
+          "reflexes" : 5,
           "weapons" : [
             {
               "id" : "spectral_lance",
@@ -900,7 +900,7 @@
           "shoot" : 4,
           "fight" : 6,
           "defense" : 5,
-          "reflexes" : 4,
+          "reflexes" : 5,
           "weapons" : [
             {
               "id" : "spectral_lance",
@@ -956,7 +956,7 @@
           "shoot" : 4,
           "fight" : 6,
           "defense" : 7,
-          "reflexes" : 4,
+          "reflexes" : 5,
           "weapons" : [
             {
               "id" : "lance",
@@ -978,7 +978,7 @@
           "shoot" : 4,
           "fight" : 4,
           "defense" : 7,
-          "reflexes" : 4,
+          "reflexes" : 5,
           "weapons" : [
             {
               "id" : "lance",
@@ -1091,7 +1091,7 @@
           "x" : 3
         },
         {
-          "id" : "magic",
+          "id" : "dispel",
           "x" : 1
         },
         "leader"
@@ -1186,7 +1186,7 @@
           "x" : 3
         },
         {
-          "id" : "magic",
+          "id" : "dispel",
           "x" : 1
         },
         "leader"
@@ -1383,7 +1383,7 @@
     },
     "siphon" : {
       "name" : "Siphon",
-      "description" : "Target enemy unit within 12\" takes 2 hits with AP 3 and this unit regains 1 wound.",
+      "description" : "Target enemy unit within 12\" takes 2 hits with AP(3) and this unit regains 1 wound.",
       "charge" : 7
     }
   },

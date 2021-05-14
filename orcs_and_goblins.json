@@ -1362,7 +1362,7 @@
   "powers" : {
     "lightning_bolt" : {
       "name" : "Lightning Bolt",
-      "description" : "Target enemy unit within 18\" takes 1 hit with AP 7.",
+      "description" : "Target enemy unit within 18\" takes 1 hit with AP(7).",
       "charge" : 6
     },
     "haste" : {
