@@ -420,8 +420,8 @@
           "fight" : 5,
           "defense" : 4,
           "reflexes" : 5,
-          "min" : 9,
-          "max" : 29,
+          "min" : 19,
+          "max" : 59,
           "weapons" : [
             "sharp_stuff",
             {

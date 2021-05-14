@@ -1,7 +1,8 @@
 {
   "reportUrl" : "https://github.com/wargame-engine/fantasy-realms/issues",
-  "name" : "Fantasy Realms (Beta)",
+  "name" : "Fantasy Realms",
   "id" : "fantasy_realms",
+  "version" : "1.0",
   "alliances" : {
     "death" : {
       "name" : "Bringers of Death"
@@ -305,14 +306,88 @@
         },
         "core" : {
           "min" : 2,
-          "max" : 4
+          "max" : 5
         },
         "elite" : {
           "min" : 0,
           "max" : 3
         },
         "rare" : {
-          "rare" : 0,
+          "min" : 0,
+          "max" : 2
+        },
+        "fortification" : {
+          "min" : 0,
+          "max" : 2
+        }
+      }
+    },
+    "elite" : {
+      "name" : "Elite (Core)",
+      "cost" : 1,
+      "description" : "An elite force to deal with specific targets.",
+      "categories" : {
+        "hero" : {
+          "min" : 1,
+          "max" : 2
+        },
+        "core" : {
+          "max" : 3
+        },
+        "elite" : {
+          "min" : 2,
+          "max" : 5
+        },
+        "rare" : {
+          "max" : 2
+        },
+        "fortification" : {
+          "max" : 2
+        }
+      }
+    },
+    "rare" : {
+      "name" : "Rare (Core)",
+      "cost" : 1,
+      "description" : "A specialist force with heavy and support options.",
+      "categories" : {
+        "hero" : {
+          "min" : 1,
+          "max" : 2
+        },
+        "core" : {
+          "max" : 3
+        },
+        "elite" : {
+          "max" : 3
+        },
+        "rare" : {
+          "min" : 2,
+          "max" : 5
+        },
+        "fortification" : {
+          "max" : 2
+        }
+      }
+    },
+    "support" : {
+      "name" : "Support (Core)",
+      "cost" : 1,
+      "description" : "A small supporting force.",
+      "categories" : {
+        "command" : {
+          "max" : 1
+        },
+        "core" : {
+          "max" : 2
+        },
+        "elite" : {
+          "max" : 2
+        },
+        "rare" : {
+          "max" : 2
+        },
+        "fortification" : {
           "max" : 2
         }
       }
