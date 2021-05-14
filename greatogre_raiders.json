@@ -64,6 +64,30 @@
       "name" : "Great-Ogre Fangriders",
       "description" : "The weakest of the Great-Ogres, they're nevertheless terrifying in a fight.",
       "category" : "core",
+      "options" : [
+        {
+          "addRule" : [
+            "banner"
+          ],
+          "modelLimit" : 1
+        },
+        {
+          "addRule" : [
+            "musician"
+          ],
+          "modelLimit" : 1
+        }
+      ],
+      "rules" : [
+        {
+          "id" : "wounds",
+          "x" : 3
+        },
+        {
+          "id" : "impact",
+          "x" : 2
+        }
+      ],
       "keywords" : [
         "Cavalry"
       ],
@@ -78,32 +102,16 @@
           "courage" : 6,
           "min" : 1,
           "max" : 1,
-          "rules" : [
-            {
-              "id" : "wounds",
-              "x" : 3
-            },
-            {
-              "id" : "impact",
-              "x" : 2
-            }
-          ],
           "weapons" : [
+            "punching_shield",
+            "handgun",
             {
-              "id" : "great_maul",
+              "id" : "great",
               "count" : 3
             },
             {
               "id" : "fangrider_tusks",
               "count" : 4
-            },
-            {
-              "id" : "handgun",
-              "count" : 1
-            },
-            {
-              "id" : "punching_shield",
-              "count" : 1
             }
           ]
         },
@@ -117,42 +125,15 @@
           "courage" : 6,
           "min" : 2,
           "max" : 8,
-          "rules" : [
-            {
-              "id" : "wounds",
-              "x" : 3
-            },
-            {
-              "id" : "impact",
-              "x" : 2
-            }
-          ],
           "weapons" : [
+            "punching_shield",
             {
-              "id" : "great_maul",
+              "id" : "great",
               "count" : 3
             },
             {
               "id" : "fangrider_tusks",
               "count" : 4
-            },
-            {
-              "id" : "punching_shield",
-              "count" : 1
-            }
-          ],
-          "options" : [
-            {
-              "addRule" : [
-                "banner"
-              ],
-              "modelLimit" : 1
-            },
-            {
-              "addRule" : [
-                "musician"
-              ],
-              "modelLimit" : 1
             }
           ]
         }
@@ -299,9 +280,9 @@
     "stampede" : {
       "phase" : "activation",
       "name" : "Stampede",
-      "description" : "Use when a _Cavalry_ unit makes a charge action. Each model in that unit gains the Impact(1) rule until the end of the turn.",
+      "description" : "Use when a _Cavalry_ unit makes a charge action. The Impact Rule gains +1 AP for the charge.",
       "flavor" : "Ogres like to charge with full force into enemy ranks and trampling them beneath their hooves and tusks.",
-      "cost" : 2
+      "cost" : 1
     },
     "thick_skinned" : {
       "phase" : "activation",

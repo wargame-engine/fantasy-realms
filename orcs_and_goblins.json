@@ -1370,10 +1370,10 @@
       "description" : "Target friendly unit within 12\" may immediately make a free move action.",
       "charge" : 7
     },
-    "blind" : {
-      "name" : "Blind",
-      "description" : "Target enemy unit within 12\" gets -1 Accuracy until the end of the round.",
-      "charge" : 6,
+    "warpath" : {
+      "name" : "Warpath",
+      "description" : "Target friendly unit within 12\" may immediately make a free charge action.",
+      "charge" : 5,
       "school" : "shadow"
     }
   },
