@@ -34,15 +34,16 @@
       "color" : "#954535",
       "version" : "0.1",
       "alliance" : "destruction",
-      "description": "Large-bodied mercenaries with huge appetites for gold and destruction"
+      "description" : "Large-bodied mercenaries with huge appetites for gold and destruction"
     },
-    "greatogre_raiders" : {"name": "Greatogre Raiders",
-    "id": "greatogre_raiders",
-    "url": "greatogre_raiders.json",
-    "color": "#4f9ae0",
-    "version": "0.1",
-    "description": "The greatest of ogre tribes, who only interact with their lessers when they need something - food, coin, or just a challenge!",
-    "alliance": "destruction"
+    "greatogre_raiders" : {
+      "name" : "Greatogre Raiders",
+      "id" : "greatogre_raiders",
+      "url" : "greatogre_raiders.json",
+      "color" : "#4f9ae0",
+      "version" : "0.1",
+      "description" : "The greatest of ogre tribes, who only interact with their lessers when they need something - food, coin, or just a challenge!",
+      "alliance" : "destruction"
     },
     "vampire_lords" : {
       "name" : "Vampire Lords",
@@ -327,11 +328,18 @@
     }
   },
   "powers" : {
-    "blast" : {
-      "name" : "Shock Wave",
+    "arcane_blast" : {
+      "name" : "Arcane Blast",
       "description" : "Target enemy unit within 12\" takes 3 hits with AP 1. This power may be cast unlimited times.",
-      "flavor" : "This enemy is hit by a single blast of shock.",
-      "charge" : 8
+      "flavor" : "This enemy is hit by a single blast of arcane energy.",
+      "charge" : 8,
+      "school" : "arcane"
+    },
+    "arcane_shield" : {
+      "name" : "Arcane Shield",
+      "description" : "Target friendly unit within 12\". Until the end of the round, roll a D10 each time that unit is hit. On a 3 or less, that hit is ignored. This power may be cast unlimited times.",
+      "charge" : 7,
+      "school" : "arcane"
     }
   },
   "weapons" : {

@@ -1500,7 +1500,23 @@
     }
   },
   "relics" : [],
-  "powers" : {},
+  "powers" : {
+    "lightning_storm" : {
+      "name" : "Lightning Storm",
+      "description" : "Target enemy unit within 12\" take 5 hits each with AP 0.",
+      "charge" : 7
+    },
+    "shroud" : {
+      "name" : "Shroud",
+      "description" : "Target friendly unit within 12\" gets -1 to be hit the next time it is attacked.",
+      "charge" : 6
+    },
+    "lightning_bolt" : {
+      "name" : "Lightning Bolt",
+      "description" : "Target enemy unit within 18\" takes 1 hit with AP 7.",
+      "charge" : 6
+    }
+  },
   "strategies" : [
     {
       "name" : "Stormshroud Armor",

@@ -1018,16 +1018,18 @@
   "powers" : {
     "fireball" : {
       "name" : "Fireball",
-      "description" : "Target enemy unit within 12\" takes 6 hits with AP 1. This power may be cast unlimited times.",
-      "flavor" : "Conjuring a fireball comes natural to wizards, especially for those that sow discord.",
-      "charge" : 6,
-      "subfactions" : [
-        "none",
-        "blackpowder",
-        "order",
-        "polis",
-        "magic"
-      ]
+      "description" : "Target enemy unit within 12\" takes 3 hits with AP 3.",
+      "charge" : 6
+    },
+    "lightning_bolt" : {
+      "name" : "Lightning Bolt",
+      "description" : "Target enemy unit within 18\" takes 1 hit with AP 7.",
+      "charge" : 6
+    },
+    "haste" : {
+      "name" : "Haste",
+      "description" : "Target friendly unit within 12\" may immediately make a free move action.",
+      "charge" : 7
     }
   },
   "strategies" : [

@@ -923,41 +923,27 @@
   ],
   "relics" : [],
   "powers" : {
-    "bolt" : {
-      "name" : "Arcane Bolt",
-      "description" : "Target enemy model within 12\" takes 3 hits with AP 1. This power may be cast unlimited times.",
-      "flavor" : "The enemy is hit by an unseen force, ripping trough armor and shields alike.",
+    "firestorm" : {
+      "name" : "Firestorm",
+      "description" : "Target 2 enemy units within 6\" take 3 hits with AP 1 each.",
+      "charge" : 6
+    },
+    "pain" : {
+      "name" : "Pain",
+      "description" : "Target enemy model within 12\" takes 1 automatic hit with AP(3).",
       "charge" : 6,
       "subfactions" : [
+        "none",
+        "pestilence",
+        "wrath",
+        "excess",
         "change"
       ]
     },
-    "soul_fire" : {
-      "name" : "Soul Fire",
-      "description" : "Target enemy unit within 12\" takes 6 hits. This power may be cast only three times per game.",
-      "flavor" : "The Sorcerer sings an unholy chant, incinerating the souls of his enemies.",
-      "charge" : 7,
-      "subfactions" : [
-        "change"
-      ]
-    },
-    "fury" : {
-      "name" : "Furious Assault",
-      "description" : "Target friendly unit within 12\" gains the Furious special rule until the end of the turn. This power may be cast only once per turn.",
-      "flavor" : "The priest chants a sinister prayer, blessing his fellow Warriors with a great rage.",
-      "charge" : 7,
-      "subfactions" : [
-        "wrath"
-      ]
-    },
-    "plague" : {
-      "name" : "Rotten Fortitude",
-      "description" : "Target friendly unit within 12\" gains Tough (+1) until the end of the turn. This power may be cast only three times per game.",
-      "flavor" : "The sorcerer spreads a joyous disease onto his fellow warriors, making them numb to harm.",
-      "charge" : 7,
-      "subfactions" : [
-        "pestilence"
-      ]
+    "siphon" : {
+      "name" : "Siphon",
+      "description" : "Target enemy unit within 12\" takes 2 hits with AP 3 and this unit regains 1 wound.",
+      "charge" : 7
     }
   }
 }
