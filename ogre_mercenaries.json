@@ -31,14 +31,11 @@
               "id" : "merc_tactics",
               "x" : 1
             },
-            {
-              "id" : "leader_x",
-              "x" : "Infantry"
-            }
+            "leader"
           ],
           "weapons" : [
             {
-              "id" : "handgun",
+              "id" : "heavy_handgun",
               "count" : 2
             },
             {
@@ -46,7 +43,7 @@
               "count" : 3
             },
             {
-              "id" : "great_maul",
+              "id" : "great",
               "count" : 2
             }
           ],
@@ -97,7 +94,7 @@
           ],
           "weapons" : [
             {
-              "id" : "great_maul",
+              "id" : "great",
               "count" : 6
             }
           ],
@@ -150,30 +147,52 @@
             }
           ],
           "weapons" : [
-            {
-              "id" : "heavy_crossbow",
-              "count" : 1
-            },
-            {
-              "id" : "heavy_crossbow_melee",
-              "count" : 1
-            },
-            {
-              "id" : "hunting_spear",
-              "count" : 1
-            },
+            "heavy_crossbow",
+            "hunting_spear",
             {
               "id" : "hunting_spear_melee",
               "count" : 4
-            }
+            },
+            "heavy_crossbow_melee"
           ]
         }
       ]
     },
     "ogre_mercenaries" : {
       "name" : "Ogre Mercenaries",
-      "description" : "The rank-and-file, as much as any ogre can be",
+      "description" : "The rank-and-file, as much as any ogre can be.",
       "category" : "core",
+      "options" : [
+        {
+          "replaceWeapon" : [
+            {
+              "id" : "heavy",
+              "count" : 3
+            }
+          ],
+          "withWeapon" : [
+            [
+              {
+                "id" : "heavy",
+                "count" : 2
+              },
+              "ironfist"
+            ]
+          ]
+        },
+        {
+          "addRule" : [
+            "banner"
+          ],
+          "modelLimit" : 1
+        },
+        {
+          "addRule" : [
+            "musician"
+          ],
+          "modelLimit" : 1
+        }
+      ],
       "models" : [
         {
           "name" : "Ogre Sergeant",
@@ -193,30 +212,8 @@
           ],
           "weapons" : [
             {
-              "id" : "maul",
-              "count" : 4
-            }
-          ],
-          "options" : [
-            {
-              "replaceWeapon" : [
-                {
-                  "id" : "maul",
-                  "count" : 5
-                }
-              ],
-              "withWeapon" : [
-                [
-                  {
-                    "id" : "maul",
-                    "count" : 4
-                  },
-                  {
-                    "id" : "ironfist",
-                    "count" : 1
-                  }
-                ]
-              ]
+              "id" : "heavy",
+              "count" : 3
             }
           ]
         },
@@ -238,42 +235,8 @@
           ],
           "weapons" : [
             {
-              "id" : "maul",
+              "id" : "heavy",
               "count" : 3
-            }
-          ],
-          "options" : [
-            {
-              "replaceWeapon" : [
-                {
-                  "id" : "maul",
-                  "count" : 3
-                }
-              ],
-              "withWeapon" : [
-                [
-                  {
-                    "id" : "maul",
-                    "count" : 2
-                  },
-                  {
-                    "id" : "ironfist",
-                    "count" : 1
-                  }
-                ]
-              ]
-            },
-            {
-              "addRule" : [
-                "banner"
-              ],
-              "modelLimit" : 1
-            },
-            {
-              "addRule" : [
-                "musician"
-              ],
-              "modelLimit" : 1
             }
           ]
         }
@@ -283,6 +246,37 @@
       "name" : "Ogre Veterans",
       "Description" : "The old guard of a mercenary company, who have long since earned their place",
       "category" : "elite",
+      "options" : [
+        {
+          "replaceWeapon" : [
+            {
+              "id" : "great",
+              "count" : 4
+            }
+          ],
+          "withWeapon" : [
+            [
+              {
+                "id" : "great",
+                "count" : 3
+              },
+              "ironfist"
+            ]
+          ]
+        },
+        {
+          "addRule" : [
+            "banner"
+          ],
+          "modelLimit" : 1
+        },
+        {
+          "addRule" : [
+            "musician"
+          ],
+          "modelLimit" : 1
+        }
+      ],
       "models" : [
         {
           "name" : "Ogre Veteran Sergeant",
@@ -302,30 +296,8 @@
           ],
           "weapons" : [
             {
-              "id" : "great_maul",
-              "count" : 5
-            }
-          ],
-          "options" : [
-            {
-              "replaceWeapon" : [
-                {
-                  "id" : "great_maul",
-                  "count" : 5
-                }
-              ],
-              "withWeapon" : [
-                [
-                  {
-                    "id" : "great_maul",
-                    "count" : 4
-                  },
-                  {
-                    "id" : "ironfist",
-                    "count" : 1
-                  }
-                ]
-              ]
+              "id" : "great",
+              "count" : 4
             }
           ]
         },
@@ -347,42 +319,8 @@
           ],
           "weapons" : [
             {
-              "id" : "great_maul",
+              "id" : "great",
               "count" : 4
-            }
-          ],
-          "options" : [
-            {
-              "replaceWeapon" : [
-                {
-                  "id" : "great_maul",
-                  "count" : 4
-                }
-              ],
-              "withWeapon" : [
-                [
-                  {
-                    "id" : "great_maul",
-                    "count" : 3
-                  },
-                  {
-                    "id" : "ironfist",
-                    "count" : 1
-                  }
-                ]
-              ]
-            },
-            {
-              "addRule" : [
-                "banner"
-              ],
-              "modelLimit" : 1
-            },
-            {
-              "addRule" : [
-                "musician"
-              ],
-              "modelLimit" : 1
             }
           ]
         }
@@ -392,6 +330,26 @@
       "name" : "Ogre Artillerists",
       "description" : "With the strength of an ogre, your definition of 'sidearm' quickly changes.",
       "category" : "core",
+      "rules" : [
+        {
+          "id" : "wounds",
+          "x" : 2
+        }
+      ],
+      "options" : [
+        {
+          "addRule" : [
+            "banner"
+          ],
+          "modelLimit" : 1
+        },
+        {
+          "addRule" : [
+            "musician"
+          ],
+          "modelLimit" : 1
+        }
+      ],
       "models" : [
         {
           "name" : "Ogre Artillerist Sergeant",
@@ -403,21 +361,12 @@
           "courage" : 6,
           "min" : 1,
           "max" : 1,
-          "rules" : [
-            {
-              "id" : "wounds",
-              "x" : 2
-            }
-          ],
           "weapons" : [
             {
-              "id" : "boomstick",
-              "count" : 1
-            },
-            {
               "id" : "ogre_fists",
-              "count" : 3
-            }
+              "count" : 2
+            },
+            "boomstick"
           ]
         },
         {
@@ -430,35 +379,12 @@
           "courage" : 6,
           "min" : 2,
           "max" : 8,
-          "rules" : [
-            {
-              "id" : "wounds",
-              "x" : 2
-            }
-          ],
           "weapons" : [
-            {
-              "id" : "boomstick",
-              "count" : 1
-            },
             {
               "id" : "ogre_fists",
               "count" : 2
-            }
-          ],
-          "options" : [
-            {
-              "addRule" : [
-                "banner"
-              ],
-              "modelLimit" : 1
             },
-            {
-              "addRule" : [
-                "musician"
-              ],
-              "modelLimit" : 1
-            }
+            "boomstick"
           ]
         }
       ]
@@ -471,21 +397,18 @@
         {
           "name" : "Least-Scared Auxiliary",
           "movement" : 6,
-          "courage" : 5,
+          "courage" : 4,
           "shoot" : 5,
-          "fight" : 4,
+          "fight" : 5,
           "defense" : 4,
           "reflexes" : 5,
           "min" : 1,
           "max" : 1,
           "weapons" : [
+            "sharp_stuff",
             {
-              "id" : "sharp_stuff",
-              "count" : 1
-            },
-            {
-              "id" : "gobbo_weapons",
-              "count" : 1
+              "id" : "dagger",
+              "count" : 2
             }
           ]
         },
@@ -494,28 +417,52 @@
           "movement" : 6,
           "shoot" : 5,
           "courage" : 4,
-          "fight" : 4,
+          "fight" : 5,
           "defense" : 4,
           "reflexes" : 5,
-          "min" : 19,
-          "max" : 49,
+          "min" : 9,
+          "max" : 29,
           "weapons" : [
+            "sharp_stuff",
             {
-              "id" : "sharp_stuff",
-              "count" : 1
-            },
-            {
-              "id" : "gobbo_weapons",
-              "count" : 1
+              "id" : "dagger",
+              "count" : 2
             }
           ]
         }
+      ],
+      "rules" : [
+        "trappers"
       ]
     },
     "ogre_cavalry" : {
       "name" : "Ogre Cavalry",
       "description" : "Outriders for mercenary companies - when ogres can find beasts strong enough to carry them!",
       "category" : "elite",
+      "rules" : [
+        {
+          "id" : "wounds",
+          "x" : 3
+        },
+        {
+          "id" : "impact",
+          "x" : 2
+        }
+      ],
+      "options" : [
+        {
+          "addRule" : [
+            "banner"
+          ],
+          "modelLimit" : 1
+        },
+        {
+          "addRule" : [
+            "musician"
+          ],
+          "modelLimit" : 1
+        }
+      ],
       "models" : [
         {
           "name" : "Cavalry Sergeant",
@@ -527,33 +474,17 @@
           "courage" : 6,
           "min" : 1,
           "max" : 1,
-          "rules" : [
-            {
-              "id" : "wounds",
-              "x" : 3
-            },
-            {
-              "id" : "impact",
-              "x" : 2
-            }
-          ],
           "weapons" : [
             {
-              "id" : "great_maul",
+              "id" : "great",
               "count" : 3
             },
             {
               "id" : "mournfang_tusks",
               "count" : 4
             },
-            {
-              "id" : "handgun",
-              "count" : 1
-            },
-            {
-              "id" : "ironfist",
-              "count" : 1
-            }
+            "heavy_handgun",
+            "ironfist"
           ]
         },
         {
@@ -566,19 +497,9 @@
           "courage" : 6,
           "min" : 2,
           "max" : 8,
-          "rules" : [
-            {
-              "id" : "wounds",
-              "x" : 3
-            },
-            {
-              "id" : "impact",
-              "x" : 2
-            }
-          ],
           "weapons" : [
             {
-              "id" : "great_maul",
+              "id" : "great",
               "count" : 3
             },
             {
@@ -588,20 +509,6 @@
             {
               "id" : "ironfist",
               "count" : 1
-            }
-          ],
-          "options" : [
-            {
-              "addRule" : [
-                "banner"
-              ],
-              "modelLimit" : 1
-            },
-            {
-              "addRule" : [
-                "musician"
-              ],
-              "modelLimit" : 1
             }
           ]
         }
@@ -690,16 +597,10 @@
           "min" : 1,
           "max" : 1,
           "weapons" : [
+            "ball_o_stuff",
+            "mournfang_tusks",
             {
-              "id" : "ball_o_stuff",
-              "count" : 1
-            },
-            {
-              "id" : "mournfang_tusks",
-              "count" : 1
-            },
-            {
-              "id" : "gobbo_weapons",
+              "id" : "dagger",
               "count" : 3
             }
           ],
@@ -716,8 +617,8 @@
       "max" : 1,
       "category" : "rare",
       "keywords" : [
-        "warmachine",
-        "arillery"
+        "Warmachine",
+        "Arillery"
       ],
       "models" : [
         {
@@ -731,10 +632,7 @@
           "min" : 1,
           "max" : 1,
           "weapons" : [
-            {
-              "id" : "ogre_cannon",
-              "count" : 1
-            },
+            "ogre_cannon",
             {
               "id" : "ogre_fists",
               "count" : 3
@@ -792,14 +690,7 @@
     "sharp_stuff" : {
       "name" : "Sharp Stuff",
       "attacks" : 1,
-      "short" : 4,
-      "medium" : 8
-    },
-    "gobbo_weapons" : {
-      "name" : "Goblin Weapons",
-      "attacks" : 1,
-      "ap" : 0,
-      "short" : "Melee"
+      "short" : 9
     },
     "hunting_spear" : {
       "name" : "Thrown Hunting Spear",
@@ -899,6 +790,13 @@
         {
           "multiply" : 15
         }
+      ]
+    },
+    "trappers" : {
+      "name" : "Trappers",
+      "description" : "When this model's unit successfully performs a counter attack or escape reaction, the charging unit suffers 6 hits with no AP.",
+      "points" : [
+        1
       ]
     }
   },
