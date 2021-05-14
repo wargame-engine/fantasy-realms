@@ -349,7 +349,7 @@
     "rare" : {
       "name" : "Rare (Core)",
       "cost" : 1,
-      "description" : "A specialist force with heavy and support options.",
+      "description" : "A specialist force with many rare and powerful units.",
       "categories" : {
         "hero" : {
           "min" : 1,
@@ -375,7 +375,7 @@
       "cost" : 1,
       "description" : "A small supporting force.",
       "categories" : {
-        "command" : {
+        "hero" : {
           "max" : 1
         },
         "core" : {
