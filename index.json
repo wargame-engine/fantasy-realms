@@ -185,7 +185,7 @@
       "color" : "#A55D35",
       "version" : "0.1",
       "alliance" : "order",
-      "description" : ""
+      "description" : "A stout race of miners, engineers and warriors."
     },
     "beastmen_horde" : {
       "name" : "Beastmen Horde",
@@ -272,7 +272,7 @@
       "url" : "merchant_dwarves.json",
       "version" : "0.1",
       "alliance" : "order",
-      "description" : "",
+      "description" : "A race of travelling merchants and glory-seekers with advanced weaponry.",
       "color" : "#000000",
       "secondary_color" : "#360c30"
     }
@@ -349,7 +349,7 @@
     "rare" : {
       "name" : "Rare (Core)",
       "cost" : 1,
-      "description" : "A specialist force with many rare and powerful units.",
+      "description" : "A specialist force with heavy and support options.",
       "categories" : {
         "hero" : {
           "min" : 1,
@@ -403,17 +403,15 @@
     }
   },
   "powers" : {
-    "arcane_blast" : {
-      "name" : "Arcane Blast",
-      "description" : "Target enemy unit within 12\" takes 3 hits with AP 1. This power may be cast unlimited times.",
-      "charge" : 8,
-      "school" : "arcane"
+    "blast" : {
+      "name" : "Blast",
+      "description" : "Target enemy unit within 12\" takes 3 hits with AP(1). This power may be cast unlimited times.",
+      "charge" : 8
     },
-    "arcane_shield" : {
-      "name" : "Arcane Shield",
+    "shield" : {
+      "name" : "Shield",
       "description" : "Target friendly unit within 12\". Until the end of the round, roll a D10 each time that unit is hit. On a 3 or less, that hit is ignored. This power may be cast unlimited times.",
-      "charge" : 7,
-      "school" : "arcane"
+      "charge" : 7
     }
   },
   "weapons" : {

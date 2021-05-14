@@ -62,11 +62,11 @@
         "Infantry"
       ],
       "subfactions" : [
-        "blackpowder",
         "wrath",
         "excess",
-        "forge",
-        "none"
+        "pestilence",
+        "none",
+        "change"
       ]
     },
     "iron_souls" : {
@@ -135,11 +135,11 @@
         }
       ],
       "subfactions" : [
-        "blackpowder",
         "wrath",
         "excess",
-        "forge",
-        "none"
+        "pestilence",
+        "none",
+        "change"
       ]
     },
     "iron_lord" : {
@@ -194,11 +194,11 @@
         "Infantry"
       ],
       "subfactions" : [
-        "blackpowder",
         "wrath",
         "excess",
-        "forge",
-        "none"
+        "pestilence",
+        "none",
+        "change"
       ]
     },
     "soul_bound_orcs" : {
@@ -271,11 +271,11 @@
         }
       ],
       "subfactions" : [
-        "blackpowder",
         "wrath",
         "excess",
-        "forge",
-        "none"
+        "pestilence",
+        "none",
+        "change"
       ]
     }
   },
@@ -367,7 +367,7 @@
   "powers" : {
     "fireball" : {
       "name" : "Fireball",
-      "description" : "Target enemy unit within 12\" takes 3 hits with AP 3.",
+      "description" : "Target enemy unit within 12\" takes 3 hits with AP(3).",
       "charge" : 6
     },
     "pain" : {
@@ -389,15 +389,18 @@
   },
   "strategies" : [
     {
-      "subfactions" : [
-        "none",
-        "change_traitors"
-      ],
       "name" : "Blazing Runes",
       "phase" : "activation",
       "description" : "Use before an Infantry unit fights. Hit rolls of 1 or 2 gain +1 AP.",
       "flavor" : "Traitor Dwarves wield enchanted weapons, covered in unholy runes and burning with dark magic.",
-      "cost" : 1
+      "cost" : 1,
+      "subfactions" : [
+        "wrath",
+        "excess",
+        "pestilence",
+        "none",
+        "change"
+      ]
     },
     {
       "subfactions" : [
@@ -405,8 +408,7 @@
         "wrath",
         "excess",
         "pestilence",
-        "change",
-        "deception"
+        "change"
       ],
       "name" : "Unnatural Strength",
       "phase" : "activation",
@@ -419,7 +421,14 @@
       "name" : "Daemonforged Bullets",
       "flavor" : "Possessed bullets, forged in Hellfire and inscribed with cursed runes, are highly unstable but very effective.",
       "description" : "Use before an Infantry unit shoots. Add +6\" to the short and long range bands of all weapons.",
-      "cost" : 1
+      "cost" : 1,
+      "subfactions" : [
+        "wrath",
+        "excess",
+        "pestilence",
+        "none",
+        "change"
+      ]
     }
   ],
   "relics" : []

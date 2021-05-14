@@ -1503,7 +1503,7 @@
   "powers" : {
     "lightning_storm" : {
       "name" : "Lightning Storm",
-      "description" : "Target enemy unit within 12\" take 5 hits each with AP 0.",
+      "description" : "Target enemy unit within 12\" take 5 hits each with no AP.",
       "charge" : 7
     },
     "shroud" : {
@@ -1513,7 +1513,7 @@
     },
     "lightning_bolt" : {
       "name" : "Lightning Bolt",
-      "description" : "Target enemy unit within 18\" takes 1 hit with AP 7.",
+      "description" : "Target enemy unit within 18\" takes 1 hit with AP(7).",
       "charge" : 6
     }
   },
