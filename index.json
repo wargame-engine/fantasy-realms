@@ -710,21 +710,6 @@
         "x"
       ]
     },
-    "musician" : {
-      "name" : "Musician",
-      "description" : "This unit may re-roll a single failed Initiative test when sprinting.",
-      "points" : 5
-    },
-    "banner" : {
-      "name" : "Banner",
-      "description" : "This unit may re-roll a single failed Courage test when removing Shock.",
-      "points" : 5
-    },
-    "skirmishers" : {
-      "name" : "Skirmishers",
-      "description" : "This unit has a 3“ coherency and may not be more than 8\" away from any model in the unit at the end of a move action.",
-      "points" : 2
-    },
     "distract" : {
       "name" : "Distracting",
       "description" : "Enemy units within 6\" get -1 Strength.",
