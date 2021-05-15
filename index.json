@@ -722,7 +722,7 @@
     },
     "skirmishers" : {
       "name" : "Skirmishers",
-      "description" : "This unit has a 3“ coherency and may not be more than 8\" away from any model in the unit at the end of a move action.",
+      "description" : "This unit has +1 Save when hit by a shooting attack and a 3“ coherency instead of a 2“ coherency.",
       "points" : 2
     },
     "distract" : {
