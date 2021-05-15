@@ -1484,16 +1484,6 @@
     }
   },
   "rules" : {
-    "mount_horse" : {
-      "name" : "War Horse",
-      "description" : "Increase Movement by 2\".",
-      "points" : 2
-    },
-    "skirmishers" : {
-      "name" : "Skirmishers",
-      "description" : "This unit has a 4\" coherency and may not be more than 8\" away from any model in the unit at the end of a move action.",
-      "points" : 2
-    },
     "cloak" : {
       "name" : "Enchanted Cloak",
       "description" : "This model has +2 to its Save characteristic when being hit by a ranged attack.",
