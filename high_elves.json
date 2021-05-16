@@ -111,7 +111,7 @@
             },
             "leader",
             {
-              "id" : "magic",
+              "id" : "power",
               "x" : 2
             },
             "runes"
@@ -154,7 +154,7 @@
             "phoenix_armor",
             "leader",
             {
-              "id" : "magic",
+              "id" : "power",
               "x" : 1
             },
             {
@@ -180,33 +180,8 @@
       "category" : "core",
       "models" : [
         {
-          "name" : "High-Warden",
-          "max" : 1,
-          "min" : 1,
-          "movement" : 7,
-          "courage" : 5,
-          "shoot" : 6,
-          "fight" : 6,
-          "defense" : 5,
-          "reflexes" : 5,
-          "weapons" : [
-            "shield",
-            "handweapon"
-          ],
-          "options" : [
-            {
-              "addRule" : [
-                {
-                  "id" : "dispel",
-                  "x" : 1
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "max" : 19,
-          "min" : 4,
+          "max" : 20,
+          "min" : 5,
           "name" : "Soldier",
           "movement" : 7,
           "courage" : 5,
@@ -245,15 +220,15 @@
                 "id" : "spear"
               },
               "shield"
-            ],
-            [
-              {
-                "id" : "handweapon",
-                "count" : 2
-              }
             ]
           ],
           "modelLimit" : "all"
+        },
+        {
+          "addRule" : [
+            "champion"
+          ],
+          "modelLimit" : 1
         },
         {
           "addRule" : [
@@ -278,35 +253,26 @@
       "category" : "core",
       "models" : [
         {
-          "name" : "Gallant",
-          "movement" : 10,
-          "courage" : 5,
-          "shoot" : 6,
-          "fight" : 6,
-          "defense" : 5,
-          "reflexes" : 5,
-          "weapons" : [
-            "long_bow",
-            {
-              "id" : "hooves_and_teeth",
-              "count" : 2
-            },
-            "spear"
-          ],
-          "min" : 1,
-          "max" : 1,
           "options" : [
             {
               "addRule" : [
-                {
-                  "id" : "dispel",
-                  "x" : 1
-                }
-              ]
+                "champion"
+              ],
+              "modelLimit" : 1
+            },
+            {
+              "addRule" : [
+                "banner"
+              ],
+              "modelLimit" : 1
+            },
+            {
+              "addRule" : [
+                "musician"
+              ],
+              "modelLimit" : 1
             }
-          ]
-        },
-        {
+          ],
           "name" : "Vanguard",
           "movement" : 10,
           "courage" : 5,
@@ -325,26 +291,12 @@
           "rules" : [
             "outflank"
           ],
-          "min" : 2,
-          "max" : 11
+          "min" : 3,
+          "max" : 12
         }
       ],
       "keywords" : [
         "Cavalry"
-      ],
-      "options" : [
-        {
-          "addRule" : [
-            "banner"
-          ],
-          "modelLimit" : 1
-        },
-        {
-          "addRule" : [
-            "musician"
-          ],
-          "modelLimit" : 1
-        }
       ],
       "subfactions" : [
         "none"
@@ -356,48 +308,26 @@
       "category" : "core",
       "models" : [
         {
-          "name" : "Templar",
-          "movement" : 10,
-          "courage" : 6,
-          "shoot" : 4,
-          "fight" : 6,
-          "defense" : 5,
-          "reflexes" : 5,
-          "weapons" : [
-            {
-              "id" : "hooves_and_teeth",
-              "count" : 2
-            },
-            "shield",
-            "lance"
-          ],
-          "min" : 1,
-          "max" : 1,
           "options" : [
             {
-              "replaceWeapon" : [
-                "lance"
+              "addRule" : [
+                "champion"
               ],
-              "withWeapon" : [
-                [
-                  {
-                    "id" : "exalted_blade",
-                    "count" : 2
-                  }
-                ]
-              ]
+              "modelLimit" : 1
             },
             {
               "addRule" : [
-                {
-                  "id" : "dispel",
-                  "x" : 1
-                }
-              ]
+                "banner"
+              ],
+              "modelLimit" : 1
+            },
+            {
+              "addRule" : [
+                "musician"
+              ],
+              "modelLimit" : 1
             }
-          ]
-        },
-        {
+          ],
           "name" : "Knight",
           "movement" : 10,
           "courage" : 6,
@@ -413,26 +343,12 @@
             },
             "shield"
           ],
-          "min" : 2,
-          "max" : 11
+          "min" : 3,
+          "max" : 12
         }
       ],
       "keywords" : [
         "Cavalry"
-      ],
-      "options" : [
-        {
-          "addRule" : [
-            "banner"
-          ],
-          "modelLimit" : 1
-        },
-        {
-          "addRule" : [
-            "musician"
-          ],
-          "modelLimit" : 1
-        }
       ],
       "subfactions" : [
         "none"
@@ -444,31 +360,30 @@
       "category" : "core",
       "models" : [
         {
-          "name" : "Guard Captain",
-          "movement" : 7,
-          "courage" : 5,
-          "shoot" : 6,
-          "fight" : 6,
-          "defense" : 6,
-          "reflexes" : 5,
-          "weapons" : [
-            "long_bow",
-            "spear"
-          ],
-          "min" : 1,
-          "max" : 1,
           "options" : [
             {
+              "addWeapon" : "shield",
+              "modelLimit" : "all"
+            },
+            {
               "addRule" : [
-                {
-                  "id" : "dispel",
-                  "x" : 1
-                }
-              ]
+                "champion"
+              ],
+              "modelLimit" : 1
+            },
+            {
+              "addRule" : [
+                "banner"
+              ],
+              "modelLimit" : 1
+            },
+            {
+              "addRule" : [
+                "musician"
+              ],
+              "modelLimit" : 1
             }
-          ]
-        },
-        {
+          ],
           "name" : "Guard",
           "movement" : 7,
           "courage" : 5,
@@ -480,26 +395,8 @@
             "long_bow",
             "spear"
           ],
-          "min" : 4,
-          "max" : 19
-        }
-      ],
-      "options" : [
-        {
-          "addWeapon" : "shield",
-          "modelLimit" : "all"
-        },
-        {
-          "addRule" : [
-            "banner"
-          ],
-          "modelLimit" : 1
-        },
-        {
-          "addRule" : [
-            "musician"
-          ],
-          "modelLimit" : 1
+          "min" : 5,
+          "max" : 20
         }
       ],
       "rules" : [
@@ -515,33 +412,26 @@
       "category" : "elite",
       "models" : [
         {
-          "name" : "Highlands Champion",
-          "movement" : 7,
-          "courage" : 6,
-          "shoot" : 4,
-          "fight" : 6,
-          "defense" : 6,
-          "reflexes" : 5,
-          "weapons" : [
-            {
-              "id" : "great",
-              "count" : 2
-            }
-          ],
-          "min" : 1,
-          "max" : 1,
           "options" : [
             {
               "addRule" : [
-                {
-                  "id" : "dispel",
-                  "x" : 1
-                }
-              ]
+                "champion"
+              ],
+              "modelLimit" : 1
+            },
+            {
+              "addRule" : [
+                "banner"
+              ],
+              "modelLimit" : 1
+            },
+            {
+              "addRule" : [
+                "musician"
+              ],
+              "modelLimit" : 1
             }
-          ]
-        },
-        {
+          ],
           "name" : "Protector",
           "movement" : 7,
           "courage" : 6,
@@ -555,28 +445,14 @@
               "count" : 2
             }
           ],
-          "min" : 4,
-          "max" : 19
+          "min" : 5,
+          "max" : 20
         }
       ],
       "rules" : [
         "fearless",
         "agile",
         "cloak"
-      ],
-      "options" : [
-        {
-          "addRule" : [
-            "banner"
-          ],
-          "modelLimit" : 1
-        },
-        {
-          "addRule" : [
-            "musician"
-          ],
-          "modelLimit" : 1
-        }
       ],
       "subfactions" : [
         "none"
@@ -590,31 +466,6 @@
       "category" : "elite",
       "models" : [
         {
-          "name" : "Slayer",
-          "movement" : 7,
-          "courage" : 5,
-          "shoot" : 6,
-          "fight" : 6,
-          "defense" : 5,
-          "reflexes" : 5,
-          "weapons" : [
-            "long_bow",
-            "handweapon"
-          ],
-          "min" : 1,
-          "max" : 1,
-          "options" : [
-            {
-              "addRule" : [
-                {
-                  "id" : "dispel",
-                  "x" : 1
-                }
-              ]
-            }
-          ]
-        },
-        {
           "name" : "Ranger",
           "movement" : 7,
           "courage" : 5,
@@ -626,8 +477,16 @@
             "long_bow",
             "handweapon"
           ],
-          "min" : 4,
-          "max" : 19
+          "min" : 5,
+          "max" : 20,
+          "options" : [
+            {
+              "addRule" : [
+                "champion"
+              ],
+              "modelLimit" : 1
+            }
+          ]
         }
       ],
       "rules" : [
@@ -644,33 +503,26 @@
       "category" : "elite",
       "models" : [
         {
-          "name" : "Pheonix Knight",
-          "movement" : 7,
-          "courage" : 6,
-          "shoot" : 4,
-          "fight" : 6,
-          "defense" : 6,
-          "reflexes" : 6,
-          "weapons" : [
-            {
-              "id" : "halberd",
-              "count" : 2
-            }
-          ],
-          "min" : 1,
-          "max" : 1,
           "options" : [
             {
               "addRule" : [
-                {
-                  "id" : "dispel",
-                  "x" : 1
-                }
-              ]
+                "champion"
+              ],
+              "modelLimit" : 1
+            },
+            {
+              "addRule" : [
+                "banner"
+              ],
+              "modelLimit" : 1
+            },
+            {
+              "addRule" : [
+                "musician"
+              ],
+              "modelLimit" : 1
             }
-          ]
-        },
-        {
+          ],
           "name" : "Templar",
           "movement" : 7,
           "courage" : 6,
@@ -684,22 +536,8 @@
               "count" : 2
             }
           ],
-          "min" : 2,
-          "max" : 11
-        }
-      ],
-      "options" : [
-        {
-          "addRule" : [
-            "banner"
-          ],
-          "modelLimit" : 1
-        },
-        {
-          "addRule" : [
-            "musician"
-          ],
-          "modelLimit" : 1
+          "min" : 5,
+          "max" : 20
         }
       ],
       "rules" : [
@@ -721,27 +559,26 @@
       "category" : "rare",
       "models" : [
         {
-          "name" : "Dragon Templar",
-          "movement" : 10,
-          "courage" : 5,
-          "shoot" : 4,
-          "fight" : 6,
-          "defense" : 7,
-          "reflexes" : 5,
-          "weapons" : [
+          "options" : [
             {
-              "id" : "lance",
-              "count" : 2
+              "addRule" : [
+                "champion"
+              ],
+              "modelLimit" : 1
             },
             {
-              "id" : "hooves_and_teeth",
-              "count" : 2
+              "addRule" : [
+                "banner"
+              ],
+              "modelLimit" : 1
+            },
+            {
+              "addRule" : [
+                "musician"
+              ],
+              "modelLimit" : 1
             }
           ],
-          "min" : 1,
-          "max" : 1
-        },
-        {
           "name" : "Dragoon",
           "movement" : 10,
           "courage" : 5,
@@ -759,8 +596,8 @@
               "count" : 2
             }
           ],
-          "min" : 2,
-          "max" : 11
+          "min" : 3,
+          "max" : 12
         }
       ],
       "rules" : [
@@ -769,20 +606,6 @@
       ],
       "keywords" : [
         "Cavalry"
-      ],
-      "options" : [
-        {
-          "addRule" : [
-            "banner"
-          ],
-          "modelLimit" : 1
-        },
-        {
-          "addRule" : [
-            "musician"
-          ],
-          "modelLimit" : 1
-        }
       ],
       "subfactions" : [
         "none"
@@ -825,11 +648,7 @@
       ],
       "options" : [],
       "subfactions" : [
-        "none",
-        "magic",
-        "polis",
-        "temple",
-        "beasts"
+        "none"
       ]
     },
     "elf_chariot" : {
@@ -858,7 +677,7 @@
               "id" : "impact",
               "x" : 3
             },
-            "damage_table_vehicle"
+            "damage_table_chariot"
           ],
           "min" : 1,
           "max" : 1,
@@ -906,9 +725,7 @@
         }
       ],
       "keywords" : [
-        "Beast",
-        "Warmachine",
-        "Cavalry"
+        "Chariot"
       ],
       "subfactions" : [
         "none"
@@ -916,37 +733,46 @@
     },
     "elf_skycutter" : {
       "name" : "Elven Skycutter",
-      "description" : "A vessel piloted by a pair of elven warriors.",
+      "description" : "A flying vessel piloted by a pair of elven warriors.",
       "category" : "elite",
       "models" : [
         {
-          "name" : "Elven Crew on Skycutter",
+          "name" : "Elven Skycutter",
           "movement" : 12,
-          "courage" : 5,
-          "shoot" : 6,
           "fight" : 6,
-          "defense" : 10,
-          "reflexes" : 5,
+          "shoot" : 6,
           "weapons" : [
+            "ballista_mounted",
             {
               "id" : "claws",
               "count" : 2
             },
-            "spear",
-            "ballista"
+            {
+              "id" : "spear",
+              "count" : 2
+            }
           ],
           "rules" : [
-            "damage_table_vehicle",
-            "fly"
+            "fly",
+            "damage_table_chariot"
           ],
           "min" : 1,
-          "max" : 1
+          "max" : 1,
+          "courage" : 5,
+          "reflexes" : 5,
+          "defense" : 10,
+          "options" : [
+            {
+              "addRule" : [
+                "banner"
+              ]
+            }
+          ]
         }
       ],
       "keywords" : [
         "Beast",
-        "Warmachine",
-        "Cavalry"
+        "Chariot"
       ],
       "subfactions" : [
         "none"
@@ -955,29 +781,22 @@
     "elf_ballista" : {
       "name" : "Great Ballista",
       "description" : "A deadly war machine, crewed by a pair of elven warriors.",
-      "min" : 1,
-      "max" : 3,
       "category" : "rare",
       "models" : [
         {
           "name" : "Great Ballista",
-          "movement" : 7,
-          "courage" : 0,
-          "shoot" : 6,
+          "movement" : 5,
           "fight" : 0,
-          "defense" : 8,
-          "reflexes" : 0,
+          "shoot" : 6,
           "weapons" : [
             "ballista"
           ],
-          "rules" : [
-            {
-              "id" : "team",
-              "x" : 2
-            }
-          ],
+          "rules" : [],
           "min" : 1,
-          "max" : 1
+          "max" : 1,
+          "courage" : "-",
+          "reflexes" : "-",
+          "defense" : "-"
         },
         {
           "name" : "Crew",
@@ -985,7 +804,7 @@
           "courage" : 5,
           "shoot" : 4,
           "fight" : 6,
-          "defense" : 5,
+          "defense" : 7,
           "reflexes" : 5,
           "weapons" : [
             "handweapon"
@@ -995,7 +814,6 @@
         }
       ],
       "keywords" : [
-        "Infantry",
         "Warmachine"
       ],
       "subfactions" : [
@@ -1008,27 +826,6 @@
       "category" : "rare",
       "models" : [
         {
-          "name" : "Anointed Sister",
-          "movement" : 7,
-          "courage" : 5,
-          "shoot" : 6,
-          "fight" : 5,
-          "defense" : 5,
-          "reflexes" : 5,
-          "weapons" : [
-            "handweapon",
-            "spectral_bow"
-          ],
-          "min" : 1,
-          "max" : 1,
-          "rules" : [
-            {
-              "id" : "dispel",
-              "x" : 1
-            }
-          ]
-        },
-        {
           "name" : "Sister of the Veil",
           "movement" : 7,
           "courage" : 5,
@@ -1040,19 +837,23 @@
             "handweapon",
             "spectral_bow"
           ],
-          "min" : 4,
-          "max" : 19
+          "min" : 5,
+          "max" : 20,
+          "options" : [
+            {
+              "addRule" : [
+                "champion"
+              ],
+              "modelLimit" : 1
+            }
+          ]
         }
       ],
       "keywords" : [
         "Infantry"
       ],
       "subfactions" : [
-        "none",
-        "magic",
-        "polis",
-        "temple",
-        "beasts"
+        "none"
       ]
     },
     "coast_lord" : {
@@ -1168,7 +969,7 @@
             },
             "leader",
             {
-              "id" : "magic",
+              "id" : "power",
               "x" : 1
             },
             "runes"
@@ -1183,11 +984,7 @@
         "Cavalry"
       ],
       "subfactions" : [
-        "none",
-        "magic",
-        "polis",
-        "temple",
-        "beasts"
+        "none"
       ]
     },
     "mage_blade_lord" : {
@@ -1216,7 +1013,7 @@
             },
             "leader",
             {
-              "id" : "magic",
+              "id" : "power",
               "x" : 1
             },
             "cloak"
@@ -1239,45 +1036,32 @@
       "category" : "elite",
       "models" : [
         {
-          "name" : "Magister",
-          "movement" : 7,
-          "courage" : 5,
-          "shoot" : 4,
-          "fight" : 6,
-          "defense" : 6,
-          "reflexes" : 5,
-          "weapons" : [
-            {
-              "id" : "great",
-              "count" : 2
-            }
-          ],
-          "rules" : [
-            {
-              "id" : "dispel",
-              "x" : 1
-            }
-          ],
-          "min" : 1,
-          "max" : 1,
           "options" : [
             {
-              "replaceRule" : [
-                {
-                  "id" : "dispel",
-                  "x" : 1
-                }
+              "addRule" : [
+                [
+                  "champion",
+                  {
+                    "id" : "power",
+                    "x" : 1
+                  }
+                ]
               ],
-              "withRule" : [
-                {
-                  "id" : "magic",
-                  "x" : 1
-                }
-              ]
+              "modelLimit" : 1
+            },
+            {
+              "addRule" : [
+                "banner"
+              ],
+              "modelLimit" : 1
+            },
+            {
+              "addRule" : [
+                "musician"
+              ],
+              "modelLimit" : 1
             }
-          ]
-        },
-        {
+          ],
           "name" : "Mageblade",
           "movement" : 7,
           "courage" : 5,
@@ -1291,26 +1075,12 @@
               "count" : 2
             }
           ],
-          "min" : 2,
-          "max" : 11
+          "min" : 5,
+          "max" : 20
         }
       ],
       "rules" : [
         "cloak"
-      ],
-      "options" : [
-        {
-          "addRule" : [
-            "banner"
-          ],
-          "modelLimit" : 1
-        },
-        {
-          "addRule" : [
-            "musician"
-          ],
-          "modelLimit" : 1
-        }
       ],
       "subfactions" : [
         "none"
@@ -1445,6 +1215,12 @@
           "short" : 9,
           "rules" : []
         }
+      ],
+      "rules" : [
+        {
+          "id" : "crew",
+          "x" : 2
+        }
       ]
     },
     "spectral_bow" : {
@@ -1479,6 +1255,27 @@
       "rules" : [
         {
           "id" : "dragon_banner"
+        }
+      ]
+    },
+    "ballista_mounted" : {
+      "name" : "Ballista",
+      "profiles" : [
+        {
+          "name" : "Focus",
+          "ap" : 6,
+          "attacks" : 1,
+          "medium" : 36,
+          "short" : 18,
+          "rules" : []
+        },
+        {
+          "name" : "Volley",
+          "ap" : 2,
+          "attacks" : 8,
+          "medium" : 18,
+          "short" : 9,
+          "rules" : []
         }
       ]
     }
