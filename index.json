@@ -457,8 +457,8 @@
         }
       ]
     },
-    "dagger" : {
-      "name" : "Dagger",
+    "light_handweapon" : {
+      "name" : "Light Handweapon",
       "attacks" : 1,
       "short" : "Melee"
     },

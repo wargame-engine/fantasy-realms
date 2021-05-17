@@ -269,7 +269,7 @@
           "reflexes" : 5,
           "weapons" : [
             "bow",
-            "dagger"
+            "light_handweapon"
           ],
           "min" : 10,
           "max" : 30
@@ -322,7 +322,7 @@
           "reflexes" : 5,
           "weapons" : [
             "light_handgun",
-            "dagger"
+            "light_handweapon"
           ],
           "min" : 10,
           "max" : 30
@@ -592,7 +592,7 @@
           "defense" : 7,
           "reflexes" : 5,
           "weapons" : [
-            "dagger"
+            "light_handweapon"
           ],
           "min" : 3,
           "max" : 3
@@ -636,7 +636,7 @@
           "defense" : 7,
           "reflexes" : 5,
           "weapons" : [
-            "dagger"
+            "light_handweapon"
           ],
           "min" : 3,
           "max" : 3
@@ -876,7 +876,7 @@
       "reflexes" : 5,
       "weapons" : [
         "sniper_rifle",
-        "dagger"
+        "light_handweapon"
       ],
       "max" : 1,
       "rules" : [

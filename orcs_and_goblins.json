@@ -280,7 +280,7 @@
           "withWeapon" : [
             [
               "short_bow",
-              "dagger"
+              "light_handweapon"
             ],
             [
               "spear",
@@ -522,7 +522,7 @@
           "reflexes" : 5,
           "weapons" : [
             {
-              "id" : "dagger",
+              "id" : "light_handweapon",
               "count" : 3
             },
             {
@@ -536,7 +536,7 @@
             {
               "replaceWeapon" : [
                 {
-                  "id" : "dagger",
+                  "id" : "light_handweapon",
                   "count" : 3
                 }
               ],
@@ -570,7 +570,7 @@
           "reflexes" : 5,
           "weapons" : [
             {
-              "id" : "dagger",
+              "id" : "light_handweapon",
               "count" : 2
             },
             {
@@ -584,7 +584,7 @@
             {
               "replaceWeapon" : [
                 {
-                  "id" : "dagger",
+                  "id" : "light_handweapon",
                   "count" : 2
                 }
               ],

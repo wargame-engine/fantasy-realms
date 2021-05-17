@@ -289,7 +289,7 @@
           "defense" : 5,
           "reflexes" : 6,
           "weapons" : [
-            "dagger",
+            "light_handweapon",
             {
               "id" : "tentacle",
               "count" : 6
@@ -440,7 +440,7 @@
             ],
             [
               "riptide_bow",
-              "dagger"
+              "light_handweapon"
             ]
           ],
           "modelLimit" : "all"

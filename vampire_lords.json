@@ -531,7 +531,7 @@
             [
               "bone_bow",
               {
-                "id" : "dagger",
+                "id" : "light_handweapon",
                 "count" : 2
               }
             ],

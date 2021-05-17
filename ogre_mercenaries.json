@@ -407,7 +407,7 @@
           "weapons" : [
             "sharp_stuff",
             {
-              "id" : "dagger",
+              "id" : "light_handweapon",
               "count" : 2
             }
           ]
@@ -425,7 +425,7 @@
           "weapons" : [
             "sharp_stuff",
             {
-              "id" : "dagger",
+              "id" : "light_handweapon",
               "count" : 2
             }
           ]
@@ -600,7 +600,7 @@
             "ball_o_stuff",
             "mournfang_tusks",
             {
-              "id" : "dagger",
+              "id" : "light_handweapon",
               "count" : 3
             }
           ],
