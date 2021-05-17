@@ -923,7 +923,7 @@
             {
               "addRule" : [
                 {
-                  "id" : "dispel",
+                  "id" : "ward",
                   "x" : 1
                 }
               ]

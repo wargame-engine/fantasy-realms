@@ -81,7 +81,7 @@
               "x" : 3
             },
             {
-              "id" : "magic",
+              "id" : "power",
               "x" : 1
             },
             "leader"
@@ -97,13 +97,13 @@
             {
               "replaceRule" : [
                 {
-                  "id" : "magic",
+                  "id" : "power",
                   "x" : 1
                 }
               ],
               "withRule" : [
                 {
-                  "id" : "magic",
+                  "id" : "power",
                   "x" : 2
                 }
               ]
@@ -248,7 +248,7 @@
           "reflexes" : 4,
           "rules" : [
             {
-              "id" : "magic",
+              "id" : "power",
               "x" : 1
             },
             "leader",
@@ -269,13 +269,13 @@
             {
               "replaceRule" : [
                 {
-                  "id" : "magic",
+                  "id" : "power",
                   "x" : 1
                 }
               ],
               "withRule" : [
                 {
-                  "id" : "magic",
+                  "id" : "power",
                   "x" : 2
                 }
               ]

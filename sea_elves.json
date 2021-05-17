@@ -215,7 +215,7 @@
             },
             "leader",
             {
-              "id" : "magic",
+              "id" : "power",
               "x" : 2
             }
           ],
@@ -261,7 +261,7 @@
             "leader",
             "soul",
             {
-              "id" : "magic",
+              "id" : "power",
               "x" : 1
             }
           ],

@@ -55,13 +55,13 @@
             {
               "replaceRule" : [
                 {
-                  "id" : "magic",
+                  "id" : "power",
                   "x" : 1
                 }
               ],
               "withRule" : [
                 {
-                  "id" : "magic",
+                  "id" : "power",
                   "x" : 2
                 }
               ]
@@ -101,7 +101,7 @@
             "damage_table_monster",
             "fly",
             {
-              "id" : "magic",
+              "id" : "power",
               "x" : 1
             },
             {
@@ -176,13 +176,13 @@
             {
               "replaceRule" : [
                 {
-                  "id" : "magic",
+                  "id" : "power",
                   "x" : 1
                 }
               ],
               "withRule" : [
                 {
-                  "id" : "magic",
+                  "id" : "power",
                   "x" : 2
                 }
               ]
@@ -213,7 +213,7 @@
               "x" : 3
             },
             {
-              "id" : "magic",
+              "id" : "power",
               "x" : 1
             },
             {
@@ -288,13 +288,13 @@
             {
               "replaceRule" : [
                 {
-                  "id" : "magic",
+                  "id" : "power",
                   "x" : 1
                 }
               ],
               "withRule" : [
                 {
-                  "id" : "magic",
+                  "id" : "power",
                   "x" : 2
                 }
               ]
@@ -322,7 +322,7 @@
             "fear",
             "leader",
             {
-              "id" : "magic",
+              "id" : "power",
               "x" : 1
             },
             {
@@ -371,13 +371,13 @@
             {
               "replaceRule" : [
                 {
-                  "id" : "magic",
+                  "id" : "power",
                   "x" : 1
                 }
               ],
               "withRule" : [
                 {
-                  "id" : "magic",
+                  "id" : "power",
                   "x" : 2
                 }
               ]
@@ -406,7 +406,7 @@
             "leader",
             "fly",
             {
-              "id" : "magic",
+              "id" : "power",
               "x" : 1
             },
             {
@@ -1091,7 +1091,7 @@
           "x" : 3
         },
         {
-          "id" : "dispel",
+          "id" : "ward",
           "x" : 1
         },
         "leader"
@@ -1186,7 +1186,7 @@
           "x" : 3
         },
         {
-          "id" : "dispel",
+          "id" : "ward",
           "x" : 1
         },
         "leader"

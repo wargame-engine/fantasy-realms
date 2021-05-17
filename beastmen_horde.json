@@ -150,7 +150,7 @@
         {
           "name" : "Satyr Shaman",
           "movement" : 7,
-          "courage" : 4,
+          "courage" : 6,
           "shoot" : 4,
           "fight" : 5,
           "defense" : 5,
@@ -166,7 +166,7 @@
               "x" : 3
             },
             {
-              "id" : "magic",
+              "id" : "power",
               "x" : 1
             },
             "support"
@@ -177,13 +177,13 @@
             {
               "replaceRule" : [
                 {
-                  "id" : "magic",
+                  "id" : "power",
                   "x" : 1
                 }
               ],
               "withRule" : [
                 {
-                  "id" : "magic",
+                  "id" : "power",
                   "x" : 2
                 }
               ]
@@ -237,13 +237,13 @@
             {
               "replaceRule" : [
                 {
-                  "id" : "magic",
+                  "id" : "power",
                   "x" : 1
                 }
               ],
               "withRule" : [
                 {
-                  "id" : "magic",
+                  "id" : "power",
                   "x" : 2
                 }
               ]
@@ -255,7 +255,7 @@
               "x" : 4
             },
             {
-              "id" : "magic",
+              "id" : "power",
               "x" : 1
             },
             "leader"
@@ -835,7 +835,7 @@
           "x" : 3
         },
         {
-          "id" : "magic",
+          "id" : "power",
           "x" : 1
         },
         {
@@ -925,7 +925,7 @@
                 [
                   "anti_magic",
                   {
-                    "id" : "dispel",
+                    "id" : "ward",
                     "x" : 2
                   }
                 ]
