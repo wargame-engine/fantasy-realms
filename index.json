@@ -458,12 +458,12 @@
       ]
     },
     "light_handweapon" : {
-      "name" : "Light Handweapon",
+      "name" : "Light Hand Weapon",
       "attacks" : 1,
       "short" : "Melee"
     },
     "handweapon" : {
-      "name" : "Handweapon",
+      "name" : "Hand Weapon",
       "attacks" : 1,
       "ap" : 1,
       "short" : "Melee"
