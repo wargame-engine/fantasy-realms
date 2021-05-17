@@ -166,14 +166,14 @@
         {
           "replaceWeapon" : [
             {
-              "id" : "heavy",
+              "id" : "heavy_handweapon",
               "count" : 3
             }
           ],
           "withWeapon" : [
             [
               {
-                "id" : "heavy",
+                "id" : "heavy_handweapon",
                 "count" : 2
               },
               "ironfist"
@@ -212,7 +212,7 @@
           ],
           "weapons" : [
             {
-              "id" : "heavy",
+              "id" : "heavy_handweapon",
               "count" : 3
             }
           ]
@@ -235,7 +235,7 @@
           ],
           "weapons" : [
             {
-              "id" : "heavy",
+              "id" : "heavy_handweapon",
               "count" : 3
             }
           ]

@@ -191,12 +191,12 @@
           ],
           "withWeapon" : [
             {
-              "id" : "heavy",
+              "id" : "heavy_handweapon",
               "count" : 3
             },
             [
               {
-                "id" : "heavy",
+                "id" : "heavy_handweapon",
                 "count" : 2
               },
               "shield"
@@ -382,7 +382,7 @@
           "withWeapon" : [
             [
               {
-                "id" : "heavy",
+                "id" : "heavy_handweapon",
                 "count" : 2
               },
               "enchanted_shield"
@@ -532,14 +532,14 @@
               "withWeapon" : [
                 [
                   {
-                    "id" : "heavy",
+                    "id" : "heavy_handweapon",
                     "count" : 3
                   },
                   "starfall_banner"
                 ],
                 [
                   {
-                    "id" : "heavy",
+                    "id" : "heavy_handweapon",
                     "count" : 2
                   },
                   "icon_staff"
@@ -552,7 +552,7 @@
                 ],
                 [
                   {
-                    "id" : "heavy",
+                    "id" : "heavy_handweapon",
                     "count" : 3
                   },
                   "grim_staff"
@@ -693,7 +693,7 @@
                 ],
                 [
                   {
-                    "id" : "heavy",
+                    "id" : "heavy_handweapon",
                     "count" : 4
                   }
                 ],
@@ -703,7 +703,7 @@
                     "count" : 2
                   },
                   {
-                    "id" : "heavy",
+                    "id" : "heavy_handweapon",
                     "count" : 2
                   }
                 ],

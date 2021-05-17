@@ -527,7 +527,7 @@
           "reflexes" : 4,
           "weapons" : [
             {
-              "id" : "heavy",
+              "id" : "heavy_handweapon",
               "count" : 2
             },
             {
@@ -551,7 +551,7 @@
           "reflexes" : 4,
           "weapons" : [
             {
-              "id" : "heavy",
+              "id" : "heavy_handweapon",
               "count" : 2
             },
             {
@@ -573,7 +573,7 @@
         {
           "replaceWeapon" : [
             {
-              "id" : "heavy",
+              "id" : "heavy_handweapon",
               "count" : 2
             }
           ],

@@ -337,7 +337,7 @@
           "defense" : 5,
           "reflexes" : 5,
           "weapons" : [
-            "heavy",
+            "heavy_handweapon",
             "shield"
           ],
           "min" : 1,
@@ -352,7 +352,7 @@
           "defense" : 5,
           "reflexes" : 5,
           "weapons" : [
-            "heavy",
+            "heavy_handweapon",
             "shield"
           ],
           "min" : 4,
@@ -367,7 +367,7 @@
         {
           "replaceWeapon" : [
             {
-              "id" : "heavy"
+              "id" : "heavy_handweapon"
             },
             {
               "id" : "shield"
@@ -375,7 +375,7 @@
           ],
           "withWeapon" : [
             {
-              "id" : "heavy",
+              "id" : "heavy_handweapon",
               "count" : 2
             }
           ],
@@ -384,7 +384,7 @@
         {
           "replaceWeapon" : [
             {
-              "id" : "heavy",
+              "id" : "heavy_handweapon",
               "count" : 2
             }
           ],
@@ -656,7 +656,7 @@
           "reflexes" : 5,
           "weapons" : [
             {
-              "id" : "heavy",
+              "id" : "heavy_handweapon",
               "count" : 3
             }
           ],
@@ -664,7 +664,7 @@
             {
               "replaceWeapon" : [
                 {
-                  "id" : "heavy",
+                  "id" : "heavy_handweapon",
                   "count" : 3
                 }
               ],
@@ -694,7 +694,7 @@
           "reflexes" : 5,
           "weapons" : [
             {
-              "id" : "heavy",
+              "id" : "heavy_handweapon",
               "count" : 2
             }
           ],
@@ -702,7 +702,7 @@
             {
               "replaceWeapon" : [
                 {
-                  "id" : "heavy",
+                  "id" : "heavy_handweapon",
                   "count" : 2
                 }
               ],
@@ -1174,7 +1174,7 @@
           "weapons" : [
             "shield",
             {
-              "id" : "heavy",
+              "id" : "heavy_handweapon",
               "count" : 2
             }
           ],
@@ -1192,7 +1192,7 @@
           "weapons" : [
             "shield",
             {
-              "id" : "heavy",
+              "id" : "heavy_handweapon",
               "count" : 2
             }
           ],
@@ -1215,7 +1215,7 @@
         {
           "replaceWeapon" : [
             {
-              "id" : "heavy",
+              "id" : "heavy_handweapon",
               "count" : 2
             },
             "shield"

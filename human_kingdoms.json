@@ -71,7 +71,7 @@
           "reflexes" : 6,
           "weapons" : [
             {
-              "id" : "heavy",
+              "id" : "heavy_handweapon",
               "count" : 3
             },
             "shield"
@@ -91,7 +91,7 @@
             {
               "replaceWeapon" : [
                 {
-                  "id" : "heavy",
+                  "id" : "heavy_handweapon",
                   "count" : 3
                 },
                 "shield"
@@ -102,7 +102,7 @@
                   "count" : 3
                 },
                 {
-                  "id" : "heavy",
+                  "id" : "heavy_handweapon",
                   "count" : 4
                 }
               ]
@@ -506,7 +506,7 @@
           "options" : [
             {
               "replaceWeapon" : [
-                "heavy"
+                "heavy_handweapon"
               ],
               "withWeapon" : [
                 "lance"
@@ -544,7 +544,7 @@
               "id" : "hooves_and_teeth",
               "count" : 2
             },
-            "heavy",
+            "heavy_handweapon",
             "handweapon",
             "shield"
           ],

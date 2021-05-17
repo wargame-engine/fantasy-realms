@@ -112,7 +112,7 @@
           "defense" : 7,
           "reflexes" : 5,
           "weapons" : [
-            "heavy",
+            "heavy_handweapon",
             "great_weapon"
           ],
           "options" : [
@@ -215,7 +215,7 @@
           ],
           "withWeapon" : [
             {
-              "id" : "heavy",
+              "id" : "heavy_handweapon",
               "count" : 3
             },
             {
@@ -224,7 +224,7 @@
             },
             [
               {
-                "id" : "heavy",
+                "id" : "heavy_handweapon",
                 "count" : 2
               },
               "shield"
@@ -538,7 +538,7 @@
           "reflexes" : 6,
           "weapons" : [
             {
-              "id" : "heavy",
+              "id" : "heavy_handweapon",
               "count" : 4
             }
           ],
@@ -728,7 +728,7 @@
           "reflexes" : 4,
           "weapons" : [
             {
-              "id" : "heavy",
+              "id" : "heavy_handweapon",
               "count" : 2
             }
           ],
@@ -751,7 +751,7 @@
           "reflexes" : 4,
           "weapons" : [
             {
-              "id" : "heavy",
+              "id" : "heavy_handweapon",
               "count" : 2
             }
           ],
@@ -771,13 +771,13 @@
         {
           "replaceWeapon" : [
             {
-              "id" : "heavy",
+              "id" : "heavy_handweapon",
               "count" : 2
             }
           ],
           "withWeapon" : [
             [
-              "heavy",
+              "heavy_handweapon",
               "shield"
             ],
             [
@@ -793,7 +793,7 @@
         {
           "replaceWeapon" : [
             {
-              "id" : "heavy",
+              "id" : "heavy_handweapon",
               "count" : 2
             }
           ],
