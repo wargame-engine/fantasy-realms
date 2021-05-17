@@ -880,7 +880,7 @@
         {
           "name" : "Cyclops",
           "movement" : 10,
-          "courage" : 4,
+          "courage" : 5,
           "shoot" : 5,
           "fight" : 6,
           "defense" : 11,
@@ -888,7 +888,7 @@
           "weapons" : [
             {
               "id" : "great",
-              "count" : 2
+              "count" : 8
             },
             {
               "id" : "throw_rock"
@@ -901,7 +901,7 @@
               "replaceWeapon" : [
                 {
                   "id" : "great",
-                  "count" : 2
+                  "count" : 8
                 },
                 {
                   "id" : "throw_rock"
@@ -911,7 +911,7 @@
                 [
                   {
                     "id" : "brutal_halberd",
-                    "count" : 2
+                    "count" : 6
                   },
                   {
                     "id" : "maw",
