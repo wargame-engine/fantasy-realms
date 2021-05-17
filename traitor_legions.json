@@ -41,7 +41,7 @@
                   "count" : 4
                 },
                 {
-                  "id" : "great",
+                  "id" : "great_weapon",
                   "count" : 4
                 }
               ]
@@ -113,7 +113,7 @@
           "reflexes" : 5,
           "weapons" : [
             "heavy",
-            "great"
+            "great_weapon"
           ],
           "options" : [
             {
@@ -219,7 +219,7 @@
               "count" : 3
             },
             {
-              "id" : "great",
+              "id" : "great_weapon",
               "count" : 2
             },
             [
@@ -412,7 +412,7 @@
           ],
           "withWeapon" : [
             {
-              "id" : "great",
+              "id" : "great_weapon",
               "count" : 2
             }
           ],
@@ -606,7 +606,7 @@
                   "count" : 4
                 },
                 {
-                  "id" : "great",
+                  "id" : "great_weapon",
                   "count" : 4
                 },
                 {

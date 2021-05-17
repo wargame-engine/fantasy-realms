@@ -28,7 +28,7 @@
           ],
           "weapons" : [
             {
-              "id" : "great",
+              "id" : "great_weapon",
               "count" : 3
             },
             "shield"
@@ -39,14 +39,14 @@
             {
               "replaceWeapon" : [
                 {
-                  "id" : "great",
+                  "id" : "great_weapon",
                   "count" : 3
                 },
                 "shield"
               ],
               "withWeapon" : [
                 {
-                  "id" : "great",
+                  "id" : "great_weapon",
                   "count" : 4
                 },
                 {
@@ -88,7 +88,7 @@
           ],
           "weapons" : [
             {
-              "id" : "great",
+              "id" : "great_weapon",
               "count" : 2
             },
             "shield"
@@ -111,14 +111,14 @@
             {
               "replaceWeapon" : [
                 {
-                  "id" : "great",
+                  "id" : "great_weapon",
                   "count" : 2
                 },
                 "shield"
               ],
               "withWeapon" : [
                 {
-                  "id" : "great",
+                  "id" : "great_weapon",
                   "count" : 3
                 }
               ]
@@ -506,7 +506,7 @@
           ],
           "withWeapon" : [
             {
-              "id" : "great",
+              "id" : "great_weapon",
               "count" : 2
             }
           ],
@@ -1102,7 +1102,7 @@
           "reflexes" : 4,
           "weapons" : [
             {
-              "id" : "great",
+              "id" : "great_weapon",
               "count" : 2
             }
           ],

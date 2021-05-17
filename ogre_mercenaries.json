@@ -43,7 +43,7 @@
               "count" : 3
             },
             {
-              "id" : "great",
+              "id" : "great_weapon",
               "count" : 2
             }
           ],
@@ -94,7 +94,7 @@
           ],
           "weapons" : [
             {
-              "id" : "great",
+              "id" : "great_weapon",
               "count" : 6
             }
           ],
@@ -250,14 +250,14 @@
         {
           "replaceWeapon" : [
             {
-              "id" : "great",
+              "id" : "great_weapon",
               "count" : 4
             }
           ],
           "withWeapon" : [
             [
               {
-                "id" : "great",
+                "id" : "great_weapon",
                 "count" : 3
               },
               "ironfist"
@@ -296,7 +296,7 @@
           ],
           "weapons" : [
             {
-              "id" : "great",
+              "id" : "great_weapon",
               "count" : 4
             }
           ]
@@ -319,7 +319,7 @@
           ],
           "weapons" : [
             {
-              "id" : "great",
+              "id" : "great_weapon",
               "count" : 4
             }
           ]
@@ -476,7 +476,7 @@
           "max" : 1,
           "weapons" : [
             {
-              "id" : "great",
+              "id" : "great_weapon",
               "count" : 3
             },
             {
@@ -499,7 +499,7 @@
           "max" : 8,
           "weapons" : [
             {
-              "id" : "great",
+              "id" : "great_weapon",
               "count" : 3
             },
             {

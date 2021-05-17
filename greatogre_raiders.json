@@ -106,7 +106,7 @@
             "punching_shield",
             "handgun",
             {
-              "id" : "great",
+              "id" : "great_weapon",
               "count" : 3
             },
             {
@@ -128,7 +128,7 @@
           "weapons" : [
             "punching_shield",
             {
-              "id" : "great",
+              "id" : "great_weapon",
               "count" : 3
             },
             {

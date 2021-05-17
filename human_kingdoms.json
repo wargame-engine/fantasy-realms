@@ -98,7 +98,7 @@
               ],
               "withWeapon" : [
                 {
-                  "id" : "great",
+                  "id" : "great_weapon",
                   "count" : 3
                 },
                 {
@@ -181,7 +181,7 @@
                   "halberd",
                   "buckler"
                 ],
-                "great"
+                "great_weapon"
               ],
               "modelLimit" : "all"
             },
@@ -398,7 +398,7 @@
           "options" : [
             {
               "replaceWeapon" : [
-                "great"
+                "great_weapon"
               ],
               "withWeapon" : [
                 "zweihänder"
@@ -432,7 +432,7 @@
           "defense" : 6,
           "reflexes" : 6,
           "weapons" : [
-            "great"
+            "great_weapon"
           ],
           "min" : 5,
           "max" : 20

@@ -415,7 +415,7 @@
     }
   },
   "weapons" : {
-    "great" : {
+    "great_weapon" : {
       "name" : "Great-weapon",
       "attacks" : 1,
       "ap" : 4,

@@ -441,7 +441,7 @@
           "reflexes" : 5,
           "weapons" : [
             {
-              "id" : "great",
+              "id" : "great_weapon",
               "count" : 2
             }
           ],
@@ -696,7 +696,7 @@
                 ],
                 [
                   {
-                    "id" : "great"
+                    "id" : "great_weapon"
                   },
                   "handweapon"
                 ]
@@ -1002,7 +1002,7 @@
           "reflexes" : 6,
           "weapons" : [
             {
-              "id" : "great",
+              "id" : "great_weapon",
               "count" : 2
             }
           ],
@@ -1071,7 +1071,7 @@
           "reflexes" : 5,
           "weapons" : [
             {
-              "id" : "great",
+              "id" : "great_weapon",
               "count" : 2
             }
           ],
