@@ -416,13 +416,13 @@
   },
   "weapons" : {
     "great_weapon" : {
-      "name" : "Great-weapon",
+      "name" : "Great Weapon",
       "attacks" : 1,
       "ap" : 4,
       "short" : "Melee"
     },
     "great_staff" : {
-      "name" : "Great-staff",
+      "name" : "Great Staff",
       "attacks" : 1,
       "ap" : 2,
       "short" : "Melee",
