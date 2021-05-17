@@ -641,8 +641,8 @@
               "count" : 2
             }
           ],
-          "min" : 1,
-          "max" : 10
+          "min" : 3,
+          "max" : 6
         }
       ],
       "keywords" : [
@@ -1105,8 +1105,7 @@
       "short" : "Melee",
       "rules" : [
         {
-          "id" : "impact",
-          "x" : 1
+          "id" : "lance"
         }
       ]
     },
