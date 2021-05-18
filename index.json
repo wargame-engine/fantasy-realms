@@ -460,10 +460,7 @@
       "name" : "Heavy Great Weapon",
       "attacks" : 1,
       "ap" : 4,
-      "short" : "Melee",
-      "rules" : [
-        "lethal"
-      ]
+      "short" : "Melee"
     },
     "war_hammer" : {
       "name" : "War Hammer",
