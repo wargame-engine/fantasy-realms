@@ -719,7 +719,7 @@
     },
     "ball_o_stuff" : {
       "name" : "Ball Of Stuff",
-      "attacks" : 3,
+      "attacks" : 1,
       "ap" : 2,
       "short" : 18,
       "medium" : 36,
@@ -740,27 +740,14 @@
           "ap" : 7,
           "attacks" : 1,
           "medium" : 24,
-          "short" : 12,
-          "rules" : [
-            {
-              "id" : "deadly",
-              "x" : 3
-            },
-            "scatter"
-          ]
+          "short" : 12
         },
         {
           "name" : "Grapeshot",
           "attacks" : 6,
           "ap" : 3,
           "short" : 6,
-          "medium" : 12,
-          "rules" : [
-            {
-              "id" : "blast",
-              "x" : 3
-            }
-          ]
+          "medium" : 12
         }
       ]
     }
