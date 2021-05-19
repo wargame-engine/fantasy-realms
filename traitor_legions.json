@@ -109,7 +109,7 @@
       "models" : [
         {
           "name" : "Traitor Lord",
-          "movement" : 5,
+          "movement" : 6,
           "courage" : 7,
           "shoot" : 6,
           "fight" : 7,
@@ -225,7 +225,7 @@
       "models" : [
         {
           "name" : "Sorcerer",
-          "movement" : 5,
+          "movement" : 6,
           "courage" : 6,
           "shoot" : 4,
           "fight" : 5,
@@ -444,7 +444,7 @@
             }
           ],
           "name" : "Traitor Warrior",
-          "movement" : 5,
+          "movement" : 6,
           "courage" : 6,
           "shoot" : 4,
           "fight" : 6,
@@ -514,7 +514,7 @@
             }
           ],
           "name" : "Traitor Barbarian",
-          "movement" : 6,
+          "movement" : 7,
           "courage" : 5,
           "shoot" : 4,
           "fight" : 5,
@@ -621,7 +621,7 @@
       ]
     },
     "traitor_outriders" : {
-      "name" : "Traitor Outriders",
+      "name" : "Barbarian Outriders",
       "description" : "Mounted Barbarians, ready to spill blood.",
       "category" : "elite",
       "models" : [
@@ -702,7 +702,7 @@
       "models" : [
         {
           "name" : "Exalted Hero with Standard",
-          "movement" : 5,
+          "movement" : 6,
           "courage" : 7,
           "shoot" : 4,
           "fight" : 6,
@@ -898,7 +898,7 @@
             }
           ],
           "name" : "Traitor Chosen",
-          "movement" : 5,
+          "movement" : 6,
           "courage" : 6,
           "shoot" : 4,
           "fight" : 6,
