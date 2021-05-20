@@ -13,7 +13,7 @@
       "models" : [
         {
           "name" : "Minotaur Lord",
-          "movement" : 7,
+          "movement" : 8,
           "courage" : 6,
           "shoot" : 4,
           "fight" : 6,
@@ -25,7 +25,7 @@
               "count" : 2
             },
             {
-              "id" : "brutal_great",
+              "id" : "greataxe",
               "count" : 3
             }
           ],
@@ -90,15 +90,11 @@
           "reflexes" : 8,
           "weapons" : [
             {
-              "id" : "great_weapon",
+              "id" : "heavy_great_weapon",
               "count" : 6
             }
           ],
           "rules" : [
-            {
-              "id" : "leader_x",
-              "x" : "Infantry"
-            },
             {
               "id" : "wounds",
               "x" : 3
@@ -106,7 +102,8 @@
             {
               "id" : "despoiler_tactics",
               "x" : 1
-            }
+            },
+            "leader"
           ],
           "min" : 1,
           "max" : 1,
@@ -128,10 +125,6 @@
           ]
         }
       ],
-      "keywords" : [
-        "Hero",
-        "Infantry"
-      ],
       "subfactions" : [
         "none",
         "pestilence",
@@ -145,7 +138,7 @@
       "description" : "A wizard of the horde.",
       "min" : 1,
       "max" : 1,
-      "category" : "hero",
+      "category" : "elite",
       "models" : [
         {
           "name" : "Satyr Shaman",
@@ -157,7 +150,7 @@
           "reflexes" : 6,
           "weapons" : [
             {
-              "id" : "wizard_staff"
+              "id" : "staff"
             }
           ],
           "rules" : [
@@ -211,7 +204,7 @@
       "models" : [
         {
           "name" : "Minotaur Wizard",
-          "movement" : 7,
+          "movement" : 8,
           "courage" : 6,
           "shoot" : 4,
           "fight" : 6,
@@ -219,7 +212,7 @@
           "reflexes" : 8,
           "weapons" : [
             {
-              "id" : "big_wizard_staff",
+              "id" : "great_staff",
               "count" : 2
             },
             {
@@ -278,65 +271,56 @@
       "category" : "core",
       "models" : [
         {
-          "name" : "Longhorn",
-          "movement" : 7,
-          "courage" : 4,
-          "shoot" : 5,
-          "fight" : 5,
-          "defense" : 4,
-          "reflexes" : 4,
-          "weapons" : [
-            "short_bow",
-            "light_handweapon"
+          "options" : [
+            {
+              "replaceWeapon" : [
+                "short_bow",
+                "light_handweapon"
+              ],
+              "withWeapon" : [
+                [
+                  "spear",
+                  "shield"
+                ],
+                [
+                  "handweapon",
+                  "shield"
+                ]
+              ],
+              "modelLimit" : "all"
+            },
+            {
+              "addRule" : [
+                "champion"
+              ],
+              "modelLimit" : 1
+            },
+            {
+              "addRule" : [
+                "banner"
+              ],
+              "modelLimit" : 1
+            },
+            {
+              "addRule" : [
+                "musician"
+              ],
+              "modelLimit" : 1
+            }
           ],
-          "min" : 1,
-          "max" : 1
-        },
-        {
           "name" : "Satyr Raider",
           "movement" : 7,
           "courage" : 4,
           "shoot" : 5,
           "fight" : 5,
           "defense" : 4,
-          "reflexes" : 4,
+          "reflexes" : 5,
           "weapons" : [
             "short_bow",
             "light_handweapon"
           ],
-          "min" : 9,
-          "max" : 29
-        }
-      ],
-      "options" : [
-        {
-          "replaceWeapon" : [
-            "short_bow",
-            "light_handweapon"
-          ],
-          "withWeapon" : [
-            [
-              "spear",
-              "shield"
-            ],
-            [
-              "handweapon",
-              "shield"
-            ]
-          ],
-          "modelLimit" : "all"
-        },
-        {
-          "addRule" : [
-            "banner"
-          ],
-          "modelLimit" : 1
-        },
-        {
-          "addRule" : [
-            "musician"
-          ],
-          "modelLimit" : 1
+          "min" : 10,
+          "max" : 30
         }
       ],
       "rules" : [
@@ -356,67 +340,56 @@
       "category" : "core",
       "models" : [
         {
-          "name" : "Longhorn",
-          "movement" : 7,
-          "courage" : 4,
-          "shoot" : 4,
-          "fight" : 5,
-          "defense" : 5,
-          "reflexes" : 4,
-          "weapons" : [
+          "options" : [
             {
-              "id" : "handweapon",
-              "count" : 2
+              "replaceWeapon" : [
+                {
+                  "id" : "handweapon",
+                  "count" : 2
+                }
+              ],
+              "withWeapon" : [
+                [
+                  "handweapon",
+                  "shield"
+                ]
+              ],
+              "modelLimit" : "all"
+            },
+            {
+              "addRule" : [
+                "champion"
+              ],
+              "modelLimit" : 1
+            },
+            {
+              "addRule" : [
+                "banner"
+              ],
+              "modelLimit" : 1
+            },
+            {
+              "addRule" : [
+                "musician"
+              ],
+              "modelLimit" : 1
             }
           ],
-          "min" : 1,
-          "max" : 1
-        },
-        {
           "name" : "Satyr Warrior",
           "movement" : 7,
           "courage" : 4,
           "shoot" : 4,
           "fight" : 5,
           "defense" : 5,
-          "reflexes" : 4,
+          "reflexes" : 5,
           "weapons" : [
             {
               "id" : "handweapon",
               "count" : 2
             }
           ],
-          "min" : 9,
-          "max" : 29
-        }
-      ],
-      "options" : [
-        {
-          "replaceWeapon" : [
-            {
-              "id" : "handweapon",
-              "count" : 2
-            }
-          ],
-          "withWeapon" : [
-            [
-              "handweapon",
-              "shield"
-            ]
-          ],
-          "modelLimit" : "all"
-        },
-        {
-          "addRule" : [
-            "banner"
-          ],
-          "modelLimit" : 1
-        },
-        {
-          "addRule" : [
-            "musician"
-          ],
-          "modelLimit" : 1
+          "min" : 10,
+          "max" : 30
         }
       ],
       "subfactions" : [
@@ -433,23 +406,26 @@
       "category" : "core",
       "models" : [
         {
-          "name" : "Slaughter-Lord",
-          "movement" : 7,
-          "courage" : 4,
-          "shoot" : 4,
-          "fight" : 5,
-          "defense" : 6,
-          "reflexes" : 5,
-          "weapons" : [
+          "options" : [
             {
-              "id" : "great_weapon",
-              "count" : 2
+              "addRule" : [
+                "champion"
+              ],
+              "modelLimit" : 1
+            },
+            {
+              "addRule" : [
+                "banner"
+              ],
+              "modelLimit" : 1
+            },
+            {
+              "addRule" : [
+                "musician"
+              ],
+              "modelLimit" : 1
             }
           ],
-          "min" : 1,
-          "max" : 1
-        },
-        {
           "name" : "Satyr Despoiler",
           "movement" : 7,
           "courage" : 4,
@@ -459,26 +435,12 @@
           "reflexes" : 5,
           "weapons" : [
             {
-              "id" : "great_weapon",
+              "id" : "heavy_great_weapon",
               "count" : 2
             }
           ],
-          "min" : 4,
-          "max" : 19
-        }
-      ],
-      "options" : [
-        {
-          "addRule" : [
-            "banner"
-          ],
-          "modelLimit" : 1
-        },
-        {
-          "addRule" : [
-            "musician"
-          ],
-          "modelLimit" : 1
+          "min" : 5,
+          "max" : 20
         }
       ],
       "subfactions" : [
@@ -495,53 +457,6 @@
       "category" : "elite",
       "models" : [
         {
-          "name" : "Bloodhorn",
-          "movement" : 8,
-          "courage" : 4,
-          "shoot" : 4,
-          "fight" : 5,
-          "defense" : 6,
-          "reflexes" : 4,
-          "weapons" : [
-            {
-              "id" : "gouging_horns",
-              "count" : 2
-            },
-            {
-              "id" : "brutal_axe",
-              "count" : 4
-            },
-            "shield"
-          ],
-          "min" : 1,
-          "max" : 1,
-          "options" : [
-            {
-              "replaceWeapon" : [
-                {
-                  "id" : "brutal_axe",
-                  "count" : 4
-                },
-                "shield"
-              ],
-              "withWeapon" : [
-                [
-                  {
-                    "id" : "brutal_axe",
-                    "count" : 5
-                  }
-                ],
-                [
-                  {
-                    "id" : "brutal_great",
-                    "count" : 4
-                  }
-                ]
-              ]
-            }
-          ]
-        },
-        {
           "name" : "Minotaur",
           "movement" : 8,
           "courage" : 4,
@@ -555,18 +470,18 @@
               "count" : 2
             },
             {
-              "id" : "brutal_axe",
+              "id" : "war_hammer",
               "count" : 3
             },
             "shield"
           ],
-          "min" : 2,
-          "max" : 5,
+          "min" : 3,
+          "max" : 6,
           "options" : [
             {
               "replaceWeapon" : [
                 {
-                  "id" : "brutal_axe",
+                  "id" : "war_hammer",
                   "count" : 3
                 },
                 "shield"
@@ -574,34 +489,38 @@
               "withWeapon" : [
                 [
                   {
-                    "id" : "brutal_axe",
+                    "id" : "war_hammer",
                     "count" : 4
                   }
                 ],
                 [
                   {
-                    "id" : "brutal_great",
+                    "id" : "greataxe",
                     "count" : 3
                   }
                 ]
               ],
               "modelLimit" : "all"
+            },
+            {
+              "addRule" : [
+                "champion"
+              ],
+              "modelLimit" : 1
+            },
+            {
+              "addRule" : [
+                "banner"
+              ],
+              "modelLimit" : 1
+            },
+            {
+              "addRule" : [
+                "musician"
+              ],
+              "modelLimit" : 1
             }
           ]
-        }
-      ],
-      "options" : [
-        {
-          "addRule" : [
-            "banner"
-          ],
-          "modelLimit" : 1
-        },
-        {
-          "addRule" : [
-            "musician"
-          ],
-          "modelLimit" : 1
         }
       ],
       "rules" : [
@@ -622,7 +541,7 @@
         "change"
       ]
     },
-    "Twisted Raptors" : {
+    "twisted_raptors" : {
       "name" : "Twisted Raptors",
       "description" : "Twisted birds raised by twisted beastmen",
       "category" : "core",
@@ -642,7 +561,7 @@
             }
           ],
           "min" : 3,
-          "max" : 6
+          "max" : 9
         }
       ],
       "keywords" : [
@@ -663,28 +582,26 @@
       "category" : "elite",
       "models" : [
         {
-          "name" : "Bloodhoof",
-          "movement" : 8,
-          "courage" : 4,
-          "shoot" : 4,
-          "fight" : 5,
-          "defense" : 6,
-          "reflexes" : 4,
-          "weapons" : [
+          "options" : [
             {
-              "id" : "spear",
-              "count" : 2
+              "addRule" : [
+                "champion"
+              ],
+              "modelLimit" : 1
             },
             {
-              "id" : "hooves_and_teeth",
-              "count" : 2
+              "addRule" : [
+                "banner"
+              ],
+              "modelLimit" : 1
             },
-            "buckler"
+            {
+              "addRule" : [
+                "musician"
+              ],
+              "modelLimit" : 1
+            }
           ],
-          "min" : 1,
-          "max" : 1
-        },
-        {
           "name" : "Centaur",
           "movement" : 8,
           "courage" : 4,
@@ -703,22 +620,8 @@
             },
             "buckler"
           ],
-          "min" : 4,
-          "max" : 19
-        }
-      ],
-      "options" : [
-        {
-          "addRule" : [
-            "banner"
-          ],
-          "modelLimit" : 1
-        },
-        {
-          "addRule" : [
-            "musician"
-          ],
-          "modelLimit" : 1
+          "min" : 5,
+          "max" : 20
         }
       ],
       "keywords" : [
@@ -770,7 +673,7 @@
           ],
           "withWeapon" : [
             {
-              "id" : "great_weapon",
+              "id" : "heavy_great_weapon",
               "count" : 3
             },
             {
@@ -813,7 +716,7 @@
           "reflexes" : 7,
           "weapons" : [
             {
-              "id" : "great_weapon",
+              "id" : "heavy_great_weapon",
               "count" : 4
             },
             {
@@ -879,7 +782,7 @@
       "models" : [
         {
           "name" : "Cyclops",
-          "movement" : 10,
+          "movement" : 8,
           "courage" : 5,
           "shoot" : 5,
           "fight" : 6,
@@ -887,7 +790,7 @@
           "reflexes" : 5,
           "weapons" : [
             {
-              "id" : "great_weapon",
+              "id" : "heavy_great_weapon",
               "count" : 8
             },
             {
@@ -900,7 +803,7 @@
             {
               "replaceWeapon" : [
                 {
-                  "id" : "great_weapon",
+                  "id" : "heavy_great_weapon",
                   "count" : 8
                 },
                 {
@@ -910,7 +813,7 @@
               "withWeapon" : [
                 [
                   {
-                    "id" : "brutal_halberd",
+                    "id" : "greatblade",
                     "count" : 6
                   },
                   {
@@ -956,7 +859,7 @@
       "models" : [
         {
           "name" : "Cockatrice",
-          "movement" : 14,
+          "movement" : 12,
           "courage" : 4,
           "shoot" : 5,
           "fight" : 5,
@@ -1005,22 +908,13 @@
       "short" : "Melee",
       "ap" : 1
     },
-    "brutal_great" : {
-      "name" : "Brutalizer Greataxe",
+    "greataxe" : {
+      "name" : "Greataxe",
       "ap" : 7,
       "attacks" : 1,
       "short" : "Melee",
       "rules" : [
-        "rending"
-      ]
-    },
-    "brutal_axe" : {
-      "name" : "Brutalizer War-Axe",
-      "ap" : 5,
-      "attacks" : 1,
-      "short" : "Melee",
-      "rules" : [
-        "rending"
+        "lethal"
       ]
     },
     "gouging_horns" : {
@@ -1029,7 +923,7 @@
       "attacks" : 1,
       "short" : "Melee"
     },
-    "brutal_halberd" : {
+    "greatblade" : {
       "name" : "Savage Greatblade",
       "ap" : 6,
       "attacks" : 1,
@@ -1092,21 +986,13 @@
       "attacks" : 1,
       "short" : "Melee"
     },
-    "giant_hammer" : {
-      "name" : "Big Crusher",
-      "ap" : 4,
-      "attacks" : 1,
-      "short" : "Melee"
-    },
     "raptor_talons" : {
       "name" : "Raptor Talons",
       "ap" : 2,
       "attacks" : 1,
       "short" : "Melee",
       "rules" : [
-        {
-          "id" : "lance"
-        }
+        "lance"
       ]
     },
     "enchanted_horns" : {
@@ -1115,35 +1001,11 @@
       "attacks" : 1,
       "short" : "Melee"
     },
-    "big_wizard_staff" : {
-      "name" : "Wildfocusing Staff",
-      "ap" : 4,
-      "attacks" : 1,
-      "short" : "Melee",
-      "rules" : [
-        {
-          "id" : "reach",
-          "x" : 1
-        }
-      ]
-    },
     "cloven_hooves" : {
       "name" : "Cloven Hooves",
       "ap" : 2,
       "attacks" : 1,
       "short" : "Melee"
-    },
-    "big_stick" : {
-      "name" : "Giant Polearm",
-      "ap" : 2,
-      "attacks" : 1,
-      "short" : "Melee",
-      "rules" : [
-        {
-          "id" : "reach",
-          "x" : 2
-        }
-      ]
     }
   },
   "rules" : {
@@ -1173,29 +1035,16 @@
         }
       ]
     },
-    "incite" : {
-      "name" : "Incite",
-      "description" : "When this unit is activated, choose up to X friendly _Infantry_ units within 6\". This model and those units gain +3“ Move next time they charge.",
-      "inputs" : [
-        "x"
-      ],
-      "points" : [
-        "rule.x",
-        {
-          "multiply" : 3
-        }
-      ]
-    },
     "anti_magic" : {
       "name" : "Anti-Magic Runes",
-      "description" : "If this model fights a Wizard model, it may re-roll a single failed Fight test.",
+      "description" : "If this model fights a _Power_ model, it may re-roll a single failed Fight test.",
       "points" : [
         4
       ]
     },
     "magic_siphon" : {
       "name" : "Magic Siphon",
-      "description" : "At the end of any activation in which this model dispelled any enemy power, you can heal 1 wound that has been allocated to this model and deal an automatic hit with AP(3) to an enemy Wizard model within 24“.",
+      "description" : "At the end of any activation in which this model dispelled any enemy power, you can heal 1 wound that has been allocated to this model and deal an automatic hit with AP(3) to an enemy _Power_ model within 24“.",
       "points" : [
         8
       ]
@@ -1216,7 +1065,7 @@
   },
   "strategies" : [
     {
-      "name" : "Instincts",
+      "name" : "Savage Instincts",
       "phase" : "activation",
       "description" : "Use when a unit declares a Charge action. That unit gets +3\" of Movement for that action.",
       "flavor" : "Hordes of Beastmen rush into the fray without ever thinking twice.",
@@ -1241,7 +1090,7 @@
   "powers" : {
     "weakness" : {
       "name" : "Weakness",
-      "description" : "Target enemy unit within 12\" must re-roll one die of your choice on its next Save test.",
+      "description" : "Target enemy unit within 12\" must re-roll one succesful die on its next Save test.",
       "charge" : 6,
       "subfactions" : [
         "none",
@@ -1263,8 +1112,8 @@
         "change"
       ]
     },
-    "lightning_bolt" : {
-      "name" : "Lightning Bolt",
+    "bolt" : {
+      "name" : "Bolt",
       "description" : "Target enemy unit within 18\" takes 1 hit with AP(7).",
       "charge" : 6,
       "subfactions" : [
