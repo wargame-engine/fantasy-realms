@@ -818,19 +818,6 @@
       "description" : "This model gains +1 Courage.",
       "points" : 10
     },
-    "damage_table_warmachine" : {
-      "name" : "Damage Table(Warmachine)",
-      "description" : "When this model would be killed, roll a D10 adding the amount it failed the save by (to a maximum of 5) plus the number of critical damage tokens it has and refer to the following: \n * Glance(1-2): Take one additional shock. \n * Stunned(3-4): The unit permenantly suffers -1 Courage. \n * Damaged(5-6): The unit permenantly suffers -1 Accuracy and -1 Strength. \n * Slowed(7-8): The unit permenantly halves its movement. \n * Shellshock(9-10): Take 2 additional shock and immediately take a Courage test. If failed the unit is destroyed. \n * Destroyed(11+): It is instantly destroyed. \n * Explosion(13+): The unit explodes and all units within 6\" gain 2 Shock. \n\n\n Mark each time the unit rolls on the table with a critical damage token. If that token is removed, the effect of the table is removed. If a unit contains multiple models with Damage Table(x), hits must be assigned to models with a critical damage token first.",
-      "points" : [
-        "model.defense",
-        {
-          "subtract" : "constants.baseStats.defense"
-        },
-        {
-          "multiply" : 10
-        }
-      ]
-    },
     "leeching" : {
       "name" : "Leeching",
       "description" : "Roll a D10 each time this weapon deals damage to a _Leader_ unit. On a 1 or 2 this model regains one Wound.",
