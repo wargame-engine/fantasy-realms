@@ -67,7 +67,7 @@
                     "weapons": [{"id": "handweapon", "count": 3}],
                     "min": 1,
                     "max": 1,
-                    "rules": [{"id": "wounds", "x": 3}, {"id": "great_kingdoms_tactics", "x": 2}, "leader"],
+                    "rules": [{"id": "wounds", "x": 3}, {"id": "human_kingdoms_tactics", "x": 2}, "leader"],
                     "options": [
                         {
                             "replaceWeapon": {"id": "handweapon", "count": 3},
@@ -102,7 +102,7 @@
                     "weapons": [{"id": "handweapon", "count": 3}],
                     "min": 1,
                     "max": 1,
-                    "rules": [{"id": "wounds", "x": 3}, {"id": "great_kingdoms_tactics", "x": 1}, "leader"],
+                    "rules": [{"id": "wounds", "x": 3}, {"id": "human_kingdoms_tactics", "x": 1}, "leader"],
                     "options": [
                         {
                             "replaceWeapon": {"id": "handweapon", "count": 3},
@@ -445,8 +445,8 @@
         "mortar": {"rules": ["scatter", {"id": "blast", "x": 6}, "indirect"], "short": 24, "medium": 48, "attacks": 1, "ap": 5, "name": "Mortar"}
     },
     "rules": {
-        "great_kingdoms_tactics": {
-            "name": "Great Kingdoms Tactics",
+        "human_kingdoms_tactics": {
+            "name": "Human Kingdoms Tactics",
             "inputs": ["x"],
             "description": "When this unit is activated, choose up to X friendly _Infantry_ units within 6\" to receive one of the following bonuses until the end of the round: \n * Re-roll failed Accuracy tests of 9+ \n * Re-roll failed Strength tests of 9+",
             "points": ["rule.x", {"multiply": 10}]
