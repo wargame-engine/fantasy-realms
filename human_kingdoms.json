@@ -148,8 +148,8 @@
             {
               "addWeapon" : [
                 {"id": "handweapon", "count": 3},
-                "handgun",
-                "rifle",
+                ["handgun", {"id": "light_handweapon", "count": 3}],
+                ["rifle", {"id": "light_handweapon", "count": 3}],
                 [
                   {"id": "handweapon", "count": 3},
                   "shield"
