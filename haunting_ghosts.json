@@ -41,7 +41,7 @@
                     "fight": 6,
                     "defense": 6,
                     "reflexes": 6,
-                    "weapons": [{"id": "rending_great", "count": 3}],
+                    "weapons": [{"id": "rending_heavy_great_weapon", "count": 3}],
                     "rules": [{"id": "wounds", "x": 3}, {"id": "leader_x", "x": "Infantry"}],
                     "min": 1,
                     "max": 1

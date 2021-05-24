@@ -286,6 +286,7 @@
         "heavy_handweapon": {"name": "Heavy Hand Weapon", "attacks": 1, "ap": 2, "short": "Melee"},
         "great_weapon": {"name": "Great Weapon", "attacks": 1, "ap": 3, "short": "Melee"},
         "heavy_great_weapon": {"name": "Heavy Great Weapon", "attacks": 1, "ap": 4, "short": "Melee"},
+        "rending_heavy_great_weapon": {"name": "Rending Heavy Great Weapon", "attacks": 1, "ap": 4, "short": "Melee", "rules": ["rending"]},
         "war_hammer": {"name": "War Hammer", "attacks": 1, "ap": 5, "short": "Melee", "rules": ["lethal"]},
         "staff": {"name": "Staff", "attacks": 1, "ap": 2, "short": "Melee", "rules": [{"id": "reach", "x": 1}]},
         "great_staff": {"name": "Great Staff", "attacks": 1, "ap": 4, "short": "Melee", "rules": [{"id": "reach", "x": 1}]},
