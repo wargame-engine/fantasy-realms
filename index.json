@@ -223,7 +223,7 @@
       }
     },
     "human_kingdoms" : {
-      "name" : "Great Kingdoms",
+      "name" : "Human Kingdoms",
       "id" : "human_kingdoms",
       "url" : "human_kingdoms.json",
       "color" : "#087194",
