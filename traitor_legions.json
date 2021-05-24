@@ -414,10 +414,13 @@
                   "id" : "heavy_great_weapon",
                   "count" : 2
                 },
-                {
-                  "id" : "heavy_polearm",
-                  "count" : 2
-                }
+                [
+                  {
+                    "id" : "polearm",
+                    "count" : 2
+                  },
+                  "shield"
+                ]
               ],
               "modelLimit" : "all"
             },
