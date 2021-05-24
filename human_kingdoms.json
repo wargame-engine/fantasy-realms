@@ -844,13 +844,6 @@
       "description" : "Use when a unit Shoots. That unit gets +1 Accuracy if it did not move this round.",
       "flavor" : "When standing still units have more time to aim and fire on target.",
       "cost" : 1
-    },
-    {
-      "name" : "Reckless Advance",
-      "phase" : "activation",
-      "description" : "Use when a unit declares a Charge action. That unit gets +3\" of Movement for that action.",
-      "flavor" : "Charging into face of danger is often the only way mere humans can overpower unnatural forces.",
-      "cost" : 1
     }
   ],
   "relics" : [],
