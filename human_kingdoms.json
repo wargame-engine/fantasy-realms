@@ -122,33 +122,31 @@
             "subfactions": ["none"]
         },
         "militia": {
-          "name": "Militia",
-          "description": "",
-          "category": "core",
-          "models": [
-              {
-                  "options": [
-                      {"replaceWeapon": "handweapon", "withWeapon": [
-                        "great_weapon", "spear", "bow", "crossbow", "handgun", "rifle"
-                      ]},
-                      {"addRule": ["champion"], "modelLimit": 1},
-                      {"addRule": ["banner"], "modelLimit": 1},
-                      {"addRule": ["musician"], "modelLimit": 1}
-                  ],
-                  "name": "Man-at-arms",
-                  "movement": 6,
-                  "courage": 5,
-                  "shoot": 4,
-                  "fight": 5,
-                  "defense": 5,
-                  "reflexes": 4,
-                  "weapons": ["handweapon"],
-                  "min": 10,
-                  "max": 30
-              }
-          ],
-          "subfactions": ["none"]
-      },
+            "name": "Militia",
+            "description": "",
+            "category": "core",
+            "models": [
+                {
+                    "options": [
+                        {"replaceWeapon": "handweapon", "withWeapon": ["great_weapon", "spear", "bow", "crossbow", "handgun", "rifle"]},
+                        {"addRule": ["champion"], "modelLimit": 1},
+                        {"addRule": ["banner"], "modelLimit": 1},
+                        {"addRule": ["musician"], "modelLimit": 1}
+                    ],
+                    "name": "Man-at-arms",
+                    "movement": 6,
+                    "courage": 5,
+                    "shoot": 4,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 4,
+                    "weapons": ["handweapon"],
+                    "min": 10,
+                    "max": 30
+                }
+            ],
+            "subfactions": ["none"]
+        },
         "men_at_arms": {
             "name": "Men-at-arms",
             "description": "",
@@ -333,7 +331,19 @@
             "max": 3,
             "category": "rare",
             "models": [
-                {"name": "Cannon", "movement": 5, "shoot": 5, "weapons": ["cannon"], "min": 1, "max": 1, "fight": 0, "defense": "-", "courage": "-", "reflexes": "-"},
+                {
+                    "name": "Cannon",
+                    "movement": 5,
+                    "shoot": 5,
+                    "weapons": ["cannon"],
+                    "min": 1,
+                    "max": 1,
+                    "fight": 0,
+                    "defense": "-",
+                    "courage": "-",
+                    "reflexes": "-",
+                    "rules": [{"id": "crew", "x": 3}]
+                },
                 {"name": "Crew", "movement": 6, "courage": 5, "shoot": 4, "fight": 5, "defense": 7, "reflexes": 5, "weapons": ["light_handweapon"], "min": 3, "max": 3}
             ],
             "keywords": ["Warmachine", "Artillery"],
@@ -346,7 +356,19 @@
             "max": 3,
             "category": "rare",
             "models": [
-                {"name": "Mortar", "movement": 5, "shoot": 7, "weapons": ["mortar"], "min": 1, "max": 1, "fight": 0, "defense": "-", "courage": "-", "reflexes": "-"},
+                {
+                    "name": "Mortar",
+                    "movement": 5,
+                    "shoot": 6,
+                    "weapons": ["mortar"],
+                    "min": 1,
+                    "max": 1,
+                    "fight": 0,
+                    "defense": "-",
+                    "courage": "-",
+                    "reflexes": "-",
+                    "rules": [{"id": "crew", "x": 3}]
+                },
                 {"name": "Crew", "movement": 6, "courage": 5, "shoot": 4, "fight": 5, "defense": 7, "reflexes": 5, "weapons": ["light_handweapon"], "min": 3, "max": 3}
             ],
             "keywords": ["Warmachine", "Artillery"],
@@ -378,9 +400,35 @@
             ],
             "rules": ["stealth", "scout"],
             "subfactions": ["none"]
+        },
+        "light_tank": {
+            "name": "Light Tank",
+            "description": "",
+            "min": 1,
+            "max": 1,
+            "category": "rare",
+            "models": [
+                {
+                    "name": "Light Tank",
+                    "movement": 6,
+                    "courage": 5,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 11,
+                    "reflexes": 5,
+                    "rules": ["damage_table_vehicle", {"id": "impact", "x": 3}],
+                    "weapons": ["tank_cannon", "tank_repeater", "crushing_hull"],
+                    "options": [{"addWeapon": ["handweapon", "handgun", "rifle", "marksman_rifle"]}],
+                    "min": 1,
+                    "max": 1
+                }
+            ],
+            "keywords": ["Warmachine"],
+            "subfactions": ["none"]
         }
     },
     "weapons": {
+        "crushing_hull": {"name": "Crushing Hull", "attacks": 3, "short": "Melee", "ap": 3},
         "zweihänder": {"name": "Zweihänder", "ap": 6, "attacks": 1, "short": "Melee", "rules": ["rending"]},
         "sniper_rifle": {"name": "Sniper Rifle", "ap": 2, "attacks": 1, "short": 12, "medium": 24, "rules": ["sniper"]},
         "hooves_and_teeth": {"name": "Hooves and Teeth", "attacks": 1, "short": "Melee", "ap": 1},
@@ -388,12 +436,13 @@
         "cannon": {
             "name": "Cannon",
             "profiles": [
-                {"name": "Cannon Ball", "ap": 7, "attacks": 2, "medium": 48, "short": 24, "rules": [{"id": "blast", "x": 3}, "scatter"]},
+                {"name": "Cannon Ball", "ap": 7, "attacks": 2, "medium": 48, "short": 24, "rules": [{"id": "blast", "x": 3}]},
                 {"name": "Grapeshot", "attacks": 6, "ap": 3, "short": 6, "medium": 12}
-            ],
-            "rules": [{"id": "crew", "x": 3}]
+            ]
         },
-        "mortar": {"rules": ["scatter", {"id": "blast", "x": 6}, "indirect", {"id": "crew", "x": 3}], "short": 24, "medium": 48, "attacks": 1, "ap": 5, "name": "Mortar"}
+        "tank_cannon": {"name": "Cannon", "ap": 6, "attacks": 1, "medium": 48, "short": 24, "rules": [{"id": "blast", "x": 3}]},
+        "tank_repeater": {"name": "Tank Repeater", "ap": 3, "attacks": 2, "short": 12, "medium": 24, "rules": [{"id": "blast", "x": 3}]},
+        "mortar": {"rules": ["scatter", {"id": "blast", "x": 6}, "indirect"], "short": 24, "medium": 48, "attacks": 1, "ap": 5, "name": "Mortar"}
     },
     "rules": {
         "great_kingdoms_tactics": {
