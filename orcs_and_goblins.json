@@ -551,7 +551,7 @@
             }
           ],
           "rules" : [
-            "skirmishers",
+            "stealth",
             "crazed",
             {
               "id" : "impact",
@@ -597,7 +597,7 @@
             }
           ],
           "rules" : [
-            "skirmishers",
+            "stealth",
             "crazed",
             {
               "id" : "impact",

@@ -490,7 +490,7 @@
         }
       ],
       "rules" : [
-        "skirmishers",
+        "stealth",
         "ambush"
       ],
       "subfactions" : [

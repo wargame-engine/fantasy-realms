@@ -773,7 +773,7 @@
         }
       ],
       "rules" : [
-        "skirmishers",
+        "stealth",
         "scout"
       ],
       "subfactions" : [
