@@ -296,7 +296,7 @@
   },
   "organizations" : {
     "skirmish" : {
-      "name" : "Battle (Core)",
+      "name" : "Generalist",
       "cost" : 0,
       "description" : "A well-rounded force for taking on any mission.",
       "categories" : {
@@ -323,7 +323,7 @@
       }
     },
     "elite" : {
-      "name" : "Elite (Core)",
+      "name" : "Elite",
       "cost" : 1,
       "description" : "An elite force to deal with specific targets.",
       "categories" : {
@@ -347,7 +347,7 @@
       }
     },
     "rare" : {
-      "name" : "Rare (Core)",
+      "name" : "Rare",
       "cost" : 1,
       "description" : "A specialist force with heavy and support options.",
       "categories" : {
@@ -371,7 +371,7 @@
       }
     },
     "support" : {
-      "name" : "Support (Core)",
+      "name" : "Support",
       "cost" : 1,
       "description" : "A small supporting force.",
       "categories" : {
