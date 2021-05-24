@@ -117,6 +117,68 @@
         "none"
       ]
     },
+    "general" : {
+      "name" : "General",
+      "description" : "A general of the Great Kingdoms who inspires and directs troops.",
+      "category" : "hero",
+      "models" : [
+        {
+          "name" : "General",
+          "movement" : 6,
+          "courage" : 7,
+          "shoot" : 7,
+          "fight" : 7,
+          "defense" : 6,
+          "reflexes" : 6,
+          "weapons" : [
+            {"id": "handweapon", "count": 3}
+          ],
+          "min" : 1,
+          "max" : 1,
+          "rules" : [
+            {
+              "id" : "wounds",
+              "x" : 3
+            },
+            {
+              "id" : "great_kingdoms_tactics",
+              "x" : 2
+            },
+            "leader"
+          ],
+          "options" : [
+            {
+              "replaceWeapon": {"id": "handweapon", "count": 3},
+              "withWeapon" : [
+                ["handgun", {"id": "light_handweapon", "count": 3}],
+                ["rifle", {"id": "light_handweapon", "count": 3}],
+                [
+                  {"id": "handweapon", "count": 3},
+                  "shield"
+                ],
+                {
+                  "id" : "zweihänder",
+                  "count" : 3
+                },
+                [
+                  {"id": "great_weapon", "count": 3}
+                ]
+              ],
+              "modelLimit" : "all"
+            },
+            {
+              "addRule" : [
+                "shield",
+                "heavy_armor"
+              ]
+            }
+          ]
+        }
+      ],
+      "subfactions" : [
+        "none"
+      ]
+    },
     "captain" : {
       "name" : "Captain",
       "description" : "A captain of the Great Kingdoms who inspires and directs troops.",
@@ -130,7 +192,9 @@
           "fight" : 6,
           "defense" : 6,
           "reflexes" : 6,
-          "weapons" : [],
+          "weapons" : [
+            {"id": "handweapon", "count": 3}
+          ],
           "min" : 1,
           "max" : 1,
           "rules" : [
@@ -146,8 +210,8 @@
           ],
           "options" : [
             {
-              "addWeapon" : [
-                {"id": "handweapon", "count": 3},
+              "replaceWeapon": {"id": "handweapon", "count": 3},
+              "withWeapon" : [
                 ["handgun", {"id": "light_handweapon", "count": 3}],
                 ["rifle", {"id": "light_handweapon", "count": 3}],
                 [
