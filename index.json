@@ -546,7 +546,8 @@
         {
           "id" : "reach",
           "x" : 1
-        }
+        },
+        "phalanx"
       ]
     },
     "net_and_spear" : {
