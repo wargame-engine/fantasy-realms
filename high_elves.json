@@ -1,0 +1,1378 @@
+{
+  "name" : "High Elves",
+  "id" : "high_elves",
+  "author" : "Xekon#8266",
+  "version" : "1.0",
+  "description" : "Masters of the Arcane, this ancient island nation is shrouded in mystery.",
+  "alliance" : "order",
+  "units" : {
+    "elf_prince" : {
+      "name" : "Elven Prince",
+      "description" : "A prince of the proud elves.",
+      "category" : "hero",
+      "models" : [
+        {
+          "name" : "Elven Prince",
+          "movement" : 7,
+          "courage" : 6,
+          "shoot" : 6,
+          "fight" : 7,
+          "defense" : 6,
+          "reflexes" : 6,
+          "weapons" : [
+            {
+              "id" : "handweapon",
+              "count" : 3
+            },
+            "shield",
+            "long_bow"
+          ],
+          "options" : [
+            {
+              "replaceWeapon" : [
+                {
+                  "id" : "handweapon",
+                  "count" : 3
+                },
+                "shield"
+              ],
+              "withWeapon" : [
+                [
+                  {
+                    "id" : "exalted_blade",
+                    "count" : 2
+                  },
+                  "shield"
+                ]
+              ]
+            },
+            {
+              "replaceRule" : [
+                {
+                  "id" : "elf_tactics",
+                  "x" : 1
+                }
+              ],
+              "withRule" : [
+                {
+                  "id" : "elf_tactics",
+                  "x" : 2
+                }
+              ]
+            },
+            {
+              "addRule" : [
+                "phoenix_armor",
+                "cloak"
+              ],
+              "limit" : 1
+            }
+          ],
+          "rules" : [
+            {
+              "id" : "wounds",
+              "x" : 3
+            },
+            "leader",
+            {
+              "id" : "elf_tactics",
+              "x" : 1
+            }
+          ],
+          "min" : 1,
+          "max" : 1
+        }
+      ],
+      "subfactions" : [
+        "none"
+      ]
+    },
+    "elf_archmage" : {
+      "name" : "Archmage",
+      "description" : "A powerful spellcaster of the High Elves.",
+      "category" : "hero",
+      "models" : [
+        {
+          "name" : "Archmage",
+          "movement" : 7,
+          "courage" : 6,
+          "shoot" : 4,
+          "fight" : 5,
+          "defense" : 5,
+          "reflexes" : 6,
+          "weapons" : [
+            "wizard_staff",
+            "handweapon"
+          ],
+          "rules" : [
+            {
+              "id" : "wounds",
+              "x" : 3
+            },
+            "leader",
+            {
+              "id" : "power",
+              "x" : 2
+            },
+            "runes"
+          ],
+          "min" : 1,
+          "max" : 1
+        }
+      ],
+      "keywords" : [
+        "Hero",
+        "Wizard",
+        "Infantry"
+      ],
+      "subfactions" : [
+        "none"
+      ]
+    },
+    "elf_phoenix_pal" : {
+      "name" : "Phoenix Paladin",
+      "description" : "Ancient Protector of the Temple of the Last Flame, blessed by the ancient Pheonix.",
+      "category" : "hero",
+      "models" : [
+        {
+          "name" : "Phoenix Paladin",
+          "movement" : 7,
+          "courage" : 6,
+          "shoot" : 4,
+          "fight" : 6,
+          "defense" : 7,
+          "reflexes" : 6,
+          "weapons" : [
+            {
+              "id" : "great_weapon",
+              "count" : 4
+            }
+          ],
+          "rules" : [
+            "fear",
+            "fearless",
+            "phoenix_armor",
+            "leader",
+            {
+              "id" : "power",
+              "x" : 1
+            },
+            {
+              "id" : "wounds",
+              "x" : 3
+            }
+          ],
+          "min" : 1,
+          "max" : 1
+        }
+      ],
+      "keywords" : [
+        "Wizard",
+        "Infantry"
+      ],
+      "subfactions" : [
+        "none"
+      ]
+    },
+    "elf_soldier" : {
+      "name" : "Elven Warriors",
+      "description" : "Experienced soldiers and the mainline of defense against intruders.",
+      "category" : "core",
+      "models" : [
+        {
+          "max" : 20,
+          "min" : 5,
+          "name" : "Warrior",
+          "movement" : 7,
+          "courage" : 5,
+          "shoot" : 6,
+          "fight" : 6,
+          "defense" : 5,
+          "reflexes" : 6,
+          "weapons" : [
+            "handweapon",
+            "shield"
+          ]
+        }
+      ],
+      "options" : [
+        {
+          "replaceWeapon" : [
+            "handweapon",
+            "shield"
+          ],
+          "withWeapon" : [
+            [
+              {
+                "id" : "long_bow"
+              },
+              {
+                "id" : "light_handweapon"
+              }
+            ],
+            [
+              {
+                "id" : "great_weapon"
+              }
+            ],
+            [
+              {
+                "id" : "spear"
+              },
+              "shield"
+            ]
+          ],
+          "modelLimit" : "all"
+        },
+        {
+          "addRule" : [
+            "champion"
+          ],
+          "modelLimit" : 1
+        },
+        {
+          "addRule" : [
+            "banner"
+          ],
+          "modelLimit" : 1
+        },
+        {
+          "addRule" : [
+            "musician"
+          ],
+          "modelLimit" : 1
+        }
+      ],
+      "subfactions" : [
+        "none"
+      ]
+    },
+    "elf_vanguard" : {
+      "name" : "Elven Vanguard",
+      "description" : "Fast cavalry, patroling the outskirts of the great elvish nations.",
+      "category" : "core",
+      "models" : [
+        {
+          "options" : [
+            {
+              "addRule" : [
+                "champion"
+              ],
+              "modelLimit" : 1
+            },
+            {
+              "addRule" : [
+                "banner"
+              ],
+              "modelLimit" : 1
+            },
+            {
+              "addRule" : [
+                "musician"
+              ],
+              "modelLimit" : 1
+            }
+          ],
+          "name" : "Vanguard",
+          "movement" : 10,
+          "courage" : 5,
+          "shoot" : 6,
+          "fight" : 6,
+          "defense" : 5,
+          "reflexes" : 6,
+          "weapons" : [
+            "spear",
+            "long_bow",
+            {
+              "id" : "hooves_and_teeth",
+              "count" : 2
+            }
+          ],
+          "rules" : [
+            "scout"
+          ],
+          "min" : 3,
+          "max" : 12
+        }
+      ],
+      "keywords" : [
+        "Cavalry"
+      ],
+      "subfactions" : [
+        "none"
+      ]
+    },
+    "elf_knight" : {
+      "name" : "Elven Knights",
+      "description" : "Mounted soldiers of the elves, overrunning their foes.",
+      "category" : "core",
+      "models" : [
+        {
+          "options" : [
+            {
+              "addRule" : [
+                "champion"
+              ],
+              "modelLimit" : 1
+            },
+            {
+              "addRule" : [
+                "banner"
+              ],
+              "modelLimit" : 1
+            },
+            {
+              "addRule" : [
+                "musician"
+              ],
+              "modelLimit" : 1
+            }
+          ],
+          "name" : "Knight",
+          "movement" : 10,
+          "courage" : 6,
+          "shoot" : 4,
+          "fight" : 6,
+          "defense" : 5,
+          "reflexes" : 6,
+          "weapons" : [
+            "lance",
+            {
+              "id" : "hooves_and_teeth",
+              "count" : 2
+            },
+            "shield"
+          ],
+          "min" : 3,
+          "max" : 12
+        }
+      ],
+      "keywords" : [
+        "Cavalry"
+      ],
+      "subfactions" : [
+        "none"
+      ]
+    },
+    "elf_guard" : {
+      "name" : "Coastal Guard",
+      "description" : "These fearsome warriors protect the coasts and harbor-bastions of the high elf nation.",
+      "category" : "core",
+      "models" : [
+        {
+          "options" : [
+            {
+              "addWeapon" : "shield",
+              "modelLimit" : "all"
+            },
+            {
+              "addRule" : [
+                "champion"
+              ],
+              "modelLimit" : 1
+            },
+            {
+              "addRule" : [
+                "banner"
+              ],
+              "modelLimit" : 1
+            },
+            {
+              "addRule" : [
+                "musician"
+              ],
+              "modelLimit" : 1
+            }
+          ],
+          "name" : "Guard",
+          "movement" : 7,
+          "courage" : 6,
+          "shoot" : 6,
+          "fight" : 6,
+          "defense" : 6,
+          "reflexes" : 6,
+          "weapons" : [
+            "long_bow",
+            "spear"
+          ],
+          "min" : 5,
+          "max" : 20
+        }
+      ],
+      "rules" : [
+        "fearless"
+      ],
+      "subfactions" : [
+        "none"
+      ]
+    },
+    "elf_protectors" : {
+      "name" : "Highlands Protectors",
+      "description" : "These battle-hardened veterans patrol the highlands along the elven coast.",
+      "category" : "elite",
+      "models" : [
+        {
+          "options" : [
+            {
+              "addRule" : [
+                "champion"
+              ],
+              "modelLimit" : 1
+            },
+            {
+              "addRule" : [
+                "banner"
+              ],
+              "modelLimit" : 1
+            },
+            {
+              "addRule" : [
+                "musician"
+              ],
+              "modelLimit" : 1
+            }
+          ],
+          "name" : "Protector",
+          "movement" : 7,
+          "courage" : 6,
+          "shoot" : 4,
+          "fight" : 6,
+          "defense" : 6,
+          "reflexes" : 6,
+          "weapons" : [
+            {
+              "id" : "great_weapon",
+              "count" : 2
+            }
+          ],
+          "min" : 5,
+          "max" : 20
+        }
+      ],
+      "rules" : [
+        "fearless",
+        "agile",
+        "cloak"
+      ],
+      "subfactions" : [
+        "none"
+      ]
+    },
+    "elf_rangers" : {
+      "name" : "Shadowblade Rangers",
+      "description" : "These ancient high elves clad themselves in shadows to avenge their kin.",
+      "min" : 1,
+      "max" : 3,
+      "category" : "elite",
+      "models" : [
+        {
+          "name" : "Ranger",
+          "movement" : 7,
+          "courage" : 5,
+          "shoot" : 6,
+          "fight" : 6,
+          "defense" : 5,
+          "reflexes" : 6,
+          "weapons" : [
+            "long_bow",
+            "handweapon"
+          ],
+          "min" : 5,
+          "max" : 20,
+          "options" : [
+            {
+              "addRule" : [
+                "champion"
+              ],
+              "modelLimit" : 1
+            }
+          ]
+        }
+      ],
+      "rules" : [
+        "skirmishers",
+        "ambush"
+      ],
+      "subfactions" : [
+        "none"
+      ]
+    },
+    "elf_phoenix-tem" : {
+      "name" : "Phoenix Templars",
+      "description" : "Protectors of the Temple of the Last Flame, blessed by the ancient Pheonix.",
+      "category" : "elite",
+      "models" : [
+        {
+          "options" : [
+            {
+              "addRule" : [
+                "champion"
+              ],
+              "modelLimit" : 1
+            },
+            {
+              "addRule" : [
+                "banner"
+              ],
+              "modelLimit" : 1
+            },
+            {
+              "addRule" : [
+                "musician"
+              ],
+              "modelLimit" : 1
+            }
+          ],
+          "name" : "Templar",
+          "movement" : 7,
+          "courage" : 6,
+          "shoot" : 4,
+          "fight" : 6,
+          "defense" : 6,
+          "reflexes" : 6,
+          "weapons" : [
+            {
+              "id" : "great_weapon",
+              "count" : 2
+            }
+          ],
+          "min" : 5,
+          "max" : 20
+        }
+      ],
+      "rules" : [
+        {
+          "id" : "resilient",
+          "x" : 3
+        },
+        "fearless",
+        "fear",
+        "phoenix_armor"
+      ],
+      "subfactions" : [
+        "none"
+      ]
+    },
+    "elf_dragoon" : {
+      "name" : "Dragoons",
+      "description" : "Clad in magical armor, these royal warriors are mighty foes.",
+      "category" : "rare",
+      "models" : [
+        {
+          "options" : [
+            {
+              "addRule" : [
+                "champion"
+              ],
+              "modelLimit" : 1
+            },
+            {
+              "addRule" : [
+                "banner"
+              ],
+              "modelLimit" : 1
+            },
+            {
+              "addRule" : [
+                "musician"
+              ],
+              "modelLimit" : 1
+            }
+          ],
+          "name" : "Dragoon",
+          "movement" : 10,
+          "courage" : 5,
+          "shoot" : 4,
+          "fight" : 6,
+          "defense" : 7,
+          "reflexes" : 6,
+          "weapons" : [
+            {
+              "id" : "lance",
+              "count" : 2
+            },
+            {
+              "id" : "hooves_and_teeth",
+              "count" : 2
+            }
+          ],
+          "min" : 3,
+          "max" : 12
+        }
+      ],
+      "rules" : [
+        "runes",
+        "fearless"
+      ],
+      "keywords" : [
+        "Cavalry"
+      ],
+      "subfactions" : [
+        "none"
+      ]
+    },
+    "great_eagle" : {
+      "name" : "Great Eagle",
+      "description" : "A magnificent beast and ally to the High Elves.",
+      "category" : "rare",
+      "models" : [
+        {
+          "name" : "Great Eagle",
+          "movement" : 10,
+          "courage" : 5,
+          "shoot" : 4,
+          "fight" : 6,
+          "defense" : 8,
+          "reflexes" : 6,
+          "weapons" : [
+            {
+              "id" : "claws",
+              "count" : 2
+            }
+          ],
+          "rules" : [
+            "fly",
+            {
+              "id" : "impact",
+              "x" : 2
+            },
+            "damage_table_monster"
+          ],
+          "min" : 1,
+          "max" : 3
+        }
+      ],
+      "keywords" : [
+        "Beast",
+        "Monster"
+      ],
+      "options" : [],
+      "subfactions" : [
+        "none"
+      ]
+    },
+    "elf_chariot" : {
+      "name" : "Elven Chariot",
+      "description" : "A chariot piloted by a pair of elven warriors.",
+      "category" : "elite",
+      "models" : [
+        {
+          "name" : "Elven Crew on Chariot",
+          "movement" : 12,
+          "courage" : 5,
+          "shoot" : 6,
+          "fight" : 6,
+          "defense" : 10,
+          "reflexes" : 6,
+          "weapons" : [
+            {
+              "id" : "hooves_and_teeth",
+              "count" : 2
+            },
+            "long_bow",
+            "spear"
+          ],
+          "rules" : [
+            {
+              "id" : "impact",
+              "x" : 3
+            },
+            "damage_table_chariot"
+          ],
+          "min" : 1,
+          "max" : 1,
+          "options" : [
+            {
+              "replaceWeapon" : [
+                "long_bow",
+                "spear"
+              ],
+              "withWeapon" : [
+                [
+                  {
+                    "id" : "great_weapon"
+                  },
+                  "shield"
+                ],
+                [
+                  {
+                    "id" : "great_weapon"
+                  },
+                  "handweapon"
+                ]
+              ]
+            },
+            {
+              "replaceWeapon" : [
+                {
+                  "id" : "hooves_and_teeth",
+                  "count" : 2
+                }
+              ],
+              "withWeapon" : [
+                {
+                  "id" : "claws",
+                  "count" : 2
+                }
+              ]
+            },
+            {
+              "addRule" : [
+                "banner"
+              ]
+            }
+          ]
+        }
+      ],
+      "keywords" : [
+        "Chariot"
+      ],
+      "subfactions" : [
+        "none"
+      ]
+    },
+    "elf_skycutter" : {
+      "name" : "Elven Skycutter",
+      "description" : "A flying vessel piloted by a pair of elven warriors.",
+      "category" : "elite",
+      "models" : [
+        {
+          "name" : "Elven Skycutter",
+          "movement" : 12,
+          "fight" : 6,
+          "shoot" : 6,
+          "weapons" : [
+            "ballista_mounted",
+            {
+              "id" : "claws",
+              "count" : 2
+            },
+            {
+              "id" : "spear",
+              "count" : 2
+            }
+          ],
+          "rules" : [
+            "fly",
+            "damage_table_chariot"
+          ],
+          "min" : 1,
+          "max" : 1,
+          "courage" : 5,
+          "reflexes" : 6,
+          "defense" : 10,
+          "options" : [
+            {
+              "addRule" : [
+                "banner"
+              ]
+            }
+          ]
+        }
+      ],
+      "keywords" : [
+        "Beast",
+        "Chariot"
+      ],
+      "subfactions" : [
+        "none"
+      ]
+    },
+    "elf_ballista" : {
+      "name" : "Great Ballista",
+      "description" : "A deadly war machine, crewed by a pair of elven warriors.",
+      "category" : "rare",
+      "models" : [
+        {
+          "name" : "Great Ballista",
+          "movement" : 5,
+          "fight" : 0,
+          "shoot" : 6,
+          "weapons" : [
+            "ballista"
+          ],
+          "rules" : [],
+          "min" : 1,
+          "max" : 1,
+          "courage" : "-",
+          "reflexes" : "-",
+          "defense" : "-"
+        },
+        {
+          "name" : "Crew",
+          "movement" : 7,
+          "courage" : 5,
+          "shoot" : 4,
+          "fight" : 6,
+          "defense" : 7,
+          "reflexes" : 6,
+          "weapons" : [
+            "handweapon"
+          ],
+          "min" : 2,
+          "max" : 2
+        }
+      ],
+      "keywords" : [
+        "Warmachine"
+      ],
+      "subfactions" : [
+        "none"
+      ]
+    },
+    "elf_sisters" : {
+      "name" : "Sisters of the Veil",
+      "description" : "Protectors of the lost kingdom of Avalon, firing enchanted arrows.",
+      "category" : "rare",
+      "models" : [
+        {
+          "name" : "Sister of the Veil",
+          "movement" : 7,
+          "courage" : 5,
+          "shoot" : 6,
+          "fight" : 5,
+          "defense" : 5,
+          "reflexes" : 6,
+          "weapons" : [
+            "handweapon",
+            "spectral_bow"
+          ],
+          "min" : 5,
+          "max" : 20,
+          "options" : [
+            {
+              "addRule" : [
+                "champion"
+              ],
+              "modelLimit" : 1
+            }
+          ]
+        }
+      ],
+      "keywords" : [
+        "Infantry"
+      ],
+      "subfactions" : [
+        "none"
+      ]
+    },
+    "coast_lord" : {
+      "name" : "Coastal Lord",
+      "description" : "A veteran of the civil war, protecting the coasts of the elven nation.",
+      "category" : "hero",
+      "models" : [
+        {
+          "name" : "Coastal Lord",
+          "movement" : 7,
+          "courage" : 6,
+          "shoot" : 5,
+          "fight" : 5,
+          "defense" : 7,
+          "reflexes" : 6,
+          "weapons" : [
+            {
+              "id" : "handweapon",
+              "count" : 4
+            }
+          ],
+          "rules" : [
+            "leader",
+            {
+              "id" : "wounds",
+              "x" : 3
+            },
+            {
+              "id" : "sentinel_tactics",
+              "x" : 1
+            }
+          ],
+          "options" : [
+            {
+              "replaceWeapon" : [
+                {
+                  "id" : "handweapon",
+                  "count" : 4
+                }
+              ],
+              "withWeapon" : [
+                {
+                  "id" : "great_weapon",
+                  "count" : 2
+                }
+              ]
+            },
+            {
+              "addWeapon" : [
+                "spectral_bow"
+              ]
+            },
+            {
+              "replaceRule" : [
+                {
+                  "id" : "sentinel_tactics",
+                  "x" : 1
+                }
+              ],
+              "withRule" : [
+                {
+                  "id" : "sentinel_tactics",
+                  "x" : 2
+                }
+              ]
+            },
+            {
+              "addRule" : [
+                {
+                  "id" : "ward",
+                  "x" : 1
+                }
+              ]
+            }
+          ],
+          "min" : 1,
+          "max" : 1
+        }
+      ],
+      "keywords" : [
+        "Hero",
+        "Infantry"
+      ],
+      "subfactions" : [
+        "none"
+      ]
+    },
+    "elf_archmage_mount" : {
+      "name" : "Archmage on Warhorse",
+      "description" : "A powerful spellcaster of the High Elves.",
+      "category" : "hero",
+      "models" : [
+        {
+          "name" : "Archmage on Warhorse",
+          "movement" : 10,
+          "courage" : 6,
+          "shoot" : 4,
+          "fight" : 5,
+          "defense" : 5,
+          "reflexes" : 6,
+          "weapons" : [
+            "wizard_staff",
+            "handweapon",
+            {
+              "id" : "hooves_and_teeth",
+              "count" : 2
+            }
+          ],
+          "rules" : [
+            {
+              "id" : "wounds",
+              "x" : 3
+            },
+            "leader",
+            {
+              "id" : "power",
+              "x" : 1
+            },
+            "runes"
+          ],
+          "min" : 1,
+          "max" : 1
+        }
+      ],
+      "keywords" : [
+        "Hero",
+        "Wizard",
+        "Cavalry"
+      ],
+      "subfactions" : [
+        "none"
+      ]
+    },
+    "mage_blade_lord" : {
+      "name" : "Mageblade Lord",
+      "description" : "A cunning warrior and powerful spellcaster, servant of the Ivory Council.",
+      "category" : "hero",
+      "models" : [
+        {
+          "name" : "Mageblade Lord",
+          "movement" : 7,
+          "courage" : 6,
+          "shoot" : 4,
+          "fight" : 6,
+          "defense" : 7,
+          "reflexes" : 6,
+          "weapons" : [
+            {
+              "id" : "great_weapon",
+              "count" : 2
+            }
+          ],
+          "rules" : [
+            {
+              "id" : "wounds",
+              "x" : 3
+            },
+            "leader",
+            {
+              "id" : "power",
+              "x" : 1
+            },
+            "cloak"
+          ],
+          "min" : 1,
+          "max" : 1
+        }
+      ],
+      "keywords" : [
+        "Wizard",
+        "Infantry"
+      ],
+      "subfactions" : [
+        "none"
+      ]
+    },
+    "mage_blades" : {
+      "name" : "Elven Mageblades",
+      "description" : "Combining ancient spells and finely crafted weapons to become strong warriors.",
+      "category" : "elite",
+      "models" : [
+        {
+          "options" : [
+            {
+              "addRule" : [
+                [
+                  "champion",
+                  {
+                    "id" : "power",
+                    "x" : 1
+                  }
+                ]
+              ],
+              "modelLimit" : 1
+            },
+            {
+              "addRule" : [
+                "banner"
+              ],
+              "modelLimit" : 1
+            },
+            {
+              "addRule" : [
+                "musician"
+              ],
+              "modelLimit" : 1
+            }
+          ],
+          "name" : "Mageblade",
+          "movement" : 7,
+          "courage" : 5,
+          "shoot" : 4,
+          "fight" : 6,
+          "defense" : 6,
+          "reflexes" : 6,
+          "weapons" : [
+            {
+              "id" : "great_weapon",
+              "count" : 2
+            }
+          ],
+          "min" : 5,
+          "max" : 20
+        }
+      ],
+      "rules" : [
+        "cloak"
+      ],
+      "subfactions" : [
+        "none"
+      ]
+    },
+    "elf_dragoon_knight" : {
+      "name" : "Dragon Knight",
+      "description" : "Clad in magical armor, this royal warrior crushes any defense.",
+      "category" : "hero",
+      "models" : [
+        {
+          "name" : "Dragon Knight",
+          "movement" : 10,
+          "courage" : 6,
+          "shoot" : 5,
+          "fight" : 6,
+          "defense" : 6,
+          "reflexes" : 6,
+          "weapons" : [
+            {
+              "id" : "handweapon",
+              "count" : 6
+            },
+            {
+              "id" : "hooves_and_teeth",
+              "count" : 2
+            },
+            "shield"
+          ],
+          "rules" : [
+            "runes",
+            "fearless",
+            {
+              "id" : "leader_x",
+              "x" : "Cavalry"
+            },
+            {
+              "id" : "wounds",
+              "x" : 3
+            }
+          ],
+          "min" : 1,
+          "max" : 1,
+          "options" : [
+            {
+              "replaceWeapon" : [
+                {
+                  "id" : "handweapon",
+                  "count" : 6
+                }
+              ],
+              "withWeapon" : [
+                [
+                  {
+                    "id" : "lance",
+                    "count" : 3
+                  }
+                ],
+                [
+                  {
+                    "id" : "great_weapon",
+                    "count" : 3
+                  }
+                ]
+              ]
+            },
+            {
+              "replaceWeapon" : [
+                "shield"
+              ],
+              "withWeapon" : [
+                {
+                  "id" : "long_bow"
+                },
+                {
+                  "id" : "dragon_banner"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "keywords" : [
+        "Hero",
+        "Cavalry"
+      ],
+      "subfactions" : [
+        "none"
+      ]
+    }
+  },
+  "weapons" : {
+    "claws" : {
+      "name" : "Rending Claws",
+      "ap" : 1,
+      "attacks" : 1,
+      "short" : "Melee",
+      "rules" : [
+        {
+          "id" : "rending"
+        }
+      ]
+    },
+    "bite" : {
+      "name" : "Beak",
+      "ap" : 2,
+      "attacks" : 3,
+      "short" : "Melee"
+    },
+    "hooves_and_teeth" : {
+      "name" : "Hooves and Teeth",
+      "attacks" : 1,
+      "short" : "Melee",
+      "ap" : 1
+    },
+    "ballista" : {
+      "name" : "Ballista",
+      "profiles" : [
+        {
+          "name" : "Focus",
+          "ap" : 6,
+          "attacks" : 1,
+          "medium" : 36,
+          "short" : 18,
+          "rules" : []
+        },
+        {
+          "name" : "Volley",
+          "ap" : 2,
+          "attacks" : 8,
+          "medium" : 18,
+          "short" : 9,
+          "rules" : []
+        }
+      ],
+      "rules" : [
+        {
+          "id" : "crew",
+          "x" : 2
+        }
+      ]
+    },
+    "spectral_bow" : {
+      "name" : "Spectral Bow",
+      "ap" : 3,
+      "attacks" : 1,
+      "rules" : [
+        "lethal"
+      ],
+      "short" : 9,
+      "medium" : 18
+    },
+    "spectral_blade" : {
+      "name" : "Spectral Blade",
+      "ap" : 1,
+      "attacks" : 1,
+      "short" : "Melee",
+      "rules" : [
+        "lethal"
+      ]
+    },
+    "exalted_blade" : {
+      "name" : "Exalted Blade",
+      "ap" : 3,
+      "attacks" : 1,
+      "short" : "Melee"
+    },
+    "dragon_banner" : {
+      "name" : "Dragon Banner",
+      "attacks" : 0,
+      "short" : "Melee",
+      "rules" : [
+        {
+          "id" : "dragon_banner"
+        }
+      ]
+    },
+    "ballista_mounted" : {
+      "name" : "Ballista",
+      "profiles" : [
+        {
+          "name" : "Focus",
+          "ap" : 6,
+          "attacks" : 1,
+          "medium" : 36,
+          "short" : 18,
+          "rules" : []
+        },
+        {
+          "name" : "Volley",
+          "ap" : 2,
+          "attacks" : 8,
+          "medium" : 18,
+          "short" : 9,
+          "rules" : []
+        }
+      ]
+    }
+  },
+  "rules" : {
+    "cloak" : {
+      "name" : "Enchanted Cloak",
+      "description" : "This model has +2 to its Save characteristic when being hit by a ranged attack.",
+      "points" : 2
+    },
+    "runes" : {
+      "name" : "Warding Runes",
+      "description" : "This model has +2 to its Save characteristic when being hit by a Power.",
+      "points" : 2
+    },
+    "discipline" : {
+      "name" : "Discipline",
+      "description" : "This unit and all friendly units within 6\" ignore Shock when making any Overwatch or Defensive Stance reaction rolls.",
+      "points" : 15
+    },
+    "sentinel_tactics" : {
+      "name" : "Sentinel Tactics",
+      "inputs" : [
+        "x"
+      ],
+      "description" : "When this unit is activated, choose up to X friendly _Infantry_ units within 6\". This unit and those units may re-roll failed Strength tests of 9+ until the end of the round.",
+      "points" : [
+        "rule.x",
+        {
+          "multiply" : 10
+        }
+      ]
+    },
+    "phoenix_armor" : {
+      "name" : "Phoenix Armor",
+      "description" : "This model has +2 to its Save characteristic when being hit by a melee attack.",
+      "points" : 2
+    },
+    "elf_tactics" : {
+      "name" : "Elven Tactics",
+      "inputs" : [
+        "x"
+      ],
+      "description" : "When this unit is activated, choose up to X friendly _Infantry_ units within 6\". This unit and those units may re-roll failed Accuracy tests of 9+ until the end of the round.",
+      "points" : [
+        "rule.x",
+        {
+          "multiply" : 10
+        }
+      ]
+    },
+    "dragon_banner" : {
+      "name" : "Dragon Banner",
+      "description" : "Once per round, a friendly _Cavalry_ unit within 6\" gains +3“ the next time it makes a Move or Charge action.",
+      "points" : 10
+    }
+  },
+  "powers" : {
+    "haste" : {
+      "name" : "Haste",
+      "description" : "Target friendly unit within 12\" may immediately make a free move action.",
+      "charge" : 7
+    },
+    "blind" : {
+      "name" : "Blind",
+      "description" : "Target enemy unit within 12\" gets -1 Accuracy until the end of the round.",
+      "charge" : 6,
+      "school" : "shadow"
+    },
+    "lightning_storm" : {
+      "name" : "Lightning Storm",
+      "description" : "Target enemy unit within 12\" take 5 hits each with no AP.",
+      "charge" : 7
+    }
+  },
+  "strategies" : [
+    {
+      "name" : "Valor",
+      "phase" : "activation",
+      "description" : "Use before activating a unit. That unit may immediately remove up to 2 Shock.",
+      "flavor" : "Standing in the face of near extinction has battle hardened even the youngest of their kind.",
+      "cost" : 1
+    },
+    {
+      "name" : "Veterancy",
+      "phase" : "activation",
+      "description" : "Use when taking a Initiative test. That unit is treated as having +2 Initiative for that test.",
+      "flavor" : "With countless battles experienced, these soldiers are trained to react to any situation.",
+      "cost" : 1
+    },
+    {
+      "name" : "Moonfire Arrows",
+      "phase" : "activation",
+      "description" : "Use before an _Infantry_ unit shoots. Hit rolls of 1 or 2 gain +1 AP.",
+      "flavor" : "Weaved out of the light of the stars and enchanted by ancient secrets, these arrows are a potent weapon to slay even the greatest beasts.",
+      "cost" : 1
+    }
+  ],
+  "relics" : []
+}

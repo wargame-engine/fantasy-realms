@@ -125,22 +125,14 @@
       "alliance" : "death",
       "description" : "The Haunting Ghosts are a collection of undead spirits which haunt their hallowed grave sites. The Ghostly Undead use fear and ethereal movement to wash over their foes and scare them into defeat."
     },
-    "elves" : {
-      "name" : "Elven Realms",
-      "id" : "elves",
-      "url" : "elves.json",
+    "high_elves" : {
+      "name" : "High Elves",
+      "id" : "high_elves",
+      "url" : "high_elves.json",
       "color" : "#38733a",
       "version" : "0.1",
       "alliance" : "order",
-      "description" : "Masters of the Arcane, this ancient island nation is shrouded in mystery.",
-      "subfactions": {
-        "sea_elves" : {
-          "name" : "Sea Elves",
-          "id" : "sea_elves",
-          "color" : "#90305d",
-          "description" : "Raising from the depths of the ocean, transmuted by their ancient magic."
-        }
-      }
+      "description" : "Masters of the Arcane, this ancient island nation is shrouded in mystery."
     },
     "orcs_and_goblins" : {
       "name" : "Orcs and Goblins",
@@ -177,22 +169,23 @@
         }
       }
     },
-    "dwarves" : {
-      "name" : "Dwarven Dominions",
-      "id" : "dwarves",
-      "url" : "dwarves.json",
+    "sea_elves" : {
+      "name" : "Sea Elves",
+      "id" : "sea_elves",
+      "url" : "sea_elves.json",
+      "color" : "#03414e",
+      "version" : "1.0",
+      "alliance" : "order",
+      "description" : "Raising from the depths of the ocean, transmuted by their ancient magic."
+    },
+    "mountain_dwarves" : {
+      "name" : "Mountain Dwarves",
+      "id" : "mountain_dwarves",
+      "url" : "mountain_dwarves.json",
       "color" : "#A55D35",
       "version" : "0.1",
       "alliance" : "order",
-      "description" : "A stout race of miners, engineers and warriors.",
-      "subfactions": {
-        "merchant_dwarves" : {
-          "name" : "Merchant Dwarves",
-          "id" : "merchant_dwarves",
-          "color" : "#90305d",
-          "description" : "A race of travelling merchants and glory-seekers with advanced weaponry."
-        }
-      }
+      "description" : "A stout race of miners, engineers and warriors."
     },
     "beastmen_horde" : {
       "name" : "Beastmen Horde",
@@ -230,7 +223,7 @@
       }
     },
     "human_kingdoms" : {
-      "name" : "Human Kingdoms",
+      "name" : "Great Kingdoms",
       "id" : "human_kingdoms",
       "url" : "human_kingdoms.json",
       "color" : "#087194",
@@ -272,6 +265,16 @@
           "description" : "Sadistic and twisted Warriors, always seeking for new ways of ecstasy."
         }
       }
+    },
+    "merchant_dwarves" : {
+      "name" : "Merchant Dwarves",
+      "id" : "merchant_dwarves",
+      "url" : "merchant_dwarves.json",
+      "version" : "0.1",
+      "alliance" : "order",
+      "description" : "A race of travelling merchants and glory-seekers with advanced weaponry.",
+      "color" : "#000000",
+      "secondary_color" : "#360c30"
     }
   },
   "categories" : {

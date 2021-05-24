@@ -1,0 +1,1288 @@
+{
+  "name" : "Mountain Dwarves",
+  "id" : "mountain_dwarves",
+  "author" : "Xekon#8266",
+  "version" : "0.1",
+  "description" : "A stout race of miners, engineers and warriors.",
+  "alliance" : "order",
+  "units" : {
+    "thane" : {
+      "name" : "Thane",
+      "description" : "The head of a dwarven clan and a master smith.",
+      "category" : "hero",
+      "models" : [
+        {
+          "name" : "Thane",
+          "movement" : 5,
+          "courage" : 7,
+          "shoot" : 6,
+          "fight" : 6,
+          "defense" : 7,
+          "reflexes" : 6,
+          "rules" : [
+            "leader",
+            {
+              "id" : "wounds",
+              "x" : 3
+            }
+          ],
+          "weapons" : [
+            {
+              "id" : "heavy_great_weapon",
+              "count" : 3
+            },
+            "shield"
+          ],
+          "min" : 1,
+          "max" : 1,
+          "options" : [
+            {
+              "replaceWeapon" : [
+                {
+                  "id" : "heavy_great_weapon",
+                  "count" : 3
+                },
+                "shield"
+              ],
+              "withWeapon" : [
+                {
+                  "id" : "heavy_great_weapon",
+                  "count" : 4
+                },
+                {
+                  "id" : "war_hammer",
+                  "count" : 3
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "subfactions" : [
+        "none"
+      ]
+    },
+    "runepriest" : {
+      "name" : "Runepriest",
+      "description" : "A master of his craft, hammering raw magic into magical runes.",
+      "category" : "hero",
+      "models" : [
+        {
+          "name" : "Runepriest",
+          "movement" : 5,
+          "courage" : 6,
+          "shoot" : 5,
+          "fight" : 5,
+          "defense" : 7,
+          "reflexes" : 6,
+          "rules" : [
+            "leader",
+            {
+              "id" : "power",
+              "x" : 1
+            },
+            {
+              "id" : "wounds",
+              "x" : 3
+            }
+          ],
+          "weapons" : [
+            {
+              "id" : "heavy_great_weapon",
+              "count" : 2
+            },
+            "shield"
+          ],
+          "options" : [
+            {
+              "replaceWeapon" : [
+                {
+                  "id" : "heavy_great_weapon",
+                  "count" : 2
+                },
+                "shield"
+              ],
+              "withWeapon" : [
+                {
+                  "id" : "heavy_great_weapon",
+                  "count" : 3
+                }
+              ]
+            },
+            {
+              "replaceRule" : [
+                {
+                  "id" : "power",
+                  "x" : 1
+                }
+              ],
+              "withRule" : [
+                {
+                  "id" : "power",
+                  "x" : 2
+                }
+              ]
+            }
+          ],
+          "min" : 1,
+          "max" : 1
+        }
+      ],
+      "subfactions" : [
+        "none"
+      ]
+    },
+    "cogsmith" : {
+      "name" : "Cogsmith",
+      "description" : "A master engineer, equipped with an array of tools and guns.",
+      "category" : "hero",
+      "models" : [
+        {
+          "name" : "Cogsmith",
+          "movement" : 5,
+          "courage" : 6,
+          "shoot" : 5,
+          "fight" : 6,
+          "defense" : 6,
+          "reflexes" : 6,
+          "rules" : [
+            {
+              "id" : "leader_x",
+              "x" : "Warmachine"
+            },
+            "repair_toolkit",
+            {
+              "id" : "wounds",
+              "x" : 3
+            }
+          ],
+          "weapons" : [
+            {
+              "id" : "light_handgun",
+              "count" : 3
+            },
+            {
+              "id" : "handweapon",
+              "count" : 4
+            },
+            {
+              "id" : "shotgun",
+              "count" : 2
+            }
+          ],
+          "min" : 1,
+          "max" : 1
+        }
+      ],
+      "subfactions" : [
+        "none"
+      ]
+    },
+    "stalker" : {
+      "name" : "Gloomstalker",
+      "description" : "A master pathfinder with great tenacity.",
+      "min" : 1,
+      "max" : 1,
+      "category" : "hero",
+      "models" : [
+        {
+          "name" : "Gloomstalker",
+          "movement" : 5,
+          "courage" : 6,
+          "shoot" : 6,
+          "fight" : 6,
+          "defense" : 7,
+          "reflexes" : 6,
+          "weapons" : [
+            {
+              "id" : "marks_crossbow"
+            },
+            {
+              "id" : "handweapon",
+              "count" : 4
+            },
+            {
+              "id" : "throwing_axe",
+              "count" : 2
+            }
+          ],
+          "rules" : [
+            "ambush",
+            "leader",
+            {
+              "id" : "wounds",
+              "x" : 3
+            }
+          ],
+          "min" : 1,
+          "max" : 1
+        }
+      ],
+      "subfactions" : [
+        "none"
+      ]
+    },
+    "runepriest_elemental" : {
+      "name" : "Runepriest on Runecarved Elemental",
+      "description" : "Animating the Earth around him to smite down his foes with the wrath of nature.",
+      "min" : 1,
+      "max" : 1,
+      "category" : "hero",
+      "models" : [
+        {
+          "name" : "Runepriest on Runecarved Elemental",
+          "movement" : 4,
+          "courage" : 6,
+          "shoot" : 5,
+          "fight" : 7,
+          "defense" : 10,
+          "reflexes" : 4,
+          "rules" : [
+            "damage_table_monster",
+            {
+              "id" : "leader_x",
+              "x" : "Infantry, Monster"
+            },
+            {
+              "id" : "power",
+              "x" : 1
+            },
+            "strider"
+          ],
+          "weapons" : [
+            {
+              "id" : "runic_fist",
+              "count" : 2
+            },
+            {
+              "id" : "runic_fist",
+              "count" : 2
+            },
+            {
+              "id" : "heavy_great_weapon",
+              "count" : 2
+            },
+            "shield"
+          ],
+          "options" : [
+            {
+              "replaceWeapon" : [
+                {
+                  "id" : "runic_fist",
+                  "count" : 2
+                }
+              ],
+              "withWeapon" : [
+                {
+                  "id" : "great_mace",
+                  "count" : 3
+                }
+              ],
+              "modelLimit" : 2
+            },
+            {
+              "replaceRule" : [
+                {
+                  "id" : "power",
+                  "x" : 1
+                }
+              ],
+              "withRule" : [
+                {
+                  "id" : "power",
+                  "x" : 2
+                }
+              ]
+            }
+          ],
+          "min" : 1,
+          "max" : 1
+        }
+      ],
+      "keywords" : [
+        "Monster",
+        "Infantry"
+      ],
+      "subfactions" : [
+        "none"
+      ]
+    },
+    "berserker_champion" : {
+      "name" : "Berserker Champion",
+      "description" : "First into the fray, this champion is imbued with an endless rage.",
+      "category" : "hero",
+      "models" : [
+        {
+          "name" : "Berserker Champion",
+          "movement" : 5,
+          "courage" : 5,
+          "shoot" : 5,
+          "fight" : 7,
+          "defense" : 6,
+          "reflexes" : 5,
+          "rules" : [
+            "fanatical",
+            "furious",
+            "leader",
+            {
+              "id" : "wounds",
+              "x" : 3
+            }
+          ],
+          "weapons" : [
+            {
+              "id" : "great_mace",
+              "count" : 6
+            }
+          ],
+          "min" : 1,
+          "max" : 1
+        }
+      ],
+      "subfactions" : [
+        "none"
+      ]
+    },
+    "dwarf_arbalesters" : {
+      "name" : "Dwarven Arbalesters",
+      "description" : "A squad of dwarven heavy crossbowmen.",
+      "category" : "core",
+      "models" : [
+        {
+          "options" : [
+            {
+              "addWeapon" : [
+                "shield"
+              ],
+              "modelLimit" : "all"
+            },
+            {
+              "addRule" : [
+                "champion"
+              ],
+              "modelLimit" : 1
+            },
+            {
+              "addRule" : [
+                "banner"
+              ],
+              "modelLimit" : 1
+            },
+            {
+              "addRule" : [
+                "musician"
+              ],
+              "modelLimit" : 1
+            }
+          ],
+          "name" : "Arbalester",
+          "movement" : 5,
+          "courage" : 5,
+          "shoot" : 5,
+          "fight" : 5,
+          "defense" : 5,
+          "reflexes" : 5,
+          "weapons" : [
+            "heavy_crossbow",
+            "handweapon"
+          ],
+          "min" : 10,
+          "max" : 30
+        }
+      ],
+      "subfactions" : [
+        "none"
+      ]
+    },
+    "dwarf_grunts" : {
+      "name" : "Dwarven Grunts",
+      "description" : "A squad of dwarven soldiers.",
+      "category" : "core",
+      "models" : [
+        {
+          "options" : [
+            {
+              "replaceWeapon" : [
+                "heavy_handweapon",
+                "shield"
+              ],
+              "withWeapon" : [
+                "great_mace"
+              ],
+              "modelLimit" : "1/5"
+            },
+            {
+              "addRule" : [
+                "champion"
+              ],
+              "modelLimit" : 1
+            },
+            {
+              "addRule" : [
+                "banner"
+              ],
+              "modelLimit" : 1
+            },
+            {
+              "addRule" : [
+                "musician"
+              ],
+              "modelLimit" : 1
+            }
+          ],
+          "name" : "Grunt",
+          "movement" : 5,
+          "courage" : 5,
+          "shoot" : 5,
+          "fight" : 6,
+          "defense" : 5,
+          "reflexes" : 5,
+          "weapons" : [
+            "heavy_handweapon",
+            "shield"
+          ],
+          "min" : 10,
+          "max" : 30
+        }
+      ],
+      "subfactions" : [
+        "none"
+      ]
+    },
+    "dwarf_veterans" : {
+      "name" : "Dwarven Veterans",
+      "description" : "A squad of dwarven veterans.",
+      "category" : "core",
+      "models" : [
+        {
+          "name" : "Veteran",
+          "movement" : 5,
+          "courage" : 5,
+          "shoot" : 5,
+          "fight" : 6,
+          "defense" : 6,
+          "reflexes" : 5,
+          "weapons" : [
+            {
+              "id" : "mace",
+              "count" : 2
+            },
+            "shield"
+          ],
+          "min" : 5,
+          "max" : 20
+        }
+      ],
+      "keywords" : [
+        "Infantry"
+      ],
+      "options" : [
+        {
+          "replaceWeapon" : [
+            {
+              "id" : "mace",
+              "count" : 2
+            },
+            "shield"
+          ],
+          "withWeapon" : [
+            {
+              "id" : "great_mace",
+              "count" : 2
+            }
+          ],
+          "modelLimit" : "all"
+        },
+        {
+          "addRule" : [
+            "champion"
+          ],
+          "modelLimit" : 1
+        },
+        {
+          "addRule" : [
+            "banner"
+          ],
+          "modelLimit" : 1
+        },
+        {
+          "addRule" : [
+            "musician"
+          ],
+          "modelLimit" : 1
+        }
+      ],
+      "subfactions" : [
+        "none"
+      ]
+    },
+    "dwarf_commando" : {
+      "name" : "Dwarven Commando",
+      "description" : "A squad of dwarven scouts.",
+      "category" : "elite",
+      "models" : [
+        {
+          "options" : [
+            {
+              "replaceWeapon" : [
+                "light_crossbow"
+              ],
+              "withWeapon" : [
+                "marks_crossbow"
+              ],
+              "modelLimit" : "all"
+            },
+            {
+              "addWeapon" : "shield",
+              "modelLimit" : "all"
+            },
+            {
+              "replaceRule" : [
+                "scout"
+              ],
+              "withRule" : [
+                "ambush"
+              ],
+              "modelLimit" : "all"
+            },
+            {
+              "addRule" : [
+                "champion"
+              ],
+              "modelLimit" : 1
+            },
+            {
+              "addRule" : [
+                "banner"
+              ],
+              "modelLimit" : 1
+            },
+            {
+              "addRule" : [
+                "musician"
+              ],
+              "modelLimit" : 1
+            }
+          ],
+          "name" : "Commando",
+          "movement" : 5,
+          "courage" : 6,
+          "shoot" : 5,
+          "fight" : 5,
+          "defense" : 5,
+          "reflexes" : 6,
+          "weapons" : [
+            "light_crossbow",
+            "throwing_axe",
+            "handweapon"
+          ],
+          "min" : 5,
+          "max" : 20
+        }
+      ],
+      "subfactions" : [
+        "none"
+      ],
+      "rules" : [
+        "scout"
+      ]
+    },
+    "dwarf_gunners" : {
+      "name" : "Dwarven Gunners",
+      "description" : "A squad of veteran heavy riflemen.",
+      "category" : "elite",
+      "models" : [
+        {
+          "options" : [
+            {
+              "replaceWeapon" : [
+                "steam_rifle"
+              ],
+              "withWeapon" : [
+                "shotgun"
+              ]
+            },
+            {
+              "addRule" : [
+                "champion"
+              ],
+              "modelLimit" : 1
+            },
+            {
+              "addRule" : [
+                "banner"
+              ],
+              "modelLimit" : 1
+            },
+            {
+              "addRule" : [
+                "musician"
+              ],
+              "modelLimit" : 1
+            }
+          ],
+          "name" : "Gunner",
+          "movement" : 5,
+          "courage" : 5,
+          "shoot" : 5,
+          "fight" : 6,
+          "defense" : 6,
+          "reflexes" : 5,
+          "weapons" : [
+            "steam_rifle",
+            "handweapon",
+            "light_handgun"
+          ],
+          "min" : 5,
+          "max" : 20
+        }
+      ],
+      "subfactions" : [
+        "none"
+      ]
+    },
+    "dwarf_berserker" : {
+      "name" : "Dwarven Berserkers",
+      "description" : "A squad of dwarven warriors that rush into the fray.",
+      "category" : "elite",
+      "models" : [
+        {
+          "options" : [
+            {
+              "addRule" : [
+                "champion"
+              ],
+              "modelLimit" : 1
+            },
+            {
+              "addRule" : [
+                "banner"
+              ],
+              "modelLimit" : 1
+            },
+            {
+              "addRule" : [
+                "musician"
+              ],
+              "modelLimit" : 1
+            }
+          ],
+          "name" : "Berserker",
+          "movement" : 5,
+          "courage" : 5,
+          "shoot" : 5,
+          "fight" : 6,
+          "defense" : 6,
+          "reflexes" : 5,
+          "weapons" : [
+            {
+              "id" : "great_mace",
+              "count" : 2
+            }
+          ],
+          "min" : 3,
+          "max" : 12
+        }
+      ],
+      "rules" : [
+        "fanatical",
+        "furious"
+      ],
+      "subfactions" : [
+        "none"
+      ]
+    },
+    "dwarf_miners" : {
+      "name" : "Dwarven Miners",
+      "description" : "A squad of dwarven miners, hiding beneath the battlefield.",
+      "category" : "elite",
+      "models" : [
+        {
+          "options" : [
+            {
+              "replaceWeapon" : [
+                "mace"
+              ],
+              "withWeapon" : [
+                {
+                  "id" : "drill"
+                }
+              ],
+              "modelLimit" : "1/5"
+            },
+            {
+              "addRule" : [
+                "champion"
+              ],
+              "modelLimit" : 1
+            },
+            {
+              "addRule" : [
+                "banner"
+              ],
+              "modelLimit" : 1
+            },
+            {
+              "addRule" : [
+                "musician"
+              ],
+              "modelLimit" : 1
+            }
+          ],
+          "name" : "Miner",
+          "movement" : 5,
+          "courage" : 5,
+          "shoot" : 5,
+          "fight" : 6,
+          "defense" : 5,
+          "reflexes" : 5,
+          "weapons" : [
+            "mace"
+          ],
+          "min" : 5,
+          "max" : 20
+        }
+      ],
+      "rules" : [
+        {
+          "id" : "ambush"
+        }
+      ],
+      "subfactions" : [
+        "none"
+      ]
+    },
+    "cannon" : {
+      "name" : "Cannon",
+      "description" : "",
+      "category" : "rare",
+      "models" : [
+        {
+          "name" : "Cannon",
+          "movement" : 5,
+          "fight" : 0,
+          "shoot" : 6,
+          "weapons" : [
+            "cannon"
+          ],
+          "min" : 1,
+          "max" : 1,
+          "courage" : "-",
+          "reflexes" : "-",
+          "defense" : "-"
+        },
+        {
+          "name" : "Dwarven Crew",
+          "movement" : 5,
+          "courage" : 5,
+          "shoot" : 5,
+          "fight" : 5,
+          "defense" : 6,
+          "reflexes" : 5,
+          "weapons" : [
+            "handweapon"
+          ],
+          "min" : 3,
+          "max" : 3
+        }
+      ],
+      "keywords" : [
+        "Warmachine",
+        "Artillery"
+      ],
+      "subfactions" : [
+        "none"
+      ]
+    },
+    "hellblaster" : {
+      "name" : "Hellblaster",
+      "description" : "",
+      "category" : "rare",
+      "models" : [
+        {
+          "name" : "Hellblaster",
+          "movement" : 5,
+          "fight" : 0,
+          "shoot" : 6,
+          "weapons" : [
+            "flamethrower_cannon"
+          ],
+          "min" : 1,
+          "max" : 1,
+          "courage" : "-",
+          "reflexes" : "-",
+          "defense" : "-"
+        },
+        {
+          "name" : "Dwarven Crew",
+          "movement" : 5,
+          "courage" : 5,
+          "shoot" : 5,
+          "fight" : 5,
+          "defense" : 6,
+          "reflexes" : 5,
+          "weapons" : [
+            "handweapon"
+          ],
+          "min" : 3,
+          "max" : 3,
+          "rules" : []
+        }
+      ],
+      "keywords" : [
+        "Warmachine",
+        "Artillery"
+      ],
+      "subfactions" : [
+        "none"
+      ]
+    },
+    "rune_elemental" : {
+      "name" : "Runecarved Elemental",
+      "description" : "",
+      "category" : "rare",
+      "models" : [
+        {
+          "name" : "Runecarved Elemental",
+          "movement" : 4,
+          "fight" : 7,
+          "shoot" : 5,
+          "defense" : 10,
+          "courage" : 6,
+          "reflexes" : 4,
+          "weapons" : [
+            {
+              "id" : "runic_fist",
+              "count" : 2
+            },
+            {
+              "id" : "runic_fist",
+              "count" : 2
+            },
+            "throw_rock"
+          ],
+          "rules" : [
+            "damage_table_monster",
+            "strider"
+          ],
+          "options" : [
+            {
+              "replaceWeapon" : [
+                {
+                  "id" : "runic_fist",
+                  "count" : 2
+                }
+              ],
+              "withWeapon" : [
+                {
+                  "id" : "great_mace",
+                  "count" : 3
+                }
+              ],
+              "modelLimit" : 2
+            }
+          ],
+          "min" : 1,
+          "max" : 1
+        }
+      ],
+      "keywords" : [
+        "Monster"
+      ],
+      "subfactions" : [
+        "none"
+      ]
+    },
+    "forge_golem" : {
+      "name" : "Forgefire Golem",
+      "description" : "",
+      "category" : "rare",
+      "models" : [
+        {
+          "options" : [
+            {
+              "replaceWeapon" : [
+                {
+                  "id" : "runic_fist",
+                  "count" : 2
+                }
+              ],
+              "withWeapon" : [
+                {
+                  "id" : "great_mace",
+                  "count" : 3
+                }
+              ]
+            },
+            {
+              "replaceWeapon" : [
+                "cannon"
+              ],
+              "withWeapon" : [
+                "flamethrower_cannon"
+              ]
+            }
+          ],
+          "name" : "Forgefire Golem",
+          "movement" : 4,
+          "fight" : 6,
+          "shoot" : 5,
+          "defense" : 10,
+          "courage" : 6,
+          "reflexes" : 4,
+          "weapons" : [
+            {
+              "id" : "runic_fist",
+              "count" : 2
+            },
+            {
+              "id" : "cannon"
+            }
+          ],
+          "rules" : [
+            "damage_table_warmachine"
+          ],
+          "min" : 1,
+          "max" : 1
+        }
+      ],
+      "keywords" : [
+        "Monster",
+        "Warmachine"
+      ],
+      "subfactions" : [
+        "none"
+      ]
+    },
+    "rune_golem" : {
+      "name" : "Runic Golems",
+      "description" : "",
+      "category" : "elite",
+      "models" : [
+        {
+          "name" : "Runic Golem",
+          "movement" : 4,
+          "fight" : 6,
+          "shoot" : 5,
+          "defense" : 8,
+          "courage" : 6,
+          "reflexes" : 4,
+          "weapons" : [
+            {
+              "id" : "great_mace",
+              "count" : 2
+            }
+          ],
+          "rules" : [
+            {
+              "id" : "wounds",
+              "x" : 4
+            }
+          ],
+          "min" : 3,
+          "max" : 12
+        }
+      ],
+      "keywords" : [
+        "Monster"
+      ],
+      "subfactions" : [
+        "none"
+      ]
+    },
+    "dwarf_engineers" : {
+      "name" : "Dwarven Engineers",
+      "description" : "A squad of veteran heavy engineers.",
+      "category" : "rare",
+      "models" : [
+        {
+          "options" : [
+            {
+              "replaceWeapon" : [
+                {
+                  "id" : "shotgun",
+                  "count" : 2
+                }
+              ],
+              "withWeapon" : [
+                "flamethrower"
+              ]
+            },
+            {
+              "addRule" : [
+                "champion"
+              ],
+              "modelLimit" : 1
+            },
+            {
+              "addRule" : [
+                "banner"
+              ],
+              "modelLimit" : 1
+            },
+            {
+              "addRule" : [
+                "musician"
+              ],
+              "modelLimit" : 1
+            }
+          ],
+          "name" : "Engineer",
+          "movement" : 5,
+          "courage" : 5,
+          "shoot" : 6,
+          "fight" : 6,
+          "defense" : 6,
+          "reflexes" : 5,
+          "weapons" : [
+            "handweapon",
+            {
+              "id" : "shotgun",
+              "count" : 2
+            }
+          ],
+          "min" : 3,
+          "max" : 12,
+          "rules" : [
+            {
+              "id" : "repair",
+              "x" : 3
+            }
+          ]
+        }
+      ],
+      "subfactions" : [
+        "none"
+      ]
+    }
+  },
+  "weapons" : {
+    "marks_crossbow" : {
+      "name" : "Marksman's Crossbow",
+      "ap" : 2,
+      "attacks" : 1,
+      "short" : 12,
+      "medium" : 24
+    },
+    "net_launcher" : {
+      "name" : "Net Launcher",
+      "attacks" : 1,
+      "ap" : 4,
+      "rules" : [
+        "barbed_net"
+      ],
+      "short" : 9,
+      "medium" : 18
+    },
+    "cannon" : {
+      "name" : "Cannon",
+      "profiles" : [
+        {
+          "name" : "Mortar",
+          "ap" : 7,
+          "attacks" : 1,
+          "medium" : 48,
+          "short" : 24,
+          "rules" : [
+            {
+              "id" : "blast",
+              "x" : 3
+            },
+            "scatter"
+          ]
+        },
+        {
+          "name" : "Grapeshot",
+          "attacks" : 3,
+          "ap" : 3,
+          "short" : 6,
+          "medium" : 12
+        }
+      ],
+      "rules" : [
+        {
+          "id" : "crew",
+          "x" : 3
+        }
+      ]
+    },
+    "flamethrower" : {
+      "name" : "Flamethrower",
+      "profiles" : [
+        {
+          "name" : "Stream",
+          "short" : 6,
+          "medium" : 12,
+          "ap" : 5,
+          "attacks" : 2,
+          "rules" : [
+            "flame"
+          ]
+        },
+        {
+          "name" : "Spray",
+          "short" : 6,
+          "medium" : 12,
+          "ap" : 1,
+          "attacks" : 5,
+          "rules" : [
+            "flame"
+          ]
+        }
+      ]
+    },
+    "flamethrower_cannon" : {
+      "name" : "Flamethrower(Warmachine)",
+      "profiles" : [
+        {
+          "name" : "Stream",
+          "short" : 6,
+          "medium" : 12,
+          "ap" : 7,
+          "attacks" : 2,
+          "rules" : [
+            "flame",
+            {
+              "id" : "blast",
+              "x" : 2
+            }
+          ]
+        },
+        {
+          "name" : "Spray",
+          "short" : 6,
+          "medium" : 12,
+          "ap" : 2,
+          "attacks" : 5,
+          "rules" : [
+            "flame",
+            {
+              "id" : "blast",
+              "x" : 2
+            }
+          ]
+        }
+      ],
+      "rules" : [
+        {
+          "id" : "crew",
+          "x" : 3
+        }
+      ]
+    },
+    "runic_fist" : {
+      "name" : "Runic Fist",
+      "attacks" : 1,
+      "ap" : 6,
+      "short" : "Melee",
+      "rules" : [
+        "rending"
+      ]
+    },
+    "throw_rock" : {
+      "name" : "Runic Rock",
+      "attacks" : 1,
+      "ap" : 6,
+      "rules" : [
+        {
+          "id" : "blast",
+          "x" : 2
+        },
+        "scatter"
+      ],
+      "short" : 9,
+      "medium" : 18
+    },
+    "drill" : {
+      "name" : "Mining Drill",
+      "attacks" : 1,
+      "ap" : 4,
+      "short" : "Melee",
+      "rules" : [
+        {
+          "id" : "impact",
+          "x" : 1
+        }
+      ]
+    }
+  },
+  "rules" : {
+    "brew" : {
+      "name" : "Dwarven Brew",
+      "description" : "Once per game when you activate this unit, you may heal D3 wounds that have been allocated to this unit."
+    },
+    "repair" : {
+      "name" : "Repair",
+      "inputs" : [
+        "x"
+      ],
+      "description" : "At any point during this unit's activation, if within 3\" of a Vehicle or Warmachine, roll one die. On an X or less the vehicle or warmachine may remove one critical damage.",
+      "points" : [
+        "rule.x",
+        {
+          "multiply" : 2
+        }
+      ]
+    },
+    "repair_toolkit" : {
+      "name" : "Repair Toolkit",
+      "description" : "This model and its unit may spend one action to repair one vehicle or warmachine within 3\" that has suffered critical damage.",
+      "points" : 5
+    }
+  },
+  "powers" : {
+    "bolt" : {
+      "name" : "Bolt",
+      "description" : "Target enemy unit within 18\" takes 1 hit with AP(7).",
+      "charge" : 6
+    },
+    "slow" : {
+      "name" : "Slow",
+      "description" : "Target enemy unit within 12\" gets -2\" of Movement until the end of the round.",
+      "charge" : 7
+    },
+    "haste" : {
+      "name" : "Haste",
+      "description" : "Target friendly unit within 12\" may immediately make a free move action.",
+      "charge" : 7
+    }
+  },
+  "strategies" : [
+    {
+      "name" : "Stubborn",
+      "phase" : "activation",
+      "description" : "Use before activating a unit. That unit may immediately remove up to 2 Shock.",
+      "flavor" : "Standing steadfast like their mountain halls.",
+      "cost" : 1,
+      "subfactions" : [
+        "none"
+      ]
+    },
+    {
+      "name" : "Shieldwall",
+      "phase" : "activation",
+      "description" : "Use when a _Dwarf Infanty_ unit with Shields is charged or targeted by a shooting attack. That unit gains +1 Save until end of turn.",
+      "flavor" : "Forming a shieldwall, dwarven formations are able to hold objectives against all odds.",
+      "cost" : 2,
+      "subfactions" : [
+        "none"
+      ]
+    },
+    {
+      "phase" : "activation",
+      "name" : "Final Stand",
+      "description" : "Use when a unit is destroyed. If that unit has not activated yet this round, it may perform one shoot or fight action before it is destroyed.",
+      "flavor" : "A Dwarf fights to the last breath.",
+      "cost" : 1
+    }
+  ],
+  "relics" : [
+    {
+      "name" : "Hidden Stash",
+      "description" : "Upgrade one Hero model with Dwarven Brew.",
+      "flavor" : "Dwarves are known for their love of alcohol, which they even carry into battle.",
+      "points" : 10,
+      "rule" : "brew"
+    }
+  ]
+}
