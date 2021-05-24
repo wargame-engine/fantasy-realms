@@ -180,13 +180,13 @@
       "category" : "core",
       "models" : [
         {
-          "max" : 20,
-          "min" : 5,
-          "name" : "Warrior",
+          "max" : 30,
+          "min" : 10,
+          "name" : "Elven Warrior",
           "movement" : 7,
           "courage" : 5,
-          "shoot" : 6,
-          "fight" : 6,
+          "shoot" : 5,
+          "fight" : 5,
           "defense" : 5,
           "reflexes" : 6,
           "weapons" : [
@@ -212,13 +212,77 @@
             ],
             [
               {
-                "id" : "great_weapon"
+                "id" : "spear"
+              },
+              "shield"
+            ]
+          ],
+          "modelLimit" : "all"
+        },
+        {
+          "addRule" : [
+            "champion"
+          ],
+          "modelLimit" : 1
+        },
+        {
+          "addRule" : [
+            "banner"
+          ],
+          "modelLimit" : 1
+        },
+        {
+          "addRule" : [
+            "musician"
+          ],
+          "modelLimit" : 1
+        }
+      ],
+      "subfactions" : [
+        "none"
+      ]
+    },
+    "elf_wardens" : {
+      "name" : "Elven Wardens",
+      "description" : "Elite soldiers and the mainline of defense against intruders.",
+      "category" : "core",
+      "models" : [
+        {
+          "max" : 20,
+          "min" : 5,
+          "name" : "Warden",
+          "movement" : 7,
+          "courage" : 5,
+          "shoot" : 6,
+          "fight" : 6,
+          "defense" : 6,
+          "reflexes" : 6,
+          "weapons" : [
+            {"id": "heavy_handweapon", "count": 2},
+            "shield"
+          ]
+        }
+      ],
+      "options" : [
+        {
+          "replaceWeapon" : [
+            {"id": "heavy_handweapon", "count": 2},
+            "shield"
+          ],
+          "withWeapon" : [
+            [
+              {
+                "id" : "heavy_long_bow"
+              },
+              {
+                "id" : "heavy_handweapon"
               }
             ],
             [
-              {
-                "id" : "spear"
-              },
+              {"id": "great_weapon", "count": 2}
+            ],
+            [
+              {"id": "pike", "count": 2},
               "shield"
             ]
           ],
@@ -497,7 +561,7 @@
         "none"
       ]
     },
-    "elf_phoenix-tem" : {
+    "elf_phoenix_templars" : {
       "name" : "Phoenix Templars",
       "description" : "Protectors of the Temple of the Last Flame, blessed by the ancient Pheonix.",
       "category" : "elite",
@@ -541,10 +605,6 @@
         }
       ],
       "rules" : [
-        {
-          "id" : "resilient",
-          "x" : 3
-        },
         "fearless",
         "fear",
         "phoenix_armor"
