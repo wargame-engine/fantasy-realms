@@ -128,7 +128,7 @@
             "models": [
                 {
                     "options": [
-                        {"replaceWeapon": "handweapon", "withWeapon": ["great_weapon", "spear", "bow", "crossbow", "handgun", "rifle"]},
+                        {"replaceWeapon": "handweapon", "withWeapon": ["polearm", "spear", "bow", "crossbow", "handgun", "rifle"]},
                         {"addRule": ["champion"], "modelLimit": 1},
                         {"addRule": ["banner"], "modelLimit": 1},
                         {"addRule": ["musician"], "modelLimit": 1}
@@ -154,7 +154,7 @@
             "models": [
                 {
                     "options": [
-                        {"replaceWeapon": ["handweapon", "shield"], "withWeapon": [["spear"], ["great_weapon"]], "modelLimit": "all"},
+                        {"replaceWeapon": ["handweapon", "shield"], "withWeapon": [["spear"], ["polearm"]], "modelLimit": "all"},
                         {"addRule": ["champion"], "modelLimit": 1},
                         {"addRule": ["banner"], "modelLimit": 1},
                         {"addRule": ["musician"], "modelLimit": 1}
