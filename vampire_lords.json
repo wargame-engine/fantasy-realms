@@ -163,7 +163,7 @@
                   "count" : 3
                 },
                 {
-                  "id" : "leeching_sword",
+                  "id" : "leeching_blade",
                   "count" : 3
                 }
               ]
@@ -266,7 +266,7 @@
               ],
               "withWeapon" : [
                 {
-                  "id" : "leeching_sword",
+                  "id" : "leeching_blade",
                   "count" : 3
                 },
                 {
