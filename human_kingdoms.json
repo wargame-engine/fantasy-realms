@@ -440,7 +440,7 @@
                 {"name": "Grapeshot", "attacks": 6, "ap": 3, "short": 6, "medium": 12}
             ]
         },
-        "tank_cannon": {"name": "Cannon", "ap": 6, "attacks": 1, "medium": 48, "short": 24, "rules": [{"id": "blast", "x": 3}]},
+        "tank_cannon": {"name": "Tank Cannon", "ap": 6, "attacks": 1, "medium": 48, "short": 24, "rules": [{"id": "blast", "x": 3}]},
         "tank_repeater": {"name": "Tank Repeater", "ap": 3, "attacks": 2, "short": 12, "medium": 24, "rules": [{"id": "blast", "x": 3}]},
         "mortar": {"rules": ["scatter", {"id": "blast", "x": 6}, "indirect"], "short": 24, "medium": 48, "attacks": 1, "ap": 5, "name": "Mortar"}
     },
