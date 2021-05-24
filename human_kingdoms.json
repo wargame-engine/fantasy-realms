@@ -154,7 +154,7 @@
             "models": [
                 {
                     "options": [
-                        {"replaceWeapon": ["handweapon", "shield"], "withWeapon": [["spear", "shield"], ["polearm", "shield"], ["spear"], ["polearm"]], "modelLimit": "all"},
+                        {"replaceWeapon": ["handweapon", "shield"], "withWeapon": [["spear", "shield"], ["heavy_polearm", "shield"], ["spear"], ["heavy_polearm"]], "modelLimit": "all"},
                         {"addRule": ["champion"], "modelLimit": 1},
                         {"addRule": ["banner"], "modelLimit": 1},
                         {"addRule": ["musician"], "modelLimit": 1}
