@@ -700,10 +700,8 @@
       "ap" : 1,
       "attacks" : 1,
       "short" : 6,
-      "medium" : 12,
       "rules" : [
-        "pistol",
-        "rending"
+        "pistol"
       ]
     },
     "handgun" : {
@@ -711,21 +709,17 @@
       "ap" : 2,
       "attacks" : 1,
       "short" : 6,
-      "medium" : 12,
       "rules" : [
-        "pistol",
-        "rending"
+        "pistol"
       ]
     },
     "heavy_handgun" : {
       "name" : "Heavy Handgun",
       "ap" : 3,
       "attacks" : 1,
-      "short" : 6,
-      "medium" : 12,
+      "short" : 9,
       "rules" : [
-        "pistol",
-        "rending"
+        "pistol"
       ]
     },
     "leeching_blade" : {
@@ -747,6 +741,33 @@
         "rapid_fire"
       ]
     },
+    "repeating_rifle" : {
+      "name" : "Repeating Rifle",
+      "ap" : 2,
+      "attacks" : 1,
+      "short" : 12,
+      "medium" : 24,
+      "rules" : [
+        "rapid_fire"
+      ]
+    },
+    "rifle" : {
+      "name" : "Rifle",
+      "ap" : 2,
+      "attacks" : 1,
+      "short" : 12,
+      "medium" : 24
+    },
+    "marksman_rifle" : {
+      "name" : "Marksman Rifle",
+      "ap" : 3,
+      "attacks" : 1,
+      "short" : 18,
+      "medium" : 36,
+      "rules": [
+        "sniper"
+      ]
+    },
     "musket" : {
       "name" : "Musket",
       "ap" : 1,
@@ -765,7 +786,7 @@
       "medium" : 12,
       "rules" : [
         "assault",
-        "lethal"
+        "rending"
       ]
     }
   },

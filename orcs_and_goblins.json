@@ -1059,7 +1059,7 @@
           "withWeapon" : [
             [
               {
-                "id" : "halberd",
+                "id" : "great_weapon",
                 "count" : 2
               }
             ],
@@ -1229,7 +1229,7 @@
             ],
             [
               {
-                "id" : "halberd",
+                "id" : "great_weapon",
                 "count" : 2
               }
             ]

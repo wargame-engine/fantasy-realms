@@ -174,14 +174,11 @@
               ],
               "withWeapon" : [
                 [
-                  "spear",
-                  "shield"
+                  "spear"
                 ],
                 [
-                  "halberd",
-                  "buckler"
-                ],
-                "great_weapon"
+                  "great_weapon"
+                ]
               ],
               "modelLimit" : "all"
             },
@@ -293,14 +290,6 @@
               "modelLimit" : 1
             },
             {
-              "replaceWeapon" : [
-                "light_handgun"
-              ],
-              "withWeapon" : [
-                "rifle"
-              ]
-            },
-            {
               "addRule" : [
                 "banner"
               ],
@@ -321,7 +310,7 @@
           "defense" : 5,
           "reflexes" : 5,
           "weapons" : [
-            "light_handgun",
+            "rifle",
             "light_handweapon"
           ],
           "min" : 10,
@@ -350,10 +339,10 @@
             },
             {
               "replaceWeapon" : [
-                "light_handgun"
+                {"id": "handgun", "count": 2}
               ],
               "withWeapon" : [
-                "rifle"
+                "repeating_rifle"
               ]
             },
             {
@@ -367,7 +356,7 @@
           "movement" : 8,
           "courage" : 5,
           "shoot" : 5,
-          "defense" : 5,
+          "defense" : 6,
           "reflexes" : 5,
           "fight" : 5,
           "weapons" : [
@@ -376,7 +365,7 @@
               "count" : 2
             },
             "handweapon",
-            "light_handgun"
+            {"id": "handgun", "count": 2}
           ],
           "min" : 3,
           "max" : 12
@@ -875,12 +864,22 @@
       "defense" : 5,
       "reflexes" : 5,
       "weapons" : [
-        "sniper_rifle",
+        "repeating_rifle",
         "light_handweapon"
       ],
       "max" : 1,
       "rules" : [
         "champion"
+      ],
+      "options": [
+        {
+          "replaceWeapon" : [
+            "repeating_rifle"
+          ],
+          "withWeapon" : [
+            "sniper_rifle"
+          ]
+        }
       ]
     },
     "captain" : {
@@ -889,7 +888,7 @@
       "courage" : 5,
       "shoot" : 5,
       "fight" : 5,
-      "defense" : 5,
+      "defense" : 6,
       "reflexes" : 5,
       "weapons" : [
         {

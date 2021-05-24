@@ -910,7 +910,7 @@
               "withWeapon" : [
                 [
                   {
-                    "id" : "brutal_halberd",
+                    "id" : "brutal_great_weapon",
                     "count" : 6
                   },
                   {
@@ -1029,7 +1029,7 @@
       "attacks" : 1,
       "short" : "Melee"
     },
-    "brutal_halberd" : {
+    "brutal_great_weapon" : {
       "name" : "Savage Greatblade",
       "ap" : 6,
       "attacks" : 1,

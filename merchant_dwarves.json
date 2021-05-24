@@ -196,7 +196,7 @@
               "id" : "harpoon_rifle"
             },
             [
-              "halberd",
+              "great_weapon",
               "handweapon"
             ]
           ],
@@ -300,7 +300,7 @@
               "id" : "heavy_handgun",
               "count" : 2
             },
-            "halberd"
+            "great_weapon"
           ],
           "min" : 1,
           "max" : 1
@@ -318,7 +318,7 @@
               "id" : "heavy_handgun",
               "count" : 2
             },
-            "halberd"
+            "great_weapon"
           ],
           "min" : 2,
           "max" : 11
@@ -331,7 +331,7 @@
               "id" : "heavy_handgun",
               "count" : 2
             },
-            "halberd"
+            "great_weapon"
           ],
           "withWeapon" : [
             [

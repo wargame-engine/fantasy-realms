@@ -144,7 +144,7 @@
           "reflexes" : 6,
           "weapons" : [
             {
-              "id" : "halberd",
+              "id" : "great_weapon",
               "count" : 4
             }
           ],
@@ -175,20 +175,20 @@
       ]
     },
     "elf_soldier" : {
-      "name" : "Elven Soldier",
+      "name" : "Elven Warriors",
       "description" : "Experienced soldiers and the mainline of defense against intruders.",
       "category" : "core",
       "models" : [
         {
           "max" : 20,
           "min" : 5,
-          "name" : "Soldier",
+          "name" : "Warrior",
           "movement" : 7,
           "courage" : 5,
           "shoot" : 6,
           "fight" : 6,
           "defense" : 5,
-          "reflexes" : 5,
+          "reflexes" : 6,
           "weapons" : [
             "handweapon",
             "shield"
@@ -212,7 +212,7 @@
             ],
             [
               {
-                "id" : "halberd"
+                "id" : "great_weapon"
               }
             ],
             [
@@ -279,7 +279,7 @@
           "shoot" : 6,
           "fight" : 6,
           "defense" : 5,
-          "reflexes" : 5,
+          "reflexes" : 6,
           "weapons" : [
             "spear",
             "long_bow",
@@ -289,7 +289,7 @@
             }
           ],
           "rules" : [
-            "outflank"
+            "scout"
           ],
           "min" : 3,
           "max" : 12
@@ -334,7 +334,7 @@
           "shoot" : 4,
           "fight" : 6,
           "defense" : 5,
-          "reflexes" : 5,
+          "reflexes" : 6,
           "weapons" : [
             "lance",
             {
@@ -386,11 +386,11 @@
           ],
           "name" : "Guard",
           "movement" : 7,
-          "courage" : 5,
+          "courage" : 6,
           "shoot" : 6,
           "fight" : 6,
           "defense" : 6,
-          "reflexes" : 5,
+          "reflexes" : 6,
           "weapons" : [
             "long_bow",
             "spear"
@@ -438,7 +438,7 @@
           "shoot" : 4,
           "fight" : 6,
           "defense" : 6,
-          "reflexes" : 5,
+          "reflexes" : 6,
           "weapons" : [
             {
               "id" : "great_weapon",
@@ -472,7 +472,7 @@
           "shoot" : 6,
           "fight" : 6,
           "defense" : 5,
-          "reflexes" : 5,
+          "reflexes" : 6,
           "weapons" : [
             "long_bow",
             "handweapon"
@@ -532,7 +532,7 @@
           "reflexes" : 6,
           "weapons" : [
             {
-              "id" : "halberd",
+              "id" : "great_weapon",
               "count" : 2
             }
           ],
@@ -585,7 +585,7 @@
           "shoot" : 4,
           "fight" : 6,
           "defense" : 7,
-          "reflexes" : 5,
+          "reflexes" : 6,
           "weapons" : [
             {
               "id" : "lance",
@@ -623,7 +623,7 @@
           "shoot" : 4,
           "fight" : 6,
           "defense" : 8,
-          "reflexes" : 5,
+          "reflexes" : 6,
           "weapons" : [
             {
               "id" : "claws",
@@ -663,7 +663,7 @@
           "shoot" : 6,
           "fight" : 6,
           "defense" : 10,
-          "reflexes" : 5,
+          "reflexes" : 6,
           "weapons" : [
             {
               "id" : "hooves_and_teeth",
@@ -690,7 +690,7 @@
               "withWeapon" : [
                 [
                   {
-                    "id" : "halberd"
+                    "id" : "great_weapon"
                   },
                   "shield"
                 ],
@@ -759,7 +759,7 @@
           "min" : 1,
           "max" : 1,
           "courage" : 5,
-          "reflexes" : 5,
+          "reflexes" : 6,
           "defense" : 10,
           "options" : [
             {
@@ -805,7 +805,7 @@
           "shoot" : 4,
           "fight" : 6,
           "defense" : 7,
-          "reflexes" : 5,
+          "reflexes" : 6,
           "weapons" : [
             "handweapon"
           ],
@@ -832,7 +832,7 @@
           "shoot" : 6,
           "fight" : 5,
           "defense" : 5,
-          "reflexes" : 5,
+          "reflexes" : 6,
           "weapons" : [
             "handweapon",
             "spectral_bow"
@@ -896,7 +896,7 @@
               ],
               "withWeapon" : [
                 {
-                  "id" : "halberd",
+                  "id" : "great_weapon",
                   "count" : 2
                 }
               ]
@@ -1068,7 +1068,7 @@
           "shoot" : 4,
           "fight" : 6,
           "defense" : 6,
-          "reflexes" : 5,
+          "reflexes" : 6,
           "weapons" : [
             {
               "id" : "great_weapon",
@@ -1141,7 +1141,7 @@
                 ],
                 [
                   {
-                    "id" : "halberd",
+                    "id" : "great_weapon",
                     "count" : 3
                   }
                 ]
