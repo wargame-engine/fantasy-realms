@@ -41,7 +41,7 @@
                     "fight": 6,
                     "defense": 6,
                     "reflexes": 6,
-                    "weapons": [{"id": "rending_heavy_great_weapon", "count": 3}],
+                    "weapons": [{"id": "executioner_great_axe", "count": 3}],
                     "rules": [{"id": "wounds", "x": 3}, {"id": "leader_x", "x": "Infantry"}],
                     "min": 1,
                     "max": 1
@@ -190,7 +190,8 @@
         "hooves_and_teeth": {"name": "Hooves and Teeth", "attacks": 1, "short": "Melee"},
         "ghostly_shackles": {"name": "Ghostly Shackles", "attacks": 1, "ap": 4, "short": "Melee"},
         "death_bell": {"name": "Death Bell", "attacks": 1, "ap": 3, "short": "Melee", "rules": ["rending"]},
-        "curse_blade": {"name": "Curse-bound Blade", "attacks": 1, "ap": 2, "short": "Melee", "rules": ["lance"]}
+        "curse_blade": {"name": "Curse-bound Blade", "attacks": 1, "ap": 2, "short": "Melee", "rules": ["lance"]},
+        "executioner_great_axe": {"name": "Great Axe", "attacks": 1, "ap": 5, "short": "Melee", "rules": ["rending"]}
     },
     "rules": {
         "ghost_tactics": {
