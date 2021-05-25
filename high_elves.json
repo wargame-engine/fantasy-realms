@@ -421,10 +421,6 @@
         {
           "options" : [
             {
-              "addWeapon" : "shield",
-              "modelLimit" : "all"
-            },
-            {
               "addRule" : [
                 "champion"
               ],
@@ -452,6 +448,7 @@
           "reflexes" : 6,
           "weapons" : [
             "bow",
+            "shield",
             "spear"
           ],
           "min" : 10,
