@@ -249,36 +249,35 @@
       "models" : [
         {
           "max" : 20,
-          "min" : 5,
+          "min" : 10,
           "name" : "Warden",
           "movement" : 7,
           "courage" : 5,
           "shoot" : 6,
           "fight" : 6,
-          "defense" : 6,
+          "defense" : 5,
           "reflexes" : 6,
           "weapons" : [
-            {"id": "great_weapon", "count": 2}
+            {"id": "great_weapon"}
           ]
         }
       ],
       "options" : [
         {
           "replaceWeapon" : [
-            {"id": "heavy_handweapon", "count": 2},
-            "shield"
+            {"id": "great_weapon"}
           ],
           "withWeapon" : [
             [
               {
-                "id" : "heavy_long_bow"
+                "id" : "long_bow"
               },
               {
-                "id" : "heavy_handweapon"
+                "id" : "handweapon"
               }
             ],
             [
-              {"id": "pike", "count": 2},
+              {"id": "pike"},
               "shield"
             ]
           ],
