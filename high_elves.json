@@ -258,8 +258,7 @@
           "defense" : 6,
           "reflexes" : 6,
           "weapons" : [
-            {"id": "heavy_handweapon", "count": 2},
-            "shield"
+            {"id": "great_weapon", "count": 2}
           ]
         }
       ],
@@ -277,9 +276,6 @@
               {
                 "id" : "heavy_handweapon"
               }
-            ],
-            [
-              {"id": "great_weapon", "count": 2}
             ],
             [
               {"id": "pike", "count": 2},
