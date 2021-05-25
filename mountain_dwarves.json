@@ -158,7 +158,7 @@
           ],
           "weapons" : [
             {
-              "id" : "light_handgun",
+              "id" : "light_pistol",
               "count" : 3
             },
             {
@@ -596,7 +596,7 @@
           "options" : [
             {
               "replaceWeapon" : [
-                "steam_rifle"
+                "steam_gun"
               ],
               "withWeapon" : [
                 "shotgun"
@@ -629,9 +629,9 @@
           "defense" : 6,
           "reflexes" : 5,
           "weapons" : [
-            "steam_rifle",
+            "steam_gun",
             "handweapon",
-            "light_handgun"
+            "light_pistol"
           ],
           "min" : 5,
           "max" : 20

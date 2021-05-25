@@ -35,7 +35,7 @@
           ],
           "weapons" : [
             {
-              "id" : "heavy_handgun",
+              "id" : "heavy_pistol",
               "count" : 2
             },
             {
@@ -483,7 +483,7 @@
               "id" : "mournfang_tusks",
               "count" : 4
             },
-            "heavy_handgun",
+            "heavy_pistol",
             "ironfist"
           ]
         },

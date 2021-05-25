@@ -104,7 +104,7 @@
           "max" : 1,
           "weapons" : [
             "punching_shield",
-            "handgun",
+            "pistol",
             {
               "id" : "great_weapon",
               "count" : 3

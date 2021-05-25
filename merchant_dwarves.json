@@ -144,12 +144,12 @@
               "id" : "handweapon",
               "count" : 2
             },
-            "light_handgun"
+            "light_pistol"
           ],
           "options" : [
             {
               "replaceWeapon" : [
-                "light_handgun"
+                "light_pistol"
               ],
               "withWeapon" : [
                 "flare_pistol",
@@ -169,7 +169,7 @@
           "defense" : 6,
           "reflexes" : 5,
           "weapons" : [
-            "light_handgun",
+            "light_pistol",
             {
               "id" : "handweapon",
               "count" : 2
@@ -182,7 +182,7 @@
       "options" : [
         {
           "replaceWeapon" : [
-            "light_handgun",
+            "light_pistol",
             {
               "id" : "handweapon",
               "count" : 2
@@ -230,7 +230,7 @@
           "defense" : 6,
           "reflexes" : 5,
           "weapons" : [
-            "rifle",
+            "handgun",
             "handweapon",
             "clock_companion"
           ],
@@ -246,7 +246,7 @@
           "defense" : 6,
           "reflexes" : 5,
           "weapons" : [
-            "rifle",
+            "handgun",
             "handweapon"
           ],
           "min" : 4,
@@ -257,7 +257,7 @@
       "options" : [
         {
           "replaceWeapon" : [
-            "rifle"
+            "handgun"
           ],
           "withWeapon" : [
             "engine",
@@ -297,7 +297,7 @@
           "reflexes" : 5,
           "weapons" : [
             {
-              "id" : "heavy_handgun",
+              "id" : "heavy_pistol",
               "count" : 2
             },
             "great_weapon"
@@ -315,7 +315,7 @@
           "reflexes" : 5,
           "weapons" : [
             {
-              "id" : "heavy_handgun",
+              "id" : "heavy_pistol",
               "count" : 2
             },
             "great_weapon"
@@ -328,7 +328,7 @@
         {
           "replaceWeapon" : [
             {
-              "id" : "heavy_handgun",
+              "id" : "heavy_pistol",
               "count" : 2
             },
             "great_weapon"
