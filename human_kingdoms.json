@@ -77,8 +77,7 @@
                                 [{"id": "handweapon", "count": 3}, "shield"],
                                 {"id": "zweihänder", "count": 3},
                                 [{"id": "great_weapon", "count": 3}]
-                            ],
-                            "modelLimit": "all"
+                            ]
                         },
                         {"addRule": ["shield", "heavy_armor"]}
                     ]
@@ -112,8 +111,7 @@
                                 [{"id": "handweapon", "count": 3}, "shield"],
                                 {"id": "zweihänder", "count": 3},
                                 [{"id": "great_weapon", "count": 3}]
-                            ],
-                            "modelLimit": "all"
+                            ]
                         },
                         {"addRule": ["shield", "heavy_armor"]}
                     ]
