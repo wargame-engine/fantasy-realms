@@ -448,23 +448,20 @@
               "modelLimit" : 1
             }
           ],
-          "name" : "Guard",
+          "name" : "Coastal Guard",
           "movement" : 7,
-          "courage" : 6,
-          "shoot" : 6,
-          "fight" : 6,
-          "defense" : 6,
+          "courage" : 5,
+          "shoot" : 5,
+          "fight" : 5,
+          "defense" : 5,
           "reflexes" : 6,
           "weapons" : [
-            "long_bow",
+            "bow",
             "spear"
           ],
-          "min" : 5,
+          "min" : 10,
           "max" : 20
         }
-      ],
-      "rules" : [
-        "fearless"
       ],
       "subfactions" : [
         "none"
