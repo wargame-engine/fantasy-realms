@@ -1269,7 +1269,8 @@
         {
           "id" : "reach",
           "x" : 1
-        }
+        },
+        "phalanx"
       ]
     },
     "spider_bite" : {
