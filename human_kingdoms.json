@@ -128,7 +128,7 @@
             "models": [
                 {
                     "options": [
-                        {"replaceWeapon": "handweapon", "withWeapon": ["polearm", "spear", "bow", "crossbow", "pistol", "handgun"]},
+                        {"replaceWeapon": "handweapon", "withWeapon": ["polearm", "long_spear", "bow", "crossbow", "pistol", "handgun"]},
                         {"addRule": ["champion"], "modelLimit": 1},
                         {"addRule": ["banner"], "modelLimit": 1},
                         {"addRule": ["musician"], "modelLimit": 1}
@@ -154,7 +154,7 @@
             "models": [
                 {
                     "options": [
-                        {"replaceWeapon": ["spear"], "withWeapon": [["handweapon", "shield"], ["heavy_polearm", "shield"], ["spear", "shield"], ["heavy_polearm"]], "modelLimit": "all"},
+                        {"replaceWeapon": ["long_spear"], "withWeapon": [["handweapon", "shield"], ["heavy_polearm", "shield"], ["long_spear", "shield"], ["heavy_polearm"]], "modelLimit": "all"},
                         {"addRule": ["champion"], "modelLimit": 1},
                         {"addRule": ["banner"], "modelLimit": 1},
                         {"addRule": ["musician"], "modelLimit": 1}
@@ -166,7 +166,7 @@
                     "fight": 5,
                     "defense": 5,
                     "reflexes": 5,
-                    "weapons": ["spear"],
+                    "weapons": ["long_spear"],
                     "min": 10,
                     "max": 30
                 }

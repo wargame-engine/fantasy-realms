@@ -572,6 +572,19 @@
         }
       ]
     },
+    "long_spear" : {
+      "name" : "Long Spear",
+      "attacks" : 1,
+      "ap" : 1,
+      "short" : "Melee",
+      "rules" : [
+        {
+          "id" : "reach",
+          "x" : 1
+        },
+        "phalanx"
+      ]
+    },
     "pike" : {
       "name" : "Pike",
       "attacks" : 1,
@@ -581,7 +594,8 @@
         {
           "id" : "reach",
           "x" : 2
-        }
+        },
+        "phalanx"
       ]
     },
     "net_and_spear" : {
@@ -841,32 +855,6 @@
       "rules" : [
         "assault",
         "rending"
-      ]
-    },
-    "spear_phalanx" : {
-      "name" : "Phalanx Spear",
-      "attacks" : 1,
-      "ap" : 1,
-      "short" : "Melee",
-      "rules" : [
-        {
-          "id" : "reach",
-          "x" : 1
-        },
-        "phalanx"
-      ]
-    },
-    "pike_phalanx" : {
-      "name" : "Phalanx Pike",
-      "attacks" : 1,
-      "ap" : 1,
-      "short" : "Melee",
-      "rules" : [
-        {
-          "id" : "reach",
-          "x" : 2
-        },
-        "phalanx"
       ]
     },
     "buckler_bash" : {

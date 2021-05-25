@@ -279,7 +279,7 @@
               ],
               "withWeapon" : [
                 [
-                  "spear",
+                  "long_spear",
                   "shield"
                 ],
                 [
@@ -611,7 +611,7 @@
           "reflexes" : 4,
           "weapons" : [
             {
-              "id" : "spear",
+              "id" : "long_spear",
               "count" : 2
             },
             {

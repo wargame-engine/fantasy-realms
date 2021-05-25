@@ -671,7 +671,7 @@
               "withWeapon" : [
                 [
                   {
-                    "id" : "spear",
+                    "id" : "long_spear",
                     "count" : 3
                   }
                 ]
@@ -708,7 +708,7 @@
               ],
               "withWeapon" : [
                 {
-                  "id" : "spear",
+                  "id" : "long_spear",
                   "count" : 2
                 }
               ],
@@ -1269,8 +1269,7 @@
         {
           "id" : "reach",
           "x" : 1
-        },
-        "phalanx"
+        }
       ]
     },
     "spider_bite" : {
@@ -1329,8 +1328,8 @@
     },
     "net" : {
       "name" : "Net",
-      "description" : "Units engaged in Melee with a model that has this weapon suffer -1 to Initiative tests when escaping combat for each weapon with this rule.",
-      "points" : 1
+      "description" : "Units engaged in Melee with a model that has this weapon suffer -2 to Initiative tests when escaping combat for each weapon with this rule.",
+      "points" : 2
     },
     "frenzy_banner" : {
       "description" : "When this unit is activated, choose a friendly Infantry unit within 6\". That unit's hit rolls of 1 or 2 cause an additional hit until the end of the round.",

@@ -212,7 +212,7 @@
             ],
             [
               {
-                "id" : "spear"
+                "id" : "long_spear"
               },
               "shield"
             ]
@@ -340,7 +340,7 @@
           "defense" : 5,
           "reflexes" : 6,
           "weapons" : [
-            "spear",
+            "long_spear",
             "long_bow",
             {
               "id" : "hooves_and_teeth",
@@ -452,7 +452,7 @@
           "reflexes" : 6,
           "weapons" : [
             "bow",
-            "spear"
+            "long_spear"
           ],
           "min" : 10,
           "max" : 20
@@ -722,7 +722,7 @@
               "count" : 2
             },
             "long_bow",
-            "spear"
+            "long_spear"
           ],
           "rules" : [
             {
@@ -737,7 +737,7 @@
             {
               "replaceWeapon" : [
                 "long_bow",
-                "spear"
+                "long_spear"
               ],
               "withWeapon" : [
                 [
@@ -800,7 +800,7 @@
               "count" : 2
             },
             {
-              "id" : "spear",
+              "id" : "long_spear",
               "count" : 2
             }
           ],
