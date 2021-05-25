@@ -37,7 +37,7 @@
             "name": "Vampire Lords",
             "id": "vampire_lords",
             "url": "vampire_lords.json",
-            "color": "#9a1115",
+            "color": "#801111",
             "version": "0.1",
             "alliance": "death",
             "description": "The Vampire Lords are powerful vampires who command legions of undead to do their bidding. They defeat their foes with powerful death magic and hordes of undead.",
@@ -188,10 +188,19 @@
             "name": "Human Kingdoms",
             "id": "human_kingdoms",
             "url": "human_kingdoms.json",
-            "color": "#087194",
+            "color": "#990c0c",
             "version": "0.1",
             "alliance": "order",
             "description": "A collection of various kingdoms, infighting for political presence but uniting under one banner to defend their home."
+        },
+        "lizardmen": {
+            "name": "Lizardmen",
+            "id": "lizardmen",
+            "url": "lizardmen.json",
+            "color": "#087194",
+            "version": "0.1",
+            "alliance": "order",
+            "description": "A race of relentless jungle-dwelling lizards who who believe they are the rightful inheritors to the world."
         },
         "traitor_dwarves": {
             "name": "Traitor Dwarves",
@@ -279,6 +288,7 @@
         }
     },
     "weapons": {
+        "hooves_and_teeth": {"name": "Hooves and Teeth", "attacks": 1, "short": "Melee"},
         "buckler": {"name": "Buckler", "attacks": 0, "short": "Melee", "rules": [{"id": "buckler"}]},
         "shield": {"name": "Shield", "attacks": 0, "short": "Melee", "rules": ["shield"]},
         "light_handweapon": {"name": "Light Hand Weapon", "attacks": 1, "short": "Melee"},
