@@ -350,8 +350,8 @@
           "rules" : [
             "scout"
           ],
-          "min" : 3,
-          "max" : 12
+          "min" : 5,
+          "max" : 20
         }
       ],
       "keywords" : [
@@ -402,8 +402,8 @@
             },
             "shield"
           ],
-          "min" : 3,
-          "max" : 12
+          "min" : 5,
+          "max" : 20
         }
       ],
       "keywords" : [
