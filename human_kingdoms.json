@@ -180,7 +180,7 @@
             "models": [
                 {
                     "options": [
-                        {"replaceWeapon": ["bow"], "withWeapon": [{"id": "light_crossbow"}], "modelLimit": "all"},
+                        {"replaceWeapon": ["bow"], "withWeapon": [{"id": "crossbow"}], "modelLimit": "all"},
                         {"addRule": ["champion"], "modelLimit": 1},
                         {"addRule": ["banner"], "modelLimit": 1},
                         {"addRule": ["musician"], "modelLimit": 1}

@@ -771,15 +771,22 @@
       "name" : "Light Crossbow",
       "attacks" : 1,
       "ap" : 2,
-      "short" : 9,
-      "medium" : 18
+      "short" : 12,
+      "medium" : 24
+    },
+    "crossbow" : {
+      "name" : "Crossbow",
+      "attacks" : 1,
+      "ap" : 2,
+      "short" : 15,
+      "medium" : 30
     },
     "heavy_crossbow" : {
       "name" : "Heavy Crossbow",
       "attacks" : 1,
       "ap" : 3,
-      "short" : 9,
-      "medium" : 18
+      "short" : 18,
+      "medium" : 36
     },
     "light_pistol" : {
       "name" : "Light Pistol",
@@ -829,7 +836,7 @@
     },
     "repeater_handgun" : {
       "name" : "Repeater Handgun",
-      "ap" : 2,
+      "ap" : 3,
       "attacks" : 1,
       "short" : 12,
       "medium" : 24,
@@ -839,14 +846,14 @@
     },
     "handgun" : {
       "name" : "Handgun",
-      "ap" : 2,
+      "ap" : 3,
       "attacks" : 1,
       "short" : 12,
       "medium" : 24
     },
     "long_rifle" : {
       "name" : "Long Rifle",
-      "ap" : 3,
+      "ap" : 4,
       "attacks" : 1,
       "short" : 18,
       "medium" : 36,

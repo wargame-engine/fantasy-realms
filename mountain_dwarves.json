@@ -525,7 +525,7 @@
           "options" : [
             {
               "replaceWeapon" : [
-                "light_crossbow"
+                "crossbow"
               ],
               "withWeapon" : [
                 "marks_crossbow"
@@ -572,7 +572,7 @@
           "defense" : 5,
           "reflexes" : 6,
           "weapons" : [
-            "light_crossbow",
+            "crossbow",
             "throwing_axe",
             "handweapon"
           ],
