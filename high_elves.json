@@ -340,7 +340,7 @@
           "defense" : 5,
           "reflexes" : 6,
           "weapons" : [
-            "long_spear",
+            "spear",
             "long_bow",
             {
               "id" : "hooves_and_teeth",
@@ -452,7 +452,7 @@
           "reflexes" : 6,
           "weapons" : [
             "bow",
-            "long_spear"
+            "spear"
           ],
           "min" : 10,
           "max" : 20
