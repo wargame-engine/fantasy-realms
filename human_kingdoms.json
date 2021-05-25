@@ -349,6 +349,56 @@
             "keywords": ["Warmachine", "Artillery"],
             "subfactions": ["none"]
         },
+        "rocket_artillery": {
+            "name": "Rocket Battery",
+            "description": "",
+            "min": 1,
+            "max": 3,
+            "category": "rare",
+            "models": [
+                {
+                    "name": "Rocket Battery",
+                    "movement": 5,
+                    "shoot": 5,
+                    "weapons": ["rocket_battery"],
+                    "min": 1,
+                    "max": 1,
+                    "fight": 0,
+                    "defense": "-",
+                    "courage": "-",
+                    "reflexes": "-",
+                    "rules": [{"id": "crew", "x": 3}]
+                },
+                {"name": "Crew", "movement": 6, "courage": 5, "shoot": 4, "fight": 5, "defense": 7, "reflexes": 5, "weapons": ["light_handweapon"], "min": 3, "max": 3}
+            ],
+            "keywords": ["Warmachine", "Artillery"],
+            "subfactions": ["none"]
+        },
+        "volley_gun": {
+            "name": "Volley Gun",
+            "description": "",
+            "min": 1,
+            "max": 3,
+            "category": "rare",
+            "models": [
+                {
+                    "name": "Volley Gun",
+                    "movement": 5,
+                    "shoot": 5,
+                    "weapons": ["volley_gun"],
+                    "min": 1,
+                    "max": 1,
+                    "fight": 0,
+                    "defense": "-",
+                    "courage": "-",
+                    "reflexes": "-",
+                    "rules": [{"id": "crew", "x": 3}]
+                },
+                {"name": "Crew", "movement": 6, "courage": 5, "shoot": 4, "fight": 5, "defense": 7, "reflexes": 5, "weapons": ["light_handweapon"], "min": 3, "max": 3}
+            ],
+            "keywords": ["Warmachine", "Artillery"],
+            "subfactions": ["none"]
+        },
         "mortar": {
             "name": "Mortar",
             "description": "",
@@ -428,6 +478,8 @@
         }
     },
     "weapons": {
+        "volley_gun": {"rules": ["rapid_fire"], "short": 15, "medium": 30, "attacks": 6, "ap": 3, "name": "Volley Gun"},
+        "rocket_battery": {"rules": ["scatter", {"id": "blast", "x": 3}, "indirect"], "short": 18, "medium": 36, "attacks": 3, "ap": 5, "name": "Rocket Battery"},
         "crushing_hull": {"name": "Crushing Hull", "attacks": 3, "short": "Melee", "ap": 3},
         "zweihänder": {"name": "Zweihänder", "ap": 6, "attacks": 1, "short": "Melee", "rules": ["rending"]},
         "sniper_rifle": {"name": "Sniper Rifle", "ap": 2, "attacks": 1, "short": 12, "medium": 24, "rules": ["sniper"]},
