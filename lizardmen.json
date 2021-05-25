@@ -11,7 +11,7 @@
             "models": [
                 {
                     "options": [
-                        {"replaceWeapon": ["heavy_handweapon", "shield"], "withWeapon": [["spear", "shield"]], "modelLimit": "all"},
+                        {"replaceWeapon": ["great_weapon", "shield"], "withWeapon": [["heavy_spear", "shield"]], "modelLimit": "all"},
                         {"addRule": ["champion"], "modelLimit": 1},
                         {"addRule": ["banner"], "modelLimit": 1},
                         {"addRule": ["musician"], "modelLimit": 1}
@@ -23,7 +23,7 @@
                     "fight": 5,
                     "defense": 5,
                     "reflexes": 5,
-                    "weapons": ["heavy_handweapon", "shield", "lizard_bite"],
+                    "weapons": ["great_weapon", "shield", "lizard_bite"],
                     "min": 10,
                     "max": 30
                 }
