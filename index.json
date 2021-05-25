@@ -784,7 +784,7 @@
     "heavy_crossbow" : {
       "name" : "Heavy Crossbow",
       "attacks" : 1,
-      "ap" : 3,
+      "ap" : 2,
       "short" : 18,
       "medium" : 36
     },

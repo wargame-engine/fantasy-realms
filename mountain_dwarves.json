@@ -195,7 +195,7 @@
           "reflexes" : 6,
           "weapons" : [
             {
-              "id" : "marks_crossbow"
+              "id" : "heavy_crossbow"
             },
             {
               "id" : "handweapon",
@@ -528,7 +528,7 @@
                 "crossbow"
               ],
               "withWeapon" : [
-                "marks_crossbow"
+                "heavy_crossbow"
               ],
               "modelLimit" : "all"
             },
@@ -1057,13 +1057,6 @@
     }
   },
   "weapons" : {
-    "marks_crossbow" : {
-      "name" : "Marksman's Crossbow",
-      "ap" : 2,
-      "attacks" : 1,
-      "short" : 12,
-      "medium" : 24
-    },
     "net_launcher" : {
       "name" : "Net Launcher",
       "attacks" : 1,
