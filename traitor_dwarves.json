@@ -17,20 +17,20 @@
           "defense" : 7,
           "reflexes" : 6,
           "rules" : [
+            "glyph_of_haste",
+            "leader",
             {
               "id" : "wounds",
               "x" : 3
             },
-            "leader",
             {
               "id" : "power",
               "x" : 2
-            },
-            "possession"
+            }
           ],
           "weapons" : [
             {
-              "id" : "rending_great",
+              "id" : "great_mace",
               "count" : 2
             }
           ],
@@ -40,7 +40,7 @@
             {
               "replaceWeapon" : [
                 {
-                  "id" : "rending_great",
+                  "id" : "great_mace",
                   "count" : 2
                 }
               ],
@@ -52,14 +52,10 @@
               ]
             },
             {
-              "addWeapon" : "light_flintlock"
+              "addWeapon" : "heavy_pistol"
             }
           ]
         }
-      ],
-      "keywords" : [
-        "Wizard",
-        "Infantry"
       ],
       "subfactions" : [
         "wrath",
@@ -75,26 +71,14 @@
       "category" : "core",
       "models" : [
         {
-          "name" : "Ironclad",
-          "movement" : 5,
-          "courage" : 4,
-          "shoot" : 5,
-          "fight" : 6,
-          "defense" : 6,
-          "reflexes" : 4,
-          "weapons" : [
-            "shield",
-            "heavy_handweapon"
-          ],
-          "min" : 1,
-          "max" : 1,
           "options" : [
             {
-              "addWeapon" : "light_flintlock"
+              "replaceModel" : [
+                "champion"
+              ],
+              "modelLimit" : 1
             }
-          ]
-        },
-        {
+          ],
           "name" : "Iron Soul",
           "movement" : 5,
           "courage" : 4,
@@ -106,9 +90,16 @@
             "heavy_handweapon",
             "shield"
           ],
-          "min" : 4,
-          "max" : 19
+          "min" : 10,
+          "max" : 30
         }
+      ],
+      "subfactions" : [
+        "wrath",
+        "excess",
+        "pestilence",
+        "none",
+        "change"
       ],
       "options" : [
         {
@@ -133,13 +124,6 @@
           ],
           "modelLimit" : 1
         }
-      ],
-      "subfactions" : [
-        "wrath",
-        "excess",
-        "pestilence",
-        "none",
-        "change"
       ]
     },
     "iron_lord" : {
@@ -157,17 +141,21 @@
           "reflexes" : 6,
           "rules" : [
             {
+              "id" : "leader_x",
+              "x" : "Infantry, Soul-bound"
+            },
+            "soul_gem",
+            {
               "id" : "wounds",
               "x" : 3
-            },
-            "soul_gem"
+            }
           ],
           "weapons" : [
             {
-              "id" : "rending_great",
+              "id" : "great_mace",
               "count" : 4
             },
-            "light_flintlock"
+            "heavy_pistol"
           ],
           "min" : 1,
           "max" : 1,
@@ -175,23 +163,22 @@
             {
               "replaceWeapon" : [
                 {
-                  "id" : "rending_great",
+                  "id" : "great_mace",
                   "count" : 4
                 }
               ],
               "withWeapon" : [
                 {
-                  "id" : "great_weapon",
+                  "id" : "great_polearm",
                   "count" : 4
                 }
               ]
+            },
+            {
+              "addWeapon" : "shield"
             }
           ]
         }
-      ],
-      "keywords" : [
-        "Hero",
-        "Infantry"
       ],
       "subfactions" : [
         "wrath",
@@ -203,25 +190,45 @@
     },
     "soul_bound_orcs" : {
       "name" : "Soul-bound Orcs",
-      "description" : "",
+      "description" : "Bound by an ancient contract, these orcs have aligned themselves with the Traitor Dwarves.",
       "category" : "core",
       "models" : [
         {
-          "name" : "Overseer",
-          "movement" : 6,
-          "courage" : 4,
-          "shoot" : 5,
-          "fight" : 6,
-          "defense" : 5,
-          "reflexes" : 4,
-          "weapons" : [
-            "shield",
-            "heavy_handweapon"
+          "options" : [
+            {
+              "replaceWeapon" : [
+                "heavy_handweapon",
+                "shield"
+              ],
+              "withWeapon" : [
+                [
+                  {
+                    "id" : "mace",
+                    "count" : 2
+                  }
+                ]
+              ],
+              "modelLimit" : "2/5"
+            },
+            {
+              "addRule" : [
+                "champion"
+              ],
+              "modelLimit" : 1
+            },
+            {
+              "addRule" : [
+                "banner"
+              ],
+              "modelLimit" : 1
+            },
+            {
+              "addRule" : [
+                "musician"
+              ],
+              "modelLimit" : 1
+            }
           ],
-          "min" : 1,
-          "max" : 1
-        },
-        {
           "name" : "Soul-bound Orc",
           "movement" : 6,
           "courage" : 4,
@@ -233,48 +240,170 @@
             "heavy_handweapon",
             "shield"
           ],
-          "min" : 9,
-          "max" : 29
+          "min" : 10,
+          "max" : 30
         }
       ],
       "keywords" : [
         "Soul-bound",
         "Infantry"
       ],
-      "options" : [
-        {
-          "replaceWeapon" : [
-            "heavy_handweapon",
-            "shield"
-          ],
-          "withWeapon" : [
-            [
-              {
-                "id" : "rending_blade",
-                "count" : 2
-              }
-            ]
-          ],
-          "modelLimit" : "2/5"
-        },
-        {
-          "addRule" : [
-            "banner"
-          ],
-          "modelLimit" : 1
-        },
-        {
-          "addRule" : [
-            "musician"
-          ],
-          "modelLimit" : 1
-        }
-      ],
       "subfactions" : [
         "wrath",
         "excess",
         "pestilence",
         "none",
+        "change"
+      ]
+    },
+    "centaur_hybrids" : {
+      "name" : "Centaur Hybrids",
+      "description" : "Experimental warriors, half beast and half dwarf.",
+      "category" : "elite",
+      "models" : [
+        {
+          "options" : [
+            {
+              "addRule" : [
+                "champion"
+              ],
+              "modelLimit" : 1
+            },
+            {
+              "addRule" : [
+                "banner"
+              ],
+              "modelLimit" : 1
+            },
+            {
+              "addRule" : [
+                "musician"
+              ],
+              "modelLimit" : 1
+            }
+          ],
+          "name" : "Centaur Hybrid",
+          "movement" : 8,
+          "courage" : 4,
+          "shoot" : 5,
+          "fight" : 5,
+          "defense" : 6,
+          "reflexes" : 4,
+          "weapons" : [
+            {
+              "id" : "great_mace",
+              "count" : 3
+            },
+            "shield_bash",
+            {
+              "id" : "heavy_hooves_and_teeth",
+              "count" : 2
+            }
+          ],
+          "min" : 3,
+          "max" : 12,
+          "rules" : [
+            {
+              "id" : "wounds",
+              "x" : 3
+            }
+          ]
+        }
+      ],
+      "keywords" : [
+        "Beast",
+        "Cavalry"
+      ],
+      "subfactions" : [
+        "none",
+        "pestilence",
+        "wrath",
+        "excess",
+        "change"
+      ]
+    },
+    "centaur_hybrid_lord" : {
+      "name" : "Centaur Hybrid Lord",
+      "description" : "A powerful experimental warrior, half beast and half dwarf.",
+      "category" : "hero",
+      "models" : [
+        {
+          "options" : [
+            {
+              "replaceWeapon" : [
+                {
+                  "id" : "great_mace",
+                  "count" : 3
+                },
+                "shield_bash"
+              ],
+              "withWeapon" : [
+                {
+                  "id" : "war_hammer",
+                  "count" : 3
+                }
+              ]
+            },
+            {
+              "replaceRule" : [
+                {
+                  "id" : "siegebreaker_tactics",
+                  "x" : 1
+                }
+              ],
+              "withRule" : [
+                {
+                  "id" : "siegebreaker_tactics",
+                  "x" : 2
+                }
+              ]
+            }
+          ],
+          "name" : "Centaur Hybrid Lord",
+          "movement" : 8,
+          "courage" : 6,
+          "shoot" : 5,
+          "fight" : 6,
+          "defense" : 7,
+          "reflexes" : 6,
+          "weapons" : [
+            {
+              "id" : "great_mace",
+              "count" : 3
+            },
+            "shield_bash",
+            {
+              "id" : "heavy_hooves_and_teeth",
+              "count" : 2
+            }
+          ],
+          "min" : 1,
+          "max" : 1,
+          "rules" : [
+            {
+              "id" : "wounds",
+              "x" : 4
+            },
+            {
+              "id" : "leader_x",
+              "x" : "Beast"
+            },
+            {
+              "id" : "siegebreaker_tactics",
+              "x" : 1
+            }
+          ]
+        }
+      ],
+      "keywords" : [
+        "Beast",
+        "Cavalry"
+      ],
+      "subfactions" : [
+        "none",
+        "pestilence",
+        "wrath",
+        "excess",
         "change"
       ]
     }
@@ -353,8 +482,8 @@
       "description" : "This model and its unit may spend one action to repair one vehicle or warmachine within 3\" that has suffered critical damage.",
       "points" : 5
     },
-    "possession" : {
-      "name" : "Possession",
+    "glyph_of_haste" : {
+      "name" : "Glyph of Haste",
       "description" : "Once per round, a friendly _Infantry_ unit within 6\" gains +3“ the next time it moves or charges.",
       "points" : 5
     },
@@ -362,6 +491,19 @@
       "name" : "Soul Gem",
       "description" : "When this unit is activated, friendly _Soul-bound_ units 6\" may choose to activate for free if they have not activated yet and perform the same actions as this unit. Friendly _Soul-bound_ units within 6\" may use this unit's Courage value when taking Courage tests. This unit may not be targeted by enemy attacks while it is within 3\" of another friendly _Soul-bound_ unit unless that unit is also a Leader and attacking in Melee.",
       "points" : 10
+    },
+    "siegebreaker_tactics" : {
+      "name" : "Siegebreaker Tactics",
+      "inputs" : [
+        "x"
+      ],
+      "description" : "When this unit is activated, choose up to X friendly _Beast_ units within 6\". This model and those units may re-roll failed Strength tests of 9+ until the end of the round.",
+      "points" : [
+        "rule.x",
+        {
+          "multiply" : 10
+        }
+      ]
     }
   },
   "powers" : {
@@ -431,5 +573,26 @@
       ]
     }
   ],
-  "relics" : []
+  "relics" : [],
+  "models" : {
+    "champion" : {
+      "name" : "Ironclad",
+      "movement" : 5,
+      "courage" : 4,
+      "shoot" : 5,
+      "fight" : 6,
+      "defense" : 6,
+      "reflexes" : 4,
+      "weapons" : [
+        "shield",
+        "heavy_handweapon",
+        "heavy_pistol"
+      ],
+      "min" : 1,
+      "max" : 1,
+      "rules" : [
+        "champion"
+      ]
+    }
+  }
 }
