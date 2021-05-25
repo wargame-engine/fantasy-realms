@@ -3,7 +3,6 @@
   "id" : "vampire_lords",
   "author" : "Xekon#8266",
   "version" : "0.1",
-  "color" : "#9a1115",
   "units" : {
     "vampire_lord_dragon" : {
       "name" : "Vampire Lord on Undead Dragon",
