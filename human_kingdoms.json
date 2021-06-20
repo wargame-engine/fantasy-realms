@@ -1,1140 +1,571 @@
 {
-  "name" : "Great Kingdoms",
-  "id" : "human_kingdoms",
-  "author" : "Xekon#8266",
-  "version" : "0.1",
-  "units" : {
-    "battle_mage" : {
-      "name" : "Battlemage",
-      "description" : "",
-      "category" : "hero",
-      "models" : [
-        {
-          "name" : "Battlemage",
-          "movement" : 6,
-          "courage" : 5,
-          "shoot" : 4,
-          "fight" : 5,
-          "defense" : 5,
-          "reflexes" : 5,
-          "weapons" : [
-            "wizard_staff",
-            "handweapon"
-          ],
-          "min" : 1,
-          "max" : 1,
-          "rules" : [
-            {
-              "id" : "wounds",
-              "x" : 3
-            },
-            "leader",
-            {
-              "id" : "magic",
-              "x" : 1
-            }
-          ],
-          "options" : [
-            {
-              "replaceRule" : [
+    "name": "Human Kingdoms",
+    "id": "human_kingdoms",
+    "author": "Xekon#8266",
+    "version": "0.1",
+    "units": {
+        "battle_mage": {
+            "name": "Battlemage",
+            "description": "",
+            "category": "elite",
+            "models": [
                 {
-                  "id" : "magic",
-                  "x" : 1
+                    "name": "Battlemage",
+                    "movement": 6,
+                    "courage": 6,
+                    "shoot": 4,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 6,
+                    "weapons": ["wizard_staff", "handweapon"],
+                    "min": 1,
+                    "max": 1,
+                    "rules": [{"id": "wounds", "x": 3}, {"id": "power", "x": 1}, "support"],
+                    "options": [{"replaceRule": [{"id": "power", "x": 1}], "withRule": [{"id": "power", "x": 2}]}]
                 }
-              ],
-              "withRule" : [
+            ],
+            "subfactions": ["none"]
+        },
+        "warrior_priest": {
+            "name": "Warrior-Priest",
+            "description": "",
+            "category": "hero",
+            "models": [
                 {
-                  "id" : "magic",
-                  "x" : 2
+                    "name": "Warrior-Priest",
+                    "movement": 6,
+                    "courage": 7,
+                    "shoot": 4,
+                    "fight": 6,
+                    "defense": 6,
+                    "reflexes": 6,
+                    "weapons": [{"id": "heavy_handweapon", "count": 3}, "shield"],
+                    "min": 1,
+                    "max": 1,
+                    "rules": [{"id": "wounds", "x": 3}, "leader", "furious", "battle_prayer"],
+                    "options": [
+                        {"replaceWeapon": [{"id": "heavy_handweapon", "count": 3}, "shield"], "withWeapon": [{"id": "great_weapon", "count": 3}, {"id": "heavy_handweapon", "count": 4}]},
+                        {"addRule": "heavy_armor"}
+                    ]
                 }
-              ]
-            }
-          ]
-        }
-      ],
-      "keywords" : [
-        "Hero",
-        "Wizard",
-        "Infantry"
-      ],
-      "subfactions" : [
-        "none",
-        "blackpowder",
-        "order",
-        "polis",
-        "magic"
-      ]
-    },
-    "warrior_priest" : {
-      "name" : "Warrior-Priest",
-      "description" : "",
-      "category" : "hero",
-      "models" : [
-        {
-          "name" : "Warrior-Priest",
-          "movement" : 6,
-          "courage" : 7,
-          "shoot" : 4,
-          "fight" : 6,
-          "defense" : 6,
-          "reflexes" : 6,
-          "weapons" : [
-            {
-              "id" : "maul",
-              "count" : 3
-            },
-            "shield"
-          ],
-          "min" : 1,
-          "max" : 1,
-          "rules" : [
-            {
-              "id" : "wounds",
-              "x" : 3
-            },
-            "leader",
-            "furious",
-            "battle_prayer"
-          ],
-          "options" : [
-            {
-              "replaceWeapon" : [
+            ],
+            "subfactions": ["none"]
+        },
+        "general": {
+            "name": "General",
+            "description": "A general of the Great Kingdoms who inspires and directs troops.",
+            "category": "hero",
+            "models": [
                 {
-                  "id" : "maul",
-                  "count" : 3
+                    "name": "General",
+                    "movement": 6,
+                    "courage": 7,
+                    "shoot": 7,
+                    "fight": 7,
+                    "defense": 6,
+                    "reflexes": 6,
+                    "weapons": [{"id": "handweapon", "count": 3}],
+                    "min": 1,
+                    "max": 1,
+                    "rules": [{"id": "wounds", "x": 3}, {"id": "human_kingdoms_tactics", "x": 2}, "leader"],
+                    "options": [
+                        {
+                            "replaceWeapon": {"id": "handweapon", "count": 3},
+                            "withWeapon": [
+                                ["pistol", {"id": "light_handweapon", "count": 3}],
+                                ["handgun", {"id": "light_handweapon", "count": 3}],
+                                [{"id": "handweapon", "count": 3}, "shield"],
+                                {"id": "zweihänder", "count": 3},
+                                [{"id": "great_weapon", "count": 3}]
+                            ]
+                        },
+                        {"addRule": ["shield", "heavy_armor"]}
+                    ]
+                }
+            ],
+            "subfactions": ["none"]
+        },
+        "captain": {
+            "name": "Captain",
+            "description": "A captain of the Great Kingdoms who inspires and directs troops.",
+            "category": "hero",
+            "models": [
+                {
+                    "name": "Captain",
+                    "movement": 6,
+                    "courage": 6,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 6,
+                    "reflexes": 6,
+                    "weapons": [{"id": "handweapon", "count": 3}],
+                    "min": 1,
+                    "max": 1,
+                    "rules": [{"id": "wounds", "x": 3}, {"id": "human_kingdoms_tactics", "x": 1}, "leader"],
+                    "options": [
+                        {
+                            "replaceWeapon": {"id": "handweapon", "count": 3},
+                            "withWeapon": [
+                                ["pistol", {"id": "light_handweapon", "count": 3}],
+                                ["handgun", {"id": "light_handweapon", "count": 3}],
+                                [{"id": "handweapon", "count": 3}, "shield"],
+                                {"id": "zweihänder", "count": 3},
+                                [{"id": "great_weapon", "count": 3}]
+                            ]
+                        },
+                        {"addRule": ["shield", "heavy_armor"]}
+                    ]
+                }
+            ],
+            "subfactions": ["none"]
+        },
+        "militia": {
+            "name": "Militia",
+            "description": "",
+            "category": "core",
+            "models": [
+                {
+                    "options": [
+                        {"replaceWeapon": "handweapon", "withWeapon": ["polearm", "long_spear", "bow", "crossbow", "pistol", "handgun"]},
+                        {"addRule": ["champion"], "modelLimit": 1},
+                        {"addRule": ["banner"], "modelLimit": 1},
+                        {"addRule": ["musician"], "modelLimit": 1}
+                    ],
+                    "name": "Man-at-arms",
+                    "movement": 6,
+                    "courage": 5,
+                    "shoot": 4,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 4,
+                    "weapons": ["handweapon"],
+                    "min": 10,
+                    "max": 30
+                }
+            ],
+            "subfactions": ["none"]
+        },
+        "men_at_arms": {
+            "name": "Men-at-arms",
+            "description": "",
+            "category": "core",
+            "models": [
+                {
+                    "options": [
+                        {"replaceWeapon": ["long_spear"], "withWeapon": [["handweapon", "shield"], ["heavy_polearm", "shield"], ["long_spear", "shield"], ["heavy_polearm"]], "modelLimit": "all"},
+                        {"addRule": ["champion"], "modelLimit": 1},
+                        {"addRule": ["banner"], "modelLimit": 1},
+                        {"addRule": ["musician"], "modelLimit": 1}
+                    ],
+                    "name": "Man-at-arms",
+                    "movement": 6,
+                    "courage": 5,
+                    "shoot": 4,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "weapons": ["long_spear"],
+                    "min": 10,
+                    "max": 30
+                }
+            ],
+            "subfactions": ["none"]
+        },
+        "bowmen": {
+            "name": "Bowmen",
+            "description": "",
+            "category": "core",
+            "models": [
+                {
+                    "options": [
+                        {"replaceWeapon": ["bow"], "withWeapon": [{"id": "crossbow"}], "modelLimit": "all"},
+                        {"addRule": ["champion"], "modelLimit": 1},
+                        {"addRule": ["banner"], "modelLimit": 1},
+                        {"addRule": ["musician"], "modelLimit": 1}
+                    ],
+                    "name": "Bowmen",
+                    "movement": 6,
+                    "courage": 5,
+                    "shoot": 5,
+                    "fight": 4,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "weapons": ["bow", "light_handweapon"],
+                    "min": 10,
+                    "max": 30
+                }
+            ],
+            "subfactions": ["none"]
+        },
+        "handgunners": {
+            "name": "Handgunners",
+            "description": "",
+            "category": "core",
+            "models": [
+                {
+                    "options": [{"replaceModel": ["marksman"], "modelLimit": 1}, {"addRule": ["banner"], "modelLimit": 1}, {"addRule": ["musician"], "modelLimit": 1}],
+                    "name": "Handgunner",
+                    "movement": 6,
+                    "courage": 5,
+                    "shoot": 5,
+                    "fight": 4,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "weapons": ["handgun", "light_handweapon"],
+                    "min": 10,
+                    "max": 30
+                }
+            ],
+            "keywords": ["Infantry"],
+            "subfactions": ["none"]
+        },
+        "pistoliers": {
+            "name": "Pistoliers",
+            "description": "",
+            "category": "elite",
+            "models": [
+                {
+                    "options": [
+                        {"replaceModel": ["captain"], "modelLimit": 1},
+                        {"replaceWeapon": [{"id": "pistol", "count": 2}], "withWeapon": ["repeater_handgun"]},
+                        {"addRule": ["musician"], "modelLimit": 1}
+                    ],
+                    "name": "Pistolier",
+                    "movement": 8,
+                    "courage": 5,
+                    "shoot": 5,
+                    "defense": 6,
+                    "reflexes": 5,
+                    "fight": 5,
+                    "weapons": [{"id": "hooves_and_teeth", "count": 2}, "handweapon", {"id": "pistol", "count": 2}],
+                    "min": 3,
+                    "max": 12
+                }
+            ],
+            "keywords": ["Cavalry"],
+            "subfactions": ["none"]
+        },
+        "honor_guard": {
+            "name": "Honor Guard",
+            "description": "",
+            "category": "elite",
+            "models": [
+                {
+                    "options": [
+                        {"replaceWeapon": ["great_weapon"], "withWeapon": ["zweihänder"], "modelLimit": "all"},
+                        {"addRule": ["champion"], "modelLimit": 1},
+                        {"addRule": ["banner"], "modelLimit": 1},
+                        {"addRule": ["musician"], "modelLimit": 1}
+                    ],
+                    "name": "Honor Guard",
+                    "movement": 6,
+                    "courage": 6,
+                    "shoot": 5,
+                    "fight": 6,
+                    "defense": 6,
+                    "reflexes": 6,
+                    "weapons": ["great_weapon"],
+                    "min": 5,
+                    "max": 20
+                }
+            ],
+            "keywords": ["Infantry"],
+            "subfactions": ["none"]
+        },
+        "realm_knights": {
+            "name": "Realm Knights",
+            "description": "",
+            "category": "elite",
+            "models": [
+                {
+                    "options": [{"addRule": ["champion"], "modelLimit": 1}, {"addRule": ["banner"], "modelLimit": 1}, {"addRule": ["musician"], "modelLimit": 1}],
+                    "name": "Realm Knight",
+                    "movement": 8,
+                    "courage": 6,
+                    "shoot": 5,
+                    "fight": 6,
+                    "defense": 6,
+                    "reflexes": 6,
+                    "weapons": [{"id": "hooves_and_teeth", "count": 2}, "lance", "shield"],
+                    "min": 3,
+                    "max": 12
+                }
+            ],
+            "keywords": ["Cavalry"],
+            "subfactions": ["none"]
+        },
+        "paladins": {
+            "name": "Paladins",
+            "description": "",
+            "category": "rare",
+            "models": [
+                {
+                    "options": [
+                        {"replaceWeapon": ["heavy_handweapon"], "withWeapon": ["lance"], "modelLimit": "all"},
+                        {"addRule": ["champion"], "modelLimit": 1},
+                        {"addRule": ["banner"], "modelLimit": 1},
+                        {"addRule": ["musician"], "modelLimit": 1}
+                    ],
+                    "name": "Paladin",
+                    "movement": 8,
+                    "courage": 6,
+                    "shoot": 4,
+                    "fight": 6,
+                    "defense": 6,
+                    "reflexes": 6,
+                    "weapons": [{"id": "hooves_and_teeth", "count": 2}, "heavy_handweapon", "handweapon", "shield"],
+                    "min": 3,
+                    "max": 12
+                }
+            ],
+            "keywords": ["Cavalry"],
+            "rules": ["assassin"],
+            "subfactions": ["none"]
+        },
+        "cannon": {
+            "name": "Cannon",
+            "description": "",
+            "min": 1,
+            "max": 3,
+            "category": "rare",
+            "models": [
+                {
+                    "name": "Cannon",
+                    "movement": 5,
+                    "shoot": 5,
+                    "weapons": ["cannon"],
+                    "min": 1,
+                    "max": 1,
+                    "fight": 0,
+                    "defense": "-",
+                    "courage": "-",
+                    "reflexes": "-",
+                    "rules": [{"id": "crew", "x": 3}]
                 },
-                "shield"
-              ],
-              "withWeapon" : [
+                {"name": "Crew", "movement": 6, "courage": 5, "shoot": 4, "fight": 5, "defense": 7, "reflexes": 5, "weapons": ["light_handweapon"], "min": 3, "max": 3}
+            ],
+            "keywords": ["Warmachine", "Artillery"],
+            "subfactions": ["none"]
+        },
+        "rocket_artillery": {
+            "name": "Rocket Battery",
+            "description": "",
+            "min": 1,
+            "max": 3,
+            "category": "rare",
+            "models": [
                 {
-                  "id" : "great_maul",
-                  "count" : 3
+                    "name": "Rocket Battery",
+                    "movement": 5,
+                    "shoot": 5,
+                    "weapons": ["rocket_battery"],
+                    "min": 1,
+                    "max": 1,
+                    "fight": 0,
+                    "defense": "-",
+                    "courage": "-",
+                    "reflexes": "-",
+                    "rules": [{"id": "crew", "x": 3}]
                 },
+                {"name": "Crew", "movement": 6, "courage": 5, "shoot": 4, "fight": 5, "defense": 7, "reflexes": 5, "weapons": ["light_handweapon"], "min": 3, "max": 3}
+            ],
+            "keywords": ["Warmachine", "Artillery"],
+            "subfactions": ["none"]
+        },
+        "volley_gun": {
+            "name": "Volley Gun",
+            "description": "",
+            "min": 1,
+            "max": 3,
+            "category": "rare",
+            "models": [
                 {
-                  "id" : "maul",
-                  "count" : 4
-                }
-              ]
-            },
-            {
-              "addRule" : "heavy_armor"
-            }
-          ]
-        }
-      ],
-      "keywords" : [
-        "Hero",
-        "Wizard",
-        "Infantry"
-      ],
-      "subfactions" : [
-        "none",
-        "blackpowder",
-        "order",
-        "polis",
-        "magic"
-      ]
-    },
-    "captain" : {
-      "name" : "Captain",
-      "description" : "",
-      "category" : "hero",
-      "models" : [
-        {
-          "name" : "Captain",
-          "movement" : 6,
-          "courage" : 6,
-          "shoot" : 5,
-          "fight" : 6,
-          "defense" : 5,
-          "reflexes" : 6,
-          "weapons" : [
-            {
-              "id" : "zweihänder",
-              "count" : 3
-            }
-          ],
-          "min" : 1,
-          "max" : 1,
-          "rules" : [
-            {
-              "id" : "wounds",
-              "x" : 3
-            },
-            "leader"
-          ],
-          "options" : [
-            {
-              "addWeapon" : "handgun"
-            },
-            {
-              "addRule" : "shield"
-            },
-            {
-              "addRule" : [
-                "light_armor",
-                "heavy_armor"
-              ]
-            }
-          ]
-        }
-      ],
-      "keywords" : [
-        "Hero",
-        "Infantry"
-      ],
-      "subfactions" : [
-        "none",
-        "blackpowder",
-        "order",
-        "polis",
-        "magic"
-      ]
-    },
-    "men_at_arms" : {
-      "name" : "Men-at-arms",
-      "description" : "",
-      "category" : "core",
-      "models" : [
-        {
-          "name" : "Sergeant",
-          "movement" : 6,
-          "courage" : 4,
-          "shoot" : 4,
-          "fight" : 5,
-          "defense" : 6,
-          "reflexes" : 5,
-          "weapons" : [
-            {
-              "id" : "handweapon",
-              "count" : 2
-            }
-          ],
-          "min" : 1,
-          "max" : 1,
-          "options" : [
-            {
-              "replaceWeapon" : [
-                {
-                  "id" : "handweapon",
-                  "count" : 2
-                }
-              ],
-              "withWeapon" : [
-                {
-                  "id" : "spear",
-                  "count" : 2
+                    "name": "Volley Gun",
+                    "movement": 5,
+                    "shoot": 5,
+                    "weapons": ["volley_gun"],
+                    "min": 1,
+                    "max": 1,
+                    "fight": 0,
+                    "defense": "-",
+                    "courage": "-",
+                    "reflexes": "-",
+                    "rules": [{"id": "crew", "x": 3}]
                 },
-                [
-                  "halberd",
-                  "handweapon"
-                ]
-              ]
-            }
-          ]
+                {"name": "Crew", "movement": 6, "courage": 5, "shoot": 4, "fight": 5, "defense": 7, "reflexes": 5, "weapons": ["light_handweapon"], "min": 3, "max": 3}
+            ],
+            "keywords": ["Warmachine", "Artillery"],
+            "subfactions": ["none"]
         },
-        {
-          "name" : "Man-at-arms",
-          "movement" : 6,
-          "courage" : 4,
-          "shoot" : 4,
-          "fight" : 5,
-          "defense" : 6,
-          "reflexes" : 5,
-          "weapons" : [
-            "handweapon"
-          ],
-          "min" : 9,
-          "max" : 29,
-          "options" : [
-            {
-              "replaceWeapon" : [
-                "handweapon"
-              ],
-              "withWeapon" : [
+        "mortar": {
+            "name": "Mortar",
+            "description": "",
+            "min": 1,
+            "max": 3,
+            "category": "rare",
+            "models": [
                 {
-                  "id" : "spear"
+                    "name": "Mortar",
+                    "movement": 5,
+                    "shoot": 6,
+                    "weapons": ["mortar"],
+                    "min": 1,
+                    "max": 1,
+                    "fight": 0,
+                    "defense": "-",
+                    "courage": "-",
+                    "reflexes": "-",
+                    "rules": [{"id": "crew", "x": 3}]
                 },
-                {
-                  "id" : "halberd"
-                }
-              ],
-              "modelLimit" : "all"
-            }
-          ]
-        }
-      ],
-      "keywords" : [
-        "Infantry"
-      ],
-      "options" : [
-        {
-          "addRule" : [
-            "banner"
-          ],
-          "modelLimit" : 1
+                {"name": "Crew", "movement": 6, "courage": 5, "shoot": 4, "fight": 5, "defense": 7, "reflexes": 5, "weapons": ["light_handweapon"], "min": 3, "max": 3}
+            ],
+            "keywords": ["Warmachine", "Artillery"],
+            "subfactions": ["none"]
         },
-        {
-          "addRule" : [
-            "musician"
-          ],
-          "modelLimit" : 1
+        "hunters": {
+            "name": "Hunters",
+            "description": "",
+            "category": "elite",
+            "models": [
+                {
+                    "options": [
+                        {"replaceWeapon": ["bow"], "withWeapon": [{"id": "heavy_crossbow"}], "modelLimit": "all"},
+                        {"addRule": ["champion"], "modelLimit": 1},
+                        {"addRule": ["banner"], "modelLimit": 1},
+                        {"addRule": ["musician"], "modelLimit": 1}
+                    ],
+                    "name": "Hunter",
+                    "movement": 6,
+                    "courage": 5,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "weapons": ["bow", "handweapon"],
+                    "min": 5,
+                    "max": 20
+                }
+            ],
+            "rules": ["stealth", "scout"],
+            "subfactions": ["none"]
+        },
+        "light_tank": {
+            "name": "Light Tank",
+            "description": "",
+            "min": 1,
+            "max": 1,
+            "category": "rare",
+            "models": [
+                {
+                    "name": "Light Tank",
+                    "movement": 6,
+                    "courage": 5,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 11,
+                    "reflexes": 5,
+                    "rules": ["damage_table_vehicle", {"id": "impact", "x": 3}],
+                    "weapons": ["tank_cannon", "tank_repeater", "crushing_hull"],
+                    "options": [{"addWeapon": ["handweapon", "pistol", "handgun", "long_rifle"]}],
+                    "min": 1,
+                    "max": 1
+                }
+            ],
+            "keywords": ["Warmachine"],
+            "subfactions": ["none"]
         }
-      ],
-      "subfactions" : [
-        "none",
-        "blackpowder",
-        "order",
-        "polis",
-        "magic"
-      ]
     },
-    "bowmen" : {
-      "name" : "Bowmen",
-      "description" : "",
-      "category" : "core",
-      "models" : [
-        {
-          "name" : "Marksman",
-          "movement" : 6,
-          "courage" : 4,
-          "shoot" : 5,
-          "fight" : 4,
-          "defense" : 5,
-          "reflexes" : 5,
-          "weapons" : [
-            "bow",
-            {
-              "id" : "dagger",
-              "count" : 2
-            }
-          ],
-          "min" : 1,
-          "max" : 1
+    "weapons": {
+        "volley_gun": {"rules": ["rapid_fire"], "short": 15, "medium": 30, "attacks": 6, "ap": 3, "name": "Volley Gun"},
+        "rocket_battery": {"rules": ["scatter", {"id": "blast", "x": 3}, "indirect"], "short": 18, "medium": 36, "attacks": 3, "ap": 5, "name": "Rocket Battery"},
+        "crushing_hull": {"name": "Crushing Hull", "attacks": 3, "short": "Melee", "ap": 3},
+        "zweihänder": {"name": "Zweihänder", "ap": 6, "attacks": 1, "short": "Melee", "rules": ["rending"]},
+        "hooves_and_teeth": {"name": "Hooves and Teeth", "attacks": 1, "short": "Melee", "ap": 1},
+        "grenade_launcher": {"name": "Grenade Launcher", "ap": 3, "attacks": 1, "short": 6, "medium": 12, "rules": [{"id": "blast", "x": 2}, "lethal"]},
+        "cannon": {
+            "name": "Cannon",
+            "profiles": [
+                {"name": "Cannon Ball", "ap": 7, "attacks": 2, "medium": 48, "short": 24, "rules": [{"id": "blast", "x": 3}]},
+                {"name": "Grapeshot", "attacks": 6, "ap": 3, "short": 6, "medium": 12}
+            ]
         },
-        {
-          "name" : "Bowmen",
-          "movement" : 6,
-          "courage" : 4,
-          "shoot" : 5,
-          "fight" : 4,
-          "defense" : 5,
-          "reflexes" : 5,
-          "weapons" : [
-            "bow",
-            "dagger"
-          ],
-          "min" : 9,
-          "max" : 29
-        }
-      ],
-      "keywords" : [
-        "Infantry"
-      ],
-      "options" : [
-        {
-          "replaceWeapon" : [
-            "bow"
-          ],
-          "withWeapon" : [
-            {
-              "id" : "light_crossbow"
-            }
-          ],
-          "modelLimit" : "all"
-        },
-        {
-          "addRule" : [
-            "banner"
-          ],
-          "modelLimit" : 1
-        },
-        {
-          "addRule" : [
-            "musician"
-          ],
-          "modelLimit" : 1
-        }
-      ],
-      "subfactions" : [
-        "none",
-        "blackpowder",
-        "order",
-        "polis",
-        "magic"
-      ]
+        "tank_cannon": {"name": "Tank Cannon", "ap": 6, "attacks": 1, "medium": 48, "short": 24, "rules": [{"id": "blast", "x": 3}]},
+        "tank_repeater": {"name": "Tank Repeater", "ap": 3, "attacks": 2, "short": 12, "medium": 24, "rules": [{"id": "blast", "x": 3}]},
+        "mortar": {"rules": ["scatter", {"id": "blast", "x": 6}, "indirect"], "short": 24, "medium": 48, "attacks": 1, "ap": 5, "name": "Mortar"}
     },
-    "handgunners" : {
-      "name" : "Handgunners",
-      "description" : "",
-      "category" : "core",
-      "models" : [
-        {
-          "name" : "Marksman",
-          "movement" : 6,
-          "courage" : 4,
-          "shoot" : 5,
-          "fight" : 4,
-          "defense" : 5,
-          "reflexes" : 5,
-          "weapons" : [
-            "handgun",
-            {
-              "id" : "dagger",
-              "count" : 2
-            }
-          ],
-          "min" : 1,
-          "max" : 1,
-          "options" : [
-            {
-              "replaceWeapon" : [
-                "handgun"
-              ],
-              "withWeapon" : [
-                {
-                  "id" : "sniper_rifle"
-                },
-                {
-                  "id" : "handgun",
-                  "count" : 2
-                }
-              ]
-            }
-          ]
+    "rules": {
+        "human_kingdoms_tactics": {
+            "name": "Human Kingdoms Tactics",
+            "inputs": ["x"],
+            "description": "When this unit is activated, choose up to X friendly _Infantry_ units within 6\" to receive one of the following bonuses until the end of the round: \n * Re-roll failed Accuracy tests of 9+ \n * Re-roll failed Strength tests of 9+",
+            "points": ["rule.x", {"multiply": 10}]
         },
-        {
-          "name" : "Handgunner",
-          "movement" : 6,
-          "courage" : 4,
-          "shoot" : 5,
-          "fight" : 4,
-          "defense" : 5,
-          "reflexes" : 5,
-          "weapons" : [
-            "handgun",
-            "dagger"
-          ],
-          "min" : 9,
-          "max" : 29
-        }
-      ],
-      "keywords" : [
-        "Infantry"
-      ],
-      "options" : [
-        {
-          "addRule" : [
-            "banner"
-          ],
-          "modelLimit" : 1
+        "repair_toolkit": {
+            "name": "Repair Toolkit",
+            "description": "This model and its unit may spend one action to repair one vehicle or warmachine within 3\" that has suffered critical damage.",
+            "points": 5
         },
-        {
-          "addRule" : [
-            "musician"
-          ],
-          "modelLimit" : 1
+        "battle_prayer": {
+            "name": "Battle Prayer",
+            "description": "When this unit is activated, choose a Blessing for this unit or a friendly _Infantry_ unit within 6\" to receive until the end of the turn:\n* Divine Shield: Roll a die when a model in this unit loses a wound. On a value of 1 or 2 that wound is not lost.\n* Righteous Fury: When this unit fights, hit rolls of 1 or 2 generate an additional attack.\n* Healing Word: One model in the unit immediately heals D3 wounds.",
+            "points": [15]
         }
-      ],
-      "subfactions" : [
-        "none",
-        "blackpowder",
-        "order",
-        "polis",
-        "magic"
-      ]
     },
-    "pistoliers" : {
-      "name" : "Pistoliers",
-      "description" : "",
-      "category" : "elite",
-      "models" : [
-        {
-          "name" : "Pistolier Captain",
-          "movement" : 8,
-          "courage" : 4,
-          "shoot" : 5,
-          "fight" : 5,
-          "defense" : 5,
-          "reflexes" : 5,
-          "weapons" : [
-            {
-              "id" : "handgun",
-              "count" : 2
-            },
-            {
-              "id" : "hooves_and_teeth",
-              "count" : 2
-            },
-            {
-              "id" : "handweapon",
-              "count" : 2
-            }
-          ],
-          "min" : 1,
-          "max" : 1,
-          "options" : [
-            {
-              "replaceWeapon" : [
-                {
-                  "id" : "handgun",
-                  "count" : 2
-                }
-              ],
-              "withWeapon" : [
-                {
-                  "id" : "grenade_launcher"
-                },
-                {
-                  "id" : "rifle",
-                  "count" : 2
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name" : "Pistolier",
-          "movement" : 8,
-          "courage" : 4,
-          "shoot" : 5,
-          "defense" : 5,
-          "reflexes" : 5,
-          "fight" : 5,
-          "weapons" : [
-            {
-              "id" : "handgun",
-              "count" : 2
-            },
-            {
-              "id" : "hooves_and_teeth",
-              "count" : 2
-            },
-            "handweapon"
-          ],
-          "min" : 2,
-          "max" : 11,
-          "options" : [
-            {
-              "replaceWeapon" : [
-                {
-                  "id" : "handgun",
-                  "count" : 2
-                }
-              ],
-              "withWeapon" : [
-                {
-                  "id" : "rifle",
-                  "count" : 2
-                }
-              ],
-              "modelLimit" : "all"
-            }
-          ]
-        }
-      ],
-      "keywords" : [
-        "Cavalry"
-      ],
-      "options" : [
-        {
-          "addRule" : [
-            "musician"
-          ],
-          "modelLimit" : 1
-        }
-      ],
-      "subfactions" : [
-        "none",
-        "blackpowder",
-        "order",
-        "polis",
-        "magic"
-      ]
+    "powers": {
+        "fireball": {"name": "Fireball", "description": "Target enemy unit within 12\" takes 3 hits with AP(3).", "charge": 6},
+        "lightning_bolt": {"name": "Lightning Bolt", "description": "Target enemy unit within 18\" takes 1 hit with AP(7).", "charge": 6},
+        "haste": {"name": "Haste", "description": "Target friendly unit within 12\" may immediately make a free move action.", "charge": 7}
     },
-    "honor_guard" : {
-      "name" : "Honor Guard",
-      "description" : "",
-      "category" : "elite",
-      "models" : [
+    "strategies": [
         {
-          "name" : "Champion",
-          "movement" : 6,
-          "courage" : 5,
-          "shoot" : 4,
-          "fight" : 6,
-          "defense" : 6,
-          "reflexes" : 5,
-          "weapons" : [
-            {
-              "id" : "great_maul",
-              "count" : 3
-            }
-          ],
-          "min" : 1,
-          "max" : 1,
-          "options" : [
-            {
-              "replaceWeapon" : [
-                {
-                  "id" : "great_maul",
-                  "count" : 3
-                }
-              ],
-              "withWeapon" : [
-                {
-                  "id" : "zweihänder",
-                  "count" : 3
-                }
-              ]
-            }
-          ]
+            "phase": "activation",
+            "name": "Blessed Armory",
+            "flavor": "Inscribed with countless prayers and blessed by angels and the church, these weapons can even strike down demons.",
+            "description": "Use before an Infantry unit fights. Hit rolls of 1 or 2 gain +1 AP.",
+            "cost": 1
         },
         {
-          "name" : "Honor Guard",
-          "movement" : 6,
-          "courage" : 5,
-          "shoot" : 4,
-          "fight" : 6,
-          "defense" : 6,
-          "reflexes" : 6,
-          "weapons" : [
-            {
-              "id" : "great_maul",
-              "count" : 2
-            }
-          ],
-          "min" : 4,
-          "max" : 19,
-          "options" : [
-            {
-              "replaceWeapon" : [
-                {
-                  "id" : "great_maul",
-                  "count" : 2
-                }
-              ],
-              "withWeapon" : [
-                {
-                  "id" : "zweihänder",
-                  "count" : 2
-                }
-              ],
-              "modelLimit" : "all"
-            }
-          ]
+            "name": "Optimization",
+            "phase": "activation",
+            "description": "Use before shooting with a unit. Add 3\" to the short and long ranges of all weapons for that unit.",
+            "flavor": "An engineer in a unit of marksmen can quickly calculate range, wind speed and projectile arcs to maximize long range efficency.",
+            "cost": 1
+        },
+        {
+            "phase": "activation",
+            "name": "Standing Orders",
+            "description": "Use when a unit Shoots. That unit gets +1 Accuracy if it did not move this round.",
+            "flavor": "When standing still units have more time to aim and fire on target.",
+            "cost": 1
         }
-      ],
-      "keywords" : [
-        "Infantry"
-      ],
-      "options" : [
-        {
-          "addRule" : [
-            "banner"
-          ],
-          "modelLimit" : 1
+    ],
+    "relics": [],
+    "models": {
+        "marksman": {
+            "name": "Marksman",
+            "movement": 6,
+            "courage": 5,
+            "shoot": 5,
+            "fight": 4,
+            "defense": 5,
+            "reflexes": 5,
+            "weapons": ["repeater_handgun", "light_handweapon"],
+            "max": 1,
+            "rules": ["champion"],
+            "options": [{"replaceWeapon": ["repeater_handgun"], "withWeapon": ["long_rifle"]}]
         },
-        {
-          "addRule" : [
-            "musician"
-          ],
-          "modelLimit" : 1
+        "captain": {
+            "name": "Pistolier Captain",
+            "movement": 8,
+            "courage": 5,
+            "shoot": 5,
+            "fight": 5,
+            "defense": 6,
+            "reflexes": 5,
+            "weapons": [{"id": "hooves_and_teeth", "count": 2}, "handweapon", "grenade_launcher"],
+            "min": 1,
+            "max": 1,
+            "rules": ["champion"]
         }
-      ],
-      "subfactions" : [
-        "none",
-        "blackpowder",
-        "order",
-        "polis",
-        "magic"
-      ]
-    },
-    "realm_knights" : {
-      "name" : "Realm Knights",
-      "description" : "",
-      "category" : "elite",
-      "models" : [
-        {
-          "name" : "Knight Champion",
-          "movement" : 8,
-          "courage" : 5,
-          "shoot" : 4,
-          "fight" : 6,
-          "defense" : 7,
-          "reflexes" : 6,
-          "weapons" : [
-            {
-              "id" : "lance",
-              "count" : 2
-            },
-            {
-              "id" : "hooves_and_teeth",
-              "count" : 2
-            }
-          ],
-          "min" : 1,
-          "max" : 1
-        },
-        {
-          "name" : "Realm Knight",
-          "movement" : 8,
-          "courage" : 5,
-          "shoot" : 4,
-          "fight" : 6,
-          "defense" : 7,
-          "reflexes" : 6,
-          "weapons" : [
-            {
-              "id" : "hooves_and_teeth",
-              "count" : 2
-            },
-            "lance"
-          ],
-          "min" : 2,
-          "max" : 11
-        }
-      ],
-      "keywords" : [
-        "Cavalry"
-      ],
-      "options" : [
-        {
-          "addRule" : [
-            "banner"
-          ],
-          "modelLimit" : 1
-        },
-        {
-          "addRule" : [
-            "musician"
-          ],
-          "modelLimit" : 1
-        }
-      ],
-      "subfactions" : [
-        "none",
-        "blackpowder",
-        "order",
-        "polis",
-        "magic"
-      ]
-    },
-    "paladins" : {
-      "name" : "Paladins",
-      "description" : "",
-      "category" : "rare",
-      "models" : [
-        {
-          "name" : "Grail Knight",
-          "movement" : 8,
-          "courage" : 6,
-          "shoot" : 4,
-          "fight" : 6,
-          "defense" : 7,
-          "reflexes" : 6,
-          "weapons" : [
-            {
-              "id" : "maul",
-              "count" : 2
-            },
-            {
-              "id" : "hooves_and_teeth",
-              "count" : 2
-            },
-            "handweapon"
-          ],
-          "options" : [
-            {
-              "replaceWeapon" : [
-                {
-                  "id" : "maul",
-                  "count" : 2
-                }
-              ],
-              "withWeapon" : [
-                {
-                  "id" : "lance",
-                  "count" : 2
-                }
-              ]
-            }
-          ],
-          "min" : 1,
-          "max" : 1
-        },
-        {
-          "name" : "Paladin",
-          "movement" : 8,
-          "courage" : 5,
-          "shoot" : 4,
-          "fight" : 6,
-          "defense" : 7,
-          "reflexes" : 6,
-          "weapons" : [
-            {
-              "id" : "hooves_and_teeth",
-              "count" : 2
-            },
-            "maul",
-            "handweapon"
-          ],
-          "options" : [
-            {
-              "replaceWeapon" : [
-                {
-                  "id" : "maul"
-                }
-              ],
-              "withWeapon" : [
-                {
-                  "id" : "lance"
-                }
-              ],
-              "modelLimit" : "all"
-            }
-          ],
-          "min" : 2,
-          "max" : 11
-        }
-      ],
-      "keywords" : [
-        "Cavalry"
-      ],
-      "options" : [
-        {
-          "addRule" : [
-            "banner"
-          ],
-          "modelLimit" : 1
-        },
-        {
-          "addRule" : [
-            "musician"
-          ],
-          "modelLimit" : 1
-        }
-      ],
-      "rules" : [
-        "assassin"
-      ],
-      "subfactions" : [
-        "none",
-        "blackpowder",
-        "order",
-        "polis",
-        "magic"
-      ]
-    },
-    "cannon" : {
-      "name" : "Cannon",
-      "description" : "",
-      "min" : 1,
-      "max" : 3,
-      "category" : "rare",
-      "models" : [
-        {
-          "name" : "Cannon",
-          "movement" : 5,
-          "shoot" : 5,
-          "defense" : 8,
-          "rules" : [
-            {
-              "id" : "team",
-              "x" : 3
-            },
-            "damage_table_warmachine"
-          ],
-          "weapons" : [
-            "cannon"
-          ],
-          "min" : 1,
-          "max" : 1,
-          "reflexes" : 0,
-          "fight" : 0,
-          "courage" : 0
-        },
-        {
-          "name" : "Crew",
-          "movement" : 6,
-          "courage" : 4,
-          "shoot" : 4,
-          "fight" : 5,
-          "defense" : 4,
-          "reflexes" : 5,
-          "weapons" : [
-            "dagger"
-          ],
-          "min" : 3,
-          "max" : 3
-        }
-      ],
-      "keywords" : [
-        "Warmachine",
-        "Artillery"
-      ],
-      "subfactions" : [
-        "none",
-        "blackpowder",
-        "order",
-        "polis",
-        "magic"
-      ]
-    },
-    "mortar" : {
-      "name" : "Mortar",
-      "description" : "",
-      "min" : 1,
-      "max" : 3,
-      "category" : "rare",
-      "models" : [
-        {
-          "name" : "Mortar",
-          "movement" : 5,
-          "shoot" : 5,
-          "defense" : 8,
-          "rules" : [
-            {
-              "id" : "team",
-              "x" : 3
-            },
-            "damage_table_warmachine"
-          ],
-          "weapons" : [
-            "mortar"
-          ],
-          "min" : 1,
-          "max" : 1,
-          "reflexes" : 0,
-          "fight" : 0,
-          "courage" : 0
-        },
-        {
-          "name" : "Crew",
-          "movement" : 6,
-          "courage" : 4,
-          "shoot" : 4,
-          "fight" : 5,
-          "defense" : 4,
-          "reflexes" : 5,
-          "weapons" : [
-            "dagger"
-          ],
-          "min" : 3,
-          "max" : 3
-        }
-      ],
-      "keywords" : [
-        "Warmachine",
-        "Artillery"
-      ],
-      "subfactions" : [
-        "none",
-        "blackpowder",
-        "order",
-        "polis",
-        "magic"
-      ]
-    },
-    "hunters" : {
-      "name" : "Hunters",
-      "description" : "",
-      "category" : "elite",
-      "models" : [
-        {
-          "name" : "Tracker",
-          "movement" : 6,
-          "courage" : 4,
-          "shoot" : 5,
-          "fight" : 5,
-          "defense" : 5,
-          "reflexes" : 5,
-          "weapons" : [
-            "bow",
-            {
-              "id" : "handweapon",
-              "count" : 2
-            }
-          ],
-          "min" : 1,
-          "max" : 1
-        },
-        {
-          "name" : "Hunter",
-          "movement" : 6,
-          "courage" : 4,
-          "shoot" : 5,
-          "fight" : 5,
-          "defense" : 5,
-          "reflexes" : 5,
-          "weapons" : [
-            "bow",
-            "handweapon"
-          ],
-          "min" : 4,
-          "max" : 19
-        }
-      ],
-      "keywords" : [
-        "Infantry"
-      ],
-      "options" : [
-        {
-          "replaceWeapon" : [
-            "bow"
-          ],
-          "withWeapon" : [
-            {
-              "id" : "heavy_crossbow"
-            }
-          ],
-          "modelLimit" : "all"
-        },
-        {
-          "addRule" : [
-            "banner"
-          ],
-          "modelLimit" : 1
-        },
-        {
-          "addRule" : [
-            "musician"
-          ],
-          "modelLimit" : 1
-        }
-      ],
-      "rules" : [
-        "skirmishers",
-        "scout"
-      ],
-      "subfactions" : [
-        "none",
-        "blackpowder",
-        "order",
-        "polis",
-        "magic"
-      ]
     }
-  },
-  "weapons" : {
-    "zweihänder" : {
-      "name" : "Zweihänder",
-      "ap" : 6,
-      "attacks" : 1,
-      "short" : "Melee",
-      "rules" : [
-        "rending"
-      ]
-    },
-    "sniper_rifle" : {
-      "name" : "Sniper Rifle",
-      "ap" : 5,
-      "attacks" : 1,
-      "short" : 12,
-      "medium" : 24,
-      "rules" : [
-        "sniper"
-      ]
-    },
-    "hooves_and_teeth" : {
-      "name" : "Hooves and Teeth",
-      "attacks" : 1,
-      "short" : "Melee",
-      "ap" : 1
-    },
-    "grenade_launcher" : {
-      "name" : "Grenade Launcher",
-      "ap" : 5,
-      "attacks" : 1,
-      "short" : 6,
-      "medium" : 12,
-      "rules" : [
-        {
-          "id" : "blast",
-          "x" : 2
-        }
-      ]
-    },
-    "rifle" : {
-      "name" : "Rifle",
-      "ap" : 4,
-      "attacks" : 1,
-      "short" : 9,
-      "medium" : 18
-    },
-    "cannon" : {
-      "name" : "Cannon",
-      "profiles" : [
-        {
-          "name" : "Cannon Ball",
-          "ap" : 7,
-          "attacks" : 1,
-          "medium" : 48,
-          "short" : 24,
-          "rules" : [
-            {
-              "id" : "blast",
-              "x" : 3
-            },
-            "scatter"
-          ]
-        },
-        {
-          "name" : "Grapeshot",
-          "attacks" : 3,
-          "ap" : 3,
-          "short" : 6,
-          "medium" : 12
-        }
-      ]
-    },
-    "mortar" : {
-      "rules" : [
-        "scatter",
-        {
-          "id" : "blast",
-          "x" : 4
-        },
-        "indirect"
-      ],
-      "short" : 24,
-      "medium" : 48,
-      "attacks" : 1,
-      "ap" : 5,
-      "name" : "Mortar"
-    }
-  },
-  "rules" : {
-    "repair_toolkit" : {
-      "name" : "Repair Toolkit",
-      "description" : "This model and its unit may spend one action to repair one vehicle or warmachine within 3\" that has suffered critical damage.",
-      "points" : 5
-    },
-    "battle_prayer" : {
-      "name" : "Battle Prayer",
-      "description" : "When this unit is activated, choose a Blessing for this unit or a friendly _Infantry_ unit within 6\" to receive until the end of the turn:\n* Divine Shield: Roll a die when a model in this unit loses a wound. On a value of 1 or 2 that wound is not lost.\n* Righteous Fury: When this unit fights, hit rolls of 1 or 2 generate an additional attack.\n* Healing Word: One model in the unit immediately heals D3 wounds.",
-      "points" : [
-        15
-      ]
-    }
-  },
-  "powers" : {
-    "fireball" : {
-      "name" : "Fireball",
-      "description" : "Target enemy unit within 12\" takes 6 hits with AP 1. This power may be cast unlimited times.",
-      "flavor" : "Conjuring a fireball comes natural to wizards, especially for those that sow discord.",
-      "charge" : 6,
-      "subfactions" : [
-        "none",
-        "blackpowder",
-        "order",
-        "polis",
-        "magic"
-      ]
-    }
-  },
-  "strategies" : [],
-  "relics" : [],
-  "models" : {},
-  "subfactions" : {}
 }

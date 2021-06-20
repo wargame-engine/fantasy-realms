@@ -8,7 +8,7 @@
   "alliance" : "destruction",
   "units" : {
     "orc_warboss" : {
-      "name" : "Orc Warboss on foot",
+      "name" : "Orc Warboss",
       "description" : "Stronger and more savage than the normal orc.",
       "min" : 1,
       "max" : 1,
@@ -25,7 +25,7 @@
           "weapons" : [
             "shield",
             {
-              "id" : "great_maul",
+              "id" : "great_weapon",
               "count" : 4
             }
           ],
@@ -33,7 +33,7 @@
             {
               "replaceWeapon" : [
                 {
-                  "id" : "great_maul",
+                  "id" : "great_weapon",
                   "count" : 4
                 },
                 "shield"
@@ -44,7 +44,7 @@
                   "count" : 4
                 },
                 {
-                  "id" : "great_maul",
+                  "id" : "great_weapon",
                   "count" : 5
                 }
               ]
@@ -100,13 +100,13 @@
             {
               "replaceRule" : [
                 {
-                  "id" : "magic",
+                  "id" : "power",
                   "x" : 1
                 }
               ],
               "withRule" : [
                 {
-                  "id" : "magic",
+                  "id" : "power",
                   "x" : 2
                 }
               ]
@@ -118,7 +118,7 @@
               "x" : 3
             },
             {
-              "id" : "magic",
+              "id" : "power",
               "x" : 1
             },
             "crazed",
@@ -151,7 +151,7 @@
       ]
     },
     "goblin_warboss" : {
-      "name" : "Goblin Warboss on foot",
+      "name" : "Goblin Warboss",
       "description" : "",
       "min" : 1,
       "max" : 1,
@@ -184,21 +184,18 @@
               "withWeapon" : [
                 {
                   "id" : "sickle",
-                  "count" : 3
+                  "count" : 2
                 },
                 [
+                  "long_bow",
                   {
-                    "id" : "short_bow",
-                    "count" : 3
-                  },
-                  {
-                    "id" : "dagger",
-                    "count" : 3
+                    "id" : "handweapon",
+                    "count" : 2
                   }
                 ],
                 {
                   "id" : "rending_blade",
-                  "count" : 3
+                  "count" : 2
                 }
               ]
             },
@@ -249,43 +246,10 @@
           "reflexes" : 5,
           "weapons" : [
             "shield",
-            {
-              "id" : "handweapon",
-              "count" : 2
-            }
+            "handweapon"
           ],
           "min" : 1,
-          "max" : 1,
-          "options" : [
-            {
-              "replaceWeapon" : [
-                {
-                  "id" : "handweapon",
-                  "count" : 2
-                },
-                "shield"
-              ],
-              "withWeapon" : [
-                [
-                  {
-                    "id" : "short_bow",
-                    "count" : 2
-                  },
-                  {
-                    "id" : "dagger",
-                    "count" : 2
-                  }
-                ],
-                [
-                  {
-                    "id" : "spear",
-                    "count" : 2
-                  },
-                  "shield"
-                ]
-              ]
-            }
-          ]
+          "max" : 1
         },
         {
           "name" : "Goblin",
@@ -300,37 +264,7 @@
             "shield"
           ],
           "min" : 9,
-          "max" : 29,
-          "options" : [
-            {
-              "replaceWeapon" : [
-                "handweapon",
-                "shield"
-              ],
-              "withWeapon" : [
-                [
-                  "short_bow",
-                  "dagger"
-                ],
-                [
-                  "spear",
-                  "shield"
-                ]
-              ]
-            },
-            {
-              "replaceWeapon" : [
-                "handweapon",
-                "shield"
-              ],
-              "withWeapon" : [
-                [
-                  "net_and_spear"
-                ]
-              ],
-              "modelLimit" : 2
-            }
-          ]
+          "max" : 29
         }
       ],
       "keywords" : [
@@ -338,6 +272,34 @@
         "Infantry"
       ],
       "options" : [
+        {
+          "replaceWeapon" : [
+            "handweapon",
+            "shield"
+          ],
+          "withWeapon" : [
+            [
+              "short_bow",
+              "light_handweapon"
+            ],
+            [
+              "spear",
+              "shield"
+            ]
+          ]
+        },
+        {
+          "replaceWeapon" : [
+            "handweapon",
+            "shield"
+          ],
+          "withWeapon" : [
+            [
+              "net_and_spear"
+            ]
+          ],
+          "modelLimit" : "1/5"
+        },
         {
           "addRule" : [
             "banner"
@@ -375,39 +337,9 @@
           "defense" : 5,
           "reflexes" : 5,
           "weapons" : [
-            {
-              "id" : "maul",
-              "count" : 2
-            },
+            "heavy_handweapon",
             "shield"
           ],
-          "options" : [
-            {
-              "replaceWeapon" : [
-                {
-                  "id" : "maul",
-                  "count" : 2
-                },
-                "shield"
-              ],
-              "withWeapon" : [
-                [
-                  {
-                    "id" : "maul",
-                    "count" : 3
-                  }
-                ],
-                [
-                  "big_smasher",
-                  {
-                    "id" : "maul",
-                    "count" : 2
-                  }
-                ]
-              ]
-            }
-          ],
-          "rules" : [],
           "min" : 1,
           "max" : 1
         },
@@ -420,31 +352,8 @@
           "defense" : 5,
           "reflexes" : 5,
           "weapons" : [
-            {
-              "id" : "maul"
-            },
-            {
-              "id" : "shield"
-            }
-          ],
-          "options" : [
-            {
-              "replaceWeapon" : [
-                {
-                  "id" : "maul"
-                },
-                {
-                  "id" : "shield"
-                }
-              ],
-              "withWeapon" : [
-                {
-                  "id" : "maul",
-                  "count" : 2
-                }
-              ],
-              "modelLimit" : "all"
-            }
+            "heavy_handweapon",
+            "shield"
           ],
           "min" : 4,
           "max" : 19
@@ -458,7 +367,24 @@
         {
           "replaceWeapon" : [
             {
-              "id" : "maul",
+              "id" : "heavy_handweapon"
+            },
+            {
+              "id" : "shield"
+            }
+          ],
+          "withWeapon" : [
+            {
+              "id" : "heavy_handweapon",
+              "count" : 2
+            }
+          ],
+          "modelLimit" : "all"
+        },
+        {
+          "replaceWeapon" : [
+            {
+              "id" : "heavy_handweapon",
               "count" : 2
             }
           ],
@@ -596,7 +522,7 @@
           "reflexes" : 5,
           "weapons" : [
             {
-              "id" : "dagger",
+              "id" : "light_handweapon",
               "count" : 3
             },
             {
@@ -610,7 +536,7 @@
             {
               "replaceWeapon" : [
                 {
-                  "id" : "dagger",
+                  "id" : "light_handweapon",
                   "count" : 3
                 }
               ],
@@ -625,7 +551,7 @@
             }
           ],
           "rules" : [
-            "skirmishers",
+            "stealth",
             "crazed",
             {
               "id" : "impact",
@@ -644,7 +570,7 @@
           "reflexes" : 5,
           "weapons" : [
             {
-              "id" : "dagger",
+              "id" : "light_handweapon",
               "count" : 2
             },
             {
@@ -658,7 +584,7 @@
             {
               "replaceWeapon" : [
                 {
-                  "id" : "dagger",
+                  "id" : "light_handweapon",
                   "count" : 2
                 }
               ],
@@ -671,7 +597,7 @@
             }
           ],
           "rules" : [
-            "skirmishers",
+            "stealth",
             "crazed",
             {
               "id" : "impact",
@@ -730,7 +656,7 @@
           "reflexes" : 5,
           "weapons" : [
             {
-              "id" : "maul",
+              "id" : "heavy_handweapon",
               "count" : 3
             }
           ],
@@ -738,14 +664,14 @@
             {
               "replaceWeapon" : [
                 {
-                  "id" : "maul",
+                  "id" : "heavy_handweapon",
                   "count" : 3
                 }
               ],
               "withWeapon" : [
                 [
                   {
-                    "id" : "spear",
+                    "id" : "long_spear",
                     "count" : 3
                   }
                 ]
@@ -768,7 +694,7 @@
           "reflexes" : 5,
           "weapons" : [
             {
-              "id" : "maul",
+              "id" : "heavy_handweapon",
               "count" : 2
             }
           ],
@@ -776,13 +702,13 @@
             {
               "replaceWeapon" : [
                 {
-                  "id" : "maul",
+                  "id" : "heavy_handweapon",
                   "count" : 2
                 }
               ],
               "withWeapon" : [
                 {
-                  "id" : "spear",
+                  "id" : "long_spear",
                   "count" : 2
                 }
               ],
@@ -822,7 +748,7 @@
         "armor"
       ]
     },
-    "primal_goblin_warboss" : {
+    "warboss_spider" : {
       "name" : "Goblin Warboss on Cave Spider",
       "description" : "",
       "min" : 1,
@@ -862,11 +788,11 @@
               "withWeapon" : [
                 {
                   "id" : "sickle",
-                  "count" : 3
+                  "count" : 2
                 },
                 {
                   "id" : "spear",
-                  "count" : 3
+                  "count" : 2
                 }
               ]
             },
@@ -902,7 +828,7 @@
         "armor"
       ]
     },
-    "speed_goblin_warboss" : {
+    "warboss_beast" : {
       "name" : "Goblin Warboss on Cave Beast",
       "description" : "Smaller in stature but even more crazy than their orcish counterpart.",
       "min" : 1,
@@ -980,7 +906,7 @@
       ]
     },
     "goblin_shaman" : {
-      "name" : "Goblin Shaman on foot",
+      "name" : "Goblin Shaman",
       "description" : "",
       "min" : 1,
       "max" : 1,
@@ -1001,13 +927,13 @@
             {
               "replaceRule" : [
                 {
-                  "id" : "magic",
+                  "id" : "power",
                   "x" : 1
                 }
               ],
               "withRule" : [
                 {
-                  "id" : "magic",
+                  "id" : "power",
                   "x" : 2
                 }
               ]
@@ -1019,7 +945,7 @@
               "x" : 2
             },
             {
-              "id" : "magic",
+              "id" : "power",
               "x" : 1
             },
             "leader"
@@ -1077,7 +1003,7 @@
                     "id" : "gauntlet"
                   },
                   {
-                    "id" : "great_maul",
+                    "id" : "great_weapon",
                     "count" : 2
                   }
                 ]
@@ -1103,7 +1029,7 @@
           "reflexes" : 4,
           "weapons" : [
             {
-              "id" : "great_maul",
+              "id" : "great_weapon",
               "count" : 2
             }
           ],
@@ -1126,14 +1052,14 @@
           "modelLimit" : "2/3",
           "replaceWeapon" : [
             {
-              "id" : "great_maul",
+              "id" : "great_weapon",
               "count" : 2
             }
           ],
           "withWeapon" : [
             [
               {
-                "id" : "halberd",
+                "id" : "great_weapon",
                 "count" : 2
               }
             ],
@@ -1167,7 +1093,7 @@
       ]
     },
     "armor_orc_warboss" : {
-      "name" : "Armorclad Warboss on foot",
+      "name" : "Armorclad Warboss",
       "description" : "A walking tank, clad in the best orcish armor and wielding deadly weapons.",
       "min" : 1,
       "max" : 1,
@@ -1248,35 +1174,9 @@
           "weapons" : [
             "shield",
             {
-              "id" : "maul",
-              "count" : 3
+              "id" : "heavy_handweapon",
+              "count" : 2
             }
-          ],
-          "options" : [
-            {
-              "replaceWeapon" : [
-                {
-                  "id" : "maul",
-                  "count" : 3
-                },
-                "shield"
-              ],
-              "withWeapon" : [
-                [
-                  {
-                    "id" : "big_smasher",
-                    "count" : 2
-                  }
-                ]
-              ]
-            }
-          ],
-          "rules" : [
-            {
-              "id" : "wounds",
-              "x" : 2
-            },
-            "heavy_armor"
           ],
           "min" : 1,
           "max" : 1
@@ -1292,20 +1192,20 @@
           "weapons" : [
             "shield",
             {
-              "id" : "maul",
+              "id" : "heavy_handweapon",
               "count" : 2
             }
-          ],
-          "rules" : [
-            {
-              "id" : "wounds",
-              "x" : 2
-            },
-            "heavy_armor"
           ],
           "min" : 2,
           "max" : 11
         }
+      ],
+      "rules" : [
+        {
+          "id" : "wounds",
+          "x" : 2
+        },
+        "heavy_armor"
       ],
       "keywords" : [
         "Orc",
@@ -1315,7 +1215,7 @@
         {
           "replaceWeapon" : [
             {
-              "id" : "maul",
+              "id" : "heavy_handweapon",
               "count" : 2
             },
             "shield"
@@ -1329,7 +1229,7 @@
             ],
             [
               {
-                "id" : "halberd",
+                "id" : "great_weapon",
                 "count" : 2
               }
             ]
@@ -1428,8 +1328,8 @@
     },
     "net" : {
       "name" : "Net",
-      "description" : "Units engaged in Melee with a model that has this weapon suffer -1 to Initiative tests when escaping combat for each weapon with this rule.",
-      "points" : 1
+      "description" : "Units engaged in Melee with a model that has this weapon suffer -2 to Initiative tests when escaping combat for each weapon with this rule.",
+      "points" : 2
     },
     "frenzy_banner" : {
       "description" : "When this unit is activated, choose a friendly Infantry unit within 6\". That unit's hit rolls of 1 or 2 cause an additional hit until the end of the round.",
@@ -1459,8 +1359,46 @@
       "points" : 5
     }
   },
-  "powers" : {},
-  "strategies" : [],
+  "powers" : {
+    "lightning_bolt" : {
+      "name" : "Lightning Bolt",
+      "description" : "Target enemy unit within 18\" takes 1 hit with AP(7).",
+      "charge" : 6
+    },
+    "haste" : {
+      "name" : "Haste",
+      "description" : "Target friendly unit within 12\" may immediately make a free move action.",
+      "charge" : 7
+    },
+    "warpath" : {
+      "name" : "Warpath",
+      "description" : "Target friendly unit within 12\" may immediately make a free charge action.",
+      "charge" : 5,
+      "school" : "shadow"
+    }
+  },
+  "strategies" : [
+    {
+      "name" : "Here We Go!",
+      "phase" : "activation",
+      "description" : "Use when a unit declares a Charge action. That unit gets +3\" of Movement for that action.",
+      "cost" : 1
+    },
+    {
+      "name" : "Smash Them",
+      "phase" : "activation",
+      "flavor" : "It's about time we got to fighting.",
+      "description" : "Use when an _Infantry_ unit performs a Fight action. Hit rolls of 1 or 2 cause an additional hit.",
+      "cost" : 1
+    },
+    {
+      "name" : "Tough Ones",
+      "phase" : "activation",
+      "flavor" : "These Orcs are some of the toughest you've ever seen.",
+      "description" : "Use before taking Save rolls for an _Infantry_ unit. It gets +1 Save.",
+      "cost" : 2
+    }
+  ],
   "relics" : [
     {
       "name" : "Bloody Trophy",
