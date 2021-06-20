@@ -730,6 +730,58 @@
         "Cavalry"
       ]
     },
+    "chariot": {
+"name": "Traitor Chariot",
+"description": "A chariot of the traitor legions",
+"category": "rare",
+"models": [
+  {
+    "name": "Traitor Chariot",
+    "movement": 12,
+    "courage": 5,
+    "shoot": 4,
+    "fight": 5,
+    "defense": 7,
+    "reflexes": 5,
+    "weapons": [
+      {
+        "id": "great_maul",
+        "count": 2
+      },
+      {
+        "id": "handweapon",
+        "count": 2
+      },
+      {
+        "id": "hooves_and_teeth",
+        "count": 4
+      }
+    ],
+    "options": [
+      {"replaceWeapon": [
+        {
+        "id": "great_maul",
+        "count": 2
+        }
+      ],
+    "withWeapon": [
+      {"id": "chaos_flail",
+      "count": 3}
+    ]}
+    ],
+    "min": 1,
+    "max": 3
+  }
+],
+"subfactions" : [
+  "none",
+  "wrath",
+  "excess",
+  "pestilence",
+  "change",
+  "deception"
+]
+    },
     "chosen" : {
       "name" : "Traitor Chosen",
       "description" : "Blessed by their dark gods, these warriors set out to slay the mightiest heroes.",
@@ -1044,6 +1096,12 @@
       "rules" : [
         "rending"
       ]
+    },
+    "chaos_flail": {
+      "name": "Traitor's Flail",
+      "ap": 2,
+      "attacks": 1,
+      "short": "Melee"
     }
   },
   "rules" : {
