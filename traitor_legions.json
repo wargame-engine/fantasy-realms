@@ -911,6 +911,61 @@
   "damage_table_chariot"
 ]
     },
+    "siege_chariot": {
+      "name": "Siege Chariot",
+      "description": "A heavy chariot of the traitor legions",
+      "category": "rare",
+      "models": [
+        {
+          "name": "Siege Chariot",
+          "movement": 9,
+          "courage": 5,
+          "shoot": 4,
+          "fight": 5,
+          "defense": 9,
+          "reflexes": 5,
+          "weapons": [
+            {
+              "id": "heavy_great_weapon",
+              "count": 2
+            },
+            {
+              "id": "handweapon",
+              "count": 2
+            },
+            {
+              "id": "siege_fists",
+              "count": 3
+            }
+          ],
+          "options": [
+            {"replaceWeapon": [
+              {
+              "id": "great_maul",
+              "count": 2
+              }
+            ],
+          "withWeapon": [
+            {"id": "chaos_flail",
+            "count": 3}
+          ]}
+          ],
+          "min": 1,
+          "max": 3
+        }
+      ],
+      "subfactions" : [
+        "none",
+        "wrath",
+        "excess",
+        "pestilence",
+        "change",
+        "deception"
+      ],
+      "rules" : [
+        "damage_table_chariot"
+      ]
+          },
     "chosen" : {
       "name" : "Traitor Chosen",
       "description" : "Blessed by their dark gods, these warriors set out to slay the mightiest heroes.",
@@ -1117,6 +1172,11 @@
       "ap" : 4,
       "attacks" : 1,
       "short" : "Melee"
+    },
+    "siege_fists": {
+      "name": "Siege-Beast's Fists",
+      "ap": 3,
+      "short": "Melee"
     },
     "rune_lance" : {
       "name" : "Runecarved Lance",
