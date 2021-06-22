@@ -899,8 +899,66 @@
         "Infantry",
         "Flying"
       ]
-    }
-  },
+    },
+    "Chimera": {
+      "name": "Chimera",
+      "description": "A monstrous, chaos-warped creature",
+      "category": "rare",
+      "models": [
+        {
+          "name": "Chimera",
+          "movement": 10,
+          "courage": 4,
+          "shoot": 6,
+          "fight": 5,
+          "defense": 10,
+          "reflexes": 6,
+          "weapons": [
+            {
+              "id": "Avian_Head",
+              "count": 3
+            },
+            {
+              "id": "Draconic_Head",
+              "count": 3
+            },
+            {
+              "id": "Leonine_Head",
+              "count": 3
+            },
+            {
+              "id": "Draconic_Fire",
+              "count": 1
+            },
+            {
+              "id": "lizzer_claws",
+              "count": 6
+            }
+          ],
+          "min" : 1,
+          "max" : 1,
+          "rules" : [
+            "fear",
+            "fly",
+            "damage_table_monster"
+          ]
+        }
+      ],
+      "subfactions" : [
+        "none",
+        "change_legions",
+        "rage_legions",
+        "lust_legions",
+        "plague_legions"
+      ],
+      "keywords" : [
+        "Monster",
+        "Infantry",
+        "Flying"
+      ]
+
+        }
+    },
   "weapons" : {
     "hooves_and_teeth" : {
       "name" : "Hooves and Teeth",
@@ -1006,6 +1064,31 @@
       "ap" : 2,
       "attacks" : 1,
       "short" : "Melee"
+    },
+    "Avian_Head": {
+      "name": "Avian Head",
+      "ap": 6,
+      "attacks": 1,
+      "short": "Melee"
+    },
+    "Draconic_Head": {
+      "name": "Draconic Head",
+      "ap": 3,
+      "attacks": 1,
+      "short": "Melee"
+    },
+    "Leonine_Head": {
+      "name": "Leonine Head",
+      "ap": 5,
+      "attacks": 1,
+      "short": "Melee"
+    },
+    "Draconic_Fire": {
+      "name": "Draconic Fire",
+      "ap": 6,
+      "attacks": 3,
+      "short": 6,
+      "medium": 12
     }
   },
   "rules" : {
