@@ -85,7 +85,7 @@
       "description" : "The Traitor Legions are those who chose to fight for evil instead of order and made a pact with the dark gods. The Traitor Legions use deadly traitor warriors and other barbarians to swiftly crush their foes.",
       "subfactions" : {
         "change" : {
-          "name" : "power",
+          "name" : "Magic",
           "id" : "change",
           "color" : "#90305d",
           "description" : "Mighty Sorcerers that bring down a storm of spells, empowered by hordes of cultists that give their life in pursuit of knowledge."
@@ -197,7 +197,7 @@
       "description" : "The Beastmen are a race of human-like beasts found in forests. Their main goal is to disrupt and destroy the races of mankind through savage all-out raids.",
       "subfactions" : {
         "change" : {
-          "name" : "power",
+          "name" : "Magic",
           "id" : "change",
           "color" : "#90305d",
           "description" : "Mighty Sorcerers that bring down a storm of spells, empowered by hordes of cultists that give their life in pursuit of knowledge."
@@ -250,7 +250,7 @@
       "description" : "Corrupted by the dark gods, these dwarves imbue twisted warmachines with demonic magic.",
       "subfactions" : {
         "change" : {
-          "name" : "power",
+          "name" : "Magic",
           "id" : "change",
           "color" : "#90305d",
           "description" : "Mighty Sorcerers that bring down a storm of spells, empowered by hordes of cultists that give their life in pursuit of knowledge."
