@@ -198,12 +198,15 @@
               "id" : "wounds",
               "x" : 3
             },
-            "leader",
             {
               "id" : "power",
               "x" : 2
             },
-            "runes"
+            "runes",
+            {
+              "id" : "leader_x",
+              "x" : "Infantry, Cavalry"
+            }
           ],
           "min" : 1,
           "max" : 1,
@@ -227,6 +230,9 @@
       ],
       "subfactions" : [
         "none"
+      ],
+      "keywords" : [
+        "Cavalry"
       ]
     },
     "elf_phoenix_pal" : {
@@ -285,10 +291,6 @@
             }
           ]
         }
-      ],
-      "keywords" : [
-        "Wizard",
-        "Infantry"
       ],
       "subfactions" : [
         "none"
@@ -397,7 +399,7 @@
       "subfactions" : [
         "none"
       ],
-      "keyword" : [
+      "keywords" : [
         "Cavalry"
       ]
     },
@@ -761,7 +763,7 @@
             "long_bow",
             "handweapon"
           ],
-          "min" : 5,
+          "min" : 10,
           "max" : 20,
           "options" : [
             {
@@ -1141,9 +1143,279 @@
       "subfactions" : [
         "none"
       ]
+    },
+    "archmage_dragon" : {
+      "name" : "Archmage on Starborn Drake",
+      "description" : "",
+      "category" : "hero",
+      "models" : [
+        {
+          "name" : "Archmage on Starborn Drake",
+          "min" : 1,
+          "max" : 1,
+          "movement" : 8,
+          "courage" : 6,
+          "shoot" : 6,
+          "fight" : 6,
+          "defense" : 12,
+          "reflexes" : 6,
+          "rules" : [
+            "damage_table_monster",
+            "fly",
+            {
+              "id" : "power",
+              "x" : 3
+            },
+            {
+              "id" : "leader_x",
+              "x" : "Infantry, Cavalry"
+            }
+          ],
+          "options" : [
+            {
+              "replaceRule" : [
+                {
+                  "id" : "power",
+                  "x" : 3
+                }
+              ],
+              "withRule" : [
+                {
+                  "id" : "power",
+                  "x" : 4
+                }
+              ]
+            }
+          ],
+          "weapons" : [
+            {
+              "id" : "dragon_bite",
+              "count" : 4
+            },
+            {
+              "id" : "beak_and_claws",
+              "count" : 4
+            },
+            {
+              "id" : "staff",
+              "count" : 2
+            },
+            {
+              "id" : "handweapon",
+              "count" : 2
+            }
+          ]
+        }
+      ],
+      "keywords" : [
+        "Monster",
+        "Cavalry"
+      ]
+    },
+    "elf_prince_dragon" : {
+      "name" : "Elven Prince on Starborn Drake",
+      "description" : "",
+      "category" : "hero",
+      "models" : [
+        {
+          "name" : "Elven Prince on Starborn Drake",
+          "min" : 1,
+          "max" : 1,
+          "movement" : 8,
+          "courage" : 6,
+          "shoot" : 7,
+          "fight" : 7,
+          "defense" : 12,
+          "reflexes" : 6,
+          "rules" : [
+            "damage_table_monster",
+            "fly",
+            {
+              "id" : "leader_x",
+              "x" : "Infantry, Cavalry"
+            },
+            {
+              "id" : "elf_tactics",
+              "x" : 1
+            }
+          ],
+          "options" : [
+            {
+              "replaceWeapon" : [
+                {
+                  "id" : "handweapon",
+                  "count" : 5
+                }
+              ],
+              "withWeapon" : [
+                {
+                  "id" : "great_weapon",
+                  "count" : 4
+                },
+                {
+                  "id" : "runic_blade",
+                  "count" : 3
+                },
+                {
+                  "id" : "heavy_lance",
+                  "count" : 3
+                }
+              ]
+            },
+            {
+              "addWeapon" : [
+                "long_bow"
+              ]
+            },
+            {
+              "addRule" : [
+                "phoenix_armor",
+                "cloak"
+              ],
+              "limit" : 1
+            },
+            {
+              "replaceRule" : [
+                {
+                  "id" : "elf_tactics",
+                  "x" : 1
+                }
+              ],
+              "withRule" : [
+                {
+                  "id" : "elf_tactics",
+                  "x" : 2
+                }
+              ]
+            },
+            {
+              "addRule" : [
+                {
+                  "id" : "power",
+                  "x" : 1
+                },
+                {
+                  "id" : "power",
+                  "x" : 2
+                }
+              ]
+            }
+          ],
+          "weapons" : [
+            {
+              "id" : "dragon_bite",
+              "count" : 4
+            },
+            {
+              "id" : "beak_and_claws",
+              "count" : 4
+            },
+            {
+              "id" : "handweapon",
+              "count" : 5
+            },
+            "shield"
+          ]
+        }
+      ],
+      "keywords" : [
+        "Monster",
+        "Cavalry"
+      ]
+    },
+    "elf_phoenix_pal_phoenix" : {
+      "name" : "Phoenix Paladin on Divine Phoenix",
+      "description" : "Ancient Protector of the Temple of the Last Flame, riding an ancient Pheonix.",
+      "category" : "hero",
+      "models" : [
+        {
+          "name" : "Phoenix Paladin on Divine Phoenix",
+          "movement" : 8,
+          "courage" : 6,
+          "shoot" : 7,
+          "fight" : 7,
+          "defense" : 12,
+          "reflexes" : 7,
+          "weapons" : [
+            {
+              "id" : "heavy_polearm",
+              "count" : 4
+            },
+            {
+              "id" : "phoenix_claws",
+              "count" : 4
+            },
+            {
+              "id" : "phoenix_flame",
+              "count" : 2
+            }
+          ],
+          "rules" : [
+            "fear",
+            "fearless",
+            "phoenix_armor",
+            {
+              "id" : "power",
+              "x" : 2
+            },
+            {
+              "id" : "sentinel_tactics",
+              "x" : 1
+            },
+            {
+              "id" : "leader_x",
+              "x" : "Infantry, Cavalry"
+            },
+            "damage_table_monster",
+            {
+              "id" : "resilient",
+              "x" : 3
+            },
+            {
+              "id" : "impact",
+              "x" : 3
+            }
+          ],
+          "min" : 1,
+          "max" : 1,
+          "options" : [
+            {
+              "replaceRule" : [
+                {
+                  "id" : "sentinel_tactics",
+                  "x" : 1
+                }
+              ],
+              "withRule" : [
+                {
+                  "id" : "sentinel_tactics",
+                  "x" : 2
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "subfactions" : [
+        "none"
+      ],
+      "keywords" : [
+        "Monster",
+        "Cavalry"
+      ]
     }
   },
   "weapons" : {
+    "dragon_bite" : {
+      "name" : "Dragon's Breath",
+      "ap" : 4,
+      "attacks" : 1,
+      "medium" : 12,
+      "short" : 6,
+      "rules" : [
+        "lethal"
+      ]
+    },
     "claws" : {
       "name" : "Claws and Bite",
       "ap" : 1,
@@ -1194,6 +1466,32 @@
       "short" : "Melee",
       "rules" : [
         "lethal"
+      ]
+    },
+    "beak_and_claws" : {
+      "name" : "Bite and Claws",
+      "ap" : 4,
+      "attacks" : 1,
+      "short" : "Melee",
+      "rules" : [
+        "lethal"
+      ]
+    },
+    "phoenix_claws" : {
+      "name" : "Phoenix Claws",
+      "ap" : 5,
+      "attacks" : 1,
+      "short" : "Melee"
+    },
+    "phoenix_flame" : {
+      "name" : "Flaming Wings",
+      "ap" : 4,
+      "attacks" : 1,
+      "medium" : 12,
+      "short" : 6,
+      "rules" : [
+        "flame",
+        "bomb"
       ]
     }
   },
