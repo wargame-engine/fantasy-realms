@@ -198,7 +198,7 @@
       "models" : [
         {
           "name" : "Stormcaller Mage on Gryphon",
-          "movement" : 8,
+          "movement" : 10,
           "courage" : 7,
           "shoot" : 7,
           "fight" : 7,
@@ -957,11 +957,11 @@
           "name" : "Scale-Knight on Starborn Drake",
           "min" : 1,
           "max" : 1,
-          "movement" : 8,
+          "movement" : 10,
           "courage" : 7,
           "shoot" : 7,
           "fight" : 7,
-          "defense" : 12,
+          "defense" : 13,
           "reflexes" : 6,
           "rules" : [
             "damage_table_monster",

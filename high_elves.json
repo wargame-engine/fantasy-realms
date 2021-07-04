@@ -132,7 +132,7 @@
             "leader",
             {
               "id" : "power",
-              "x" : 2
+              "x" : 1
             },
             "runes"
           ],
@@ -148,20 +148,21 @@
                 {
                   "id" : "great_weapon",
                   "count" : 3
-                }
+                },
+                "great_staff"
               ]
             },
             {
               "replaceRule" : [
                 {
                   "id" : "power",
-                  "x" : 2
+                  "x" : 1
                 }
               ],
               "withRule" : [
                 {
                   "id" : "power",
-                  "x" : 3
+                  "x" : 2
                 }
               ]
             }
@@ -200,7 +201,7 @@
             },
             {
               "id" : "power",
-              "x" : 2
+              "x" : 1
             },
             "runes",
             {
@@ -215,14 +216,23 @@
               "replaceRule" : [
                 {
                   "id" : "power",
-                  "x" : 2
+                  "x" : 1
                 }
               ],
               "withRule" : [
                 {
                   "id" : "power",
-                  "x" : 3
+                  "x" : 2
                 }
+              ]
+            },
+            {
+              "replaceWeapon" : [
+                "staff",
+                "handweapon"
+              ],
+              "withWeapon" : [
+                "great_staff"
               ]
             }
           ]
@@ -915,7 +925,7 @@
       "models" : [
         {
           "name" : "Great Eagle",
-          "movement" : 8,
+          "movement" : 10,
           "courage" : 5,
           "shoot" : 5,
           "fight" : 6,
@@ -1153,11 +1163,11 @@
           "name" : "Archmage on Starborn Drake",
           "min" : 1,
           "max" : 1,
-          "movement" : 8,
+          "movement" : 10,
           "courage" : 6,
           "shoot" : 6,
           "fight" : 6,
-          "defense" : 12,
+          "defense" : 13,
           "reflexes" : 6,
           "rules" : [
             "damage_table_monster",
@@ -1221,11 +1231,11 @@
           "name" : "Elven Prince on Starborn Drake",
           "min" : 1,
           "max" : 1,
-          "movement" : 8,
+          "movement" : 10,
           "courage" : 6,
           "shoot" : 7,
           "fight" : 7,
-          "defense" : 12,
+          "defense" : 13,
           "reflexes" : 6,
           "rules" : [
             "damage_table_monster",
@@ -1330,7 +1340,7 @@
       "models" : [
         {
           "name" : "Phoenix Paladin on Divine Phoenix",
-          "movement" : 8,
+          "movement" : 10,
           "courage" : 6,
           "shoot" : 7,
           "fight" : 7,
