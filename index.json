@@ -85,7 +85,7 @@
       "description" : "The Traitor Legions are those who chose to fight for evil instead of order and made a pact with the dark gods. The Traitor Legions use deadly traitor warriors and other barbarians to swiftly crush their foes.",
       "subfactions" : {
         "change" : {
-          "name" : "Magic",
+          "name" : "power",
           "id" : "change",
           "color" : "#90305d",
           "description" : "Mighty Sorcerers that bring down a storm of spells, empowered by hordes of cultists that give their life in pursuit of knowledge."
@@ -197,7 +197,7 @@
       "description" : "The Beastmen are a race of human-like beasts found in forests. Their main goal is to disrupt and destroy the races of mankind through savage all-out raids.",
       "subfactions" : {
         "change" : {
-          "name" : "Magic",
+          "name" : "power",
           "id" : "change",
           "color" : "#90305d",
           "description" : "Mighty Sorcerers that bring down a storm of spells, empowered by hordes of cultists that give their life in pursuit of knowledge."
@@ -250,7 +250,7 @@
       "description" : "Corrupted by the dark gods, these dwarves imbue twisted warmachines with demonic magic.",
       "subfactions" : {
         "change" : {
-          "name" : "Magic",
+          "name" : "power",
           "id" : "change",
           "color" : "#90305d",
           "description" : "Mighty Sorcerers that bring down a storm of spells, empowered by hordes of cultists that give their life in pursuit of knowledge."
@@ -284,6 +284,15 @@
       "description" : "A race of travelling merchants and glory-seekers with advanced weaponry.",
       "color" : "#000000",
       "secondary_color" : "#360c30"
+    },
+    "dark_elves" : {
+      "name" : "Dark Elves",
+      "id" : "dark_elves",
+      "url" : "dark_elves.json",
+      "color" : "#30106B",
+      "version" : "0.1",
+      "alliance" : "order",
+      "description" : "Cursed by their dark gods, these Elves raid the coasts and rivers of the mainlands from their ship-fortresses."
     }
   },
   "categories" : {
@@ -456,12 +465,6 @@
       "name" : "Hand Weapon",
       "attacks" : 1,
       "ap" : 1,
-      "short" : "Melee"
-    },
-    "heavy_handweapon" : {
-      "name" : "Heavy Hand Weapon",
-      "attacks" : 1,
-      "ap" : 2,
       "short" : "Melee"
     },
     "heavy_handweapon" : {
@@ -761,8 +764,8 @@
       "name" : "Repeater-Crossbow",
       "attacks" : 1,
       "ap" : 1,
-      "short" : 9,
-      "medium" : 18,
+      "short" : 12,
+      "medium" : 24,
       "rules" : [
         "rapid_fire"
       ]
@@ -879,7 +882,7 @@
       "medium" : 12,
       "rules" : [
         "assault",
-        "rending"
+        "brutal"
       ]
     },
     "buckler_bash" : {
@@ -905,6 +908,24 @@
       "attacks" : 1,
       "short" : "Melee",
       "ap" : 1
+    },
+    "poison_sword" : {
+      "name" : "Poisoned Sword",
+      "attacks" : 1,
+      "ap" : 1,
+      "short" : "Melee",
+      "rules" : [
+        "lethal"
+      ]
+    },
+    "poison_greatsword" : {
+      "name" : "Poisoned Greatsword",
+      "attacks" : 1,
+      "ap" : 3,
+      "short" : "Melee",
+      "rules" : [
+        "lethal"
+      ]
     }
   },
   "rules" : {
@@ -975,6 +996,11 @@
       "name" : "Barbed Net",
       "description" : "Units hit by this weapon half their movement until the end of the turn.",
       "points" : 3
+    },
+    "poisoned_blades" : {
+      "name" : "Poisoned Blades",
+      "description" : "This model's melee weapons have +1 AP against enemies without _Damage Table(X)_.",
+      "points" : 5
     }
   }
 }
