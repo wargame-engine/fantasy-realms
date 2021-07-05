@@ -909,8 +909,8 @@
       "short" : "Melee",
       "ap" : 1
     },
-    "poison_sword" : {
-      "name" : "Poisoned Sword",
+    "poison_handweapon" : {
+      "name" : "Poisoned Handweapon",
       "attacks" : 1,
       "ap" : 1,
       "short" : "Melee",
@@ -918,12 +918,56 @@
         "lethal"
       ]
     },
-    "poison_greatsword" : {
-      "name" : "Poisoned Greatsword",
+    "poison_greatweapon" : {
+      "name" : "Poisoned Greatweapon",
       "attacks" : 1,
       "ap" : 3,
       "short" : "Melee",
       "rules" : [
+        "lethal"
+      ]
+    },
+    "heavy_poison_handweapon" : {
+      "name" : "Poisoned Heavy Handweapon",
+      "attacks" : 1,
+      "ap" : 2,
+      "short" : "Melee",
+      "rules" : [
+        "lethal"
+      ]
+    },
+    "heavy_poison_greatweapon" : {
+      "name" : "Poisoned Heavy Greatweapon",
+      "attacks" : 1,
+      "ap" : 4,
+      "short" : "Melee",
+      "rules" : [
+        "lethal"
+      ]
+    },
+    "poison_polearm" : {
+      "name" : "Poisoned Polearm",
+      "attacks" : 1,
+      "ap" : 2,
+      "short" : "Melee",
+      "rules" : [
+        {
+          "id" : "reach",
+          "x" : 1
+        },
+        "lethal"
+      ]
+    },
+    "heavy_poison_polearm" : {
+      "name" : "Poisoned Heavy Polearm",
+      "attacks" : 1,
+      "ap" : 3,
+      "short" : "Melee",
+      "rules" : [
+        {
+          "id" : "reach",
+          "x" : 1
+        },
         "lethal"
       ]
     }
