@@ -571,7 +571,7 @@
           "defense" : 5,
           "reflexes" : 6,
           "weapons" : [
-            "poison_sword",
+            "poison_handweapon",
             "shield"
           ]
         }
@@ -579,7 +579,7 @@
       "options" : [
         {
           "replaceWeapon" : [
-            "poison_sword",
+            "poison_handweapon",
             "shield"
           ],
           "withWeapon" : [
@@ -688,7 +688,7 @@
           "reflexes" : 6,
           "weapons" : [
             {
-              "id" : "poison_greatsword",
+              "id" : "poison_greatweapon",
               "count" : 2
             }
           ]
@@ -698,7 +698,7 @@
         {
           "replaceWeapon" : [
             {
-              "id" : "poison_greatsword",
+              "id" : "poison_greatweapon",
               "count" : 2
             }
           ],
@@ -847,7 +847,7 @@
           "reflexes" : 6,
           "weapons" : [
             {
-              "id" : "poison_sword",
+              "id" : "heavy_poison_handweapon",
               "count" : 6
             }
           ],
