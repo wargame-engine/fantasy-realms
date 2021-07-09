@@ -24,6 +24,10 @@
             {
               "id" : "wounds",
               "x" : 3
+            },
+            {
+              "id" : "sentinel_tactics",
+              "x" : 1
             }
           ],
           "weapons" : [
@@ -52,6 +56,20 @@
                 {
                   "id" : "war_hammer",
                   "count" : 3
+                }
+              ]
+            },
+            {
+              "replaceRule" : [
+                {
+                  "id" : "sentinel_tactics",
+                  "x" : 1
+                }
+              ],
+              "withRule" : [
+                {
+                  "id" : "sentinel_tactics",
+                  "x" : 2
                 }
               ]
             }
@@ -88,24 +106,23 @@
           ],
           "weapons" : [
             {
-              "id" : "heavy_great_weapon",
+              "id" : "handweapon",
               "count" : 2
             },
-            "shield"
+            "staff"
           ],
           "options" : [
             {
               "replaceWeapon" : [
                 {
-                  "id" : "heavy_great_weapon",
+                  "id" : "handweapon",
                   "count" : 2
-                },
-                "shield"
+                }
               ],
               "withWeapon" : [
                 {
-                  "id" : "heavy_great_weapon",
-                  "count" : 3
+                  "id" : "great_weapon",
+                  "count" : 2
                 }
               ]
             },
@@ -154,39 +171,87 @@
             {
               "id" : "wounds",
               "x" : 3
+            },
+            {
+              "id" : "blackpowder_tactics",
+              "x" : 1
             }
           ],
           "weapons" : [
-            {
-              "id" : "light_pistol",
-              "count" : 3
-            },
             {
               "id" : "handweapon",
               "count" : 4
             },
             {
-              "id" : "shotgun",
-              "count" : 2
+              "id" : "pistol",
+              "count" : 3
             }
           ],
           "min" : 1,
-          "max" : 1
+          "max" : 1,
+          "options" : [
+            {
+              "replaceWeapon" : [
+                {
+                  "id" : "pistol",
+                  "count" : 3
+                }
+              ],
+              "withWeapon" : [
+                {
+                  "id" : "handgun",
+                  "count" : 3
+                },
+                {
+                  "id" : "shotgun",
+                  "count" : 3
+                }
+              ]
+            },
+            {
+              "replaceWeapon" : [
+                {
+                  "id" : "handweapon",
+                  "count" : 4
+                }
+              ],
+              "withWeapon" : [
+                {
+                  "id" : "great_weapon",
+                  "count" : 3
+                }
+              ]
+            },
+            {
+              "replaceRule" : [
+                {
+                  "id" : "blackpowder_tactics",
+                  "x" : 1
+                }
+              ],
+              "withRule" : [
+                {
+                  "id" : "blackpowder_tactics",
+                  "x" : 2
+                }
+              ]
+            }
+          ]
         }
       ],
       "subfactions" : [
         "none"
       ]
     },
-    "stalker" : {
-      "name" : "Gloomstalker",
+    "commando" : {
+      "name" : "Commando",
       "description" : "A master pathfinder with great tenacity.",
       "min" : 1,
       "max" : 1,
       "category" : "hero",
       "models" : [
         {
-          "name" : "Gloomstalker",
+          "name" : "Commando",
           "movement" : 5,
           "courage" : 6,
           "shoot" : 6,
@@ -195,15 +260,11 @@
           "reflexes" : 6,
           "weapons" : [
             {
-              "id" : "heavy_crossbow"
-            },
-            {
-              "id" : "handweapon",
-              "count" : 4
+              "id" : "crossbow"
             },
             {
               "id" : "throwing_axe",
-              "count" : 2
+              "count" : 4
             }
           ],
           "rules" : [
@@ -212,10 +273,30 @@
             {
               "id" : "wounds",
               "x" : 3
+            },
+            {
+              "id" : "ranger_tactics",
+              "x" : 1
             }
           ],
           "min" : 1,
-          "max" : 1
+          "max" : 1,
+          "options" : [
+            {
+              "replaceRule" : [
+                {
+                  "id" : "ranger_tactics",
+                  "x" : 1
+                }
+              ],
+              "withRule" : [
+                {
+                  "id" : "ranger_tactics",
+                  "x" : 2
+                }
+              ]
+            }
+          ]
         }
       ],
       "subfactions" : [
@@ -231,12 +312,12 @@
       "models" : [
         {
           "name" : "Runepriest on Runecarved Elemental",
-          "movement" : 4,
+          "movement" : 5,
           "courage" : 6,
           "shoot" : 5,
           "fight" : 7,
           "defense" : 10,
-          "reflexes" : 4,
+          "reflexes" : 5,
           "rules" : [
             "damage_table_monster",
             {
@@ -259,10 +340,10 @@
               "count" : 2
             },
             {
-              "id" : "heavy_great_weapon",
+              "id" : "handweapon",
               "count" : 2
             },
-            "shield"
+            "staff"
           ],
           "options" : [
             {
@@ -274,7 +355,7 @@
               ],
               "withWeapon" : [
                 {
-                  "id" : "great_mace",
+                  "id" : "heavy_great_weapon",
                   "count" : 3
                 }
               ],
@@ -322,72 +403,25 @@
           "reflexes" : 5,
           "rules" : [
             "fanatical",
-            "furious",
             "leader",
             {
               "id" : "wounds",
               "x" : 3
-            }
+            },
+            {
+              "id" : "sentinel_tactics",
+              "x" : 1
+            },
+            "furious"
           ],
           "weapons" : [
             {
-              "id" : "great_mace",
+              "id" : "great_weapon",
               "count" : 6
             }
           ],
           "min" : 1,
           "max" : 1
-        }
-      ],
-      "subfactions" : [
-        "none"
-      ]
-    },
-    "dwarf_arbalesters" : {
-      "name" : "Dwarven Arbalesters",
-      "description" : "A squad of dwarven heavy crossbowmen.",
-      "category" : "core",
-      "models" : [
-        {
-          "options" : [
-            {
-              "addWeapon" : [
-                "shield"
-              ],
-              "modelLimit" : "all"
-            },
-            {
-              "addRule" : [
-                "champion"
-              ],
-              "modelLimit" : 1
-            },
-            {
-              "addRule" : [
-                "banner"
-              ],
-              "modelLimit" : 1
-            },
-            {
-              "addRule" : [
-                "musician"
-              ],
-              "modelLimit" : 1
-            }
-          ],
-          "name" : "Arbalester",
-          "movement" : 5,
-          "courage" : 5,
-          "shoot" : 5,
-          "fight" : 5,
-          "defense" : 5,
-          "reflexes" : 5,
-          "weapons" : [
-            "heavy_crossbow",
-            "handweapon"
-          ],
-          "min" : 10,
-          "max" : 30
         }
       ],
       "subfactions" : [
@@ -403,31 +437,16 @@
           "options" : [
             {
               "replaceWeapon" : [
-                "heavy_handweapon",
+                "handweapon",
                 "shield"
               ],
               "withWeapon" : [
-                "great_mace"
-              ],
-              "modelLimit" : "1/5"
-            },
-            {
-              "addRule" : [
-                "champion"
-              ],
-              "modelLimit" : 1
-            },
-            {
-              "addRule" : [
-                "banner"
-              ],
-              "modelLimit" : 1
-            },
-            {
-              "addRule" : [
-                "musician"
-              ],
-              "modelLimit" : 1
+                "great_weapon",
+                [
+                  "crossbow",
+                  "light_handweapon"
+                ]
+              ]
             }
           ],
           "name" : "Grunt",
@@ -435,10 +454,10 @@
           "courage" : 5,
           "shoot" : 5,
           "fight" : 6,
-          "defense" : 5,
+          "defense" : 6,
           "reflexes" : 5,
           "weapons" : [
-            "heavy_handweapon",
+            "handweapon",
             "shield"
           ],
           "min" : 10,
@@ -447,6 +466,26 @@
       ],
       "subfactions" : [
         "none"
+      ],
+      "options" : [
+        {
+          "addRule" : [
+            "champion"
+          ],
+          "modelLimit" : 1
+        },
+        {
+          "addRule" : [
+            "banner"
+          ],
+          "modelLimit" : 1
+        },
+        {
+          "addRule" : [
+            "musician"
+          ],
+          "modelLimit" : 1
+        }
       ]
     },
     "dwarf_veterans" : {
@@ -464,35 +503,26 @@
           "reflexes" : 5,
           "weapons" : [
             {
-              "id" : "mace",
-              "count" : 2
-            },
-            "shield"
-          ],
-          "min" : 5,
-          "max" : 20
-        }
-      ],
-      "keywords" : [
-        "Infantry"
-      ],
-      "options" : [
-        {
-          "replaceWeapon" : [
-            {
-              "id" : "mace",
-              "count" : 2
-            },
-            "shield"
-          ],
-          "withWeapon" : [
-            {
-              "id" : "great_mace",
+              "id" : "great_weapon",
               "count" : 2
             }
           ],
-          "modelLimit" : "all"
-        },
+          "min" : 10,
+          "max" : 30,
+          "rules" : [
+            "fearless"
+          ],
+          "options" : [
+            {
+              "addRule" : [
+                "shield"
+              ],
+              "modelLimit" : "all"
+            }
+          ]
+        }
+      ],
+      "options" : [
         {
           "addRule" : [
             "champion"
@@ -516,22 +546,13 @@
         "none"
       ]
     },
-    "dwarf_commando" : {
-      "name" : "Dwarven Commando",
+    "dwarf_rangers" : {
+      "name" : "Dwarven Rangers",
       "description" : "A squad of dwarven scouts.",
       "category" : "elite",
       "models" : [
         {
           "options" : [
-            {
-              "replaceWeapon" : [
-                "crossbow"
-              ],
-              "withWeapon" : [
-                "heavy_crossbow"
-              ],
-              "modelLimit" : "all"
-            },
             {
               "addWeapon" : "shield",
               "modelLimit" : "all"
@@ -544,27 +565,9 @@
                 "ambush"
               ],
               "modelLimit" : "all"
-            },
-            {
-              "addRule" : [
-                "champion"
-              ],
-              "modelLimit" : 1
-            },
-            {
-              "addRule" : [
-                "banner"
-              ],
-              "modelLimit" : 1
-            },
-            {
-              "addRule" : [
-                "musician"
-              ],
-              "modelLimit" : 1
             }
           ],
-          "name" : "Commando",
+          "name" : "Ranger",
           "movement" : 5,
           "courage" : 6,
           "shoot" : 5,
@@ -572,12 +575,14 @@
           "defense" : 5,
           "reflexes" : 6,
           "weapons" : [
-            "crossbow",
-            "throwing_axe",
-            "handweapon"
+            "heavy_crossbow",
+            {
+              "id" : "throwing_axe",
+              "count" : 2
+            }
           ],
           "min" : 5,
-          "max" : 20
+          "max" : 10
         }
       ],
       "subfactions" : [
@@ -585,6 +590,26 @@
       ],
       "rules" : [
         "scout"
+      ],
+      "options" : [
+        {
+          "addRule" : [
+            "champion"
+          ],
+          "modelLimit" : 1
+        },
+        {
+          "addRule" : [
+            "banner"
+          ],
+          "modelLimit" : 1
+        },
+        {
+          "addRule" : [
+            "musician"
+          ],
+          "modelLimit" : 1
+        }
       ]
     },
     "dwarf_gunners" : {
@@ -593,52 +618,70 @@
       "category" : "elite",
       "models" : [
         {
-          "options" : [
-            {
-              "replaceWeapon" : [
-                "steam_gun"
-              ],
-              "withWeapon" : [
-                "shotgun"
-              ]
-            },
-            {
-              "addRule" : [
-                "champion"
-              ],
-              "modelLimit" : 1
-            },
-            {
-              "addRule" : [
-                "banner"
-              ],
-              "modelLimit" : 1
-            },
-            {
-              "addRule" : [
-                "musician"
-              ],
-              "modelLimit" : 1
-            }
-          ],
           "name" : "Gunner",
           "movement" : 5,
           "courage" : 5,
-          "shoot" : 5,
-          "fight" : 6,
+          "shoot" : 6,
+          "fight" : 5,
           "defense" : 6,
           "reflexes" : 5,
           "weapons" : [
-            "steam_gun",
-            "handweapon",
-            "light_pistol"
+            "handgun",
+            "light_handweapon"
           ],
-          "min" : 5,
-          "max" : 20
+          "options" : [
+            {
+              "replaceWeapon" : [
+                "handgun"
+              ],
+              "withWeapon" : [
+                "flame_rifle"
+              ]
+            },
+            {
+              "replaceWeapon" : [
+                "handgun"
+              ],
+              "withWeapon" : [
+                [
+                  "pistol",
+                  "grenade"
+                ],
+                {
+                  "id" : "pistol",
+                  "count" : 2
+                },
+                "harpoon_rifle"
+              ],
+              "modelLimit" : "1/10"
+            }
+          ],
+          "max" : 20,
+          "min" : 10
         }
       ],
       "subfactions" : [
         "none"
+      ],
+      "options" : [
+        {
+          "addRule" : [
+            "champion"
+          ],
+          "modelLimit" : 1
+        },
+        {
+          "addRule" : [
+            "banner"
+          ],
+          "modelLimit" : 1
+        },
+        {
+          "addRule" : [
+            "musician"
+          ],
+          "modelLimit" : 1
+        }
       ]
     },
     "dwarf_berserker" : {
@@ -647,26 +690,6 @@
       "category" : "elite",
       "models" : [
         {
-          "options" : [
-            {
-              "addRule" : [
-                "champion"
-              ],
-              "modelLimit" : 1
-            },
-            {
-              "addRule" : [
-                "banner"
-              ],
-              "modelLimit" : 1
-            },
-            {
-              "addRule" : [
-                "musician"
-              ],
-              "modelLimit" : 1
-            }
-          ],
           "name" : "Berserker",
           "movement" : 5,
           "courage" : 5,
@@ -676,12 +699,28 @@
           "reflexes" : 5,
           "weapons" : [
             {
-              "id" : "great_mace",
-              "count" : 2
+              "id" : "handweapon",
+              "count" : 3
             }
           ],
-          "min" : 3,
-          "max" : 12
+          "min" : 5,
+          "max" : 10,
+          "options" : [
+            {
+              "replaceWeapon" : [
+                {
+                  "id" : "handweapon",
+                  "count" : 3
+                }
+              ],
+              "withWeapon" : [
+                {
+                  "id" : "great_weapon",
+                  "count" : 2
+                }
+              ]
+            }
+          ]
         }
       ],
       "rules" : [
@@ -690,25 +729,55 @@
       ],
       "subfactions" : [
         "none"
+      ],
+      "options" : [
+        {
+          "addRule" : [
+            "champion"
+          ],
+          "modelLimit" : 1
+        },
+        {
+          "addRule" : [
+            "banner"
+          ],
+          "modelLimit" : 1
+        },
+        {
+          "addRule" : [
+            "musician"
+          ],
+          "modelLimit" : 1
+        }
       ]
     },
     "dwarf_miners" : {
       "name" : "Dwarven Miners",
-      "description" : "A squad of dwarven miners, hiding beneath the battlefield.",
+      "description" : "A squad of dwarven miners, digging tunnels beneath the battlefield.",
       "category" : "elite",
       "models" : [
         {
+          "name" : "Miner",
+          "movement" : 5,
+          "courage" : 5,
+          "shoot" : 5,
+          "fight" : 6,
+          "defense" : 5,
+          "reflexes" : 5,
+          "weapons" : [
+            "great_weapon",
+            "grenade"
+          ],
           "options" : [
             {
               "replaceWeapon" : [
-                "mace"
+                "great_weapon"
               ],
               "withWeapon" : [
-                {
-                  "id" : "drill"
-                }
+                "drill",
+                "harpoon_rifle"
               ],
-              "modelLimit" : "1/5"
+              "modelLimit" : "1/10"
             },
             {
               "addRule" : [
@@ -729,17 +798,7 @@
               "modelLimit" : 1
             }
           ],
-          "name" : "Miner",
-          "movement" : 5,
-          "courage" : 5,
-          "shoot" : 5,
-          "fight" : 6,
-          "defense" : 5,
-          "reflexes" : 5,
-          "weapons" : [
-            "mace"
-          ],
-          "min" : 5,
+          "min" : 10,
           "max" : 20
         }
       ],
@@ -760,30 +819,19 @@
         {
           "name" : "Cannon",
           "movement" : 5,
-          "fight" : 0,
           "shoot" : 6,
           "weapons" : [
             "cannon"
           ],
+          "rules" : [
+            "damage_table_warmachine"
+          ],
           "min" : 1,
           "max" : 1,
-          "courage" : "-",
-          "reflexes" : "-",
-          "defense" : "-"
-        },
-        {
-          "name" : "Dwarven Crew",
-          "movement" : 5,
+          "fight" : "-",
+          "defense" : 8,
           "courage" : 5,
-          "shoot" : 5,
-          "fight" : 5,
-          "defense" : 6,
-          "reflexes" : 5,
-          "weapons" : [
-            "handweapon"
-          ],
-          "min" : 3,
-          "max" : 3
+          "reflexes" : 5
         }
       ],
       "keywords" : [
@@ -802,31 +850,19 @@
         {
           "name" : "Hellblaster",
           "movement" : 5,
-          "fight" : 0,
           "shoot" : 6,
           "weapons" : [
             "flamethrower_cannon"
           ],
+          "rules" : [
+            "damage_table_warmachine"
+          ],
           "min" : 1,
           "max" : 1,
-          "courage" : "-",
-          "reflexes" : "-",
-          "defense" : "-"
-        },
-        {
-          "name" : "Dwarven Crew",
-          "movement" : 5,
+          "fight" : "-",
+          "defense" : 8,
           "courage" : 5,
-          "shoot" : 5,
-          "fight" : 5,
-          "defense" : 6,
-          "reflexes" : 5,
-          "weapons" : [
-            "handweapon"
-          ],
-          "min" : 3,
-          "max" : 3,
-          "rules" : []
+          "reflexes" : 5
         }
       ],
       "keywords" : [
@@ -844,12 +880,12 @@
       "models" : [
         {
           "name" : "Runecarved Elemental",
-          "movement" : 4,
+          "movement" : 5,
           "fight" : 7,
           "shoot" : 5,
           "defense" : 10,
           "courage" : 6,
-          "reflexes" : 4,
+          "reflexes" : 5,
           "weapons" : [
             {
               "id" : "runic_fist",
@@ -875,7 +911,7 @@
               ],
               "withWeapon" : [
                 {
-                  "id" : "great_mace",
+                  "id" : "heavy_great_weapon",
                   "count" : 3
                 }
               ],
@@ -909,7 +945,7 @@
               ],
               "withWeapon" : [
                 {
-                  "id" : "great_mace",
+                  "id" : "heavy_great_weapon",
                   "count" : 3
                 }
               ]
@@ -924,12 +960,12 @@
             }
           ],
           "name" : "Forgefire Golem",
-          "movement" : 4,
-          "fight" : 6,
+          "movement" : 5,
+          "fight" : 7,
           "shoot" : 5,
           "defense" : 10,
           "courage" : 6,
-          "reflexes" : 4,
+          "reflexes" : 5,
           "weapons" : [
             {
               "id" : "runic_fist",
@@ -961,15 +997,15 @@
       "models" : [
         {
           "name" : "Runic Golem",
-          "movement" : 4,
+          "movement" : 5,
           "fight" : 6,
           "shoot" : 5,
           "defense" : 8,
           "courage" : 6,
-          "reflexes" : 4,
+          "reflexes" : 5,
           "weapons" : [
             {
-              "id" : "great_mace",
+              "id" : "war_hammer",
               "count" : 2
             }
           ],
@@ -979,77 +1015,12 @@
               "x" : 4
             }
           ],
-          "min" : 3,
-          "max" : 12
+          "min" : 2,
+          "max" : 4
         }
       ],
       "keywords" : [
         "Monster"
-      ],
-      "subfactions" : [
-        "none"
-      ]
-    },
-    "dwarf_engineers" : {
-      "name" : "Dwarven Engineers",
-      "description" : "A squad of veteran heavy engineers.",
-      "category" : "rare",
-      "models" : [
-        {
-          "options" : [
-            {
-              "replaceWeapon" : [
-                {
-                  "id" : "shotgun",
-                  "count" : 2
-                }
-              ],
-              "withWeapon" : [
-                "flamethrower"
-              ]
-            },
-            {
-              "addRule" : [
-                "champion"
-              ],
-              "modelLimit" : 1
-            },
-            {
-              "addRule" : [
-                "banner"
-              ],
-              "modelLimit" : 1
-            },
-            {
-              "addRule" : [
-                "musician"
-              ],
-              "modelLimit" : 1
-            }
-          ],
-          "name" : "Engineer",
-          "movement" : 5,
-          "courage" : 5,
-          "shoot" : 6,
-          "fight" : 6,
-          "defense" : 6,
-          "reflexes" : 5,
-          "weapons" : [
-            "handweapon",
-            {
-              "id" : "shotgun",
-              "count" : 2
-            }
-          ],
-          "min" : 3,
-          "max" : 12,
-          "rules" : [
-            {
-              "id" : "repair",
-              "x" : 3
-            }
-          ]
-        }
       ],
       "subfactions" : [
         "none"
@@ -1090,12 +1061,6 @@
           "ap" : 3,
           "short" : 6,
           "medium" : 12
-        }
-      ],
-      "rules" : [
-        {
-          "id" : "crew",
-          "x" : 3
         }
       ]
     },
@@ -1155,12 +1120,6 @@
             }
           ]
         }
-      ],
-      "rules" : [
-        {
-          "id" : "crew",
-          "x" : 3
-        }
       ]
     },
     "runic_fist" : {
@@ -1189,12 +1148,43 @@
     "drill" : {
       "name" : "Mining Drill",
       "attacks" : 1,
-      "ap" : 4,
-      "short" : "Melee",
+      "ap" : 7,
+      "short" : "Melee"
+    },
+    "grenade" : {
+      "name" : "Makeshift Explosive",
+      "attacks" : 1,
+      "ap" : 3,
+      "short" : 6,
       "rules" : [
         {
-          "id" : "impact",
-          "x" : 1
+          "id" : "blast",
+          "x" : 3
+        },
+        "indirect",
+        "grenade"
+      ]
+    },
+    "flame_rifle" : {
+      "name" : "Flamethrower-Rifle",
+      "short" : 9,
+      "medium" : 18,
+      "ap" : 4,
+      "attacks" : 1,
+      "rules" : [
+        "flame"
+      ]
+    },
+    "harpoon_rifle" : {
+      "name" : "Harpoon-Rifle",
+      "ap" : 6,
+      "attacks" : 1,
+      "short" : 12,
+      "medium" : 24,
+      "rules" : [
+        {
+          "id" : "deadly",
+          "x" : 2
         }
       ]
     }
@@ -1221,22 +1211,76 @@
       "name" : "Repair Toolkit",
       "description" : "This model and its unit may spend one action to repair one vehicle or warmachine within 3\" that has suffered critical damage.",
       "points" : 5
+    },
+    "sentinel_tactics" : {
+      "name" : "Sentinel Tactics",
+      "inputs" : [
+        "x"
+      ],
+      "description" : "When this unit is activated, choose up to X friendly _Infantry_ units within 6\". This unit and those units may re-roll failed Strength tests of 9+ until the end of the round.",
+      "points" : [
+        "rule.x",
+        {
+          "multiply" : 10
+        }
+      ]
+    },
+    "ranger_tactics" : {
+      "name" : "Ranger Tactics",
+      "inputs" : [
+        "x"
+      ],
+      "description" : "When this unit is activated, choose up to X friendly _Infantry_ units within 6\". This unit and those units may re-roll failed Accuracy tests of 9+ until the end of the round.",
+      "points" : [
+        "rule.x",
+        {
+          "multiply" : 10
+        }
+      ]
+    },
+    "blackpowder_tactics" : {
+      "name" : "Blackpowder Tactics",
+      "inputs" : [
+        "x"
+      ],
+      "description" : "When this unit is activated, choose up to X friendly _Warmachine_ units within 6\". This unit and those units may re-roll failed Accuracy tests of 9+ until the end of the round.",
+      "points" : [
+        "rule.x",
+        {
+          "multiply" : 10
+        }
+      ]
     }
   },
   "powers" : {
-    "bolt" : {
-      "name" : "Bolt",
+    "smite" : {
+      "name" : "Rune of Smiting",
       "description" : "Target enemy unit within 18\" takes 1 hit with AP(7).",
       "charge" : 6
     },
     "slow" : {
-      "name" : "Slow",
-      "description" : "Target enemy unit within 12\" gets -2\" of Movement until the end of the round.",
+      "name" : "Rune of Slowness",
+      "description" : "Target enemy unit within 12\" has -2\" Movement until the end of the round.",
       "charge" : 7
     },
     "haste" : {
-      "name" : "Haste",
+      "name" : "Rune of Haste",
       "description" : "Target friendly unit within 12\" may immediately make a free move action.",
+      "charge" : 7
+    },
+    "strength" : {
+      "name" : "Rune of Strength",
+      "description" : "Target friendly unit within 12\" gets +1 Strength until the end of the round. This power may be cast unlimited times.",
+      "charge" : 7
+    },
+    "fortitude" : {
+      "name" : "Rune of Fortitude",
+      "description" : "Target friendly unit within 12\" gets +1 Save until the end of the round. This power may be cast unlimited times.",
+      "charge" : 7
+    },
+    "spikes" : {
+      "name" : "Rune of Spikes",
+      "description" : "Target friendly unit within 12\". Until the end of the round, each time that unit rolls a 1 or 2 on a save roll, the attacking unit takes 1 hit with AP(3). This power may be cast unlimited times.",
       "charge" : 7
     }
   },
