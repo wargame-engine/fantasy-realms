@@ -464,12 +464,6 @@
       "ap" : 2,
       "short" : "Melee"
     },
-    "heavy_handweapon" : {
-      "name" : "Heavy Hand Weapon",
-      "attacks" : 1,
-      "ap" : 2,
-      "short" : "Melee"
-    },
     "great_weapon" : {
       "name" : "Great Weapon",
       "attacks" : 1,

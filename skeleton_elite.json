@@ -76,6 +76,42 @@
                     ]
                 }
             ]
+        },
+        "death_riders": {
+            "name": "Dead Riders",
+            "description": "Mounted skeletal outriders",
+            "category": "strike",
+            "models": [
+                {
+                    
+                    "options" : [
+                        {
+                          "addRule" : [
+                            "champion"
+                          ],
+                          "modelLimit" : 1
+                        },
+                        {
+                          "addRule" : [
+                            "musician"
+                          ],
+                          "modelLimit" : 1
+                        }
+                    ],
+                    "name": "Dead Rider",
+                    "movement": 13,
+                    "courage": 8,
+                    "shoot": 4,
+                    "fight": 6,
+                    "defense": 6,
+                    "reflexes": 5,
+                    "weapons": [
+                        {"id": "heavy_handweapon", "count": 3},
+                        {"id": "hooves_and_teeth", "count": 2}
+                    ],
+                    "rules": {"id": "wounds", "x": 2}
+                }
+            ]
         }
     },
     "weapons": {
