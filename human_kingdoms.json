@@ -157,10 +157,13 @@
               "id" : "human_kingdoms_tactics",
               "x" : 2
             },
-            "leader",
             "fly",
             "damage_table_monster",
-            "fear"
+            "fear",
+            {
+              "id" : "leader_x",
+              "x" : "Infantry, Cavalry"
+            }
           ],
           "options" : [
             {
@@ -199,6 +202,10 @@
       ],
       "subfactions" : [
         "none"
+      ],
+      "keywords" : [
+        "Beast",
+        "Cavalry"
       ]
     },
     "captain" : {
@@ -290,6 +297,411 @@
         "none"
       ]
     },
+    "captain_horse" : {
+      "name" : "Captain on Warhorse",
+      "description" : "A captain of the Great Kingdoms who inspires and directs troops.",
+      "category" : "hero",
+      "models" : [
+        {
+          "name" : "Captain on Warhorse",
+          "movement" : 8,
+          "courage" : 6,
+          "shoot" : 6,
+          "fight" : 6,
+          "defense" : 6,
+          "reflexes" : 6,
+          "weapons" : [
+            {
+              "id" : "handweapon",
+              "count" : 3
+            },
+            "shield",
+            {
+              "id" : "hooves_and_teeth",
+              "count" : 2
+            }
+          ],
+          "min" : 1,
+          "max" : 1,
+          "rules" : [
+            {
+              "id" : "wounds",
+              "x" : 3
+            },
+            {
+              "id" : "human_kingdoms_tactics",
+              "x" : 1
+            },
+            {
+              "id" : "leader_x",
+              "x" : "Infantry, Cavalry"
+            }
+          ],
+          "options" : [
+            {
+              "replaceWeapon" : [
+                {
+                  "id" : "handweapon",
+                  "count" : 3
+                },
+                "shield"
+              ],
+              "withWeapon" : [
+                {
+                  "id" : "great_weapon",
+                  "count" : 3
+                },
+                [
+                  "handgun",
+                  {
+                    "id" : "light_handweapon",
+                    "count" : 3
+                  }
+                ],
+                {
+                  "id" : "war_hammer",
+                  "count" : 2
+                },
+                [
+                  {
+                    "id" : "lance",
+                    "count" : 2
+                  },
+                  "shield"
+                ]
+              ]
+            },
+            {
+              "addRule" : [
+                "heavy_armor"
+              ],
+              "addWeapon" : [
+                "pistol"
+              ]
+            },
+            {
+              "replaceRule" : [
+                {
+                  "id" : "human_kingdoms_tactics",
+                  "x" : 1
+                }
+              ],
+              "withRule" : [
+                {
+                  "id" : "human_kingdoms_tactics",
+                  "x" : 2
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "subfactions" : [
+        "none"
+      ],
+      "keywords" : [
+        "Cavalry"
+      ]
+    },
+    "warrior_priest_horse" : {
+      "name" : "Warrior-Priest on Warhorse",
+      "description" : "",
+      "category" : "hero",
+      "models" : [
+        {
+          "name" : "Warrior-Priest on Warhorse",
+          "movement" : 8,
+          "courage" : 7,
+          "shoot" : 5,
+          "fight" : 6,
+          "defense" : 6,
+          "reflexes" : 6,
+          "weapons" : [
+            {
+              "id" : "heavy_handweapon",
+              "count" : 3
+            },
+            "shield",
+            {
+              "id" : "hooves_and_teeth",
+              "count" : 2
+            }
+          ],
+          "min" : 1,
+          "max" : 1,
+          "rules" : [
+            {
+              "id" : "wounds",
+              "x" : 3
+            },
+            "furious",
+            "battle_prayer",
+            {
+              "id" : "leader_x",
+              "x" : "Infantry, Cavalry"
+            }
+          ],
+          "options" : [
+            {
+              "replaceWeapon" : [
+                {
+                  "id" : "heavy_handweapon",
+                  "count" : 3
+                },
+                "shield"
+              ],
+              "withWeapon" : [
+                {
+                  "id" : "great_weapon",
+                  "count" : 3
+                },
+                {
+                  "id" : "heavy_handweapon",
+                  "count" : 4
+                }
+              ]
+            },
+            {
+              "addRule" : "heavy_armor"
+            }
+          ]
+        }
+      ],
+      "subfactions" : [
+        "none"
+      ],
+      "keywords" : [
+        "Cavalry"
+      ]
+    },
+    "battle_mage_horse" : {
+      "name" : "Battlemage on Warhorse",
+      "description" : "",
+      "category" : "hero",
+      "models" : [
+        {
+          "name" : "Battlemage on Warhorse",
+          "movement" : 8,
+          "courage" : 6,
+          "shoot" : 5,
+          "fight" : 5,
+          "defense" : 5,
+          "reflexes" : 6,
+          "weapons" : [
+            "staff",
+            "handweapon",
+            {
+              "id" : "hooves_and_teeth",
+              "count" : 2
+            }
+          ],
+          "min" : 1,
+          "max" : 1,
+          "rules" : [
+            {
+              "id" : "wounds",
+              "x" : 3
+            },
+            {
+              "id" : "power",
+              "x" : 1
+            },
+            {
+              "id" : "leader_x",
+              "x" : "Infantry, Cavalry"
+            }
+          ],
+          "options" : [
+            {
+              "replaceWeapon" : [
+                "staff",
+                "handweapon"
+              ],
+              "withWeapon" : [
+                "great_staff"
+              ]
+            },
+            {
+              "replaceRule" : [
+                {
+                  "id" : "power",
+                  "x" : 1
+                }
+              ],
+              "withRule" : [
+                {
+                  "id" : "power",
+                  "x" : 2
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "subfactions" : [
+        "none"
+      ],
+      "keywords" : [
+        "Cavalry"
+      ]
+    },
+    "spirit_guardian" : {
+      "name" : "Spirit Guardian",
+      "description" : "A once forgotten knight who has returned to defend the great human kingdoms.",
+      "category" : "hero",
+      "models" : [
+        {
+          "name" : "Spirit Guardian",
+          "movement" : 8,
+          "courage" : 6,
+          "shoot" : 6,
+          "fight" : 7,
+          "defense" : 7,
+          "reflexes" : 6,
+          "weapons" : [
+            {
+              "id" : "great_weapon",
+              "count" : 4
+            },
+            "shield",
+            {
+              "id" : "hooves_and_teeth",
+              "count" : 2
+            }
+          ],
+          "min" : 1,
+          "max" : 1,
+          "rules" : [
+            {
+              "id" : "resilient",
+              "x" : 3
+            },
+            {
+              "id" : "wounds",
+              "x" : 3
+            },
+            {
+              "id" : "human_kingdoms_tactics",
+              "x" : 1
+            },
+            {
+              "id" : "leader_x",
+              "x" : "Infantry, Cavalry"
+            },
+            "ethereal",
+            "ambush"
+          ],
+          "options" : [
+            {
+              "replaceWeapon" : [
+                {
+                  "id" : "great_weapon",
+                  "count" : 4
+                },
+                "shield"
+              ],
+              "withWeapon" : [
+                [
+                  {
+                    "id" : "lance",
+                    "count" : 4
+                  },
+                  "shield"
+                ]
+              ]
+            },
+            {
+              "replaceRule" : [
+                {
+                  "id" : "human_kingdoms_tactics",
+                  "x" : 1
+                }
+              ],
+              "withRule" : [
+                {
+                  "id" : "human_kingdoms_tactics",
+                  "x" : 2
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "subfactions" : [
+        "none"
+      ],
+      "keywords" : [
+        "Cavalry"
+      ]
+    },
+    "battle_mage_unicorn" : {
+      "name" : "Exalted Mage on Unicorn",
+      "description" : "",
+      "category" : "hero",
+      "models" : [
+        {
+          "name" : "Exalted Mage on Unicorn",
+          "movement" : 8,
+          "courage" : 6,
+          "shoot" : 5,
+          "fight" : 5,
+          "defense" : 6,
+          "reflexes" : 6,
+          "weapons" : [
+            {
+              "id" : "hooves_and_teeth",
+              "count" : 3
+            },
+            {
+              "id" : "heavy_handweapon",
+              "count" : 3
+            }
+          ],
+          "min" : 1,
+          "max" : 1,
+          "rules" : [
+            {
+              "id" : "wounds",
+              "x" : 3
+            },
+            {
+              "id" : "power",
+              "x" : 3
+            },
+            {
+              "id" : "impact",
+              "x" : 1
+            },
+            {
+              "id" : "leader_x",
+              "x" : "Infantry, Cavalry"
+            }
+          ],
+          "options" : [
+            {
+              "replaceRule" : [
+                {
+                  "id" : "power",
+                  "x" : 3
+                }
+              ],
+              "withRule" : [
+                {
+                  "id" : "power",
+                  "x" : 4
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "subfactions" : [
+        "none"
+      ],
+      "keywords" : [
+        "Cavalry"
+      ]
+    },
     "militia" : {
       "name" : "Militia",
       "description" : "",
@@ -307,24 +719,6 @@
                 "pistol",
                 "handgun"
               ]
-            },
-            {
-              "addRule" : [
-                "champion"
-              ],
-              "modelLimit" : 1
-            },
-            {
-              "addRule" : [
-                "banner"
-              ],
-              "modelLimit" : 1
-            },
-            {
-              "addRule" : [
-                "musician"
-              ],
-              "modelLimit" : 1
             }
           ],
           "name" : "Milita",
@@ -343,6 +737,26 @@
       ],
       "subfactions" : [
         "none"
+      ],
+      "options" : [
+        {
+          "addRule" : [
+            "champion"
+          ],
+          "modelLimit" : 1
+        },
+        {
+          "addRule" : [
+            "banner"
+          ],
+          "modelLimit" : 1
+        },
+        {
+          "addRule" : [
+            "musician"
+          ],
+          "modelLimit" : 1
+        }
       ]
     },
     "men_at_arms" : {
@@ -374,30 +788,12 @@
                 ]
               ],
               "modelLimit" : "all"
-            },
-            {
-              "addRule" : [
-                "champion"
-              ],
-              "modelLimit" : 1
-            },
-            {
-              "addRule" : [
-                "banner"
-              ],
-              "modelLimit" : 1
-            },
-            {
-              "addRule" : [
-                "musician"
-              ],
-              "modelLimit" : 1
             }
           ],
           "name" : "Man-at-arms",
           "movement" : 6,
           "courage" : 5,
-          "shoot" : 4,
+          "shoot" : 5,
           "fight" : 5,
           "defense" : 5,
           "reflexes" : 5,
@@ -410,6 +806,26 @@
       ],
       "subfactions" : [
         "none"
+      ],
+      "options" : [
+        {
+          "addRule" : [
+            "champion"
+          ],
+          "modelLimit" : 1
+        },
+        {
+          "addRule" : [
+            "banner"
+          ],
+          "modelLimit" : 1
+        },
+        {
+          "addRule" : [
+            "musician"
+          ],
+          "modelLimit" : 1
+        }
       ]
     },
     "bowmen" : {
@@ -421,32 +837,12 @@
           "options" : [
             {
               "replaceWeapon" : [
-                "bow"
+                "long_bow"
               ],
               "withWeapon" : [
-                {
-                  "id" : "crossbow"
-                }
+                "crossbow"
               ],
               "modelLimit" : "all"
-            },
-            {
-              "addRule" : [
-                "champion"
-              ],
-              "modelLimit" : 1
-            },
-            {
-              "addRule" : [
-                "banner"
-              ],
-              "modelLimit" : 1
-            },
-            {
-              "addRule" : [
-                "musician"
-              ],
-              "modelLimit" : 1
             }
           ],
           "name" : "Bowmen",
@@ -457,7 +853,7 @@
           "defense" : 5,
           "reflexes" : 5,
           "weapons" : [
-            "bow",
+            "long_bow",
             "light_handweapon"
           ],
           "min" : 10,
@@ -466,6 +862,26 @@
       ],
       "subfactions" : [
         "none"
+      ],
+      "options" : [
+        {
+          "addRule" : [
+            "champion"
+          ],
+          "modelLimit" : 1
+        },
+        {
+          "addRule" : [
+            "banner"
+          ],
+          "modelLimit" : 1
+        },
+        {
+          "addRule" : [
+            "musician"
+          ],
+          "modelLimit" : 1
+        }
       ]
     },
     "handgunners" : {
@@ -474,26 +890,6 @@
       "category" : "core",
       "models" : [
         {
-          "options" : [
-            {
-              "replaceModel" : [
-                "marksman"
-              ],
-              "modelLimit" : 1
-            },
-            {
-              "addRule" : [
-                "banner"
-              ],
-              "modelLimit" : 1
-            },
-            {
-              "addRule" : [
-                "musician"
-              ],
-              "modelLimit" : 1
-            }
-          ],
           "name" : "Handgunner",
           "movement" : 6,
           "courage" : 5,
@@ -506,25 +902,63 @@
             "light_handweapon"
           ],
           "min" : 10,
-          "max" : 30
+          "max" : 30,
+          "options" : [
+            {
+              "replaceWeapon" : [
+                "handgun"
+              ],
+              "withWeapon" : [
+                "repeater_handgun",
+                "long_rifle"
+              ],
+              "modelLimit" : 1
+            }
+          ]
         }
       ],
       "subfactions" : [
         "none"
+      ],
+      "options" : [
+        {
+          "addRule" : [
+            "champion"
+          ],
+          "modelLimit" : 1
+        },
+        {
+          "addRule" : [
+            "banner"
+          ],
+          "modelLimit" : 1
+        },
+        {
+          "addRule" : [
+            "musician"
+          ],
+          "modelLimit" : 1
+        }
       ]
     },
     "pistoliers" : {
-      "name" : "Pistoliers",
+      "name" : "Mounted Pistoliers",
       "description" : "",
       "category" : "elite",
       "models" : [
         {
           "options" : [
             {
-              "replaceModel" : [
-                "captain"
+              "replaceWeapon" : [
+                {
+                  "id" : "pistol",
+                  "count" : 2
+                }
               ],
-              "modelLimit" : 1
+              "withWeapon" : [
+                "carbine",
+                "repeater_handgun"
+              ]
             },
             {
               "replaceWeapon" : [
@@ -534,17 +968,12 @@
                 }
               ],
               "withWeapon" : [
-                "repeater_handgun"
-              ]
-            },
-            {
-              "addRule" : [
-                "musician"
+                "grenade_launcher"
               ],
               "modelLimit" : 1
             }
           ],
-          "name" : "Pistolier",
+          "name" : "Mounted Pistolier",
           "movement" : 8,
           "courage" : 5,
           "shoot" : 5,
@@ -563,7 +992,7 @@
             }
           ],
           "min" : 5,
-          "max" : 20
+          "max" : 10
         }
       ],
       "keywords" : [
@@ -571,6 +1000,20 @@
       ],
       "subfactions" : [
         "none"
+      ],
+      "options" : [
+        {
+          "addRule" : [
+            "champion"
+          ],
+          "modelLimit" : 1
+        },
+        {
+          "addRule" : [
+            "musician"
+          ],
+          "modelLimit" : 1
+        }
       ]
     },
     "honor_guard" : {
@@ -579,35 +1022,6 @@
       "category" : "elite",
       "models" : [
         {
-          "options" : [
-            {
-              "replaceWeapon" : [
-                "great_weapon"
-              ],
-              "withWeapon" : [
-                "war_hammer"
-              ],
-              "modelLimit" : "all"
-            },
-            {
-              "addRule" : [
-                "champion"
-              ],
-              "modelLimit" : 1
-            },
-            {
-              "addRule" : [
-                "banner"
-              ],
-              "modelLimit" : 1
-            },
-            {
-              "addRule" : [
-                "musician"
-              ],
-              "modelLimit" : 1
-            }
-          ],
           "name" : "Honor Guard",
           "movement" : 6,
           "courage" : 6,
@@ -616,14 +1030,104 @@
           "defense" : 6,
           "reflexes" : 6,
           "weapons" : [
-            "great_weapon"
+            "war_hammer"
           ],
           "min" : 5,
-          "max" : 20
+          "max" : 10,
+          "options" : [
+            {
+              "addRule" : [
+                "shield"
+              ],
+              "modelLimit" : "all"
+            }
+          ]
         }
       ],
       "subfactions" : [
         "none"
+      ],
+      "options" : [
+        {
+          "addRule" : [
+            "champion"
+          ],
+          "modelLimit" : 1
+        },
+        {
+          "addRule" : [
+            "banner"
+          ],
+          "modelLimit" : 1
+        },
+        {
+          "addRule" : [
+            "musician"
+          ],
+          "modelLimit" : 1
+        }
+      ]
+    },
+    "hunters" : {
+      "name" : "Hunters",
+      "description" : "",
+      "category" : "elite",
+      "models" : [
+        {
+          "options" : [
+            {
+              "replaceWeapon" : [
+                "long_bow"
+              ],
+              "withWeapon" : [
+                {
+                  "id" : "heavy_crossbow"
+                }
+              ],
+              "modelLimit" : "all"
+            }
+          ],
+          "name" : "Hunter",
+          "movement" : 6,
+          "courage" : 5,
+          "shoot" : 5,
+          "fight" : 5,
+          "defense" : 5,
+          "reflexes" : 5,
+          "weapons" : [
+            "long_bow",
+            "handweapon"
+          ],
+          "min" : 10,
+          "max" : 20
+        }
+      ],
+      "rules" : [
+        "evasive",
+        "scout"
+      ],
+      "subfactions" : [
+        "none"
+      ],
+      "options" : [
+        {
+          "addRule" : [
+            "champion"
+          ],
+          "modelLimit" : 1
+        },
+        {
+          "addRule" : [
+            "banner"
+          ],
+          "modelLimit" : 1
+        },
+        {
+          "addRule" : [
+            "musician"
+          ],
+          "modelLimit" : 1
+        }
       ]
     },
     "realm_knights" : {
@@ -634,25 +1138,97 @@
         {
           "options" : [
             {
-              "addRule" : [
-                "champion"
+              "replaceWeapon" : [
+                {
+                  "id" : "handweapon",
+                  "count" : 2
+                },
+                "shield"
               ],
-              "modelLimit" : 1
-            },
-            {
-              "addRule" : [
-                "banner"
-              ],
-              "modelLimit" : 1
-            },
-            {
-              "addRule" : [
-                "musician"
-              ],
-              "modelLimit" : 1
+              "withWeapon" : [
+                {
+                  "id" : "great_weapon",
+                  "count" : 2
+                },
+                "war_hammer"
+              ]
             }
           ],
           "name" : "Realm Knight",
+          "movement" : 6,
+          "courage" : 6,
+          "shoot" : 5,
+          "fight" : 6,
+          "defense" : 6,
+          "reflexes" : 6,
+          "weapons" : [
+            "shield",
+            {
+              "id" : "handweapon",
+              "count" : 2
+            }
+          ],
+          "min" : 10,
+          "max" : 20,
+          "rules" : []
+        }
+      ],
+      "keywords" : [
+        "Cavalry"
+      ],
+      "subfactions" : [
+        "none"
+      ],
+      "options" : [
+        {
+          "addRule" : [
+            "champion"
+          ],
+          "modelLimit" : 1
+        },
+        {
+          "addRule" : [
+            "banner"
+          ],
+          "modelLimit" : 1
+        },
+        {
+          "addRule" : [
+            "musician"
+          ],
+          "modelLimit" : 1
+        }
+      ]
+    },
+    "realm_knights_horse" : {
+      "name" : "Realm Knights on Warhorses",
+      "description" : "",
+      "category" : "elite",
+      "models" : [
+        {
+          "options" : [
+            {
+              "replaceWeapon" : [
+                {
+                  "id" : "handweapon",
+                  "count" : 2
+                },
+                "shield"
+              ],
+              "withWeapon" : [
+                [
+                  "lance",
+                  "shield"
+                ],
+                {
+                  "id" : "great_weapon",
+                  "count" : 2
+                },
+                "war_hammer"
+              ]
+            }
+          ],
+          "name" : "Realm Knight on Warhorse",
           "movement" : 8,
           "courage" : 6,
           "shoot" : 5,
@@ -664,11 +1240,17 @@
               "id" : "hooves_and_teeth",
               "count" : 2
             },
-            "lance",
-            "shield"
+            "shield",
+            {
+              "id" : "handweapon",
+              "count" : 2
+            }
           ],
           "min" : 5,
-          "max" : 20
+          "max" : 10,
+          "rules" : [
+            "furious"
+          ]
         }
       ],
       "keywords" : [
@@ -676,10 +1258,30 @@
       ],
       "subfactions" : [
         "none"
+      ],
+      "options" : [
+        {
+          "addRule" : [
+            "champion"
+          ],
+          "modelLimit" : 1
+        },
+        {
+          "addRule" : [
+            "banner"
+          ],
+          "modelLimit" : 1
+        },
+        {
+          "addRule" : [
+            "musician"
+          ],
+          "modelLimit" : 1
+        }
       ]
     },
-    "paladins" : {
-      "name" : "Paladins",
+    "realm_knights_gryphon" : {
+      "name" : "Realm Knights on Gryphons",
       "description" : "",
       "category" : "rare",
       "models" : [
@@ -687,36 +1289,99 @@
           "options" : [
             {
               "replaceWeapon" : [
-                "heavy_handweapon"
+                {
+                  "id" : "lance",
+                  "count" : 3
+                }
+              ],
+              "withWeapon" : [
+                {
+                  "id" : "heavy_polearm",
+                  "count" : 3
+                }
+              ]
+            }
+          ],
+          "name" : "Realm Knight on Gryphon",
+          "movement" : 10,
+          "courage" : 6,
+          "shoot" : 5,
+          "fight" : 6,
+          "defense" : 6,
+          "reflexes" : 6,
+          "weapons" : [
+            {
+              "id" : "beak_and_claws",
+              "count" : 3
+            },
+            "shield",
+            {
+              "id" : "lance",
+              "count" : 3
+            }
+          ],
+          "min" : 3,
+          "max" : 6,
+          "rules" : [
+            "fly",
+            {
+              "id" : "wounds",
+              "x" : 2
+            }
+          ]
+        }
+      ],
+      "keywords" : [
+        "Beast",
+        "Cavalry"
+      ],
+      "subfactions" : [
+        "none"
+      ],
+      "options" : [
+        {
+          "addRule" : [
+            "champion"
+          ],
+          "modelLimit" : 1
+        },
+        {
+          "addRule" : [
+            "banner"
+          ],
+          "modelLimit" : 1
+        },
+        {
+          "addRule" : [
+            "musician"
+          ],
+          "modelLimit" : 1
+        }
+      ]
+    },
+    "realm_knights_pegasus" : {
+      "name" : "Realm Knights on Pegasi",
+      "description" : "",
+      "category" : "rare",
+      "models" : [
+        {
+          "options" : [
+            {
+              "replaceWeapon" : [
+                {
+                  "id" : "handweapon",
+                  "count" : 2
+                }
               ],
               "withWeapon" : [
                 "lance"
-              ],
-              "modelLimit" : "all"
-            },
-            {
-              "addRule" : [
-                "champion"
-              ],
-              "modelLimit" : 1
-            },
-            {
-              "addRule" : [
-                "banner"
-              ],
-              "modelLimit" : 1
-            },
-            {
-              "addRule" : [
-                "musician"
-              ],
-              "modelLimit" : 1
+              ]
             }
           ],
-          "name" : "Paladin",
-          "movement" : 8,
+          "name" : "Realm Knight on Pegasus",
+          "movement" : 10,
           "courage" : 6,
-          "shoot" : 4,
+          "shoot" : 5,
           "fight" : 6,
           "defense" : 6,
           "reflexes" : 6,
@@ -725,22 +1390,105 @@
               "id" : "hooves_and_teeth",
               "count" : 2
             },
-            "heavy_handweapon",
-            "handweapon",
-            "shield"
+            "shield",
+            {
+              "id" : "handweapon",
+              "count" : 2
+            }
           ],
           "min" : 3,
-          "max" : 12
+          "max" : 6,
+          "rules" : [
+            "fly",
+            {
+              "id" : "wounds",
+              "x" : 2
+            }
+          ]
         }
       ],
       "keywords" : [
         "Cavalry"
       ],
-      "rules" : [
-        "assassin"
+      "subfactions" : [
+        "none"
+      ],
+      "options" : [
+        {
+          "addRule" : [
+            "champion"
+          ],
+          "modelLimit" : 1
+        },
+        {
+          "addRule" : [
+            "banner"
+          ],
+          "modelLimit" : 1
+        },
+        {
+          "addRule" : [
+            "musician"
+          ],
+          "modelLimit" : 1
+        }
+      ]
+    },
+    "bowmen_horse" : {
+      "name" : "Mounted Bowmen",
+      "description" : "",
+      "category" : "elite",
+      "models" : [
+        {
+          "name" : "Mounted Bowmen",
+          "movement" : 8,
+          "courage" : 5,
+          "shoot" : 5,
+          "fight" : 5,
+          "defense" : 5,
+          "reflexes" : 5,
+          "weapons" : [
+            "long_bow",
+            "spear",
+            {
+              "id" : "hooves_and_teeth",
+              "count" : 2
+            }
+          ],
+          "min" : 5,
+          "max" : 10,
+          "options" : [
+            {
+              "addRule" : [
+                "buckler"
+              ],
+              "modelLimit" : "all"
+            }
+          ]
+        }
       ],
       "subfactions" : [
         "none"
+      ],
+      "options" : [
+        {
+          "addRule" : [
+            "champion"
+          ],
+          "modelLimit" : 1
+        },
+        {
+          "addRule" : [
+            "banner"
+          ],
+          "modelLimit" : 1
+        },
+        {
+          "addRule" : [
+            "musician"
+          ],
+          "modelLimit" : 1
+        }
       ]
     },
     "cannon" : {
@@ -943,66 +1691,6 @@
         "none"
       ]
     },
-    "hunters" : {
-      "name" : "Hunters",
-      "description" : "",
-      "category" : "elite",
-      "models" : [
-        {
-          "options" : [
-            {
-              "replaceWeapon" : [
-                "bow"
-              ],
-              "withWeapon" : [
-                {
-                  "id" : "heavy_crossbow"
-                }
-              ],
-              "modelLimit" : "all"
-            },
-            {
-              "addRule" : [
-                "champion"
-              ],
-              "modelLimit" : 1
-            },
-            {
-              "addRule" : [
-                "banner"
-              ],
-              "modelLimit" : 1
-            },
-            {
-              "addRule" : [
-                "musician"
-              ],
-              "modelLimit" : 1
-            }
-          ],
-          "name" : "Hunter",
-          "movement" : 6,
-          "courage" : 5,
-          "shoot" : 5,
-          "fight" : 5,
-          "defense" : 5,
-          "reflexes" : 5,
-          "weapons" : [
-            "bow",
-            "handweapon"
-          ],
-          "min" : 10,
-          "max" : 20
-        }
-      ],
-      "rules" : [
-        "evasive",
-        "scout"
-      ],
-      "subfactions" : [
-        "none"
-      ]
-    },
     "light_tank" : {
       "name" : "Light Tank",
       "description" : "",
@@ -1051,86 +1739,173 @@
         "none"
       ]
     },
-    "battle_mage_horse" : {
-      "name" : "Battlemage on Warhorse",
+    "paladin_horse" : {
+      "name" : "Paladins on Warhorses",
       "description" : "",
-      "category" : "hero",
+      "category" : "rare",
       "models" : [
         {
-          "name" : "Battlemage on Warhorse",
+          "options" : [
+            {
+              "replaceWeapon" : [
+                {
+                  "id" : "great_weapon",
+                  "count" : 5
+                }
+              ],
+              "withWeapon" : [
+                {
+                  "id" : "heavy_lance",
+                  "count" : 4
+                }
+              ]
+            }
+          ],
+          "name" : "Paladins on Warhorse",
           "movement" : 8,
-          "courage" : 6,
+          "courage" : 7,
           "shoot" : 5,
-          "fight" : 5,
-          "defense" : 5,
+          "fight" : 7,
+          "defense" : 7,
           "reflexes" : 6,
           "weapons" : [
-            "staff",
-            "handweapon",
             {
               "id" : "hooves_and_teeth",
               "count" : 2
-            }
+            },
+            {
+              "id" : "great_weapon",
+              "count" : 5
+            },
+            "shield"
           ],
-          "min" : 1,
-          "max" : 1,
+          "min" : 3,
+          "max" : 6,
           "rules" : [
             {
               "id" : "wounds",
               "x" : 3
-            },
-            {
-              "id" : "power",
-              "x" : 1
-            },
-            "leader"
-          ],
-          "options" : [
-            {
-              "replaceWeapon" : [
-                "staff",
-                "handweapon"
-              ],
-              "withWeapon" : [
-                "great_staff"
-              ]
-            },
-            {
-              "replaceRule" : [
-                {
-                  "id" : "power",
-                  "x" : 1
-                }
-              ],
-              "withRule" : [
-                {
-                  "id" : "power",
-                  "x" : 2
-                }
-              ]
             }
           ]
         }
       ],
+      "keywords" : [
+        "Cavalry"
+      ],
       "subfactions" : [
         "none"
       ],
-      "keywords" : [
-        "Cavalry"
+      "options" : [
+        {
+          "addRule" : [
+            "champion"
+          ],
+          "modelLimit" : 1
+        },
+        {
+          "addRule" : [
+            "banner"
+          ],
+          "modelLimit" : 1
+        },
+        {
+          "addRule" : [
+            "musician"
+          ],
+          "modelLimit" : 1
+        }
       ]
     },
-    "warrior_priest_horse" : {
-      "name" : "Warrior-Priest on Warhorse",
+    "paladin_pegasus" : {
+      "name" : "Paladin on Pegasi",
       "description" : "",
+      "category" : "rare",
+      "models" : [
+        {
+          "options" : [
+            {
+              "replaceWeapon" : [
+                {
+                  "id" : "great_weapon",
+                  "count" : 5
+                }
+              ],
+              "withWeapon" : [
+                {
+                  "id" : "heavy_lance",
+                  "count" : 4
+                }
+              ]
+            }
+          ],
+          "name" : "Paladin on Pegasus",
+          "movement" : 10,
+          "courage" : 7,
+          "shoot" : 5,
+          "fight" : 7,
+          "defense" : 7,
+          "reflexes" : 6,
+          "weapons" : [
+            {
+              "id" : "hooves_and_teeth",
+              "count" : 2
+            },
+            "shield",
+            {
+              "id" : "great_weapon",
+              "count" : 5
+            }
+          ],
+          "min" : 3,
+          "max" : 6,
+          "rules" : [
+            "fly",
+            {
+              "id" : "wounds",
+              "x" : 4
+            }
+          ]
+        }
+      ],
+      "keywords" : [
+        "Cavalry"
+      ],
+      "subfactions" : [
+        "none"
+      ],
+      "options" : [
+        {
+          "addRule" : [
+            "champion"
+          ],
+          "modelLimit" : 1
+        },
+        {
+          "addRule" : [
+            "banner"
+          ],
+          "modelLimit" : 1
+        },
+        {
+          "addRule" : [
+            "musician"
+          ],
+          "modelLimit" : 1
+        }
+      ]
+    },
+    "general_pegasus" : {
+      "name" : "General on Pegasus",
+      "description" : "A general of the Great Kingdoms who inspires and directs troops.",
       "category" : "hero",
       "models" : [
         {
-          "name" : "Warrior-Priest on Warhorse",
-          "movement" : 8,
+          "name" : "General on Gryphon",
+          "movement" : 10,
           "courage" : 7,
-          "shoot" : 5,
-          "fight" : 6,
-          "defense" : 6,
+          "shoot" : 7,
+          "fight" : 7,
+          "defense" : 7,
           "reflexes" : 6,
           "weapons" : [
             {
@@ -1147,88 +1922,24 @@
           "max" : 1,
           "rules" : [
             {
-              "id" : "wounds",
-              "x" : 3
-            },
-            "leader",
-            "furious",
-            "battle_prayer"
-          ],
-          "options" : [
-            {
-              "replaceWeapon" : [
-                {
-                  "id" : "heavy_handweapon",
-                  "count" : 3
-                },
-                "shield"
-              ],
-              "withWeapon" : [
-                {
-                  "id" : "great_weapon",
-                  "count" : 3
-                },
-                {
-                  "id" : "heavy_handweapon",
-                  "count" : 4
-                }
-              ]
-            },
-            {
-              "addRule" : "heavy_armor"
-            }
-          ]
-        }
-      ],
-      "subfactions" : [
-        "none"
-      ],
-      "keywords" : [
-        "Cavalry"
-      ]
-    },
-    "captain_horse" : {
-      "name" : "Captain on Warhorse",
-      "description" : "A captain of the Great Kingdoms who inspires and directs troops.",
-      "category" : "hero",
-      "models" : [
-        {
-          "name" : "Captain on Warhorse",
-          "movement" : 8,
-          "courage" : 6,
-          "shoot" : 6,
-          "fight" : 6,
-          "defense" : 6,
-          "reflexes" : 6,
-          "weapons" : [
-            {
-              "id" : "handweapon",
-              "count" : 3
-            },
-            "shield",
-            {
-              "id" : "hooves_and_teeth",
-              "count" : 2
-            }
-          ],
-          "min" : 1,
-          "max" : 1,
-          "rules" : [
-            {
-              "id" : "wounds",
-              "x" : 3
-            },
-            {
               "id" : "human_kingdoms_tactics",
-              "x" : 1
+              "x" : 2
             },
-            "leader"
+            "fly",
+            {
+              "id" : "leader_x",
+              "x" : "Infantry, Cavalry"
+            },
+            {
+              "id" : "wounds",
+              "x" : 3
+            }
           ],
           "options" : [
             {
               "replaceWeapon" : [
                 {
-                  "id" : "handweapon",
+                  "id" : "heavy_handweapon",
                   "count" : 3
                 },
                 "shield"
@@ -1237,47 +1948,23 @@
                 {
                   "id" : "great_weapon",
                   "count" : 3
-                },
-                [
-                  "handgun",
-                  {
-                    "id" : "light_handweapon",
-                    "count" : 3
-                  }
-                ],
-                {
-                  "id" : "war_hammer",
-                  "count" : 2
                 },
                 [
                   {
                     "id" : "lance",
-                    "count" : 2
+                    "count" : 3
                   },
                   "shield"
-                ]
+                ],
+                {
+                  "id" : "war_hammer",
+                  "count" : 2
+                }
               ]
             },
             {
-              "addRule" : [
-                "heavy_armor"
-              ],
               "addWeapon" : [
                 "pistol"
-              ]
-            },
-            {
-              "replaceRule" : [
-                {
-                  "id" : "human_kingdoms_tactics",
-                  "x" : 1
-                }
-              ],
-              "withRule" : [
-                {
-                  "id" : "human_kingdoms_tactics",
-                  "x" : 2
-                }
               ]
             }
           ]
@@ -1287,6 +1974,7 @@
         "none"
       ],
       "keywords" : [
+        "Beast",
         "Cavalry"
       ]
     }
@@ -1338,9 +2026,8 @@
       "rules" : [
         {
           "id" : "blast",
-          "x" : 2
-        },
-        "lethal"
+          "x" : 3
+        }
       ]
     },
     "cannon" : {
@@ -1417,6 +2104,16 @@
       "rules" : [
         "lethal"
       ]
+    },
+    "carbine" : {
+      "name" : "Carbine",
+      "ap" : 3,
+      "attacks" : 1,
+      "short" : 9,
+      "medium" : 18,
+      "rules" : [
+        "assault"
+      ]
     }
   },
   "rules" : {
@@ -1486,56 +2183,5 @@
       "cost" : 1
     }
   ],
-  "relics" : [],
-  "models" : {
-    "marksman" : {
-      "name" : "Marksman",
-      "movement" : 6,
-      "courage" : 5,
-      "shoot" : 5,
-      "fight" : 4,
-      "defense" : 5,
-      "reflexes" : 5,
-      "weapons" : [
-        "repeater_handgun",
-        "light_handweapon"
-      ],
-      "max" : 1,
-      "rules" : [
-        "champion"
-      ],
-      "options" : [
-        {
-          "replaceWeapon" : [
-            "repeater_handgun"
-          ],
-          "withWeapon" : [
-            "long_rifle"
-          ]
-        }
-      ]
-    },
-    "captain" : {
-      "name" : "Pistolier Captain",
-      "movement" : 8,
-      "courage" : 5,
-      "shoot" : 5,
-      "fight" : 5,
-      "defense" : 6,
-      "reflexes" : 5,
-      "weapons" : [
-        {
-          "id" : "hooves_and_teeth",
-          "count" : 2
-        },
-        "handweapon",
-        "grenade_launcher"
-      ],
-      "min" : 1,
-      "max" : 1,
-      "rules" : [
-        "champion"
-      ]
-    }
-  }
+  "relics" : []
 }
