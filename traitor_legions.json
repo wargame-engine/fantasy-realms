@@ -94,6 +94,46 @@
                   "x" : 2
                 }
               ]
+            },
+            {
+              "addRule" : [
+                "excess_mark"
+              ],
+              "subfactions" : [
+                "excess"
+              ]
+            },
+            {
+              "addRule" : [
+                "change_mark"
+              ],
+              "subfactions" : [
+                "change"
+              ]
+            },
+            {
+              "subfactions" : [
+                "pestilence"
+              ],
+              "addRule" : [
+                "pestilence_mark"
+              ]
+            },
+            {
+              "addRule" : [
+                "deception_mark"
+              ],
+              "subfactions" : [
+                "deception"
+              ]
+            },
+            {
+              "addRule" : [
+                "wrath_mark"
+              ],
+              "subfactions" : [
+                "wrath"
+              ]
             }
           ],
           "rules" : [
@@ -203,6 +243,46 @@
                   "id" : "traitor_tactics",
                   "x" : 2
                 }
+              ]
+            },
+            {
+              "addRule" : [
+                "excess_mark"
+              ],
+              "subfactions" : [
+                "excess"
+              ]
+            },
+            {
+              "addRule" : [
+                "change_mark"
+              ],
+              "subfactions" : [
+                "change"
+              ]
+            },
+            {
+              "subfactions" : [
+                "pestilence"
+              ],
+              "addRule" : [
+                "pestilence_mark"
+              ]
+            },
+            {
+              "addRule" : [
+                "deception_mark"
+              ],
+              "subfactions" : [
+                "deception"
+              ]
+            },
+            {
+              "addRule" : [
+                "wrath_mark"
+              ],
+              "subfactions" : [
+                "wrath"
               ]
             }
           ],
@@ -320,6 +400,46 @@
                   "x" : 2
                 }
               ]
+            },
+            {
+              "addRule" : [
+                "excess_mark"
+              ],
+              "subfactions" : [
+                "excess"
+              ]
+            },
+            {
+              "addRule" : [
+                "change_mark"
+              ],
+              "subfactions" : [
+                "change"
+              ]
+            },
+            {
+              "subfactions" : [
+                "pestilence"
+              ],
+              "addRule" : [
+                "pestilence_mark"
+              ]
+            },
+            {
+              "addRule" : [
+                "deception_mark"
+              ],
+              "subfactions" : [
+                "deception"
+              ]
+            },
+            {
+              "addRule" : [
+                "wrath_mark"
+              ],
+              "subfactions" : [
+                "wrath"
+              ]
             }
           ],
           "rules" : [
@@ -383,8 +503,55 @@
             },
             {
               "addRule" : [
-                "companion",
+                "companion"
+              ]
+            },
+            {
+              "addRule" : [
                 "disk_of_change"
+              ],
+              "subfactions" : [
+                "change"
+              ]
+            },
+            {
+              "addRule" : [
+                "excess_mark"
+              ],
+              "subfactions" : [
+                "excess"
+              ]
+            },
+            {
+              "addRule" : [
+                "change_mark"
+              ],
+              "subfactions" : [
+                "change"
+              ]
+            },
+            {
+              "subfactions" : [
+                "pestilence"
+              ],
+              "addRule" : [
+                "pestilence_mark"
+              ]
+            },
+            {
+              "addRule" : [
+                "deception_mark"
+              ],
+              "subfactions" : [
+                "deception"
+              ]
+            },
+            {
+              "addRule" : [
+                "wrath_mark"
+              ],
+              "subfactions" : [
+                "wrath"
               ]
             }
           ],
@@ -450,6 +617,46 @@
             {
               "addRule" : [
                 "companion"
+              ]
+            },
+            {
+              "addRule" : [
+                "excess_mark"
+              ],
+              "subfactions" : [
+                "excess"
+              ]
+            },
+            {
+              "addRule" : [
+                "change_mark"
+              ],
+              "subfactions" : [
+                "change"
+              ]
+            },
+            {
+              "subfactions" : [
+                "pestilence"
+              ],
+              "addRule" : [
+                "pestilence_mark"
+              ]
+            },
+            {
+              "addRule" : [
+                "deception_mark"
+              ],
+              "subfactions" : [
+                "deception"
+              ]
+            },
+            {
+              "addRule" : [
+                "wrath_mark"
+              ],
+              "subfactions" : [
+                "wrath"
               ]
             }
           ],
@@ -636,6 +843,51 @@
             "musician"
           ],
           "modelLimit" : 1
+        },
+        {
+          "addRule" : [
+            "excess_mark"
+          ],
+          "subfactions" : [
+            "excess"
+          ],
+          "modelLimit" : "all"
+        },
+        {
+          "addRule" : [
+            "change_mark"
+          ],
+          "subfactions" : [
+            "change"
+          ],
+          "modelLimit" : "all"
+        },
+        {
+          "subfactions" : [
+            "pestilence"
+          ],
+          "addRule" : [
+            "pestilence_mark"
+          ],
+          "modelLimit" : "all"
+        },
+        {
+          "addRule" : [
+            "deception_mark"
+          ],
+          "subfactions" : [
+            "deception"
+          ],
+          "modelLimit" : "all"
+        },
+        {
+          "addRule" : [
+            "wrath_mark"
+          ],
+          "subfactions" : [
+            "wrath"
+          ],
+          "modelLimit" : "all"
         }
       ]
     },
@@ -762,6 +1014,51 @@
             "musician"
           ],
           "modelLimit" : 1
+        },
+        {
+          "addRule" : [
+            "excess_mark"
+          ],
+          "subfactions" : [
+            "excess"
+          ],
+          "modelLimit" : "all"
+        },
+        {
+          "addRule" : [
+            "change_mark"
+          ],
+          "subfactions" : [
+            "change"
+          ],
+          "modelLimit" : "all"
+        },
+        {
+          "subfactions" : [
+            "pestilence"
+          ],
+          "addRule" : [
+            "pestilence_mark"
+          ],
+          "modelLimit" : "all"
+        },
+        {
+          "addRule" : [
+            "deception_mark"
+          ],
+          "subfactions" : [
+            "deception"
+          ],
+          "modelLimit" : "all"
+        },
+        {
+          "addRule" : [
+            "wrath_mark"
+          ],
+          "subfactions" : [
+            "wrath"
+          ],
+          "modelLimit" : "all"
         }
       ]
     },
@@ -854,6 +1151,51 @@
             "musician"
           ],
           "modelLimit" : 1
+        },
+        {
+          "addRule" : [
+            "excess_mark"
+          ],
+          "subfactions" : [
+            "excess"
+          ],
+          "modelLimit" : "all"
+        },
+        {
+          "addRule" : [
+            "change_mark"
+          ],
+          "subfactions" : [
+            "change"
+          ],
+          "modelLimit" : "all"
+        },
+        {
+          "subfactions" : [
+            "pestilence"
+          ],
+          "addRule" : [
+            "pestilence_mark"
+          ],
+          "modelLimit" : "all"
+        },
+        {
+          "addRule" : [
+            "deception_mark"
+          ],
+          "subfactions" : [
+            "deception"
+          ],
+          "modelLimit" : "all"
+        },
+        {
+          "addRule" : [
+            "wrath_mark"
+          ],
+          "subfactions" : [
+            "wrath"
+          ],
+          "modelLimit" : "all"
         }
       ]
     },
@@ -975,6 +1317,51 @@
             "musician"
           ],
           "modelLimit" : 1
+        },
+        {
+          "addRule" : [
+            "excess_mark"
+          ],
+          "subfactions" : [
+            "excess"
+          ],
+          "modelLimit" : "all"
+        },
+        {
+          "addRule" : [
+            "change_mark"
+          ],
+          "subfactions" : [
+            "change"
+          ],
+          "modelLimit" : "all"
+        },
+        {
+          "subfactions" : [
+            "pestilence"
+          ],
+          "addRule" : [
+            "pestilence_mark"
+          ],
+          "modelLimit" : "all"
+        },
+        {
+          "addRule" : [
+            "deception_mark"
+          ],
+          "subfactions" : [
+            "deception"
+          ],
+          "modelLimit" : "all"
+        },
+        {
+          "addRule" : [
+            "wrath_mark"
+          ],
+          "subfactions" : [
+            "wrath"
+          ],
+          "modelLimit" : "all"
         }
       ],
       "keywords" : [
@@ -1053,6 +1440,51 @@
             "musician"
           ],
           "modelLimit" : 1
+        },
+        {
+          "addRule" : [
+            "excess_mark"
+          ],
+          "subfactions" : [
+            "excess"
+          ],
+          "modelLimit" : "all"
+        },
+        {
+          "addRule" : [
+            "change_mark"
+          ],
+          "subfactions" : [
+            "change"
+          ],
+          "modelLimit" : "all"
+        },
+        {
+          "subfactions" : [
+            "pestilence"
+          ],
+          "addRule" : [
+            "pestilence_mark"
+          ],
+          "modelLimit" : "all"
+        },
+        {
+          "addRule" : [
+            "deception_mark"
+          ],
+          "subfactions" : [
+            "deception"
+          ],
+          "modelLimit" : "all"
+        },
+        {
+          "addRule" : [
+            "wrath_mark"
+          ],
+          "subfactions" : [
+            "wrath"
+          ],
+          "modelLimit" : "all"
         }
       ],
       "keywords" : [
@@ -1307,6 +1739,51 @@
             "musician"
           ],
           "modelLimit" : 1
+        },
+        {
+          "addRule" : [
+            "excess_mark"
+          ],
+          "subfactions" : [
+            "excess"
+          ],
+          "modelLimit" : "all"
+        },
+        {
+          "addRule" : [
+            "change_mark"
+          ],
+          "subfactions" : [
+            "change"
+          ],
+          "modelLimit" : "all"
+        },
+        {
+          "subfactions" : [
+            "pestilence"
+          ],
+          "addRule" : [
+            "pestilence_mark"
+          ],
+          "modelLimit" : "all"
+        },
+        {
+          "addRule" : [
+            "deception_mark"
+          ],
+          "subfactions" : [
+            "deception"
+          ],
+          "modelLimit" : "all"
+        },
+        {
+          "addRule" : [
+            "wrath_mark"
+          ],
+          "subfactions" : [
+            "wrath"
+          ],
+          "modelLimit" : "all"
         }
       ]
     },
@@ -1408,6 +1885,51 @@
             "musician"
           ],
           "modelLimit" : 1
+        },
+        {
+          "addRule" : [
+            "excess_mark"
+          ],
+          "subfactions" : [
+            "excess"
+          ],
+          "modelLimit" : "all"
+        },
+        {
+          "addRule" : [
+            "change_mark"
+          ],
+          "subfactions" : [
+            "change"
+          ],
+          "modelLimit" : "all"
+        },
+        {
+          "subfactions" : [
+            "pestilence"
+          ],
+          "addRule" : [
+            "pestilence_mark"
+          ],
+          "modelLimit" : "all"
+        },
+        {
+          "addRule" : [
+            "deception_mark"
+          ],
+          "subfactions" : [
+            "deception"
+          ],
+          "modelLimit" : "all"
+        },
+        {
+          "addRule" : [
+            "wrath_mark"
+          ],
+          "subfactions" : [
+            "wrath"
+          ],
+          "modelLimit" : "all"
         }
       ],
       "keywords" : [
@@ -1445,6 +1967,14 @@
             {
               "addRule" : [
                 "companion"
+              ]
+            },
+            {
+              "addRule" : [
+                "change_mark"
+              ],
+              "subfactions" : [
+                "change"
               ]
             }
           ],
@@ -1622,6 +2152,46 @@
                   "x" : 3
                 }
               ]
+            },
+            {
+              "addRule" : [
+                "excess_mark"
+              ],
+              "subfactions" : [
+                "excess"
+              ]
+            },
+            {
+              "addRule" : [
+                "change_mark"
+              ],
+              "subfactions" : [
+                "change"
+              ]
+            },
+            {
+              "subfactions" : [
+                "pestilence"
+              ],
+              "addRule" : [
+                "pestilence_mark"
+              ]
+            },
+            {
+              "addRule" : [
+                "deception_mark"
+              ],
+              "subfactions" : [
+                "deception"
+              ]
+            },
+            {
+              "addRule" : [
+                "wrath_mark"
+              ],
+              "subfactions" : [
+                "wrath"
+              ]
             }
           ],
           "rules" : [
@@ -1661,7 +2231,7 @@
       "category" : "hero",
       "models" : [
         {
-          "name" : "Sorcerer",
+          "name" : "Sorcerer on Manticore",
           "movement" : 10,
           "courage" : 6,
           "shoot" : 5,
@@ -1694,6 +2264,46 @@
             {
               "addRule" : [
                 "companion"
+              ]
+            },
+            {
+              "addRule" : [
+                "excess_mark"
+              ],
+              "subfactions" : [
+                "excess"
+              ]
+            },
+            {
+              "addRule" : [
+                "change_mark"
+              ],
+              "subfactions" : [
+                "change"
+              ]
+            },
+            {
+              "subfactions" : [
+                "pestilence"
+              ],
+              "addRule" : [
+                "pestilence_mark"
+              ]
+            },
+            {
+              "addRule" : [
+                "deception_mark"
+              ],
+              "subfactions" : [
+                "deception"
+              ]
+            },
+            {
+              "addRule" : [
+                "wrath_mark"
+              ],
+              "subfactions" : [
+                "wrath"
               ]
             }
           ],
@@ -1845,6 +2455,61 @@
       "name" : "Banner of Vitality",
       "description" : "Once per round, a friendly _Infantry_ unit within 6\" may gain +1 Save.",
       "points" : 10
+    },
+    "wrath_mark" : {
+      "name" : "Mark of Wrath",
+      "description" : "This model has +1 Strength.",
+      "points" : 2
+    },
+    "excess_mark" : {
+      "name" : "Mark of Excess",
+      "description" : "This model has +1\" Movement and when this model arrives on the field, it may make a free Move action. This action may not move within 12\" of any enemy units..",
+      "points" : 2
+    },
+    "change_mark" : {
+      "name" : "Mark of Magic",
+      "description" : "This model has +1 Save.",
+      "points" : 2
+    },
+    "pestilence_mark" : {
+      "name" : "Mark of Pestilence",
+      "description" : "Roll a D10 each time this model would be killed. On a 2 or less, that model is not killed.",
+      "points" : 2
+    },
+    "deception_mark" : {
+      "name" : "Mark of Deception",
+      "description" : "Models suffer -1 Accuracy when shooting at this model at a range of more than 12\".",
+      "points" : 2
+    },
+    "regeneration" : {
+      "name" : "Regeneration",
+      "description" : "At the end of it's activation you can heal 1 wound that has been allocated to this model.",
+      "points" : 5
+    },
+    "change_mark_monster" : {
+      "name" : "Mark of Magic",
+      "description" : "This model has +1 Save.",
+      "points" : 10
+    },
+    "wrath_mark_monster" : {
+      "name" : "Mark of Wrath",
+      "description" : "This model has +1 Strength.",
+      "points" : 10
+    },
+    "excess_mark_monster" : {
+      "name" : "Mark of Excess",
+      "description" : "This model has +1\" Movement and when this model arrives on the field, it may make a free Move action. This action may not move within 12\" of any enemy units..",
+      "points" : 10
+    },
+    "pestilence_mark_monster" : {
+      "name" : "Mark of Pestilence",
+      "description" : "Roll a D10 each time this model would be killed. On a 2 or less, that model is not killed.",
+      "points" : 10
+    },
+    "deception_mark_monster" : {
+      "name" : "Mark of Deception",
+      "description" : "Models suffer -1 Accuracy when shooting at this model at a range of more than 12\".",
+      "points" : 10
     }
   },
   "strategies" : [
@@ -1896,25 +2561,101 @@
   ],
   "relics" : [],
   "powers" : {
-    "fireball" : {
-      "name" : "Fireball",
-      "description" : "Target enemy unit within 12\" takes 3 hits with AP(3). This power may only be cast once per turn.",
-      "charge" : 6
-    },
-    "pain" : {
-      "name" : "Pain",
-      "description" : "Target enemy model within 12\" takes 1 automatic hit with AP(3). This power may be cast unlimited times.",
-      "charge" : 6
-    },
-    "shadowstep" : {
-      "name" : "Shadowstep",
-      "description" : "Target friendly unit within 12\" may immediately make a free move action. This power may only be cast once per turn.",
-      "charge" : 7
-    },
     "unnatural_strength" : {
       "name" : "Unnatural Strength",
       "description" : "Target friendly unit within 12\" gets +1 Strength until the end of the round. This power may be cast unlimited times.",
-      "charge" : 6
+      "charge" : 6,
+      "subfactions" : [
+        "none"
+      ]
+    },
+    "pain" : {
+      "name" : "Word of Pain",
+      "description" : "Target enemy model within 12\" takes 1 automatic hit with AP(3). This power may be cast unlimited times.",
+      "charge" : 6,
+      "subfactions" : [
+        "none"
+      ]
+    },
+    "tricksters_gambit" : {
+      "name" : "Tricksters Gambit",
+      "description" : "Target friendly unit within 12\" gets -1 to be hit the next time it is attacked. This power may be cast unlimited times.",
+      "charge" : 6,
+      "subfactions" : [
+        "deception"
+      ]
+    },
+    "shadowstep" : {
+      "name" : "Shadowstep",
+      "description" : "Target friendly unit within 12\" may immediately make a free move action, ignoring terrain or other models. This power may only be cast once per turn.",
+      "charge" : 7,
+      "subfactions" : [
+        "deception"
+      ]
+    },
+    "bolt_of_change" : {
+      "name" : "Bolt of Change",
+      "description" : "Target enemy unit within 18\" takes 1 hit with AP(7). This power may only be cast once per turn.",
+      "charge" : 7,
+      "subfactions" : [
+        "change"
+      ]
+    },
+    "turn_of_fate" : {
+      "name" : "Turn of Fate",
+      "description" : "Target friendly unit within 12\" gets -1 to be hit the next time it is attacked. This power may be cast unlimited times.",
+      "charge" : 6,
+      "subfactions" : [
+        "change"
+      ]
+    },
+    "virulent_disease" : {
+      "name" : "Virulent Disease",
+      "description" : "Target enemy unit within 12\" and another enemy unit within 3\" of that unit take 3 hits with AP(1) each. This power may be cast unlimited times.",
+      "charge" : 6,
+      "subfactions" : [
+        "pestilence"
+      ]
+    },
+    "swarm" : {
+      "name" : "Swarm of Flies",
+      "description" : "Target enemy unit within 12\" gets -1 Accuracy until the end of the round. This power may be cast unlimited times.",
+      "charge" : 6,
+      "subfactions" : [
+        "pestilence"
+      ]
+    },
+    "boiling_blood" : {
+      "name" : "Boiling Blood",
+      "description" : "Target enemy unit within 12\" takes 3 hits with AP(3). This power may only be cast once per turn.",
+      "charge" : 6,
+      "subfactions" : [
+        "wrath"
+      ]
+    },
+    "marked_for_death" : {
+      "name" : "Marked for Death",
+      "description" : "Target enemy unit within 12\" must immediately make a free charge action against another enemy unit. This power may only be cast once per turn.",
+      "charge" : 8,
+      "subfactions" : [
+        "wrath"
+      ]
+    },
+    "flash_of_speed" : {
+      "name" : "Flash of Speed",
+      "description" : "Target friendly unit within 12\" may immediately make a free move action. This power may only be cast once per turn.",
+      "charge" : 7,
+      "subfactions" : [
+        "excess"
+      ]
+    },
+    "pain_and_power" : {
+      "name" : "Pain and Power",
+      "description" : "Target friendly unit within 12\". Until the end of the round, each time that unit rolls a 1 or 2 on a save roll, the attacking unit takes 1 hit with AP(3). This power may be cast unlimited times.",
+      "charge" : 7,
+      "subfactions" : [
+        "excess"
+      ]
     }
   }
 }
