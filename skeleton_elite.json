@@ -80,7 +80,7 @@
         "death_riders": {
             "name": "Dead Riders",
             "description": "Mounted skeletal outriders",
-            "category": "strike",
+            "category": "core",
             "models": [
                 {
                     
