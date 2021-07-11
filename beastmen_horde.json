@@ -8,7 +8,7 @@
   "units" : {
     "minotaur_lord" : {
       "name" : "Minotaur Lord",
-      "description" : "Cursed and twisted into a beastial shape.",
+      "description" : "The greatest of Chaos' wild warriors, if not its strategists.",
       "category" : "hero",
       "models" : [
         {
@@ -267,7 +267,7 @@
     },
     "satyr_raiders" : {
       "name" : "Satyr Raiders",
-      "description" : "Cursed and twisted into a beastial shape.",
+      "description" : "The weakest of the chaos-touched, kept in line by their leaders.",
       "category" : "core",
       "models" : [
         {
@@ -289,6 +289,15 @@
               ],
               "modelLimit" : "all"
             },
+          {
+            "replaceWeapon": [
+              "short_bow"
+            ],
+            "withWeapon": [
+              "javelin"
+            ],
+          "modelLimit": "all"
+          },
             {
               "addRule" : [
                 "champion"
@@ -336,7 +345,7 @@
     },
     "satyr_warriors" : {
       "name" : "Satyr Warriors",
-      "description" : "Cursed and twisted into a beastial shape.",
+      "description" : "These bitter warriors were unexceptional before Chaos' touch, and fight to be exceptional now.",
       "category" : "core",
       "models" : [
         {
@@ -402,7 +411,7 @@
     },
     "satyr_despoiler" : {
       "name" : "Satyr Despoilers",
-      "description" : "Cursed and twisted into a beastial shape.",
+      "description" : "Soldiers of the wilds, these beasts enjoy their pillage and plunder.",
       "category" : "core",
       "models" : [
         {
@@ -453,7 +462,7 @@
     },
     "minotaurs" : {
       "name" : "Minotaurs",
-      "description" : "Cursed and twisted into a beastial shape.",
+      "description" : "The most powerful warriors are blessed to turn into these hulking brutes.",
       "category" : "elite",
       "models" : [
         {
@@ -578,7 +587,7 @@
     },
     "centaurs" : {
       "name" : "Centaurs",
-      "description" : "Cursed and twisted into a beastial shape.",
+      "description" : "Men born of the wild, they bear a grudge against the world.",
       "category" : "elite",
       "models" : [
         {
