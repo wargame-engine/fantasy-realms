@@ -3,7 +3,7 @@
   "id" : "high_elves",
   "author" : "Xekon#8266",
   "version" : "1.0",
-  "description" : "Masters of the Arcane, this ancient island nation is shrouded in mystery.",
+  "description" : "",
   "alliance" : "order",
   "units" : {
     "elf_prince" : {
@@ -60,10 +60,8 @@
             },
             {
               "addRule" : [
-                "phoenix_armor",
-                "cloak"
-              ],
-              "limit" : 1
+                "cloak_hero"
+              ]
             },
             {
               "addRule" : [
@@ -286,6 +284,23 @@
           "max" : 1,
           "options" : [
             {
+              "replaceWeapon" : [
+                {
+                  "id" : "heavy_polearm",
+                  "count" : 4
+                }
+              ],
+              "withWeapon" : [
+                [
+                  {
+                    "id" : "great_weapon",
+                    "count" : 4
+                  },
+                  "shield"
+                ]
+              ]
+            },
+            {
               "replaceRule" : [
                 {
                   "id" : "sentinel_tactics",
@@ -360,10 +375,8 @@
             },
             {
               "addRule" : [
-                "phoenix_armor",
-                "cloak"
-              ],
-              "limit" : 1
+                "cloak_hero"
+              ]
             },
             {
               "addRule" : [
@@ -431,33 +444,35 @@
           "weapons" : [
             "handweapon",
             "shield"
+          ],
+          "options" : [
+            {
+              "replaceWeapon" : [
+                "handweapon",
+                "shield"
+              ],
+              "withWeapon" : [
+                [
+                  {
+                    "id" : "long_bow"
+                  },
+                  {
+                    "id" : "light_handweapon"
+                  }
+                ],
+                [
+                  {
+                    "id" : "long_spear"
+                  },
+                  "shield"
+                ]
+              ],
+              "modelLimit" : "all"
+            }
           ]
         }
       ],
       "options" : [
-        {
-          "replaceWeapon" : [
-            "handweapon",
-            "shield"
-          ],
-          "withWeapon" : [
-            [
-              {
-                "id" : "long_bow"
-              },
-              {
-                "id" : "light_handweapon"
-              }
-            ],
-            [
-              {
-                "id" : "long_spear"
-              },
-              "shield"
-            ]
-          ],
-          "modelLimit" : "all"
-        },
         {
           "addRule" : [
             "champion"
@@ -487,7 +502,7 @@
       "category" : "core",
       "models" : [
         {
-          "max" : 20,
+          "max" : 30,
           "min" : 10,
           "name" : "Warden",
           "movement" : 7,
@@ -500,32 +515,34 @@
             {
               "id" : "great_weapon"
             }
+          ],
+          "options" : [
+            {
+              "replaceWeapon" : [
+                "great_weapon"
+              ],
+              "withWeapon" : [
+                [
+                  {
+                    "id" : "long_bow"
+                  },
+                  {
+                    "id" : "light_handweapon"
+                  }
+                ],
+                [
+                  {
+                    "id" : "pike"
+                  },
+                  "shield"
+                ]
+              ],
+              "modelLimit" : "all"
+            }
           ]
         }
       ],
       "options" : [
-        {
-          "replaceWeapon" : [
-            "great_weapon"
-          ],
-          "withWeapon" : [
-            [
-              {
-                "id" : "long_bow"
-              },
-              {
-                "id" : "light_handweapon"
-              }
-            ],
-            [
-              {
-                "id" : "pike"
-              },
-              "shield"
-            ]
-          ],
-          "modelLimit" : "all"
-        },
         {
           "addRule" : [
             "champion"
@@ -552,29 +569,29 @@
     "elf_vanguard" : {
       "name" : "Elven Vanguard",
       "description" : "Fast cavalry, patroling the outskirts of the great elvish nations.",
+      "options" : [
+        {
+          "addRule" : [
+            "champion"
+          ],
+          "modelLimit" : 1
+        },
+        {
+          "addRule" : [
+            "banner"
+          ],
+          "modelLimit" : 1
+        },
+        {
+          "addRule" : [
+            "musician"
+          ],
+          "modelLimit" : 1
+        }
+      ],
       "category" : "core",
       "models" : [
         {
-          "options" : [
-            {
-              "addRule" : [
-                "champion"
-              ],
-              "modelLimit" : 1
-            },
-            {
-              "addRule" : [
-                "banner"
-              ],
-              "modelLimit" : 1
-            },
-            {
-              "addRule" : [
-                "musician"
-              ],
-              "modelLimit" : 1
-            }
-          ],
           "name" : "Vanguard",
           "movement" : 8,
           "courage" : 5,
@@ -594,7 +611,7 @@
             "scout"
           ],
           "min" : 5,
-          "max" : 20
+          "max" : 15
         }
       ],
       "keywords" : [
@@ -605,31 +622,31 @@
       ]
     },
     "elf_knight" : {
+      "options" : [
+        {
+          "addRule" : [
+            "champion"
+          ],
+          "modelLimit" : 1
+        },
+        {
+          "addRule" : [
+            "banner"
+          ],
+          "modelLimit" : 1
+        },
+        {
+          "addRule" : [
+            "musician"
+          ],
+          "modelLimit" : 1
+        }
+      ],
       "name" : "Elven Knights",
       "description" : "Mounted soldiers of the elves, overrunning their foes.",
       "category" : "core",
       "models" : [
         {
-          "options" : [
-            {
-              "addRule" : [
-                "champion"
-              ],
-              "modelLimit" : 1
-            },
-            {
-              "addRule" : [
-                "banner"
-              ],
-              "modelLimit" : 1
-            },
-            {
-              "addRule" : [
-                "musician"
-              ],
-              "modelLimit" : 1
-            }
-          ],
           "name" : "Knight",
           "movement" : 8,
           "courage" : 6,
@@ -646,7 +663,7 @@
             "shield"
           ],
           "min" : 5,
-          "max" : 20
+          "max" : 15
         }
       ],
       "keywords" : [
@@ -658,30 +675,30 @@
     },
     "elf_guard" : {
       "name" : "Coastal Guard",
+      "options" : [
+        {
+          "addRule" : [
+            "champion"
+          ],
+          "modelLimit" : 1
+        },
+        {
+          "addRule" : [
+            "banner"
+          ],
+          "modelLimit" : 1
+        },
+        {
+          "addRule" : [
+            "musician"
+          ],
+          "modelLimit" : 1
+        }
+      ],
       "description" : "These fearsome warriors protect the coasts and harbor-bastions of the high elf nation.",
       "category" : "core",
       "models" : [
         {
-          "options" : [
-            {
-              "addRule" : [
-                "champion"
-              ],
-              "modelLimit" : 1
-            },
-            {
-              "addRule" : [
-                "banner"
-              ],
-              "modelLimit" : 1
-            },
-            {
-              "addRule" : [
-                "musician"
-              ],
-              "modelLimit" : 1
-            }
-          ],
           "name" : "Coastal Guard",
           "movement" : 7,
           "courage" : 5,
@@ -695,7 +712,7 @@
             "spear"
           ],
           "min" : 10,
-          "max" : 20
+          "max" : 30
         }
       ],
       "subfactions" : [
@@ -706,28 +723,28 @@
       "name" : "Elven Protectors",
       "description" : "These battle-hardened veterans patrol the highlands along the elven coast.",
       "category" : "elite",
+      "options" : [
+        {
+          "addRule" : [
+            "champion"
+          ],
+          "modelLimit" : 1
+        },
+        {
+          "addRule" : [
+            "banner"
+          ],
+          "modelLimit" : 1
+        },
+        {
+          "addRule" : [
+            "musician"
+          ],
+          "modelLimit" : 1
+        }
+      ],
       "models" : [
         {
-          "options" : [
-            {
-              "addRule" : [
-                "champion"
-              ],
-              "modelLimit" : 1
-            },
-            {
-              "addRule" : [
-                "banner"
-              ],
-              "modelLimit" : 1
-            },
-            {
-              "addRule" : [
-                "musician"
-              ],
-              "modelLimit" : 1
-            }
-          ],
           "name" : "Protector",
           "movement" : 7,
           "courage" : 6,
@@ -742,7 +759,7 @@
             }
           ],
           "min" : 5,
-          "max" : 20
+          "max" : 10
         }
       ],
       "rules" : [
@@ -774,20 +791,20 @@
             "handweapon"
           ],
           "min" : 10,
-          "max" : 20,
-          "options" : [
-            {
-              "addRule" : [
-                "champion"
-              ],
-              "modelLimit" : 1
-            }
-          ]
+          "max" : 20
         }
       ],
       "rules" : [
         "stealth",
         "ambush"
+      ],
+      "options" : [
+        {
+          "addRule" : [
+            "champion"
+          ],
+          "modelLimit" : 1
+        }
       ],
       "subfactions" : [
         "none"
@@ -796,29 +813,29 @@
     "elf_phoenix_templars" : {
       "name" : "Phoenix Templars",
       "description" : "Protectors of the Temple of the Last Flame, blessed by the ancient Pheonix.",
+      "options" : [
+        {
+          "addRule" : [
+            "champion"
+          ],
+          "modelLimit" : 1
+        },
+        {
+          "addRule" : [
+            "banner"
+          ],
+          "modelLimit" : 1
+        },
+        {
+          "addRule" : [
+            "musician"
+          ],
+          "modelLimit" : 1
+        }
+      ],
       "category" : "elite",
       "models" : [
         {
-          "options" : [
-            {
-              "addRule" : [
-                "champion"
-              ],
-              "modelLimit" : 1
-            },
-            {
-              "addRule" : [
-                "banner"
-              ],
-              "modelLimit" : 1
-            },
-            {
-              "addRule" : [
-                "musician"
-              ],
-              "modelLimit" : 1
-            }
-          ],
           "name" : "Templar",
           "movement" : 7,
           "courage" : 6,
@@ -833,7 +850,26 @@
             }
           ],
           "min" : 5,
-          "max" : 20
+          "max" : 10,
+          "options" : [
+            {
+              "replaceWeapon" : [
+                {
+                  "id" : "heavy_polearm",
+                  "count" : 2
+                }
+              ],
+              "withWeapon" : [
+                [
+                  {
+                    "id" : "great_weapon",
+                    "count" : 2
+                  },
+                  "shield"
+                ]
+              ]
+            }
+          ]
         }
       ],
       "rules" : [
@@ -866,24 +902,6 @@
                 }
               ],
               "modelLimit" : 1
-            },
-            {
-              "addRule" : [
-                "champion"
-              ],
-              "modelLimit" : 1
-            },
-            {
-              "addRule" : [
-                "banner"
-              ],
-              "modelLimit" : 1
-            },
-            {
-              "addRule" : [
-                "musician"
-              ],
-              "modelLimit" : 1
             }
           ],
           "name" : "Dragon Knights",
@@ -904,7 +922,7 @@
             }
           ],
           "min" : 5,
-          "max" : 20
+          "max" : 10
         }
       ],
       "rules" : [
@@ -916,6 +934,26 @@
       ],
       "subfactions" : [
         "none"
+      ],
+      "options" : [
+        {
+          "addRule" : [
+            "champion"
+          ],
+          "modelLimit" : 1
+        },
+        {
+          "addRule" : [
+            "banner"
+          ],
+          "modelLimit" : 1
+        },
+        {
+          "addRule" : [
+            "musician"
+          ],
+          "modelLimit" : 1
+        }
       ]
     },
     "great_eagle" : {
@@ -950,7 +988,7 @@
             "damage_table_monster"
           ],
           "min" : 1,
-          "max" : 3
+          "max" : 1
         }
       ],
       "keywords" : [
@@ -1137,17 +1175,17 @@
           ],
           "min" : 10,
           "max" : 20,
-          "options" : [
-            {
-              "addRule" : [
-                "champion"
-              ],
-              "modelLimit" : 1
-            }
-          ],
           "rules" : [
             "astral_quiver"
           ]
+        }
+      ],
+      "options" : [
+        {
+          "addRule" : [
+            "champion"
+          ],
+          "modelLimit" : 1
         }
       ],
       "subfactions" : [
@@ -1279,8 +1317,8 @@
             },
             {
               "addRule" : [
-                "phoenix_armor",
-                "cloak"
+                "cloak_dragon",
+                "shield_dragon"
               ],
               "limit" : 1
             },
@@ -1323,8 +1361,7 @@
             {
               "id" : "handweapon",
               "count" : 5
-            },
-            "shield"
+            }
           ]
         }
       ],
@@ -1556,6 +1593,21 @@
       "name" : "Astral Quiver",
       "description" : "When you use the Moonfire Arrows strategy on this unit, you don't spend SP to use it.",
       "points" : 2
+    },
+    "shield_dragon" : {
+      "name" : "Enchanted Shield",
+      "description" : "This model has +1 Save.",
+      "points" : 10
+    },
+    "cloak_dragon" : {
+      "name" : "Enchanted Cloak",
+      "description" : "This model has +2 to its Save characteristic when being hit by a ranged attack.",
+      "points" : 15
+    },
+    "cloak_hero" : {
+      "name" : "Enchanted Cloak",
+      "description" : "This model has +2 to its Save characteristic when being hit by a ranged attack.",
+      "points" : 10
     }
   },
   "powers" : {
