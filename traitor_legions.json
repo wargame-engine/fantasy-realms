@@ -690,6 +690,294 @@
         "Cavalry"
       ]
     },
+    "sorcerer_manticore" : {
+      "name" : "Sorcerer on Manticore",
+      "description" : "An exalted sorcerer, master of the arcane arts.",
+      "category" : "hero",
+      "models" : [
+        {
+          "name" : "Sorcerer on Manticore",
+          "movement" : 10,
+          "courage" : 6,
+          "shoot" : 5,
+          "fight" : 6,
+          "defense" : 9,
+          "reflexes" : 6,
+          "weapons" : [
+            "heavy_handweapon",
+            "great_staff",
+            {
+              "id" : "bashing_tail",
+              "count" : 4
+            },
+            {
+              "id" : "fangs_and_claws",
+              "count" : 6
+            }
+          ],
+          "options" : [
+            {
+              "replaceRule" : {
+                "id" : "power",
+                "x" : 3
+              },
+              "withRule" : {
+                "id" : "power",
+                "x" : 4
+              }
+            },
+            {
+              "addRule" : [
+                "companion"
+              ]
+            },
+            {
+              "addRule" : [
+                "excess_mark_monster"
+              ],
+              "subfactions" : [
+                "excess"
+              ]
+            },
+            {
+              "addRule" : [
+                "change_mark_monster"
+              ],
+              "subfactions" : [
+                "change"
+              ]
+            },
+            {
+              "subfactions" : [
+                "pestilence"
+              ],
+              "addRule" : [
+                "pestilence_mark_monster"
+              ]
+            },
+            {
+              "addRule" : [
+                "deception_mark_monster"
+              ],
+              "subfactions" : [
+                "deception"
+              ]
+            },
+            {
+              "addRule" : [
+                "wrath_mark_monster"
+              ],
+              "subfactions" : [
+                "wrath"
+              ]
+            }
+          ],
+          "rules" : [
+            {
+              "id" : "leader_x",
+              "x" : "Infantry, Cavalry"
+            },
+            {
+              "id" : "power",
+              "x" : 3
+            },
+            "fear",
+            "fly",
+            "damage_table_monster"
+          ],
+          "min" : 1,
+          "max" : 1
+        }
+      ],
+      "subfactions" : [
+        "none",
+        "wrath",
+        "excess",
+        "pestilence",
+        "change",
+        "deception"
+      ],
+      "keywords" : [
+        "Beast",
+        "Monster"
+      ]
+    },
+    "traitor_lord_manticore" : {
+      "name" : "Traitor Lord on Manticore",
+      "description" : "A lord of the dark gods.",
+      "category" : "hero",
+      "models" : [
+        {
+          "name" : "Traitor Lord on Manticore",
+          "movement" : 10,
+          "courage" : 7,
+          "shoot" : 6,
+          "fight" : 7,
+          "defense" : 9,
+          "reflexes" : 6,
+          "weapons" : [
+            {
+              "id" : "heavy_great_weapon",
+              "count" : 3
+            },
+            "leeching_blade",
+            {
+              "id" : "bashing_tail",
+              "count" : 4
+            },
+            {
+              "id" : "fangs_and_claws",
+              "count" : 6
+            }
+          ],
+          "options" : [
+            {
+              "replaceWeapon" : [
+                {
+                  "id" : "heavy_great_weapon",
+                  "count" : 3
+                }
+              ],
+              "withWeapon" : [
+                {
+                  "id" : "heavy_polearm",
+                  "count" : 3
+                },
+                {
+                  "id" : "heavy_flail",
+                  "count" : 3
+                },
+                {
+                  "id" : "heavy_great_weapon",
+                  "count" : 4
+                },
+                [
+                  {
+                    "id" : "heavy_polearm",
+                    "count" : 2
+                  },
+                  {
+                    "id" : "great_weapon",
+                    "count" : 2
+                  }
+                ],
+                {
+                  "id" : "war_hammer",
+                  "count" : 3
+                },
+                [
+                  {
+                    "id" : "heavy_great_weapon",
+                    "count" : 3
+                  },
+                  "daggerfist"
+                ]
+              ]
+            },
+            {
+              "addRule" : [
+                "shield_dragon"
+              ]
+            },
+            {
+              "addRule" : [
+                [
+                  {
+                    "id" : "power",
+                    "x" : 2
+                  }
+                ]
+              ],
+              "subfactions" : [
+                "change"
+              ]
+            },
+            {
+              "replaceRule" : [
+                {
+                  "id" : "traitor_tactics",
+                  "x" : 2
+                }
+              ],
+              "withRule" : [
+                {
+                  "id" : "traitor_tactics",
+                  "x" : 3
+                }
+              ]
+            },
+            {
+              "addRule" : [
+                "excess_mark_monster"
+              ],
+              "subfactions" : [
+                "excess"
+              ]
+            },
+            {
+              "addRule" : [
+                "change_mark_monster"
+              ],
+              "subfactions" : [
+                "change"
+              ]
+            },
+            {
+              "subfactions" : [
+                "pestilence"
+              ],
+              "addRule" : [
+                "pestilence_mark_monster"
+              ]
+            },
+            {
+              "addRule" : [
+                "deception_mark_monster"
+              ],
+              "subfactions" : [
+                "deception"
+              ]
+            },
+            {
+              "addRule" : [
+                "wrath_mark_monster"
+              ],
+              "subfactions" : [
+                "wrath"
+              ]
+            }
+          ],
+          "rules" : [
+            {
+              "id" : "leader_x",
+              "x" : "Infantry, Cavalry"
+            },
+            {
+              "id" : "traitor_tactics",
+              "x" : 1
+            },
+            "fly",
+            "fear",
+            "damage_table_monster"
+          ],
+          "min" : 1,
+          "max" : 1
+        }
+      ],
+      "subfactions" : [
+        "none",
+        "wrath",
+        "excess",
+        "pestilence",
+        "change",
+        "deception"
+      ],
+      "keywords" : [
+        "Beast",
+        "Cavalry",
+        "Monster"
+      ]
+    },
     "traitor_cultists" : {
       "name" : "Traitor Cultists",
       "description" : "Fanatical masses serving the Traitor Gods.",
@@ -1248,9 +1536,12 @@
                 {
                   "id" : "heavy_polearm",
                   "count" : 2
+                },
+                {
+                  "id" : "heavy_flail",
+                  "count" : 2
                 }
               ],
-              "modelLimit" : "all",
               "subfactions" : [
                 "none",
                 "wrath",
@@ -1283,7 +1574,6 @@
                   "heavy_handweapon"
                 ]
               ],
-              "modelLimit" : "all",
               "subfactions" : [
                 "excess"
               ]
@@ -2048,294 +2338,6 @@
         "Beast",
         "Monster"
       ]
-    },
-    "traitor_lord_manticore" : {
-      "name" : "Traitor Lord on Manticore",
-      "description" : "A lord of the dark gods.",
-      "category" : "hero",
-      "models" : [
-        {
-          "name" : "Traitor Lord on Manticore",
-          "movement" : 10,
-          "courage" : 7,
-          "shoot" : 6,
-          "fight" : 7,
-          "defense" : 9,
-          "reflexes" : 6,
-          "weapons" : [
-            {
-              "id" : "heavy_great_weapon",
-              "count" : 3
-            },
-            "leeching_blade",
-            {
-              "id" : "bashing_tail",
-              "count" : 4
-            },
-            {
-              "id" : "fangs_and_claws",
-              "count" : 6
-            }
-          ],
-          "options" : [
-            {
-              "replaceWeapon" : [
-                {
-                  "id" : "heavy_great_weapon",
-                  "count" : 3
-                }
-              ],
-              "withWeapon" : [
-                {
-                  "id" : "heavy_polearm",
-                  "count" : 3
-                },
-                {
-                  "id" : "heavy_flail",
-                  "count" : 3
-                },
-                {
-                  "id" : "heavy_great_weapon",
-                  "count" : 4
-                },
-                [
-                  {
-                    "id" : "heavy_polearm",
-                    "count" : 2
-                  },
-                  {
-                    "id" : "great_weapon",
-                    "count" : 2
-                  }
-                ],
-                {
-                  "id" : "war_hammer",
-                  "count" : 3
-                },
-                [
-                  {
-                    "id" : "heavy_great_weapon",
-                    "count" : 3
-                  },
-                  "daggerfist"
-                ]
-              ]
-            },
-            {
-              "addRule" : [
-                "shield"
-              ]
-            },
-            {
-              "addRule" : [
-                [
-                  {
-                    "id" : "power",
-                    "x" : 2
-                  }
-                ]
-              ],
-              "subfactions" : [
-                "change"
-              ]
-            },
-            {
-              "replaceRule" : [
-                {
-                  "id" : "traitor_tactics",
-                  "x" : 2
-                }
-              ],
-              "withRule" : [
-                {
-                  "id" : "traitor_tactics",
-                  "x" : 3
-                }
-              ]
-            },
-            {
-              "addRule" : [
-                "excess_mark"
-              ],
-              "subfactions" : [
-                "excess"
-              ]
-            },
-            {
-              "addRule" : [
-                "change_mark"
-              ],
-              "subfactions" : [
-                "change"
-              ]
-            },
-            {
-              "subfactions" : [
-                "pestilence"
-              ],
-              "addRule" : [
-                "pestilence_mark"
-              ]
-            },
-            {
-              "addRule" : [
-                "deception_mark"
-              ],
-              "subfactions" : [
-                "deception"
-              ]
-            },
-            {
-              "addRule" : [
-                "wrath_mark"
-              ],
-              "subfactions" : [
-                "wrath"
-              ]
-            }
-          ],
-          "rules" : [
-            {
-              "id" : "leader_x",
-              "x" : "Infantry, Cavalry"
-            },
-            {
-              "id" : "traitor_tactics",
-              "x" : 1
-            },
-            "fly",
-            "fear",
-            "damage_table_monster"
-          ],
-          "min" : 1,
-          "max" : 1
-        }
-      ],
-      "subfactions" : [
-        "none",
-        "wrath",
-        "excess",
-        "pestilence",
-        "change",
-        "deception"
-      ],
-      "keywords" : [
-        "Beast",
-        "Cavalry",
-        "Monster"
-      ]
-    },
-    "sorcerer_manticore" : {
-      "name" : "Sorcerer on Manticore",
-      "description" : "An exalted sorcerer, master of the arcane arts.",
-      "category" : "hero",
-      "models" : [
-        {
-          "name" : "Sorcerer on Manticore",
-          "movement" : 10,
-          "courage" : 6,
-          "shoot" : 5,
-          "fight" : 6,
-          "defense" : 9,
-          "reflexes" : 6,
-          "weapons" : [
-            "heavy_handweapon",
-            "great_staff",
-            {
-              "id" : "bashing_tail",
-              "count" : 4
-            },
-            {
-              "id" : "fangs_and_claws",
-              "count" : 6
-            }
-          ],
-          "options" : [
-            {
-              "replaceRule" : {
-                "id" : "power",
-                "x" : 3
-              },
-              "withRule" : {
-                "id" : "power",
-                "x" : 4
-              }
-            },
-            {
-              "addRule" : [
-                "companion"
-              ]
-            },
-            {
-              "addRule" : [
-                "excess_mark"
-              ],
-              "subfactions" : [
-                "excess"
-              ]
-            },
-            {
-              "addRule" : [
-                "change_mark"
-              ],
-              "subfactions" : [
-                "change"
-              ]
-            },
-            {
-              "subfactions" : [
-                "pestilence"
-              ],
-              "addRule" : [
-                "pestilence_mark"
-              ]
-            },
-            {
-              "addRule" : [
-                "deception_mark"
-              ],
-              "subfactions" : [
-                "deception"
-              ]
-            },
-            {
-              "addRule" : [
-                "wrath_mark"
-              ],
-              "subfactions" : [
-                "wrath"
-              ]
-            }
-          ],
-          "rules" : [
-            {
-              "id" : "leader_x",
-              "x" : "Infantry, Cavalry"
-            },
-            {
-              "id" : "power",
-              "x" : 3
-            },
-            "fear",
-            "fly",
-            "damage_table_monster"
-          ],
-          "min" : 1,
-          "max" : 1
-        }
-      ],
-      "subfactions" : [
-        "none",
-        "wrath",
-        "excess",
-        "pestilence",
-        "change",
-        "deception"
-      ],
-      "keywords" : [
-        "Beast",
-        "Monster"
-      ]
     }
   },
   "weapons" : {
@@ -2481,11 +2483,6 @@
       "description" : "Models suffer -1 Accuracy when shooting at this model at a range of more than 12\".",
       "points" : 2
     },
-    "regeneration" : {
-      "name" : "Regeneration",
-      "description" : "At the end of it's activation you can heal 1 wound that has been allocated to this model.",
-      "points" : 5
-    },
     "change_mark_monster" : {
       "name" : "Mark of Magic",
       "description" : "This model has +1 Save.",
@@ -2509,6 +2506,11 @@
     "deception_mark_monster" : {
       "name" : "Mark of Deception",
       "description" : "Models suffer -1 Accuracy when shooting at this model at a range of more than 12\".",
+      "points" : 10
+    },
+    "shield_dragon" : {
+      "name" : "Enchanted Shield",
+      "description" : "This model has +1 Save.",
       "points" : 10
     }
   },
