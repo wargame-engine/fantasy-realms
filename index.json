@@ -134,7 +134,7 @@
       "name" : "High Elves",
       "id" : "high_elves",
       "url" : "high_elves.json",
-      "color" : "#38733a",
+      "color" : "#607d8b",
       "version" : "0.1",
       "alliance" : "order",
       "description" : "Masters of the Arcane, this ancient island nation is shrouded in mystery."
@@ -298,6 +298,45 @@
       "version" : "0.1",
       "alliance" : "order",
       "description" : "Cursed by their dark gods, these Elves raid the coasts and rivers of the mainlands from their ship-fortresses."
+    },
+    "wood_elves" : {
+      "name" : "Wood Elves",
+      "id" : "wood_elves",
+      "url" : "wood_elves.json",
+      "color" : "#38733a",
+      "version" : "0.1",
+      "alliance" : "order",
+      "description" : "Hidden away within their dense forests, striking back against those that dare to anger the spirits of the forest.",
+      "subfactions" : {
+        "spite" : {
+          "name" : "Spite-Grove",
+          "id" : "spite",
+          "color" : "#801111",
+          "description" : "Fueled by their own rage, lashing out at the outside world in brutal and quick skirmishes.",
+          "restricted" : true
+        },
+        "life" : {
+          "name" : "Life-Grove",
+          "id" : "life",
+          "color" : "#50974A",
+          "description" : "Protecting the land and all its inhabitants, following the circle of life and death.",
+          "restricted" : true
+        },
+        "sorrow" : {
+          "name" : "Sorrow-Grove",
+          "id" : "sorrow",
+          "color" : "#30106B",
+          "description" : "Blinded by their own hate, these forces of the woods have turned against their elven allies and the rest of the world.",
+          "restricted" : true
+        },
+        "watchers" : {
+          "name" : "Wayward Watcher",
+          "id" : "watchers",
+          "color" : "#38733a",
+          "description" : "Nomadic Guardians of ancient paths and groves, setting out to seek out and destroy great dangers.",
+          "restricted" : true
+        }
+      }
     }
   },
   "categories" : {
@@ -1135,6 +1174,13 @@
       "rules" : [
         "lethal"
       ]
+    },
+    "great_bow" : {
+      "name" : "Greatbow",
+      "attacks" : 1,
+      "ap" : 4,
+      "short" : 18,
+      "medium" : 36
     }
   },
   "rules" : {
@@ -1209,6 +1255,11 @@
     "poisoned_blades" : {
       "name" : "Poisoned Blades",
       "description" : "This model's melee weapons have +1 AP against enemies without _Damage Table(X)_.",
+      "points" : 5
+    },
+    "regeneration" : {
+      "name" : "Regeneration",
+      "description" : "At the end of it's activation you can heal 1 wound that has been allocated to this model.",
       "points" : 5
     }
   }
