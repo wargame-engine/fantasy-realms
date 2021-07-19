@@ -1,2663 +1,788 @@
 {
-  "name" : "Traitor Legions",
-  "id" : "traitor_legions",
-  "author" : "Xekon#8266",
-  "color" : "#231f20",
-  "version" : "0.1",
-  "units" : {
-    "traitor_lord" : {
-      "name" : "Traitor Lord",
-      "description" : "A lord of the dark gods.",
-      "category" : "hero",
-      "models" : [
-        {
-          "name" : "Traitor Lord",
-          "movement" : 6,
-          "courage" : 7,
-          "shoot" : 6,
-          "fight" : 7,
-          "defense" : 7,
-          "reflexes" : 6,
-          "weapons" : [
-            {
-              "id" : "heavy_great_weapon",
-              "count" : 3
-            },
-            "leeching_blade"
-          ],
-          "options" : [
-            {
-              "replaceWeapon" : [
+    "name": "Traitor Legions",
+    "id": "traitor_legions",
+    "author": "Xekon#8266",
+    "color": "#231f20",
+    "version": "0.1",
+    "units": {
+        "traitor_lord": {
+            "name": "Traitor Lord",
+            "description": "A lord of the dark gods.",
+            "category": "hero",
+            "models": [
                 {
-                  "id" : "heavy_great_weapon",
-                  "count" : 3
+                    "name": "Traitor Lord",
+                    "movement": 6,
+                    "courage": 7,
+                    "shoot": 6,
+                    "fight": 7,
+                    "defense": 7,
+                    "reflexes": 6,
+                    "weapons": [{"id": "heavy_great_weapon", "count": 3}, "leeching_blade"],
+                    "options": [
+                        {
+                            "replaceWeapon": [{"id": "heavy_great_weapon", "count": 3}],
+                            "withWeapon": [
+                                {"id": "heavy_polearm", "count": 3},
+                                {"id": "heavy_flail", "count": 3},
+                                {"id": "heavy_great_weapon", "count": 4},
+                                [{"id": "heavy_polearm", "count": 2}, {"id": "great_weapon", "count": 2}],
+                                {"id": "war_hammer", "count": 3}
+                            ]
+                        },
+                        {"addRule": ["shield"]},
+                        {"addRule": [[{"id": "power", "x": 1}, "disk_of_change"]], "subfactions": ["change"]},
+                        {"replaceRule": [{"id": "traitor_tactics", "x": 1}], "withRule": [{"id": "traitor_tactics", "x": 2}]},
+                        {"addRule": ["excess_mark"], "subfactions": ["excess"]},
+                        {"addRule": ["change_mark"], "subfactions": ["change"]},
+                        {"subfactions": ["pestilence"], "addRule": ["pestilence_mark"]},
+                        {"addRule": ["deception_mark"], "subfactions": ["deception"]},
+                        {"addRule": ["wrath_mark"], "subfactions": ["wrath"]}
+                    ],
+                    "rules": [{"id": "wounds", "x": 3}, {"id": "traitor_tactics", "x": 1}, "leader"],
+                    "min": 1,
+                    "max": 1
                 }
-              ],
-              "withWeapon" : [
+            ],
+            "subfactions": ["none", "wrath", "excess", "pestilence", "change", "deception"]
+        },
+        "traitor_lord_horse": {
+            "name": "Traitor Lord on Cursed Steed",
+            "description": "A lord of the dark gods.",
+            "category": "hero",
+            "models": [
                 {
-                  "id" : "heavy_polearm",
-                  "count" : 3
-                },
-                {
-                  "id" : "heavy_flail",
-                  "count" : 3
-                },
-                {
-                  "id" : "heavy_great_weapon",
-                  "count" : 4
-                },
-                [
-                  {
-                    "id" : "heavy_polearm",
-                    "count" : 2
-                  },
-                  {
-                    "id" : "great_weapon",
-                    "count" : 2
-                  }
-                ],
-                {
-                  "id" : "war_hammer",
-                  "count" : 3
+                    "name": "Traitor Lord on Cursed Steed",
+                    "movement": 8,
+                    "courage": 7,
+                    "shoot": 6,
+                    "fight": 7,
+                    "defense": 7,
+                    "reflexes": 6,
+                    "weapons": [{"id": "heavy_hooves_and_teeth", "count": 2}, {"id": "heavy_great_weapon", "count": 3}, "leeching_blade"],
+                    "options": [
+                        {
+                            "replaceWeapon": [{"id": "heavy_great_weapon", "count": 3}],
+                            "withWeapon": [
+                                {"id": "heavy_polearm", "count": 3},
+                                {"id": "heavy_flail", "count": 3},
+                                {"id": "heavy_great_weapon", "count": 4},
+                                {"id": "war_hammer", "count": 3},
+                                {"id": "great_lance", "count": 3}
+                            ]
+                        },
+                        {"addRule": ["shield"]},
+                        {"addRule": [{"id": "power", "x": 1}], "subfactions": ["change"]},
+                        {"replaceRule": [{"id": "traitor_tactics", "x": 1}], "withRule": [{"id": "traitor_tactics", "x": 2}]},
+                        {"addRule": ["excess_mark"], "subfactions": ["excess"]},
+                        {"addRule": ["change_mark"], "subfactions": ["change"]},
+                        {"subfactions": ["pestilence"], "addRule": ["pestilence_mark"]},
+                        {"addRule": ["deception_mark"], "subfactions": ["deception"]},
+                        {"addRule": ["wrath_mark"], "subfactions": ["wrath"]}
+                    ],
+                    "rules": [{"id": "leader_x", "x": "Infantry, Cavalry"}, {"id": "wounds", "x": 4}, {"id": "traitor_tactics", "x": 1}],
+                    "min": 1,
+                    "max": 1
                 }
-              ]
-            },
-            {
-              "addRule" : [
-                "shield"
-              ]
-            },
-            {
-              "addRule" : [
-                [
-                  {
-                    "id" : "power",
-                    "x" : 1
-                  },
-                  "disk_of_change"
-                ]
-              ],
-              "subfactions" : [
-                "change"
-              ]
-            },
-            {
-              "replaceRule" : [
+            ],
+            "subfactions": ["none", "wrath", "excess", "pestilence", "change", "deception"],
+            "keywords": ["Cavalry"]
+        },
+        "traitor_lord_on_lizard": {
+            "name": "Traitor Lord on Lizard Beast",
+            "description": "A lord of the dark gods mounted on a dangerous lizard beast.",
+            "category": "hero",
+            "models": [
                 {
-                  "id" : "traitor_tactics",
-                  "x" : 1
+                    "name": "Traitor Lord on Lizard Beast",
+                    "movement": 8,
+                    "courage": 7,
+                    "shoot": 6,
+                    "fight": 7,
+                    "defense": 8,
+                    "reflexes": 6,
+                    "weapons": [{"id": "horn_and_claws", "count": 3}, {"id": "bashing_tail", "count": 2}, "leeching_blade", {"id": "heavy_polearm", "count": 3}],
+                    "options": [
+                        {
+                            "replaceWeapon": [{"id": "heavy_polearm", "count": 3}],
+                            "withWeapon": [{"id": "heavy_great_weapon", "count": 3}, {"id": "heavy_great_weapon", "count": 4}, {"id": "war_hammer", "count": 3}, {"id": "great_lance", "count": 3}]
+                        },
+                        {"addRule": ["shield"]},
+                        {"addRule": [{"id": "power", "x": 1}], "subfactions": ["change"]},
+                        {"replaceRule": [{"id": "traitor_tactics", "x": 1}], "withRule": [{"id": "traitor_tactics", "x": 2}]},
+                        {"addRule": ["excess_mark"], "subfactions": ["excess"]},
+                        {"addRule": ["change_mark"], "subfactions": ["change"]},
+                        {"subfactions": ["pestilence"], "addRule": ["pestilence_mark"]},
+                        {"addRule": ["deception_mark"], "subfactions": ["deception"]},
+                        {"addRule": ["wrath_mark"], "subfactions": ["wrath"]}
+                    ],
+                    "rules": [{"id": "leader_x", "x": "Infantry, Cavalry"}, {"id": "wounds", "x": 4}, {"id": "traitor_tactics", "x": 1}],
+                    "min": 1,
+                    "max": 1
                 }
-              ],
-              "withRule" : [
+            ],
+            "subfactions": ["none", "wrath", "excess", "pestilence", "change", "deception"],
+            "keywords": ["Cavalry", "Monster"]
+        },
+        "sorcerer": {
+            "name": "Sorcerer",
+            "description": "An exalted sorcerer, master of the arcane arts.",
+            "category": "hero",
+            "models": [
                 {
-                  "id" : "traitor_tactics",
-                  "x" : 2
+                    "name": "Sorcerer",
+                    "movement": 6,
+                    "courage": 6,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 7,
+                    "reflexes": 5,
+                    "weapons": ["heavy_handweapon", "great_staff"],
+                    "options": [
+                        {"replaceRule": {"id": "power", "x": 1}, "withRule": {"id": "power", "x": 2}},
+                        {"addRule": ["companion"]},
+                        {"addRule": ["disk_of_change"], "subfactions": ["change"]},
+                        {"addRule": ["excess_mark"], "subfactions": ["excess"]},
+                        {"addRule": ["change_mark"], "subfactions": ["change"]},
+                        {"subfactions": ["pestilence"], "addRule": ["pestilence_mark"]},
+                        {"addRule": ["deception_mark"], "subfactions": ["deception"]},
+                        {"addRule": ["wrath_mark"], "subfactions": ["wrath"]}
+                    ],
+                    "rules": [{"id": "leader_x", "x": "Infantry"}, {"id": "wounds", "x": 3}, {"id": "power", "x": 1}],
+                    "min": 1,
+                    "max": 1
                 }
-              ]
-            },
-            {
-              "addRule" : [
-                "excess_mark"
-              ],
-              "subfactions" : [
-                "excess"
-              ]
-            },
-            {
-              "addRule" : [
-                "change_mark"
-              ],
-              "subfactions" : [
-                "change"
-              ]
-            },
-            {
-              "subfactions" : [
-                "pestilence"
-              ],
-              "addRule" : [
-                "pestilence_mark"
-              ]
-            },
-            {
-              "addRule" : [
-                "deception_mark"
-              ],
-              "subfactions" : [
-                "deception"
-              ]
-            },
-            {
-              "addRule" : [
-                "wrath_mark"
-              ],
-              "subfactions" : [
-                "wrath"
-              ]
-            }
-          ],
-          "rules" : [
-            {
-              "id" : "wounds",
-              "x" : 3
-            },
-            {
-              "id" : "traitor_tactics",
-              "x" : 1
-            },
-            "leader"
-          ],
-          "min" : 1,
-          "max" : 1
-        }
-      ],
-      "subfactions" : [
-        "none",
-        "wrath",
-        "excess",
-        "pestilence",
-        "change",
-        "deception"
-      ]
-    },
-    "traitor_lord_horse" : {
-      "name" : "Traitor Lord on Cursed Steed",
-      "description" : "A lord of the dark gods.",
-      "category" : "hero",
-      "models" : [
-        {
-          "name" : "Traitor Lord on Cursed Steed",
-          "movement" : 8,
-          "courage" : 7,
-          "shoot" : 6,
-          "fight" : 7,
-          "defense" : 7,
-          "reflexes" : 6,
-          "weapons" : [
-            {
-              "id" : "hooves_and_teeth",
-              "count" : 2
-            },
-            {
-              "id" : "heavy_great_weapon",
-              "count" : 3
-            },
-            "leeching_blade"
-          ],
-          "options" : [
-            {
-              "replaceWeapon" : [
+            ],
+            "subfactions": ["none", "wrath", "excess", "pestilence", "change", "deception"]
+        },
+        "sorcerer_horse": {
+            "name": "Sorcerer on Cursed Steed",
+            "description": "An exalted sorcerer, master of the arcane arts.",
+            "category": "hero",
+            "models": [
                 {
-                  "id" : "heavy_great_weapon",
-                  "count" : 3
+                    "name": "Sorcerer on Cursed Steed",
+                    "movement": 8,
+                    "courage": 6,
+                    "shoot": 4,
+                    "fight": 5,
+                    "defense": 7,
+                    "reflexes": 5,
+                    "weapons": ["heavy_handweapon", "great_staff", {"id": "heavy_hooves_and_teeth", "count": 2}],
+                    "options": [
+                        {"replaceRule": {"id": "power", "x": 1}, "withRule": {"id": "power", "x": 2}},
+                        {"addRule": ["companion"]},
+                        {"addRule": ["excess_mark"], "subfactions": ["excess"]},
+                        {"addRule": ["change_mark"], "subfactions": ["change"]},
+                        {"subfactions": ["pestilence"], "addRule": ["pestilence_mark"]},
+                        {"addRule": ["deception_mark"], "subfactions": ["deception"]},
+                        {"addRule": ["wrath_mark"], "subfactions": ["wrath"]}
+                    ],
+                    "rules": [{"id": "leader_x", "x": "Infantry, Cavalry"}, {"id": "wounds", "x": 3}, {"id": "power", "x": 1}],
+                    "min": 1,
+                    "max": 1
                 }
-              ],
-              "withWeapon" : [
+            ],
+            "subfactions": ["none", "wrath", "excess", "pestilence", "change", "deception"],
+            "keywords": ["Cavalry"]
+        },
+        "sorcerer_manticore": {
+            "name": "Sorcerer on Manticore",
+            "description": "An exalted sorcerer, master of the arcane arts.",
+            "category": "hero",
+            "models": [
                 {
-                  "id" : "heavy_polearm",
-                  "count" : 3
-                },
-                {
-                  "id" : "heavy_flail",
-                  "count" : 3
-                },
-                {
-                  "id" : "heavy_great_weapon",
-                  "count" : 4
-                },
-                {
-                  "id" : "war_hammer",
-                  "count" : 3
-                },
-                {
-                  "id" : "great_lance",
-                  "count" : 3
+                    "name": "Sorcerer on Manticore",
+                    "movement": 10,
+                    "courage": 6,
+                    "shoot": 5,
+                    "fight": 6,
+                    "defense": 9,
+                    "reflexes": 6,
+                    "weapons": ["heavy_handweapon", "great_staff", {"id": "bashing_tail", "count": 4}, {"id": "fangs_and_claws", "count": 6}],
+                    "options": [
+                        {"replaceRule": {"id": "power", "x": 3}, "withRule": {"id": "power", "x": 4}},
+                        {"addRule": ["companion"]},
+                        {"addRule": ["excess_mark_monster"], "subfactions": ["excess"]},
+                        {"addRule": ["change_mark_monster"], "subfactions": ["change"]},
+                        {"subfactions": ["pestilence"], "addRule": ["pestilence_mark_monster"]},
+                        {"addRule": ["deception_mark_monster"], "subfactions": ["deception"]},
+                        {"addRule": ["wrath_mark_monster"], "subfactions": ["wrath"]}
+                    ],
+                    "rules": [{"id": "leader_x", "x": "Infantry, Cavalry"}, {"id": "power", "x": 3}, "fear", "fly", "damage_table_monster"],
+                    "min": 1,
+                    "max": 1
                 }
-              ]
-            },
-            {
-              "addRule" : [
-                "shield"
-              ]
-            },
-            {
-              "addRule" : [
+            ],
+            "subfactions": ["none", "wrath", "excess", "pestilence", "change", "deception"],
+            "keywords": ["Beast", "Monster"]
+        },
+        "traitor_lord_manticore": {
+            "name": "Traitor Lord on Manticore",
+            "description": "A lord of the dark gods.",
+            "category": "hero",
+            "models": [
                 {
-                  "id" : "power",
-                  "x" : 1
+                    "name": "Traitor Lord on Manticore",
+                    "movement": 10,
+                    "courage": 7,
+                    "shoot": 6,
+                    "fight": 7,
+                    "defense": 9,
+                    "reflexes": 6,
+                    "weapons": [{"id": "heavy_great_weapon", "count": 3}, "leeching_blade", {"id": "bashing_tail", "count": 4}, {"id": "fangs_and_claws", "count": 6}],
+                    "options": [
+                        {
+                            "replaceWeapon": [{"id": "heavy_great_weapon", "count": 3}],
+                            "withWeapon": [
+                                {"id": "heavy_polearm", "count": 3},
+                                {"id": "heavy_flail", "count": 3},
+                                {"id": "heavy_great_weapon", "count": 4},
+                                [{"id": "heavy_polearm", "count": 2}, {"id": "great_weapon", "count": 2}],
+                                {"id": "war_hammer", "count": 3},
+                                [{"id": "heavy_great_weapon", "count": 3}, "daggerfist"]
+                            ]
+                        },
+                        {"addRule": ["shield_dragon"]},
+                        {"addRule": [[{"id": "power", "x": 2}]], "subfactions": ["change"]},
+                        {"replaceRule": [{"id": "traitor_tactics", "x": 2}], "withRule": [{"id": "traitor_tactics", "x": 3}]},
+                        {"addRule": ["excess_mark_monster"], "subfactions": ["excess"]},
+                        {"addRule": ["change_mark_monster"], "subfactions": ["change"]},
+                        {"subfactions": ["pestilence"], "addRule": ["pestilence_mark_monster"]},
+                        {"addRule": ["deception_mark_monster"], "subfactions": ["deception"]},
+                        {"addRule": ["wrath_mark_monster"], "subfactions": ["wrath"]}
+                    ],
+                    "rules": [{"id": "leader_x", "x": "Infantry, Cavalry"}, {"id": "traitor_tactics", "x": 1}, "fly", "fear", "damage_table_monster"],
+                    "min": 1,
+                    "max": 1
                 }
-              ],
-              "subfactions" : [
-                "change"
-              ]
-            },
-            {
-              "replaceRule" : [
+            ],
+            "subfactions": ["none", "wrath", "excess", "pestilence", "change", "deception"],
+            "keywords": ["Beast", "Cavalry", "Monster"]
+        },
+        "traitor_cultists": {
+            "name": "Traitor Cultists",
+            "description": "Fanatical masses serving the Traitor Gods.",
+            "category": "core",
+            "models": [
                 {
-                  "id" : "traitor_tactics",
-                  "x" : 1
+                    "name": "Traitor Cultist",
+                    "movement": 6,
+                    "courage": 4,
+                    "shoot": 4,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "weapons": [{"id": "heavy_handweapon", "count": 2}],
+                    "options": [
+                        {
+                            "replaceWeapon": [{"id": "heavy_handweapon", "count": 2}],
+                            "withWeapon": [["heavy_handweapon", "shield"]],
+                            "modelLimit": "all",
+                            "subfactions": ["none", "wrath", "pestilence", "change", "deception"]
+                        },
+                        {
+                            "replaceWeapon": [{"id": "heavy_handweapon", "count": 2}],
+                            "withWeapon": [["heavy_handweapon", "shield"], ["poison_short_bow", {"id": "handweapon", "count": 2}]],
+                            "modelLimit": "all",
+                            "subfactions": ["excess"]
+                        },
+                        {"replaceWeapon": [{"id": "heavy_handweapon", "count": 2}], "withWeapon": [{"id": "heavy_polearm", "count": 2}], "modelLimit": "3/10"},
+                        {"addRule": ["artifact"], "modelLimit": "1/10"},
+                        {"addRule": ["companion"], "modelLimit": "1/10"}
+                    ],
+                    "min": 10,
+                    "max": 30
                 }
-              ],
-              "withRule" : [
-                {
-                  "id" : "traitor_tactics",
-                  "x" : 2
-                }
-              ]
-            },
-            {
-              "addRule" : [
-                "excess_mark"
-              ],
-              "subfactions" : [
-                "excess"
-              ]
-            },
-            {
-              "addRule" : [
-                "change_mark"
-              ],
-              "subfactions" : [
-                "change"
-              ]
-            },
-            {
-              "subfactions" : [
-                "pestilence"
-              ],
-              "addRule" : [
-                "pestilence_mark"
-              ]
-            },
-            {
-              "addRule" : [
-                "deception_mark"
-              ],
-              "subfactions" : [
-                "deception"
-              ]
-            },
-            {
-              "addRule" : [
-                "wrath_mark"
-              ],
-              "subfactions" : [
-                "wrath"
-              ]
-            }
-          ],
-          "rules" : [
-            {
-              "id" : "leader_x",
-              "x" : "Infantry, Cavalry"
-            },
-            {
-              "id" : "wounds",
-              "x" : 4
-            },
-            {
-              "id" : "traitor_tactics",
-              "x" : 1
-            }
-          ],
-          "min" : 1,
-          "max" : 1
-        }
-      ],
-      "subfactions" : [
-        "none",
-        "wrath",
-        "excess",
-        "pestilence",
-        "change",
-        "deception"
-      ],
-      "keywords" : [
-        "Cavalry"
-      ]
-    },
-    "traitor_lord_on_lizard" : {
-      "name" : "Traitor Lord on Lizard Beast",
-      "description" : "A lord of the dark gods mounted on a dangerous lizard beast.",
-      "category" : "hero",
-      "models" : [
-        {
-          "name" : "Traitor Lord on Lizard Beast",
-          "movement" : 8,
-          "courage" : 7,
-          "shoot" : 6,
-          "fight" : 7,
-          "defense" : 8,
-          "reflexes" : 6,
-          "weapons" : [
-            {
-              "id" : "horn_and_claws",
-              "count" : 3
-            },
-            {
-              "id" : "bashing_tail",
-              "count" : 2
-            },
-            "leeching_blade",
-            {
-              "id" : "heavy_polearm",
-              "count" : 3
-            }
-          ],
-          "options" : [
-            {
-              "replaceWeapon" : [
-                {
-                  "id" : "heavy_polearm",
-                  "count" : 3
-                }
-              ],
-              "withWeapon" : [
-                {
-                  "id" : "heavy_great_weapon",
-                  "count" : 3
-                },
-                {
-                  "id" : "heavy_great_weapon",
-                  "count" : 4
-                },
-                {
-                  "id" : "war_hammer",
-                  "count" : 3
-                },
-                {
-                  "id" : "great_lance",
-                  "count" : 3
-                }
-              ]
-            },
-            {
-              "addRule" : [
-                "shield"
-              ]
-            },
-            {
-              "addRule" : [
-                {
-                  "id" : "power",
-                  "x" : 1
-                }
-              ],
-              "subfactions" : [
-                "change"
-              ]
-            },
-            {
-              "replaceRule" : [
-                {
-                  "id" : "traitor_tactics",
-                  "x" : 1
-                }
-              ],
-              "withRule" : [
-                {
-                  "id" : "traitor_tactics",
-                  "x" : 2
-                }
-              ]
-            },
-            {
-              "addRule" : [
-                "excess_mark"
-              ],
-              "subfactions" : [
-                "excess"
-              ]
-            },
-            {
-              "addRule" : [
-                "change_mark"
-              ],
-              "subfactions" : [
-                "change"
-              ]
-            },
-            {
-              "subfactions" : [
-                "pestilence"
-              ],
-              "addRule" : [
-                "pestilence_mark"
-              ]
-            },
-            {
-              "addRule" : [
-                "deception_mark"
-              ],
-              "subfactions" : [
-                "deception"
-              ]
-            },
-            {
-              "addRule" : [
-                "wrath_mark"
-              ],
-              "subfactions" : [
-                "wrath"
-              ]
-            }
-          ],
-          "rules" : [
-            {
-              "id" : "leader_x",
-              "x" : "Infantry, Cavalry"
-            },
-            {
-              "id" : "wounds",
-              "x" : 4
-            },
-            {
-              "id" : "traitor_tactics",
-              "x" : 1
-            }
-          ],
-          "min" : 1,
-          "max" : 1
-        }
-      ],
-      "subfactions" : [
-        "none",
-        "wrath",
-        "excess",
-        "pestilence",
-        "change",
-        "deception"
-      ],
-      "keywords" : [
-        "Cavalry",
-        "Monster"
-      ]
-    },
-    "sorcerer" : {
-      "name" : "Sorcerer",
-      "description" : "An exalted sorcerer, master of the arcane arts.",
-      "category" : "hero",
-      "models" : [
-        {
-          "name" : "Sorcerer",
-          "movement" : 6,
-          "courage" : 6,
-          "shoot" : 5,
-          "fight" : 5,
-          "defense" : 7,
-          "reflexes" : 5,
-          "weapons" : [
-            "heavy_handweapon",
-            "great_staff"
-          ],
-          "options" : [
-            {
-              "replaceRule" : {
-                "id" : "power",
-                "x" : 1
-              },
-              "withRule" : {
-                "id" : "power",
-                "x" : 2
-              }
-            },
-            {
-              "addRule" : [
-                "companion"
-              ]
-            },
-            {
-              "addRule" : [
-                "disk_of_change"
-              ],
-              "subfactions" : [
-                "change"
-              ]
-            },
-            {
-              "addRule" : [
-                "excess_mark"
-              ],
-              "subfactions" : [
-                "excess"
-              ]
-            },
-            {
-              "addRule" : [
-                "change_mark"
-              ],
-              "subfactions" : [
-                "change"
-              ]
-            },
-            {
-              "subfactions" : [
-                "pestilence"
-              ],
-              "addRule" : [
-                "pestilence_mark"
-              ]
-            },
-            {
-              "addRule" : [
-                "deception_mark"
-              ],
-              "subfactions" : [
-                "deception"
-              ]
-            },
-            {
-              "addRule" : [
-                "wrath_mark"
-              ],
-              "subfactions" : [
-                "wrath"
-              ]
-            }
-          ],
-          "rules" : [
-            {
-              "id" : "leader_x",
-              "x" : "Infantry"
-            },
-            {
-              "id" : "wounds",
-              "x" : 3
-            },
-            {
-              "id" : "power",
-              "x" : 1
-            }
-          ],
-          "min" : 1,
-          "max" : 1
-        }
-      ],
-      "subfactions" : [
-        "none",
-        "wrath",
-        "excess",
-        "pestilence",
-        "change",
-        "deception"
-      ]
-    },
-    "sorcerer_horse" : {
-      "name" : "Sorcerer on Cursed Steed",
-      "description" : "An exalted sorcerer, master of the arcane arts.",
-      "category" : "hero",
-      "models" : [
-        {
-          "name" : "Sorcerer on Cursed Steed",
-          "movement" : 8,
-          "courage" : 6,
-          "shoot" : 4,
-          "fight" : 5,
-          "defense" : 7,
-          "reflexes" : 5,
-          "weapons" : [
-            "heavy_handweapon",
-            "great_staff",
-            {
-              "id" : "hooves_and_teeth",
-              "count" : 2
-            }
-          ],
-          "options" : [
-            {
-              "replaceRule" : {
-                "id" : "power",
-                "x" : 1
-              },
-              "withRule" : {
-                "id" : "power",
-                "x" : 2
-              }
-            },
-            {
-              "addRule" : [
-                "companion"
-              ]
-            },
-            {
-              "addRule" : [
-                "excess_mark"
-              ],
-              "subfactions" : [
-                "excess"
-              ]
-            },
-            {
-              "addRule" : [
-                "change_mark"
-              ],
-              "subfactions" : [
-                "change"
-              ]
-            },
-            {
-              "subfactions" : [
-                "pestilence"
-              ],
-              "addRule" : [
-                "pestilence_mark"
-              ]
-            },
-            {
-              "addRule" : [
-                "deception_mark"
-              ],
-              "subfactions" : [
-                "deception"
-              ]
-            },
-            {
-              "addRule" : [
-                "wrath_mark"
-              ],
-              "subfactions" : [
-                "wrath"
-              ]
-            }
-          ],
-          "rules" : [
-            {
-              "id" : "leader_x",
-              "x" : "Infantry, Cavalry"
-            },
-            {
-              "id" : "wounds",
-              "x" : 3
-            },
-            {
-              "id" : "power",
-              "x" : 1
-            }
-          ],
-          "min" : 1,
-          "max" : 1
-        }
-      ],
-      "subfactions" : [
-        "none",
-        "wrath",
-        "excess",
-        "pestilence",
-        "change",
-        "deception"
-      ],
-      "keywords" : [
-        "Cavalry"
-      ]
-    },
-    "sorcerer_manticore" : {
-      "name" : "Sorcerer on Manticore",
-      "description" : "An exalted sorcerer, master of the arcane arts.",
-      "category" : "hero",
-      "models" : [
-        {
-          "name" : "Sorcerer on Manticore",
-          "movement" : 10,
-          "courage" : 6,
-          "shoot" : 5,
-          "fight" : 6,
-          "defense" : 9,
-          "reflexes" : 6,
-          "weapons" : [
-            "heavy_handweapon",
-            "great_staff",
-            {
-              "id" : "bashing_tail",
-              "count" : 4
-            },
-            {
-              "id" : "fangs_and_claws",
-              "count" : 6
-            }
-          ],
-          "options" : [
-            {
-              "replaceRule" : {
-                "id" : "power",
-                "x" : 3
-              },
-              "withRule" : {
-                "id" : "power",
-                "x" : 4
-              }
-            },
-            {
-              "addRule" : [
-                "companion"
-              ]
-            },
-            {
-              "addRule" : [
-                "excess_mark_monster"
-              ],
-              "subfactions" : [
-                "excess"
-              ]
-            },
-            {
-              "addRule" : [
-                "change_mark_monster"
-              ],
-              "subfactions" : [
-                "change"
-              ]
-            },
-            {
-              "subfactions" : [
-                "pestilence"
-              ],
-              "addRule" : [
-                "pestilence_mark_monster"
-              ]
-            },
-            {
-              "addRule" : [
-                "deception_mark_monster"
-              ],
-              "subfactions" : [
-                "deception"
-              ]
-            },
-            {
-              "addRule" : [
-                "wrath_mark_monster"
-              ],
-              "subfactions" : [
-                "wrath"
-              ]
-            }
-          ],
-          "rules" : [
-            {
-              "id" : "leader_x",
-              "x" : "Infantry, Cavalry"
-            },
-            {
-              "id" : "power",
-              "x" : 3
-            },
-            "fear",
-            "fly",
-            "damage_table_monster"
-          ],
-          "min" : 1,
-          "max" : 1
-        }
-      ],
-      "subfactions" : [
-        "none",
-        "wrath",
-        "excess",
-        "pestilence",
-        "change",
-        "deception"
-      ],
-      "keywords" : [
-        "Beast",
-        "Monster"
-      ]
-    },
-    "traitor_lord_manticore" : {
-      "name" : "Traitor Lord on Manticore",
-      "description" : "A lord of the dark gods.",
-      "category" : "hero",
-      "models" : [
-        {
-          "name" : "Traitor Lord on Manticore",
-          "movement" : 10,
-          "courage" : 7,
-          "shoot" : 6,
-          "fight" : 7,
-          "defense" : 9,
-          "reflexes" : 6,
-          "weapons" : [
-            {
-              "id" : "heavy_great_weapon",
-              "count" : 3
-            },
-            "leeching_blade",
-            {
-              "id" : "bashing_tail",
-              "count" : 4
-            },
-            {
-              "id" : "fangs_and_claws",
-              "count" : 6
-            }
-          ],
-          "options" : [
-            {
-              "replaceWeapon" : [
-                {
-                  "id" : "heavy_great_weapon",
-                  "count" : 3
-                }
-              ],
-              "withWeapon" : [
-                {
-                  "id" : "heavy_polearm",
-                  "count" : 3
-                },
-                {
-                  "id" : "heavy_flail",
-                  "count" : 3
-                },
-                {
-                  "id" : "heavy_great_weapon",
-                  "count" : 4
-                },
-                [
-                  {
-                    "id" : "heavy_polearm",
-                    "count" : 2
-                  },
-                  {
-                    "id" : "great_weapon",
-                    "count" : 2
-                  }
-                ],
-                {
-                  "id" : "war_hammer",
-                  "count" : 3
-                },
-                [
-                  {
-                    "id" : "heavy_great_weapon",
-                    "count" : 3
-                  },
-                  "daggerfist"
-                ]
-              ]
-            },
-            {
-              "addRule" : [
-                "shield_dragon"
-              ]
-            },
-            {
-              "addRule" : [
-                [
-                  {
-                    "id" : "power",
-                    "x" : 2
-                  }
-                ]
-              ],
-              "subfactions" : [
-                "change"
-              ]
-            },
-            {
-              "replaceRule" : [
-                {
-                  "id" : "traitor_tactics",
-                  "x" : 2
-                }
-              ],
-              "withRule" : [
-                {
-                  "id" : "traitor_tactics",
-                  "x" : 3
-                }
-              ]
-            },
-            {
-              "addRule" : [
-                "excess_mark_monster"
-              ],
-              "subfactions" : [
-                "excess"
-              ]
-            },
-            {
-              "addRule" : [
-                "change_mark_monster"
-              ],
-              "subfactions" : [
-                "change"
-              ]
-            },
-            {
-              "subfactions" : [
-                "pestilence"
-              ],
-              "addRule" : [
-                "pestilence_mark_monster"
-              ]
-            },
-            {
-              "addRule" : [
-                "deception_mark_monster"
-              ],
-              "subfactions" : [
-                "deception"
-              ]
-            },
-            {
-              "addRule" : [
-                "wrath_mark_monster"
-              ],
-              "subfactions" : [
-                "wrath"
-              ]
-            }
-          ],
-          "rules" : [
-            {
-              "id" : "leader_x",
-              "x" : "Infantry, Cavalry"
-            },
-            {
-              "id" : "traitor_tactics",
-              "x" : 1
-            },
-            "fly",
-            "fear",
-            "damage_table_monster"
-          ],
-          "min" : 1,
-          "max" : 1
-        }
-      ],
-      "subfactions" : [
-        "none",
-        "wrath",
-        "excess",
-        "pestilence",
-        "change",
-        "deception"
-      ],
-      "keywords" : [
-        "Beast",
-        "Cavalry",
-        "Monster"
-      ]
-    },
-    "traitor_cultists" : {
-      "name" : "Traitor Cultists",
-      "description" : "Fanatical masses serving the Traitor Gods.",
-      "category" : "core",
-      "models" : [
-        {
-          "name" : "Traitor Cultist",
-          "movement" : 6,
-          "courage" : 4,
-          "shoot" : 4,
-          "fight" : 5,
-          "defense" : 5,
-          "reflexes" : 5,
-          "weapons" : [
-            {
-              "id" : "heavy_handweapon",
-              "count" : 2
-            }
-          ],
-          "options" : [
-            {
-              "replaceWeapon" : [
-                {
-                  "id" : "heavy_handweapon",
-                  "count" : 2
-                }
-              ],
-              "withWeapon" : [
-                [
-                  "heavy_handweapon",
-                  "shield"
-                ]
-              ],
-              "modelLimit" : "all",
-              "subfactions" : [
-                "none",
-                "wrath",
-                "pestilence",
-                "change",
-                "deception"
-              ]
-            },
-            {
-              "replaceWeapon" : [
-                {
-                  "id" : "heavy_handweapon",
-                  "count" : 2
-                }
-              ],
-              "withWeapon" : [
-                [
-                  "heavy_handweapon",
-                  "shield"
-                ],
-                [
-                  "poison_short_bow",
-                  {
-                    "id" : "handweapon",
-                    "count" : 2
-                  }
-                ]
-              ],
-              "modelLimit" : "all",
-              "subfactions" : [
-                "excess"
-              ]
-            },
-            {
-              "replaceWeapon" : [
-                {
-                  "id" : "heavy_handweapon",
-                  "count" : 2
-                }
-              ],
-              "withWeapon" : [
-                {
-                  "id" : "heavy_polearm",
-                  "count" : 2
-                }
-              ],
-              "modelLimit" : "3/10"
-            },
-            {
-              "addRule" : [
-                "artifact"
-              ],
-              "modelLimit" : "1/10"
-            },
-            {
-              "addRule" : [
-                "companion"
-              ],
-              "modelLimit" : "1/10"
-            }
-          ],
-          "min" : 10,
-          "max" : 30
-        }
-      ],
-      "subfactions" : [
-        "none",
-        "wrath",
-        "excess",
-        "pestilence",
-        "change",
-        "deception"
-      ],
-      "options" : [
-        {
-          "addRule" : [
-            [
-              "champion",
-              {
-                "id" : "ward",
-                "x" : 1
-              }
+            ],
+            "subfactions": ["none", "wrath", "excess", "pestilence", "change", "deception"],
+            "options": [
+                {"addRule": [["champion", {"id": "ward", "x": 1}]], "modelLimit": 1, "subfactions": ["wrath", "excess", "pestilence", "deception", "none"]},
+                {"addRule": [["champion", {"id": "power", "x": 1}]], "modelLimit": 1, "subfactions": ["change"]},
+                {"addRule": ["banner"], "modelLimit": 1},
+                {"addRule": ["musician"], "modelLimit": 1},
+                {"addRule": ["excess_mark"], "subfactions": ["excess"], "modelLimit": "all"},
+                {"addRule": ["change_mark"], "subfactions": ["change"], "modelLimit": "all"},
+                {"subfactions": ["pestilence"], "addRule": ["pestilence_mark"], "modelLimit": "all"},
+                {"addRule": ["deception_mark"], "subfactions": ["deception"], "modelLimit": "all"},
+                {"addRule": ["wrath_mark"], "subfactions": ["wrath"], "modelLimit": "all"}
             ]
-          ],
-          "modelLimit" : 1,
-          "subfactions" : [
-            "wrath",
-            "excess",
-            "pestilence",
-            "deception",
-            "none"
-          ]
         },
-        {
-          "addRule" : [
-            [
-              "champion",
-              {
-                "id" : "power",
-                "x" : 1
-              }
+        "traitor_warriors": {
+            "name": "Traitor Warriors",
+            "description": "Warriors who serve the Traitor Gods.",
+            "category": "core",
+            "models": [
+                {
+                    "name": "Traitor Warrior",
+                    "movement": 6,
+                    "courage": 6,
+                    "shoot": 5,
+                    "fight": 6,
+                    "defense": 7,
+                    "reflexes": 6,
+                    "weapons": [{"id": "heavy_handweapon", "count": 2}, "shield"],
+                    "options": [
+                        {
+                            "replaceWeapon": [{"id": "heavy_handweapon", "count": 2}, "shield"],
+                            "withWeapon": [{"id": "heavy_handweapon", "count": 3}, {"id": "heavy_great_weapon", "count": 2}, [{"id": "polearm", "count": 2}, "shield"]],
+                            "modelLimit": "all",
+                            "subfactions": ["none", "excess", "pestilence", "change", "deception"]
+                        },
+                        {
+                            "replaceWeapon": [{"id": "heavy_handweapon", "count": 2}, "shield"],
+                            "withWeapon": [
+                                {"id": "heavy_handweapon", "count": 3},
+                                {"id": "heavy_great_weapon", "count": 2},
+                                [{"id": "polearm", "count": 2}, "shield"],
+                                [{"id": "heavy_handweapon", "count": 2}, "daggerfist"]
+                            ],
+                            "modelLimit": "all",
+                            "subfactions": ["wrath"]
+                        }
+                    ],
+                    "min": 5,
+                    "max": 15
+                }
+            ],
+            "subfactions": ["none", "wrath", "excess", "pestilence", "change", "deception"],
+            "options": [
+                {"addRule": ["champion"], "modelLimit": 1},
+                {"addRule": ["banner"], "modelLimit": 1},
+                {"addRule": ["musician"], "modelLimit": 1},
+                {"addRule": ["excess_mark"], "subfactions": ["excess"], "modelLimit": "all"},
+                {"addRule": ["change_mark"], "subfactions": ["change"], "modelLimit": "all"},
+                {"subfactions": ["pestilence"], "addRule": ["pestilence_mark"], "modelLimit": "all"},
+                {"addRule": ["deception_mark"], "subfactions": ["deception"], "modelLimit": "all"},
+                {"addRule": ["wrath_mark"], "subfactions": ["wrath"], "modelLimit": "all"}
             ]
-          ],
-          "modelLimit" : 1,
-          "subfactions" : [
-            "change"
-          ]
         },
-        {
-          "addRule" : [
-            "banner"
-          ],
-          "modelLimit" : 1
-        },
-        {
-          "addRule" : [
-            "musician"
-          ],
-          "modelLimit" : 1
-        },
-        {
-          "addRule" : [
-            "excess_mark"
-          ],
-          "subfactions" : [
-            "excess"
-          ],
-          "modelLimit" : "all"
-        },
-        {
-          "addRule" : [
-            "change_mark"
-          ],
-          "subfactions" : [
-            "change"
-          ],
-          "modelLimit" : "all"
-        },
-        {
-          "subfactions" : [
-            "pestilence"
-          ],
-          "addRule" : [
-            "pestilence_mark"
-          ],
-          "modelLimit" : "all"
-        },
-        {
-          "addRule" : [
-            "deception_mark"
-          ],
-          "subfactions" : [
-            "deception"
-          ],
-          "modelLimit" : "all"
-        },
-        {
-          "addRule" : [
-            "wrath_mark"
-          ],
-          "subfactions" : [
-            "wrath"
-          ],
-          "modelLimit" : "all"
-        }
-      ]
-    },
-    "traitor_warriors" : {
-      "name" : "Traitor Warriors",
-      "description" : "Warriors who serve the Traitor Gods.",
-      "category" : "core",
-      "models" : [
-        {
-          "name" : "Traitor Warrior",
-          "movement" : 6,
-          "courage" : 6,
-          "shoot" : 5,
-          "fight" : 6,
-          "defense" : 7,
-          "reflexes" : 6,
-          "weapons" : [
-            {
-              "id" : "heavy_handweapon",
-              "count" : 2
-            },
-            "shield"
-          ],
-          "options" : [
-            {
-              "replaceWeapon" : [
+        "traitor_barbarians": {
+            "name": "Traitor Barbarians",
+            "description": "Frenzied Warriors serving the Traitor Gods.",
+            "category": "core",
+            "models": [
                 {
-                  "id" : "heavy_handweapon",
-                  "count" : 2
-                },
-                "shield"
-              ],
-              "withWeapon" : [
-                {
-                  "id" : "heavy_handweapon",
-                  "count" : 3
-                },
-                {
-                  "id" : "heavy_great_weapon",
-                  "count" : 2
-                },
-                [
-                  {
-                    "id" : "polearm",
-                    "count" : 2
-                  },
-                  "shield"
-                ]
-              ],
-              "modelLimit" : "all",
-              "subfactions" : [
-                "none",
-                "excess",
-                "pestilence",
-                "change",
-                "deception"
-              ]
-            },
-            {
-              "replaceWeapon" : [
-                {
-                  "id" : "heavy_handweapon",
-                  "count" : 2
-                },
-                "shield"
-              ],
-              "withWeapon" : [
-                {
-                  "id" : "heavy_handweapon",
-                  "count" : 3
-                },
-                {
-                  "id" : "heavy_great_weapon",
-                  "count" : 2
-                },
-                [
-                  {
-                    "id" : "polearm",
-                    "count" : 2
-                  },
-                  "shield"
-                ],
-                [
-                  {
-                    "id" : "heavy_handweapon",
-                    "count" : 2
-                  },
-                  "daggerfist"
-                ]
-              ],
-              "modelLimit" : "all",
-              "subfactions" : [
-                "wrath"
-              ]
-            }
-          ],
-          "min" : 5,
-          "max" : 15
-        }
-      ],
-      "subfactions" : [
-        "none",
-        "wrath",
-        "excess",
-        "pestilence",
-        "change",
-        "deception"
-      ],
-      "options" : [
-        {
-          "addRule" : [
-            "champion"
-          ],
-          "modelLimit" : 1
-        },
-        {
-          "addRule" : [
-            "banner"
-          ],
-          "modelLimit" : 1
-        },
-        {
-          "addRule" : [
-            "musician"
-          ],
-          "modelLimit" : 1
-        },
-        {
-          "addRule" : [
-            "excess_mark"
-          ],
-          "subfactions" : [
-            "excess"
-          ],
-          "modelLimit" : "all"
-        },
-        {
-          "addRule" : [
-            "change_mark"
-          ],
-          "subfactions" : [
-            "change"
-          ],
-          "modelLimit" : "all"
-        },
-        {
-          "subfactions" : [
-            "pestilence"
-          ],
-          "addRule" : [
-            "pestilence_mark"
-          ],
-          "modelLimit" : "all"
-        },
-        {
-          "addRule" : [
-            "deception_mark"
-          ],
-          "subfactions" : [
-            "deception"
-          ],
-          "modelLimit" : "all"
-        },
-        {
-          "addRule" : [
-            "wrath_mark"
-          ],
-          "subfactions" : [
-            "wrath"
-          ],
-          "modelLimit" : "all"
-        }
-      ]
-    },
-    "traitor_barbarians" : {
-      "name" : "Traitor Barbarians",
-      "description" : "Frenzied Warriors serving the Traitor Gods.",
-      "category" : "core",
-      "models" : [
-        {
-          "name" : "Traitor Barbarian",
-          "movement" : 7,
-          "courage" : 5,
-          "shoot" : 5,
-          "fight" : 5,
-          "defense" : 4,
-          "reflexes" : 5,
-          "weapons" : [
-            "handweapon",
-            "shield"
-          ],
-          "options" : [
-            {
-              "replaceWeapon" : [
-                "handweapon",
-                "shield"
-              ],
-              "withWeapon" : [
-                [
-                  "flail",
-                  "shield"
-                ]
-              ],
-              "modelLimit" : "all",
-              "subfactions" : [
-                "none",
-                "excess",
-                "pestilence",
-                "change",
-                "deception"
-              ]
-            },
-            {
-              "replaceWeapon" : [
-                "handweapon",
-                "shield"
-              ],
-              "withWeapon" : [
-                {
-                  "id" : "handweapon",
-                  "count" : 3
-                },
-                [
-                  "flail",
-                  "shield"
-                ]
-              ],
-              "modelLimit" : "all",
-              "subfactions" : [
-                "wrath"
-              ]
-            }
-          ],
-          "min" : 10,
-          "max" : 30
-        }
-      ],
-      "subfactions" : [
-        "none",
-        "wrath",
-        "excess",
-        "pestilence",
-        "change",
-        "deception"
-      ],
-      "options" : [
-        {
-          "addRule" : [
-            "champion"
-          ],
-          "modelLimit" : 1
-        },
-        {
-          "addRule" : [
-            "banner"
-          ],
-          "modelLimit" : 1
-        },
-        {
-          "addRule" : [
-            "musician"
-          ],
-          "modelLimit" : 1
-        },
-        {
-          "addRule" : [
-            "excess_mark"
-          ],
-          "subfactions" : [
-            "excess"
-          ],
-          "modelLimit" : "all"
-        },
-        {
-          "addRule" : [
-            "change_mark"
-          ],
-          "subfactions" : [
-            "change"
-          ],
-          "modelLimit" : "all"
-        },
-        {
-          "subfactions" : [
-            "pestilence"
-          ],
-          "addRule" : [
-            "pestilence_mark"
-          ],
-          "modelLimit" : "all"
-        },
-        {
-          "addRule" : [
-            "deception_mark"
-          ],
-          "subfactions" : [
-            "deception"
-          ],
-          "modelLimit" : "all"
-        },
-        {
-          "addRule" : [
-            "wrath_mark"
-          ],
-          "subfactions" : [
-            "wrath"
-          ],
-          "modelLimit" : "all"
-        }
-      ]
-    },
-    "traitor_knights" : {
-      "name" : "Traitor Knights",
-      "description" : "Dark Knights who serve the Traitor Gods.",
-      "category" : "elite",
-      "models" : [
-        {
-          "rules" : [
-            {
-              "id" : "wounds",
-              "x" : 2
-            },
-            "fear"
-          ],
-          "name" : "Traitor Knight",
-          "movement" : 8,
-          "courage" : 6,
-          "shoot" : 5,
-          "fight" : 6,
-          "defense" : 7,
-          "reflexes" : 5,
-          "weapons" : [
-            {
-              "id" : "lance",
-              "count" : 2
-            },
-            {
-              "id" : "hooves_and_teeth",
-              "count" : 2
-            },
-            "shield"
-          ],
-          "min" : 3,
-          "max" : 6,
-          "options" : [
-            {
-              "replaceWeapon" : [
-                {
-                  "id" : "lance",
-                  "count" : 2
+                    "name": "Traitor Barbarian",
+                    "movement": 7,
+                    "courage": 5,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 4,
+                    "reflexes": 5,
+                    "weapons": ["handweapon", "shield"],
+                    "options": [
+                        {"replaceWeapon": ["handweapon", "shield"], "withWeapon": [["flail", "shield"]], "modelLimit": "all", "subfactions": ["none", "excess", "pestilence", "change", "deception"]},
+                        {"replaceWeapon": ["handweapon", "shield"], "withWeapon": [{"id": "handweapon", "count": 3}, ["flail", "shield"]], "modelLimit": "all", "subfactions": ["wrath"]}
+                    ],
+                    "min": 10,
+                    "max": 30
                 }
-              ],
-              "withWeapon" : [
+            ],
+            "subfactions": ["none", "wrath", "excess", "pestilence", "change", "deception"],
+            "options": [
+                {"addRule": ["champion"], "modelLimit": 1},
+                {"addRule": ["banner"], "modelLimit": 1},
+                {"addRule": ["musician"], "modelLimit": 1},
+                {"addRule": ["excess_mark"], "subfactions": ["excess"], "modelLimit": "all"},
+                {"addRule": ["change_mark"], "subfactions": ["change"], "modelLimit": "all"},
+                {"subfactions": ["pestilence"], "addRule": ["pestilence_mark"], "modelLimit": "all"},
+                {"addRule": ["deception_mark"], "subfactions": ["deception"], "modelLimit": "all"},
+                {"addRule": ["wrath_mark"], "subfactions": ["wrath"], "modelLimit": "all"}
+            ]
+        },
+        "traitor_knights": {
+            "name": "Traitor Knights",
+            "description": "Dark Knights who serve the Traitor Gods.",
+            "category": "elite",
+            "models": [
                 {
-                  "id" : "heavy_great_weapon",
-                  "count" : 2
-                },
-                {
-                  "id" : "heavy_polearm",
-                  "count" : 2
-                },
-                {
-                  "id" : "heavy_flail",
-                  "count" : 2
+                    "rules": [{"id": "wounds", "x": 2}, "fear"],
+                    "name": "Traitor Knight",
+                    "movement": 8,
+                    "courage": 6,
+                    "shoot": 5,
+                    "fight": 6,
+                    "defense": 7,
+                    "reflexes": 5,
+                    "weapons": [{"id": "lance", "count": 2}, {"id": "heavy_hooves_and_teeth", "count": 2}, "shield"],
+                    "min": 3,
+                    "max": 6,
+                    "options": [
+                        {
+                            "replaceWeapon": [{"id": "lance", "count": 2}],
+                            "withWeapon": [{"id": "heavy_great_weapon", "count": 2}, {"id": "heavy_polearm", "count": 2}, {"id": "heavy_flail", "count": 2}],
+                            "subfactions": ["none", "wrath", "pestilence", "change", "deception"]
+                        },
+                        {
+                            "replaceWeapon": [{"id": "lance", "count": 2}],
+                            "withWeapon": [{"id": "heavy_great_weapon", "count": 2}, {"id": "heavy_polearm", "count": 2}, [{"id": "poison_short_bow", "count": 2}, "heavy_handweapon"]],
+                            "subfactions": ["excess"]
+                        }
+                    ]
                 }
-              ],
-              "subfactions" : [
-                "none",
-                "wrath",
-                "pestilence",
-                "change",
-                "deception"
-              ]
-            },
-            {
-              "replaceWeapon" : [
+            ],
+            "subfactions": ["none", "wrath", "excess", "pestilence", "change", "deception"],
+            "options": [
+                {"addRule": ["champion"], "modelLimit": 1},
+                {"addRule": ["banner"], "modelLimit": 1},
+                {"addRule": ["musician"], "modelLimit": 1},
+                {"addRule": ["excess_mark"], "subfactions": ["excess"], "modelLimit": "all"},
+                {"addRule": ["change_mark"], "subfactions": ["change"], "modelLimit": "all"},
+                {"subfactions": ["pestilence"], "addRule": ["pestilence_mark"], "modelLimit": "all"},
+                {"addRule": ["deception_mark"], "subfactions": ["deception"], "modelLimit": "all"},
+                {"addRule": ["wrath_mark"], "subfactions": ["wrath"], "modelLimit": "all"}
+            ],
+            "keywords": ["Cavalry"]
+        },
+        "traitor_outriders": {
+            "name": "Barbarian Outriders",
+            "description": "Mounted Barbarians, ready to spill blood.",
+            "category": "elite",
+            "models": [
                 {
-                  "id" : "lance",
-                  "count" : 2
+                    "options": [{"replaceWeapon": [{"id": "handweapon", "count": 2}, "shield"], "withWeapon": [["heavy_spear", "barbarian_javelin"]], "modelLimit": "all"}],
+                    "name": "Traitor Outrider",
+                    "movement": 8,
+                    "courage": 5,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 5,
+                    "weapons": [{"id": "handweapon", "count": 2}, {"id": "heavy_hooves_and_teeth", "count": 2}, "shield"],
+                    "min": 5,
+                    "max": 10
                 }
-              ],
-              "withWeapon" : [
+            ],
+            "subfactions": ["none", "wrath", "excess", "pestilence", "change", "deception"],
+            "options": [
+                {"addRule": ["champion"], "modelLimit": 1},
+                {"addRule": ["banner"], "modelLimit": 1},
+                {"addRule": ["musician"], "modelLimit": 1},
+                {"addRule": ["excess_mark"], "subfactions": ["excess"], "modelLimit": "all"},
+                {"addRule": ["change_mark"], "subfactions": ["change"], "modelLimit": "all"},
+                {"subfactions": ["pestilence"], "addRule": ["pestilence_mark"], "modelLimit": "all"},
+                {"addRule": ["deception_mark"], "subfactions": ["deception"], "modelLimit": "all"},
+                {"addRule": ["wrath_mark"], "subfactions": ["wrath"], "modelLimit": "all"}
+            ],
+            "keywords": ["Cavalry"]
+        },
+        "icon_bearer": {
+            "name": "Traitor Lord with Accursed Banner",
+            "description": "A chosen banner bearer of the dark gods.",
+            "min": 1,
+            "max": 1,
+            "category": "elite",
+            "models": [
                 {
-                  "id" : "heavy_great_weapon",
-                  "count" : 2
-                },
+                    "name": "Traitor Lord with Accursed Banner",
+                    "movement": 6,
+                    "courage": 7,
+                    "shoot": 5,
+                    "fight": 6,
+                    "defense": 7,
+                    "reflexes": 6,
+                    "weapons": [{"id": "heavy_handweapon", "count": 4}],
+                    "rules": [{"id": "wounds", "x": 3}, "support", "banner_of_hate"],
+                    "min": 1,
+                    "max": 1,
+                    "options": [
+                        {"replaceRule": ["banner_of_hate"], "withRule": ["banner_of_wrath"], "subfactions": ["wrath"]},
+                        {"replaceRule": ["banner_of_hate"], "withRule": ["banner_of_pain"], "subfactions": ["excess"]},
+                        {"replaceRule": ["banner_of_hate"], "withRule": ["banner_of_fear"], "subfactions": ["change", "deception"]},
+                        {"replaceRule": ["banner_of_hate"], "withRule": ["banner_of_vitality"], "subfactions": ["pestilence"]}
+                    ]
+                }
+            ],
+            "subfactions": ["none", "wrath", "excess", "pestilence", "change", "deception"],
+            "keywords": ["Hero", "Infantry"]
+        },
+        "chosen": {
+            "name": "Traitor Chosen",
+            "description": "Blessed by their dark gods, these warriors set out to slay the mightiest heroes.",
+            "category": "elite",
+            "models": [
                 {
-                  "id" : "heavy_polearm",
-                  "count" : 2
-                },
-                [
-                  {
-                    "id" : "poison_short_bow",
-                    "count" : 2
-                  },
-                  "heavy_handweapon"
-                ]
-              ],
-              "subfactions" : [
-                "excess"
-              ]
-            }
-          ]
+                    "options": [
+                        {
+                            "replaceWeapon": [{"id": "heavy_great_weapon", "count": 4}],
+                            "withWeapon": [{"id": "war_hammer", "count": 3}, {"id": "heavy_great_weapon", "count": 5}, {"id": "great_polearm", "count": 4}, {"id": "heavy_flail", "count": 4}],
+                            "subfactions": ["none", "excess", "pestilence", "change", "deception"]
+                        },
+                        {
+                            "subfactions": ["wrath"],
+                            "replaceWeapon": [{"id": "heavy_great_weapon", "count": 4}],
+                            "withWeapon": [
+                                {"id": "war_hammer", "count": 3},
+                                {"id": "heavy_great_weapon", "count": 5},
+                                {"id": "great_polearm", "count": 4},
+                                {"id": "heavy_flail", "count": 4},
+                                [{"id": "heavy_great_weapon", "count": 3}, {"id": "daggerfist", "count": 2}]
+                            ]
+                        },
+                        {
+                            "replaceWeapon": [{"id": "heavy_great_weapon", "count": 4}],
+                            "withWeapon": [[{"id": "heavy_great_weapon", "count": 2}, {"id": "barbed_whip", "count": 2}]],
+                            "subfactions": ["excess"],
+                            "modelLimit": 1
+                        },
+                        {"addRule": ["shield"]}
+                    ],
+                    "name": "Traitor Chosen",
+                    "movement": 6,
+                    "courage": 6,
+                    "shoot": 5,
+                    "fight": 6,
+                    "defense": 7,
+                    "reflexes": 6,
+                    "weapons": [{"id": "heavy_great_weapon", "count": 4}],
+                    "min": 3,
+                    "max": 6
+                }
+            ],
+            "subfactions": ["none", "wrath", "excess", "pestilence", "change", "deception"],
+            "rules": ["assassin"],
+            "options": [
+                {"addRule": ["champion"], "modelLimit": 1},
+                {"addRule": ["banner"], "modelLimit": 1},
+                {"addRule": ["musician"], "modelLimit": 1},
+                {"addRule": ["excess_mark"], "subfactions": ["excess"], "modelLimit": "all"},
+                {"addRule": ["change_mark"], "subfactions": ["change"], "modelLimit": "all"},
+                {"subfactions": ["pestilence"], "addRule": ["pestilence_mark"], "modelLimit": "all"},
+                {"addRule": ["deception_mark"], "subfactions": ["deception"], "modelLimit": "all"},
+                {"addRule": ["wrath_mark"], "subfactions": ["wrath"], "modelLimit": "all"}
+            ]
+        },
+        "chosen_knights": {
+            "name": "Chosen Knights",
+            "description": "Personal Bodyguards of the great Traitor Lords, ready to bring carnage to the battlefield.",
+            "category": "rare",
+            "models": [
+                {
+                    "options": [
+                        {
+                            "replaceWeapon": [{"id": "heavy_great_weapon", "count": 4}],
+                            "withWeapon": [
+                                {"id": "war_hammer", "count": 3},
+                                {"id": "heavy_great_weapon", "count": 5},
+                                {"id": "great_polearm", "count": 4},
+                                {"id": "heavy_flail", "count": 4},
+                                {"id": "great_lance", "count": 3}
+                            ]
+                        },
+                        {"addRule": ["shield"]}
+                    ],
+                    "name": "Chosen Knight",
+                    "movement": 8,
+                    "courage": 6,
+                    "shoot": 5,
+                    "fight": 6,
+                    "defense": 7,
+                    "reflexes": 6,
+                    "weapons": [{"id": "heavy_hooves_and_teeth", "count": 2}, {"id": "heavy_great_weapon", "count": 4}],
+                    "min": 3,
+                    "max": 6
+                }
+            ],
+            "subfactions": ["none", "wrath", "excess", "pestilence", "change", "deception"],
+            "rules": ["assassin", {"id": "wounds", "x": 3}, "fear"],
+            "options": [
+                {"addRule": ["champion"], "modelLimit": 1},
+                {"addRule": ["banner"], "modelLimit": 1},
+                {"addRule": ["musician"], "modelLimit": 1},
+                {"addRule": ["excess_mark"], "subfactions": ["excess"], "modelLimit": "all"},
+                {"addRule": ["change_mark"], "subfactions": ["change"], "modelLimit": "all"},
+                {"subfactions": ["pestilence"], "addRule": ["pestilence_mark"], "modelLimit": "all"},
+                {"addRule": ["deception_mark"], "subfactions": ["deception"], "modelLimit": "all"},
+                {"addRule": ["wrath_mark"], "subfactions": ["wrath"], "modelLimit": "all"}
+            ],
+            "keywords": ["Cavalry"]
+        },
+        "sorcerer_disk": {
+            "name": "Exalted Sorcerer on Arcane Disk",
+            "description": "An exalted sorcerer, master of the arcane arts.",
+            "category": "hero",
+            "models": [
+                {
+                    "name": "Exalted Sorcerer on Arcane Disk",
+                    "movement": 6,
+                    "courage": 6,
+                    "shoot": 4,
+                    "fight": 5,
+                    "defense": 7,
+                    "reflexes": 5,
+                    "weapons": ["heavy_handweapon", "great_staff"],
+                    "options": [{"replaceRule": {"id": "power", "x": 3}, "withRule": {"id": "power", "x": 4}}, {"addRule": ["companion"]}, {"addRule": ["change_mark"], "subfactions": ["change"]}],
+                    "rules": [{"id": "leader_x", "x": "Infantry, Cavalry"}, {"id": "wounds", "x": 3}, {"id": "power", "x": 3}, "disk_of_change"],
+                    "min": 1,
+                    "max": 1
+                }
+            ],
+            "subfactions": ["change"],
+            "keywords": ["Cavalry"]
+        },
+        "manticore": {
+            "name": "Manticore",
+            "description": "",
+            "category": "rare",
+            "models": [
+                {
+                    "name": "Manticore",
+                    "movement": 10,
+                    "courage": 6,
+                    "shoot": 6,
+                    "fight": 7,
+                    "defense": 9,
+                    "reflexes": 6,
+                    "weapons": [{"id": "bashing_tail", "count": 4}, {"id": "fangs_and_claws", "count": 6}],
+                    "rules": ["damage_table_monster", "fear", "fly"],
+                    "min": 1,
+                    "max": 1
+                }
+            ],
+            "subfactions": ["none", "wrath", "excess", "pestilence", "change", "deception"],
+            "keywords": ["Beast", "Monster"]
         }
-      ],
-      "subfactions" : [
-        "none",
-        "wrath",
-        "excess",
-        "pestilence",
-        "change",
-        "deception"
-      ],
-      "options" : [
-        {
-          "addRule" : [
-            "champion"
-          ],
-          "modelLimit" : 1
-        },
-        {
-          "addRule" : [
-            "banner"
-          ],
-          "modelLimit" : 1
-        },
-        {
-          "addRule" : [
-            "musician"
-          ],
-          "modelLimit" : 1
-        },
-        {
-          "addRule" : [
-            "excess_mark"
-          ],
-          "subfactions" : [
-            "excess"
-          ],
-          "modelLimit" : "all"
-        },
-        {
-          "addRule" : [
-            "change_mark"
-          ],
-          "subfactions" : [
-            "change"
-          ],
-          "modelLimit" : "all"
-        },
-        {
-          "subfactions" : [
-            "pestilence"
-          ],
-          "addRule" : [
-            "pestilence_mark"
-          ],
-          "modelLimit" : "all"
-        },
-        {
-          "addRule" : [
-            "deception_mark"
-          ],
-          "subfactions" : [
-            "deception"
-          ],
-          "modelLimit" : "all"
-        },
-        {
-          "addRule" : [
-            "wrath_mark"
-          ],
-          "subfactions" : [
-            "wrath"
-          ],
-          "modelLimit" : "all"
-        }
-      ],
-      "keywords" : [
-        "Cavalry"
-      ]
     },
-    "traitor_outriders" : {
-      "name" : "Barbarian Outriders",
-      "description" : "Mounted Barbarians, ready to spill blood.",
-      "category" : "elite",
-      "models" : [
-        {
-          "options" : [
-            {
-              "replaceWeapon" : [
-                {
-                  "id" : "handweapon",
-                  "count" : 2
-                },
-                "shield"
-              ],
-              "withWeapon" : [
-                [
-                  "heavy_spear",
-                  "barbarian_javelin"
-                ]
-              ],
-              "modelLimit" : "all"
-            }
-          ],
-          "name" : "Traitor Outrider",
-          "movement" : 8,
-          "courage" : 5,
-          "shoot" : 5,
-          "fight" : 5,
-          "defense" : 5,
-          "reflexes" : 5,
-          "weapons" : [
-            {
-              "id" : "handweapon",
-              "count" : 2
-            },
-            {
-              "id" : "hooves_and_teeth",
-              "count" : 2
-            },
-            "shield"
-          ],
-          "min" : 5,
-          "max" : 10
-        }
-      ],
-      "subfactions" : [
-        "none",
-        "wrath",
-        "excess",
-        "pestilence",
-        "change",
-        "deception"
-      ],
-      "options" : [
-        {
-          "addRule" : [
-            "champion"
-          ],
-          "modelLimit" : 1
+    "weapons": {},
+    "rules": {
+        "traitor_tactics": {
+            "name": "Traitor Tactics",
+            "inputs": ["x"],
+            "description": "When this unit is activated, choose up to X friendly _Infantry_ units within 6\". This unit and those units may re-roll failed Strength tests of 9+ until the end of the round.",
+            "points": ["rule.x", {"multiply": 10}]
         },
-        {
-          "addRule" : [
-            "banner"
-          ],
-          "modelLimit" : 1
+        "artifact": {"name": "Cursed Artifact", "description": "Once per turn, for every model with this rule, add +1 to a cast roll of a friendly Power model within 6“ of this unit.", "points": 5},
+        "companion": {"name": "Arcane Companion", "description": "Once per turn when a power within 24“ of this model gets dispelled, deal 1 hit with AP(2) to the caster.", "points": 5},
+        "disk_of_change": {
+            "name": "Disk of Change",
+            "description": "This model increases its Movement by 2\". This unit may ignore difficult terrain and obstacles of height 2\" or less when moving.",
+            "points": 5
         },
-        {
-          "addRule" : [
-            "musician"
-          ],
-          "modelLimit" : 1
+        "banner_of_fear": {"name": "Banner of Fear", "description": "Enemy units within 6\" get -1 Courage.", "points": 10},
+        "banner_of_wrath": {"name": "Banner of Wrath", "description": "Once per round, a friendly _Infantry_ unit within 6\" may gain +1 AP on all Melee weapons.", "points": 10},
+        "banner_of_pain": {"name": "Banner of Pain", "description": "Once per round, a friendly _Infantry_ unit within 6\" may gain +1 AP on all Shooting weapons.", "points": 10},
+        "banner_of_hate": {"name": "Banner of Hate", "description": "Friendly units within 6\" get +1 Courage.", "points": 10},
+        "banner_of_vitality": {"name": "Banner of Vitality", "description": "Once per round, a friendly _Infantry_ unit within 6\" may gain +1 Save.", "points": 10},
+        "wrath_mark": {"name": "Mark of Wrath", "description": "This model has +1 Strength.", "points": 2},
+        "excess_mark": {
+            "name": "Mark of Excess",
+            "description": "This model has +1\" Movement and when this model arrives on the field, it may make a free Move action. This action may not move within 12\" of any enemy units..",
+            "points": 2
         },
-        {
-          "addRule" : [
-            "excess_mark"
-          ],
-          "subfactions" : [
-            "excess"
-          ],
-          "modelLimit" : "all"
+        "change_mark": {"name": "Mark of Magic", "description": "This model has +1 Save.", "points": 2},
+        "pestilence_mark": {"name": "Mark of Pestilence", "description": "Roll a D10 each time this model would be killed. On a 2 or less, that model is not killed.", "points": 2},
+        "deception_mark": {"name": "Mark of Deception", "description": "Models suffer -1 Accuracy when shooting at this model at a range of more than 12\".", "points": 2},
+        "change_mark_monster": {"name": "Mark of Magic", "description": "This model has +1 Save.", "points": 10},
+        "wrath_mark_monster": {"name": "Mark of Wrath", "description": "This model has +1 Strength.", "points": 10},
+        "excess_mark_monster": {
+            "name": "Mark of Excess",
+            "description": "This model has +1\" Movement and when this model arrives on the field, it may make a free Move action. This action may not move within 12\" of any enemy units..",
+            "points": 10
         },
-        {
-          "addRule" : [
-            "change_mark"
-          ],
-          "subfactions" : [
-            "change"
-          ],
-          "modelLimit" : "all"
-        },
-        {
-          "subfactions" : [
-            "pestilence"
-          ],
-          "addRule" : [
-            "pestilence_mark"
-          ],
-          "modelLimit" : "all"
-        },
-        {
-          "addRule" : [
-            "deception_mark"
-          ],
-          "subfactions" : [
-            "deception"
-          ],
-          "modelLimit" : "all"
-        },
-        {
-          "addRule" : [
-            "wrath_mark"
-          ],
-          "subfactions" : [
-            "wrath"
-          ],
-          "modelLimit" : "all"
-        }
-      ],
-      "keywords" : [
-        "Cavalry"
-      ]
+        "pestilence_mark_monster": {"name": "Mark of Pestilence", "description": "Roll a D10 each time this model would be killed. On a 2 or less, that model is not killed.", "points": 10},
+        "deception_mark_monster": {"name": "Mark of Deception", "description": "Models suffer -1 Accuracy when shooting at this model at a range of more than 12\".", "points": 10},
+        "shield_dragon": {"name": "Enchanted Shield", "description": "This model has +1 Save.", "points": 10}
     },
-    "icon_bearer" : {
-      "name" : "Traitor Lord with Accursed Banner",
-      "description" : "A chosen banner bearer of the dark gods.",
-      "min" : 1,
-      "max" : 1,
-      "category" : "elite",
-      "models" : [
+    "strategies": [
         {
-          "name" : "Traitor Lord with Accursed Banner",
-          "movement" : 6,
-          "courage" : 7,
-          "shoot" : 5,
-          "fight" : 6,
-          "defense" : 7,
-          "reflexes" : 6,
-          "weapons" : [
-            {
-              "id" : "heavy_handweapon",
-              "count" : 4
-            }
-          ],
-          "rules" : [
-            {
-              "id" : "wounds",
-              "x" : 3
-            },
-            "support",
-            "banner_of_hate"
-          ],
-          "min" : 1,
-          "max" : 1,
-          "options" : [
-            {
-              "replaceRule" : [
-                "banner_of_hate"
-              ],
-              "withRule" : [
-                "banner_of_wrath"
-              ],
-              "subfactions" : [
-                "wrath"
-              ]
-            },
-            {
-              "replaceRule" : [
-                "banner_of_hate"
-              ],
-              "withRule" : [
-                "banner_of_pain"
-              ],
-              "subfactions" : [
-                "excess"
-              ]
-            },
-            {
-              "replaceRule" : [
-                "banner_of_hate"
-              ],
-              "withRule" : [
-                "banner_of_fear"
-              ],
-              "subfactions" : [
-                "change",
-                "deception"
-              ]
-            },
-            {
-              "replaceRule" : [
-                "banner_of_hate"
-              ],
-              "withRule" : [
-                "banner_of_vitality"
-              ],
-              "subfactions" : [
-                "pestilence"
-              ]
-            }
-          ]
+            "subfactions": ["none", "wrath", "excess", "pestilence", "change", "deception"],
+            "name": "Eye of the Gods",
+            "phase": "activation",
+            "description": "Use when a friendly unit destroys an enemy unit. That unit gains +1 Strength until the end of the battle. A unit may only be affected by this strategy once.",
+            "flavor": "The forces of chaos commit countless bloodbaths to appease their dark gods, in hope of gaining boons and turning into a demon lord.",
+            "cost": 2
+        },
+        {
+            "subfactions": ["none", "wrath", "excess", "pestilence", "change", "deception"],
+            "name": "Fearless",
+            "phase": "activation",
+            "description": "Use before activating a unit. That unit may immediately remove up to 2 Shock.",
+            "flavor": "Unflinged by the horrors of war, the forces of chaos march ever forward.",
+            "cost": 1
+        },
+        {
+            "subfactions": ["none", "wrath", "excess", "pestilence", "change", "deception"],
+            "name": "Blazing Runes",
+            "phase": "activation",
+            "description": "Use before an Infantry unit fights. Hit rolls of 1 or 2 gain +1 AP.",
+            "flavor": "Traitor Warriors wield enchanted weapons, covered in unholy runes and burning with dark magic.",
+            "cost": 1
         }
-      ],
-      "subfactions" : [
-        "none",
-        "wrath",
-        "excess",
-        "pestilence",
-        "change",
-        "deception"
-      ],
-      "keywords" : [
-        "Hero",
-        "Infantry"
-      ]
-    },
-    "chosen" : {
-      "name" : "Traitor Chosen",
-      "description" : "Blessed by their dark gods, these warriors set out to slay the mightiest heroes.",
-      "category" : "elite",
-      "models" : [
-        {
-          "options" : [
-            {
-              "replaceWeapon" : [
-                {
-                  "id" : "heavy_great_weapon",
-                  "count" : 4
-                }
-              ],
-              "withWeapon" : [
-                {
-                  "id" : "war_hammer",
-                  "count" : 3
-                },
-                {
-                  "id" : "heavy_great_weapon",
-                  "count" : 5
-                },
-                {
-                  "id" : "great_polearm",
-                  "count" : 4
-                },
-                {
-                  "id" : "heavy_flail",
-                  "count" : 4
-                }
-              ],
-              "subfactions" : [
-                "none",
-                "excess",
-                "pestilence",
-                "change",
-                "deception"
-              ]
-            },
-            {
-              "subfactions" : [
-                "wrath"
-              ],
-              "replaceWeapon" : [
-                {
-                  "id" : "heavy_great_weapon",
-                  "count" : 4
-                }
-              ],
-              "withWeapon" : [
-                {
-                  "id" : "war_hammer",
-                  "count" : 3
-                },
-                {
-                  "id" : "heavy_great_weapon",
-                  "count" : 5
-                },
-                {
-                  "id" : "great_polearm",
-                  "count" : 4
-                },
-                {
-                  "id" : "heavy_flail",
-                  "count" : 4
-                },
-                [
-                  {
-                    "id" : "heavy_great_weapon",
-                    "count" : 3
-                  },
-                  {
-                    "id" : "daggerfist",
-                    "count" : 2
-                  }
-                ]
-              ]
-            },
-            {
-              "replaceWeapon" : [
-                {
-                  "id" : "heavy_great_weapon",
-                  "count" : 4
-                }
-              ],
-              "withWeapon" : [
-                [
-                  {
-                    "id" : "heavy_great_weapon",
-                    "count" : 2
-                  },
-                  {
-                    "id" : "barbed_whip",
-                    "count" : 2
-                  }
-                ]
-              ],
-              "subfactions" : [
-                "excess"
-              ],
-              "modelLimit" : 1
-            },
-            {
-              "addRule" : [
-                "shield"
-              ]
-            }
-          ],
-          "name" : "Traitor Chosen",
-          "movement" : 6,
-          "courage" : 6,
-          "shoot" : 5,
-          "fight" : 6,
-          "defense" : 7,
-          "reflexes" : 6,
-          "weapons" : [
-            {
-              "id" : "heavy_great_weapon",
-              "count" : 4
-            }
-          ],
-          "min" : 3,
-          "max" : 6
+    ],
+    "relics": [],
+    "powers": {
+        "unnatural_strength": {
+            "name": "Unnatural Strength",
+            "description": "Target friendly unit within 12\" gets +1 Strength until the end of the round. This power may be cast unlimited times.",
+            "charge": 6,
+            "subfactions": ["none"]
+        },
+        "pain": {
+            "name": "Word of Pain",
+            "description": "Target enemy model within 12\" takes 1 automatic hit with AP(3). This power may be cast unlimited times.",
+            "charge": 6,
+            "subfactions": ["none"]
+        },
+        "tricksters_gambit": {
+            "name": "Tricksters Gambit",
+            "description": "Target friendly unit within 12\" gets -1 to be hit the next time it is attacked. This power may be cast unlimited times.",
+            "charge": 6,
+            "subfactions": ["deception"]
+        },
+        "shadowstep": {
+            "name": "Shadowstep",
+            "description": "Target friendly unit within 12\" may immediately make a free move action, ignoring terrain or other models. This power may only be cast once per turn.",
+            "charge": 7,
+            "subfactions": ["deception"]
+        },
+        "bolt_of_change": {
+            "name": "Bolt of Change",
+            "description": "Target enemy unit within 18\" takes 1 hit with AP(7). This power may only be cast once per turn.",
+            "charge": 7,
+            "subfactions": ["change"]
+        },
+        "turn_of_fate": {
+            "name": "Turn of Fate",
+            "description": "Target friendly unit within 12\" gets -1 to be hit the next time it is attacked. This power may be cast unlimited times.",
+            "charge": 6,
+            "subfactions": ["change"]
+        },
+        "virulent_disease": {
+            "name": "Virulent Disease",
+            "description": "Target enemy unit within 12\" and another enemy unit within 3\" of that unit take 3 hits with AP(1) each. This power may be cast unlimited times.",
+            "charge": 6,
+            "subfactions": ["pestilence"]
+        },
+        "swarm": {
+            "name": "Swarm of Flies",
+            "description": "Target enemy unit within 12\" gets -1 Accuracy until the end of the round. This power may be cast unlimited times.",
+            "charge": 6,
+            "subfactions": ["pestilence"]
+        },
+        "boiling_blood": {
+            "name": "Boiling Blood",
+            "description": "Target enemy unit within 12\" takes 3 hits with AP(3). This power may only be cast once per turn.",
+            "charge": 6,
+            "subfactions": ["wrath"]
+        },
+        "marked_for_death": {
+            "name": "Marked for Death",
+            "description": "Target enemy unit within 12\" must immediately make a free charge action against another enemy unit. This power may only be cast once per turn.",
+            "charge": 8,
+            "subfactions": ["wrath"]
+        },
+        "flash_of_speed": {
+            "name": "Flash of Speed",
+            "description": "Target friendly unit within 12\" may immediately make a free move action. This power may only be cast once per turn.",
+            "charge": 7,
+            "subfactions": ["excess"]
+        },
+        "pain_and_power": {
+            "name": "Pain and Power",
+            "description": "Target friendly unit within 12\". Until the end of the round, each time that unit rolls a 1 or 2 on a save roll, the attacking unit takes 1 hit with AP(3). This power may be cast unlimited times.",
+            "charge": 7,
+            "subfactions": ["excess"]
         }
-      ],
-      "subfactions" : [
-        "none",
-        "wrath",
-        "excess",
-        "pestilence",
-        "change",
-        "deception"
-      ],
-      "rules" : [
-        "assassin"
-      ],
-      "options" : [
-        {
-          "addRule" : [
-            "champion"
-          ],
-          "modelLimit" : 1
-        },
-        {
-          "addRule" : [
-            "banner"
-          ],
-          "modelLimit" : 1
-        },
-        {
-          "addRule" : [
-            "musician"
-          ],
-          "modelLimit" : 1
-        },
-        {
-          "addRule" : [
-            "excess_mark"
-          ],
-          "subfactions" : [
-            "excess"
-          ],
-          "modelLimit" : "all"
-        },
-        {
-          "addRule" : [
-            "change_mark"
-          ],
-          "subfactions" : [
-            "change"
-          ],
-          "modelLimit" : "all"
-        },
-        {
-          "subfactions" : [
-            "pestilence"
-          ],
-          "addRule" : [
-            "pestilence_mark"
-          ],
-          "modelLimit" : "all"
-        },
-        {
-          "addRule" : [
-            "deception_mark"
-          ],
-          "subfactions" : [
-            "deception"
-          ],
-          "modelLimit" : "all"
-        },
-        {
-          "addRule" : [
-            "wrath_mark"
-          ],
-          "subfactions" : [
-            "wrath"
-          ],
-          "modelLimit" : "all"
-        }
-      ]
-    },
-    "chosen_knights" : {
-      "name" : "Chosen Knights",
-      "description" : "Personal Bodyguards of the great Traitor Lords, ready to bring carnage to the battlefield.",
-      "category" : "rare",
-      "models" : [
-        {
-          "options" : [
-            {
-              "replaceWeapon" : [
-                {
-                  "id" : "heavy_great_weapon",
-                  "count" : 4
-                }
-              ],
-              "withWeapon" : [
-                {
-                  "id" : "war_hammer",
-                  "count" : 3
-                },
-                {
-                  "id" : "heavy_great_weapon",
-                  "count" : 5
-                },
-                {
-                  "id" : "great_polearm",
-                  "count" : 4
-                },
-                {
-                  "id" : "heavy_flail",
-                  "count" : 4
-                },
-                {
-                  "id" : "great_lance",
-                  "count" : 3
-                }
-              ]
-            },
-            {
-              "addRule" : [
-                "shield"
-              ]
-            }
-          ],
-          "name" : "Chosen Knight",
-          "movement" : 8,
-          "courage" : 6,
-          "shoot" : 5,
-          "fight" : 6,
-          "defense" : 7,
-          "reflexes" : 6,
-          "weapons" : [
-            {
-              "id" : "hooves_and_teeth",
-              "count" : 2
-            },
-            {
-              "id" : "heavy_great_weapon",
-              "count" : 4
-            }
-          ],
-          "min" : 3,
-          "max" : 6
-        }
-      ],
-      "subfactions" : [
-        "none",
-        "wrath",
-        "excess",
-        "pestilence",
-        "change",
-        "deception"
-      ],
-      "rules" : [
-        "assassin",
-        {
-          "id" : "wounds",
-          "x" : 3
-        },
-        "fear"
-      ],
-      "options" : [
-        {
-          "addRule" : [
-            "champion"
-          ],
-          "modelLimit" : 1
-        },
-        {
-          "addRule" : [
-            "banner"
-          ],
-          "modelLimit" : 1
-        },
-        {
-          "addRule" : [
-            "musician"
-          ],
-          "modelLimit" : 1
-        },
-        {
-          "addRule" : [
-            "excess_mark"
-          ],
-          "subfactions" : [
-            "excess"
-          ],
-          "modelLimit" : "all"
-        },
-        {
-          "addRule" : [
-            "change_mark"
-          ],
-          "subfactions" : [
-            "change"
-          ],
-          "modelLimit" : "all"
-        },
-        {
-          "subfactions" : [
-            "pestilence"
-          ],
-          "addRule" : [
-            "pestilence_mark"
-          ],
-          "modelLimit" : "all"
-        },
-        {
-          "addRule" : [
-            "deception_mark"
-          ],
-          "subfactions" : [
-            "deception"
-          ],
-          "modelLimit" : "all"
-        },
-        {
-          "addRule" : [
-            "wrath_mark"
-          ],
-          "subfactions" : [
-            "wrath"
-          ],
-          "modelLimit" : "all"
-        }
-      ],
-      "keywords" : [
-        "Cavalry"
-      ]
-    },
-    "sorcerer_disk" : {
-      "name" : "Exalted Sorcerer on Arcane Disk",
-      "description" : "An exalted sorcerer, master of the arcane arts.",
-      "category" : "hero",
-      "models" : [
-        {
-          "name" : "Exalted Sorcerer on Arcane Disk",
-          "movement" : 6,
-          "courage" : 6,
-          "shoot" : 4,
-          "fight" : 5,
-          "defense" : 7,
-          "reflexes" : 5,
-          "weapons" : [
-            "heavy_handweapon",
-            "great_staff"
-          ],
-          "options" : [
-            {
-              "replaceRule" : {
-                "id" : "power",
-                "x" : 3
-              },
-              "withRule" : {
-                "id" : "power",
-                "x" : 4
-              }
-            },
-            {
-              "addRule" : [
-                "companion"
-              ]
-            },
-            {
-              "addRule" : [
-                "change_mark"
-              ],
-              "subfactions" : [
-                "change"
-              ]
-            }
-          ],
-          "rules" : [
-            {
-              "id" : "leader_x",
-              "x" : "Infantry, Cavalry"
-            },
-            {
-              "id" : "wounds",
-              "x" : 3
-            },
-            {
-              "id" : "power",
-              "x" : 3
-            },
-            "disk_of_change"
-          ],
-          "min" : 1,
-          "max" : 1
-        }
-      ],
-      "subfactions" : [
-        "change"
-      ],
-      "keywords" : [
-        "Cavalry"
-      ]
-    },
-    "manticore" : {
-      "name" : "Manticore",
-      "description" : "",
-      "category" : "rare",
-      "models" : [
-        {
-          "name" : "Manticore",
-          "movement" : 10,
-          "courage" : 6,
-          "shoot" : 6,
-          "fight" : 7,
-          "defense" : 9,
-          "reflexes" : 6,
-          "weapons" : [
-            {
-              "id" : "bashing_tail",
-              "count" : 4
-            },
-            {
-              "id" : "fangs_and_claws",
-              "count" : 6
-            }
-          ],
-          "rules" : [
-            "damage_table_monster",
-            "fear",
-            "fly"
-          ],
-          "min" : 1,
-          "max" : 1
-        }
-      ],
-      "subfactions" : [
-        "none",
-        "wrath",
-        "excess",
-        "pestilence",
-        "change",
-        "deception"
-      ],
-      "keywords" : [
-        "Beast",
-        "Monster"
-      ]
     }
-  },
-  "weapons" : {
-    "bashing_tail" : {
-      "name" : "Bashing Tail",
-      "ap" : 1,
-      "attacks" : 1,
-      "short" : "Melee"
-    },
-    "horn_and_claws" : {
-      "name" : "Horn and Claws",
-      "ap" : 4,
-      "attacks" : 1,
-      "short" : "Melee",
-      "rules" : [
-        "lethal"
-      ]
-    },
-    "hooves_and_teeth" : {
-      "name" : "Hooves and Teeth",
-      "attacks" : 1,
-      "short" : "Melee",
-      "ap" : 1
-    },
-    "barbarian_javelin" : {
-      "name" : "Barbarian Javelins",
-      "ap" : 3,
-      "attacks" : 1,
-      "rules" : [
-        "assault"
-      ],
-      "short" : 6,
-      "medium" : 12
-    },
-    "barbed_whip" : {
-      "name" : "Barbed Whip",
-      "attacks" : 1,
-      "ap" : 3,
-      "short" : "Melee",
-      "rules" : [
-        {
-          "id" : "reach",
-          "x" : 1
-        },
-        "lethal"
-      ]
-    },
-    "daggerfist" : {
-      "name" : "Daggerfist",
-      "attacks" : 1,
-      "ap" : 2,
-      "short" : "Melee",
-      "rules" : [
-        "buckler"
-      ]
-    },
-    "fangs_and_claws" : {
-      "name" : "Fangs and Claws",
-      "ap" : 5,
-      "attacks" : 1,
-      "short" : "Melee",
-      "rules" : [
-        "lethal"
-      ]
-    }
-  },
-  "rules" : {
-    "traitor_tactics" : {
-      "name" : "Traitor Tactics",
-      "inputs" : [
-        "x"
-      ],
-      "description" : "When this unit is activated, choose up to X friendly _Infantry_ units within 6\". This unit and those units may re-roll failed Strength tests of 9+ until the end of the round.",
-      "points" : [
-        "rule.x",
-        {
-          "multiply" : 10
-        }
-      ]
-    },
-    "artifact" : {
-      "name" : "Cursed Artifact",
-      "description" : "Once per turn, for every model with this rule, add +1 to a cast roll of a friendly Power model within 6“ of this unit.",
-      "points" : 5
-    },
-    "companion" : {
-      "name" : "Arcane Companion",
-      "description" : "Once per turn when a power within 24“ of this model gets dispelled, deal 1 hit with AP(2) to the caster.",
-      "points" : 5
-    },
-    "disk_of_change" : {
-      "name" : "Disk of Change",
-      "description" : "This model increases its Movement by 2\". This unit may ignore difficult terrain and obstacles of height 2\" or less when moving.",
-      "points" : 5
-    },
-    "banner_of_fear" : {
-      "name" : "Banner of Fear",
-      "description" : "Enemy units within 6\" get -1 Courage.",
-      "points" : 10
-    },
-    "banner_of_wrath" : {
-      "name" : "Banner of Wrath",
-      "description" : "Once per round, a friendly _Infantry_ unit within 6\" may gain +1 AP on all Melee weapons.",
-      "points" : 10
-    },
-    "banner_of_pain" : {
-      "name" : "Banner of Pain",
-      "description" : "Once per round, a friendly _Infantry_ unit within 6\" may gain +1 AP on all Shooting weapons.",
-      "points" : 10
-    },
-    "banner_of_hate" : {
-      "name" : "Banner of Hate",
-      "description" : "Friendly units within 6\" get +1 Courage.",
-      "points" : 10
-    },
-    "banner_of_vitality" : {
-      "name" : "Banner of Vitality",
-      "description" : "Once per round, a friendly _Infantry_ unit within 6\" may gain +1 Save.",
-      "points" : 10
-    },
-    "wrath_mark" : {
-      "name" : "Mark of Wrath",
-      "description" : "This model has +1 Strength.",
-      "points" : 2
-    },
-    "excess_mark" : {
-      "name" : "Mark of Excess",
-      "description" : "This model has +1\" Movement and when this model arrives on the field, it may make a free Move action. This action may not move within 12\" of any enemy units..",
-      "points" : 2
-    },
-    "change_mark" : {
-      "name" : "Mark of Magic",
-      "description" : "This model has +1 Save.",
-      "points" : 2
-    },
-    "pestilence_mark" : {
-      "name" : "Mark of Pestilence",
-      "description" : "Roll a D10 each time this model would be killed. On a 2 or less, that model is not killed.",
-      "points" : 2
-    },
-    "deception_mark" : {
-      "name" : "Mark of Deception",
-      "description" : "Models suffer -1 Accuracy when shooting at this model at a range of more than 12\".",
-      "points" : 2
-    },
-    "change_mark_monster" : {
-      "name" : "Mark of Magic",
-      "description" : "This model has +1 Save.",
-      "points" : 10
-    },
-    "wrath_mark_monster" : {
-      "name" : "Mark of Wrath",
-      "description" : "This model has +1 Strength.",
-      "points" : 10
-    },
-    "excess_mark_monster" : {
-      "name" : "Mark of Excess",
-      "description" : "This model has +1\" Movement and when this model arrives on the field, it may make a free Move action. This action may not move within 12\" of any enemy units..",
-      "points" : 10
-    },
-    "pestilence_mark_monster" : {
-      "name" : "Mark of Pestilence",
-      "description" : "Roll a D10 each time this model would be killed. On a 2 or less, that model is not killed.",
-      "points" : 10
-    },
-    "deception_mark_monster" : {
-      "name" : "Mark of Deception",
-      "description" : "Models suffer -1 Accuracy when shooting at this model at a range of more than 12\".",
-      "points" : 10
-    },
-    "shield_dragon" : {
-      "name" : "Enchanted Shield",
-      "description" : "This model has +1 Save.",
-      "points" : 10
-    }
-  },
-  "strategies" : [
-    {
-      "subfactions" : [
-        "none",
-        "wrath",
-        "excess",
-        "pestilence",
-        "change",
-        "deception"
-      ],
-      "name" : "Eye of the Gods",
-      "phase" : "activation",
-      "description" : "Use when a friendly unit destroys an enemy unit. That unit gains +1 Strength until the end of the battle. A unit may only be affected by this strategy once.",
-      "flavor" : "The forces of chaos commit countless bloodbaths to appease their dark gods, in hope of gaining boons and turning into a demon lord.",
-      "cost" : 2
-    },
-    {
-      "subfactions" : [
-        "none",
-        "wrath",
-        "excess",
-        "pestilence",
-        "change",
-        "deception"
-      ],
-      "name" : "Fearless",
-      "phase" : "activation",
-      "description" : "Use before activating a unit. That unit may immediately remove up to 2 Shock.",
-      "flavor" : "Unflinged by the horrors of war, the forces of chaos march ever forward.",
-      "cost" : 1
-    },
-    {
-      "subfactions" : [
-        "none",
-        "wrath",
-        "excess",
-        "pestilence",
-        "change",
-        "deception"
-      ],
-      "name" : "Blazing Runes",
-      "phase" : "activation",
-      "description" : "Use before an Infantry unit fights. Hit rolls of 1 or 2 gain +1 AP.",
-      "flavor" : "Traitor Warriors wield enchanted weapons, covered in unholy runes and burning with dark magic.",
-      "cost" : 1
-    }
-  ],
-  "relics" : [],
-  "powers" : {
-    "unnatural_strength" : {
-      "name" : "Unnatural Strength",
-      "description" : "Target friendly unit within 12\" gets +1 Strength until the end of the round. This power may be cast unlimited times.",
-      "charge" : 6,
-      "subfactions" : [
-        "none"
-      ]
-    },
-    "pain" : {
-      "name" : "Word of Pain",
-      "description" : "Target enemy model within 12\" takes 1 automatic hit with AP(3). This power may be cast unlimited times.",
-      "charge" : 6,
-      "subfactions" : [
-        "none"
-      ]
-    },
-    "tricksters_gambit" : {
-      "name" : "Tricksters Gambit",
-      "description" : "Target friendly unit within 12\" gets -1 to be hit the next time it is attacked. This power may be cast unlimited times.",
-      "charge" : 6,
-      "subfactions" : [
-        "deception"
-      ]
-    },
-    "shadowstep" : {
-      "name" : "Shadowstep",
-      "description" : "Target friendly unit within 12\" may immediately make a free move action, ignoring terrain or other models. This power may only be cast once per turn.",
-      "charge" : 7,
-      "subfactions" : [
-        "deception"
-      ]
-    },
-    "bolt_of_change" : {
-      "name" : "Bolt of Change",
-      "description" : "Target enemy unit within 18\" takes 1 hit with AP(7). This power may only be cast once per turn.",
-      "charge" : 7,
-      "subfactions" : [
-        "change"
-      ]
-    },
-    "turn_of_fate" : {
-      "name" : "Turn of Fate",
-      "description" : "Target friendly unit within 12\" gets -1 to be hit the next time it is attacked. This power may be cast unlimited times.",
-      "charge" : 6,
-      "subfactions" : [
-        "change"
-      ]
-    },
-    "virulent_disease" : {
-      "name" : "Virulent Disease",
-      "description" : "Target enemy unit within 12\" and another enemy unit within 3\" of that unit take 3 hits with AP(1) each. This power may be cast unlimited times.",
-      "charge" : 6,
-      "subfactions" : [
-        "pestilence"
-      ]
-    },
-    "swarm" : {
-      "name" : "Swarm of Flies",
-      "description" : "Target enemy unit within 12\" gets -1 Accuracy until the end of the round. This power may be cast unlimited times.",
-      "charge" : 6,
-      "subfactions" : [
-        "pestilence"
-      ]
-    },
-    "boiling_blood" : {
-      "name" : "Boiling Blood",
-      "description" : "Target enemy unit within 12\" takes 3 hits with AP(3). This power may only be cast once per turn.",
-      "charge" : 6,
-      "subfactions" : [
-        "wrath"
-      ]
-    },
-    "marked_for_death" : {
-      "name" : "Marked for Death",
-      "description" : "Target enemy unit within 12\" must immediately make a free charge action against another enemy unit. This power may only be cast once per turn.",
-      "charge" : 8,
-      "subfactions" : [
-        "wrath"
-      ]
-    },
-    "flash_of_speed" : {
-      "name" : "Flash of Speed",
-      "description" : "Target friendly unit within 12\" may immediately make a free move action. This power may only be cast once per turn.",
-      "charge" : 7,
-      "subfactions" : [
-        "excess"
-      ]
-    },
-    "pain_and_power" : {
-      "name" : "Pain and Power",
-      "description" : "Target friendly unit within 12\". Until the end of the round, each time that unit rolls a 1 or 2 on a save roll, the attacking unit takes 1 hit with AP(3). This power may be cast unlimited times.",
-      "charge" : 7,
-      "subfactions" : [
-        "excess"
-      ]
-    }
-  }
 }
