@@ -6,39 +6,39 @@
     "alliances": {"death": {"name": "Bringers of Death"}, "destruction": {"name": "Forces of Destruction"}, "order": {"name": "Keepers of Order"}, "chaos": {"name": "Instruments of Chaos"}},
     "factions": {
         "eternal_protectors": {
-            "version": "1.0",
             "name": "Eternal Protectors",
             "id": "eternal_protectors",
             "url": "eternal_protectors.json",
             "color": "#D4AF37",
             "secondary_color": "#0d407f",
+            "version": "0.1",
             "alliance": "order",
             "description": "The Eternal Protectors are sworn to protect those who cannot protect themselves and to ward off evil. They wear tough armor and wield mighty weapons to strike down those are unjust."
         },
         "ogre_mercenaries": {
-            "version": "1.0",
             "name": "Ogre Mercenaries",
             "id": "ogre_mercenaries",
             "url": "ogre_mercenaries.json",
             "color": "#954535",
+            "version": "0.1",
             "alliance": "destruction",
             "description": "Large-bodied mercenaries with huge appetites for gold and destruction"
         },
         "greatogre_raiders": {
-            "version": "1.0",
             "name": "Greatogre Raiders",
             "id": "greatogre_raiders",
             "url": "greatogre_raiders.json",
             "color": "#4f9ae0",
+            "version": "0.1",
             "description": "The greatest of ogre tribes, who only interact with their lessers when they need something - food, coin, or just a challenge!",
             "alliance": "destruction"
         },
         "vampire_lords": {
-            "version": "1.0",
             "name": "Vampire Lords",
             "id": "vampire_lords",
             "url": "vampire_lords.json",
             "color": "#801111",
+            "version": "0.1",
             "alliance": "death",
             "description": "The Vampire Lords are powerful vampires who command legions of undead to do their bidding. They defeat their foes with powerful death magic and hordes of undead.",
             "subfactions": {
@@ -53,11 +53,11 @@
             }
         },
         "traitor_legions": {
-            "version": "1.0",
             "name": "Traitor Legions",
             "id": "traitor_legions",
             "url": "traitor_legions.json",
             "color": "#231f20",
+            "version": "0.1",
             "alliance": "chaos",
             "description": "The Traitor Legions are those who chose to fight for evil instead of order and made a pact with the dark gods. The Traitor Legions use deadly traitor warriors and other barbarians to swiftly crush their foes.",
             "subfactions": {
@@ -93,29 +93,29 @@
             }
         },
         "haunting_ghosts": {
-            "version": "1.0",
             "name": "Haunting Ghosts",
             "id": "haunting_ghosts",
             "url": "haunting_ghosts.json",
             "color": "#4C838A",
+            "version": "0.1",
             "alliance": "death",
             "description": "The Haunting Ghosts are a collection of undead spirits which haunt their hallowed grave sites. The Ghostly Undead use fear and ethereal movement to wash over their foes and scare them into defeat."
         },
         "high_elves": {
-            "version": "1.0",
             "name": "High Elves",
             "id": "high_elves",
             "url": "high_elves.json",
             "color": "#607d8b",
+            "version": "0.1",
             "alliance": "order",
             "description": "Masters of the Arcane, this ancient island nation is shrouded in mystery."
         },
         "orcs_and_goblins": {
-            "version": "1.0",
             "name": "Orcs and Goblins",
             "id": "orcs_and_goblins",
             "url": "orcs_and_goblins.json",
             "color": "#50974A",
+            "version": "0.1",
             "alliance": "destruction",
             "description": "A savage race made up of various warring tribes.",
             "subfactions": {
@@ -141,29 +141,29 @@
             }
         },
         "sea_elves": {
-            "version": "1.0",
             "name": "Sea Elves",
             "id": "sea_elves",
             "url": "sea_elves.json",
             "color": "#03414e",
+            "version": "1.0",
             "alliance": "order",
             "description": "Raising from the depths of the ocean, transmuted by their ancient magic."
         },
         "mountain_dwarves": {
-            "version": "1.0",
             "name": "Mountain Dwarves",
             "id": "mountain_dwarves",
             "url": "mountain_dwarves.json",
             "color": "#A55D35",
+            "version": "0.1",
             "alliance": "order",
             "description": "A stout race of miners, engineers and warriors."
         },
         "beastmen_horde": {
-            "version": "1.0",
             "name": "Beastmen Horde",
             "id": "beastmen_horde",
             "url": "beastmen_horde.json",
             "color": "#954535",
+            "version": "0.1",
             "alliance": "chaos",
             "description": "The Beastmen are a race of human-like beasts found in forests. Their main goal is to disrupt and destroy the races of mankind through savage all-out raids.",
             "subfactions": {
@@ -189,29 +189,29 @@
             }
         },
         "human_kingdoms": {
-            "version": "1.0",
             "name": "Human Kingdoms",
             "id": "human_kingdoms",
             "url": "human_kingdoms.json",
             "color": "#990c0c",
+            "version": "0.1",
             "alliance": "order",
             "description": "A collection of various kingdoms, infighting for political presence but uniting under one banner to defend their home."
         },
         "lizardmen": {
-            "version": "0.1",
             "name": "Lizardmen",
             "id": "lizardmen",
             "url": "lizardmen.json",
             "color": "#087194",
+            "version": "0.1",
             "alliance": "order",
             "description": "A race of relentless jungle-dwelling lizards who who believe they are the rightful inheritors to the world."
         },
         "traitor_dwarves": {
-            "version": "1.0",
             "name": "Traitor Dwarves",
             "id": "traitor_dwarves",
             "url": "traitor_dwarves.json",
             "color": "#360c30",
+            "version": "0.1",
             "alliance": "chaos",
             "description": "Corrupted by the dark gods, these dwarves imbue twisted warmachines with demonic magic.",
             "subfactions": {
@@ -237,30 +237,30 @@
             }
         },
         "merchant_dwarves": {
-            "version": "1.0",
             "name": "Merchant Dwarves",
             "id": "merchant_dwarves",
             "url": "merchant_dwarves.json",
+            "version": "0.1",
             "alliance": "order",
             "description": "A race of travelling merchants and glory-seekers with advanced weaponry.",
             "color": "#000000",
             "secondary_color": "#360c30"
         },
         "dark_elves": {
-            "version": "1.0",
             "name": "Dark Elves",
             "id": "dark_elves",
             "url": "dark_elves.json",
             "color": "#30106B",
+            "version": "0.1",
             "alliance": "order",
             "description": "Cursed by their dark gods, these Elves raid the coasts and rivers of the mainlands from their ship-fortresses."
         },
         "wood_elves": {
-            "version": "1.0",
             "name": "Wood Elves",
             "id": "wood_elves",
             "url": "wood_elves.json",
             "color": "#38733a",
+            "version": "0.1",
             "alliance": "order",
             "description": "Hidden away within their dense forests, striking back against those that dare to anger the spirits of the forest.",
             "subfactions": {
@@ -489,13 +489,6 @@
         "great_lance": {"name": "Great Lance", "attacks": 1, "ap": 4, "short": "Melee", "rules": [{"id": "reach", "x": 1}, "lance"]},
         "poison_short_bow": {"name": "Poisoned Shortbow", "attacks": 1, "ap": 1, "short": 9, "medium": 18, "rules": ["poison"]},
         "great_bow": {"name": "Greatbow", "attacks": 1, "ap": 4, "short": 18, "medium": 36},
-        "lethal_handweapon": {"name": "Lethal Handweapon", "attacks": 1, "ap": 1, "short": "Melee", "rules": ["lethal"]},
-        "lethal_greatweapon": {"name": "Lethal Greatweapon", "attacks": 1, "ap": 3, "short": "Melee", "rules": ["lethal"]},
-        "heavy_lethal_handweapon": {"name": "Lethal Heavy Handweapon", "attacks": 1, "ap": 2, "short": "Melee", "rules": ["lethal"]},
-        "heavy_lethal_greatweapon": {"name": "Lethal Heavy Greatweapon", "attacks": 1, "ap": 4, "short": "Melee", "rules": ["lethal"]},
-        "lethal_polearm": {"name": "Lethal Polearm", "attacks": 1, "ap": 2, "short": "Melee", "rules": [{"id": "reach", "x": 1}, "lethal"]},
-        "heavy_lethal_polearm": {"name": "Lethal Heavy Polearm", "attacks": 1, "ap": 3, "short": "Melee", "rules": [{"id": "reach", "x": 1}, "lethal"]},
-        "lethal_short_bow": {"name": "Lethal Shortbow", "attacks": 1, "ap": 1, "short": 9, "medium": 18, "rules": ["lethal"]},
         "blowpipe": {"name": "Blowpipe", "attacks": 1, "short": 9, "rules": ["poison", "assault"]},
         "heavy_shield": {"name": "Heavy Shield", "attacks": 0, "short": "Melee", "rules": ["heavy_shield"]},
         "enchanted_shield": {"name": "Enchanted Shield", "attacks": 0, "short": "Melee", "rules": ["enchanted_shield"]},

@@ -2,6 +2,7 @@
     "name": "Vampire Lords",
     "id": "vampire_lords",
     "author": "Xekon#8266",
+    "version": "0.1",
     "units": {
         "watch_captain": {
             "name": "Watch Captain",
@@ -17,7 +18,7 @@
                     "fight": 6,
                     "defense": 6,
                     "reflexes": 6,
-                    "weapons": [{"id": "heavy_lethal_polearm", "count": 2}, "handweapon"],
+                    "weapons": [{"id": "heavy_polearm", "count": 2}, "handweapon"],
                     "min": 1,
                     "max": 1
                 }
@@ -51,7 +52,7 @@
                     "max": 1
                 }
             ],
-            "keywords": ["Hero", "Undead", "Cavalry"],
+            "keywords": ["Undead", "Cavalry", "Monster"],
             "subfactions": ["none", "blood", "bone", "dread"]
         },
         "vampire_lord_horse": {
@@ -82,7 +83,7 @@
                     "max": 1
                 }
             ],
-            "keywords": ["Hero", "Undead", "Cavalry"],
+            "keywords": ["Undead", "Cavalry"],
             "subfactions": ["blood", "bone", "dread", "none"]
         },
         "vampire_lord": {
@@ -109,12 +110,12 @@
                         {"replaceRule": [{"id": "power", "x": 1}], "withRule": [{"id": "power", "x": 2}]},
                         {"replaceRule": [{"id": "vampire_tactics", "x": 1}], "withRule": [{"id": "vampire_tactics", "x": 2}]}
                     ],
-                    "rules": [{"id": "wounds", "x": 3}, "leader", {"id": "power", "x": 1}, {"id": "vampire_tactics", "x": 1}, "siphon"],
+                    "rules": [{"id": "wounds", "x": 3}, "leader", {"id": "power", "x": 1}, {"id": "vampire_tactics", "x": 1}, "vampiric_siphon"],
                     "min": 1,
                     "max": 1
                 }
             ],
-            "keywords": ["Hero", "Undead", "Infantry"],
+            "keywords": ["Undead", "Infantry"],
             "subfactions": ["blood", "bone", "dread", "none"]
         },
         "strigoi_lord": {
@@ -132,7 +133,7 @@
                     "reflexes": 6,
                     "weapons": [{"id": "feral_claws", "count": 4}, "vampire_bite"],
                     "options": [{"addRule": ["fly"]}, {"replaceRule": [{"id": "feral_tactics", "x": 1}], "withRule": [{"id": "feral_tactics", "x": 2}]}],
-                    "rules": [{"id": "wounds", "x": 3}, "fear", "leader", {"id": "feral_tactics", "x": 1}, "siphon"],
+                    "rules": [{"id": "wounds", "x": 3}, "fear", "leader", {"id": "feral_tactics", "x": 1}, "vampiric_siphon"],
                     "min": 1,
                     "max": 1
                 }
@@ -153,7 +154,7 @@
                     "fight": 6,
                     "defense": 7,
                     "reflexes": 6,
-                    "weapons": [{"id": "heavy_lethal_greatweapon", "count": 4}],
+                    "weapons": [{"id": "heavy_great_weapon", "count": 4}],
                     "options": [{"addRule": ["enchanted_shield"]}, {"addRule": [{"id": "power", "x": 1}]}],
                     "min": 1,
                     "max": 1
@@ -176,11 +177,11 @@
                     "fight": 6,
                     "defense": 7,
                     "reflexes": 6,
-                    "weapons": [{"id": "heavy_lethal_greatweapon", "count": 4}, {"id": "hooves_and_teeth", "count": 2}],
+                    "weapons": [{"id": "heavy_great_weapon", "count": 4}, {"id": "hooves_and_teeth", "count": 2}],
                     "min": 1,
                     "max": 1,
                     "options": [
-                        {"replaceWeapon": [{"id": "heavy_lethal_greatweapon", "count": 4}], "withWeapon": [{"id": "spectral_lance", "count": 4}]},
+                        {"replaceWeapon": [{"id": "heavy_great_weapon", "count": 4}], "withWeapon": [{"id": "spectral_lance", "count": 4}]},
                         {"addRule": ["enchanted_shield"]},
                         {"addRule": [{"id": "power", "x": 1}]}
                     ]
@@ -203,7 +204,7 @@
                     "fight": 6,
                     "defense": 7,
                     "reflexes": 6,
-                    "weapons": [{"id": "heavy_lethal_greatweapon", "count": 4}],
+                    "weapons": [{"id": "heavy_great_weapon", "count": 4}],
                     "options": [{"addRule": ["enchanted_shield"]}, {"addRule": [{"id": "power", "x": 1}]}],
                     "min": 1,
                     "max": 1
@@ -293,7 +294,7 @@
                     "fight": 4,
                     "defense": 4,
                     "reflexes": 5,
-                    "rules": [{"id": "swarm", "x": 3}, "distract", "fly", "siphon"],
+                    "rules": [{"id": "swarm", "x": 3}, "distract", "fly", "vampiric_siphon"],
                     "weapons": [{"id": "bite", "count": 4}],
                     "min": 1,
                     "max": 1
@@ -338,10 +339,10 @@
                     "fight": 6,
                     "defense": 5,
                     "reflexes": 5,
-                    "weapons": [{"id": "heavy_lethal_handweapon", "count": 2}, "shield"],
+                    "weapons": [{"id": "heavy_handweapon", "count": 2}, "shield"],
                     "min": 5,
                     "max": 10,
-                    "options": [{"replaceWeapon": [{"id": "heavy_lethal_handweapon", "count": 2}, "shield"], "withWeapon": [{"id": "heavy_lethal_greatweapon", "count": 2}], "modelLimit": "all"}]
+                    "options": [{"replaceWeapon": [{"id": "heavy_handweapon", "count": 2}, "shield"], "withWeapon": [{"id": "heavy_great_weapon", "count": 2}], "modelLimit": "all"}]
                 }
             ],
             "keywords": ["Undead", "Infantry"],
@@ -387,13 +388,35 @@
                     "weapons": [{"id": "lance", "count": 3}, "heavy_shield", {"id": "hooves_and_teeth", "count": 2}],
                     "min": 3,
                     "max": 6,
-                    "options": [{"replaceWeapon": [{"id": "lance", "count": 3}], "withWeapon": [{"id": "heavy_lethal_handweapon", "count": 3}]}]
+                    "options": [{"replaceWeapon": [{"id": "lance", "count": 3}], "withWeapon": [{"id": "heavy_handweapon", "count": 5}]}]
                 }
             ],
             "keywords": ["Undead", "Cavalry"],
-            "rules": [{"id": "wounds", "x": 2}, "siphon"],
+            "rules": [{"id": "wounds", "x": 2}, "vampiric_siphon"],
             "options": [{"addRule": ["champion"], "modelLimit": 1}, {"addRule": ["banner"], "modelLimit": 1}, {"addRule": ["musician"], "modelLimit": 1}],
             "subfactions": ["none"]
+        },
+        "necromancer": {
+            "name": "Necromancer",
+            "description": "",
+            "category": "hero",
+            "models": [
+                {
+                    "name": "Necromancer",
+                    "movement": 6,
+                    "courage": 7,
+                    "shoot": 5,
+                    "fight": 5,
+                    "defense": 5,
+                    "reflexes": 6,
+                    "weapons": ["handweapon", "great_staff"],
+                    "options": [{"replaceRule": [{"id": "power", "x": 1}], "withRule": [{"id": "power", "x": 2}]}],
+                    "rules": [{"id": "wounds", "x": 2}, "leader", {"id": "power", "x": 1}, "soul_lantern"],
+                    "min": 1,
+                    "max": 1
+                }
+            ],
+            "subfactions": ["blood", "bone", "dread", "none"]
         }
     },
     "weapons": {
@@ -403,16 +426,6 @@
         "vampire_bite": {"name": "Vampiric Bite", "attacks": 1, "short": "Melee", "ap": 5, "rules": ["leeching"]}
     },
     "rules": {
-        "raise_dead": {
-            "name": "Raise Dead",
-            "description": "Roll a die each time this model kills an enemy model. On a roll of 1 or 2, return a model to this unit. This may not bring the unit over its starting size.",
-            "points": 2
-        },
-        "siphon": {
-            "name": "Vampiric Siphon",
-            "description": "At the end of any activation in which this unit slew any enemy models, you can heal 1 wound that has been allocated to a mode in this unit.",
-            "points": 2
-        },
         "vampire_tactics": {
             "name": "Vampire Tactics",
             "inputs": ["x"],
@@ -437,8 +450,8 @@
     "powers": {
         "raise_dead": {"name": "Raise Dead", "description": "Target friendly _Undead_ Infantry unit within 12\" restores 1D3 models. This power may only be cast once per turn.", "charge": 5},
         "death_hex": {"name": "Death Hex", "description": "Target enemy unit within 12\" must re-roll one succesful die on its next Save test. This power may be cast unlimited times.", "charge": 6},
-        "siphon_life": {
-            "name": "Siphon Life",
+        "vampiric_siphon_life": {
+            "name": "vampiric_siphon Life",
             "description": "Target enemy unit within 12\" takes 2 hits with AP(3) and this model regains 1 wound. This power may only be cast once per turn.",
             "charge": 7
         },
