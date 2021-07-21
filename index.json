@@ -198,7 +198,7 @@
             "description": "A collection of various kingdoms, infighting for political presence but uniting under one banner to defend their home."
         },
         "lizardmen": {
-            "version": "1.0",
+            "version": "0.1",
             "name": "Lizardmen",
             "id": "lizardmen",
             "url": "lizardmen.json",
