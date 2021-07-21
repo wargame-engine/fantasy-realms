@@ -593,7 +593,6 @@
         "shield": {"name": "Shield", "description": "This model has +1 Save.", "points": 2},
         "buckler": {"name": "Buckler", "description": "This model has +1 Save against melee attacks.", "points": 1},
         "icon": {"name": "Icon", "description": "Friendly units of X types within 6\" may re-roll a single failed Courage test when removing Shock.", "points": 10, "inputs": ["x"]},
-        "distract": {"name": "Distracting", "description": "Enemy units within 6\" get -1 Strength.", "points": 3},
         "ethereal": {"name": "Ethereal", "description": "This model may ignore other models and any terrain when moving.", "points": 2},
         "legend_wounds": {"name": "Resilient", "description": "This model gains Wounds(+1).", "points": 10},
         "legend_courage": {"name": "Inspired", "description": "This model gains +1 Courage.", "points": 10},

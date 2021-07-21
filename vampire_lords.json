@@ -286,17 +286,17 @@
             "category": "elite",
             "models": [
                 {
-                    "name": "Bat Swarms",
+                    "name": "Bat Swarm",
                     "movement": 8,
                     "courage": 6,
                     "shoot": 4,
-                    "fight": 4,
+                    "fight": 5,
                     "defense": 4,
                     "reflexes": 5,
-                    "rules": [{"id": "swarm", "x": 3}, "distract", "fly", "vampiric_siphon"],
-                    "weapons": [{"id": "bite", "count": 4}],
-                    "min": 1,
-                    "max": 1
+                    "rules": [{"id": "swarm", "x": 3}, "distracting", "fly", "vampiric_siphon"],
+                    "weapons": [{"id": "bite", "count": 3}],
+                    "min": 2,
+                    "max": 4
                 }
             ],
             "keywords": ["Beast", "Infantry"],
