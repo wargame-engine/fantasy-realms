@@ -551,6 +551,7 @@
         "chainsaw": {"name": "Chainsaw", "attacks": 1, "short": "Melee", "ap": 7},
         "crushing_fists": {"name": "Crushing Fists", "attacks": 1, "ap": 6, "short": "Melee", "rules": ["rending"]},
         "rock_throw": {"name": "Rock Throw", "attacks": 1, "ap": 6, "rules": [{"id": "blast", "x": 2}, "scatter"], "short": 9, "medium": 18},
+        "claws": {"name": "Claws", "attacks": 1, "ap": 1, "short": "Melee"},
         "rending_claws": {"name": "Rending Claws", "attacks": 1, "ap": 1, "short": "Melee", "rules": ["rending"]},
         "flame_breath": {"name": "Flaming Breath", "short": 6, "medium": 12, "ap": 3, "attacks": 1, "rules": ["flame", "lethal"]},
         "burst_rifle": {"name": "Burst Rifle", "short": 9, "medium": 18, "ap": 8, "attacks": 1, "rules": [{"id": "blast", "x": 2}]},
