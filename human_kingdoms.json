@@ -2,7 +2,6 @@
     "name": "Human Kingdoms",
     "id": "human_kingdoms",
     "author": "Xekon#8266",
-    "version": "0.1",
     "units": {
         "battle_mage": {
             "name": "Battlemage",

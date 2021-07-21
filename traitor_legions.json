@@ -3,7 +3,6 @@
     "id": "traitor_legions",
     "author": "Xekon#8266",
     "color": "#231f20",
-    "version": "0.1",
     "units": {
         "traitor_lord": {
             "name": "Traitor Lord",

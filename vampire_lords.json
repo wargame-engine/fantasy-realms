@@ -2,7 +2,6 @@
     "name": "Vampire Lords",
     "id": "vampire_lords",
     "author": "Xekon#8266",
-    "version": "0.1",
     "units": {
         "watch_captain": {
             "name": "Watch Captain",

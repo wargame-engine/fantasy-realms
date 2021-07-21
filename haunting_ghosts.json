@@ -2,7 +2,6 @@
     "name": "Haunting Ghosts",
     "id": "haunting_ghosts",
     "author": "guitarninja#5707",
-    "version": "0.1",
     "color": "#4C838A",
     "units": {
         "shroudeded_knight_on_ghost_horse": {
@@ -151,9 +150,7 @@
             "description": "Hunting spirits with glaives.",
             "category": "core",
             "rules": ["fly"],
-            "models": [
-                {"name": "Glaive Stalkers", "movement": 8, "courage": 6, "shoot": 5, "fight": 5, "defense": 6, "reflexes": 5, "weapons": [{"id": "polearm", "count": 2}], "min": 4, "max": 16}
-            ],
+            "models": [{"name": "Glaive Stalkers", "movement": 8, "courage": 6, "shoot": 5, "fight": 5, "defense": 6, "reflexes": 5, "weapons": [{"id": "polearm", "count": 2}], "min": 4, "max": 16}],
             "keywords": ["Undead", "Infantry"],
             "options": [{"addRule": ["banner"], "modelLimit": 1}, {"addRule": ["musician"], "modelLimit": 1}]
         },
