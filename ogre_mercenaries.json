@@ -247,6 +247,7 @@
             "description": "A motley of beasts best used for scouting, flanking and disruption by the mercenaries that tamed them",
             "category": "elite",
             "keywords": ["Beasts"],
+            "rules": [{"id": "wounds", "x": 2}],
             "models": [
                 {"name": "Hunting Beast", "movement": 10, "shoot": 4, "fight": 5, "defense": 5, "reflexes": 6, "courage": 4, "weapons": [{"id": "beast_fangs", "count": 2}], "min": 2, "max": 20}
             ]
