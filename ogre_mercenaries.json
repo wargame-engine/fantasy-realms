@@ -64,7 +64,7 @@
                     "min": 1,
                     "max": 1,
                     "rules": [{"id": "wounds", "x": 3}, {"id": "hunter_tactics", "x": 1}, {"id": "leader_x", "x": "Beasts"}],
-                    "weapons": ["heavy_crossbow", "hunting_spear", {"id": "hunting_spear_melee", "count": 4}, "heavy_crossbow_melee"]
+                    "weapons": ["heavy_crossbow", "hunting_spear", {"id": "hunting_spear_melee", "count": 4}, "ogre_bite"]
                 }
             ]
         },
@@ -318,13 +318,14 @@
         }
     },
     "weapons": {
+        "ogre_bite": {"name": "Ogre Bite", "attacks": 1, "ap": 2, "short": "Melee"},
         "capn_weapon": {"name": "Captain's Peacekeeper", "attacks": 1, "ap": 5, "short": "Melee"},
         "ogre_fists": {"name": "Ogre Fists", "attacks": 1, "ap": 3, "short": "Melee"},
         "mournfang_tusks": {"name": "Cavalry Tusks", "attacks": 1, "ap": 3, "rules": ["lance"], "short": "Melee"},
         "boomstick": {"name": "Boomstick", "attacks": 3, "ap": 3, "short": 6, "medium": 12},
         "ironfist": {"name": "Ironfist", "attacks": 1, "ap": 1, "short": "Melee", "rules": ["buckler"]},
         "sharp_stuff": {"name": "Sharp Stuff", "attacks": 1, "short": 9},
-        "hunting_spear": {"name": "Thrown Hunting Spear", "attacks": 1, "ap": 3, "short": "6", "medium": 9},
+        "hunting_spear": {"name": "Thrown Hunting Spear", "attacks": 1, "ap": 3, "short": 6, "medium": 12},
         "hunting_spear_melee": {"name": "Hunting Spear", "attacks": 1, "ap": 2, "short": "Melee"},
         "beast_fangs": {"name": "Beast Fangs", "attacks": 1, "ap": 2, "short": "Melee"},
         "beast_claws": {"name": "Beast Claws", "attacks": 1, "ap": 3, "short": "Melee"},
