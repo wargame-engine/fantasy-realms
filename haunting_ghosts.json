@@ -8,7 +8,6 @@
             "name": "Shrouded Knight on Ghost Horse",
             "description": "Once a hero of the realm, now nothing more than a spiteful revenant mounted on a cursed spirit-mare.",
             "category": "hero",
-            "rules": ["fly"],
             "models": [
                 {
                     "name": "Shrouded Knight on Ghost Horse",
@@ -30,7 +29,7 @@
             "name": "Executioner",
             "description": "A frightening wraith with a huge axe, returning to execute the living.",
             "category": "hero",
-            "rules": ["fly", "fear"],
+            "rules": ["fear"],
             "models": [
                 {
                     "name": "Executioner",
@@ -52,7 +51,6 @@
             "name": "Tormented Spirit",
             "description": "A tormented soul seeking to force those who did wrong to repent.",
             "category": "hero",
-            "rules": ["fly"],
             "models": [
                 {
                     "name": "Tormented Spirit",
@@ -74,7 +72,6 @@
             "name": "Soul Guardian",
             "description": "A magical sorcerer who uses souls to cast powers.",
             "category": "hero",
-            "rules": ["fly"],
             "models": [
                 {
                     "name": "Soul Guardian",
@@ -96,7 +93,7 @@
             "name": "Shrouded Lieutenant on Ghost Horse",
             "description": "Spiritual Protector of a Shrouded Knight, cursed with an ethereal body.",
             "category": "hero",
-            "rules": ["fly", "teleport"],
+            "rules": ["teleport"],
             "models": [
                 {
                     "name": "Shrouded Lieutenant on Ghost Horse",
@@ -118,7 +115,6 @@
             "name": "Shrouded Knight",
             "description": "Once a hero of the realm, now nothing more than a spiteful revenant seeking to drain the life from the living.",
             "category": "hero",
-            "rules": ["fly"],
             "models": [
                 {
                     "name": "Shrouded Knight",
@@ -140,7 +136,6 @@
             "name": "Ghostly Horde",
             "description": "Foul spirits with various weapons.",
             "category": "core",
-            "rules": ["fly"],
             "models": [{"name": "Ghost", "movement": 6, "courage": 5, "shoot": 5, "fight": 5, "defense": 5, "reflexes": 5, "weapons": [{"id": "handweapon", "count": 2}], "min": 10, "max": 30}],
             "keywords": ["Undead", "Infantry"],
             "options": [{"addRule": ["banner"], "modelLimit": 1}, {"addRule": ["musician"], "modelLimit": 1}]
@@ -149,7 +144,6 @@
             "name": "Glaive Stalkers",
             "description": "Hunting spirits with glaives.",
             "category": "core",
-            "rules": ["fly"],
             "models": [{"name": "Glaive Stalkers", "movement": 8, "courage": 6, "shoot": 5, "fight": 5, "defense": 6, "reflexes": 5, "weapons": [{"id": "polearm", "count": 2}], "min": 4, "max": 16}],
             "keywords": ["Undead", "Infantry"],
             "options": [{"addRule": ["banner"], "modelLimit": 1}, {"addRule": ["musician"], "modelLimit": 1}]
@@ -158,7 +152,6 @@
             "name": "Ghastly Reapers",
             "description": "Spirits with large scythes, hunting the living.",
             "category": "elite",
-            "rules": ["fly"],
             "models": [
                 {"name": "Reaper Bell Carrier", "movement": 8, "courage": 6, "shoot": 5, "fight": 5, "defense": 6, "reflexes": 5, "weapons": [{"id": "death_bell", "count": 1}], "min": 1, "max": 1},
                 {"name": "Reaper", "movement": 8, "courage": 6, "shoot": 5, "fight": 5, "defense": 6, "reflexes": 5, "weapons": [{"id": "great_weapon", "count": 2}], "min": 4, "max": 19}
@@ -170,7 +163,7 @@
             "name": "Spirits",
             "description": "A swarm of spirits.",
             "category": "core",
-            "rules": ["fly", {"id": "swarm", "x": 3}],
+            "rules": [{"id": "swarm", "x": 3}],
             "models": [{"name": "Spirits", "movement": 6, "courage": 6, "shoot": 4, "fight": 4, "defense": 5, "reflexes": 5, "weapons": [{"id": "handweapon", "count": 5}], "min": 3, "max": 12}],
             "keywords": ["Undead", "Infantry"]
         },
@@ -178,7 +171,6 @@
             "name": "Cursed Revenants",
             "description": "These are the spirits of those that met a vicious end, forever cursed to be in endless pain.",
             "category": "elite",
-            "rules": ["fly"],
             "models": [{"name": "Revenant", "movement": 6, "courage": 5, "shoot": 6, "fight": 6, "defense": 6, "reflexes": 5, "weapons": [{"id": "curse_blade", "count": 2}], "min": 5, "max": 20}],
             "keywords": ["Undead", "Infantry"]
         }
@@ -204,7 +196,6 @@
         },
         "soul_lantern": {"name": "Soul Lantern", "description": "Once per round, a friendly _Infantry_ unit within 6\" gains +1 AP on all Melee weapons.", "points": 10}
     },
-    "relics": [],
     "powers": {
         "raise_dead": {
             "name": "Raise Dead",
@@ -226,9 +217,9 @@
         {
             "name": "Ghostly Form",
             "phase": "activation",
-            "description": "Use when a unit is targeted by an attack. That unit ignores up to 1 AP.",
-            "flavor": "These horrors know no fear, only death.",
-            "cost": 2
+            "description": "Use when an _Infantry_ unit makes a Move action. It may ignore any models and terrain for that move.",
+            "flavor": "These horrors are can phase through almost any object with ease.",
+            "cost": 1
         },
         {
             "name": "Nightmares",
