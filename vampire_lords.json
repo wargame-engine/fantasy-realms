@@ -341,7 +341,7 @@
                     "weapons": [{"id": "heavy_handweapon", "count": 2}, "shield"],
                     "min": 5,
                     "max": 10,
-                    "options": [{"replaceWeapon": [{"id": "heavy_handweapon", "count": 2}, "shield"], "withWeapon": [{"id": "heavy_reatweapon", "count": 2}], "modelLimit": "all"}]
+                    "options": [{"replaceWeapon": [{"id": "heavy_handweapon", "count": 2}, "shield"], "withWeapon": [{"id": "heavy_great_weapon", "count": 2}], "modelLimit": "all"}]
                 }
             ],
             "keywords": ["Undead", "Infantry"],
