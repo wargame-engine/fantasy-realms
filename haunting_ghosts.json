@@ -154,7 +154,7 @@
             "category": "elite",
             "models": [
                 {"name": "Reaper Bell Carrier", "movement": 8, "courage": 6, "shoot": 5, "fight": 5, "defense": 6, "reflexes": 5, "weapons": [{"id": "death_bell", "count": 1}], "min": 1, "max": 1},
-                {"name": "Reaper", "movement": 8, "courage": 6, "shoot": 5, "fight": 5, "defense": 6, "reflexes": 5, "weapons": [{"id": "great_weapon", "count": 2}], "min": 4, "max": 19}
+                {"name": "Reaper", "movement": 8, "courage": 6, "shoot": 5, "fight": 5, "defense": 6, "reflexes": 5, "weapons": [{"id": "rending_heavy_polearm", "count": 2}], "min": 4, "max": 19}
             ],
             "keywords": ["Undead", "Infantry"],
             "options": [{"addRule": ["banner"], "modelLimit": 1}, {"addRule": ["musician"], "modelLimit": 1}]
@@ -178,7 +178,7 @@
     "weapons": {
         "hooves_and_teeth": {"name": "Hooves and Teeth", "attacks": 1, "short": "Melee"},
         "ghostly_shackles": {"name": "Ghostly Shackles", "attacks": 1, "ap": 4, "short": "Melee"},
-        "death_bell": {"name": "Death Bell", "attacks": 1, "ap": 3, "short": "Melee", "rules": ["rending"]},
+        "death_bell": {"name": "Death Bell", "attacks": 1, "ap": 4, "short": "Melee"},
         "curse_blade": {"name": "Curse-bound Blade", "attacks": 1, "ap": 2, "short": "Melee", "rules": ["lance"]},
         "executioner_great_axe": {"name": "Great Axe", "attacks": 1, "ap": 5, "short": "Melee", "rules": ["rending"]}
     },

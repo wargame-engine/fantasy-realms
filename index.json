@@ -489,6 +489,8 @@
         "great_lance": {"name": "Great Lance", "attacks": 1, "ap": 4, "short": "Melee", "rules": [{"id": "reach", "x": 1}, "lance"]},
         "poison_short_bow": {"name": "Poisoned Shortbow", "attacks": 1, "ap": 1, "short": 9, "medium": 18, "rules": ["poison"]},
         "great_bow": {"name": "Greatbow", "attacks": 1, "ap": 4, "short": 18, "medium": 36},
+        "rending_handweapon": {"name": "Rending Handweapon", "attacks": 1, "ap": 1, "short": "Melee", "rules": ["rending"]},
+        "rending_heavy_polearm": {"name": "Rending Heavy Polearm", "attacks": 1, "ap": 3, "short": "Melee", "rules": ["rending", {"id": "reach", "x": 1}]},
         "lethal_handweapon": {"name": "Lethal Handweapon", "attacks": 1, "ap": 1, "short": "Melee", "rules": ["lethal"]},
         "lethal_great_weapon": {"name": "Lethal Great Weapon", "attacks": 1, "ap": 3, "short": "Melee", "rules": ["lethal"]},
         "heavy_lethal_handweapon": {"name": "Lethal Heavy Handweapon", "attacks": 1, "ap": 2, "short": "Melee", "rules": ["lethal"]},
