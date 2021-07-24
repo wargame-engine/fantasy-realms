@@ -255,7 +255,7 @@
                     "weapons": [{"id": "crushing_fists", "count": 4}],
                     "min": 3,
                     "max": 6,
-                    "rules": ["damage_table_monster"]
+                    "rules": ["damage_chart"]
                 }
             ],
             "subfactions": ["wrath", "excess", "pestilence", "none", "change"],

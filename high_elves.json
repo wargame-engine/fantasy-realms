@@ -316,7 +316,7 @@
                     "defense": 8,
                     "reflexes": 6,
                     "weapons": [{"id": "claws", "count": 2}, {"id": "beak", "count": 2}],
-                    "rules": ["fly", {"id": "impact", "x": 2}, "damage_table_monster"],
+                    "rules": ["fly", {"id": "impact", "x": 2}, "damage_chart"],
                     "min": 1,
                     "max": 1
                 }
@@ -338,7 +338,7 @@
                     "defense": 10,
                     "reflexes": 6,
                     "weapons": [{"id": "hooves_and_teeth", "count": 4}, "long_bow", "spear"],
-                    "rules": [{"id": "impact", "x": 3}, "damage_table_chariot"],
+                    "rules": [{"id": "impact", "x": 3}, "damage_chart"],
                     "min": 1,
                     "max": 1,
                     "options": [
@@ -365,7 +365,7 @@
                     "reflexes": 6,
                     "courage": 5,
                     "weapons": ["ballista", {"id": "claws", "count": 2}, {"id": "spear", "count": 2}, {"id": "beak", "count": 2}],
-                    "rules": ["fly", "damage_table_chariot"],
+                    "rules": ["fly", "damage_chart"],
                     "min": 1,
                     "max": 1,
                     "options": [{"addRule": ["banner"]}]
@@ -384,7 +384,7 @@
                     "movement": 6,
                     "shoot": 6,
                     "weapons": [{"id": "ballista", "count": 2}],
-                    "rules": ["damage_table_warmachine"],
+                    "rules": ["damage_chart"],
                     "min": 1,
                     "max": 1,
                     "fight": "-",
@@ -433,7 +433,7 @@
                     "fight": 6,
                     "defense": 13,
                     "reflexes": 6,
-                    "rules": ["damage_table_monster", "fly", {"id": "power", "x": 3}, {"id": "leader_x", "x": "Infantry, Cavalry"}],
+                    "rules": ["damage_chart", "fly", {"id": "power", "x": 3}, {"id": "leader_x", "x": "Infantry, Cavalry"}],
                     "options": [{"replaceRule": [{"id": "power", "x": 3}], "withRule": [{"id": "power", "x": 4}]}],
                     "weapons": [{"id": "flame_breath", "count": 4}, {"id": "fangs_and_claws", "count": 3}, {"id": "staff", "count": 2}, {"id": "handweapon", "count": 2}, "bashing_tail"]
                 }
@@ -455,7 +455,7 @@
                     "fight": 7,
                     "defense": 13,
                     "reflexes": 6,
-                    "rules": ["damage_table_monster", "fly", {"id": "leader_x", "x": "Infantry, Cavalry"}, {"id": "elf_tactics", "x": 1}],
+                    "rules": ["damage_chart", "fly", {"id": "leader_x", "x": "Infantry, Cavalry"}, {"id": "elf_tactics", "x": 1}],
                     "options": [
                         {"replaceWeapon": [{"id": "handweapon", "count": 5}], "withWeapon": [{"id": "great_weapon", "count": 4}, {"id": "runic_blade", "count": 3}, {"id": "heavy_lance", "count": 3}]},
                         {"addWeapon": ["long_bow"]},
@@ -489,7 +489,7 @@
                         {"id": "power", "x": 2},
                         {"id": "sentinel_tactics", "x": 1},
                         {"id": "leader_x", "x": "Infantry, Cavalry"},
-                        "damage_table_monster",
+                        "damage_chart",
                         {"id": "resilient", "x": 3},
                         {"id": "impact", "x": 3}
                     ],

@@ -451,7 +451,7 @@
                     "fight": 7,
                     "defense": 13,
                     "reflexes": 6,
-                    "rules": ["damage_table_monster", "fly", {"id": "power", "x": 1}, {"id": "leader_x", "x": "Infantry, Cavalry"}],
+                    "rules": ["damage_chart", "fly", {"id": "power", "x": 1}, {"id": "leader_x", "x": "Infantry, Cavalry"}],
                     "options": [
                         {"replaceWeapon": [{"id": "great_polearm", "count": 3}], "withWeapon": [{"id": "war_hammer", "count": 3}]},
                         {"addWeapon": ["spirit_flask"], "limit": 3},

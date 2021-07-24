@@ -301,7 +301,7 @@
                         {"replaceWeapon": [{"id": "heavy_great_weapon", "count": 8}, {"id": "throw_rock"}], "withWeapon": [[{"id": "greatblade", "count": 6}, {"id": "maw", "count": 1}]]},
                         {"addRule": [["anti_magic", {"id": "ward", "x": 2}]]}
                     ],
-                    "rules": ["damage_table_monster"]
+                    "rules": ["damage_chart"]
                 }
             ],
             "keywords": ["Monster", "Infantry"],
@@ -323,7 +323,7 @@
                     "weapons": [{"id": "sharp_beak", "count": 1}, {"id": "handweapon", "count": 3}, {"id": "cock_gaze"}],
                     "min": 1,
                     "max": 1,
-                    "rules": ["fear", "fly", "damage_table_monster"]
+                    "rules": ["fear", "fly", "damage_chart"]
                 }
             ],
             "subfactions": ["none", "change_legions", "rage_legions", "lust_legions", "plague_legions"],
@@ -351,7 +351,7 @@
                     ],
                     "min": 1,
                     "max": 1,
-                    "rules": ["fear", "fly", "damage_table_monster"]
+                    "rules": ["fear", "fly", "damage_chart"]
                 }
             ],
             "subfactions": ["none", "change_legions", "rage_legions", "lust_legions", "plague_legions"],

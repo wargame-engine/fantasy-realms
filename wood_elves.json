@@ -361,7 +361,7 @@
                     "defense": 11,
                     "reflexes": 6,
                     "weapons": ["impaling_claws", "wild_staff", {"id": "roots", "count": 5}],
-                    "rules": ["leader", {"id": "power", "x": 2}, "damage_table_monster", "ambush", "agile"],
+                    "rules": ["leader", {"id": "power", "x": 2}, "damage_chart", "ambush", "agile"],
                     "min": 1,
                     "max": 1,
                     "options": [{"replaceRule": [{"id": "power", "x": 2}], "withRule": [{"id": "power", "x": 3}]}]
@@ -384,7 +384,7 @@
                     "defense": 11,
                     "reflexes": 6,
                     "weapons": [{"id": "wild_blade", "count": 3}, "impaling_claws", {"id": "roots", "count": 5}],
-                    "rules": ["leader", {"id": "power", "x": 1}, "damage_table_monster", "ambush", "agile"],
+                    "rules": ["leader", {"id": "power", "x": 1}, "damage_chart", "ambush", "agile"],
                     "min": 1,
                     "max": 1
                 }
@@ -406,7 +406,7 @@
                     "defense": 11,
                     "reflexes": 6,
                     "weapons": [{"id": "impaling_claws", "count": 2}, "swarm"],
-                    "rules": ["leader", {"id": "power", "x": 1}, "damage_table_monster", "ambush", "agile"],
+                    "rules": ["leader", {"id": "power", "x": 1}, "damage_chart", "ambush", "agile"],
                     "min": 1,
                     "max": 1
                 }
