@@ -1,16 +1,16 @@
 {
-    "name": "Traitor Legions",
-    "id": "traitor_legions",
+    "name": "Corrupted Legions",
+    "id": "corrupted_legions",
     "author": "Xekon#8266",
     "color": "#231f20",
     "units": {
-        "traitor_lord": {
-            "name": "Traitor Lord",
+        "_lord": {
+            "name": "Corrupted Lord",
             "description": "A lord of the dark gods.",
             "category": "hero",
             "models": [
                 {
-                    "name": "Traitor Lord",
+                    "name": "Corrupted Lord",
                     "movement": 6,
                     "courage": 7,
                     "shoot": 6,
@@ -31,27 +31,27 @@
                         },
                         {"addRule": ["shield"]},
                         {"addRule": [[{"id": "power", "x": 1}, "disk_of_change"]], "subfactions": ["change"]},
-                        {"replaceRule": [{"id": "traitor_tactics", "x": 1}], "withRule": [{"id": "traitor_tactics", "x": 2}]},
+                        {"replaceRule": [{"id": "_tactics", "x": 1}], "withRule": [{"id": "_tactics", "x": 2}]},
                         {"addRule": ["excess_mark"], "subfactions": ["excess"]},
                         {"addRule": ["change_mark"], "subfactions": ["change"]},
                         {"subfactions": ["pestilence"], "addRule": ["pestilence_mark"]},
                         {"addRule": ["deception_mark"], "subfactions": ["deception"]},
                         {"addRule": ["wrath_mark"], "subfactions": ["wrath"]}
                     ],
-                    "rules": [{"id": "wounds", "x": 3}, {"id": "traitor_tactics", "x": 1}, "leader"],
+                    "rules": [{"id": "wounds", "x": 3}, {"id": "_tactics", "x": 1}, "leader"],
                     "min": 1,
                     "max": 1
                 }
             ],
             "subfactions": ["none", "wrath", "excess", "pestilence", "change", "deception"]
         },
-        "traitor_lord_horse": {
-            "name": "Traitor Lord on Cursed Steed",
+        "_lord_horse": {
+            "name": "Corrupted Lord on Cursed Steed",
             "description": "A lord of the dark gods.",
             "category": "hero",
             "models": [
                 {
-                    "name": "Traitor Lord on Cursed Steed",
+                    "name": "Corrupted Lord on Cursed Steed",
                     "movement": 8,
                     "courage": 7,
                     "shoot": 6,
@@ -72,14 +72,14 @@
                         },
                         {"addRule": ["shield"]},
                         {"addRule": [{"id": "power", "x": 1}], "subfactions": ["change"]},
-                        {"replaceRule": [{"id": "traitor_tactics", "x": 1}], "withRule": [{"id": "traitor_tactics", "x": 2}]},
+                        {"replaceRule": [{"id": "_tactics", "x": 1}], "withRule": [{"id": "_tactics", "x": 2}]},
                         {"addRule": ["excess_mark"], "subfactions": ["excess"]},
                         {"addRule": ["change_mark"], "subfactions": ["change"]},
                         {"subfactions": ["pestilence"], "addRule": ["pestilence_mark"]},
                         {"addRule": ["deception_mark"], "subfactions": ["deception"]},
                         {"addRule": ["wrath_mark"], "subfactions": ["wrath"]}
                     ],
-                    "rules": [{"id": "leader_x", "x": "Infantry, Cavalry"}, {"id": "wounds", "x": 4}, {"id": "traitor_tactics", "x": 1}],
+                    "rules": [{"id": "leader_x", "x": "Infantry, Cavalry"}, {"id": "wounds", "x": 4}, {"id": "_tactics", "x": 1}],
                     "min": 1,
                     "max": 1
                 }
@@ -87,13 +87,13 @@
             "subfactions": ["none", "wrath", "excess", "pestilence", "change", "deception"],
             "keywords": ["Cavalry"]
         },
-        "traitor_lord_on_lizard": {
-            "name": "Traitor Lord on Lizard Beast",
+        "_lord_on_lizard": {
+            "name": "Corrupted Lord on Lizard Beast",
             "description": "A lord of the dark gods mounted on a dangerous lizard beast.",
             "category": "hero",
             "models": [
                 {
-                    "name": "Traitor Lord on Lizard Beast",
+                    "name": "Corrupted Lord on Lizard Beast",
                     "movement": 8,
                     "courage": 7,
                     "shoot": 6,
@@ -108,14 +108,14 @@
                         },
                         {"addRule": ["shield"]},
                         {"addRule": [{"id": "power", "x": 1}], "subfactions": ["change"]},
-                        {"replaceRule": [{"id": "traitor_tactics", "x": 1}], "withRule": [{"id": "traitor_tactics", "x": 2}]},
+                        {"replaceRule": [{"id": "_tactics", "x": 1}], "withRule": [{"id": "_tactics", "x": 2}]},
                         {"addRule": ["excess_mark"], "subfactions": ["excess"]},
                         {"addRule": ["change_mark"], "subfactions": ["change"]},
                         {"subfactions": ["pestilence"], "addRule": ["pestilence_mark"]},
                         {"addRule": ["deception_mark"], "subfactions": ["deception"]},
                         {"addRule": ["wrath_mark"], "subfactions": ["wrath"]}
                     ],
-                    "rules": [{"id": "leader_x", "x": "Infantry, Cavalry"}, {"id": "wounds", "x": 4}, {"id": "traitor_tactics", "x": 1}],
+                    "rules": [{"id": "leader_x", "x": "Infantry, Cavalry"}, {"id": "wounds", "x": 4}, {"id": "_tactics", "x": 1}],
                     "min": 1,
                     "max": 1
                 }
@@ -216,13 +216,13 @@
             "subfactions": ["none", "wrath", "excess", "pestilence", "change", "deception"],
             "keywords": ["Beast", "Monster"]
         },
-        "traitor_lord_manticore": {
-            "name": "Traitor Lord on Manticore",
+        "_lord_manticore": {
+            "name": "Corrupted Lord on Manticore",
             "description": "A lord of the dark gods.",
             "category": "hero",
             "models": [
                 {
-                    "name": "Traitor Lord on Manticore",
+                    "name": "Corrupted Lord on Manticore",
                     "movement": 10,
                     "courage": 7,
                     "shoot": 6,
@@ -244,14 +244,14 @@
                         },
                         {"addRule": ["shield_dragon"]},
                         {"addRule": [[{"id": "power", "x": 2}]], "subfactions": ["change"]},
-                        {"replaceRule": [{"id": "traitor_tactics", "x": 2}], "withRule": [{"id": "traitor_tactics", "x": 3}]},
+                        {"replaceRule": [{"id": "_tactics", "x": 2}], "withRule": [{"id": "_tactics", "x": 3}]},
                         {"addRule": ["excess_mark_monster"], "subfactions": ["excess"]},
                         {"addRule": ["change_mark_monster"], "subfactions": ["change"]},
                         {"subfactions": ["pestilence"], "addRule": ["pestilence_mark_monster"]},
                         {"addRule": ["deception_mark_monster"], "subfactions": ["deception"]},
                         {"addRule": ["wrath_mark_monster"], "subfactions": ["wrath"]}
                     ],
-                    "rules": [{"id": "leader_x", "x": "Infantry, Cavalry"}, {"id": "traitor_tactics", "x": 1}, "fly", "fear", "damage_chart"],
+                    "rules": [{"id": "leader_x", "x": "Infantry, Cavalry"}, {"id": "_tactics", "x": 1}, "fly", "fear", "damage_chart"],
                     "min": 1,
                     "max": 1
                 }
@@ -259,13 +259,13 @@
             "subfactions": ["none", "wrath", "excess", "pestilence", "change", "deception"],
             "keywords": ["Beast", "Cavalry", "Monster"]
         },
-        "traitor_cultists": {
-            "name": "Traitor Cultists",
-            "description": "Fanatical masses serving the Traitor Gods.",
+        "_cultists": {
+            "name": "Corrupted Cultists",
+            "description": "Fanatical masses serving the Corrupted Gods.",
             "category": "core",
             "models": [
                 {
-                    "name": "Traitor Cultist",
+                    "name": "Corrupted Cultist",
                     "movement": 6,
                     "courage": 4,
                     "shoot": 4,
@@ -307,13 +307,13 @@
                 {"addRule": ["wrath_mark"], "subfactions": ["wrath"], "modelLimit": "all"}
             ]
         },
-        "traitor_warriors": {
-            "name": "Traitor Warriors",
-            "description": "Warriors who serve the Traitor Gods.",
+        "_warriors": {
+            "name": "Corrupted Warriors",
+            "description": "Warriors who serve the Corrupted Gods.",
             "category": "core",
             "models": [
                 {
-                    "name": "Traitor Warrior",
+                    "name": "Corrupted Warrior",
                     "movement": 6,
                     "courage": 6,
                     "shoot": 5,
@@ -356,13 +356,13 @@
                 {"addRule": ["wrath_mark"], "subfactions": ["wrath"], "modelLimit": "all"}
             ]
         },
-        "traitor_barbarians": {
-            "name": "Traitor Barbarians",
-            "description": "Frenzied Warriors serving the Traitor Gods.",
+        "_barbarians": {
+            "name": "Corrupted Barbarians",
+            "description": "Frenzied Warriors serving the Corrupted Gods.",
             "category": "core",
             "models": [
                 {
-                    "name": "Traitor Barbarian",
+                    "name": "Corrupted Barbarian",
                     "movement": 7,
                     "courage": 5,
                     "shoot": 5,
@@ -390,14 +390,14 @@
                 {"addRule": ["wrath_mark"], "subfactions": ["wrath"], "modelLimit": "all"}
             ]
         },
-        "traitor_knights": {
-            "name": "Traitor Knights",
-            "description": "Dark Knights who serve the Traitor Gods.",
+        "_knights": {
+            "name": "Corrupted Knights",
+            "description": "Dark Knights who serve the Corrupted Gods.",
             "category": "elite",
             "models": [
                 {
                     "rules": [{"id": "wounds", "x": 2}, "fear"],
-                    "name": "Traitor Knight",
+                    "name": "Corrupted Knight",
                     "movement": 8,
                     "courage": 6,
                     "shoot": 5,
@@ -434,14 +434,14 @@
             ],
             "keywords": ["Cavalry"]
         },
-        "traitor_outriders": {
+        "_outriders": {
             "name": "Barbarian Outriders",
             "description": "Mounted Barbarians, ready to spill blood.",
             "category": "elite",
             "models": [
                 {
                     "options": [{"replaceWeapon": [{"id": "handweapon", "count": 2}, "shield"], "withWeapon": [["heavy_spear", "barbarian_javelin"]], "modelLimit": "all"}],
-                    "name": "Traitor Outrider",
+                    "name": "Corrupted Outrider",
                     "movement": 8,
                     "courage": 5,
                     "shoot": 5,
@@ -467,14 +467,14 @@
             "keywords": ["Cavalry"]
         },
         "icon_bearer": {
-            "name": "Traitor Lord with Accursed Banner",
+            "name": "Corrupted Lord with Accursed Banner",
             "description": "A chosen banner bearer of the dark gods.",
             "min": 1,
             "max": 1,
             "category": "elite",
             "models": [
                 {
-                    "name": "Traitor Lord with Accursed Banner",
+                    "name": "Corrupted Lord with Accursed Banner",
                     "movement": 6,
                     "courage": 7,
                     "shoot": 5,
@@ -497,7 +497,7 @@
             "keywords": ["Hero", "Infantry"]
         },
         "chosen": {
-            "name": "Traitor Chosen",
+            "name": "Corrupted Chosen",
             "description": "Blessed by their dark gods, these warriors set out to slay the mightiest heroes.",
             "category": "elite",
             "models": [
@@ -527,7 +527,7 @@
                         },
                         {"addRule": ["shield"]}
                     ],
-                    "name": "Traitor Chosen",
+                    "name": "Corrupted Chosen",
                     "movement": 6,
                     "courage": 6,
                     "shoot": 5,
@@ -554,7 +554,7 @@
         },
         "chosen_knights": {
             "name": "Chosen Knights",
-            "description": "Personal Bodyguards of the great Traitor Lords, ready to bring carnage to the battlefield.",
+            "description": "Personal Bodyguards of the great Corrupted Lords, ready to bring carnage to the battlefield.",
             "category": "rare",
             "models": [
                 {
@@ -645,8 +645,8 @@
     },
     "weapons": {},
     "rules": {
-        "traitor_tactics": {
-            "name": "Traitor Tactics",
+        "_tactics": {
+            "name": "Corrupted Tactics",
             "inputs": ["x"],
             "description": "When this unit is activated, choose up to X friendly _Infantry_ units within 6\". This unit and those units may re-roll failed Strength tests of 9+ until the end of the round.",
             "points": ["rule.x", {"multiply": 10}]
@@ -705,7 +705,7 @@
             "name": "Blazing Runes",
             "phase": "activation",
             "description": "Use before an Infantry unit fights. Hit rolls of 1 or 2 gain +1 AP.",
-            "flavor": "Traitor Warriors wield enchanted weapons, covered in unholy runes and burning with dark magic.",
+            "flavor": "Corrupted Warriors wield enchanted weapons, covered in unholy runes and burning with dark magic.",
             "cost": 1
         }
     ],

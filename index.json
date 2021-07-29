@@ -52,14 +52,14 @@
                 }
             }
         },
-        "traitor_legions": {
+        "corrupted_legions": {
             "version": "1.0",
-            "name": "Traitor Legions",
-            "id": "traitor_legions",
-            "url": "traitor_legions.json",
+            "name": "Corrupted Legions",
+            "id": "corrupted_legions",
+            "url": "corrupted_legions.json",
             "color": "#231f20",
             "alliance": "chaos",
-            "description": "The Traitor Legions are those who chose to fight for evil instead of order and made a pact with the dark gods. The Traitor Legions use deadly traitor warriors and other barbarians to swiftly crush their foes.",
+            "description": "The Corrupted Legions are those who chose to fight for evil instead of order and made a pact with the dark gods. The Corrupted Legions use deadly  warriors and other barbarians to swiftly crush their foes.",
             "subfactions": {
                 "change": {
                     "name": "Magic",
@@ -206,11 +206,11 @@
             "alliance": "order",
             "description": "A race of relentless jungle-dwelling lizards who who believe they are the rightful inheritors to the world."
         },
-        "traitor_dwarves": {
+        "_dwarves": {
             "version": "1.0",
-            "name": "Traitor Dwarves",
-            "id": "traitor_dwarves",
-            "url": "traitor_dwarves.json",
+            "name": "Corrupted Dwarves",
+            "id": "_dwarves",
+            "url": "_dwarves.json",
             "color": "#360c30",
             "alliance": "chaos",
             "description": "Corrupted by the dark gods, these dwarves imbue twisted warmachines with demonic magic.",
