@@ -26,9 +26,9 @@
                         },
                         {"addRule": ["shield_hero"]},
                         {"addRule": [{"id": "power", "x": 1}]},
-                        {"replaceRule": [{"id": "ranger_tactics", "x": 1}], "withRule": [{"id": "ranger_tactics", "x": 2}]}
+                        {"replaceRule": [{"id": "elf_tactics", "x": 1}], "withRule": [{"id": "elf_tactics", "x": 2}]}
                     ],
-                    "rules": ["agile", {"id": "wounds", "x": 3}, "leader", {"id": "ranger_tactics", "x": 1}],
+                    "rules": ["agile", {"id": "wounds", "x": 3}, "leader", {"id": "elf_tactics", "x": 1}],
                     "min": 1,
                     "max": 1
                 }
@@ -82,7 +82,7 @@
                     "weapons": [{"id": "claws_revenant", "count": 2}],
                     "min": 1,
                     "max": 1,
-                    "rules": ["agile", {"id": "wounds", "x": 3}, {"id": "power", "x": 2}, {"id": "warrior_tactics", "x": 1}],
+                    "rules": ["agile", {"id": "wounds", "x": 3}, {"id": "power", "x": 2}, {"id": "revenant_tactics", "x": 1}],
                     "options": [
                         {"replaceWeapon": [{"id": "claws_revenant", "count": 2}], "withWeapon": [{"id": "polearm", "count": 2}]},
                         {"addRule": ["companion"]},
@@ -107,8 +107,8 @@
                     "defense": 6,
                     "reflexes": 6,
                     "weapons": [{"id": "great_polearm", "count": 3}],
-                    "options": [{"replaceRule": [{"id": "warrior_tactics", "x": 1}], "withRule": [{"id": "warrior_tactics", "x": 2}]}],
-                    "rules": ["fly", {"id": "wounds", "x": 3}, "leader", {"id": "warrior_tactics", "x": 1}, "shield_hero"],
+                    "options": [{"replaceRule": [{"id": "revenant_tactics", "x": 1}], "withRule": [{"id": "revenant_tactics", "x": 2}]}],
+                    "rules": ["fly", {"id": "wounds", "x": 3}, "leader", {"id": "revenant_tactics", "x": 1}, "shield_hero"],
                     "min": 1,
                     "max": 1
                 }
@@ -416,6 +416,15 @@
         }
     },
     "weapons": {
+        "dragon_bite": {"name": "Dragon's Breath", "ap": 4, "attacks": 1, "medium": 12, "short": 6, "rules": ["lethal"]},
+        "claws": {"name": "Rending Claws", "ap": 1, "attacks": 1, "short": "Melee", "rules": ["rending"]},
+        "beak": {"name": "Beak", "ap": 2, "attacks": 1, "short": "Melee"},
+        "antlers_and_hooves": {"name": "Antlers and Hooves", "attacks": 1, "short": "Melee", "ap": 1},
+        "ballista": {
+            "name": "Ballista",
+            "profiles": [{"name": "Focus", "ap": 6, "attacks": 1, "medium": 36, "short": 18, "rules": []}, {"name": "Volley", "ap": 2, "attacks": 6, "medium": 36, "short": 18, "rules": []}]
+        },
+        "beak_and_claws": {"name": "Bite and Claws", "ap": 4, "attacks": 1, "short": "Melee", "rules": ["lethal"]},
         "phoenix_claws": {"name": "Phoenix Claws", "ap": 5, "attacks": 1, "short": "Melee"},
         "phoenix_flame": {"name": "Flaming Wings", "ap": 4, "attacks": 1, "medium": 12, "short": 6, "rules": ["flame", "bomb"]},
         "claws_revenant": {"name": "Cursed Claws", "ap": 2, "attacks": 1, "short": "Melee", "rules": ["rending"]},
@@ -429,7 +438,26 @@
         "swarm": {"name": "Bleakwing Hive", "medium": 18, "short": 9, "rules": ["lethal"], "attacks": 10, "ap": 3}
     },
     "rules": {
+        "elf_tactics": {
+            "name": "Elven Tactics",
+            "inputs": ["x"],
+            "description": "When this unit is activated, choose up to X friendly _Infantry_ units within 6\". This unit and those units may re-roll failed Accuracy tests of 9+ until the end of the round.",
+            "points": ["rule.x", {"multiply": 10}]
+        },
         "astral_quiver": {"name": "Astral Quiver", "description": "When you use the Moonfire Arrows strategy on this unit, you don't spend SP to use it.", "points": 2},
+        "shield_hero": {"name": "Shield", "description": "This model has +1 Save.", "points": 5},
+        "revenant_tactics": {
+            "name": "Revenant Tactics",
+            "inputs": ["x"],
+            "description": "When this unit is activated, choose up to X friendly _Infantry_ units within 6\". This unit and those units may re-roll failed Strength tests of 9+ until the end of the round.",
+            "points": ["rule.x", {"multiply": 10}]
+        },
+        "knight_tactics": {
+            "name": "Knight Tactics",
+            "inputs": ["x"],
+            "description": "When this unit is activated, choose up to X friendly _Cavalry_ units within 6\". This unit and those units may re-roll failed Strength tests of 9+ until the end of the round.",
+            "points": ["rule.x", {"multiply": 10}]
+        },
         "companion": {"name": "Arcane Companion", "description": "Once per turn when a power within 24“ of this model gets dispelled, deal 1 hit with AP(2) to the caster.", "points": 5},
         "brutal": {
             "name": "Brutal",

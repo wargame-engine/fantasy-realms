@@ -22,14 +22,14 @@
                     "options": [
                         {
                             "replaceWeapon": [{"id": "handweapon", "count": 3}],
-                            "withWeapon": [{"id": "great_weapon", "count": 2}, {"id": "grand_weapon", "count": 2}, {"id": "handweapon", "count": 4}, {"id": "long_spear", "count": 2}]
+                            "withWeapon": [{"id": "great_weapon", "count": 2}, {"id": "runic_blade", "count": 2}, {"id": "handweapon", "count": 4}, {"id": "long_spear", "count": 2}]
                         },
                         {"addWeapon": ["long_bow"]},
                         {"addRule": ["cloak_hero", "enchanted_shield"]},
                         {"addRule": [{"id": "power", "x": 1}]},
-                        {"replaceRule": [{"id": "ranger_tactics", "x": 1}], "withRule": [{"id": "ranger_tactics", "x": 2}]}
+                        {"replaceRule": [{"id": "elf_tactics", "x": 1}], "withRule": [{"id": "elf_tactics", "x": 2}]}
                     ],
-                    "rules": [{"id": "wounds", "x": 3}, "leader", {"id": "ranger_tactics", "x": 1}],
+                    "rules": [{"id": "wounds", "x": 3}, "leader", {"id": "elf_tactics", "x": 1}],
                     "min": 1,
                     "max": 1
                 }
@@ -124,16 +124,13 @@
                     "reflexes": 6,
                     "weapons": [{"id": "handweapon", "count": 3}, {"id": "heavy_hooves_and_teeth", "count": 2}],
                     "options": [
-                        {
-                            "replaceWeapon": [{"id": "handweapon", "count": 3}],
-                            "withWeapon": [{"id": "heavy_lance", "count": 2}, {"id": "great_weapon", "count": 2}, {"id": "grand_weapon", "count": 2}]
-                        },
+                        {"replaceWeapon": [{"id": "handweapon", "count": 3}], "withWeapon": [{"id": "heavy_lance", "count": 2}, {"id": "great_weapon", "count": 2}, {"id": "runic_blade", "count": 2}]},
                         {"addWeapon": ["long_bow"]},
                         {"addRule": ["cloak_hero", "enchanted_shield"]},
                         {"addRule": [{"id": "power", "x": 1}]},
-                        {"replaceRule": [{"id": "ranger_tactics", "x": 1}], "withRule": [{"id": "ranger_tactics", "x": 2}]}
+                        {"replaceRule": [{"id": "elf_tactics", "x": 1}], "withRule": [{"id": "elf_tactics", "x": 2}]}
                     ],
-                    "rules": [{"id": "wounds", "x": 3}, {"id": "ranger_tactics", "x": 1}, {"id": "leader_x", "x": "Infantry, Cavarly"}],
+                    "rules": [{"id": "wounds", "x": 3}, {"id": "elf_tactics", "x": 1}, {"id": "leader_x", "x": "Infantry, Cavarly"}],
                     "min": 1,
                     "max": 1
                 }
@@ -287,7 +284,7 @@
             "category": "rare",
             "models": [
                 {
-                    "options": [{"replaceWeapon": [{"id": "lance", "count": 2}], "withWeapon": [{"id": "grand_weapon", "count": 2}], "modelLimit": 1}],
+                    "options": [{"replaceWeapon": [{"id": "lance", "count": 2}], "withWeapon": [{"id": "runic_blade", "count": 2}], "modelLimit": 1}],
                     "name": "Dragon Knights",
                     "movement": 8,
                     "courage": 5,
@@ -458,15 +455,12 @@
                     "fight": 7,
                     "defense": 13,
                     "reflexes": 6,
-                    "rules": ["damage_chart", "fly", {"id": "leader_x", "x": "Infantry, Cavalry"}, {"id": "ranger_tactics", "x": 1}],
+                    "rules": ["damage_chart", "fly", {"id": "leader_x", "x": "Infantry, Cavalry"}, {"id": "elf_tactics", "x": 1}],
                     "options": [
-                        {
-                            "replaceWeapon": [{"id": "handweapon", "count": 5}],
-                            "withWeapon": [{"id": "great_weapon", "count": 4}, {"id": "grand_weapon", "count": 3}, {"id": "heavy_lance", "count": 3}]
-                        },
+                        {"replaceWeapon": [{"id": "handweapon", "count": 5}], "withWeapon": [{"id": "great_weapon", "count": 4}, {"id": "runic_blade", "count": 3}, {"id": "heavy_lance", "count": 3}]},
                         {"addWeapon": ["long_bow"]},
                         {"addRule": ["cloak_dragon", "relic_shield"], "limit": 1},
-                        {"replaceRule": [{"id": "ranger_tactics", "x": 1}], "withRule": [{"id": "ranger_tactics", "x": 2}]},
+                        {"replaceRule": [{"id": "elf_tactics", "x": 1}], "withRule": [{"id": "elf_tactics", "x": 2}]},
                         {"addRule": [{"id": "power", "x": 1}, {"id": "power", "x": 2}]}
                     ],
                     "weapons": [{"id": "flame_breath", "count": 4}, {"id": "fangs_and_claws", "count": 3}, {"id": "handweapon", "count": 5}, "bashing_tail"]
@@ -512,12 +506,12 @@
         }
     },
     "weapons": {
-        "flame_breath": {"name": "Dragon's Breath", "ap": 4, "attacks": 1, "medium": 12, "short": 6, "rules": ["lethal"]},
+        "dragon_bite": {"name": "Dragon's Breath", "ap": 4, "attacks": 1, "medium": 12, "short": 6, "rules": ["lethal"]},
         "claws": {"name": "Claws and Bite", "ap": 1, "attacks": 1, "short": "Melee", "rules": ["rending", "lethal"]},
         "beak": {"name": "Beak", "ap": 2, "attacks": 1, "short": "Melee"},
         "hooves_and_teeth": {"name": "Hooves and Teeth", "attacks": 1, "short": "Melee", "ap": 1},
         "ballista": {"name": "Ballista", "profiles": [{"name": "Focus", "ap": 6, "attacks": 1, "medium": 36, "short": 18}, {"name": "Volley", "ap": 2, "attacks": 6, "medium": 36, "short": 18}]},
-        "grand_weapon": {"name": "Runic Blade", "ap": 3, "attacks": 1, "short": "Melee", "rules": ["lethal"]},
+        "runic_blade": {"name": "Runic Blade", "ap": 3, "attacks": 1, "short": "Melee", "rules": ["lethal"]},
         "beak_and_claws": {"name": "Bite and Claws", "ap": 4, "attacks": 1, "short": "Melee", "rules": ["lethal"]}
     },
     "rules": {
@@ -531,7 +525,7 @@
             "points": ["rule.x", {"multiply": 10}]
         },
         "phoenix_armor": {"name": "Phoenix Armor", "description": "This model has +2 to its Save characteristic when being hit by a melee attack.", "points": 2},
-        "ranger_tactics": {
+        "elf_tactics": {
             "name": "Elven Tactics",
             "inputs": ["x"],
             "description": "When this unit is activated, choose up to X friendly _Infantry_ units within 6\". This unit and those units may re-roll failed Accuracy tests of 9+ until the end of the round.",

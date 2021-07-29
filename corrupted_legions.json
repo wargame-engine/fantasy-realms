@@ -4,7 +4,7 @@
     "author": "Xekon#8266",
     "color": "#231f20",
     "units": {
-        "corrupted_lord": {
+        "_lord": {
             "name": "Corrupted Lord",
             "description": "A lord of the dark gods.",
             "category": "hero",
@@ -17,16 +17,16 @@
                     "fight": 7,
                     "defense": 7,
                     "reflexes": 6,
-                    "weapons": [{"id": "great_weapon", "count": 3}, "leeching_blade"],
+                    "weapons": [{"id": "heavy_great_weapon", "count": 3}, "leeching_blade"],
                     "options": [
                         {
-                            "replaceWeapon": [{"id": "great_weapon", "count": 3}],
+                            "replaceWeapon": [{"id": "heavy_great_weapon", "count": 3}],
                             "withWeapon": [
                                 {"id": "heavy_polearm", "count": 3},
                                 {"id": "heavy_flail", "count": 3},
-                                {"id": "great_weapon", "count": 4},
+                                {"id": "heavy_great_weapon", "count": 4},
                                 [{"id": "heavy_polearm", "count": 2}, {"id": "great_weapon", "count": 2}],
-                                {"id": "grand_weapon", "count": 3}
+                                {"id": "war_hammer", "count": 3}
                             ]
                         },
                         {"addRule": ["shield"]},
@@ -45,7 +45,7 @@
             ],
             "subfactions": ["none", "wrath", "excess", "pestilence", "change", "deception"]
         },
-        "corrupted_lord_horse": {
+        "_lord_horse": {
             "name": "Corrupted Lord on Cursed Steed",
             "description": "A lord of the dark gods.",
             "category": "hero",
@@ -58,15 +58,15 @@
                     "fight": 7,
                     "defense": 7,
                     "reflexes": 6,
-                    "weapons": [{"id": "heavy_hooves_and_teeth", "count": 2}, {"id": "great_weapon", "count": 3}, "leeching_blade"],
+                    "weapons": [{"id": "heavy_hooves_and_teeth", "count": 2}, {"id": "heavy_great_weapon", "count": 3}, "leeching_blade"],
                     "options": [
                         {
-                            "replaceWeapon": [{"id": "great_weapon", "count": 3}],
+                            "replaceWeapon": [{"id": "heavy_great_weapon", "count": 3}],
                             "withWeapon": [
                                 {"id": "heavy_polearm", "count": 3},
                                 {"id": "heavy_flail", "count": 3},
-                                {"id": "great_weapon", "count": 4},
-                                {"id": "grand_weapon", "count": 3},
+                                {"id": "heavy_great_weapon", "count": 4},
+                                {"id": "war_hammer", "count": 3},
                                 {"id": "great_lance", "count": 3}
                             ]
                         },
@@ -87,7 +87,7 @@
             "subfactions": ["none", "wrath", "excess", "pestilence", "change", "deception"],
             "keywords": ["Cavalry"]
         },
-        "corrupted_lord_on_lizard": {
+        "_lord_on_lizard": {
             "name": "Corrupted Lord on Lizard Beast",
             "description": "A lord of the dark gods mounted on a dangerous lizard beast.",
             "category": "hero",
@@ -104,7 +104,7 @@
                     "options": [
                         {
                             "replaceWeapon": [{"id": "heavy_polearm", "count": 3}],
-                            "withWeapon": [{"id": "great_weapon", "count": 3}, {"id": "great_weapon", "count": 4}, {"id": "grand_weapon", "count": 3}, {"id": "great_lance", "count": 3}]
+                            "withWeapon": [{"id": "heavy_great_weapon", "count": 3}, {"id": "heavy_great_weapon", "count": 4}, {"id": "war_hammer", "count": 3}, {"id": "great_lance", "count": 3}]
                         },
                         {"addRule": ["shield"]},
                         {"addRule": [{"id": "power", "x": 1}], "subfactions": ["change"]},
@@ -216,7 +216,7 @@
             "subfactions": ["none", "wrath", "excess", "pestilence", "change", "deception"],
             "keywords": ["Beast", "Monster"]
         },
-        "corrupted_lord_manticore": {
+        "_lord_manticore": {
             "name": "Corrupted Lord on Manticore",
             "description": "A lord of the dark gods.",
             "category": "hero",
@@ -229,17 +229,17 @@
                     "fight": 7,
                     "defense": 9,
                     "reflexes": 6,
-                    "weapons": [{"id": "great_weapon", "count": 3}, "leeching_blade", {"id": "bashing_tail", "count": 4}, {"id": "fangs_and_claws", "count": 6}],
+                    "weapons": [{"id": "heavy_great_weapon", "count": 3}, "leeching_blade", {"id": "bashing_tail", "count": 4}, {"id": "fangs_and_claws", "count": 6}],
                     "options": [
                         {
-                            "replaceWeapon": [{"id": "great_weapon", "count": 3}],
+                            "replaceWeapon": [{"id": "heavy_great_weapon", "count": 3}],
                             "withWeapon": [
                                 {"id": "heavy_polearm", "count": 3},
                                 {"id": "heavy_flail", "count": 3},
-                                {"id": "great_weapon", "count": 4},
+                                {"id": "heavy_great_weapon", "count": 4},
                                 [{"id": "heavy_polearm", "count": 2}, {"id": "great_weapon", "count": 2}],
-                                {"id": "grand_weapon", "count": 3},
-                                [{"id": "great_weapon", "count": 3}, "daggerfist"]
+                                {"id": "war_hammer", "count": 3},
+                                [{"id": "heavy_great_weapon", "count": 3}, "daggerfist"]
                             ]
                         },
                         {"addRule": ["shield_dragon"]},
@@ -259,7 +259,7 @@
             "subfactions": ["none", "wrath", "excess", "pestilence", "change", "deception"],
             "keywords": ["Beast", "Cavalry", "Monster"]
         },
-        "corrupted_cultists": {
+        "_cultists": {
             "name": "Corrupted Cultists",
             "description": "Fanatical masses serving the Corrupted Gods.",
             "category": "core",
@@ -324,7 +324,7 @@
                     "options": [
                         {
                             "replaceWeapon": [{"id": "heavy_handweapon", "count": 2}, "shield"],
-                            "withWeapon": [{"id": "heavy_handweapon", "count": 3}, {"id": "great_weapon", "count": 2}, [{"id": "polearm", "count": 2}, "shield"]],
+                            "withWeapon": [{"id": "heavy_handweapon", "count": 3}, {"id": "heavy_great_weapon", "count": 2}, [{"id": "polearm", "count": 2}, "shield"]],
                             "modelLimit": "all",
                             "subfactions": ["none", "excess", "pestilence", "change", "deception"]
                         },
@@ -332,7 +332,7 @@
                             "replaceWeapon": [{"id": "heavy_handweapon", "count": 2}, "shield"],
                             "withWeapon": [
                                 {"id": "heavy_handweapon", "count": 3},
-                                {"id": "great_weapon", "count": 2},
+                                {"id": "heavy_great_weapon", "count": 2},
                                 [{"id": "polearm", "count": 2}, "shield"],
                                 [{"id": "heavy_handweapon", "count": 2}, "daggerfist"]
                             ],
@@ -410,12 +410,12 @@
                     "options": [
                         {
                             "replaceWeapon": [{"id": "lance", "count": 2}],
-                            "withWeapon": [{"id": "great_weapon", "count": 2}, {"id": "heavy_polearm", "count": 2}, {"id": "heavy_flail", "count": 2}],
+                            "withWeapon": [{"id": "heavy_great_weapon", "count": 2}, {"id": "heavy_polearm", "count": 2}, {"id": "heavy_flail", "count": 2}],
                             "subfactions": ["none", "wrath", "pestilence", "change", "deception"]
                         },
                         {
                             "replaceWeapon": [{"id": "lance", "count": 2}],
-                            "withWeapon": [{"id": "great_weapon", "count": 2}, {"id": "heavy_polearm", "count": 2}, [{"id": "poison_short_bow", "count": 2}, "heavy_handweapon"]],
+                            "withWeapon": [{"id": "heavy_great_weapon", "count": 2}, {"id": "heavy_polearm", "count": 2}, [{"id": "poison_short_bow", "count": 2}, "heavy_handweapon"]],
                             "subfactions": ["excess"]
                         }
                     ]
@@ -504,24 +504,24 @@
                 {
                     "options": [
                         {
-                            "replaceWeapon": [{"id": "great_weapon", "count": 4}],
-                            "withWeapon": [{"id": "grand_weapon", "count": 3}, {"id": "great_weapon", "count": 5}, {"id": "great_polearm", "count": 4}, {"id": "heavy_flail", "count": 4}],
+                            "replaceWeapon": [{"id": "heavy_great_weapon", "count": 4}],
+                            "withWeapon": [{"id": "war_hammer", "count": 3}, {"id": "heavy_great_weapon", "count": 5}, {"id": "great_polearm", "count": 4}, {"id": "heavy_flail", "count": 4}],
                             "subfactions": ["none", "excess", "pestilence", "change", "deception"]
                         },
                         {
                             "subfactions": ["wrath"],
-                            "replaceWeapon": [{"id": "great_weapon", "count": 4}],
+                            "replaceWeapon": [{"id": "heavy_great_weapon", "count": 4}],
                             "withWeapon": [
-                                {"id": "grand_weapon", "count": 3},
-                                {"id": "great_weapon", "count": 5},
+                                {"id": "war_hammer", "count": 3},
+                                {"id": "heavy_great_weapon", "count": 5},
                                 {"id": "great_polearm", "count": 4},
                                 {"id": "heavy_flail", "count": 4},
-                                [{"id": "great_weapon", "count": 3}, {"id": "daggerfist", "count": 2}]
+                                [{"id": "heavy_great_weapon", "count": 3}, {"id": "daggerfist", "count": 2}]
                             ]
                         },
                         {
-                            "replaceWeapon": [{"id": "great_weapon", "count": 4}],
-                            "withWeapon": [[{"id": "great_weapon", "count": 2}, {"id": "barbed_whip", "count": 2}]],
+                            "replaceWeapon": [{"id": "heavy_great_weapon", "count": 4}],
+                            "withWeapon": [[{"id": "heavy_great_weapon", "count": 2}, {"id": "barbed_whip", "count": 2}]],
                             "subfactions": ["excess"],
                             "modelLimit": 1
                         },
@@ -534,7 +534,7 @@
                     "fight": 6,
                     "defense": 7,
                     "reflexes": 6,
-                    "weapons": [{"id": "great_weapon", "count": 4}],
+                    "weapons": [{"id": "heavy_great_weapon", "count": 4}],
                     "min": 3,
                     "max": 6
                 }
@@ -560,10 +560,10 @@
                 {
                     "options": [
                         {
-                            "replaceWeapon": [{"id": "great_weapon", "count": 4}],
+                            "replaceWeapon": [{"id": "heavy_great_weapon", "count": 4}],
                             "withWeapon": [
-                                {"id": "grand_weapon", "count": 3},
-                                {"id": "great_weapon", "count": 5},
+                                {"id": "war_hammer", "count": 3},
+                                {"id": "heavy_great_weapon", "count": 5},
                                 {"id": "great_polearm", "count": 4},
                                 {"id": "heavy_flail", "count": 4},
                                 {"id": "great_lance", "count": 3}
@@ -578,7 +578,7 @@
                     "fight": 6,
                     "defense": 7,
                     "reflexes": 6,
-                    "weapons": [{"id": "heavy_hooves_and_teeth", "count": 2}, {"id": "great_weapon", "count": 4}],
+                    "weapons": [{"id": "heavy_hooves_and_teeth", "count": 2}, {"id": "heavy_great_weapon", "count": 4}],
                     "min": 3,
                     "max": 6
                 }
