@@ -153,7 +153,7 @@
                     "fight": 6,
                     "defense": 7,
                     "reflexes": 6,
-                    "weapons": [{"id": "heavy_great_weapon", "count": 4}],
+                    "weapons": [{"id": "great_weapon", "count": 4}],
                     "options": [{"addRule": ["enchanted_shield"]}, {"addRule": [{"id": "power", "x": 1}]}],
                     "min": 1,
                     "max": 1
@@ -176,11 +176,11 @@
                     "fight": 6,
                     "defense": 7,
                     "reflexes": 6,
-                    "weapons": [{"id": "heavy_great_weapon", "count": 4}, {"id": "hooves_and_teeth", "count": 2}],
+                    "weapons": [{"id": "great_weapon", "count": 4}, {"id": "hooves_and_teeth", "count": 2}],
                     "min": 1,
                     "max": 1,
                     "options": [
-                        {"replaceWeapon": [{"id": "heavy_great_weapon", "count": 4}], "withWeapon": [{"id": "spectral_lance", "count": 4}]},
+                        {"replaceWeapon": [{"id": "great_weapon", "count": 4}], "withWeapon": [{"id": "spectral_lance", "count": 4}]},
                         {"addRule": ["enchanted_shield"]},
                         {"addRule": [{"id": "power", "x": 1}]}
                     ]
@@ -203,7 +203,7 @@
                     "fight": 6,
                     "defense": 7,
                     "reflexes": 6,
-                    "weapons": [{"id": "heavy_great_weapon", "count": 4}],
+                    "weapons": [{"id": "great_weapon", "count": 4}],
                     "options": [{"addRule": ["enchanted_shield"]}, {"addRule": [{"id": "power", "x": 1}]}],
                     "min": 1,
                     "max": 1
@@ -341,7 +341,7 @@
                     "weapons": [{"id": "heavy_handweapon", "count": 2}, "shield"],
                     "min": 5,
                     "max": 10,
-                    "options": [{"replaceWeapon": [{"id": "heavy_handweapon", "count": 2}, "shield"], "withWeapon": [{"id": "heavy_great_weapon", "count": 2}], "modelLimit": "all"}]
+                    "options": [{"replaceWeapon": [{"id": "heavy_handweapon", "count": 2}, "shield"], "withWeapon": [{"id": "great_weapon", "count": 2}], "modelLimit": "all"}]
                 }
             ],
             "keywords": ["Undead", "Infantry"],

@@ -153,7 +153,7 @@
             "description": "Spirits with large scythes, hunting the living.",
             "category": "elite",
             "models": [
-                {"name": "Reaper Bell Carrier", "movement": 8, "courage": 6, "shoot": 5, "fight": 5, "defense": 6, "reflexes": 5, "weapons": [{"id": "death_bell", "count": 2}], "min": 1, "max": 1},
+                {"name": "Reaper Bell Carrier", "movement": 8, "courage": 6, "shoot": 5, "fight": 5, "defense": 6, "reflexes": 5, "weapons": [{"id": "death_bell", "count": 1}], "min": 1, "max": 1},
                 {"name": "Reaper", "movement": 8, "courage": 6, "shoot": 5, "fight": 5, "defense": 6, "reflexes": 5, "weapons": [{"id": "rending_heavy_polearm", "count": 2}], "min": 4, "max": 19}
             ],
             "keywords": ["Undead", "Infantry"],
@@ -208,14 +208,14 @@
     },
     "strategies": [
         {
-            "name": "Ethereal",
+            "name": "Fearless",
             "phase": "activation",
-            "description": "Use when an _Infantry_ unit is hit by an attack. That unit gains +1 Save until end of turn.",
-            "flavor": "These horrors can be difficult to dispatch given their ghostly form.",
-            "cost": 2
+            "description": "Use before activating a unit. That unit may immediately remove up to 2 Shock.",
+            "flavor": "These horrors know no fear, only death.",
+            "cost": 1
         },
         {
-            "name": "Ghostwalk",
+            "name": "Ghostly Form",
             "phase": "activation",
             "description": "Use when an _Infantry_ unit makes a Move action. It may ignore any models and terrain for that move.",
             "flavor": "These horrors are can phase through almost any object with ease.",
