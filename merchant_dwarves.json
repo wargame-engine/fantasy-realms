@@ -19,7 +19,7 @@
                     "defense": 7,
                     "reflexes": 6,
                     "rules": [{"id": "wounds", "x": 3}, {"id": "power", "x": 1}, "leader"],
-                    "weapons": [{"id": "handweapon", "count": 2}, {"id": "repeater_handgun", "count": 2}],
+                    "weapons": [{"id": "heavy_pistol", "count": 2}, "great_staff"],
                     "options": [{"replaceRule": [{"id": "power", "x": 1}], "withRule": [{"id": "power", "x": 2}]}],
                     "min": 1,
                     "max": 1
@@ -39,11 +39,11 @@
                     "fight": 6,
                     "defense": 7,
                     "reflexes": 6,
-                    "rules": [{"id": "wounds", "x": 3}, "repair_toolkit", "leader", {"id": "engineer_tactics", "x": 1}],
-                    "weapons": [{"id": "war_hammer", "count": 3}, {"id": "heavy_pistol", "count": 2}],
+                    "rules": [{"id": "wounds", "x": 3}, "repair_toolkit", "leader", {"id": "blackpowder_tactics", "x": 1}],
+                    "weapons": [{"id": "grand_hammer", "count": 3}, {"id": "heavy_pistol", "count": 2}],
                     "min": 1,
                     "max": 1,
-                    "options": [{"replaceRule": [{"id": "engineer_tactics", "x": 1}], "withRule": [{"id": "engineer_tactics", "x": 2}]}]
+                    "options": [{"replaceRule": [{"id": "blackpowder_tactics", "x": 1}], "withRule": [{"id": "blackpowder_tactics", "x": 2}]}]
                 }
             ]
         },
@@ -60,11 +60,11 @@
                     "fight": 6,
                     "defense": 8,
                     "reflexes": 6,
-                    "rules": [{"id": "wounds", "x": 4}, "repair_toolkit", "leader", {"id": "engineer_tactics", "x": 1}],
+                    "rules": [{"id": "wounds", "x": 4}, "repair_toolkit", "leader", {"id": "blackpowder_tactics", "x": 1}],
                     "weapons": [{"id": "chainsaw", "count": 3}, "steam_cannon", {"id": "volley_gun", "count": 2}, {"id": "heavy_pistol", "count": 2}],
                     "min": 1,
                     "max": 1,
-                    "options": [{"replaceRule": [{"id": "engineer_tactics", "x": 1}], "withRule": [{"id": "engineer_tactics", "x": 2}]}]
+                    "options": [{"replaceRule": [{"id": "blackpowder_tactics", "x": 1}], "withRule": [{"id": "blackpowder_tactics", "x": 2}]}]
                 }
             ]
         },
@@ -81,9 +81,9 @@
                     "fight": 6,
                     "defense": 8,
                     "reflexes": 6,
-                    "rules": [{"id": "wounds", "x": 3}, "leader", {"id": "merchant_tactics", "x": 1}],
-                    "weapons": [{"id": "war_hammer", "count": 3}, {"id": "pistol", "count": 3}],
-                    "options": [{"addRule": ["suit"]}, {"replaceRule": [{"id": "merchant_tactics", "x": 1}], "withRule": [{"id": "merchant_tactics", "x": 2}]}],
+                    "rules": [{"id": "wounds", "x": 3}, "leader", {"id": "ranger_tactics", "x": 1}],
+                    "weapons": [{"id": "grand_hammer", "count": 3}, {"id": "pistol", "count": 3}],
+                    "options": [{"addRule": ["suit"]}, {"replaceRule": [{"id": "ranger_tactics", "x": 1}], "withRule": [{"id": "ranger_tactics", "x": 2}]}],
                     "min": 1,
                     "max": 1
                 }
@@ -98,12 +98,12 @@
                     "name": "Lord-Alchemist",
                     "movement": 5,
                     "courage": 7,
-                    "shoot": 5,
+                    "shoot": 6,
                     "fight": 6,
                     "defense": 7,
                     "reflexes": 6,
-                    "rules": [{"id": "wounds", "x": 3}, "leader", "alchemy"],
-                    "weapons": [{"id": "steam_cannon", "count": 2}, {"id": "handweapon", "count": 2}],
+                    "rules": [{"id": "wounds", "x": 3}, "leader", {"id": "power", "x": 2}],
+                    "weapons": [{"id": "handweapon", "count": 2}, "steam_cannon"],
                     "min": 1,
                     "max": 1
                 }
@@ -115,7 +115,7 @@
             "category": "core",
             "models": [
                 {
-                    "name": "Privateer",
+                    "name": "Pioneer",
                     "movement": 5,
                     "courage": 5,
                     "shoot": 5,
@@ -280,29 +280,6 @@
         "brew": {"name": "Dwarven Brew", "description": "Once per game when you activate this unit, you may heal D3 wounds that have been allocated to this unit."},
         "suit": {"name": "Skybound Suit", "description": "This model gains +3\" Movement, Wounds(+1) and may ignore terrain and other models without the Fly special rule when moving.", "points": 15},
         "clockwork_companion": {"name": "Clockwork Companion", "description": "This model and its unit re-rolls failed hit rolls of 9+ when shooting.", "points": 5},
-        "boarding_tactics": {
-            "name": "Boarding Tactics",
-            "inputs": ["x"],
-            "description": "When this unit is activated, choose up to X friendly _Infantry_ units within 6\". This unit and those units may re-roll failed Strength tests of 9+ until the end of the round.",
-            "points": ["rule.x", {"multiply": 10}]
-        },
-        "merchant_tactics": {
-            "name": "Merchant Tactics",
-            "inputs": ["x"],
-            "description": "When this unit is activated, choose up to X friendly _Infantry_ units within 6\". This unit and those units may re-roll failed Accuracy tests of 9+ until the end of the round.",
-            "points": ["rule.x", {"multiply": 10}]
-        },
-        "engineer_tactics": {
-            "name": "Engineer Tactics",
-            "inputs": ["x"],
-            "description": "When this unit is activated, choose up to X friendly _Warmachine_ units within 6\". This unit and those units may re-roll failed Accuracy tests of 9+ until the end of the round.",
-            "points": ["rule.x", {"multiply": 10}]
-        },
-        "alchemy": {
-            "name": "Aetherdust Alchemy",
-            "description": "When this unit is activated, choose a Aetherdust for this unit or another _Infantry_ unit within 6\" to be in effect until the end of the turn:\n* Mithril: Roll a die when a model in this unit loses a wound. On a value of 1 or 2 that wound is not lost.\n* Gold: When this unit shoots, re-roll failed Accuracy tests of 9+.\n* Copper: When this unit fights, it gains +1 AP on all Melee weapons.",
-            "points": [15]
-        },
         "mastercrafted_armor": {
             "name": "Mastercrafted Armor",
             "description": "This model gains +1 to their Save and causes 3 Melee hits with AP(1) when it successfully charges an enemy unit.",

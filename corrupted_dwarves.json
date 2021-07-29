@@ -65,14 +65,14 @@
                     "fight": 6,
                     "defense": 7,
                     "reflexes": 6,
-                    "rules": [{"id": "leader_x", "x": "Infantry, Soul-bound"}, {"id": "wounds", "x": 3}, {"id": "iron_tactics", "x": 1}],
+                    "rules": [{"id": "leader_x", "x": "Infantry, Soul-bound"}, {"id": "wounds", "x": 3}, {"id": "ranger_tactics", "x": 1}],
                     "weapons": [{"id": "great_weapon", "count": 4}, "heavy_pistol"],
                     "min": 1,
                     "max": 1,
                     "options": [
                         {"replaceWeapon": [{"id": "great_weapon", "count": 4}], "withWeapon": [{"id": "heavy_polearm", "count": 4}]},
                         {"addWeapon": "enchanted_shield"},
-                        {"replaceRule": [{"id": "iron_tactics", "x": 1}], "withRule": [{"id": "iron_tactics", "x": 2}]}
+                        {"replaceRule": [{"id": "ranger_tactics", "x": 1}], "withRule": [{"id": "ranger_tactics", "x": 2}]}
                     ]
                 }
             ],
@@ -139,7 +139,7 @@
                     "reflexes": 6,
                     "weapons": [{"id": "great_weapon", "count": 3}, "spiked_tower_shield", {"id": "heavy_hooves_and_teeth", "count": 2}],
                     "options": [
-                        {"replaceWeapon": [{"id": "great_weapon", "count": 3}, "spiked_tower_shield"], "withWeapon": [{"id": "war_hammer", "count": 3}]},
+                        {"replaceWeapon": [{"id": "great_weapon", "count": 3}, "spiked_tower_shield"], "withWeapon": [{"id": "grand_weapon", "count": 3}]},
                         {"replaceRule": [{"id": "siegebreaker_tactics", "x": 1}], "withRule": [{"id": "siegebreaker_tactics", "x": 2}]}
                     ],
                     "min": 1,
@@ -230,7 +230,7 @@
                     "fight": 7,
                     "defense": 7,
                     "reflexes": 5,
-                    "weapons": [{"id": "flame_breath", "count": 2}, {"id": "heavy_great_weapon", "count": 4}],
+                    "weapons": [{"id": "flame_breath", "count": 2}, {"id": "great_weapon", "count": 4}],
                     "min": 3,
                     "max": 6,
                     "rules": [{"id": "wounds", "x": 3}]
@@ -274,17 +274,6 @@
         "claws": {"name": "Blazing Claws", "attacks": 1, "ap": 3, "short": "Melee"}
     },
     "rules": {
-        "repair": {
-            "name": "Repair",
-            "inputs": ["x"],
-            "description": "At any point during this unit's activation, if within 3\" of a Vehicle or Warmachine, roll one die. On an X or less the vehicle or warmachine may remove one critical damage.",
-            "points": ["rule.x", {"multiply": 2}]
-        },
-        "repair_toolkit": {
-            "name": "Repair Toolkit",
-            "description": "This model and its unit may spend one action to repair one vehicle or warmachine within 3\" that has suffered critical damage.",
-            "points": 5
-        },
         "siegebreaker_tactics": {
             "name": "Siegebreaker Tactics",
             "inputs": ["x"],
@@ -295,12 +284,6 @@
             "name": "Demonic Tactics",
             "inputs": ["x"],
             "description": "When this unit is activated, choose up to X friendly _Infantry_ units within 6\". This model and those units add +3“ next time they move or charge.",
-            "points": ["rule.x", {"multiply": 10}]
-        },
-        "iron_tactics": {
-            "name": "Iron Tactics",
-            "inputs": ["x"],
-            "description": "When this unit is activated, choose up to X friendly _Infantry_ units within 6\". This model and those units may re-roll failed Accuracy tests of 9+ until the end of the round.",
             "points": ["rule.x", {"multiply": 10}]
         }
     },

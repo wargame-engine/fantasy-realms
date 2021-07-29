@@ -43,7 +43,7 @@
                     "fight": 6,
                     "defense": 6,
                     "reflexes": 8,
-                    "weapons": [{"id": "heavy_great_weapon", "count": 6}],
+                    "weapons": [{"id": "great_weapon", "count": 6}],
                     "rules": [{"id": "wounds", "x": 3}, {"id": "despoiler_tactics", "x": 1}, "leader"],
                     "min": 1,
                     "max": 1,
@@ -168,7 +168,7 @@
                     "fight": 5,
                     "defense": 6,
                     "reflexes": 5,
-                    "weapons": [{"id": "heavy_great_weapon", "count": 2}],
+                    "weapons": [{"id": "great_weapon", "count": 2}],
                     "min": 5,
                     "max": 20
                 }
@@ -188,11 +188,11 @@
                     "fight": 5,
                     "defense": 6,
                     "reflexes": 4,
-                    "weapons": [{"id": "gouging_horns", "count": 2}, {"id": "war_hammer", "count": 3}, "shield"],
+                    "weapons": [{"id": "gouging_horns", "count": 2}, {"id": "grand_weapon", "count": 3}, "shield"],
                     "min": 3,
                     "max": 6,
                     "options": [
-                        {"replaceWeapon": [{"id": "war_hammer", "count": 3}, "shield"], "withWeapon": [[{"id": "war_hammer", "count": 4}], [{"id": "greataxe", "count": 3}]], "modelLimit": "all"},
+                        {"replaceWeapon": [{"id": "grand_weapon", "count": 3}, "shield"], "withWeapon": [[{"id": "grand_weapon", "count": 4}], [{"id": "greataxe", "count": 3}]], "modelLimit": "all"},
                         {"addRule": ["champion"], "modelLimit": 1},
                         {"addRule": ["banner"], "modelLimit": 1},
                         {"addRule": ["musician"], "modelLimit": 1}
@@ -253,7 +253,7 @@
                     "max": 6
                 }
             ],
-            "options": [{"replaceWeapon": [{"id": "handweapon", "count": 6}], "withWeapon": [{"id": "heavy_great_weapon", "count": 3}, {"id": "polearm", "count": 4}]}],
+            "options": [{"replaceWeapon": [{"id": "handweapon", "count": 6}], "withWeapon": [{"id": "great_weapon", "count": 3}, {"id": "polearm", "count": 4}]}],
             "rules": [{"id": "wounds", "x": 3}],
             "keywords": ["Beast", "Heavy Infantry"],
             "subfactions": ["none", "pestilence", "wrath", "excess", "change"]
@@ -271,7 +271,7 @@
                     "fight": 6,
                     "defense": 7,
                     "reflexes": 7,
-                    "weapons": [{"id": "heavy_great_weapon", "count": 4}, {"id": "lizzer_claws", "count": 2}],
+                    "weapons": [{"id": "great_weapon", "count": 4}, {"id": "lizzer_claws", "count": 2}],
                     "min": 1,
                     "max": 1
                 }
@@ -294,11 +294,11 @@
                     "fight": 6,
                     "defense": 11,
                     "reflexes": 5,
-                    "weapons": [{"id": "heavy_great_weapon", "count": 8}, {"id": "throw_rock"}],
+                    "weapons": [{"id": "great_weapon", "count": 8}, {"id": "throw_rock"}],
                     "min": 1,
                     "max": 1,
                     "options": [
-                        {"replaceWeapon": [{"id": "heavy_great_weapon", "count": 8}, {"id": "throw_rock"}], "withWeapon": [[{"id": "greatblade", "count": 6}, {"id": "maw", "count": 1}]]},
+                        {"replaceWeapon": [{"id": "great_weapon", "count": 8}, {"id": "throw_rock"}], "withWeapon": [[{"id": "greatblade", "count": 6}, {"id": "maw", "count": 1}]]},
                         {"addRule": [["anti_magic", {"id": "ward", "x": 2}]]}
                     ],
                     "rules": ["damage_chart"]
