@@ -19,9 +19,12 @@
                     "fight": 7,
                     "defense": 7,
                     "reflexes": 6,
-                    "weapons": [{"id": "great_weapon", "count": 4}],
+                    "weapons": [{"id": "heavy_great_weapon", "count": 4}],
                     "options": [
-                        {"replaceWeapon": [{"id": "great_weapon", "count": 4}], "withWeapon": [{"id": "war_hammer", "count": 4}, {"id": "great_weapon", "count": 5}]},
+                        {
+                            "replaceWeapon": [{"id": "heavy_great_weapon", "count": 4}],
+                            "withWeapon": [{"id": "grand_axe", "count": 4}, {"id": "heavy_great_weapon", "count": 5}, {"id": "grand_weapon", "count": 4}]
+                        },
                         {"addWeapon": ["attack_beast"]},
                         {"addRule": ["enchanted_shield"]},
                         {"replaceRule": [{"id": "orc_tactics", "x": 1}], "withRule": [{"id": "orc_tactics", "x": 2}]}
@@ -47,9 +50,12 @@
                     "fight": 7,
                     "defense": 7,
                     "reflexes": 6,
-                    "weapons": [{"id": "great_weapon", "count": 4}],
+                    "weapons": [{"id": "heavy_great_weapon", "count": 4}],
                     "options": [
-                        {"replaceWeapon": [{"id": "great_weapon", "count": 4}], "withWeapon": [{"id": "war_hammer", "count": 4}, {"id": "great_weapon", "count": 5}]},
+                        {
+                            "replaceWeapon": [{"id": "heavy_great_weapon", "count": 4}],
+                            "withWeapon": [{"id": "grand_weapon", "count": 4}, {"id": "heavy_great_weapon", "count": 5}, {"id": "grand_axe", "count": 4}]
+                        },
                         {"addWeapon": ["attack_beast"]},
                         {"addRule": ["tower_shield"]},
                         {"replaceRule": [{"id": "orc_tactics", "x": 1}], "withRule": [{"id": "orc_tactics", "x": 2}]}
@@ -75,9 +81,12 @@
                     "fight": 7,
                     "defense": 7,
                     "reflexes": 6,
-                    "weapons": [{"id": "great_weapon", "count": 5}],
+                    "weapons": [{"id": "heavy_great_weapon", "count": 5}],
                     "options": [
-                        {"replaceWeapon": [{"id": "great_weapon", "count": 5}], "withWeapon": [{"id": "war_hammer", "count": 5}, {"id": "great_polearm", "count": 5}]},
+                        {
+                            "replaceWeapon": [{"id": "heavy_great_weapon", "count": 5}],
+                            "withWeapon": [{"id": "grand_weapon", "count": 5}, {"id": "great_polearm", "count": 5}, {"id": "grand_axe", "count": 5}]
+                        },
                         {"addWeapon": ["attack_beast"]},
                         {"replaceRule": [{"id": "orc_tactics", "x": 1}], "withRule": [{"id": "orc_tactics", "x": 2}]}
                     ],
@@ -184,7 +193,7 @@
                     "max": 30,
                     "options": [
                         {"replaceWeapon": ["heavy_handweapon", "shield"], "withWeapon": [{"id": "heavy_handweapon", "count": 2}, ["bow", {"id": "light_handweapon", "count": 2}]], "modelLimit": "all"},
-                        {"replaceWeapon": ["heavy_handweapon", "shield"], "withWeapon": ["war_hammer"], "modelLimit": "1/5"}
+                        {"replaceWeapon": ["heavy_handweapon", "shield"], "withWeapon": ["great_hammer"], "modelLimit": "1/5"}
                     ]
                 }
             ],
@@ -316,7 +325,7 @@
                     "options": [
                         {
                             "replaceWeapon": [{"id": "great_weapon", "count": 2}],
-                            "withWeapon": [{"id": "war_hammer", "count": 2}, {"id": "great_weapon", "count": 3}, {"id": "great_polearm", "count": 2}]
+                            "withWeapon": [{"id": "grand_weapon", "count": 2}, {"id": "great_weapon", "count": 3}, {"id": "great_polearm", "count": 2}]
                         },
                         {"replaceWeapon": [{"id": "great_weapon", "count": 2}], "withWeapon": [["great_weapon", "gauntlet"]], "modelLimit": 1}
                     ]
@@ -346,7 +355,7 @@
                     "options": [
                         {
                             "replaceWeapon": [{"id": "great_weapon", "count": 3}],
-                            "withWeapon": [{"id": "war_hammer", "count": 3}, {"id": "great_weapon", "count": 4}, {"id": "great_polearm", "count": 3}]
+                            "withWeapon": [{"id": "grand_weapon", "count": 3}, {"id": "great_weapon", "count": 4}, {"id": "great_polearm", "count": 3}]
                         },
                         {"replaceWeapon": [{"id": "great_weapon", "count": 3}], "withWeapon": [[{"id": "great_weapon", "count": 2}, "gauntlet"]], "modelLimit": 1}
                     ]
@@ -527,7 +536,7 @@
                     "max": 6,
                     "options": [
                         {"replaceWeapon": ["heavy_handweapon", "shield"], "withWeapon": [{"id": "heavy_handweapon", "count": 2}, ["lance", "shield"]], "modelLimit": "all"},
-                        {"replaceWeapon": ["heavy_handweapon", "shield"], "withWeapon": ["war_hammer"], "modelLimit": "1/5"}
+                        {"replaceWeapon": ["heavy_handweapon", "shield"], "withWeapon": ["grand_weapon"], "modelLimit": "1/5"}
                     ],
                     "rules": [{"id": "impact", "x": 1}]
                 }
@@ -573,11 +582,11 @@
                     "fight": 7,
                     "defense": 7,
                     "reflexes": 6,
-                    "weapons": [{"id": "great_weapon", "count": 4}, {"id": "boar_tusks", "count": 2}],
+                    "weapons": [{"id": "heavy_great_weapon", "count": 4}, {"id": "boar_tusks", "count": 2}],
                     "options": [
                         {
-                            "replaceWeapon": [{"id": "great_weapon", "count": 4}],
-                            "withWeapon": [{"id": "war_hammer", "count": 4}, {"id": "great_weapon", "count": 5}, {"id": "heavy_lance", "count": 4}]
+                            "replaceWeapon": [{"id": "heavy_great_weapon", "count": 4}],
+                            "withWeapon": [{"id": "grand_weapon", "count": 4}, {"id": "great_weapon", "count": 5}, {"id": "heavy_lance", "count": 4}, {"id": "grand_axe", "count": 4}]
                         },
                         {"addRule": ["enchanted_shield"]},
                         {"replaceRule": [{"id": "orc_tactics", "x": 1}], "withRule": [{"id": "orc_tactics", "x": 2}]}

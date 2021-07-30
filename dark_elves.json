@@ -18,17 +18,17 @@
                     "fight": 7,
                     "defense": 6,
                     "reflexes": 6,
-                    "weapons": [{"id": "handweapon", "count": 4}, "shield"],
+                    "weapons": [{"id": "handweapon", "count": 4}, "enchanted_shield"],
                     "options": [
                         {
-                            "replaceWeapon": [{"id": "handweapon", "count": 4}, "shield"],
+                            "replaceWeapon": [{"id": "handweapon", "count": 4}, "enchanted_shield"],
                             "withWeapon": [{"id": "great_weapon", "count": 3}, {"id": "handweapon", "count": 5}, {"id": "heavy_polearm", "count": 3}]
                         },
                         {"addWeapon": [{"id": "repeater_crossbow", "count": 2}]},
                         {"addRule": ["cloak", "poisoned_blades"], "modelLimit": 1},
-                        {"replaceRule": [{"id": "raid_tactics", "x": 1}], "withRule": [{"id": "raid_tactics", "x": 2}]}
+                        {"replaceRule": [{"id": "ranger_tactics", "x": 1}], "withRule": [{"id": "ranger_tactics", "x": 2}]}
                     ],
-                    "rules": [{"id": "wounds", "x": 3}, "leader", {"id": "raid_tactics", "x": 1}, "fear"],
+                    "rules": [{"id": "wounds", "x": 3}, "leader", {"id": "ranger_tactics", "x": 1}, "fear"],
                     "min": 1,
                     "max": 1
                 }
@@ -48,19 +48,19 @@
                     "fight": 7,
                     "defense": 6,
                     "reflexes": 6,
-                    "weapons": [{"id": "handweapon", "count": 4}, "shield", {"id": "hooves_and_teeth", "count": 2}],
+                    "weapons": [{"id": "handweapon", "count": 4}, "enchanted_shield", {"id": "hooves_and_teeth", "count": 2}],
                     "options": [
                         {
-                            "replaceWeapon": [{"id": "handweapon", "count": 4}, "shield"],
+                            "replaceWeapon": [{"id": "handweapon", "count": 4}, "enchanted_shield"],
                             "withWeapon": [{"id": "great_weapon", "count": 3}, {"id": "handweapon", "count": 5}, [{"id": "lance", "count": 3}, "shield"]]
                         },
                         {"replaceWeapon": [{"id": "hooves_and_teeth", "count": 2}], "withWeapon": [{"id": "claws", "count": 2}]},
                         {"addWeapon": [{"id": "repeater_crossbow", "count": 2}]},
                         {"addRule": ["cloak", "poisoned_blades"], "modelLimit": 1},
                         {"addRule": "fly"},
-                        {"replaceRule": [{"id": "raid_tactics", "x": 1}], "withRule": [{"id": "raid_tactics", "x": 2}]}
+                        {"replaceRule": [{"id": "ranger_tactics", "x": 1}], "withRule": [{"id": "ranger_tactics", "x": 2}]}
                     ],
-                    "rules": [{"id": "wounds", "x": 3}, {"id": "raid_tactics", "x": 1}, {"id": "leader_x", "x": "Infantry, Cavarly"}, "fear"],
+                    "rules": [{"id": "wounds", "x": 3}, {"id": "ranger_tactics", "x": 1}, {"id": "leader_x", "x": "Infantry, Cavarly"}, "fear"],
                     "min": 1,
                     "max": 1
                 }
@@ -133,14 +133,14 @@
                     "fight": 7,
                     "defense": 13,
                     "reflexes": 6,
-                    "rules": ["damage_chart", "fly", {"id": "leader_x", "x": "Infantry, Cavalry"}, {"id": "raid_tactics", "x": 1}],
+                    "rules": ["damage_chart", "fly", {"id": "leader_x", "x": "Infantry, Cavalry"}, {"id": "ranger_tactics", "x": 1}],
                     "options": [
                         {"replaceWeapon": [{"id": "handweapon", "count": 6}, "shield"], "withWeapon": [{"id": "great_weapon", "count": 5}, [{"id": "lance", "count": 4}, "shield"]]},
                         {"addWeapon": [{"id": "repeater_crossbow", "count": 2}]},
                         {"addRule": ["cloak", "poisoned_blades"], "modelLimit": 1},
-                        {"replaceRule": [{"id": "raid_tactics", "x": 1}], "withRule": [{"id": "raid_tactics", "x": 2}]}
+                        {"replaceRule": [{"id": "ranger_tactics", "x": 1}], "withRule": [{"id": "ranger_tactics", "x": 2}]}
                     ],
-                    "weapons": [{"id": "dragon_bite", "count": 4}, {"id": "beak_and_claws", "count": 4}, {"id": "handweapon", "count": 6}, "shield"]
+                    "weapons": [{"id": "flame_breath", "count": 4}, {"id": "beak_and_claws", "count": 4}, {"id": "handweapon", "count": 6}, "shield"]
                 }
             ],
             "keywords": ["Monster", "Cavalry"]
@@ -165,7 +165,7 @@
                         {"replaceWeapon": [{"id": "great_staff", "count": 2}], "withWeapon": [{"id": "handweapon", "count": 4}]},
                         {"replaceRule": [{"id": "power", "x": 3}], "withRule": [{"id": "power", "x": 4}]}
                     ],
-                    "weapons": [{"id": "dragon_bite", "count": 4}, {"id": "beak_and_claws", "count": 4}, {"id": "great_staff", "count": 2}]
+                    "weapons": [{"id": "flame_breath", "count": 4}, {"id": "beak_and_claws", "count": 4}, {"id": "great_staff", "count": 2}]
                 }
             ],
             "keywords": ["Monster", "Cavalry"]
@@ -227,7 +227,7 @@
                     "defense": 8,
                     "reflexes": 5,
                     "rules": ["damage_chart", "crazed", "devour", "fear"],
-                    "weapons": [{"id": "dragon_bite", "count": 6}, {"id": "beak_and_claws", "count": 6}]
+                    "weapons": [{"id": "flame_breath", "count": 6}, {"id": "beak_and_claws", "count": 6}]
                 }
             ],
             "keywords": ["Monster", "Cavalry"]
@@ -248,8 +248,8 @@
                     "defense": 6,
                     "reflexes": 6,
                     "weapons": [{"id": "poison_sword", "count": 3}, {"id": "heavy_handweapon", "count": 2}],
-                    "rules": ["leader", {"id": "wounds", "x": 3}, "cloak", {"id": "fleet_tactics", "x": 1}],
-                    "options": [{"replaceRule": [{"id": "fleet_tactics", "x": 1}], "withRule": [{"id": "fleet_tactics", "x": 2}]}]
+                    "rules": ["leader", {"id": "wounds", "x": 3}, "cloak", {"id": "warrior_tactics", "x": 1}],
+                    "options": [{"replaceRule": [{"id": "warrior_tactics", "x": 1}], "withRule": [{"id": "warrior_tactics", "x": 2}]}]
                 }
             ],
             "subfactions": ["none"]
@@ -299,16 +299,6 @@
         }
     },
     "weapons": {
-        "dragon_bite": {"name": "Flame Breath", "ap": 4, "attacks": 1, "medium": 12, "short": 6, "rules": ["lethal"]},
-        "claws": {"name": "Claws and Bite", "ap": 1, "attacks": 1, "short": "Melee", "rules": ["rending", "lethal"]},
-        "beak": {"name": "Beak", "ap": 2, "attacks": 1, "short": "Melee"},
-        "hooves_and_teeth": {"name": "Hooves and Teeth", "attacks": 1, "short": "Melee", "ap": 1},
-        "ballista": {
-            "name": "Ballista",
-            "profiles": [{"name": "Focus", "ap": 6, "attacks": 1, "medium": 36, "short": 18, "rules": []}, {"name": "Volley", "ap": 2, "attacks": 6, "medium": 36, "short": 18, "rules": []}]
-        },
-        "runic_blade": {"name": "Runic Blade", "ap": 3, "attacks": 1, "short": "Melee", "rules": ["lethal"]},
-        "beak_and_claws": {"name": "Bite and Claws", "ap": 4, "attacks": 1, "short": "Melee", "rules": ["lethal"]},
         "phoenix_claws": {"name": "Phoenix Claws", "ap": 5, "attacks": 1, "short": "Melee"},
         "phoenix_flame": {"name": "Flaming Wings", "ap": 4, "attacks": 1, "medium": 12, "short": 6, "rules": ["flame", "bomb"]},
         "poison_sword": {"name": "Poisoned Sword", "attacks": 1, "ap": 1, "short": "Melee", "rules": ["lethal"]},
@@ -319,23 +309,6 @@
         "cloak": {"name": "Dragonscale Cloak", "description": "This model has +2 to its Save characteristic when being hit by a ranged attack.", "points": 2},
         "poisoned_blades": {"name": "Barbed Blades", "description": "This model's melee weapons have +1 AP against enemies without _Damage Table(X)_.", "points": 5},
         "discipline": {"name": "Discipline", "description": "This unit and all friendly units within 6\" ignore Shock when making any Overwatch or Defensive Stance reaction rolls.", "points": 15},
-        "fleet_tactics": {
-            "name": "Fleet Tactics",
-            "inputs": ["x"],
-            "description": "When this unit is activated, choose up to X friendly _Infantry_ units within 6\". This unit and those units may re-roll failed Strength tests of 9+ until the end of the round.",
-            "points": ["rule.x", {"multiply": 10}]
-        },
-        "raid_tactics": {
-            "name": "Raider Tactics",
-            "inputs": ["x"],
-            "description": "When this unit is activated, choose up to X friendly _Infantry_ units within 6\". This unit and those units may re-roll failed Accuracy tests of 9+ until the end of the round.",
-            "points": ["rule.x", {"multiply": 10}]
-        },
-        "crazed": {
-            "name": "Crazed",
-            "description": "When you activate this unit make an initiative test. If successful, until the end of the turn whenever you make a move action with this unit you may sprint without needing to make an initiative test.",
-            "points": 4
-        },
         "devour": {"name": "Devour", "description": "Roll a D10 each time this model destroys a model. On a 1 or 2 this model removes one critical wound token.", "points": 4}
     },
     "powers": {
