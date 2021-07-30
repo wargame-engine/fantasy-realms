@@ -31,23 +31,21 @@
         "satyr_lord": {
             "name": "Satyr Lord",
             "description": "A lord of the horde.",
-            "min": 1,
-            "max": 1,
             "category": "hero",
             "models": [
                 {
                     "name": "Satyr Lord",
                     "movement": 7,
                     "courage": 6,
-                    "shoot": 4,
+                    "shoot": 6,
                     "fight": 6,
                     "defense": 6,
                     "reflexes": 8,
                     "weapons": [{"id": "heavy_great_weapon", "count": 6}],
-                    "rules": [{"id": "wounds", "x": 3}, {"id": "despoiler_tactics", "x": 1}, "leader"],
+                    "rules": [{"id": "wounds", "x": 3}, {"id": "warrior_tactics", "x": 1}, "leader"],
                     "min": 1,
                     "max": 1,
-                    "options": [{"replaceRule": [{"id": "despoiler_tactics", "x": 1}], "withRule": [{"id": "despoiler_tactics", "x": 2}]}]
+                    "options": [{"replaceRule": [{"id": "warrior_tactics", "x": 1}], "withRule": [{"id": "warrior_tactics", "x": 2}]}]
                 }
             ],
             "subfactions": ["none", "pestilence", "wrath", "excess", "change"]
@@ -55,20 +53,18 @@
         "satyr_shaman": {
             "name": "Satyr Shaman",
             "description": "A wizard of the horde.",
-            "min": 1,
-            "max": 1,
-            "category": "elite",
+            "category": "hero",
             "models": [
                 {
                     "name": "Satyr Shaman",
                     "movement": 7,
                     "courage": 6,
-                    "shoot": 4,
+                    "shoot": 5,
                     "fight": 5,
                     "defense": 5,
                     "reflexes": 6,
-                    "weapons": [{"id": "staff"}],
-                    "rules": [{"id": "wounds", "x": 3}, {"id": "power", "x": 1}, "support"],
+                    "weapons": ["handweapon", "great_staff"],
+                    "rules": [{"id": "wounds", "x": 3}, {"id": "power", "x": 1}, "leader"],
                     "min": 1,
                     "max": 1,
                     "options": [{"replaceRule": [{"id": "power", "x": 1}], "withRule": [{"id": "power", "x": 2}]}]
@@ -188,11 +184,11 @@
                     "fight": 5,
                     "defense": 6,
                     "reflexes": 4,
-                    "weapons": [{"id": "gouging_horns", "count": 2}, {"id": "war_hammer", "count": 3}, "shield"],
+                    "weapons": [{"id": "gouging_horns", "count": 2}, {"id": "grand_weapon", "count": 3}, "shield"],
                     "min": 3,
                     "max": 6,
                     "options": [
-                        {"replaceWeapon": [{"id": "war_hammer", "count": 3}, "shield"], "withWeapon": [[{"id": "war_hammer", "count": 4}], [{"id": "greataxe", "count": 3}]], "modelLimit": "all"},
+                        {"replaceWeapon": [{"id": "grand_weapon", "count": 3}, "shield"], "withWeapon": [{"id": "greataxe", "count": 3}, {"id": "grand_weapon", "count": 4}], "modelLimit": "all"},
                         {"addRule": ["champion"], "modelLimit": 1},
                         {"addRule": ["banner"], "modelLimit": 1},
                         {"addRule": ["musician"], "modelLimit": 1}
@@ -294,11 +290,11 @@
                     "fight": 6,
                     "defense": 11,
                     "reflexes": 5,
-                    "weapons": [{"id": "heavy_great_weapon", "count": 8}, {"id": "throw_rock"}],
+                    "weapons": [{"id": "heavy_great_weapon", "count": 8}, {"id": "rock_throw"}],
                     "min": 1,
                     "max": 1,
                     "options": [
-                        {"replaceWeapon": [{"id": "heavy_great_weapon", "count": 8}, {"id": "throw_rock"}], "withWeapon": [[{"id": "greatblade", "count": 6}, {"id": "maw", "count": 1}]]},
+                        {"replaceWeapon": [{"id": "heavy_great_weapon", "count": 8}, {"id": "rock_throw"}], "withWeapon": [[{"id": "greatblade", "count": 6}, {"id": "maw", "count": 1}]]},
                         {"addRule": [["anti_magic", {"id": "ward", "x": 2}]]}
                     ],
                     "rules": ["damage_chart"]
@@ -360,10 +356,9 @@
     },
     "weapons": {
         "hooves_and_teeth": {"name": "Hooves and Teeth", "attacks": 1, "short": "Melee", "ap": 1},
-        "greataxe": {"name": "Greataxe", "ap": 7, "attacks": 1, "short": "Melee", "rules": ["lethal"]},
+        "greataxe": {"name": "Giant Axe", "ap": 7, "attacks": 1, "short": "Melee", "rules": ["lethal"]},
         "gouging_horns": {"name": "Gouging Horns", "ap": 1, "attacks": 1, "short": "Melee"},
         "greatblade": {"name": "Savage Greatblade", "ap": 6, "attacks": 1, "short": "Melee", "rules": [{"id": "reach", "x": 1}]},
-        "throw_rock": {"name": "Runecursed Rock", "attacks": 1, "ap": 8, "rules": [{"id": "blast", "x": 2}, "scatter"], "short": 9, "medium": 18},
         "maw": {"name": "Devouring Maw", "ap": 6, "attacks": 1, "short": "Melee", "rules": [{"id": "deadly", "x": 3}]},
         "cock_gaze": {"name": "Petrifying Gaze", "attacks": 1, "ap": 8, "rules": [{"id": "deadly", "x": 3}], "short": 9, "medium": 9},
         "sharp_beak": {"name": "Sharp Beak", "attacks": 1, "ap": 4, "short": "Melee"},
@@ -387,18 +382,6 @@
             "name": "Siegebreaker Tactics",
             "inputs": ["x"],
             "description": "When this unit is activated, choose up to X friendly _Beast_ units within 6\". This model and those units may re-roll failed Strength tests of 9+ until the end of the round.",
-            "points": ["rule.x", {"multiply": 10}]
-        },
-        "anti_magic": {"name": "Anti-Magic Runes", "description": "If this model fights a _Power_ model, it may re-roll a single failed Fight test.", "points": [4]},
-        "magic_siphon": {
-            "name": "Magic Siphon",
-            "description": "At the end of any activation in which this model dispelled any enemy power, you can heal 1 wound that has been allocated to this model and deal an automatic hit with AP(3) to an enemy _Power_ model within 24“.",
-            "points": [8]
-        },
-        "despoiler_tactics": {
-            "name": "Despoiler Tactics",
-            "inputs": ["x"],
-            "description": "When this unit is activated, choose up to X friendly _Infantry_ units within 6\". This model and those units may re-roll failed Strength tests of 9+ until the end of the round.",
             "points": ["rule.x", {"multiply": 10}]
         }
     },
