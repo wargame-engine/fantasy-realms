@@ -108,7 +108,7 @@
             "url": "high_elves.json",
             "color": "#607d8b",
             "alliance": "order",
-            "description": "Masters of the Arcane, this ancient island nation is shrouded in mystery."
+            "description": "Masters of the Arcane, this ancient island nation is shrouded in mystery. High Elves combine excellent mobility and good long-range attacks as well as possessing enough elite units to deal with most foes."
         },
         "orcs_and_goblins": {
             "version": "1.0",
