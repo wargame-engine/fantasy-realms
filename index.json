@@ -99,7 +99,7 @@
             "url": "haunting_ghosts.json",
             "color": "#4C838A",
             "alliance": "death",
-            "description": "The Haunting Ghosts are a collection of undead spirits which haunt their hallowed grave sites. The Ghostly Undead use fear and ethereal movement to wash over their foes and scare them into defeat."
+            "description": "Places of necromantic power can often spontaneously bring the dead back to life, and without a leader they have only one drive:  Spread that necromantic power, through the death of those nearby!"
         },
         "high_elves": {
             "version": "1.0",
@@ -206,11 +206,11 @@
             "alliance": "order",
             "description": "A race of relentless jungle-dwelling lizards who who believe they are the rightful inheritors to the world."
         },
-        "_dwarves": {
+        "corrupted_dwarves": {
             "version": "1.0",
             "name": "Corrupted Dwarves",
-            "id": "_dwarves",
-            "url": "_dwarves.json",
+            "id": "corrupted_dwarves",
+            "url": "corrupted_dwarves.json",
             "color": "#360c30",
             "alliance": "chaos",
             "description": "Corrupted by the dark gods, these dwarves imbue twisted warmachines with demonic magic.",

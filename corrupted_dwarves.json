@@ -1,9 +1,9 @@
 {
     "name": "Corrupted Dwarves",
-    "id": "_dwarves",
+    "id": "corrupted_dwarves",
     "author": "Xekon#8266",
     "units": {
-        "_runesmith": {
+        "corrupted_runesmith": {
             "name": "Corrupted Runesmith",
             "description": "",
             "category": "hero",
