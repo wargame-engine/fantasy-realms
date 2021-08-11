@@ -13,7 +13,7 @@
             "color": "#D4AF37",
             "secondary_color": "#0d407f",
             "alliance": "order",
-            "description": "The Storm Wardens are sworn to protect those who cannot protect themselves and to ward off evil. They wear tough armor and wield mighty weapons to strike down those are unjust."
+            "description": "Creations of an arch-wizard, the Storm Wardens exist to enforce peace around the realms - no matter who it may favour.  Their incredible weapons and armour are unmatched by other races."
         },
         "ogre_mercenaries": {
             "version": "1.0",
@@ -22,7 +22,7 @@
             "url": "ogre_mercenaries.json",
             "color": "#954535",
             "alliance": "destruction",
-            "description": "Large-bodied mercenaries with huge appetites for gold and destruction"
+            "description": "Once the scourge of the lands, the ogres have learned that they keep their bellies fuller by hiring themselves out as mercenaries than by killing people who can cook for them."
         },
         "greatogre_raiders": {
             "version": "1.0",
@@ -40,7 +40,7 @@
             "url": "vampire_lords.json",
             "color": "#801111",
             "alliance": "death",
-            "description": "The Vampire Lords are powerful vampires who command legions of undead to do their bidding. They defeat their foes with powerful death magic and hordes of undead.",
+            "description": "Vampire Lords are necromancers who have learned to imbue themselves with necrotic power.  They wield their undead hordes like a weapon, to cut away those who would stand in their way.",
             "subfactions": {
                 "bone": {"name": "Bone", "id": "bone", "color": "#90305d", "description": "Raising endless armies of skeletal soldiers to do their bidding."},
                 "blood": {"name": "Blood", "id": "blood", "color": "#547588", "description": "Fledgling vampires are eager to drink and don't have the patience for just biting their enemies."},
@@ -59,7 +59,7 @@
             "url": "corrupted_legions.json",
             "color": "#231f20",
             "alliance": "chaos",
-            "description": "The Corrupted Legions are those who chose to fight for evil instead of order and made a pact with the dark gods. The Corrupted Legions use deadly  warriors and other barbarians to swiftly crush their foes.",
+            "description": "The Corrupted Legions prove that even dead gods can be mightier than mortals.  Wearing powerful cursed armour and wielding weapons with ancient enchantments, they seek the ressurection of their dark masters.",
             "subfactions": {
                 "change": {
                     "name": "Magic",
@@ -108,7 +108,7 @@
             "url": "high_elves.json",
             "color": "#607d8b",
             "alliance": "order",
-            "description": "Masters of the Arcane, this ancient island nation is shrouded in mystery. High Elves combine excellent mobility and good long-range attacks as well as possessing enough elite units to deal with most foes."
+            "description": "The High Elves are dedicated to holding and defending the lands they already have, and will destroy any force that dares to threaten their holdings."
         },
         "orcs_and_goblins": {
             "version": "1.0",
@@ -117,7 +117,7 @@
             "url": "orcs_and_goblins.json",
             "color": "#50974A",
             "alliance": "destruction",
-            "description": "A savage race made up of various warring tribes.",
+            "description": "Creatures from faraway lands, the Orcs and Goblins are usually content to feud among themselves - but when they turn their attention elsewhere, they prove themselves a truly powerful foe.",
             "subfactions": {
                 "armor": {
                     "name": "Armor",
@@ -147,7 +147,7 @@
             "url": "sea_elves.json",
             "color": "#03414e",
             "alliance": "order",
-            "description": "Raising from the depths of the ocean, transmuted by their ancient magic."
+            "description": "Transmuted by ancient magic to be mightier than any other elf, the Sea Elves require incredible alchemical concoctions to survive.  They hire themselves out to other races to afford their survival, and live under the sea to avoid mortal conflict."
         },
         "mountain_dwarves": {
             "version": "1.0",
@@ -156,7 +156,7 @@
             "url": "mountain_dwarves.json",
             "color": "#A55D35",
             "alliance": "order",
-            "description": "A stout race of miners, engineers and warriors."
+            "description": "The Mountain Dwarves were forced back to deep holes and warrens, but have regathered their forces.  They seek to conquer lands that were once theirs, in the belief that other races on them are merely squatters."
         },
         "beastmen_horde": {
             "version": "1.0",
@@ -165,7 +165,7 @@
             "url": "beastmen_horde.json",
             "color": "#954535",
             "alliance": "chaos",
-            "description": "The Beastmen are a race of human-like beasts found in forests. Their main goal is to disrupt and destroy the races of mankind through savage all-out raids.",
+            "description": "The Beastmen seek nothing less than the destruction of civilization and the pointless rules it brings.  They enlist great war-beasts and horrible creatures to their aid.",
             "subfactions": {
                 "change": {
                     "name": "Magic",
@@ -195,7 +195,7 @@
             "url": "human_kingdoms.json",
             "color": "#990c0c",
             "alliance": "order",
-            "description": "A collection of various kingdoms, infighting for political presence but uniting under one banner to defend their home."
+            "description": "The myriad of Human Kingdoms are mercurial and quick-blooded, wanting only peace one generation while seeking to conquer the world the next - and well-equipped for either."
         },
         "lizardmen": {
             "version": "0.1",
@@ -213,7 +213,7 @@
             "url": "corrupted_dwarves.json",
             "color": "#360c30",
             "alliance": "chaos",
-            "description": "Corrupted by the dark gods, these dwarves imbue twisted warmachines with demonic magic.",
+            "description": "Twisted by the whispers of dead gods, the Corrupted Dwarves have learned to put chaotic magic into their machines.  They fight as much at the whims of their dark masters as their own choice.",
             "subfactions": {
                 "change": {
                     "name": "Magic",
@@ -242,7 +242,7 @@
             "id": "merchant_dwarves",
             "url": "merchant_dwarves.json",
             "alliance": "order",
-            "description": "A race of travelling merchants and glory-seekers with advanced weaponry.",
+            "description": "Famous for their gold-lust, the Merchant Dwarves hire themselves out to any force that can afford them.  Their powerful technology and airships make them a dangerous foe.",
             "color": "#000000",
             "secondary_color": "#360c30"
         },
@@ -253,7 +253,7 @@
             "url": "dark_elves.json",
             "color": "#30106B",
             "alliance": "order",
-            "description": "Cursed by their dark gods, these Elves raid the coasts and rivers of the mainlands from their ship-fortresses."
+            "description": "The Dark Elves are dedicated to conquering and taking whatever land they can, and aren't afraid to bring the full might of elven wisdom and power to bear to do it."
         },
         "wood_elves": {
             "version": "1.0",
@@ -262,7 +262,7 @@
             "url": "wood_elves.json",
             "color": "#38733a",
             "alliance": "order",
-            "description": "Hidden away within their dense forests, striking back against those that dare to anger the spirits of the forest.",
+            "description": "Hidden away in their forests, the Wood Elves seek only peace, and the spreading of nature's gifts.  They go to war only to fight those who would despoil their forests or stop their spread.",
             "subfactions": {
                 "spite": {
                     "name": "Spite-Grove",
