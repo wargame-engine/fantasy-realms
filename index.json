@@ -1,7 +1,7 @@
 {
     "reportUrl": "https://github.com/wargame-engine/fantasy-realms/issues",
-    "name": "Fantasy Realms",
-    "id": "fantasy_realms",
+    "name": "Mystic Realms",
+    "id": "mystic_realms",
     "version": "1.0",
     "alliances": {"death": {"name": "Bringers of Death"}, "destruction": {"name": "Forces of Destruction"}, "order": {"name": "Keepers of Order"}, "chaos": {"name": "Instruments of Chaos"}},
     "factions": {
