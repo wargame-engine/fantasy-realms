@@ -171,7 +171,7 @@
             "name": "Cursed Revenants",
             "description": "These are the spirits of those that met a vicious end, forever cursed to be in endless pain.",
             "category": "elite",
-            "models": [{"name": "Revenant", "movement": 6, "courage": 6, "shoot": 6, "fight": 6, "defense": 6, "reflexes": 5, "weapons": [{"id": "great_weapon", "count": 2}], "min": 5, "max": 20}],
+            "models": [{"name": "Revenant", "movement": 6, "courage": 6, "shoot": 6, "fight": 6, "defense": 7, "reflexes": 5, "weapons": [{"id": "great_weapon", "count": 2}], "min": 5, "max": 20}],
             "keywords": ["Undead", "Infantry"]
         }
     },
