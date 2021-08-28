@@ -173,6 +173,27 @@
             "category": "elite",
             "models": [{"name": "Revenant", "movement": 6, "courage": 6, "shoot": 6, "fight": 6, "defense": 7, "reflexes": 5, "weapons": [{"id": "great_weapon", "count": 2}], "min": 5, "max": 20}],
             "keywords": ["Undead", "Infantry"]
+        },
+        "banshee": {
+            "name": "Banshee",
+            "description": "A ghostly spirit filled with revenge.",
+            "category": "elite",
+            "models": [
+                {
+                    "name": "Banshee",
+                    "movement": 6,
+                    "courage": 6,
+                    "shoot": 6,
+                    "fight": 6,
+                    "defense": 7,
+                    "reflexes": 5,
+                    "weapons": [{"id": "frost_dagger", "count": 3}, "scream"],
+                    "rules": [{"id": "wounds", "x": 2}],
+                    "min": 1,
+                    "max": 1
+                }
+            ],
+            "keywords": ["Undead", "Infantry"]
         }
     },
     "weapons": {
@@ -180,6 +201,8 @@
         "ghostly_shackles": {"name": "Ghostly Shackles", "attacks": 1, "ap": 4, "short": "Melee"},
         "death_bell": {"name": "Death Bell", "attacks": 1, "ap": 4, "short": "Melee"},
         "curse_blade": {"name": "Curse-bound Blade", "attacks": 1, "ap": 2, "short": "Melee", "rules": ["lance"]},
+        "frost_dagger": {"name": "Frost Dagger", "attacks": 1, "ap": 3, "short": "Melee", "rules": ["lethal"]},
+        "scream": {"name": "Banshee Scream", "attacks": 1, "ap": 2, "short": 9, "rules": ["indirect"]},
         "executioner_great_axe": {"name": "Great Axe", "attacks": 1, "ap": 5, "short": "Melee", "rules": ["rending"]}
     },
     "rules": {
